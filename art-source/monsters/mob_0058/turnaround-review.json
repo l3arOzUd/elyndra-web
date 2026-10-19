@@ -1,0 +1,20 @@
+{
+  "id": "mob_0058",
+  "name": "Vault Mirrorguard",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front identity, rear shield mount and opposite profile.",
+  "confirmed": [
+    "Bronze knight construct with single lens visor, round heliostat shield and empty right hand.",
+    "Shield anatomical left maintained: front image right, rear image left, near left profile and far right profile.",
+    "Rear helmet opaque and rear shield has straps and mounting.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Profiles still oblique with too much chest and visor face visible.",
+    "Shield angle changes between views; lock forearm grip and gimbal rotation before animation.",
+    "Armor seam positions and joint caps vary, including rear knee construction.",
+    "Feet stagger and silhouette scale vary; normalize stance after anatomical corrections.",
+    "No separated armor/limb/shield layers or runtime animation yet."
+  ],
+  "next": "Reconcile shield mount, visor depth, joint pivots and stance; separate rigid armor parts and author idle/walk/shield-bash/reflect/hit/death."
+}
