@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Thistlehare RIGHT SIDE orthographic turnaround facing RIGHT. Reference1 left profile exact pose/proportions, reference2 front identity. SAME gentle upright airborne leap, head above chest, two forepaws tucked in front, two hind legs gathered down, not grounded sitting. FOUR legs total, two very long leaf-lined ears, ONE white cotton tail at rear imageLEFT. Purple-green thistle burr fur cream chin, one huge dark glossy eye visible, rabbit muzzle right. Match limb angles and ear/body ratio from opposite view. True lateral eye-level no three-quarter face. Full character square transparent canvas with EMPTY 8 percent margins above ears and below paws, do not crop burr tips. Hand-painted fantasy MMORPG art, no ground/shadow/text/motion effects.",
+  "references": [
+    "left.png",
+    "front.png"
+  ]
+}

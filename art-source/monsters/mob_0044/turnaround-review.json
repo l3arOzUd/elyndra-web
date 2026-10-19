@@ -1,0 +1,19 @@
+{
+  "id": "mob_0044",
+  "name": "Thistlehare",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front master and opposite profile references; checked leap-pose identity, limb visibility and rear orientation.",
+  "confirmed": [
+    "Very long ears, purple-green thistle burr coat, dark eyes and white cotton tail preserve Bible design.",
+    "All views retain tucked airborne leap rather than switching to standing pose.",
+    "Profiles show two forepaws and two hind feet; one face eye visible in each.",
+    "Rear shows burr-covered ear backs and no face."
+  ],
+  "limitations": [
+    "Ear spread/tilt and hind-foot overlap vary between profiles; pose correspondence requires refinement.",
+    "Rear hind paws still show forward-looking claw tips; heel/sole orientation needs review.",
+    "Cotton-tail position in front is off-center projection while rear centered; depth consistency unverified.",
+    "Ear-tip margins are extremely narrow despite alpha-edge checks passing; normalize framing and burr landmarks before animation."
+  ],
+  "next": "Align ears/hips/hocks and tail attachment across views, then separate articulated parts and create hop cycle, attack, hit and death without stretching limbs."
+}

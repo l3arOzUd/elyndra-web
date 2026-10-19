@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Thistlehare LEFT SIDE orthographic turnaround facing LEFT. Front reference exact character, rear reference burr fur/tail. Maintain SAME upright gentle airborne leap pose: head above chest, two forepaws tucked in front, two long hind legs gathered below pelvis, not grounded sitting and not horizontal stretched jump. Exactly FOUR hare legs, TWO very long ears, ONE white cotton tail at rear imageRIGHT. One huge dark eye visible, small rabbit muzzle points LEFT, cream chin, purple-green thistle burr coat and leaf-lined ears. Near foreleg and hindleg clear, far pair partially offset and traceable, no extra paws. Preserve ear length/body ratio and hind-foot lengths from front. Strict 90degree side elevation eye-level no three-quarter face. Whole character square transparent canvas with ample clear margin all sides especially ear tips, no ground/shadow/text/motion effects.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}
