@@ -1,0 +1,19 @@
+{
+  "id": "mob_0025",
+  "name": "Prism Wisp",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual inspection of four references, not a proof of common 3D lattice topology.",
+  "confirmed": [
+    "White luminous spherical core remains filled, surrounded by open prismatic crystal lattice.",
+    "Side references introduce central foreground struts rather than copying frontal open hexagon.",
+    "Top and bottom nodes remain upright; no added face or limbs."
+  ],
+  "limitations": [
+    "Exact lattice node/edge correspondence across views is unproven; construct a fixed cage graph before rotation animation.",
+    "Left and right are visually near identical; symmetry is plausible but not a verified physical rotation.",
+    "Core glow, facet colors and opening widths vary.",
+    "Some windows are irregular rather than clearly hexagonal; refine against Bible.",
+    "Edge opacity and white fringes require compositing review against actual terrain."
+  ],
+  "next": "Resolve a shared hexagonal cage structure, separate core and near/far lattice layers, normalize framing, author hover/pulse/attack/death motion and separate rainbow-beam VFX."
+}

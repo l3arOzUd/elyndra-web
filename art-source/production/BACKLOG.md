@@ -33,7 +33,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0022 | Brine Automaton | master-created | master-created | master-created | master-created | placeholder |
 | mob_0023 | Relay Guardian | master-created | master-created | master-created | master-created | placeholder |
 | mob_0024 | Frost Mite | master-created | master-created | master-created | master-created | placeholder |
-| mob_0025 | Prism Wisp | master-created | missing | missing | missing | placeholder |
+| mob_0025 | Prism Wisp | master-created | master-created | master-created | master-created | placeholder |
 | mob_0026 | Icegear | master-created | missing | missing | missing | placeholder |
 | mob_0027 | Archive Keeper | master-created | missing | missing | missing | placeholder |
 | mob_0028 | Ashcrawler | master-created | missing | missing | missing | placeholder |
