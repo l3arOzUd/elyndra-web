@@ -116,7 +116,7 @@ export const TOTEM_TYPES: TotemTypeDef[] = [
   { id: "aegis", name: "Aegis", effects: { temp_shield: 30 }, duration_ms: 8000, charges: 40, text: "Gain a {temp_shield}% of Max HP Aether Shield" },
   { id: "mending", name: "Mending", effects: { heal: 40 }, duration_ms: 0, charges: 30, text: "Restores {heal}% of Max HP" },
   { id: "gale", name: "Gale", effects: { inc_move_speed: 30, grip: 50 }, duration_ms: 8000, charges: 30, text: "{inc_move_speed}% increased Movement Speed; {grip}% increased aggro radius" },
-  { id: "hunt", name: "the Hunt", effects: { exp_bonus: 20 }, duration_ms: 30000, charges: 80, text: "{exp_bonus}% more EXP" },
+  { id: "hunt", name: "the Hunt", effects: { exp_bonus: 20, spawn_rate: 50 }, duration_ms: 30000, charges: 80, text: "{exp_bonus}% more EXP; monsters on the map respawn {spawn_rate}% faster" },
 ];
 
 /**

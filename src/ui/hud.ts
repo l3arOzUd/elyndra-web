@@ -1,7 +1,7 @@
 import type { ClientContent } from '../data/content';
 import type { GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
-import { paintedIcon } from './art';
+import { skillIcon, systemIcon } from './art';
 import { CHARM_SLOTS, ECHO_COUNT, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
 
 const $ = (id: string) => document.getElementById(id)!;
@@ -38,14 +38,17 @@ export class Hud {
   onResetStats: () => void = () => {};
   onTotem: (slot: string) => void = () => {};
   onLink: (slot: string, skill: string) => void = () => {};
+  /** A Totem's effect started (for the effects layer). */
+  onTotemFired: (type: string) => void = () => {};
+  onLevelUp: (level: number) => void = () => {};
 
   constructor(private readonly c: ClientContent) {
     const bar = $('hotbar'); bar.replaceChildren();
     HOTBAR.forEach((id, i) => {
       const s = c.skills.get(id), b = el('button', 'slot'); b.dataset.skill = id;
-      b.append(el('span', 'key', String(i + 1)), paintedIcon(i, 'skill'), el('span', 'name', s?.name ?? id), el('span', 'cd'));
+      b.append(el('span', 'key', String(i + 1)), skillIcon(id), el('span', 'name', s?.name ?? id), el('span', 'cd'));
       b.title = s ? s.name + ' · ' + s.resource_cost + ' SP · ' + s.cooldown_ms / 1000 + 's · up to ' + s.max_targets + ' targets' : id;
-      this.bindTooltip(b, s?.name ?? id, s ? s.resource_cost + ' SP ? ' + s.cooldown_ms / 1000 + 's cooldown ? ' + s.max_targets + ' targets' : '');
+      this.bindTooltip(b, s?.name ?? id, () => this.skillText(id));
       b.setAttribute('aria-label', b.title); b.onclick = () => this.onSkill(id); bar.append(b);
     });
     ITEM_KEYS.forEach((id, i) => {
@@ -57,7 +60,7 @@ export class Hud {
     });
     CHARM_SLOTS.forEach((slot, i) => {
       const b = el('button', 'slot item totem'); b.dataset.totem = slot;
-      b.append(el('span', 'key', TOTEM_KEYS[i]), paintedIcon(31), el('span', 'name', 'Totem'), el('span', 'qty'), el('span', 'cd'));
+      b.append(el('span', 'key', TOTEM_KEYS[i]), systemIcon('fury'), el('span', 'name', 'Totem'), el('span', 'qty'), el('span', 'cd'));
       b.setAttribute('aria-label', 'Totem in ' + SLOT_LABEL[slot]);
       b.onclick = () => {
         // An Echo Totem has nothing to press: open it to see or change its link.
@@ -96,10 +99,20 @@ export class Hud {
     this.renderInventory(); this.setQuests([]); this.refreshHotbar();
   }
 
-  private bindTooltip(button: HTMLButtonElement, title: string, copy: string) {
+  /** Skill tooltip: SP, cast and cooldown as they stand (rank, Cast Speed, Cooldown Recovery). */
+  private skillText(id: string): string {
+    const s = this.c.skills.get(id); if (!s) return '';
+    const m = this.c.systems.mastery, rank = this.sheet?.mastery[id]?.[0] ?? 1, d = this.sheet?.d;
+    const cost = rank >= m.sp_cost_rank ? s.resource_cost * (1 - m.sp_cost_cut / 100) : s.resource_cost;
+    const cdr = (d?.cdr ?? 0) * (s.cooldown_ms >= (this.c.systems.rules.ultimate_cooldown_ms ?? 30000) ? 0.5 : 1);
+    const cd = s.cooldown_ms * (1 - cdr) / 1000, cast = s.cast_ms * (1 - (d?.cast ?? 0)) / 1000;
+    const more = (rank - 1) * m.more_damage_per_rank;
+    return 'Rank ' + rank + (more ? ' (+' + more + '% damage)' : '') + ' · ' + Math.round(cost) + ' SP · cast ' + cast.toFixed(2) + 's · cooldown ' + cd.toFixed(1) + 's · ' + s.damage_multiplier + 'x ATK · up to ' + s.max_targets + ' targets';
+  }
+  private bindTooltip(button: HTMLButtonElement, title: string, copy: string | (() => string)) {
     const tip = $('skill-tooltip');
     const show = () => {
-      tip.replaceChildren(el('strong', '', title), el('p', '', copy)); tip.hidden = false;
+      tip.replaceChildren(el('strong', '', title), el('p', '', typeof copy === 'function' ? copy() : copy)); tip.hidden = false;
       const rect = button.getBoundingClientRect();
       tip.style.left = Math.max(8, Math.min(innerWidth - tip.offsetWidth - 8, rect.left + rect.width / 2 - tip.offsetWidth / 2)) + 'px';
       tip.style.top = Math.max(8, rect.top - tip.offsetHeight - 12) + 'px';
@@ -133,7 +146,11 @@ export class Hud {
     const msh = s.msh ?? 0, sh = s.sh ?? 0;
     $('shield-fill').style.width = (msh && s.mhp ? Math.min(100, sh / s.mhp * 100) : 0) + '%';
     if (msh) $('hp-text').textContent += ' · ◈ ' + sh;
+    const before = new Map(this.totems.map((t) => [t.slot, t.left]));
     this.totems = s.tot ?? [];
+    for (const t of this.totems) if (t.left && !before.get(t.slot)) { const g = this.worn(t.slot); const type = g && this.c.items.get(g.base)?.equip?.totem?.type; if (type) this.onTotemFired(type); }
+    if (prev && s.lv > prev.lv) this.onLevelUp(s.lv);
+    this.renderBuffs();
     $('hp-fill').classList.toggle('low', s.hp / s.mhp < .3);
     $('exp-text').textContent = s.next ? (s.exp / s.next * 100).toFixed(1) + '%' : 'MAX';
     $('exp-fill').style.width = (s.next ? Math.min(100, s.exp / s.next * 100) : 100) + '%';
@@ -163,10 +180,13 @@ export class Hud {
       } else if (b.dataset.totem) {
         const t = this.totems.find((x) => x.slot === b.dataset.totem);
         const worn = [...this.gear.values()].find((g) => g.slot === b.dataset.totem), it = worn && this.c.items.get(worn.base);
+        const art = b.querySelector('.painted-icon')!, want = it?.equip?.totem?.type ?? 'fury';
+        if ((art as HTMLElement).dataset.totemArt !== want) { const n = systemIcon(want); n.dataset.totemArt = want; art.replaceWith(n); }
         if (t?.trigger) {
           const linked = t.link ? this.c.skills.get(t.link)?.name : undefined;
           b.classList.remove('cooling', 'active'); b.classList.toggle('locked', !t.link); b.classList.add('echo');
           b.querySelector('.qty')!.textContent = t.ch + '/' + t.need;
+          b.style.setProperty('--fill', Math.min(100, t.ch / t.need * 100) + '%');
           b.querySelector('.cd')!.textContent = t.link ? '' : 'Link';
           b.title = (it?.name ?? 'Echo Totem') + ' · ' + (linked ? 'casts ' + linked + ' every ' + t.need + ' ' + ECHO_COUNT[t.trigger] : 'no skill linked: click to link one');
           b.disabled = false; continue;
@@ -174,7 +194,8 @@ export class Hud {
         const ready = !!t && t.ch >= t.need && !t.left;
         b.classList.toggle('locked', !t); b.classList.toggle('cooling', !!t && !ready); b.classList.toggle('active', !!t?.left);
         b.querySelector('.qty')!.textContent = t ? (t.left ? '' : t.ch + '/' + t.need) : '';
-        b.querySelector('.cd')!.textContent = !t ? '' : t.left ? (t.left / 1000).toFixed(1) : ready ? '' : Math.floor(t.ch / t.need * 100) + '%';
+        b.style.setProperty('--fill', t ? Math.min(100, t.ch / t.need * 100) + '%' : '0%');
+        b.querySelector('.cd')!.textContent = t?.left ? (t.left / 1000).toFixed(1) : '';
         b.title = it ? it.name + (ready ? ' · ready' : t ? ' · ' + t.ch + '/' + t.need + ' kills' : '') : 'No Totem in ' + SLOT_LABEL[b.dataset.totem];
         b.disabled = !ready;
       }
@@ -186,7 +207,7 @@ export class Hud {
     for (const g of m.gear ?? []) this.gear.set(g.uid, g);
     for (const uid of m.gear_gone ?? []) this.gear.delete(uid);
     this.zeny = m.zeny; if (m.equip) this.equip = m.equip;
-    this.renderInventory(); this.refreshHotbar();
+    this.renderInventory(); this.refreshHotbar(); this.renderBuffs();
   }
   /** The worn copy in a slot. */
   worn(slot: string) { return [...this.gear.values()].find((g) => g.slot === slot); }
@@ -198,7 +219,7 @@ export class Hud {
     for (const slot of [...GEAR_SLOTS, ...CHARM_SLOTS]) {
       const g = this.worn(slot), it = g && this.c.items.get(g.base), row = el('div', 'eq-row' + (g ? ' rarity-' + g.rarity : '')), label = el('div', 'eq-label');
       const open = this.c.systems.charm_slot_levels[CHARM_SLOTS.indexOf(slot as typeof CHARM_SLOTS[number])] ?? 0;
-      row.append(it ? itemIcon(it) : icon(slot === 'weapon' ? 'sword' : slot === 'armor' || slot === 'boots' ? slot : slot === 'head' ? 'shield' : 'crystal', 'empty-equip'));
+      row.append(it ? itemIcon(it, g!.rarity) : icon(slot === 'weapon' ? 'sword' : slot === 'armor' || slot === 'boots' ? slot : slot === 'head' ? 'shield' : 'crystal', 'empty-equip'));
       label.append(el('small', 'eyebrow', SLOT_LABEL[slot]), el('strong', '', it ? it.name : lv < open ? 'Opens at Lv ' + open : 'Empty'));
       if (g && inactive.has(g.uid)) label.append(el('small', 'bad', 'Requirements not met: no effect'));
       row.append(label);
@@ -219,7 +240,7 @@ export class Hud {
       const g = id.startsWith('g:') ? this.gear.get(Number(id.slice(2))) : undefined;
       const it = itemOf(id), li = el('li'), b = el('button', 'item-cell rarity-' + (g ? g.rarity : it?.rarity ?? 'common') + (id === this.selected ? ' selected' : ''));
       b.title = nameOf(id) + (g ? ' · ' + RARITY_LABEL[g.rarity] : ''); b.setAttribute('aria-label', g ? nameOf(id) + ', ' + RARITY_LABEL[g.rarity] + ', item level ' + g.ilvl : (it?.name ?? id) + ', quantity ' + this.inventory[id]); b.setAttribute('aria-pressed', String(id === this.selected)); b.dataset.item = id;
-      b.append(itemIcon(it), el('span', 'item-quantity', g ? (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
+      b.append(itemIcon(it, g?.rarity), el('span', 'item-quantity', g ? (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
       b.onclick = () => { this.selected = id; this.renderInventory(); (list.querySelector('[data-item="' + CSS.escape(id) + '"]') as HTMLButtonElement | null)?.focus(); };
       li.append(b); list.append(li);
     }
@@ -237,7 +258,7 @@ export class Hud {
     const it = gearItem(this.c, g);
     if (!it?.equip) { d.append(el('p', 'muted', g.base)); return; }
     const e = it.equip, title = el('h3', 'rarity-text-' + g.rarity, it.name);
-    d.append(itemIcon(it), el('p', 'eyebrow', RARITY_LABEL[g.rarity] + ' · ' + kindLabel(it) + ' · item level ' + g.ilvl), title);
+    d.append(itemIcon(it, g.rarity), el('p', 'eyebrow', RARITY_LABEL[g.rarity] + ' · ' + kindLabel(it) + ' · item level ' + g.ilvl), title);
     if (e.unique || it.category === 'totem' || it.description) d.append(el('p', 'item-description', it.description));
     for (const line of baseLines(this.c, it, g)) d.append(el('p', 'item-stat', line));
     if (g.affixes.length) {
@@ -356,7 +377,7 @@ export class Hud {
       name.append(el('strong', '', info.name), el('small', 'muted', info.text));
       const value = el('b', 'stat-value', String(m.stats[id] ?? 0));
       if (m.bonus[id]) value.append(el('small', 'good', ' +' + m.bonus[id]));
-      row.append(name, value);
+      row.append(systemIcon(id), name, value);
       for (const n of [1, 5]) {
         const b = el('button', 'subtle stat-add', '+' + n); b.disabled = m.points < 1;
         b.setAttribute('aria-label', 'Add ' + Math.min(n, m.points) + ' to ' + info.name);
@@ -387,10 +408,22 @@ export class Hud {
       const s = this.c.skills.get(skill), row = el('div', 'rank-row'), bar = el('div', 'objective-progress'), fill = el('span');
       const prev = this.c.systems.mastery.per_rank * (rank - 1) * (rank - 1);
       fill.style.width = (next ? Math.min(100, (kills - prev) / Math.max(1, next - prev) * 100) : 100) + '%'; bar.append(fill);
-      const head = el('div', 'rank-head'); head.append(el('strong', '', s?.name ?? 'Basic attack'), el('b', '', 'Rank ' + rank));
+      const head = el('div', 'rank-head'); head.append(skillIcon(skill), el('strong', '', s?.name ?? 'Basic attack'), el('b', '', 'Rank ' + rank));
       row.append(head, bar, el('small', 'muted', next ? kills.toLocaleString() + ' / ' + next.toLocaleString() + ' kills' : kills.toLocaleString() + ' kills · max rank'));
       const perk = this.c.systems.mastery.perks[skill]; if (perk) row.append(el('small', rank >= this.c.systems.mastery.max_rank ? 'good' : 'muted', 'Rank 10: ' + perk));
       ranks.append(row);
+    }
+  }
+  /** Active Totem effects and Echo counters under the status panel. */
+  renderBuffs() {
+    const bar = $('buff-bar'); bar.replaceChildren();
+    for (const t of this.totems) {
+      const g = this.worn(t.slot), it = g && this.c.items.get(g.base), type = it?.equip?.totem?.type;
+      if (!type || (!t.left && !t.trigger)) continue;
+      const b = el('div', 'buff' + (t.trigger ? ' echo' : '')); b.append(systemIcon(type));
+      b.append(el('small', '', t.trigger ? Math.floor(t.ch / t.need * 100) + '%' : Math.ceil(t.left / 1000) + 's'));
+      b.title = (it?.name ?? '') + (t.trigger ? ' · ' + t.ch + '/' + t.need + (t.link ? ' → ' + (this.c.skills.get(t.link)?.name ?? t.link) : ' · no skill linked') : ' · ' + (t.left / 1000).toFixed(1) + 's left');
+      bar.append(b);
     }
   }
   setQuests(qs: QuestView[]) {

@@ -1472,11 +1472,12 @@
    "id": "hunt",
    "name": "the Hunt",
    "effects": {
-    "exp_bonus": 20
+    "exp_bonus": 20,
+    "spawn_rate": 50
    },
    "duration_ms": 30000,
    "charges": 80,
-   "text": "{exp_bonus}% more EXP"
+   "text": "{exp_bonus}% more EXP; monsters on the map respawn {spawn_rate}% faster"
   },
   {
    "id": "echo_slaughter",

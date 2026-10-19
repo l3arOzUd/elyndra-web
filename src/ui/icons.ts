@@ -41,4 +41,5 @@ export function icon(name: string, cls=''): HTMLElement {
  span.innerHTML=`<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]??paths.crystal}</svg>`;
  return span;
 }
-export function itemIcon(item?: ItemDef): HTMLElement { return paintedItem(item); }
+/** rarity: a gear copy's rarity (Relic and Unique Charms have their own art). */
+export function itemIcon(item?: ItemDef, rarity?: string): HTMLElement { return paintedItem(item, rarity); }

@@ -5,7 +5,7 @@ import { decodeWalk } from "./data/schema";
 import type { Connection } from "./net/connection";
 import { EntState, type CombatEvent, type EntityAdd, type MsgOf, type ServerMsg } from "./net/protocol";
 import { IsoCamera } from "./render/camera";
-import { Fx } from "./render/fx";
+import { Fx, RARITY_COLORS, TOTEM_COLORS } from "./render/fx";
 import { wayfarerSprite } from "./render/paperDoll";
 import { skillAnimation } from "./render/combatAnimation";
 import { SpriteActor } from "./render/spriteActor";
@@ -123,6 +123,8 @@ export class Game {
     hud.onResetStats = () => conn.send({ t: "reset_stats" });
     hud.onTotem = (slot) => conn.send({ t: "totem", slot });
     hud.onLink = (slot, skill) => conn.send({ t: "link", slot, skill });
+    hud.onTotemFired = (type) => { const me = this.self; if (me) this.fx.aura(me.pos.x, me.pos.z, TOTEM_COLORS[type] ?? 0xffffff); };
+    hud.onLevelUp = () => { const me = this.self; if (me) this.fx.aura(me.pos.x, me.pos.z, 0xffe08a, 1400, 2); };
     dialog.onOp = (npc, op, arg, qty) => conn.send({ t: "npc", npc, op, arg, qty });
     document.getElementById('clear-target')!.onclick = () => { this.targetId = null; this.hud.setTarget(null); };
     document.querySelector<HTMLButtonElement>('[data-close=debug-win]')!.onclick = () => { this.debugOn = false; this.conn.send({ t: 'debug', on: false }); document.getElementById('debug-win')!.hidden = true; };
@@ -262,6 +264,7 @@ export class Game {
       e.actor.play(e.kind === "p" ? skillAnimation(s) : "attack", { impactMs: castMs });
       if (s) this.fx.telegraph(s, e.pos.x, e.pos.z, m.aim[0], m.aim[1], castMs);
     }
+    if (m.echo && e) this.fx.aura(e.pos.x, e.pos.z, 0xffd246, 600, 1.1);
     // An Echo Totem's cast is free: the skill's own cooldown does not start.
     if (m.actor === this.selfId && !m.echo) {
       this.hud.startCooldown(m.skill, m.cd);
@@ -306,12 +309,20 @@ export class Game {
     this.removePile(p.id);
     const g = new THREE.Group();
     // Rare materials, or a gear copy better than normal (third field: its rarity).
-    const rare = p.items.some(([id, , rarity]) => (rarity ? rarity !== "normal" : ["rare", "epic"].includes(this.c.items.get(id)?.rarity ?? "")));
-    const bag = new THREE.Mesh(new THREE.IcosahedronGeometry(0.22, 0), new THREE.MeshLambertMaterial({ color: rare ? 0x7ab8ff : 0xd9b46a, emissive: rare ? 0x203a66 : 0x3a2a10, flatShading: true }));
+    const order = ["normal", "magic", "rare", "unique", "relic"];
+    const best = p.items.reduce((b, [, , r]) => (r && order.indexOf(r) > order.indexOf(b) ? r : b), "normal");
+    const rare = best !== "normal" || p.items.some(([id, , r]) => !r && ["rare", "epic"].includes(this.c.items.get(id)?.rarity ?? ""));
+    const tint = best !== "normal" ? RARITY_COLORS[best] : rare ? 0x7ab8ff : 0xd9b46a;
+    const bag = new THREE.Mesh(new THREE.IcosahedronGeometry(0.22, 0), new THREE.MeshLambertMaterial({ color: tint, emissive: rare ? new THREE.Color(tint).multiplyScalar(0.3) : 0x3a2a10, flatShading: true }));
     bag.position.y = 0.25;
-    const ring = new THREE.Mesh(new THREE.RingGeometry(0.25, 0.34, 20).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: rare ? 0x7ab8ff : 0xffe08a, transparent: true, opacity: 0.7, depthWrite: false }));
+    const ring = new THREE.Mesh(new THREE.RingGeometry(0.25, 0.34, 20).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: rare ? tint : 0xffe08a, transparent: true, opacity: 0.7, depthWrite: false }));
     ring.position.y = 0.05;
     g.add(bag, ring);
+    // Gear better than normal: a light beam you can spot across a horde.
+    if (best !== "normal") {
+      const beam = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.16, 3.2, 10, 1, true).translate(0, 1.6, 0), new THREE.MeshBasicMaterial({ color: tint, transparent: true, opacity: 0.55, depthWrite: false, blending: THREE.AdditiveBlending }));
+      g.add(beam);
+    }
     g.position.set(p.x, 0, p.y);
     g.userData.spin = { axis: "y", speed: 1.5 };
     this.scene.add(g);

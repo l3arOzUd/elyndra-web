@@ -3,7 +3,7 @@ import './uiPreview.css';
 import * as THREE from 'three';
 import { loadContent, loadLayout } from '../data/content';
 import type { RecipeDef, ShopDef } from '../data/schema';
-import type { MsgOf, QuestView } from '../net/protocol';
+import type { GearView, MsgOf, QuestView } from '../net/protocol';
 import { mountShell } from '../ui/shell';
 import { Hud } from '../ui/hud';
 import { NpcDialog } from '../ui/npcDialog';
@@ -26,14 +26,43 @@ async function main() {
   const inspector = new Inspector($('inspector'), { wayfarer: buildHeroSprite() });
   $('login').hidden = true; $('hud').hidden = false;
   $('player-name').textContent = $('equipment-name').textContent = 'Aeloria';
-  hud.setStats({ t:'stats', lv:18, job:'vanguard', hp:1080, mhp:1320, sp:186, msp:240, atk:84, def:32, exp:684, next:1200 });
+  // Sample character systems data (CHARACTER_SYSTEMS.md): copies of gear with
+  // rolled affixes, worn Charms and Totems, and a character sheet.
+  const items = [...c.items.values()];
+  const base = (f: (it: typeof items[number]) => boolean) => items.find(f)!;
+  const tier = (slot: string, kind?: string) => base(it => it.equip?.slot === slot && it.equip.item_level === 30 && (!kind || it.equip.kind === kind) && (slot !== 'weapon' || it.equip.job === 'vanguard'));
+  const totemBase = (type: string, grade = 2) => base(it => it.equip?.totem?.type === type && it.equip.totem.grade === grade);
+  const charmBase = (type: string, grade = 2) => base(it => it.equip?.charm?.type === type && it.equip.charm.grade === grade);
+  let uid = 1;
+  const copy = (it: typeof items[number], rarity: GearView['rarity'], affixes: GearView['affixes'] = [], slot?: string, link?: string): GearView => ({ uid: uid++, base: it.id, rarity, ilvl: it.equip?.item_level ?? 30, affixes, slot, link });
+  const sampleGear: GearView[] = [
+    copy(tier('weapon'), 'rare', [['inc_damage', 4, 11], ['crit_mult', 3, 11], ['stat_pow', 4, 9], ['inc_crit', 3, 28]], 'weapon'),
+    copy(tier('head', 'armour'), 'magic', [['inc_area', 3, 8]], 'head'),
+    copy(tier('armor', 'armour'), 'rare', [['inc_local_defense', 3, 27], ['flat_hp', 3, 74], ['res_fire', 3, 15]], 'armor'),
+    copy(tier('boots', 'armour_evasion'), 'magic', [['inc_move_speed', 3, 9], ['stat_vit', 2, 4]], 'boots'),
+    copy(tier('accessory'), 'normal', [], 'accessory'),
+    copy(charmBase('clover'), 'relic', [['stat_luk', 3, 4], ['cap_crit', 2, 53]], 'charm1'),
+    copy(totemBase('fury'), 'magic', [['totem_duration', 2, 17]], 'charm2'),
+    copy(totemBase('echo_fury', 3), 'rare', [['totem_charges', 3, 18], ['totem_effect', 2, 14]], 'charm3', 'iron_cyclone'),
+    copy(tier('weapon'), 'magic', [['leech', 3, 0.55]]),
+    copy(tier('armor', 'evasion_shield'), 'rare', [['inc_local_defense', 4, 34], ['res_cold', 3, 14], ['inc_shield_recharge', 2, 13]]),
+    copy(totemBase('echo_slaughter', 1), 'normal'),
+    copy(base(it => it.equip?.unique === 'glass_ember'), 'unique'),
+  ];
+  hud.setStats({ t:'stats', lv:30, job:'vanguard', hp:1980, mhp:2240, sp:186, msp:300, sh:160, msh:410, atk:412, def:268, exp:684, next:1200,
+    tot:[{ slot:'charm2', ch:31, need:40, left:0 }, { slot:'charm3', ch:62, need:98, left:0, trigger:'hits', link:'iron_cyclone' }] });
   const bag: Record<string, number> = {};
-  [...c.items.values()].slice(0, 18).forEach((it, i) => bag[it.id] = 3 + i * 2);
-  const gear = [...c.items.values()].filter(it => it.equip).slice(0, 7);
+  items.filter(it => !it.equip).slice(0, 18).forEach((it, i) => bag[it.id] = 3 + i * 2);
+  for (const it of items.filter(it => it.use)) bag[it.id] = 24;
   const equip: Record<string, string> = {};
-  for (const it of gear) { bag[it.id] = 1; equip[it.equip!.slot] ??= it.id; }
-  for (const it of [...c.items.values()].filter(it => it.use)) bag[it.id] = 24;
-  hud.setInventory({ t:'inv', ver:1, full:true, items:bag, zeny:2480, equip });
+  for (const g of sampleGear) if (g.slot) equip[g.slot] = g.base;
+  hud.setInventory({ t:'inv', ver:1, full:true, items:bag, zeny:2480, equip, gear:sampleGear });
+  hud.setSheet({ t:'sheet', stats:{ pow:40, luk:20, agi:12, dex:0, int:0, vit:15 }, bonus:{ pow:9, luk:4, vit:4 }, points:0, free_reset:false,
+    d:{ atk:412, atk_base:343, weapon:138, inc_damage:0.11, more_damage:1, crit:0.2, crit_mult:1.69, cdr:0.074, cast:0, attack_ms:748, max_hp:2240, max_sp:300, max_shield:410,
+      armour:268, evasion:41, poise:0.159, leech:0, leech_cap:0.1, hp_on_kill:0, sp_on_kill:0, hp_regen:0, sp_regen_inc:0, move:0.09, grip:0, magnet:0, area:0.08, area_more:1,
+      duration:0, shield_recharge:0.3, exp_bonus:0, cap_crit:0.53, cap_cdr:0.4, cap_cast:0.55, cap_poise:0.5, cap_evasion:0.6,
+      res_fire:0.15, res_cold:0, res_nature:0, res_shadow:0, cap_res_fire:0.75, cap_res_cold:0.75, cap_res_nature:0.75, cap_res_shadow:0.75 },
+    mastery:{ basic:[3, 1210, 1800], cleaving_arc:[5, 3410, 5000], iron_cyclone:[4, 1950, 3200], anchor_shout:[1, 40, 200], sundering_pulse:[2, 260, 800] } });
   const quests: QuestView[] = [...c.quests.values()].slice(0, 3).map((q, i) => ({
     id:q.id, title:q.title, summary:q.summary, turn_in:q.turn_in_npc_id, state:i === 1 ? 'ready' : 'active',
     goals:q.objectives.map(o => o.count), progress:q.objectives.map(o => i === 1 ? o.count : Math.floor(o.count * .6)),
@@ -55,6 +84,11 @@ async function main() {
   hud.onUse = id => feedback('Use ' + c.items.get(id)?.name);
   hud.onEquip = uid => feedback('Equip ' + (c.items.get(hud.gear.get(uid)?.base ?? '')?.name ?? uid));
   hud.onUnequip = slot => feedback('Unequip ' + slot);
+  hud.onStat = (stat, n) => feedback('+' + n + ' ' + stat.toUpperCase());
+  hud.onResetStats = () => feedback('Reset stat points');
+  hud.onTotem = slot => feedback('Use Totem in ' + slot);
+  hud.onLink = (slot, skill) => feedback('Link ' + (c.skills.get(skill)?.name ?? skill) + ' to ' + slot);
+  hud.onDiscard = uid => feedback('Discard ' + (c.items.get(hud.gear.get(uid)?.base ?? '')?.name ?? uid));
   hud.onSkill = id => { feedback(c.skills.get(id)?.name ?? id); hud.startCooldown(id); };
   dialog.onOp = (_npc, op, arg, qty) => feedback(op + (arg ? ' · ' + (c.items.get(arg)?.name ?? c.maps.get(arg)?.name ?? arg) : '') + (qty ? ' ×' + qty : ''));
 
@@ -71,7 +105,7 @@ async function main() {
   const guild = baseNpc('guild_registrar'); guild.lines = ['Lumeris needs people with a little courage. I have a few tasks that might suit you.']; guild.offer = [quests[0]]; guild.ready = [quests[1].id];
   const services: Record<string, MsgOf<'npc'>> = { shop:merchant, craft, travel, healer, guild };
   const toolbar = document.createElement('nav'); toolbar.className = 'preview-toolbar'; toolbar.setAttribute('aria-label', 'Interface preview');
-  toolbar.innerHTML = '<div><strong>INTERFACE ATELIER</strong><small>Sample data · no server changes</small></div><select id="preview-mode" aria-label="Preview window"><option value="hud">HUD / In-game</option><option value="bag">Satchel</option><option value="equipment">Equipment</option><option value="journal">Quest journal</option><option value="shop">Shop / Buy & sell</option><option value="craft">Crafting</option><option value="travel">Travel</option><option value="healer">Healer</option><option value="guild">NPC quests</option><option value="menu">Camp menu</option><option value="login">Login</option><option value="disconnected">Disconnected</option><option value="inspector">Animation studio</option><option value="debug">Diagnostics</option></select><a href="/">Play ↗</a>';
+  toolbar.innerHTML = '<div><strong>INTERFACE ATELIER</strong><small>Sample data · no server changes</small></div><select id="preview-mode" aria-label="Preview window"><option value="hud">HUD / In-game</option><option value="bag">Satchel</option><option value="equipment">Equipment</option><option value="character">Character</option><option value="gear">Gear detail</option><option value="journal">Quest journal</option><option value="shop">Shop / Buy & sell</option><option value="craft">Crafting</option><option value="travel">Travel</option><option value="healer">Healer</option><option value="guild">NPC quests</option><option value="menu">Camp menu</option><option value="login">Login</option><option value="disconnected">Disconnected</option><option value="inspector">Animation studio</option><option value="debug">Diagnostics</option></select><a href="/">Play ↗</a>';
   $('view').append(toolbar);
   const open = (mode: string) => {
     ($('preview-mode') as HTMLSelectElement).value = mode;
@@ -81,6 +115,11 @@ async function main() {
     if (mode === 'bag' || mode === 'equipment') {
       hud.toggle('inv-win', true);
       (document.querySelector('[data-bag-tab="' + (mode === 'bag' ? 'items' : 'equipment') + '"]') as HTMLButtonElement).click();
+    } else if (mode === 'character') hud.toggle('char-win', true);
+    else if (mode === 'gear') {
+      hud.toggle('inv-win', true);
+      (document.querySelector('[data-bag-tab="items"]') as HTMLButtonElement).click();
+      (document.querySelector('#inventory .item-cell.rarity-rare') as HTMLButtonElement | null)?.click();
     } else if (mode === 'journal') hud.toggle('journal-win', true);
     else if (mode === 'menu') hud.toggle('menu-win', true);
     else if (mode === 'inspector') $('inspector').hidden = false;
@@ -98,9 +137,10 @@ async function main() {
     if (['INPUT', 'SELECT', 'TEXTAREA'].includes(target.tagName) || target.isContentEditable) return;
     if (ev.code === 'KeyI') hud.toggle('inv-win');
     if (ev.code === 'KeyQ') hud.toggle('journal-win');
+    if (ev.code === 'KeyC') hud.toggle('char-win');
   });
 
-  const map = [...c.maps.values()].find(m => m.name === 'Dawnmeadow')!;
+  const map = [...c.maps.values()].find(m => m.name === 'Dawnmeadow') ?? [...c.maps.values()].find(m => m.type === 'field')!;
   const layout = await loadLayout(c, map.id), region = c.regions.get(map.region_id);
   const warps = c.warps.filter(w => w.from_map === map.id), built = buildMap(layout, region, warps);
   const scene = new THREE.Scene(); scene.background = new THREE.Color(region?.palette.fog ?? '#72805a');
