@@ -1,0 +1,7 @@
+{
+  "prompt": "Correct FIRST reference left profile of Meridian Executor. It incorrectly has FIVE visible purple blade tips. Must have exactly FOUR arms each ending in exactly ONE blade. Keep ONE front-left pointing blade, ONE near lower vertical blade beside thigh, TWO rearward downward blades on right; REMOVE the extra small purple blade sliver behind the lower vertical blade (extra tip next to shin). Four blade tips total, four continuous arm chains, no doubled blade. Preserve entire silhouette head torso feet pose armor colors everything else. Use second front reference for four-arm anatomy. Transparent background no text.",
+  "references": [
+    "left-extra-blade-draft.png",
+    "front.png"
+  ]
+}

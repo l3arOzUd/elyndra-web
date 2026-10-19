@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "Create the RIGHT SIDE orthographic turnaround of Elyndra Meridian Executor, facing RIGHT. Reference1 is corrected left profile; reference2 front establishes anatomy; reference3 back establishes rear plating. Same individual, identical black ceramic and violet blade materials, proportions, height and neutral standing pose. Exactly FOUR independent arms: one upper pair attached to shoulders, one lower pair attached below ribs. Every arm has its own elbow and ends directly in exactly ONE long violet blade. Exactly FOUR blade tips total, no extra fingers, swords or slivers. Two legs. Match opposite profile silhouette and blade lengths; expose near upper and near lower arm roots clearly and allow far roots natural occlusion, never branch two arms from one elbow. Single narrow mask has one vertical slit only on front, visible at rightmost edge in profile. Back is segmented spine. Strict eye-level side view, face and feet point right, no three-quarter torso. Full body centered square canvas with transparent margins, nothing clipped. Hand-painted polished fantasy MMORPG bestiary consistent with refs. Transparent background, no ground, shadow, text or diagrams.",
+  "references": [
+    "left.png",
+    "front.png",
+    "back.png"
+  ]
+}

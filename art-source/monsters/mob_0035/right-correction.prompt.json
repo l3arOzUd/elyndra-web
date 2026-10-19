@@ -1,0 +1,7 @@
+{
+  "view": "right",
+  "prompt": "Precisely edit this right-facing Meridian Executor. There are FIVE blade tips; remove ONLY the extra thin purple blade immediately to the LEFT of the central long downward blade, in front of the knees/shins (extra tip near x535 y1010 on 1280 canvas). Remove that entire unwanted slender blade and its little extra hilt near x580 y720. Preserve the large central downward blade ending near x580 y1060 and its proper hilt near x635 y720. Preserve the two blades pointing down-left and the one pointing down-right. Result exactly FOUR blades: two left diagonal, one central vertical, one right diagonal. Reconstruct underlying leg/transparent gap where extra blade was. Do not change anything else: pose, four arms, head, body, two legs, scale, colors, transparent background unchanged.",
+  "references": [
+    "right-extra-blade-draft.png"
+  ]
+}

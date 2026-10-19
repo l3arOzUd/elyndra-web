@@ -1,0 +1,19 @@
+{
+  "id": "mob_0035",
+  "name": "Meridian Executor",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front master; opposite profile referenced; targeted removal of fifth blade in both profiles; visual inspection plus separate alpha/framing checks.",
+  "confirmed": [
+    "Front and back show four blade arms and two legs.",
+    "Corrected profiles each show exactly four blade tips; discarded five-blade versions retained as drafts.",
+    "Rear helmet has no frontal luminous slit; rear torso uses segmented spine plating.",
+    "Right profile faces right and left profile faces left."
+  ],
+  "limitations": [
+    "Far upper arm roots overlap near upper arms in profiles; independent shoulder connections cannot be fully traced. Must resolve before rigging.",
+    "Profile blade fan is rotated relative to front/back neutral pose. Match elbow angles and blade depth across views before multiview reconstruction.",
+    "Profile feet largely overlap; two-leg depth and rear knee articulation require consistency review.",
+    "Armor seams and blade lengths vary across views; file completeness does not establish animation-ready anatomy."
+  ],
+  "next": "Refine arm-root topology and pose consistency, then separate articulated parts with fixed-length bones; validate motion and equipment/VFX later."
+}
