@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 43; existing front references needing review: 7; missing front references: 44.
+Monsters: 94; front masters created: 46; existing front references needing review: 7; missing front references: 41.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -59,9 +59,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0051 | Brass Kite | master-created | missing | missing | missing | placeholder |
 | mob_0052 | Glasstail Basilisk | master-created | missing | missing | missing | placeholder |
 | mob_0053 | Gnomon Acolyte | master-created | missing | missing | missing | placeholder |
-| mob_0054 | Canal Strider | missing | missing | missing | missing | placeholder |
-| mob_0055 | Dust Revenant | missing | missing | missing | missing | placeholder |
-| mob_0056 | Sand-buried Colossus | missing | missing | missing | missing | placeholder |
+| mob_0054 | Canal Strider | master-created | missing | missing | missing | placeholder |
+| mob_0055 | Dust Revenant | master-created | missing | missing | missing | placeholder |
+| mob_0056 | Sand-buried Colossus | master-created | missing | missing | missing | placeholder |
 | mob_0057 | Prism Lens-drone | missing | missing | missing | missing | placeholder |
 | mob_0058 | Vault Mirrorguard | missing | missing | missing | missing | placeholder |
 | mob_0059 | Heliostat Sovereign | missing | missing | missing | missing | placeholder |

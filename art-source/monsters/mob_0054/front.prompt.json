@@ -1,0 +1,8 @@
+{
+  "id": "mob_0054",
+  "name": "Canal Strider",
+  "view": "front",
+  "prompt": "Single full creature front orthographic eye-level master for Elyndra hand-painted fantasy MMORPG. Canal Strider: a water-strider the size of a pony, stilt legs tipped with silver pads, a slim teal body and silt-pearl eyes. Anatomically SIX legs only: short front pair raised slightly forward, long middle pair spreading laterally, long rear pair angled backward but visible separately. Slender teal insect thorax and elongated abdomen receding behind it, two large pale silt-pearl eyes, thin antennae. Each of six legs has clear natural joints and one reflective silver foot pad. Elegant delicate water insect, not spider, no wings, no armor. Warm detailed painterly fantasy game art, strong clean readable silhouette. Body and face squarely toward camera, bilateral design, no three-quarter camera. Entire span of legs and antenna tips inside SQUARE image with substantial empty transparent margins. No water, no ground, no shadow, no text or backdrop, true transparent background. Neutral standing pose for future four-view model reference.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Six jointed legs, each ending in a silver pad; retain across all views."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "mob_0055",
+  "name": "Dust Revenant",
+  "view": "front",
+  "prompt": "Single full-body FRONT orthographic eye-level master reference, beautiful hand-painted stylized fantasy MMORPG monster for Elyndra. Dust Revenant: a floating figure in sand-coloured burial wraps trailing dust, an empty hood lit by a dim surveyor's lamp held in a bony hand. Tall eerie floating shrouded figure, weathered sandy beige burial bandages and frayed wrapping strips forming flowing silhouette. Hood interior is completely empty dark hollow, NO eyes or skull in hood. Two skeletal hands emerge from sleeves; its RIGHT hand (viewer left) holds a small aged brass surveyor lantern with dim warm amber light, other bony hand hangs relaxed. Ragged tapering wraps below, no feet; strips suggest drifting movement. Neutral forward-facing hovering pose, full hood and lowest wrap tips well within square canvas with generous empty margins. Painterly cloth detail and softly shaded form, clear silhouette at game scale. True transparent background, no ground or cast shadow, no text, no backdrop haze, NO detached dust particles in this master; dust animation added separately later. Lantern glow contained within glass and nearby cloth only.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Empty hood; lantern carried in character right hand (viewer left in front). Dust emitted separately."
+}

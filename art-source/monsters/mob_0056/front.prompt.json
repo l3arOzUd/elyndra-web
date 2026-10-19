@@ -1,0 +1,8 @@
+{
+  "id": "mob_0056",
+  "name": "Sand-buried Colossus",
+  "view": "front",
+  "prompt": "Single hand-painted stylized fantasy MMORPG boss monster master, Elyndra Sand-buried Colossus. Bible: A giant sandstone-and-brass figure buried to the waist, one arm free and dragging, a cracked sun-disc face glowing orange. FRONT orthographic eye-level. Massive ancient weathered sandstone torso reinforced by aged brass bands, huge round cracked sun-disc face with orange light inside cracks. Character RIGHT arm (viewer left) is free: enormous jointed stone-and-brass arm descending beside torso, heavy knuckles dragging at waist ground level. Character LEFT arm stays embedded and trapped close against torso by compact sandstone/sand crust. Lower body buried to WAIST, show only compact sand crust attached around waist cut-off; no standing legs or feet, no big terrain platform. Giant battered ruined solar guardian, broad powerful silhouette, clear worn stone materials, warm painterly detailed game art. Entire sun-disc, free arm and compact burial edge fully inside square canvas with 12 percent clear margins. Transparent background, no desert scene, no ground plane, no shadow, no text, no detached dust; later game VFX handles drifting sand. Single creature only.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Buried to waist; character right arm free, left trapped; no visible standing legs."
+}

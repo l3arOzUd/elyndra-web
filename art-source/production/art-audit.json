@@ -2282,9 +2282,13 @@
       "brief": "A water-strider the size of a pony, stilt legs tipped with silver pads, a slim teal body and silt-pearl eyes.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0054/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2319,9 +2323,13 @@
       "brief": "A floating figure in sand-coloured burial wraps trailing dust, an empty hood lit by a dim surveyor's lamp held in a bony hand.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0055/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2356,9 +2364,13 @@
       "brief": "A giant sandstone-and-brass figure buried to the waist, one arm free and dragging, a cracked sun-disc face glowing orange.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0056/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
