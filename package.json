@@ -13,7 +13,8 @@
     "build:content": "tsx content/build.ts",
     "balance:report": "tsx content/report.ts",
     "bible": "tsx scripts/generate-bible.ts",
-    "roadmap": "tsx scripts/validate-data.ts && tsx scripts/generate-roadmap.ts"
+    "roadmap": "tsx scripts/validate-data.ts && tsx scripts/generate-roadmap.ts",
+    "art-plan": "tsx scripts/generate-art-plan.ts"
   },
   "dependencies": {
     "three": "^0.186.0"
