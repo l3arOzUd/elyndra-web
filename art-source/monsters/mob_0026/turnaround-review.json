@@ -1,0 +1,19 @@
+{
+  "id": "mob_0026",
+  "name": "Icegear",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual review of four references; file validation does not prove articulated leg topology.",
+  "confirmed": [
+    "Three frozen gear discs with brass mechanism, spindle and hanging icicles preserved.",
+    "Rear lens replaced by plain cap; side lens placed toward facing edge.",
+    "Rigid brass joints and ice-covered leg segments retained."
+  ],
+  "limitations": [
+    "Eight complete leg chains cannot be traced in front/rear due overlap; source master itself needs construction clarification.",
+    "Side views remain oblique and show lens face instead of strict edge-on projection.",
+    "Near/far leg roots and stance differ between lateral views.",
+    "Gear tooth counts and icicle positions vary; fixed rotating part geometry needed.",
+    "Rear largely repeats front stance; verify opposite-view attachment ordering."
+  ],
+  "next": "Construct eight fixed-length leg chains and coherent gear stack, align cameras and landmarks, then separate rigid parts and author walking/attack/death with no limb stretching."
+}
