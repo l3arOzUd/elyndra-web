@@ -7,8 +7,11 @@ const root=resolve(import.meta.dirname,'..'),kit=resolve(root,'public/sprites/wa
 try{await access(resolve(source,'previous-kit'));}catch{await cp(kit,resolve(source,'previous-kit'),{recursive:true});}
 const rig=JSON.parse(await readFile(resolve(source,'previous-kit/rig.json'),'utf8'));
 const equip=JSON.parse(await readFile(resolve(source,'previous-kit/equipment.json'),'utf8'));
-rig.variants={hand_near:['open'],hand_far:['open']};rig.effects=['effects/arrow.png'];rig.attach.weapon='hand_near';
-for(const item of Object.values(equip.items))if(item.visual==='leafweave_coat'){item.layers.push('forearm_near','forearm_far');item.hides=['torso','arm_near','arm_far'];}
+// Keep equipment added since the v1 backup; importing art must not delete live mappings.
+const current=JSON.parse(await readFile(resolve(kit,'equipment.json'),'utf8'));
+for(const [id,item] of Object.entries(current.items))if(!equip.items[id])equip.items[id]=item;
+rig.variants={hand_near:['open'],hand_far:['open'],head:['unconscious']};rig.effects=['effects/arrow.png'];rig.attach.weapon='hand_near';
+for(const item of Object.values(equip.items))if(item.visual==='leafweave_coat'){item.layers=[...new Set([...item.layers,'forearm_near','forearm_far'])];item.hides=['torso','arm_near','arm_far'];}
 equip.items.itm_0080.motion='melee';equip.items.itm_0081.motion='shoot';equip.items.itm_0082.motion='cast';
 const jobs=[];
 const add=(atlas,file,region,dest,flip=false)=>jobs.push({atlas,file,region,dest,flip});
@@ -23,6 +26,7 @@ for(const [vi,view]of ['front','side','back'].entries()){
  v.order=v.order.flatMap(n=>n==='arm_near'||n==='arm_far'?[n,n.replace('arm_','forearm_'),n.replace('arm_','hand_')]:[n]);
  const hx=v.parts.head.pivot[0];
  add('heads.png',`base/${view}/head.png`,[vi/3,0,(vi+1)/3,1],[hx-85,64,170,169]);
+ add('heads-unconscious.png',`base/${view}/head_unconscious.png`,[vi/3,0,(vi+1)/3,1],[hx-85,64,170,169]);
  const specs=[['arm_near','base'],['arm_far','base'],['forearm_near','base'],['forearm_far','base'],['hand_near','base'],['hand_far','base'],['arm_near','coat'],['arm_far','coat'],['forearm_near','coat'],['forearm_far','coat'],['hand_near','open'],['hand_far','open']];
  specs.forEach(([part,kind],i)=>{
   const [x,y]=v.parts[part].pivot;let dest;
@@ -57,7 +61,7 @@ try{
   for(const {png,...j}of result){const f=resolve(kit,j.file);await mkdir(dirname(f),{recursive:true});await writeFile(f,Buffer.from(png,'base64'));Object.assign(jobs.find(x=>x.file===j.file),{crop:j.crop});}
  }
  await writeFile(resolve(kit,'rig.json'),JSON.stringify(rig,null,2)+'\n');
- await writeFile(resolve(kit,'equipment.json'),JSON.stringify(equip,null,2)+'\n');
+ await writeFile(resolve(kit,'equipment.json'),JSON.stringify(equip,null,1)+'\n');
  await writeFile(resolve(source,'import-manifest.json'),JSON.stringify(jobs,null,2)+'\n');
  console.log(`Updated ${jobs.length} image files; added elbow/wrist bones and open-hand variants.`);
 }finally{await browser.close();}

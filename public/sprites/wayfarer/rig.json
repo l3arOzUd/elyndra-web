@@ -338,6 +338,9 @@
     ],
     "hand_far": [
       "open"
+    ],
+    "head": [
+      "unconscious"
     ]
   },
   "effects": [

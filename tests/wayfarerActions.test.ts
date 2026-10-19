@@ -2,7 +2,7 @@ import {describe,it,expect} from 'vitest';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {Animator} from '../src/render/animator';
-import {actionPose,DOLL_ANIMS,type Rig} from '../src/render/paperDoll';
+import {actionPose,DOLL_ANIMS,weaponMotion,type Rig} from '../src/render/paperDoll';
 import {skillAnimation} from '../src/render/combatAnimation';
 const rig=JSON.parse(readFileSync(join(__dirname,'../public/sprites/wayfarer/rig.json'),'utf8')) as Rig;
 
@@ -15,6 +15,11 @@ function wrist(p:ReturnType<typeof actionPose>,side:'near'|'far') {
 }
 
 describe('Wayfarer articulated actions',()=>{
+ it('uses the shared weapon action for generated gear without explicit motion',()=>{
+  for(const [visual,motion] of [['surveyor_bow','shoot'],['aether_rod','cast'],['copper_saber','melee']])
+   expect(weaponMotion([{name:'Generated gear',slot:'weapon',visual,layers:['weapon']}])).toBe(motion);
+  expect(weaponMotion([])).toBe('unarmed');
+ });
  it('keeps side-view weapon hands in front of the torso, including every walk frame',()=>{
   for(const motion of ['melee','shoot','cast'])for(const anim of ['idle','walk'] as const)for(let f=0;f<8;f++){
    const p=actionPose(rig,'side',anim,f,8,motion),hand=wrist(p,'near');

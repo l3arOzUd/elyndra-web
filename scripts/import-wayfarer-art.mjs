@@ -11,6 +11,7 @@ const kit = resolve(root, 'public/sprites/wayfarer');
 const backup = resolve(source, 'original-kit');
 try { await access(backup); } catch { await cp(kit, backup, { recursive: true }); }
 const rig = JSON.parse(await readFile(resolve(kit, 'rig.json'), 'utf8'));
+if(rig.variants)throw Error('This kit uses the v2 elbow/wrist rig. Use import-wayfarer-v2.mjs; v1 would overwrite its artwork.');
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH, headless: true });
 const page = await browser.newPage();
 const manifest = [];

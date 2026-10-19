@@ -141,9 +141,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1012": {
    "name": "Worn Leathers",
@@ -153,9 +160,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1013": {
    "name": "Worn Robe",
@@ -165,9 +179,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1014": {
    "name": "Worn Brigandine",
@@ -177,9 +198,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1015": {
    "name": "Worn Runeplate",
@@ -189,9 +217,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1016": {
    "name": "Worn Duskcloak",
@@ -201,9 +236,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1017": {
    "name": "Worn Sabatons",
@@ -351,9 +393,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1035": {
    "name": "Bronze Leathers",
@@ -363,9 +412,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1036": {
    "name": "Bronze Robe",
@@ -375,9 +431,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1037": {
    "name": "Bronze Brigandine",
@@ -387,9 +450,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1038": {
    "name": "Bronze Runeplate",
@@ -399,9 +469,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1039": {
    "name": "Bronze Duskcloak",
@@ -411,9 +488,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1040": {
    "name": "Bronze Sabatons",
@@ -561,9 +645,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1058": {
    "name": "Iron Leathers",
@@ -573,9 +664,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1059": {
    "name": "Iron Robe",
@@ -585,9 +683,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1060": {
    "name": "Iron Brigandine",
@@ -597,9 +702,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1061": {
    "name": "Iron Runeplate",
@@ -609,9 +721,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1062": {
    "name": "Iron Duskcloak",
@@ -621,9 +740,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1063": {
    "name": "Iron Sabatons",
@@ -771,9 +897,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1081": {
    "name": "Steel Leathers",
@@ -783,9 +916,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1082": {
    "name": "Steel Robe",
@@ -795,9 +935,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1083": {
    "name": "Steel Brigandine",
@@ -807,9 +954,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1084": {
    "name": "Steel Runeplate",
@@ -819,9 +973,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1085": {
    "name": "Steel Duskcloak",
@@ -831,9 +992,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1086": {
    "name": "Steel Sabatons",
@@ -981,9 +1149,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1104": {
    "name": "Cobalt Leathers",
@@ -993,9 +1168,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1105": {
    "name": "Cobalt Robe",
@@ -1005,9 +1187,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1106": {
    "name": "Cobalt Brigandine",
@@ -1017,9 +1206,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1107": {
    "name": "Cobalt Runeplate",
@@ -1029,9 +1225,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1108": {
    "name": "Cobalt Duskcloak",
@@ -1041,9 +1244,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1109": {
    "name": "Cobalt Sabatons",
@@ -1191,9 +1401,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1127": {
    "name": "Runic Leathers",
@@ -1203,9 +1420,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1128": {
    "name": "Runic Robe",
@@ -1215,9 +1439,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1129": {
    "name": "Runic Brigandine",
@@ -1227,9 +1458,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1130": {
    "name": "Runic Runeplate",
@@ -1239,9 +1477,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1131": {
    "name": "Runic Duskcloak",
@@ -1251,9 +1496,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1132": {
    "name": "Runic Sabatons",
@@ -1401,9 +1653,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1150": {
    "name": "Mythril Leathers",
@@ -1413,9 +1672,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1151": {
    "name": "Mythril Robe",
@@ -1425,9 +1691,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1152": {
    "name": "Mythril Brigandine",
@@ -1437,9 +1710,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1153": {
    "name": "Mythril Runeplate",
@@ -1449,9 +1729,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1154": {
    "name": "Mythril Duskcloak",
@@ -1461,9 +1748,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1155": {
    "name": "Mythril Sabatons",
@@ -1611,9 +1905,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1173": {
    "name": "Ember Leathers",
@@ -1623,9 +1924,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1174": {
    "name": "Ember Robe",
@@ -1635,9 +1943,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1175": {
    "name": "Ember Brigandine",
@@ -1647,9 +1962,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1176": {
    "name": "Ember Runeplate",
@@ -1659,9 +1981,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1177": {
    "name": "Ember Duskcloak",
@@ -1671,9 +2000,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1178": {
    "name": "Ember Sabatons",
@@ -1821,9 +2157,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1196": {
    "name": "Star Leathers",
@@ -1833,9 +2176,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1197": {
    "name": "Star Robe",
@@ -1845,9 +2195,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1198": {
    "name": "Star Brigandine",
@@ -1857,9 +2214,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1199": {
    "name": "Star Runeplate",
@@ -1869,9 +2233,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1200": {
    "name": "Star Duskcloak",
@@ -1881,9 +2252,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1201": {
    "name": "Star Sabatons",
@@ -2031,9 +2409,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1219": {
    "name": "Sovereign Leathers",
@@ -2043,9 +2428,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1220": {
    "name": "Sovereign Robe",
@@ -2055,9 +2447,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1221": {
    "name": "Sovereign Brigandine",
@@ -2067,9 +2466,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1222": {
    "name": "Sovereign Runeplate",
@@ -2079,9 +2485,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1223": {
    "name": "Sovereign Duskcloak",
@@ -2091,9 +2504,16 @@
     "torso",
     "arm_near",
     "arm_far",
-    "cape"
+    "cape",
+    "forearm_near",
+    "forearm_far"
    ],
-   "generated": true
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
   },
   "itm_1224": {
    "name": "Sovereign Sabatons",

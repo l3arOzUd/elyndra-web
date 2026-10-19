@@ -23,6 +23,29 @@
     ]
   },
   {
+    "atlas": "heads-unconscious.png",
+    "file": "base/front/head_unconscious.png",
+    "region": [
+      0,
+      0,
+      0.3333333333333333,
+      1
+    ],
+    "dest": [
+      171,
+      64,
+      170,
+      169
+    ],
+    "flip": false,
+    "crop": [
+      69,
+      46,
+      592,
+      604
+    ]
+  },
+  {
     "atlas": "arms-front.png",
     "file": "base/front/arm_near.png",
     "region": [
@@ -345,6 +368,29 @@
     ]
   },
   {
+    "atlas": "heads-unconscious.png",
+    "file": "base/side/head_unconscious.png",
+    "region": [
+      0.3333333333333333,
+      0,
+      0.6666666666666666,
+      1
+    ],
+    "dest": [
+      167,
+      64,
+      170,
+      169
+    ],
+    "flip": false,
+    "crop": [
+      796,
+      42,
+      608,
+      606
+    ]
+  },
+  {
     "atlas": "arms-side.png",
     "file": "base/side/arm_near.png",
     "region": [
@@ -664,6 +710,29 @@
       57,
       585,
       589
+    ]
+  },
+  {
+    "atlas": "heads-unconscious.png",
+    "file": "base/back/head_unconscious.png",
+    "region": [
+      0.6666666666666666,
+      0,
+      1,
+      1
+    ],
+    "dest": [
+      171,
+      64,
+      170,
+      169
+    ],
+    "flip": false,
+    "crop": [
+      1490,
+      55,
+      593,
+      594
     ]
   },
   {

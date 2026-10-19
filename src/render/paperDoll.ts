@@ -27,6 +27,13 @@ export interface Rig {
 export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[]; motion?: "melee" | "shoot" | "cast" }
 export interface PaperDollKit { rig: Rig; items: Record<string, ItemLook>; img: Map<string, HTMLImageElement> }
 
+/** Generated equipment may share an existing painted weapon without a motion field. */
+export function weaponMotion(looks: ItemLook[]): string {
+  const weapon=looks.find(it=>it.slot==="weapon");
+  if(!weapon)return "unarmed";
+  return weapon.motion ?? ({surveyor_bow:"shoot",aether_rod:"cast",copper_saber:"melee"}[weapon.visual]) ?? "melee";
+}
+
 const DIR = "sprites/wayfarer/";
 
 function loadImage(url: string): Promise<HTMLImageElement | null> {
@@ -46,6 +53,13 @@ export async function loadPaperDoll(base = DIR, bust = ""): Promise<PaperDollKit
   const q = bust ? `?v=${encodeURIComponent(bust)}` : "";
   const rig = (await (await fetch(base + "rig.json" + q)).json()) as Rig;
   const items = ((await (await fetch(base + "equipment.json" + q)).json()) as { items: Record<string, ItemLook> }).items;
+  // Content builds may regenerate aliases using the old four-layer coat brief.
+  // Inherit its actual painted cuffs and occlusion rules from the canonical look.
+  const coat=items.itm_0079;
+  if(coat)for(const item of Object.values(items))if(item.visual===coat.visual){
+    item.layers=[...new Set([...item.layers,...coat.layers])];
+    item.hides=[...new Set([...item.hides??[],...coat.hides??[]])];
+  }
   const files: string[] = [];
   for (const [view, v] of Object.entries(rig.views)) {
     for (const part of Object.keys(v.parts)) files.push(`base/${view}/${part}.png`);
@@ -54,8 +68,9 @@ export async function loadPaperDoll(base = DIR, bust = ""): Promise<PaperDollKit
   }
   files.push(...rig.effects ?? []);
   const img = new Map<string, HTMLImageElement>();
-  const loaded = await Promise.all(files.map((f) => loadImage(base + f + q)));
-  files.forEach((f, i) => { if (loaded[i]) img.set(f, loaded[i]!); });
+  const unique=[...new Set(files)];
+  const loaded = await Promise.all(unique.map((f) => loadImage(base + f + q)));
+  unique.forEach((f, i) => { if (loaded[i]) img.set(f, loaded[i]!); });
   return { rig, items, img };
 }
 
@@ -86,6 +101,7 @@ interface Pose {
   arrowFlight?: number;
   spell?: number;
   farArmInFront?: boolean;
+  unconscious?: boolean;
 }
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -154,16 +170,24 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
       break;
     }
     case "death": {
-      const fall = Math.min(1, k * 1.25);
-      p.rot = ease(fall) * 84;
-      p.dx = -ease(fall) * 200; // the body is ~400 px long: centre it on the feet once it lies down
-      // A horizontal torso and cape extend below the standing sole. Keep the
-      // whole fallen silhouette inside the same frame, including its width.
-      p.dy = -ease(fall) * 72;
-      p.hurt = 0.5 * (1 - k);
-      p.angle.arm_near = (side ? 30 : -20 * out) * fall;
-      p.angle.arm_far = (side ? -20 : 20 * out) * fall;
-      p.angle.head = 8 * fall;
+      // Knees give way first, then the spine folds and the head settles.
+      // Keep the root upright: never rotate the standing silhouette like a plank.
+      const knees=ease(Math.min(1,k/.65));
+      const slump=ease(Math.max(0,Math.min(1,(k-.2)/.7)));
+      p.angle.thigh_near=(side?65:60)*knees;
+      p.angle.thigh_far=(side?72:-60)*knees;
+      p.angle.shin_near=(side?-135:-100)*knees;
+      p.angle.shin_far=(side?-140:100)*knees;
+      // Compensate for the shortened vertical leg reach, keeping feet grounded.
+      const rad=Math.PI/180;
+      const thigh=p.angle.thigh_near*rad,shin=(p.angle.thigh_near+p.angle.shin_near)*rad;
+      p.dy=144-72*Math.cos(thigh)-72*Math.cos(shin)-(side?32:0)*knees;
+      p.angle.torso=(side?-40:12*out)*slump;
+      p.angle.head=(side?-18:12*out)*slump;
+      p.angle.arm_near=(side?35:-12*out)*slump;
+      p.angle.arm_far=(side?28:10*out)*slump;
+      p.hurt=.35*(1-Math.min(1,k*3));
+      p.unconscious=k>=.25;
       break;
     }
   }
@@ -202,14 +226,22 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
     const r=rest(which),start=which==="near"&&side&&motion!=="unarmed"?(motion==="cast"?-18:motion==="shoot"?-14:-5):0;
     aim(which,lerp(r[0],target[0],t),lerp(r[1],target[1],t),bend,lerp(start,angle,t));
   };
-  if(anim==="idle"||anim==="walk"||anim==="hit"||anim==="death") {
+  if(anim==="death") {
+    const settle=ease(Math.min(1,k/.8));
+    if(motion!=="unarmed") {
+      const start=rest("near");
+      aim("near",lerp(start[0],near[0]-12,settle),lerp(start[1],near[1]+80,settle),-1,
+        lerp(side?(motion==="cast"?-18:motion==="shoot"?-14:-5):0,motion==="cast"?(side?-50:-65*sign):side?-25:-35*sign,settle));
+    }
+    return p;
+  }
+  if(anim==="idle"||anim==="walk"||anim==="hit") {
     // Carry in FRONT of the chest/hips. The staff leans away from the face;
     // moving the gripping hand behind the body is not a valid carry pose.
     if(side && motion!=="unarmed") {
       const sway=anim==="walk"?Math.sin(f/n*Math.PI*2)*4:0;
       const carryAngle=motion==="cast"?-18:motion==="shoot"?-14:-5;
-      const angle=anim==="death"?lerp(carryAngle,0,ease(Math.min(1,k*3))):carryAngle;
-      aim("near",near[0]-46+sway,near[1]+65,-1,angle);
+      aim("near",near[0]-46+sway,near[1]+65,-1,carryAngle);
     } else if(motion==="cast") aim("near",near[0]-28*sign,near[1]+72,-sign,-12*sign);
     return p;
   }
@@ -296,12 +328,13 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
   for (const slot of order) {
     const bone = v.parts[slot] ? slot : rig.attach[slot];
     const m = matrixOf(bone);
-    if (v.parts[slot] && !hidden.has(slot)) draw(`base/${view}/${slot}${pose.openHands?.includes(slot) ? "_open" : ""}.png`, m);
+    const variant=slot==="head"&&pose.unconscious?"_unconscious":pose.openHands?.includes(slot)?"_open":"";
+    if (v.parts[slot] && !hidden.has(slot)) draw(`base/${view}/${slot}${variant}.png`, m);
     for (const it of gear) if (it.layers.includes(slot)) draw(`items/${it.visual}/${view}/${slot}.png`, m);
   }
   // Native line geometry follows the actual wrist transforms: a bowstring
   // bends to the pulling hand; it is not another stretched painted limb.
-  const bow=gear.find(it=>it.motion==="shoot");
+  const bow=weaponMotion(gear)==="shoot";
   if(bow && v.parts.hand_near) {
     const [wx,wy]=v.parts.hand_near.pivot, sign=view==="back"?-1:1;
     const hand=matrixOf("hand_near"), other=matrixOf("hand_far");
@@ -340,7 +373,7 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
 /** Same renderer for the artist's pose preview and the live sprite sheets. */
 export function renderWayfarerPose(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, gear: readonly string[], anim: AnimName="idle", frame=0) {
   const looks=gear.map(id=>kit.items[id]).filter((it):it is ItemLook=>!!it);
-  const motion=looks.find(it=>it.slot==="weapon")?.motion ?? "unarmed";
+  const motion=weaponMotion(looks);
   const action=anim==="attack"&&(motion==="shoot"||motion==="cast")?motion:anim;
   return drawCell(g,kit,view,actionPose(kit.rig,view,action,frame,DOLL_ANIMS[action]!.frames,motion),looks);
 }
@@ -362,7 +395,7 @@ export function dollJson(rig: Rig, id = "wayfarer"): SpriteDefJson {
 /** Bakes the sheets for one outfit (equipped item ids; unknown ids are ignored). */
 export function bakeWayfarer(kit: PaperDollKit, gear: readonly string[] = []): SpriteDef {
   const looks = gear.map((id) => kit.items[id]).filter((x): x is ItemLook => !!x);
-  const motion=looks.find(it=>it.slot==="weapon")?.motion ?? "unarmed";
+  const motion=weaponMotion(looks);
   const json = dollJson(kit.rig, gear.length ? `wayfarer+${gear.join("+")}` : "wayfarer");
   json.animations={...json.animations};
   if(motion==="shoot"||motion==="cast") json.animations.attack={...DOLL_ANIMS[motion]!};

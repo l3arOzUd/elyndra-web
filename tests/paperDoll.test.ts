@@ -69,9 +69,11 @@ describe("wayfarer poses", () => {
     expect(windup).toBeLessThan(-90); // arm up and back
     expect(strike).toBeGreaterThan(windup); // swinging forward
   });
-  it("ends the death lying down and shifted back over the feet", () => {
-    const end = poseAt("front", "death", 7, 8);
-    expect(end.rot).toBeGreaterThan(80);
-    expect(end.dx).toBeLessThan(-150);
+  it("collapses through knees and spine without tipping the whole body backward", () => {
+    const end = poseAt("side", "death", 7, 8);
+    expect(end.rot).toBe(0);
+    expect(end.dy).toBeGreaterThan(40); // hips lower while rotated boot tips stay above ground
+    expect(end.angle.torso).toBeLessThan(-30);
+    expect(end.angle.shin_near).toBeLessThan(-100);
   });
 });

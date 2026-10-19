@@ -1,0 +1,5 @@
+{
+  "prompt": "Edit this exact transparent three-head sprite atlas. Preserve character identity, exact hair silhouette, colors, scale, neck shape and cell positions. Only change expression on FRONT head left and SIDE head middle: both fully closed eyes, relaxed eyelids, relaxed neutral mouth with NO SMILE, unconscious exhausted expression. No tears, injuries, blood, symbols or cartoon X eyes. Back head right unchanged. All three heads remain upright in the same angles and sizes; the game rig will bow the head. Bare skin neck, no collar or clothing. Maintain exact premium painted fantasy art and transparent background. Output three equally spaced heads in one horizontal row.",
+  "source": "heads.png",
+  "output": "heads-unconscious.png"
+}
