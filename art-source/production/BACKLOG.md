@@ -26,7 +26,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0015 | Root Sentinel | master-created | master-created | master-created | master-created | placeholder |
 | mob_0016 | Sandcoil | master-created | master-created | master-created | master-created | placeholder |
 | mob_0017 | Glass Scarab | master-created | master-created | master-created | master-created | placeholder |
-| mob_0018 | Dune Sentry | master-created | missing | missing | missing | placeholder |
+| mob_0018 | Dune Sentry | master-created | master-created | master-created | master-created | placeholder |
 | mob_0019 | Sun Warden | master-created | missing | missing | missing | placeholder |
 | mob_0020 | Tidehopper | master-created | missing | missing | missing | placeholder |
 | mob_0021 | Coral Claw | master-created | missing | missing | missing | placeholder |

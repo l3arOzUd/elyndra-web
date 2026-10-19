@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "DUNE SENTRY RIGHT profile exact counterpart of attached left reference, front second reference for identity. Blocky ochre sandstone humanoid carved geometric motifs, aged brass joint bands, orange visor slit on front helmet. Face RIGHT, strict 90 degree eye-level orthographic no three-quarter torso turn. Near arm hanging with massive fist, far limbs hidden. Same squat body thickness, shoulder and hip height, elbow and knee positions, toes right heels left. Front diamond chest plate at right, rear brass spine brace at left. Orange visor only at leading right head plane, not side eye. Preserve warm sandstone and brass style, chips and embedded sand; no plants cloth weapon. Full body square transparent canvas with clear margins, no ground shadow falling particles text or extra views.",
+  "references": [
+    "left.png",
+    "front.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

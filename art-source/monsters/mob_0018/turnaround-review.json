@@ -1,0 +1,19 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct image inspection and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Blocky carved sandstone biped, brass hinge bands and orange visor retained",
+    "Rear helmet has no visor; back plates and brass spine differ from front chest",
+    "Rear hips omit long front groin plate and feet use short heel blocks",
+    "Opposing profiles broadly preserve torso thickness and joint heights",
+    "All four images pass alpha and frame-edge checks"
+  ],
+  "limitations": [
+    "Profiles still expose frontal chest and visor surfaces rather than strict orthographic side",
+    "Carved motifs and stone cracks vary between views; exact pattern continuity remains unapproved",
+    "Far limbs are occluded and require authored full layers before rigging",
+    "Hand orientation and joint axes need explicit registration for articulated motion",
+    "Falling sand is intentionally absent from references and remains runtime VFX work"
+  ],
+  "next": "Refine lateral projection and joint registration, separate rigid sandstone segments, then author heavy steps, fist attack, joint collapse and sand emission."
+}
