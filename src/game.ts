@@ -6,6 +6,7 @@ import type { Connection } from "./net/connection";
 import { EntState, type CombatEvent, type EntityAdd, type MsgOf, type ServerMsg } from "./net/protocol";
 import { IsoCamera } from "./render/camera";
 import { Fx } from "./render/fx";
+import { wayfarerSprite } from "./render/paperDoll";
 import { SpriteActor } from "./render/spriteActor";
 import type { SpriteDef } from "./render/spriteDef";
 import { animate, buildMap, makeCellMarker, type BuiltMap } from "./render/terrain";
@@ -214,7 +215,9 @@ export class Game {
   private addEnt(a: EntityAdd, t: number) {
     this.removeEnt(a.id);
     const b = this.bindingFor(a);
-    const actor = new SpriteActor(this.sprites[b.sprite] ?? this.sprites.wayfarer, { tint: b.tint, scale: b.scale });
+    // Players wear their equipment: the paper doll baked for this outfit.
+    const sprite = (a.k === "p" ? wayfarerSprite(a.gear) : null) ?? this.sprites[b.sprite] ?? this.sprites.wayfarer;
+    const actor = new SpriteActor(sprite, { tint: b.tint, scale: b.scale });
     actor.heading = (a.h * Math.PI) / 180;
     const isSelf = a.id === this.selfId;
     const e: Ent = {

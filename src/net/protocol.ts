@@ -37,6 +37,9 @@ export interface EntityAdd {
   h: number;
   st: number;
   ms: number;
+  /** Players: equipped item ids (weapon, armor, boots, head, ...) and job. */
+  gear?: string[];
+  job?: string;
 }
 
 export interface CombatEvent {

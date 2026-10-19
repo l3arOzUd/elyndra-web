@@ -3,6 +3,7 @@ import { loadContent } from "./data/content";
 import { Game } from "./game";
 import { Connection } from "./net/connection";
 import { buildHeroSprite } from "./render/heroSprite";
+import { loadPaperDoll, setPaperDollKit, wayfarerSprite } from "./render/paperDoll";
 import { loadSprite, type SpriteDef } from "./render/spriteDef";
 import { Hud } from "./ui/hud";
 import { Inspector } from "./ui/inspector";
@@ -30,7 +31,17 @@ async function main() {
     status.textContent = "Loading sprites...";
     const sheetIds = new Set([content.sprites.fallback.sprite, ...Object.values(content.sprites.monsters).map((b) => b.sprite)]);
     sheetIds.delete("wayfarer");
-    const sprites: Record<string, SpriteDef> = { wayfarer: buildHeroSprite() };
+    // Players are paper dolls dressed by their equipment; the drawn stand-in
+    // is only a fallback if the parts fail to load.
+    let wayfarer: SpriteDef;
+    try {
+      setPaperDollKit(await loadPaperDoll());
+      wayfarer = wayfarerSprite()!;
+    } catch (err) {
+      console.warn("paper doll unavailable, using the stand-in hero", err);
+      wayfarer = buildHeroSprite();
+    }
+    const sprites: Record<string, SpriteDef> = { wayfarer };
     for (const id of sheetIds) sprites[id] = await loadSprite(id);
     status.remove();
 

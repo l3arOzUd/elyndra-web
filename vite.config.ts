@@ -5,6 +5,6 @@ export default defineConfig({
   build: {
     target: "es2022",
     chunkSizeWarningLimit: 1200,
-    rollupOptions: { input: { main: "index.html", modelViewer: "model-viewer.html", animationViewer: "animation-viewer.html", spriteViewer: "sprite-viewer.html" } },
+    rollupOptions: { input: { main: "index.html", modelViewer: "model-viewer.html", animationViewer: "animation-viewer.html", spriteViewer: "sprite-viewer.html", characterViewer: "character-viewer.html" } },
   },
 });
