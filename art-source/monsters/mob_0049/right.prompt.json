@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Heartwood Regent RIGHT SIDE orthographic facing RIGHT. Ref1 left profile for exact pose/depth, ref2 front identity. Same tall living wood king with branch crown, jade veins, brass pump-heart in chest FRONT imageRIGHT, rear wood spine and pipes imageLEFT. TWO long wood arms root fingers and TWO massive root legs, far pair naturally occluded. Neutral planted stance, no extra branches becoming limbs. One jade eye in narrow wooden face right, crown forehead jewel rightmost front edge only. Preserve shoulder/hip heights, crown branch structure, pump-cylinder layout and wrist/finger length from refs. True 90degree lateral eye-level, no three-quarter front face. Full body all crown/root tips square transparent margins, detailed hand-painted fantasy MMORPG, no ground/shadow/text/particles.",
+  "references": [
+    "left.png",
+    "front.png"
+  ]
+}

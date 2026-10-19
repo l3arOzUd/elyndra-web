@@ -1,0 +1,19 @@
+{
+  "id": "mob_0049",
+  "name": "Heartwood Regent",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front identity, rear spine and opposite profile; visual review of pump placement and root-limb topology.",
+  "confirmed": [
+    "Tall living wood king with branch crown, jade veins, brass pump chest and root limbs preserves Bible identity.",
+    "Rear has no face and uses central brass spine/pipe structure rather than frontal pump display.",
+    "Profiles place pump toward front and rear pipes behind torso.",
+    "No separate weapons or detached effects added."
+  ],
+  "limitations": [
+    "Root fingers, crown branches and leaf landmarks differ across views; exact branch/finger topology needs reconciliation.",
+    "Far arm and leg strongly occluded in profiles, so independent joints cannot be fully verified.",
+    "Rear feet and knee ornaments remain front-like; heel roots and articulation need correction.",
+    "Torso depth, pump protrusion and vein paths vary; normalize mechanical landmarks before animation."
+  ],
+  "next": "Align pump cylinders, limb joints and crown/root topology, then separate parts and author walk/attack/hit/death with pump-stroke and jade-vein VFX."
+}
