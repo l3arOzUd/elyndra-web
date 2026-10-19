@@ -1,0 +1,10 @@
+{
+  "view": "right",
+  "prompt": "Create RIGHT-FACING SIDE PROFILE turnaround of exact same Mosskin. Reference 1 front identity, reference 2 left profile shape/proportions, reference 3 rear shell. Face points to RIGHT edge, camera orthographic eye level exactly side-on, only one eye visible. Same round mossy woody seed body, FOUR short root legs (near pair clear, far pair partly occluded), TWO twig antennae and same small leaf buds, no snout. Opposite profile must match left profile body depth height and leg length; do not make a new species or elongate body. Same painterly moss and seed-shell colors. Same framing: antenna tips 9% from top and feet 9% from bottom of square. Entire creature contained with margins, true transparent background, no floor shadow text.",
+  "references": [
+    "front.png",
+    "left.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

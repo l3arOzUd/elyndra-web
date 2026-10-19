@@ -9,7 +9,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 
 | ID | Monster | Front | Back | Left | Right | Game sprite |
 |---|---|---|---|---|---|---|
-| mob_0001 | Mosskin | master-created | existing-needs-review | existing-needs-review | existing-needs-review | mosskin_2d |
+| mob_0001 | Mosskin | master-created | master-created | master-created | master-created | mosskin_2d |
 | mob_0002 | Sporeling | master-created | existing-needs-review | existing-needs-review | existing-needs-review | sporeling_2d |
 | mob_0003 | Ambermite | master-created | existing-needs-review | existing-needs-review | existing-needs-review | ambermite_2d |
 | mob_0004 | Lunari | master-created | existing-needs-review | existing-needs-review | existing-needs-review | lunari_2d |

@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+import {resolve} from 'node:path';
+const root=resolve(import.meta.dirname,'..');
+const monsters=JSON.parse(readFileSync(resolve(root,'public/data/monsters.json'),'utf8'));
+const views=['front','back','left','right'];
+const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+const rows=monsters.filter(m=>views.slice(1).some(v=>existsSync(resolve(root,`art-source/monsters/${m.id}/${v}.png`))));
+const html=`<!doctype html><html lang="en"><meta charset="utf-8"><title>Monster turnarounds</title><style>body{background:#202831;color:#eee;font:16px system-ui;margin:24px}section{margin-bottom:32px}.views{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}figure{margin:0}img{width:100%;background:#eee}small{color:#d9b970}</style><h1>Monster turnaround review</h1><p>Reference images only. File existence and alpha checks do not prove visual consistency or animation readiness.</p>${rows.map(m=>`<section><h2>${esc(m.name)} <small>${m.id}</small></h2><p>${esc(m.art_brief)}</p><div class="views">${views.map(v=>`<figure><figcaption>${v}</figcaption>${existsSync(resolve(root,`art-source/monsters/${m.id}/${v}.png`))?`<img src="../monsters/${m.id}/${v}.png" alt="${esc(m.name)} ${v}">`:'Pending'}</figure>`).join('')}</div></section>`).join('')}</html>`;
+writeFileSync(resolve(root,'art-source/production/turnarounds.html'),html);
+console.log(`${rows.length} turnaround rows`);

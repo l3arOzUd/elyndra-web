@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "Create strict LEFT-FACING SIDE PROFILE turnaround of the same Mosskin, using reference 1 front for identity and reference 2 back for shell. Camera at eye level orthographic, exactly 90 degrees from front, face points to LEFT edge; only ONE eye visible, no far eye, no turned three-quarter face. Round moss-covered woody seed body, four short root walking legs: near front and rear fully visible and far pair partly occluded behind, same leg length. Two twig antennae with leaf buds; overlap naturally in profile, do not invent extra branches. Face remains flush on rounded seed surface, no protruding snout. Same body height, colors, moss material and neutral pose. Antenna tops about 9% from top, feet 9% from bottom, square transparent canvas with safe side margins. No ground shadow text or additional objects.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

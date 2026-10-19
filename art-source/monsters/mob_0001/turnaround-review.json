@@ -1,0 +1,17 @@
+{
+  "status": "reference-set-created-animation-pending",
+  "method": "Direct inspection of generated images and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Four root legs and two twig antennae retained",
+    "Back has no face",
+    "Side views have one visible eye and no protruding snout",
+    "Opposite antenna lean corrected",
+    "All four PNG alpha/framing diagnostics pass"
+  ],
+  "limitations": [
+    "Moss patches and shell seams are not pixel-identical across views",
+    "Right profile is slightly broader than left; normalize scale during sprite preparation without stretching anatomy",
+    "This is a painted reference set, not proof of a reconstructable 3D model or completed animation"
+  ],
+  "next": "Create articulated 2D assets and inspect turning, walk contact and death motion in game after roster turnarounds."
+}
