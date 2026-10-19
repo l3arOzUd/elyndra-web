@@ -1,0 +1,19 @@
+{
+  "id": "mob_0048",
+  "name": "Heartwood Pistonguard",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation using front identity, rear casing and opposite profile references; visual review of piston/stack/foot orientation.",
+  "confirmed": [
+    "Polished red heartwood casing, brass piston arms/fists and short legs preserve Bible identity.",
+    "Two exhaust stacks retained, with mushroom/moss attachments and no baked smoke cloud.",
+    "Rear head has no eyes and rear torso replaces front leaf crest with service frame.",
+    "Right view closer to lateral elevation with foot and chest facing right."
+  ],
+  "limitations": [
+    "Left remains three-quarter and shows both feet spread; right has near-complete far-leg occlusion, so projections do not match.",
+    "Rear feet resemble frontal toe plates; heel design needs explicit correction.",
+    "Piston extension, fist/thumb orientation and elbow landmarks need cross-view mechanical consistency.",
+    "Stack heights, mushrooms and panel seams vary; establish stable VFX emitter anchors and frame alignment."
+  ],
+  "next": "Correct left camera and rear heels, reconcile piston joints, then separate articulated limbs and author walk/punch/hit/death plus exhaust steam/spore VFX."
+}
