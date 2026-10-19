@@ -4,7 +4,7 @@
 //
 // Output is the runtime content; edit content/, not public/data.
 
-import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type {
@@ -13,8 +13,9 @@ import type {
 import { SCHEMA_VERSION } from "../src/data/schema";
 import { bakeLayout } from "./layout";
 import {
-  AGGRO_RADIUS, BOSS_DROP, DROP, ELITE_DROP_MULT, LEASH_RADIUS, materialPrice, monsterStats, playerAt, rarePrice, regionPriceMult, uncommonPrice,
+  AGGRO_RADIUS, BOSS_DROP, DROP, ELITE_DROP_MULT, LEASH_RADIUS, materialPrice, monsterStats, playerAt, rarePrice, regionPriceMult, tierLevelFor, uncommonPrice,
 } from "./model";
+import { UNIQUE_DROPS, gearItems, systems } from "./systems";
 import { REGIONS } from "./regions/index";
 import { skills } from "./skills";
 import type { RegionDesign } from "./types";
@@ -52,6 +53,27 @@ const ELEMENT_TINT: Record<string, [number, number, number]> = {
   earth: [1.1, 0.95, 0.7], nature: [0.8, 1.1, 0.75], wind: [0.9, 1.05, 1.15], water: [0.7, 0.95, 1.25], fire: [1.3, 0.75, 0.55],
   ice: [0.85, 1.05, 1.35], shadow: [0.75, 0.6, 1.05],
 };
+
+/**
+ * Generated gear bases borrow the hand-drawn Wayfarer looks until they get
+ * their own art: entries marked "generated" are rewritten on every build;
+ * hand-made entries are never touched. Heads have no art yet (no layers).
+ */
+function writePaperDollLooks(gear: ItemDef[], path: string) {
+  if (!existsSync(path)) return;
+  const file = JSON.parse(readFileSync(path, "utf8")) as { items: Record<string, { generated?: boolean }> };
+  for (const [id, look] of Object.entries(file.items)) if (look.generated) delete file.items[id];
+  const weapon: Record<string, string> = { vanguard: "copper_saber", strider: "surveyor_bow", arcanist: "aether_rod", machinist: "copper_saber" };
+  for (const g of gear) {
+    const e = g.equip;
+    if (!e || file.items[g.id] || !["weapon", "armor", "boots", "head"].includes(e.slot)) continue;
+    const [visual, layers] = e.slot === "weapon" ? [weapon[e.job ?? "vanguard"], ["weapon"]]
+      : e.slot === "armor" ? ["leafweave_coat", ["torso", "arm_near", "arm_far", "cape"]]
+      : e.slot === "boots" ? ["traveler_boots", ["shin_near", "shin_far"]] : ["none", []];
+    file.items[g.id] = { name: g.name, slot: e.slot, visual, layers, generated: true } as { generated: boolean };
+  }
+  writeFileSync(path, JSON.stringify(file, null, 1));
+}
 
 /** Writes the runtime JSON for `regions` into `OUT` (and the sprite index beside it). */
 export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPath = join(OUT, "..", "sprites", "index.json")) {
@@ -111,6 +133,30 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
     const mult = regionPriceMult(r.region.level_range[0]);
     for (const s of r.shops) shops.push({ id: s.id, npc_id: s.npc_id, items: s.items.map((i) => ({ item_id: i.item_id, price: Math.round(i.base_price * mult) })) });
   }
+  // CHARACTER_SYSTEMS.md: generated gear bases, uniques from bosses, and
+  // every town merchant stocks the Reset Scroll and plain gear of its tier.
+  const gear = gearItems();
+  items.push(...gear);
+  const byName = new Map(gear.map((g) => [g.name, g]));
+  for (const u of UNIQUE_DROPS) {
+    const boss = monsters.find((m) => m.name === u.boss), it = byName.get(u.item);
+    if (!boss || !it) throw new Error(`unique drop ${u.item} from ${u.boss}: unknown boss or item`);
+    boss.drops.push({ item_id: it.id, rate_bp: u.rate_bp, min_qty: 1, max_qty: 1 });
+  }
+  const merchants = new Set(npcs.filter((n) => n.role === "merchant").map((n) => n.id));
+  for (const r of regions) {
+    const tier = tierLevelFor(r.region.level_range[0]), mult = regionPriceMult(r.region.level_range[0]);
+    const stock = gear.filter((g) => g.name === "Reset Scroll" || (g.equip && g.equip.slot !== "charm" && g.equip.item_level === tier && !g.equip.unique && (!g.equip.kind || !g.equip.kind.includes("_"))));
+    for (const s of shops) {
+      if (!merchants.has(s.npc_id) || !r.shops.some((rs) => rs.id === s.id)) continue;
+      for (const g of stock) if (!s.items.some((i) => i.item_id === g.id)) s.items.push({ item_id: g.id, price: Math.round(g.sell_price * 3 * (g.name === "Reset Scroll" ? 1 : mult)) });
+    }
+  }
+  const sys = systems();
+  for (const job of ["vanguard", "strider", "arcanist", "machinist"]) {
+    const w = gear.find((g) => g.equip?.slot === "weapon" && g.equip.job === job && g.equip.item_level === 1);
+    if (w) sys.starter_weapons[job] = w.id;
+  }
   items.sort((a, b) => a.id.localeCompare(b.id));
   monsters.sort((a, b) => a.id.localeCompare(b.id));
 
@@ -134,6 +180,8 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
   write("dialogues", regions.flatMap((r) => r.dialogues));
   write("skills", skills);
   write("player_curve", Array.from({ length: 99 }, (_, i) => playerAt(i + 1)));
+  write("systems", sys);
+  writePaperDollLooks(gear, join(dirname(spriteIndexPath), "wayfarer", "equipment.json"));
   mkdirSync(dirname(spriteIndexPath), { recursive: true });
   writeFileSync(spriteIndexPath, JSON.stringify({
     player: { sprite: "wayfarer" }, monsters: spriteIndex, fallback: { sprite: "mosskin", tint: [0.75, 0.75, 0.8], placeholder: true },

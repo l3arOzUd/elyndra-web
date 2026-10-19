@@ -1,0 +1,1493 @@
+{
+ "rules": {
+  "stat_points_per_level": 3,
+  "free_reset_level": 20,
+  "pow_weapon_pct": 1,
+  "luk_crit": 0.2,
+  "luk_crit_mult": 0.4,
+  "base_crit": 5,
+  "base_crit_mult": 150,
+  "agi_cdr_k": 150,
+  "agi_attack_speed": 0.4,
+  "ultimate_cooldown_ms": 30000,
+  "dex_cast_k": 150,
+  "dex_evasion": 2,
+  "int_sp": 2,
+  "int_sp_regen": 0.5,
+  "int_shield": 0.2,
+  "int_duration": 0.5,
+  "vit_hp": 0.5,
+  "vit_poise_k": 100,
+  "basic_attack_ms": 800,
+  "basic_attack_min_ms": 400,
+  "basic_targets": 3,
+  "basic_cone_deg": 90,
+  "basic_range": 1.5,
+  "basic_sp_pct": 2,
+  "cast_pushback_pct": 10,
+  "cast_pushback_max_pct": 50,
+  "shield_delay_ms": 2500,
+  "shield_recharge_pct": 30,
+  "evasion_level_k": 10,
+  "evasion_base": 100,
+  "evasion_swarm_free": 3,
+  "evasion_swarm_penalty": 8,
+  "evasion_swarm_floor": 0.5,
+  "evasion_still_ms": 1000,
+  "armour_k": 5,
+  "caps": {
+   "crit": [
+    40,
+    60
+   ],
+   "cdr": [
+    40,
+    70
+   ],
+   "cast": [
+    55,
+    85
+   ],
+   "poise": [
+    50,
+    80
+   ],
+   "evasion": [
+    60,
+    75
+   ],
+   "armour": [
+    90,
+    90
+   ],
+   "res": [
+    75,
+    85
+   ],
+   "leech": [
+    10,
+    20
+   ],
+   "sp_leech": [
+    10,
+    10
+   ],
+   "attack_speed_ms": [
+    400,
+    400
+   ]
+  }
+ },
+ "mastery": {
+  "max_rank": 10,
+  "per_rank": 200,
+  "level_window": 10,
+  "elite_kills": 5,
+  "boss_kills": 20,
+  "more_damage_per_rank": 4,
+  "sp_cost_rank": 4,
+  "sp_cost_cut": 10,
+  "area_rank": 7,
+  "area_inc": 15,
+  "basic_more_per_rank": 3,
+  "basic_extra_target_rank": 5,
+  "basic_sp_rank": 10,
+  "basic_sp_pct": 3,
+  "perks": {
+   "cleaving_arc": "Cone widens from 100° to 140°",
+   "iron_cyclone": "A second spin follows at once for 50% damage",
+   "anchor_shout": "Taunted monsters take 10% more damage for 4s",
+   "sundering_pulse": "Hitting 30 or more targets refunds 25% SP"
+  }
+ },
+ "drops": {
+  "gear_bp": 60,
+  "charm_bp": 12,
+  "totem_bp": 8,
+  "elite_mult": 8,
+  "boss_gear": 2,
+  "boss_charm_bp": 3000,
+  "boss_totem_bp": 2000,
+  "own_job_weapon": 0.7,
+  "gear_rarity": {
+   "normal": 7000,
+   "magic": 2500,
+   "rare": 500
+  },
+  "charm_rarity": {
+   "normal": 6000,
+   "magic": 3000,
+   "rare": 900,
+   "relic": 80,
+   "unique": 20
+  },
+  "totem_rarity": {
+   "normal": 6000,
+   "magic": 3000,
+   "rare": 1000
+  },
+  "relic_grade": [
+   70,
+   25,
+   5
+  ],
+  "rare_four_affixes": 0.35,
+  "tier_min_level": [
+   1,
+   10,
+   25,
+   40,
+   55,
+   70,
+   85
+  ],
+  "tier_weight": [
+   1000,
+   900,
+   800,
+   650,
+   500,
+   350,
+   200
+  ],
+  "charm_tiers": [
+   3,
+   5,
+   7
+  ],
+  "totem_tiers": [
+   2,
+   3,
+   4
+  ],
+  "charm_affix_scale": 0.6,
+  "element_charm_share": 0.5
+ },
+ "affixes": [
+  {
+   "id": "inc_damage",
+   "kind": "prefix",
+   "label": "{v}% increased Damage",
+   "slots": [
+    "weapon",
+    "accessory"
+   ],
+   "values": [
+    4,
+    6,
+    8,
+    11,
+    14,
+    17,
+    20
+   ]
+  },
+  {
+   "id": "crit_mult",
+   "kind": "prefix",
+   "label": "+{v}% Critical Damage",
+   "slots": [
+    "weapon",
+    "accessory"
+   ],
+   "values": [
+    5,
+    8,
+    11,
+    15,
+    19,
+    24,
+    30
+   ]
+  },
+  {
+   "id": "inc_area",
+   "kind": "prefix",
+   "label": "{v}% increased Area of Effect",
+   "slots": [
+    "weapon",
+    "head"
+   ],
+   "values": [
+    4,
+    6,
+    8,
+    11,
+    14,
+    18,
+    22
+   ]
+  },
+  {
+   "id": "inc_duration",
+   "kind": "prefix",
+   "label": "{v}% increased Skill Duration",
+   "slots": [
+    "head",
+    "accessory"
+   ],
+   "values": [
+    5,
+    8,
+    11,
+    14,
+    17,
+    21,
+    25
+   ]
+  },
+  {
+   "id": "inc_local_defense",
+   "kind": "prefix",
+   "label": "{v}% increased Armour, Evasion and Shield of this item",
+   "slots": [
+    "head",
+    "armor",
+    "boots"
+   ],
+   "values": [
+    15,
+    22,
+    30,
+    38,
+    46,
+    55,
+    65
+   ]
+  },
+  {
+   "id": "flat_hp",
+   "kind": "prefix",
+   "label": "+{v} Max HP",
+   "slots": [
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    15,
+    40,
+    80,
+    140,
+    220,
+    320,
+    450
+   ]
+  },
+  {
+   "id": "inc_hp",
+   "kind": "prefix",
+   "label": "{v}% increased Max HP",
+   "slots": [
+    "armor",
+    "accessory"
+   ],
+   "values": [
+    3,
+    4,
+    6,
+    8,
+    10,
+    12,
+    15
+   ]
+  },
+  {
+   "id": "leech",
+   "kind": "prefix",
+   "label": "{v}% of Damage leeched as HP",
+   "slots": [
+    "weapon",
+    "accessory"
+   ],
+   "values": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1,
+    1.3,
+    1.6
+   ]
+  },
+  {
+   "id": "stat_pow",
+   "kind": "suffix",
+   "label": "+{v} POW",
+   "slots": [
+    "weapon",
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    2,
+    4,
+    7,
+    10,
+    13,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "stat_luk",
+   "kind": "suffix",
+   "label": "+{v} LUK",
+   "slots": [
+    "weapon",
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    2,
+    4,
+    7,
+    10,
+    13,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "stat_agi",
+   "kind": "suffix",
+   "label": "+{v} AGI",
+   "slots": [
+    "weapon",
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    2,
+    4,
+    7,
+    10,
+    13,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "stat_dex",
+   "kind": "suffix",
+   "label": "+{v} DEX",
+   "slots": [
+    "weapon",
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    2,
+    4,
+    7,
+    10,
+    13,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "stat_int",
+   "kind": "suffix",
+   "label": "+{v} INT",
+   "slots": [
+    "weapon",
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    2,
+    4,
+    7,
+    10,
+    13,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "stat_vit",
+   "kind": "suffix",
+   "label": "+{v} VIT",
+   "slots": [
+    "weapon",
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    2,
+    4,
+    7,
+    10,
+    13,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "inc_crit",
+   "kind": "suffix",
+   "label": "{v}% increased Critical Chance",
+   "slots": [
+    "weapon",
+    "head",
+    "accessory"
+   ],
+   "values": [
+    10,
+    20,
+    30,
+    40,
+    55,
+    70,
+    85
+   ]
+  },
+  {
+   "id": "inc_cdr",
+   "kind": "suffix",
+   "label": "{v}% increased Cooldown Recovery",
+   "slots": [
+    "head",
+    "accessory"
+   ],
+   "values": [
+    5,
+    8,
+    11,
+    14,
+    17,
+    21,
+    25
+   ]
+  },
+  {
+   "id": "inc_cast",
+   "kind": "suffix",
+   "label": "{v}% increased Cast Speed",
+   "slots": [
+    "weapon",
+    "head"
+   ],
+   "values": [
+    5,
+    8,
+    11,
+    14,
+    17,
+    21,
+    25
+   ]
+  },
+  {
+   "id": "inc_attack_speed",
+   "kind": "suffix",
+   "label": "{v}% increased Attack Speed",
+   "slots": [
+    "weapon",
+    "accessory"
+   ],
+   "values": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15
+   ]
+  },
+  {
+   "id": "res_fire",
+   "kind": "suffix",
+   "label": "+{v}% Fire Resistance",
+   "slots": [
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    8,
+    12,
+    16,
+    20,
+    25,
+    30,
+    36
+   ]
+  },
+  {
+   "id": "res_cold",
+   "kind": "suffix",
+   "label": "+{v}% Cold Resistance",
+   "slots": [
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    8,
+    12,
+    16,
+    20,
+    25,
+    30,
+    36
+   ]
+  },
+  {
+   "id": "res_nature",
+   "kind": "suffix",
+   "label": "+{v}% Nature Resistance",
+   "slots": [
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    8,
+    12,
+    16,
+    20,
+    25,
+    30,
+    36
+   ]
+  },
+  {
+   "id": "res_shadow",
+   "kind": "suffix",
+   "label": "+{v}% Shadow Resistance",
+   "slots": [
+    "head",
+    "armor",
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    8,
+    12,
+    16,
+    20,
+    25,
+    30,
+    36
+   ]
+  },
+  {
+   "id": "res_all",
+   "kind": "suffix",
+   "label": "+{v}% to all Resistances",
+   "slots": [
+    "accessory"
+   ],
+   "values": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15
+   ],
+   "weight": 0.3
+  },
+  {
+   "id": "hp_on_kill",
+   "kind": "suffix",
+   "label": "Kills restore {v}% of Max HP",
+   "slots": [
+    "weapon",
+    "armor",
+    "accessory"
+   ],
+   "values": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.4
+   ]
+  },
+  {
+   "id": "sp_on_kill",
+   "kind": "suffix",
+   "label": "Kills restore {v} SP",
+   "slots": [
+    "weapon",
+    "head",
+    "accessory"
+   ],
+   "values": [
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "hp_regen",
+   "kind": "suffix",
+   "label": "Regenerate {v}% of Max HP per second",
+   "slots": [
+    "armor",
+    "accessory"
+   ],
+   "values": [
+    0.2,
+    0.3,
+    0.4,
+    0.6,
+    0.8,
+    1,
+    1.2
+   ]
+  },
+  {
+   "id": "inc_poise",
+   "kind": "suffix",
+   "label": "{v}% increased Poise",
+   "slots": [
+    "armor",
+    "accessory"
+   ],
+   "values": [
+    8,
+    12,
+    16,
+    20,
+    25,
+    30,
+    35
+   ]
+  },
+  {
+   "id": "inc_shield_recharge",
+   "kind": "suffix",
+   "label": "{v}% faster Aether Shield recharge",
+   "slots": [
+    "armor",
+    "accessory"
+   ],
+   "values": [
+    10,
+    15,
+    20,
+    27,
+    34,
+    42,
+    50
+   ]
+  },
+  {
+   "id": "inc_move_speed",
+   "kind": "suffix",
+   "label": "{v}% increased Movement Speed",
+   "slots": [
+    "boots"
+   ],
+   "values": [
+    5,
+    7,
+    9,
+    11,
+    13,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "magnet",
+   "kind": "suffix",
+   "label": "+{v} cells loot pickup radius",
+   "slots": [
+    "boots",
+    "accessory"
+   ],
+   "values": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "id": "grip",
+   "kind": "suffix",
+   "label": "{v}% increased monster aggro radius",
+   "slots": [
+    "armor",
+    "accessory"
+   ],
+   "values": [
+    8,
+    12,
+    16,
+    20,
+    25,
+    30,
+    35
+   ]
+  }
+ ],
+ "totem_affixes": [
+  {
+   "id": "totem_duration",
+   "kind": "suffix",
+   "label": "{v}% increased Totem duration",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    10,
+    20,
+    30,
+    40
+   ]
+  },
+  {
+   "id": "totem_charges",
+   "kind": "suffix",
+   "label": "Totem needs {v}% fewer charges",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    8,
+    15,
+    20,
+    25
+   ]
+  },
+  {
+   "id": "totem_effect",
+   "kind": "suffix",
+   "label": "{v}% increased Totem effect",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    10,
+    15,
+    20,
+    30
+   ]
+  },
+  {
+   "id": "totem_boss_charges",
+   "kind": "suffix",
+   "label": "Elites and bosses give double Totem charges",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "id": "totem_res_all",
+   "kind": "suffix",
+   "label": "+{v}% to all Resistances while active",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    8,
+    12,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "totem_leech",
+   "kind": "suffix",
+   "label": "{v}% of Damage leeched as HP while active",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    0.5,
+    0.8,
+    1.2,
+    1.5
+   ]
+  },
+  {
+   "id": "totem_move",
+   "kind": "suffix",
+   "label": "{v}% increased Movement Speed while active",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    8,
+    12,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "totem_poise",
+   "kind": "suffix",
+   "label": "{v}% increased Poise while active",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    15,
+    25,
+    35,
+    45
+   ]
+  },
+  {
+   "id": "totem_heal",
+   "kind": "suffix",
+   "label": "Restores {v}% of Max HP when used",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    5,
+    10,
+    15,
+    20
+   ]
+  },
+  {
+   "id": "totem_auto",
+   "kind": "suffix",
+   "label": "Used automatically when fully charged",
+   "slots": [
+    "charm"
+   ],
+   "values": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "weight": 0.2
+  }
+ ],
+ "labels": {
+  "inc_sp_regen": "{v}% increased SP regeneration",
+  "inc_defense": "{v}% increased Armour, Evasion and Aether Shield",
+  "more_damage": "{v}% more Damage",
+  "more_area": "{v}% more Area of Effect",
+  "flat_shield": "+{v} Aether Shield",
+  "inc_shield": "{v}% increased Aether Shield",
+  "cap_cdr": "Cooldown Recovery cap raised to {v}%",
+  "cap_cast": "Cast Speed cap raised to {v}%",
+  "cap_crit": "Critical Chance cap raised to {v}%",
+  "cap_poise": "Poise cap raised to {v}%",
+  "cap_leech": "Leech rate cap raised to {v}% of Max HP per second",
+  "cap_evasion": "Evasion cap raised to {v}%",
+  "cap_res_fire": "Fire Resistance cap raised to {v}%",
+  "cap_res_cold": "Cold Resistance cap raised to {v}%",
+  "cap_res_nature": "Nature Resistance cap raised to {v}%",
+  "cap_res_shadow": "Shadow Resistance cap raised to {v}%",
+  "totem_duration": "{v}% increased Totem duration",
+  "totem_charges": "Totem needs {v}% fewer charges",
+  "totem_effect": "{v}% increased Totem effect",
+  "totem_boss_charges": "Elites and bosses give double Totem charges",
+  "totem_res_all": "+{v}% to all Resistances while active",
+  "totem_leech": "{v}% of Damage leeched as HP while active",
+  "totem_move": "{v}% increased Movement Speed while active",
+  "totem_poise": "{v}% increased Poise while active",
+  "totem_heal": "Restores {v}% of Max HP when used",
+  "totem_auto": "Used automatically when fully charged"
+ },
+ "charm_types": [
+  {
+   "id": "fang",
+   "name": "Fang",
+   "effects": [
+    [
+     "inc_damage",
+     [
+      5,
+      9,
+      14
+     ]
+    ]
+   ],
+   "elements": [
+    "fire"
+   ]
+  },
+  {
+   "id": "clover",
+   "name": "Clover",
+   "effects": [
+    [
+     "inc_crit",
+     [
+      15,
+      30,
+      45
+     ]
+    ]
+   ],
+   "elements": [
+    "fire"
+   ]
+  },
+  {
+   "id": "razor",
+   "name": "Razor",
+   "effects": [
+    [
+     "crit_mult",
+     [
+      6,
+      12,
+      20
+     ]
+    ]
+   ],
+   "elements": [
+    "fire",
+    "shadow"
+   ]
+  },
+  {
+   "id": "hourglass",
+   "name": "Hourglass",
+   "effects": [
+    [
+     "inc_cdr",
+     [
+      5,
+      9,
+      14
+     ]
+    ]
+   ],
+   "elements": [
+    "wind"
+   ]
+  },
+  {
+   "id": "quill",
+   "name": "Quill",
+   "effects": [
+    [
+     "inc_cast",
+     [
+      5,
+      9,
+      14
+     ]
+    ]
+   ],
+   "elements": [
+    "water",
+    "ice"
+   ]
+  },
+  {
+   "id": "tempo",
+   "name": "Tempo",
+   "effects": [
+    [
+     "inc_attack_speed",
+     [
+      4,
+      7,
+      10
+     ]
+    ]
+   ],
+   "elements": [
+    "wind"
+   ]
+  },
+  {
+   "id": "expanse",
+   "name": "Expanse",
+   "effects": [
+    [
+     "inc_area",
+     [
+      5,
+      9,
+      14
+     ]
+    ]
+   ],
+   "elements": [
+    "earth",
+    "shadow"
+   ]
+  },
+  {
+   "id": "viper",
+   "name": "Viper",
+   "effects": [
+    [
+     "leech",
+     [
+      0.3,
+      0.6,
+      1
+     ]
+    ]
+   ],
+   "elements": [
+    "nature"
+   ]
+  },
+  {
+   "id": "wellspring",
+   "name": "Wellspring",
+   "effects": [
+    [
+     "sp_on_kill",
+     [
+      1,
+      2,
+      3
+     ]
+    ],
+    [
+     "inc_sp_regen",
+     [
+      5,
+      10,
+      15
+     ]
+    ]
+   ],
+   "elements": [
+    "water",
+    "ice"
+   ]
+  },
+  {
+   "id": "heart",
+   "name": "Heart",
+   "effects": [
+    [
+     "inc_hp",
+     [
+      3,
+      6,
+      9
+     ]
+    ]
+   ],
+   "elements": [
+    "earth",
+    "nature"
+   ]
+  },
+  {
+   "id": "bastion",
+   "name": "Bastion",
+   "effects": [
+    [
+     "inc_defense",
+     [
+      10,
+      20,
+      30
+     ]
+    ]
+   ],
+   "elements": [
+    "earth"
+   ]
+  },
+  {
+   "id": "prism",
+   "name": "Prism",
+   "effects": [
+    [
+     "res_all",
+     [
+      4,
+      7,
+      10
+     ]
+    ]
+   ],
+   "elements": [
+    "ice"
+   ]
+  },
+  {
+   "id": "sigil_pow",
+   "name": "Sigil of POW",
+   "effects": [
+    [
+     "stat_pow",
+     [
+      5,
+      10,
+      15
+     ]
+    ]
+   ],
+   "elements": []
+  },
+  {
+   "id": "sigil_luk",
+   "name": "Sigil of LUK",
+   "effects": [
+    [
+     "stat_luk",
+     [
+      5,
+      10,
+      15
+     ]
+    ]
+   ],
+   "elements": []
+  },
+  {
+   "id": "sigil_agi",
+   "name": "Sigil of AGI",
+   "effects": [
+    [
+     "stat_agi",
+     [
+      5,
+      10,
+      15
+     ]
+    ]
+   ],
+   "elements": []
+  },
+  {
+   "id": "sigil_dex",
+   "name": "Sigil of DEX",
+   "effects": [
+    [
+     "stat_dex",
+     [
+      5,
+      10,
+      15
+     ]
+    ]
+   ],
+   "elements": []
+  },
+  {
+   "id": "sigil_int",
+   "name": "Sigil of INT",
+   "effects": [
+    [
+     "stat_int",
+     [
+      5,
+      10,
+      15
+     ]
+    ]
+   ],
+   "elements": []
+  },
+  {
+   "id": "sigil_vit",
+   "name": "Sigil of VIT",
+   "effects": [
+    [
+     "stat_vit",
+     [
+      5,
+      10,
+      15
+     ]
+    ]
+   ],
+   "elements": []
+  }
+ ],
+ "relic_caps": [
+  {
+   "id": "cap_cdr",
+   "values": [
+    50,
+    60,
+    70
+   ],
+   "elements": [
+    "wind"
+   ]
+  },
+  {
+   "id": "cap_cast",
+   "values": [
+    65,
+    75,
+    85
+   ],
+   "elements": [
+    "water",
+    "ice"
+   ]
+  },
+  {
+   "id": "cap_crit",
+   "values": [
+    47,
+    53,
+    60
+   ],
+   "elements": [
+    "fire"
+   ]
+  },
+  {
+   "id": "cap_poise",
+   "values": [
+    60,
+    70,
+    80
+   ],
+   "elements": [
+    "earth"
+   ]
+  },
+  {
+   "id": "cap_leech",
+   "values": [
+    13,
+    17,
+    20
+   ],
+   "elements": [
+    "nature"
+   ]
+  },
+  {
+   "id": "cap_evasion",
+   "values": [
+    65,
+    70,
+    75
+   ],
+   "elements": [
+    "wind"
+   ]
+  },
+  {
+   "id": "cap_res_fire",
+   "values": [
+    78,
+    82,
+    85
+   ],
+   "elements": [
+    "fire"
+   ]
+  },
+  {
+   "id": "cap_res_cold",
+   "values": [
+    78,
+    82,
+    85
+   ],
+   "elements": [
+    "water",
+    "ice"
+   ]
+  },
+  {
+   "id": "cap_res_nature",
+   "values": [
+    78,
+    82,
+    85
+   ],
+   "elements": [
+    "earth",
+    "nature",
+    "wind"
+   ]
+  },
+  {
+   "id": "cap_res_shadow",
+   "values": [
+    78,
+    82,
+    85
+   ],
+   "elements": [
+    "shadow"
+   ]
+  }
+ ],
+ "totem_types": [
+  {
+   "id": "fury",
+   "name": "Fury",
+   "effects": {
+    "more_damage": 20
+   },
+   "duration_ms": 6000,
+   "charges": 40,
+   "text": "{more_damage}% more Damage"
+  },
+  {
+   "id": "haste",
+   "name": "Haste",
+   "effects": {
+    "inc_cdr": 30,
+    "cap_cdr_bonus": 10
+   },
+   "duration_ms": 6000,
+   "charges": 60,
+   "text": "{inc_cdr}% increased Cooldown Recovery; its cap +{cap_cdr_bonus}%"
+  },
+  {
+   "id": "focus",
+   "name": "Focus",
+   "effects": {
+    "inc_cast": 40,
+    "cap_cast_bonus": 10
+   },
+   "duration_ms": 6000,
+   "charges": 60,
+   "text": "{inc_cast}% increased Cast Speed; its cap +{cap_cast_bonus}%"
+  },
+  {
+   "id": "precision",
+   "name": "Precision",
+   "effects": {
+    "flat_crit": 15,
+    "cap_crit_bonus": 5
+   },
+   "duration_ms": 6000,
+   "charges": 50,
+   "text": "+{flat_crit}% Critical Chance; its cap +{cap_crit_bonus}%"
+  },
+  {
+   "id": "wildfire",
+   "name": "Wildfire",
+   "effects": {
+    "more_area": 30
+   },
+   "duration_ms": 6000,
+   "charges": 50,
+   "text": "{more_area}% more Area of Effect"
+  },
+  {
+   "id": "bloodrush",
+   "name": "Bloodrush",
+   "effects": {
+    "leech": 3,
+    "leech_cap_mult": 2
+   },
+   "duration_ms": 5000,
+   "charges": 50,
+   "text": "{leech}% of Damage leeched as HP; leech rate cap x{leech_cap_mult}"
+  },
+  {
+   "id": "surge",
+   "name": "Surge",
+   "effects": {
+    "sp_restore": 50,
+    "free_skills": 1
+   },
+   "duration_ms": 3000,
+   "charges": 60,
+   "text": "Restores {sp_restore}% SP; skills cost no SP"
+  },
+  {
+   "id": "bulwark",
+   "name": "Bulwark",
+   "effects": {
+    "armour_mult": 2,
+    "poise": 100
+   },
+   "duration_ms": 5000,
+   "charges": 50,
+   "text": "Armour x{armour_mult}; casts cannot be pushed back"
+  },
+  {
+   "id": "aegis",
+   "name": "Aegis",
+   "effects": {
+    "temp_shield": 30
+   },
+   "duration_ms": 8000,
+   "charges": 40,
+   "text": "Gain a {temp_shield}% of Max HP Aether Shield"
+  },
+  {
+   "id": "mending",
+   "name": "Mending",
+   "effects": {
+    "heal": 40
+   },
+   "duration_ms": 0,
+   "charges": 30,
+   "text": "Restores {heal}% of Max HP"
+  },
+  {
+   "id": "gale",
+   "name": "Gale",
+   "effects": {
+    "inc_move_speed": 30,
+    "grip": 50
+   },
+   "duration_ms": 8000,
+   "charges": 30,
+   "text": "{inc_move_speed}% increased Movement Speed; {grip}% increased aggro radius"
+  },
+  {
+   "id": "hunt",
+   "name": "the Hunt",
+   "effects": {
+    "exp_bonus": 20
+   },
+   "duration_ms": 30000,
+   "charges": 80,
+   "text": "{exp_bonus}% more EXP"
+  }
+ ],
+ "charm_slot_levels": [
+  10,
+  30,
+  60
+ ],
+ "starter_weapons": {
+  "vanguard": "itm_1001",
+  "strider": "itm_1002",
+  "arcanist": "itm_1003",
+  "machinist": "itm_1004"
+ }
+}

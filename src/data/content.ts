@@ -1,5 +1,5 @@
 import type {
-  ItemDef, MapDef, MapLayout, MonsterDef, NpcDef, QuestDef, RegionDef, SkillDef, WarpDef,
+  ItemDef, MapDef, MapLayout, MonsterDef, NpcDef, QuestDef, RegionDef, SkillDef, SystemsDef, WarpDef,
 } from "./schema";
 
 /** The parts of the content the client displays (the server owns the rules). */
@@ -11,6 +11,8 @@ export interface ClientContent {
   npcs: Map<string, NpcDef>;
   quests: Map<string, QuestDef>;
   skills: Map<string, SkillDef>;
+  /** Stat rules, affix labels, Charm and Totem types (CHARACTER_SYSTEMS.md). */
+  systems: SystemsDef;
   warps: WarpDef[];
   sprites: { player: SpriteBinding; monsters: Record<string, SpriteBinding>; fallback: SpriteBinding };
   layouts: Map<string, MapLayout>;
@@ -32,7 +34,7 @@ async function json<T>(path: string): Promise<T> {
 const byId = <T extends { id: string }>(list: T[]) => new Map(list.map((x) => [x.id, x]));
 
 export async function loadContent(): Promise<ClientContent> {
-  const [regions, maps, monsters, items, npcs, quests, skills, warps, sprites] = await Promise.all([
+  const [regions, maps, monsters, items, npcs, quests, skills, warps, sprites, systems] = await Promise.all([
     json<RegionDef[]>("data/regions.json"),
     json<MapDef[]>("data/maps.json"),
     json<MonsterDef[]>("data/monsters.json"),
@@ -42,10 +44,11 @@ export async function loadContent(): Promise<ClientContent> {
     json<SkillDef[]>("data/skills.json"),
     json<WarpDef[]>("data/warps.json"),
     json<ClientContent["sprites"]>("sprites/index.json"),
+    json<SystemsDef>("data/systems.json"),
   ]);
   return {
     regions: byId(regions), maps: byId(maps), monsters: byId(monsters), items: byId(items), npcs: byId(npcs),
-    quests: byId(quests), skills: byId(skills), warps, sprites, layouts: new Map(),
+    quests: byId(quests), skills: byId(skills), systems, warps, sprites, layouts: new Map(),
   };
 }
 

@@ -1,4 +1,4 @@
-import type { AnimName, SpriteDefJson } from './spriteDef';
+import type { BasicAnimName as AnimName, SpriteDefJson } from './spriteDef';
 
 export const FRAME = 384;
 export const CLIPS = {

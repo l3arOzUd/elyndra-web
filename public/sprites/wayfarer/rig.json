@@ -1,50 +1,346 @@
 {
   "about": "Wayfarer paper-doll rig. Every part is a PNG the size of the art canvas, drawn in its resting place, so stacking all of one view's parts shows the whole character standing. pivot = the joint the part turns around, in art-canvas pixels. parent = the part it moves with (root = the hips). order = back-to-front drawing order; equipment layers are drawn right after the part of the same name. See CHARACTER_ART_GUIDE.md.",
   "canvas": 512,
-  "feet": [256, 480],
+  "feet": [
+    256,
+    480
+  ],
   "frame": 256,
   "pixelsPerCell": 108,
-  "facings": { "S": "front", "SW": "side", "W": "side", "NW": "side", "N": "back" },
-  "attach": { "weapon": "arm_near", "cape": "torso" },
+  "facings": {
+    "S": "front",
+    "SW": "side",
+    "W": "side",
+    "NW": "side",
+    "N": "back"
+  },
+  "attach": {
+    "weapon": "hand_near",
+    "cape": "torso"
+  },
   "views": {
     "front": {
       "parts": {
-        "torso":      { "pivot": [256, 332], "parent": "root" },
-        "head":       { "pivot": [256, 220], "parent": "torso" },
-        "arm_near":   { "pivot": [202, 240], "parent": "torso" },
-        "arm_far":    { "pivot": [310, 240], "parent": "torso" },
-        "thigh_near": { "pivot": [234, 336], "parent": "root" },
-        "shin_near":  { "pivot": [234, 408], "parent": "thigh_near" },
-        "thigh_far":  { "pivot": [278, 336], "parent": "root" },
-        "shin_far":   { "pivot": [278, 408], "parent": "thigh_far" }
+        "torso": {
+          "pivot": [
+            256,
+            332
+          ],
+          "parent": "root"
+        },
+        "head": {
+          "pivot": [
+            256,
+            220
+          ],
+          "parent": "torso"
+        },
+        "arm_near": {
+          "pivot": [
+            202,
+            240
+          ],
+          "parent": "torso"
+        },
+        "arm_far": {
+          "pivot": [
+            310,
+            240
+          ],
+          "parent": "torso"
+        },
+        "thigh_near": {
+          "pivot": [
+            234,
+            336
+          ],
+          "parent": "root"
+        },
+        "shin_near": {
+          "pivot": [
+            234,
+            408
+          ],
+          "parent": "thigh_near"
+        },
+        "thigh_far": {
+          "pivot": [
+            278,
+            336
+          ],
+          "parent": "root"
+        },
+        "shin_far": {
+          "pivot": [
+            278,
+            408
+          ],
+          "parent": "thigh_far"
+        },
+        "forearm_near": {
+          "pivot": [
+            199,
+            288
+          ],
+          "parent": "arm_near"
+        },
+        "hand_near": {
+          "pivot": [
+            196,
+            326
+          ],
+          "parent": "forearm_near"
+        },
+        "forearm_far": {
+          "pivot": [
+            313,
+            288
+          ],
+          "parent": "arm_far"
+        },
+        "hand_far": {
+          "pivot": [
+            316,
+            326
+          ],
+          "parent": "forearm_far"
+        }
       },
-      "order": ["cape", "thigh_far", "shin_far", "thigh_near", "shin_near", "torso", "arm_far", "head", "arm_near", "weapon"]
+      "order": [
+        "cape",
+        "thigh_far",
+        "shin_far",
+        "thigh_near",
+        "shin_near",
+        "torso",
+        "arm_far",
+        "forearm_far",
+        "hand_far",
+        "head",
+        "arm_near",
+        "forearm_near",
+        "hand_near",
+        "weapon"
+      ]
     },
     "side": {
       "parts": {
-        "torso":      { "pivot": [256, 332], "parent": "root" },
-        "head":       { "pivot": [252, 220], "parent": "torso" },
-        "arm_near":   { "pivot": [260, 242], "parent": "torso" },
-        "arm_far":    { "pivot": [252, 242], "parent": "torso" },
-        "thigh_near": { "pivot": [250, 336], "parent": "root" },
-        "shin_near":  { "pivot": [248, 408], "parent": "thigh_near" },
-        "thigh_far":  { "pivot": [262, 336], "parent": "root" },
-        "shin_far":   { "pivot": [264, 408], "parent": "thigh_far" }
+        "torso": {
+          "pivot": [
+            256,
+            332
+          ],
+          "parent": "root"
+        },
+        "head": {
+          "pivot": [
+            252,
+            220
+          ],
+          "parent": "torso"
+        },
+        "arm_near": {
+          "pivot": [
+            260,
+            242
+          ],
+          "parent": "torso"
+        },
+        "arm_far": {
+          "pivot": [
+            252,
+            242
+          ],
+          "parent": "torso"
+        },
+        "thigh_near": {
+          "pivot": [
+            250,
+            336
+          ],
+          "parent": "root"
+        },
+        "shin_near": {
+          "pivot": [
+            248,
+            408
+          ],
+          "parent": "thigh_near"
+        },
+        "thigh_far": {
+          "pivot": [
+            262,
+            336
+          ],
+          "parent": "root"
+        },
+        "shin_far": {
+          "pivot": [
+            264,
+            408
+          ],
+          "parent": "thigh_far"
+        },
+        "forearm_near": {
+          "pivot": [
+            262,
+            290
+          ],
+          "parent": "arm_near"
+        },
+        "hand_near": {
+          "pivot": [
+            264,
+            328
+          ],
+          "parent": "forearm_near"
+        },
+        "forearm_far": {
+          "pivot": [
+            250,
+            290
+          ],
+          "parent": "arm_far"
+        },
+        "hand_far": {
+          "pivot": [
+            248,
+            328
+          ],
+          "parent": "forearm_far"
+        }
       },
-      "order": ["arm_far", "thigh_far", "shin_far", "cape", "thigh_near", "shin_near", "torso", "head", "arm_near", "weapon"]
+      "order": [
+        "arm_far",
+        "forearm_far",
+        "hand_far",
+        "thigh_far",
+        "shin_far",
+        "cape",
+        "thigh_near",
+        "shin_near",
+        "torso",
+        "head",
+        "arm_near",
+        "forearm_near",
+        "hand_near",
+        "weapon"
+      ]
     },
     "back": {
       "parts": {
-        "torso":      { "pivot": [256, 332], "parent": "root" },
-        "head":       { "pivot": [256, 220], "parent": "torso" },
-        "arm_near":   { "pivot": [310, 240], "parent": "torso" },
-        "arm_far":    { "pivot": [202, 240], "parent": "torso" },
-        "thigh_near": { "pivot": [278, 336], "parent": "root" },
-        "shin_near":  { "pivot": [278, 408], "parent": "thigh_near" },
-        "thigh_far":  { "pivot": [234, 336], "parent": "root" },
-        "shin_far":   { "pivot": [234, 408], "parent": "thigh_far" }
+        "torso": {
+          "pivot": [
+            256,
+            332
+          ],
+          "parent": "root"
+        },
+        "head": {
+          "pivot": [
+            256,
+            220
+          ],
+          "parent": "torso"
+        },
+        "arm_near": {
+          "pivot": [
+            310,
+            240
+          ],
+          "parent": "torso"
+        },
+        "arm_far": {
+          "pivot": [
+            202,
+            240
+          ],
+          "parent": "torso"
+        },
+        "thigh_near": {
+          "pivot": [
+            278,
+            336
+          ],
+          "parent": "root"
+        },
+        "shin_near": {
+          "pivot": [
+            278,
+            408
+          ],
+          "parent": "thigh_near"
+        },
+        "thigh_far": {
+          "pivot": [
+            234,
+            336
+          ],
+          "parent": "root"
+        },
+        "shin_far": {
+          "pivot": [
+            234,
+            408
+          ],
+          "parent": "thigh_far"
+        },
+        "forearm_near": {
+          "pivot": [
+            313,
+            288
+          ],
+          "parent": "arm_near"
+        },
+        "hand_near": {
+          "pivot": [
+            316,
+            326
+          ],
+          "parent": "forearm_near"
+        },
+        "forearm_far": {
+          "pivot": [
+            199,
+            288
+          ],
+          "parent": "arm_far"
+        },
+        "hand_far": {
+          "pivot": [
+            196,
+            326
+          ],
+          "parent": "forearm_far"
+        }
       },
-      "order": ["weapon", "thigh_far", "shin_far", "thigh_near", "shin_near", "arm_near", "arm_far", "torso", "head", "cape"]
+      "order": [
+        "weapon",
+        "thigh_far",
+        "shin_far",
+        "thigh_near",
+        "shin_near",
+        "arm_near",
+        "forearm_near",
+        "hand_near",
+        "arm_far",
+        "forearm_far",
+        "hand_far",
+        "torso",
+        "head",
+        "cape"
+      ]
     }
-  }
+  },
+  "variants": {
+    "hand_near": [
+      "open"
+    ],
+    "hand_far": [
+      "open"
+    ]
+  },
+  "effects": [
+    "effects/arrow.png"
+  ]
 }

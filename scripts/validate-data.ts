@@ -46,6 +46,9 @@ function load(): ContentBundle | null {
 
 // --- helpers -----------------------------------------------------------------
 
+/** CHARACTER_SYSTEMS.md §2.6: share of a hit of `damage` that `armour` stops. */
+const armourCut = (armour: number, damage: number) => Math.min(0.9, armour / (armour + 5 * Math.max(1, damage)));
+
 const rectsOverlap = (a: Rect, b: Rect, pad = 0) =>
   a[0] - pad < b[0] + b[2] && b[0] - pad < a[0] + a[2] && a[1] - pad < b[1] + b[3] && b[1] - pad < a[1] + a[3];
 const inRect = (x: number, y: number, r: Rect, pad = 0) => x >= r[0] - pad && y >= r[1] - pad && x < r[0] + r[2] + pad && y < r[1] + r[3] + pad;
@@ -414,14 +417,19 @@ function checkItems(b: ContentBundle) {
   for (const s of b.shops) for (const i of s.items) { add(i.item_id, `shop:${s.id}`); prices.set(i.item_id, Math.min(prices.get(i.item_id) ?? Infinity, i.price)); }
   for (const q of b.quests) for (const i of q.rewards.items) add(i.item_id, `quest:${q.id}`);
   for (const r of b.recipes) add(r.output.item_id, `recipe:${r.id}`);
+  for (const it of b.items) if (it.drop_pool) add(it.id, "gear-pool");
 
   const items = new Map(b.items.map((i) => [i.id, i]));
   for (const it of b.items) {
     const src = sources.get(it.id) ?? [];
     if (src.length === 0) report("error", "item.unobtainable", it.id, `${it.name} has no drop, shop, quest or recipe`);
     if (it.category === "consumable" && !it.use) report("error", "item.use", it.id, "consumable with no effect");
-    if (it.category === "equipment" && !it.equip) report("error", "item.equip", it.id, "equipment with no stats");
-    if (it.category === "equipment" && it.stack_max !== 1) report("error", "item.stack", it.id, "equipment must not stack");
+    const gear = it.category === "equipment" || it.category === "charm" || it.category === "totem";
+    if (gear && !it.equip) report("error", "item.equip", it.id, `${it.category} with no equip block`);
+    if (gear && it.stack_max !== 1) report("error", "item.stack", it.id, `${it.category} must not stack`);
+    if (it.category === "charm" && it.equip && (it.equip.slot !== "charm" || (!it.equip.charm && !it.equip.unique))) report("error", "item.charm", it.id, "charm must use the charm slot and name a charm type or unique");
+    if (it.category === "totem" && it.equip && (it.equip.slot !== "charm" || !it.equip.totem)) report("error", "item.totem", it.id, "totem must use the charm slot and name a totem type");
+    if (it.equip && it.equip.slot === "weapon" && !(it.equip.attack! > 0)) report("error", "item.weapon", it.id, "weapon with no ATK");
     if (it.sell_price < 0) report("error", "item.price", it.id, "negative sell price");
     const buy = prices.get(it.id);
     if (buy !== undefined && buy < it.sell_price) report("critical", "economy.arbitrage", it.id, `bought for ${buy}, sold for ${it.sell_price}`);
@@ -493,14 +501,14 @@ function checkBalance(b: ContentBundle) {
   for (const m of b.monsters) {
     const p = curve.get(m.level);
     if (!p) { report("error", "balance.curve", m.id, `no player curve row for Lv${m.level}`); continue; }
-    const perHit = Math.max(1, p.attack - m.defense);
+    const perHit = p.ref_attack * (1 - armourCut(m.defense, p.ref_attack));
     const hits = m.hp / perHit;
-    const dmg = Math.max(1, m.attack - p.defense) / p.max_hp;
+    const dmg = (m.attack * (1 - armourCut(p.ref_armour, m.attack))) / p.max_hp;
     const bnd = band[m.archetype];
     if (!bnd) { report("error", "balance.archetype", m.id, `unknown archetype ${m.archetype}`); continue; }
     if (hits < bnd.hits[0] || hits > bnd.hits[1]) report("error", "balance.ttk", m.id, `${m.name} (${m.archetype}) takes ${hits.toFixed(1)} basic hits at Lv${m.level}; band ${bnd.hits.join("-")}`);
     if (dmg < bnd.dmg[0] || dmg > bnd.dmg[1]) report("error", "balance.damage", m.id, `${m.name} hits for ${(dmg * 100).toFixed(1)}% of a Lv${m.level} player's HP; band ${bnd.dmg.map((x) => x * 100).join("-")}%`);
-    if (m.defense >= p.attack) report("critical", "balance.immune", m.id, `${m.name} DEF ${m.defense} >= player ATK ${p.attack}`);
+    if (armourCut(m.defense, p.ref_attack) >= 0.85) report("critical", "balance.immune", m.id, `${m.name} Armour ${m.defense} stops 85%+ of a reference hit (${p.ref_attack})`);
     if (m.attack_ms < 600 || m.attack_ms > 4000) report("error", "balance.attack_speed", m.id, `attack every ${m.attack_ms}ms`);
     if (m.move_speed_ms < 120 || m.move_speed_ms > 600) report("error", "balance.move_speed", m.id, `${m.move_speed_ms}ms per cell`);
     if (m.leash_radius < m.aggro_radius) report("error", "balance.leash", m.id, "leash shorter than aggro radius");
@@ -513,7 +521,7 @@ function checkBalance(b: ContentBundle) {
   const effort = b.monsters.map((m) => {
     const p = curve.get(m.level);
     if (!p || !p.exp_to_next) return NaN;
-    const hits = m.hp / Math.max(1, p.attack - m.defense);
+    const hits = m.hp / (p.ref_attack * (1 - armourCut(m.defense, p.ref_attack)));
     return (p.exp_to_next / m.base_exp) * hits;
   });
   // Compared with monsters within 3 levels: leveling is meant to slow down
@@ -577,6 +585,39 @@ function checkMaps(b: ContentBundle) {
   }
 }
 
+/** CHARACTER_SYSTEMS.md: affix tiers, caps, charms, totems and gear bases. */
+function checkSystems(b: ContentBundle) {
+  const sys = b.systems;
+  const items = new Map(b.items.map((i) => [i.id, i]));
+  const tiers = sys.drops.tier_min_level.length;
+  const known = new Set([...sys.affixes, ...sys.totem_affixes].map((a) => a.id).concat(Object.keys(sys.labels)));
+  for (const a of sys.affixes) {
+    if (a.values.length !== tiers) report("error", "systems.affix_tiers", a.id, `${a.values.length} tiers, expected ${tiers}`);
+    if (a.values.some((v, i) => i > 0 && v < a.values[i - 1])) report("error", "systems.affix_order", a.id, "tier values must not decrease");
+    if (!a.label.includes("{v}")) report("error", "systems.affix_label", a.id, "label has no {v}");
+  }
+  for (const [k, [normal, max]] of Object.entries(sys.rules.caps)) if (normal > max) report("error", "systems.cap", k, `normal cap ${normal} above its maximum ${max}`);
+  for (const r of sys.relic_caps) {
+    const cap = sys.rules.caps[r.id.replace("cap_", "").replace(/^res_.*/, "res")];
+    if (!cap) report("error", "systems.relic", r.id, "no matching cap");
+    else if (r.values.some((v) => v <= cap[0] || v > cap[1])) report("error", "systems.relic", r.id, `grades ${r.values.join("/")} outside ${cap[0]}-${cap[1]}`);
+  }
+  for (const c of sys.charm_types) for (const [id, v] of c.effects) {
+    if (!known.has(id)) report("error", "systems.charm", c.id, `unknown effect ${id}`);
+    if (v.length !== 3) report("error", "systems.charm", c.id, `${id} needs 3 grade values`);
+  }
+  for (const it of b.items) {
+    const e = it.equip;
+    if (!e) continue;
+    for (const [id] of e.implicit ?? []) if (!known.has(id)) report("error", "item.implicit", it.id, `unknown implicit ${id}`);
+    if (e.charm && !sys.charm_types.some((c) => c.id === e.charm!.type)) report("error", "item.charm", it.id, `unknown charm type ${e.charm.type}`);
+    if (e.totem && !sys.totem_types.some((t) => t.id === e.totem!.type)) report("error", "item.totem", it.id, `unknown totem type ${e.totem.type}`);
+    if (e.slot !== "charm" && e.item_level === undefined) report("error", "item.item_level", it.id, "gear without item_level");
+  }
+  for (const [job, id] of Object.entries(sys.starter_weapons)) if (items.get(id)?.equip?.slot !== "weapon") report("error", "systems.starter", job, `starter weapon ${id} is not a weapon`);
+  if (!sys.starter_weapons.vanguard) report("error", "systems.starter", "vanguard", "no starter weapon");
+}
+
 function checkSkills(b: ContentBundle) {
   for (const s of b.skills) {
     if (s.max_targets > 50) report("error", "skill.targets", s.id, `max_targets ${s.max_targets} above the 50 cap`);
@@ -603,6 +644,7 @@ function main() {
       checkQuests(bundle);
       checkBalance(bundle);
       checkSkills(bundle);
+      checkSystems(bundle);
     }
   }
   const count = (s: Severity) => findings.filter((f) => f.severity === s).length;

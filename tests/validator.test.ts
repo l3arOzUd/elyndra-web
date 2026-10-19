@@ -84,6 +84,17 @@ describe("validate:data", { timeout: 60000 }, () => {
     expect(has(r, "monster.unused")).toBe(true);
   });
 
+  it("rejects a species on a second home map even when its level fits", () => {
+    const r = mutate((read, write) => {
+      const zones = read("spawn_zones");
+      zones.find((z: any) => z.map_id === "lum_fld_02").pockets[0].species.push({ monster_id: "mob_0002", weight: 1 });
+      write("spawn_zones", zones);
+    });
+    expect(has(r, "spawn.one_map", "error")).toBe(true);
+    expect(has(r, "spawn.level")).toBe(false);
+    expect(r.code).toBe(1);
+  });
+
   it("an item with no drop, shop, quest or recipe is an error", () => {
     const r = mutate((read, write) => {
       const items = read("items");

@@ -1,5 +1,5 @@
 import { CLIPS, FRAME } from './mosskin2d';
-import type { AnimName, SpriteDefJson } from './spriteDef';
+import type { BasicAnimName as AnimName, SpriteDefJson } from './spriteDef';
 
 type PoseName = 'original' | 'walk' | 'actions';
 interface PoseSpec {
@@ -7,6 +7,7 @@ interface PoseSpec {
   boxes: [number, number, number, number][];
   scale: number;
   flip?: boolean;
+  flipFrames?: number[];
 }
 interface Pose extends PoseSpec { image: HTMLImageElement }
 type Poses = Record<PoseName, Pose>;
@@ -26,11 +27,11 @@ function draw(ctx: CanvasRenderingContext2D, poses: Poses, anim: AnimName, p: nu
   if (anim === 'death' && p >= .15) {
     name = 'actions'; index = p < .35 ? 3 : p < .65 ? 4 : 5;
   }
-  if (hovering && anim !== 'death') dy -= 28;
+  if (hovering) dy -= anim === 'death' ? 28 * Math.max(0, 1 - p / .65) : 28;
   const pose = poses[name], box = pose.boxes[index];
   const w = box[2] * pose.scale, h = box[3] * pose.scale;
   ctx.save(); ctx.scale(FRAME / 512, FRAME / 512);
-  if (pose.flip) { ctx.translate(512, 0); ctx.scale(-1, 1); }
+  if (pose.flip || pose.flipFrames?.includes(index)) { ctx.translate(512, 0); ctx.scale(-1, 1); }
   ctx.drawImage(pose.image, ...box, 256 + dx - w / 2, 460 + dy - h, w, h);
   ctx.restore();
 }
@@ -50,10 +51,13 @@ export async function createPaintedSheets(id: string, hovering = false) {
     const def = CLIPS[name];
     const sheet = document.createElement('canvas'); sheet.width = FRAME * def.frames; sheet.height = FRAME;
     const ctx = sheet.getContext('2d')!;
+    const cell = document.createElement('canvas'); cell.width = cell.height = FRAME;
+    const cellCtx = cell.getContext('2d')!;
     for (let i = 0; i < def.frames; i++) {
-      ctx.save(); ctx.translate(i * FRAME, 0);
-      draw(ctx, poses, name, i / (name === 'idle' || name === 'walk' ? def.frames : def.frames - 1), hovering);
-      ctx.restore();
+      // Render in a fixed coordinate space so held poses are pixel-identical.
+      cellCtx.clearRect(0, 0, FRAME, FRAME);
+      draw(cellCtx, poses, name, i / (name === 'idle' || name === 'walk' ? def.frames : def.frames - 1), hovering);
+      ctx.drawImage(cell, i * FRAME, 0);
     }
     sheets[name] = sheet;
   }

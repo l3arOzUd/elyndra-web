@@ -1,168 +1,399 @@
-import type { ClientContent } from "../data/content";
-import type { MsgOf, QuestView } from "../net/protocol";
+import type { ClientContent } from '../data/content';
+import type { GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
+import { icon, itemIcon } from './icons';
+import { paintedIcon } from './art';
+import { CHARM_SLOTS, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
 
 const $ = (id: string) => document.getElementById(id)!;
-
-function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, text?: string): HTMLElementTagNameMap[K] {
-  const e = document.createElement(tag);
-  if (cls) e.className = cls;
+function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: string): HTMLElementTagNameMap[K] {
+  const e = document.createElement(tag); e.className = cls;
   if (text !== undefined) e.textContent = text;
   return e;
 }
+export const HOTBAR = ['cleaving_arc', 'iron_cyclone', 'anchor_shout', 'sundering_pulse'] as const;
+export const ITEM_KEYS = ['itm_0075', 'itm_0076', 'itm_0077'] as const;
+/** Totems worn in the Charm slots fire from keys 8, 9 and 0. */
+export const TOTEM_KEYS = ['8', '9', '0'] as const;
+const gearKey = (uid: number) => 'g:' + uid;
 
-export const HOTBAR = ["cleaving_arc", "iron_cyclone", "anchor_shout", "sundering_pulse"] as const;
-export const ITEM_KEYS = ["itm_0075", "itm_0076", "itm_0077"] as const;
-
-/** Status, hotbar, quest tracker, inventory, log. DOM only; text via textContent. */
+/** Shared live-game and preview UI. All mutations go through server callbacks. */
 export class Hud {
   inventory: Record<string, number> = {};
   equip: Record<string, string> = {};
+  /** Every copy of gear, Charm and Totem the character owns, by uid. */
+  gear = new Map<number, GearView>();
   zeny = 0;
-  stats: MsgOf<"stats"> | null = null;
+  stats: MsgOf<'stats'> | null = null;
+  sheet: SheetMsg | null = null;
+  private totems: TotemView[] = [];
   private cooldownUntil: Record<string, number> = {};
+  private selected: string | null = null;
+  private toastTimer = 0;
   onUse: (item: string) => void = () => {};
-  onEquip: (item: string) => void = () => {};
+  onEquip: (uid: number, slot?: string) => void = () => {};
   onUnequip: (slot: string) => void = () => {};
+  onDiscard: (uid: number) => void = () => {};
   onSkill: (skill: string) => void = () => {};
+  onStat: (stat: string, n: number) => void = () => {};
+  onResetStats: () => void = () => {};
+  onTotem: (slot: string) => void = () => {};
 
   constructor(private readonly c: ClientContent) {
-    const bar = $("hotbar");
+    const bar = $('hotbar'); bar.replaceChildren();
     HOTBAR.forEach((id, i) => {
-      const s = c.skills.get(id);
-      const b = el("button", "slot");
-      b.dataset.skill = id;
-      b.append(el("span", "key", String(i + 1)), el("span", "name", s?.name ?? id), el("span", "cd"));
-      b.title = s ? `${s.name}: ${s.shape}, up to ${s.max_targets} targets, ${s.resource_cost} SP, ${s.cooldown_ms / 1000}s` : id;
-      b.onclick = () => this.onSkill(id);
-      bar.append(b);
+      const s = c.skills.get(id), b = el('button', 'slot'); b.dataset.skill = id;
+      b.append(el('span', 'key', String(i + 1)), paintedIcon(i, 'skill'), el('span', 'name', s?.name ?? id), el('span', 'cd'));
+      b.title = s ? s.name + ' · ' + s.resource_cost + ' SP · ' + s.cooldown_ms / 1000 + 's · up to ' + s.max_targets + ' targets' : id;
+      this.bindTooltip(b, s?.name ?? id, s ? s.resource_cost + ' SP ? ' + s.cooldown_ms / 1000 + 's cooldown ? ' + s.max_targets + ' targets' : '');
+      b.setAttribute('aria-label', b.title); b.onclick = () => this.onSkill(id); bar.append(b);
     });
     ITEM_KEYS.forEach((id, i) => {
-      const b = el("button", "slot item");
-      b.dataset.item = id;
-      b.append(el("span", "key", String(i + 5)), el("span", "name", c.items.get(id)?.name ?? id), el("span", "qty"));
-      b.onclick = () => this.onUse(id);
-      bar.append(b);
+      const it = c.items.get(id), b = el('button', 'slot item'); b.dataset.item = id;
+      b.append(el('span', 'key', String(i + 5)), itemIcon(it), el('span', 'name', it?.name ?? id), el('span', 'qty'));
+      b.title = (it?.name ?? id) + ': ' + (it?.description ?? ''); b.setAttribute('aria-label', it?.name ?? id);
+      this.bindTooltip(b, it?.name ?? id, it?.description ?? '');
+      b.onclick = () => this.onUse(id); bar.append(b);
     });
-    $("toggle-inv").onclick = () => this.toggle("inv-win");
+    CHARM_SLOTS.forEach((slot, i) => {
+      const b = el('button', 'slot item totem'); b.dataset.totem = slot;
+      b.append(el('span', 'key', TOTEM_KEYS[i]), paintedIcon(31), el('span', 'name', 'Totem'), el('span', 'qty'), el('span', 'cd'));
+      b.setAttribute('aria-label', 'Totem in ' + SLOT_LABEL[slot]);
+      b.onclick = () => this.onTotem(slot); bar.append(b);
+    });
+    $('toggle-inv').onclick = () => this.toggle('inv-win');
+    $('toggle-char').onclick = () => this.toggle('char-win');
+    $('reset-stats').onclick = () => this.onResetStats();
+    $('clear-target').onclick = () => this.setTarget(null);
+    $('toggle-journal').onclick = $('open-journal').onclick = () => this.toggle('journal-win');
+    $('toggle-menu').onclick = () => this.toggle('menu-win');
+    $('toggle-inspector').onclick = () => { this.closeWindows(); this.toggle('inspector'); };
+    $('item-search').oninput = $('item-filter').onchange = () => this.renderInventory();
+    document.querySelectorAll<HTMLButtonElement>('[data-bag-tab]').forEach(b => b.onclick = () => {
+      document.querySelectorAll('[data-bag-tab]').forEach(t => { t.classList.toggle('active', t === b); t.setAttribute('aria-pressed', String(t === b)); });
+      $('bag-items').hidden = b.dataset.bagTab !== 'items'; $('bag-equipment').hidden = b.dataset.bagTab !== 'equipment';
+    });
+    const compact = (value: boolean) => {
+      document.querySelector('.log-win')!.classList.toggle('collapsed', value);
+      ($('compact-log') as HTMLInputElement).checked = value;
+      $('toggle-log').textContent = value ? '+' : '−';
+      $('toggle-log').setAttribute('aria-label', value ? 'Expand adventure log' : 'Collapse adventure log');
+    };
+    $('toggle-log').onclick = () => compact(!($('compact-log') as HTMLInputElement).checked);
+    $('compact-log').onchange = () => compact(($('compact-log') as HTMLInputElement).checked);
+    $('fullscreen').onclick = async () => {
+      try {
+        if (document.fullscreenElement) await document.exitFullscreen(); else await document.documentElement.requestFullscreen();
+        $('menu-feedback').textContent = '';
+      } catch { $('menu-feedback').textContent = 'Fullscreen is unavailable in this browser.'; }
+    };
+    this.renderInventory(); this.setQuests([]); this.refreshHotbar();
   }
 
+  private bindTooltip(button: HTMLButtonElement, title: string, copy: string) {
+    const tip = $('skill-tooltip');
+    const show = () => {
+      tip.replaceChildren(el('strong', '', title), el('p', '', copy)); tip.hidden = false;
+      const rect = button.getBoundingClientRect();
+      tip.style.left = Math.max(8, Math.min(innerWidth - tip.offsetWidth - 8, rect.left + rect.width / 2 - tip.offsetWidth / 2)) + 'px';
+      tip.style.top = Math.max(8, rect.top - tip.offsetHeight - 12) + 'px';
+      button.setAttribute('aria-describedby', 'skill-tooltip');
+    };
+    const hide = () => { tip.hidden = true; button.removeAttribute('aria-describedby'); };
+    button.addEventListener('pointerenter', show); button.addEventListener('focus', show);
+    button.addEventListener('pointerleave', hide); button.addEventListener('blur', hide); button.addEventListener('click', hide);
+  }
+  setTarget(target: { name: string; level: number; hp: number; mhp: number } | null) {
+    $('target-win').hidden = !target; if (!target) return;
+    $('target-name').textContent = target.name; $('target-level').textContent = 'Lv ' + target.level;
+    $('target-health').textContent = target.hp.toLocaleString() + ' / ' + target.mhp.toLocaleString();
+    $('target-fill').style.width = Math.max(0, Math.min(100, target.hp / target.mhp * 100)) + '%';
+  }
+  closeWindows() { $('skill-tooltip').hidden = true; for (const id of ['inv-win', 'journal-win', 'menu-win', 'char-win', 'inspector']) $(id).hidden = true; }
   toggle(id: string, force?: boolean) {
-    const w = $(id);
-    w.hidden = force !== undefined ? !force : !w.hidden;
+    const w = $(id), open = force ?? w.hidden;
+    if (open && ['inv-win', 'journal-win', 'menu-win', 'char-win'].includes(id)) this.closeWindows();
+    w.hidden = !open;
   }
-
-  setMap(name: string, sub: string) {
-    $("map-name").textContent = name;
-    $("map-region").textContent = sub;
+  setMap(name: string, sub: string) { $('map-name').textContent = name; $('map-region').textContent = sub; $('map-heading').textContent = sub.split('·')[0].trim().toUpperCase(); }
+  setStats(s: MsgOf<'stats'>) {
+    const prev = this.stats; this.stats = s;
+    $('lv').textContent = String(s.lv); $('job').textContent = s.job.toUpperCase();
+    for (const [key, v, max] of [['hp', s.hp, s.mhp], ['sp', s.sp, s.msp]] as const) {
+      $(key + '-text').textContent = v + ' / ' + max;
+      $(key + '-fill').style.width = (max ? Math.max(0, Math.min(100, v / max * 100)) : 0) + '%';
+    }
+    // Aether Shield rides on the HP bar: its own fill and a value after HP.
+    const msh = s.msh ?? 0, sh = s.sh ?? 0;
+    $('shield-fill').style.width = (msh && s.mhp ? Math.min(100, sh / s.mhp * 100) : 0) + '%';
+    if (msh) $('hp-text').textContent += ' · ◈ ' + sh;
+    this.totems = s.tot ?? [];
+    $('hp-fill').classList.toggle('low', s.hp / s.mhp < .3);
+    $('exp-text').textContent = s.next ? (s.exp / s.next * 100).toFixed(1) + '%' : 'MAX';
+    $('exp-fill').style.width = (s.next ? Math.min(100, s.exp / s.next * 100) : 100) + '%';
+    $('atk').textContent = String(s.atk); $('def').textContent = String(s.def);
+    $('equipment-stats').replaceChildren(...[['Attack', s.atk], ['Armour', s.def], ['Max HP', s.mhp], ['Aether Shield', s.msh ?? 0]].map(([label, value]) => {
+      const d = el('div'); d.append(el('small', 'muted', String(label)), el('strong', '', String(value))); return d;
+    }));
+    this.refreshHotbar();
+    if (prev?.lv !== s.lv || prev?.job !== s.job) this.renderDetail();
   }
-
-  setStats(s: MsgOf<"stats">) {
-    const prevLevel = this.stats?.lv;
-    this.stats = s;
-    $("lv").textContent = String(s.lv);
-    $("job").textContent = s.job.toUpperCase();
-    $("hp-text").textContent = `${s.hp} / ${s.mhp}`;
-    $("hp-fill").style.width = `${(s.hp / s.mhp) * 100}%`;
-    $("hp-fill").classList.toggle("low", s.hp / s.mhp < 0.3);
-    $("sp-text").textContent = `${s.sp} / ${s.msp}`;
-    $("sp-fill").style.width = `${(s.sp / s.msp) * 100}%`;
-    $("exp-text").textContent = s.next ? `${((s.exp / s.next) * 100).toFixed(1)}%` : "MAX";
-    $("exp-fill").style.width = s.next ? `${(s.exp / s.next) * 100}%` : "100%";
-    $("atk").textContent = String(s.atk);
-    $("def").textContent = String(s.def);
-    if (prevLevel !== s.lv) this.refreshHotbar();
-  }
-
-  /** The server confirmed a cast: start that slot's cooldown display. */
-  startCooldown(skill: string) {
-    const s = this.c.skills.get(skill);
-    if (s) this.cooldownUntil[skill] = performance.now() + s.cooldown_ms;
-  }
-
-  canCast(skill: string): boolean {
-    return (this.cooldownUntil[skill] ?? 0) <= performance.now();
-  }
-
+  /** ms: the cooldown the server applied (after Cooldown Recovery). */
+  startCooldown(skill: string, ms?: number) { const s = this.c.skills.get(skill); if (s) this.cooldownUntil[skill] = performance.now() + (ms ?? s.cooldown_ms); }
+  canCast(skill: string) { return (this.cooldownUntil[skill] ?? 0) <= performance.now(); }
   refreshHotbar() {
-    const lv = this.stats?.lv ?? 1;
-    const now = performance.now();
-    for (const b of document.querySelectorAll<HTMLButtonElement>("#hotbar .slot")) {
+    const lv = this.stats?.lv ?? 1, now = performance.now();
+    for (const b of document.querySelectorAll<HTMLButtonElement>('#hotbar .slot')) {
       if (b.dataset.skill) {
-        const s = this.c.skills.get(b.dataset.skill);
-        const locked = !!s && lv < s.unlock_level;
-        b.classList.toggle("locked", locked);
+        const s = this.c.skills.get(b.dataset.skill), locked = !!s && lv < s.unlock_level;
         const left = (this.cooldownUntil[b.dataset.skill] ?? 0) - now;
-        const cd = b.querySelector(".cd")!;
-        cd.textContent = locked ? `Lv${s!.unlock_level}` : left > 0 ? (left / 1000).toFixed(1) : "";
-        b.classList.toggle("cooling", left > 0);
-        b.classList.toggle("nosp", !!s && !!this.stats && this.stats.sp < s.resource_cost);
+        const nosp = !!s && !!this.stats && this.stats.sp < s.resource_cost;
+        b.classList.toggle('locked', locked); b.classList.toggle('cooling', left > 0); b.classList.toggle('nosp', nosp);
+        b.querySelector('.cd')!.textContent = locked ? 'Lv ' + s!.unlock_level : left > 0 ? (left / 1000).toFixed(1) : '';
+        b.disabled = locked || left > 0 || nosp;
       } else if (b.dataset.item) {
-        b.querySelector(".qty")!.textContent = `×${this.inventory[b.dataset.item] ?? 0}`;
-        b.classList.toggle("locked", !this.inventory[b.dataset.item]);
+        const qty = this.inventory[b.dataset.item] ?? 0;
+        b.querySelector('.qty')!.textContent = String(qty); b.classList.toggle('locked', !qty); b.disabled = !qty;
+      } else if (b.dataset.totem) {
+        const t = this.totems.find((x) => x.slot === b.dataset.totem);
+        const worn = [...this.gear.values()].find((g) => g.slot === b.dataset.totem), it = worn && this.c.items.get(worn.base);
+        const ready = !!t && t.ch >= t.need && !t.left;
+        b.classList.toggle('locked', !t); b.classList.toggle('cooling', !!t && !ready); b.classList.toggle('active', !!t?.left);
+        b.querySelector('.qty')!.textContent = t ? (t.left ? '' : t.ch + '/' + t.need) : '';
+        b.querySelector('.cd')!.textContent = !t ? '' : t.left ? (t.left / 1000).toFixed(1) : ready ? '' : Math.floor(t.ch / t.need * 100) + '%';
+        b.title = it ? it.name + (ready ? ' · ready' : t ? ' · ' + t.ch + '/' + t.need + ' kills' : '') : 'No Totem in ' + SLOT_LABEL[b.dataset.totem];
+        b.disabled = !ready;
       }
     }
   }
-
-  setInventory(m: MsgOf<"inv">) {
-    if (m.full) this.inventory = {};
-    for (const [id, q] of Object.entries(m.items)) {
-      if (q > 0) this.inventory[id] = q;
-      else delete this.inventory[id];
-    }
-    this.zeny = m.zeny;
-    if (m.equip) this.equip = m.equip;
-    this.renderInventory();
-    this.refreshHotbar();
+  setInventory(m: MsgOf<'inv'>) {
+    if (m.full) { this.inventory = {}; this.gear.clear(); }
+    for (const [id, q] of Object.entries(m.items)) { if (q > 0) this.inventory[id] = q; else delete this.inventory[id]; }
+    for (const g of m.gear ?? []) this.gear.set(g.uid, g);
+    for (const uid of m.gear_gone ?? []) this.gear.delete(uid);
+    this.zeny = m.zeny; if (m.equip) this.equip = m.equip;
+    this.renderInventory(); this.refreshHotbar();
   }
-
+  /** The worn copy in a slot. */
+  worn(slot: string) { return [...this.gear.values()].find((g) => g.slot === slot); }
+  setSheet(m: SheetMsg) { this.sheet = m; this.renderCharacter(); this.renderInventory(); }
   renderInventory() {
-    $("zeny").textContent = `${this.zeny.toLocaleString()} z`;
-    const eq = $("equip");
-    eq.replaceChildren();
-    for (const slot of ["weapon", "armor", "boots"]) {
-      const id = this.equip[slot];
-      const row = el("div", "eq-row");
-      row.append(el("span", "muted", slot), el("span", "", id ? this.c.items.get(id)?.name ?? id : "—"));
-      if (id) { const b = el("button", "", "Remove"); b.onclick = () => this.onUnequip(slot); row.append(b); }
+    $('zeny').textContent = this.zeny.toLocaleString() + ' z';
+    const eq = $('equip'); eq.replaceChildren();
+    const lv = this.stats?.lv ?? 1, inactive = new Set(this.sheet?.inactive ?? []);
+    for (const slot of [...GEAR_SLOTS, ...CHARM_SLOTS]) {
+      const g = this.worn(slot), it = g && this.c.items.get(g.base), row = el('div', 'eq-row' + (g ? ' rarity-' + g.rarity : '')), label = el('div', 'eq-label');
+      const open = this.c.systems.charm_slot_levels[CHARM_SLOTS.indexOf(slot as typeof CHARM_SLOTS[number])] ?? 0;
+      row.append(it ? itemIcon(it) : icon(slot === 'weapon' ? 'sword' : slot === 'armor' || slot === 'boots' ? slot : slot === 'head' ? 'shield' : 'crystal', 'empty-equip'));
+      label.append(el('small', 'eyebrow', SLOT_LABEL[slot]), el('strong', '', it ? it.name : lv < open ? 'Opens at Lv ' + open : 'Empty'));
+      if (g && inactive.has(g.uid)) label.append(el('small', 'bad', 'Requirements not met: no effect'));
+      row.append(label);
+      if (g) {
+        const look = el('button', 'subtle', 'Inspect'); look.onclick = () => { this.selected = gearKey(g.uid); this.showBag(); this.renderInventory(); };
+        const b = el('button', 'subtle', 'Remove'); b.onclick = () => this.onUnequip(slot); row.append(look, b);
+      }
       eq.append(row);
     }
-    const list = $("inventory");
-    list.replaceChildren();
-    const ids = Object.keys(this.inventory).sort();
+    const search = ($('item-search') as HTMLInputElement).value.trim().toLowerCase(), filter = ($('item-filter') as HTMLSelectElement).value;
+    const nameOf = (key: string) => key.startsWith('g:') ? this.c.items.get(this.gear.get(Number(key.slice(2)))?.base ?? '')?.name ?? key : this.c.items.get(key)?.name ?? key;
+    const itemOf = (key: string) => this.c.items.get(key.startsWith('g:') ? this.gear.get(Number(key.slice(2)))?.base ?? '' : key);
+    const all = [...[...this.gear.values()].filter(g => !g.slot).map(g => gearKey(g.uid)), ...Object.keys(this.inventory)].sort((a, b) => nameOf(a).localeCompare(nameOf(b)));
+    const ids = all.filter(id => { const it = itemOf(id); return (!search || nameOf(id).toLowerCase().includes(search)) && (filter === 'all' || it?.category === filter || filter === 'material' && it?.category === 'rare_material' || filter === 'charm' && it?.category === 'totem'); });
+    if (!this.selected || !ids.includes(this.selected)) this.selected = ids[0] ?? null;
+    const list = $('inventory'); list.replaceChildren();
     for (const id of ids) {
-      const it = this.c.items.get(id);
-      const li = el("li", `rarity-${it?.rarity ?? "common"}`);
-      li.title = it?.description ?? "";
-      li.append(el("span", "", it?.name ?? id), el("b", "", `×${this.inventory[id]}`));
-      if (it?.use) { const b = el("button", "", "Use"); b.onclick = () => this.onUse(id); li.append(b); }
-      if (it?.equip && !Object.values(this.equip).includes(id)) { const b = el("button", "", "Equip"); b.onclick = () => this.onEquip(id); li.append(b); }
-      list.append(li);
+      const g = id.startsWith('g:') ? this.gear.get(Number(id.slice(2))) : undefined;
+      const it = itemOf(id), li = el('li'), b = el('button', 'item-cell rarity-' + (g ? g.rarity : it?.rarity ?? 'common') + (id === this.selected ? ' selected' : ''));
+      b.title = nameOf(id) + (g ? ' · ' + RARITY_LABEL[g.rarity] : ''); b.setAttribute('aria-label', g ? nameOf(id) + ', ' + RARITY_LABEL[g.rarity] + ', item level ' + g.ilvl : (it?.name ?? id) + ', quantity ' + this.inventory[id]); b.setAttribute('aria-pressed', String(id === this.selected)); b.dataset.item = id;
+      b.append(itemIcon(it), el('span', 'item-quantity', g ? (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
+      b.onclick = () => { this.selected = id; this.renderInventory(); (list.querySelector('[data-item="' + CSS.escape(id) + '"]') as HTMLButtonElement | null)?.focus(); };
+      li.append(b); list.append(li);
     }
-    $("inv-empty").style.display = ids.length ? "none" : "";
+    $('inv-empty').hidden = ids.length > 0;
+    $('inv-empty').textContent = all.length ? 'No items match your search.' : 'Your inventory is empty.';
+    $('bag-count').textContent = ids.length + ' shown · ' + all.length + ' in your satchel · ' + this.gear.size + ' gear';
+    this.renderDetail();
   }
-
-  setQuests(qs: QuestView[]) {
-    const box = $("quest-list");
-    box.replaceChildren();
-    if (!qs.length) box.append(el("div", "muted", "No active quests. Visit the Guild Registrar."));
-    for (const q of qs) {
-      const d = el("div", `quest ${q.state}`);
-      d.append(el("div", "quest-title", q.title + (q.state === "ready" ? "  ✓ ready" : "")));
-      const def = this.c.quests.get(q.id);
-      def?.objectives.forEach((o, i) => {
-        const label = o.type === "kill" ? `Defeat ${this.c.monsters.get(o.monster_id)?.name ?? o.monster_id}`
-          : o.type === "collect" ? `Collect ${this.c.items.get(o.item_id)?.name ?? o.item_id}` : `Visit ${this.c.maps.get(o.map_id)?.name ?? o.map_id}`;
-        d.append(el("div", "quest-goal", `${label}  ${q.progress[i] ?? 0} / ${q.goals[i]}`));
+  private showBag() {
+    document.querySelectorAll<HTMLButtonElement>('[data-bag-tab]').forEach(t => { const on = t.dataset.bagTab === 'items'; t.classList.toggle('active', on); t.setAttribute('aria-pressed', String(on)); });
+    $('bag-items').hidden = false; $('bag-equipment').hidden = true;
+  }
+  /** Detail panel for one copy of gear, a Charm or a Totem. */
+  private renderGearDetail(d: HTMLElement, g: GearView) {
+    const it = gearItem(this.c, g);
+    if (!it?.equip) { d.append(el('p', 'muted', g.base)); return; }
+    const e = it.equip, title = el('h3', 'rarity-text-' + g.rarity, it.name);
+    d.append(itemIcon(it), el('p', 'eyebrow', RARITY_LABEL[g.rarity] + ' · ' + kindLabel(it) + ' · item level ' + g.ilvl), title);
+    if (e.unique || it.category === 'totem' || it.description) d.append(el('p', 'item-description', it.description));
+    for (const line of baseLines(this.c, it, g)) d.append(el('p', 'item-stat', line));
+    if (g.affixes.length) {
+      const list = el('ul', 'affix-list');
+      for (const [id, tier, v] of g.affixes) {
+        const li = el('li', id.startsWith('cap_') ? 'affix relic' : 'affix', affixText(this.c, id, v));
+        li.append(el('small', 'affix-tier', ' T' + tier)); list.append(li);
+      }
+      d.append(list);
+    }
+    const reqs = requirements(it, this.stats?.lv ?? 1, this.stats?.job, this.sheet);
+    const req = el('p', 'item-reqs');
+    req.append(el('span', 'muted', 'Requires '));
+    reqs.forEach(([text, ok], i) => req.append(el('span', ok ? 'good' : 'bad', (i ? ', ' : '') + text)));
+    d.append(req);
+    const slot = e.slot === 'charm' ? undefined : e.slot;
+    const wearing = slot ? this.worn(slot) : undefined;
+    if (slot && wearing && wearing.uid !== g.uid) {
+      const mine = gearNumbers(it, g), theirs = gearNumbers(gearItem(this.c, wearing), wearing);
+      for (const key of new Set([...Object.keys(mine), ...Object.keys(theirs)])) {
+        const delta = (mine[key] ?? 0) - (theirs[key] ?? 0); if (!delta) continue;
+        const row = el('div', 'compare-row'); row.append(el('span', '', key), el('span', delta > 0 ? 'good' : 'bad', (delta > 0 ? '+' : '') + Math.round(delta))); d.append(row);
+      }
+      d.append(el('p', 'muted small', 'Compared with ' + (gearItem(this.c, wearing)?.name ?? '')));
+    }
+    if (this.sheet?.inactive?.includes(g.uid)) d.append(el('p', 'bad small', 'Worn, but its requirements are not met: it has no effect.'));
+    const actions = el('div', 'detail-actions');
+    const met = reqs.every(([, ok]) => ok);
+    if (g.slot) {
+      const b = el('button', 'primary detail-action', 'Unequip'); b.onclick = () => this.onUnequip(g.slot!); actions.append(b);
+    } else if (e.slot === 'charm') {
+      const lv = this.stats?.lv ?? 1;
+      CHARM_SLOTS.forEach((s, i) => {
+        const open = lv >= (this.c.systems.charm_slot_levels[i] ?? 99);
+        const b = el('button', 'primary detail-action', 'Wear in ' + SLOT_LABEL[s]); b.disabled = !open || !met;
+        b.title = !open ? 'Opens at Lv ' + this.c.systems.charm_slot_levels[i] : !met ? 'Requirements not met' : '';
+        b.onclick = () => this.onEquip(g.uid, s); actions.append(b);
       });
-      if (q.state === "ready") d.append(el("div", "quest-goal good", `Report to ${this.c.npcs.get(q.turn_in)?.name ?? q.turn_in}`));
-      box.append(d);
+    } else {
+      const b = el('button', 'primary detail-action', 'Equip'); b.disabled = !met; if (!met) b.title = 'Requirements not met';
+      b.onclick = () => this.onEquip(g.uid); actions.append(b);
+    }
+    if (!g.slot) {
+      const x = el('button', 'subtle detail-action', 'Discard');
+      x.onclick = () => { if (x.dataset.confirm) this.onDiscard(g.uid); else { x.dataset.confirm = '1'; x.textContent = 'Discard: click again'; } };
+      actions.append(x);
+    }
+    d.append(el('p', 'sell-value', 'Sells for about ' + Math.round(it.sell_price * ({ normal: 1, magic: 1.5, rare: 2.5, relic: 5, unique: 4 }[g.rarity] ?? 1)).toLocaleString() + ' z'), actions);
+  }
+  private renderDetail() {
+    const d = $('item-detail'); d.replaceChildren();
+    if (this.selected?.startsWith('g:')) {
+      const g = this.gear.get(Number(this.selected.slice(2)));
+      if (g) { this.renderGearDetail(d, g); return; }
+    }
+    const id = this.selected, it = id ? this.c.items.get(id) : undefined;
+    if (!it || !id) { d.append(icon('bag', 'detail-emblem'), el('h3', '', 'Item details'), el('p', 'muted', 'Select an item to inspect its stats and available actions.')); return; }
+    d.append(itemIcon(it), el('p', 'eyebrow', it.rarity + ' · ' + it.category.replace('_', ' ')), el('h3', '', it.name), el('p', 'item-description', it.description));
+    if (it.use) {
+      if (it.use.reset_stats) d.append(el('p', 'item-stat', 'Returns all stat points (free up to Lv ' + (this.c.systems.rules.free_reset_level ?? 20) + ')'));
+      if (it.use.heal_hp_pct) d.append(el('p', 'item-stat', 'Restores ' + it.use.heal_hp_pct + '% HP'));
+      if (it.use.heal_sp_pct) d.append(el('p', 'item-stat', 'Restores ' + it.use.heal_sp_pct + '% SP'));
+      d.append(el('p', 'muted small', 'Cooldown ' + (it.use.cooldown_ms ?? 0) / 1000 + 's'));
+    }
+    if (it.equip) {
+      const wearing = this.c.items.get(this.equip[it.equip.slot]);
+      d.append(el('p', 'item-stat', 'Level ' + it.equip.min_level + ' · ' + (it.equip.job ?? 'All classes')));
+      for (const [key, label] of [['attack', 'Attack'], ['armour', 'Armour'], ['evasion', 'Evasion'], ['shield', 'Shield']] as const) {
+        const value = it.equip[key] ?? 0, old = wearing?.equip?.[key] ?? 0;
+        if (!value && !old) continue;
+        const row = el('div', 'compare-row'); row.append(el('span', '', label), el('b', '', '+' + value));
+        if (wearing?.id !== id) { const delta = value - old; row.append(el('span', delta > 0 ? 'good' : delta < 0 ? 'bad' : 'muted', (delta > 0 ? '+' : '') + delta)); }
+        d.append(row);
+      }
+      if (wearing && wearing.id !== id) d.append(el('p', 'muted small', 'Compared with ' + wearing.name));
+    }
+    d.append(el('p', 'sell-value', 'Sell value ' + it.sell_price.toLocaleString() + ' z · Owned ' + this.inventory[id]));
+    const equipped = Object.values(this.equip).includes(id);
+    if (it.use || it.equip) {
+      const b = el('button', 'primary detail-action', it.use ? 'Use item' : equipped ? 'Unequip' : 'Equip item');
+      const level = this.stats?.lv ?? 1;
+      const wrongJob = !!it.equip?.job && !!this.stats && it.equip.job !== this.stats.job;
+      b.disabled = !equipped && !!it.equip && (level < it.equip.min_level || wrongJob);
+      if (b.disabled) b.title = wrongJob ? 'Requires ' + it.equip!.job : 'Requires level ' + it.equip!.min_level;
+      b.onclick = () => it.use ? this.onUse(id) : equipped && it.equip ? this.onUnequip(it.equip.slot) : undefined; d.append(b);
+      if (b.disabled) d.append(el('p', 'bad small', b.title));
     }
   }
-
-  log(text: string, kind: "info" | "good" | "bad" = "info") {
-    const box = $("log");
-    box.append(el("div", `log-${kind}`, text));
-    while (box.childElementCount > 60) box.firstElementChild!.remove();
-    box.scrollTop = box.scrollHeight;
+  /** The character window: stat points, derived numbers and skill ranks. */
+  renderCharacter() {
+    const m = this.sheet; if (!m) return;
+    $('stat-points').textContent = String(m.points);
+    $('reset-stats').textContent = m.free_reset ? 'Reset points (free)' : 'Reset points (Reset Scroll)';
+    ($('reset-stats') as HTMLButtonElement).disabled = !Object.values(m.stats).some(v => v > 0);
+    const list = $('stat-list'); list.replaceChildren();
+    for (const id of STAT_IDS) {
+      const row = el('div', 'stat-alloc'), info = STAT_INFO[id], name = el('div', 'stat-name');
+      name.append(el('strong', '', info.name), el('small', 'muted', info.text));
+      const value = el('b', 'stat-value', String(m.stats[id] ?? 0));
+      if (m.bonus[id]) value.append(el('small', 'good', ' +' + m.bonus[id]));
+      row.append(name, value);
+      for (const n of [1, 5]) {
+        const b = el('button', 'subtle stat-add', '+' + n); b.disabled = m.points < 1;
+        b.setAttribute('aria-label', 'Add ' + Math.min(n, m.points) + ' to ' + info.name);
+        b.onclick = () => this.onStat(id, n); row.append(b);
+      }
+      list.append(row);
+    }
+    const d = m.d, pct = (v: number) => Math.round(v * 1000) / 10 + '%';
+    const capped = (v: number, cap: number) => pct(v) + ' / ' + pct(cap);
+    const groups: [string, [string, string][]][] = [
+      ['Offense', [['ATK', String(d.atk)], ['Weapon ATK', String(d.weapon)], ['Increased damage', pct(d.inc_damage)], ['Critical chance', capped(d.crit, d.cap_crit)],
+        ['Critical damage', pct(d.crit_mult)], ['Cooldown Recovery', capped(d.cdr, d.cap_cdr)], ['Cast Speed', capped(d.cast, d.cap_cast)],
+        ['Basic attack every', (d.attack_ms / 1000).toFixed(2) + 's'], ['Area of Effect', '+' + pct(d.area) + (d.area_more !== 1 ? ' · x' + d.area_more : '')]]],
+      ['Defense', [['Max HP', String(d.max_hp)], ['Aether Shield', String(d.max_shield)], ['Armour', String(d.armour)], ['Evasion', String(d.evasion) + ' (cap ' + pct(d.cap_evasion) + ')'],
+        ['Poise', capped(d.poise, d.cap_poise)], ['Fire / Cold', pct(d.res_fire) + ' / ' + pct(d.res_cold)], ['Nature / Shadow', pct(d.res_nature) + ' / ' + pct(d.res_shadow)]]],
+      ['Recovery', [['Leech', pct(d.leech) + ' of damage'], ['Leech rate cap', pct(d.leech_cap) + ' HP/s'], ['On kill', pct(d.hp_on_kill) + ' HP · ' + d.sp_on_kill + ' SP'],
+        ['HP regeneration', '+' + pct(d.hp_regen) + '/s'], ['SP regeneration', '+' + pct(d.sp_regen_inc)]]],
+      ['Utility', [['Movement speed', '+' + pct(d.move)], ['Loot radius', '+' + d.magnet], ['Aggro radius', '+' + pct(d.grip)], ['Skill duration', '+' + pct(d.duration)], ['EXP bonus', '+' + pct(d.exp_bonus)]]],
+    ];
+    const derived = $('derived-list'); derived.replaceChildren();
+    for (const [title, rows] of groups) {
+      const g = el('section', 'derived-group'); g.append(el('h4', 'eyebrow', title));
+      for (const [k, v] of rows) { const r = el('div', 'derived-row'); r.append(el('span', '', k), el('b', '', v)); g.append(r); }
+      derived.append(g);
+    }
+    const ranks = $('rank-list'); ranks.replaceChildren();
+    for (const [skill, [rank, kills, next]] of Object.entries(m.mastery).sort(([a], [b]) => (a === 'basic' ? -1 : b === 'basic' ? 1 : a.localeCompare(b)))) {
+      const s = this.c.skills.get(skill), row = el('div', 'rank-row'), bar = el('div', 'objective-progress'), fill = el('span');
+      const prev = this.c.systems.mastery.per_rank * (rank - 1) * (rank - 1);
+      fill.style.width = (next ? Math.min(100, (kills - prev) / Math.max(1, next - prev) * 100) : 100) + '%'; bar.append(fill);
+      const head = el('div', 'rank-head'); head.append(el('strong', '', s?.name ?? 'Basic attack'), el('b', '', 'Rank ' + rank));
+      row.append(head, bar, el('small', 'muted', next ? kills.toLocaleString() + ' / ' + next.toLocaleString() + ' kills' : kills.toLocaleString() + ' kills · max rank'));
+      const perk = this.c.systems.mastery.perks[skill]; if (perk) row.append(el('small', rank >= this.c.systems.mastery.max_rank ? 'good' : 'muted', 'Rank 10: ' + perk));
+      ranks.append(row);
+    }
+  }
+  setQuests(qs: QuestView[]) {
+    const tracker = $('quest-list'), journal = $('journal-list'); tracker.replaceChildren(); journal.replaceChildren();
+    const active = qs.filter(q => q.state === 'active' || q.state === 'ready');
+    if (!active.length) {
+      tracker.append(el('p', 'muted', 'A new chapter awaits at the Guild.'));
+      const empty = el('div', 'journal-empty'); empty.append(icon('book'), el('h3', '', 'No active quests'), el('p', 'muted', 'Speak to a Guild Registrar to accept a quest.')); journal.append(empty);
+    }
+    for (const q of active) {
+      const def = this.c.quests.get(q.id);
+      const card = (full: boolean) => {
+        const d = el('article', 'quest ' + q.state + (full ? ' journal-card' : ''));
+        if (full) d.append(el('p', 'eyebrow', q.state === 'ready' ? 'READY TO TURN IN' : 'IN PROGRESS'));
+        d.append(el('h3', 'quest-title', q.title));
+        if (full) d.append(el('p', 'muted', q.summary));
+        def?.objectives.forEach((o, i) => {
+          const label = o.type === 'kill' ? 'Defeat ' + (this.c.monsters.get(o.monster_id)?.name ?? o.monster_id) : o.type === 'collect' ? 'Collect ' + (this.c.items.get(o.item_id)?.name ?? o.item_id) : 'Visit ' + (this.c.maps.get(o.map_id)?.name ?? o.map_id);
+          const goal = el('div', 'quest-goal'); goal.append(el('span', '', label), el('b', '', (q.progress[i] ?? 0) + '/' + (q.goals[i] ?? 1))); d.append(goal);
+          if (full) { const bar = el('div', 'objective-progress'), fill = el('span'); fill.style.width = Math.min(100, (q.progress[i] ?? 0) / (q.goals[i] || 1) * 100) + '%'; bar.append(fill); d.append(bar); }
+        });
+        if (q.state === 'ready') d.append(el('p', 'good small', 'Report to ' + (this.c.npcs.get(q.turn_in)?.name ?? q.turn_in)));
+        if (full && def) d.append(el('div', 'quest-rewards', 'REWARDS · ' + def.rewards.base_exp.toLocaleString() + ' EXP · ' + def.rewards.currency.toLocaleString() + ' z' + def.rewards.items.map(i => ' · ' + (this.c.items.get(i.item_id)?.name ?? i.item_id) + ' ×' + i.qty).join('')));
+        return d;
+      };
+      if (tracker.childElementCount < 3) tracker.append(card(false));
+      journal.append(card(true));
+    }
+    if (active.length > 3) tracker.append(el('p', 'small muted', '+' + (active.length - 3) + ' more in your journal'));
+  }
+  log(text: string, kind: 'info' | 'good' | 'bad' = 'info') {
+    const box = $('log'); box.append(el('div', 'log-' + kind, text));
+    while (box.childElementCount > 60) box.firstElementChild!.remove(); box.scrollTop = box.scrollHeight;
+    if (kind !== 'info') {
+      const toast = $('ui-toast'); toast.textContent = text; toast.hidden = false;
+      clearTimeout(this.toastTimer); this.toastTimer = window.setTimeout(() => toast.hidden = true, kind === 'bad' ? 5000 : 3000);
+    }
   }
 }

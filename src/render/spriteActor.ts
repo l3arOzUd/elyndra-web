@@ -110,7 +110,9 @@ export class SpriteActor {
   }
 
   play(name: AnimName, opts?: PlayOptions): boolean {
-    return this.animator.play(name, opts);
+    // Older monsters and fallback heroes have only attack; keep them playable.
+    const resolved = (name === "shoot" || name === "cast") && !this.sprite.sheets[name] ? "attack" : name;
+    return this.animator.play(resolved, opts);
   }
 
   hitFlash() {

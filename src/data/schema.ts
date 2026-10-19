@@ -150,8 +150,12 @@ export interface MonsterDef {
   sprite: string;
 }
 
-export type ItemCategory = "material" | "rare_material" | "consumable" | "equipment" | "quest";
+export type ItemCategory = "material" | "rare_material" | "consumable" | "equipment" | "charm" | "totem" | "quest";
 export type Rarity = "common" | "uncommon" | "rare" | "epic";
+
+export type StatId = "pow" | "luk" | "agi" | "dex" | "int" | "vit";
+export type GearSlot = "weapon" | "head" | "armor" | "boots" | "accessory";
+export type DefenseKind = "armour" | "evasion" | "shield" | "armour_evasion" | "armour_shield" | "evasion_shield";
 
 export interface ItemDef {
   id: string;
@@ -161,10 +165,90 @@ export interface ItemDef {
   sell_price: number;
   stack_max: number;
   description: string;
+  /** Generated gear base: drops from any monster of its item level or above (systems.json drops). */
+  drop_pool?: boolean;
   /** Consumables: what using one does. */
-  use?: { heal_hp_pct?: number; heal_sp_pct?: number; cooldown_ms: number };
-  /** Equipment: slot and bonuses. */
-  equip?: { slot: "weapon" | "armor" | "boots"; job?: string; attack?: number; defense?: number; max_hp?: number; min_level: number };
+  use?: { heal_hp_pct?: number; heal_sp_pct?: number; reset_stats?: boolean; cooldown_ms: number };
+  /**
+   * Equipment, Charms and Totems. Each copy a player owns is its own item
+   * with a rarity and random affixes (CHARACTER_SYSTEMS.md §4-5).
+   */
+  equip?: {
+    slot: GearSlot | "charm";
+    job?: string;
+    /** Decides which affix tiers can roll. */
+    item_level?: number;
+    min_level: number;
+    attack?: number;
+    kind?: DefenseKind;
+    armour?: number;
+    evasion?: number;
+    shield?: number;
+    /** Stat points needed to wear it. */
+    req?: Partial<Record<StatId, number>>;
+    /** Fixed affixes every copy has: [affix id, value]. */
+    implicit?: [string, number][];
+    /** A unique's special rule (server code). */
+    unique?: string;
+    charm?: { type: string; grade: number };
+    totem?: { type: string; grade: number };
+  };
+}
+
+export interface AffixDef {
+  id: string;
+  kind: "prefix" | "suffix";
+  /** "{v}" is replaced by the rolled value. */
+  label: string;
+  slots: (GearSlot | "charm")[];
+  /** Top value of each tier; a roll lands between the previous tier's top + step and this. */
+  values: number[];
+  /** Roll weight multiplier (default 1). */
+  weight?: number;
+}
+
+export interface CharmTypeDef {
+  id: string;
+  name: string;
+  /** [affix id, values for Lesser / Greater / Grand]. */
+  effects: [string, number[]][];
+  /** Monster elements whose maps favour this charm. */
+  elements: string[];
+}
+
+export interface TotemTypeDef {
+  id: string;
+  name: string;
+  /** Effect values at Grand grade. */
+  effects: Record<string, number>;
+  duration_ms: number;
+  charges: number;
+  /** "{key}" is replaced by effects[key]. */
+  text: string;
+}
+
+/** public/data/systems.json: CHARACTER_SYSTEMS.md as numbers. */
+export interface SystemsDef {
+  rules: Record<string, number> & { caps: Record<string, [number, number]> };
+  mastery: {
+    max_rank: number; per_rank: number; level_window: number; elite_kills: number; boss_kills: number;
+    more_damage_per_rank: number; sp_cost_rank: number; sp_cost_cut: number; area_rank: number; area_inc: number;
+    basic_more_per_rank: number; basic_extra_target_rank: number; basic_sp_rank: number; basic_sp_pct: number;
+    perks: Record<string, string>;
+  };
+  drops: Record<string, number | number[] | Record<string, number>> & {
+    gear_rarity: Record<string, number>; charm_rarity: Record<string, number>; totem_rarity: Record<string, number>;
+    relic_grade: number[]; tier_min_level: number[]; tier_weight: number[]; charm_tiers: number[]; totem_tiers: number[];
+  };
+  affixes: AffixDef[];
+  totem_affixes: AffixDef[];
+  labels: Record<string, string>;
+  charm_types: CharmTypeDef[];
+  relic_caps: { id: string; values: number[]; elements: string[] }[];
+  totem_types: TotemTypeDef[];
+  charm_slot_levels: number[];
+  /** Job -> the tier 1 weapon a new character starts with. */
+  starter_weapons: Record<string, string>;
 }
 
 export interface NpcDef {
@@ -285,6 +369,9 @@ export interface PlayerCurveRow {
   attack: number;
   defense: number;
   exp_to_next: number;
+  /** The reference character monsters are balanced against (content/model.ts). */
+  ref_attack: number;
+  ref_armour: number;
 }
 
 export interface ContentBundle {
@@ -303,11 +390,12 @@ export interface ContentBundle {
   dialogues: DialogueDef[];
   skills: SkillDef[];
   player_curve: PlayerCurveRow[];
+  systems: SystemsDef;
 }
 
 export const DATA_FILES = [
   "constants", "regions", "maps", "monsters", "items", "npcs", "shops", "recipes",
-  "quests", "spawn_zones", "warps", "dialogues", "skills", "player_curve",
+  "quests", "spawn_zones", "warps", "dialogues", "skills", "player_curve", "systems",
 ] as const;
 
 /** Decodes a run-length walk grid. */

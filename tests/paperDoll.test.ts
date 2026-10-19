@@ -47,8 +47,9 @@ describe("wayfarer equipment", () => {
       for (const layer of look.layers) expect(layerNames.has(layer), `${id} layer ${layer}`).toBe(true);
     }
   });
-  it("gives every equippable game item a look", () => {
-    for (const it of gameItems.values()) if (it.equip) expect(items[it.id], `${it.name} has no entry in equipment.json`).toBeTruthy();
+  it("gives every item drawn on the body a look", () => {
+    // Charms, Totems and accessories are never drawn.
+    for (const it of gameItems.values()) if (it.equip && ["weapon", "armor", "boots", "head"].includes(it.equip.slot)) expect(items[it.id], `${it.name} has no entry in equipment.json`).toBeTruthy();
   });
   it("has a PNG for every base part and item layer in every view", () => {
     const missing: string[] = [];

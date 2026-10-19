@@ -1,0 +1,991 @@
+[
+  {
+    "atlas": "heads.png",
+    "file": "base/front/head.png",
+    "region": [
+      0,
+      0,
+      0.3333333333333333,
+      1
+    ],
+    "dest": [
+      171,
+      64,
+      170,
+      169
+    ],
+    "flip": false,
+    "crop": [
+      71,
+      47,
+      587,
+      602
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "base/front/arm_near.png",
+    "region": [
+      0,
+      0,
+      0.25,
+      0.355
+    ],
+    "dest": [
+      184,
+      226,
+      36,
+      72
+    ],
+    "flip": false,
+    "crop": [
+      62,
+      59,
+      205,
+      376
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "base/front/arm_far.png",
+    "region": [
+      0.25,
+      0,
+      0.5,
+      0.355
+    ],
+    "dest": [
+      292,
+      226,
+      36,
+      72
+    ],
+    "flip": false,
+    "crop": [
+      387,
+      60,
+      206,
+      374
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "base/front/forearm_near.png",
+    "region": [
+      0.5,
+      0,
+      0.75,
+      0.355
+    ],
+    "dest": [
+      185,
+      278,
+      28,
+      57
+    ],
+    "flip": false,
+    "crop": [
+      693,
+      67,
+      143,
+      368
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "base/front/forearm_far.png",
+    "region": [
+      0.75,
+      0,
+      1,
+      0.355
+    ],
+    "dest": [
+      299,
+      278,
+      28,
+      57
+    ],
+    "flip": false,
+    "crop": [
+      1031,
+      64,
+      143,
+      370
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "base/front/hand_near.png",
+    "region": [
+      0,
+      0.355,
+      0.25,
+      0.665
+    ],
+    "dest": [
+      183,
+      318,
+      26,
+      32
+    ],
+    "flip": false,
+    "crop": [
+      80,
+      536,
+      190,
+      249
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "base/front/hand_far.png",
+    "region": [
+      0.25,
+      0.355,
+      0.5,
+      0.665
+    ],
+    "dest": [
+      303,
+      318,
+      26,
+      32
+    ],
+    "flip": false,
+    "crop": [
+      379,
+      535,
+      186,
+      249
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "items/leafweave_coat/front/arm_near.png",
+    "region": [
+      0.5,
+      0.355,
+      0.75,
+      0.665
+    ],
+    "dest": [
+      180,
+      221,
+      44,
+      76
+    ],
+    "flip": false,
+    "crop": [
+      629,
+      469,
+      248,
+      353
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "items/leafweave_coat/front/arm_far.png",
+    "region": [
+      0.75,
+      0.355,
+      1,
+      0.665
+    ],
+    "dest": [
+      288,
+      221,
+      44,
+      76
+    ],
+    "flip": false,
+    "crop": [
+      986,
+      469,
+      248,
+      352
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "items/leafweave_coat/front/forearm_near.png",
+    "region": [
+      0,
+      0.665,
+      0.25,
+      1
+    ],
+    "dest": [
+      181,
+      276,
+      36,
+      36
+    ],
+    "flip": false,
+    "crop": [
+      72,
+      875,
+      223,
+      307
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "items/leafweave_coat/front/forearm_far.png",
+    "region": [
+      0.25,
+      0.665,
+      0.5,
+      1
+    ],
+    "dest": [
+      295,
+      276,
+      36,
+      36
+    ],
+    "flip": false,
+    "crop": [
+      364,
+      873,
+      225,
+      308
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "base/front/hand_near_open.png",
+    "region": [
+      0.5,
+      0.665,
+      0.75,
+      1
+    ],
+    "dest": [
+      177,
+      318,
+      38,
+      43
+    ],
+    "flip": false,
+    "crop": [
+      638,
+      878,
+      271,
+      323
+    ]
+  },
+  {
+    "atlas": "arms-front.png",
+    "file": "base/front/hand_far_open.png",
+    "region": [
+      0.75,
+      0.665,
+      1,
+      1
+    ],
+    "dest": [
+      297,
+      318,
+      38,
+      43
+    ],
+    "flip": false,
+    "crop": [
+      951,
+      876,
+      271,
+      325
+    ]
+  },
+  {
+    "atlas": "bow-arrow.png",
+    "file": "items/surveyor_bow/front/weapon.png",
+    "region": [
+      0,
+      0,
+      0.44,
+      1
+    ],
+    "dest": [
+      181.44,
+      231,
+      52,
+      210
+    ],
+    "flip": false,
+    "crop": [
+      372,
+      14,
+      236,
+      838
+    ]
+  },
+  {
+    "atlas": "heads.png",
+    "file": "base/side/head.png",
+    "region": [
+      0.3333333333333333,
+      0,
+      0.6666666666666666,
+      1
+    ],
+    "dest": [
+      167,
+      64,
+      170,
+      169
+    ],
+    "flip": false,
+    "crop": [
+      793,
+      44,
+      605,
+      602
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "base/side/arm_near.png",
+    "region": [
+      0,
+      0,
+      0.25,
+      0.355
+    ],
+    "dest": [
+      242,
+      228,
+      36,
+      72
+    ],
+    "flip": false,
+    "crop": [
+      83,
+      52,
+      188,
+      378
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "base/side/arm_far.png",
+    "region": [
+      0.25,
+      0,
+      0.5,
+      0.355
+    ],
+    "dest": [
+      234,
+      228,
+      36,
+      72
+    ],
+    "flip": false,
+    "crop": [
+      424,
+      53,
+      181,
+      373
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "base/side/forearm_near.png",
+    "region": [
+      0.5,
+      0,
+      0.75,
+      0.355
+    ],
+    "dest": [
+      248,
+      280,
+      28,
+      57
+    ],
+    "flip": false,
+    "crop": [
+      720,
+      60,
+      115,
+      369
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "base/side/forearm_far.png",
+    "region": [
+      0.75,
+      0,
+      1,
+      0.355
+    ],
+    "dest": [
+      236,
+      280,
+      28,
+      57
+    ],
+    "flip": false,
+    "crop": [
+      1031,
+      55,
+      128,
+      377
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "base/side/hand_near.png",
+    "region": [
+      0,
+      0.355,
+      0.25,
+      0.665
+    ],
+    "dest": [
+      251,
+      320,
+      26,
+      32
+    ],
+    "flip": false,
+    "crop": [
+      117,
+      535,
+      143,
+      250
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "base/side/hand_far.png",
+    "region": [
+      0.25,
+      0.355,
+      0.5,
+      0.665
+    ],
+    "dest": [
+      235,
+      320,
+      26,
+      32
+    ],
+    "flip": false,
+    "crop": [
+      407,
+      534,
+      147,
+      252
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "items/leafweave_coat/side/arm_near.png",
+    "region": [
+      0.5,
+      0.355,
+      0.75,
+      0.665
+    ],
+    "dest": [
+      238,
+      223,
+      44,
+      76
+    ],
+    "flip": false,
+    "crop": [
+      669,
+      459,
+      200,
+      355
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "items/leafweave_coat/side/arm_far.png",
+    "region": [
+      0.75,
+      0.355,
+      1,
+      0.665
+    ],
+    "dest": [
+      230,
+      223,
+      44,
+      76
+    ],
+    "flip": false,
+    "crop": [
+      1006,
+      459,
+      201,
+      360
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "items/leafweave_coat/side/forearm_near.png",
+    "region": [
+      0,
+      0.665,
+      0.25,
+      1
+    ],
+    "dest": [
+      244,
+      278,
+      36,
+      36
+    ],
+    "flip": false,
+    "crop": [
+      109,
+      872,
+      189,
+      288
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "items/leafweave_coat/side/forearm_far.png",
+    "region": [
+      0.25,
+      0.665,
+      0.5,
+      1
+    ],
+    "dest": [
+      232,
+      278,
+      36,
+      36
+    ],
+    "flip": false,
+    "crop": [
+      393,
+      873,
+      192,
+      286
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "base/side/hand_near_open.png",
+    "region": [
+      0.5,
+      0.665,
+      0.75,
+      1
+    ],
+    "dest": [
+      245,
+      320,
+      38,
+      43
+    ],
+    "flip": false,
+    "crop": [
+      658,
+      858,
+      221,
+      335
+    ]
+  },
+  {
+    "atlas": "arms-side.png",
+    "file": "base/side/hand_far_open.png",
+    "region": [
+      0.75,
+      0.665,
+      1,
+      1
+    ],
+    "dest": [
+      229,
+      320,
+      38,
+      43
+    ],
+    "flip": false,
+    "crop": [
+      986,
+      858,
+      220,
+      334
+    ]
+  },
+  {
+    "atlas": "bow-arrow.png",
+    "file": "items/surveyor_bow/side/weapon.png",
+    "region": [
+      0,
+      0,
+      0.44,
+      1
+    ],
+    "dest": [
+      249.44,
+      233,
+      52,
+      210
+    ],
+    "flip": false,
+    "crop": [
+      372,
+      14,
+      236,
+      838
+    ]
+  },
+  {
+    "atlas": "heads.png",
+    "file": "base/back/head.png",
+    "region": [
+      0.6666666666666666,
+      0,
+      1,
+      1
+    ],
+    "dest": [
+      171,
+      64,
+      170,
+      169
+    ],
+    "flip": false,
+    "crop": [
+      1497,
+      57,
+      585,
+      589
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "base/back/arm_near.png",
+    "region": [
+      0,
+      0,
+      0.25,
+      0.355
+    ],
+    "dest": [
+      292,
+      226,
+      36,
+      72
+    ],
+    "flip": false,
+    "crop": [
+      64,
+      56,
+      211,
+      379
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "base/back/arm_far.png",
+    "region": [
+      0.25,
+      0,
+      0.5,
+      0.355
+    ],
+    "dest": [
+      184,
+      226,
+      36,
+      72
+    ],
+    "flip": false,
+    "crop": [
+      415,
+      57,
+      203,
+      380
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "base/back/forearm_near.png",
+    "region": [
+      0.5,
+      0,
+      0.75,
+      0.355
+    ],
+    "dest": [
+      299,
+      278,
+      28,
+      57
+    ],
+    "flip": false,
+    "crop": [
+      680,
+      57,
+      147,
+      381
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "base/back/forearm_far.png",
+    "region": [
+      0.75,
+      0,
+      1,
+      0.355
+    ],
+    "dest": [
+      185,
+      278,
+      28,
+      57
+    ],
+    "flip": false,
+    "crop": [
+      992,
+      57,
+      149,
+      381
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "base/back/hand_near.png",
+    "region": [
+      0,
+      0.355,
+      0.25,
+      0.665
+    ],
+    "dest": [
+      303,
+      318,
+      26,
+      32
+    ],
+    "flip": false,
+    "crop": [
+      88,
+      529,
+      206,
+      266
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "base/back/hand_far.png",
+    "region": [
+      0.25,
+      0.355,
+      0.5,
+      0.665
+    ],
+    "dest": [
+      183,
+      318,
+      26,
+      32
+    ],
+    "flip": false,
+    "crop": [
+      367,
+      529,
+      206,
+      267
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "items/leafweave_coat/back/arm_near.png",
+    "region": [
+      0.5,
+      0.355,
+      0.75,
+      0.665
+    ],
+    "dest": [
+      288,
+      221,
+      44,
+      76
+    ],
+    "flip": false,
+    "crop": [
+      642,
+      462,
+      255,
+      362
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "items/leafweave_coat/back/arm_far.png",
+    "region": [
+      0.75,
+      0.355,
+      1,
+      0.665
+    ],
+    "dest": [
+      180,
+      221,
+      44,
+      76
+    ],
+    "flip": false,
+    "crop": [
+      949,
+      462,
+      255,
+      362
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "items/leafweave_coat/back/forearm_near.png",
+    "region": [
+      0,
+      0.665,
+      0.25,
+      1
+    ],
+    "dest": [
+      295,
+      276,
+      36,
+      36
+    ],
+    "flip": false,
+    "crop": [
+      82,
+      875,
+      212,
+      315
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "items/leafweave_coat/back/forearm_far.png",
+    "region": [
+      0.25,
+      0.665,
+      0.5,
+      1
+    ],
+    "dest": [
+      181,
+      276,
+      36,
+      36
+    ],
+    "flip": false,
+    "crop": [
+      355,
+      880,
+      216,
+      311
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "base/back/hand_near_open.png",
+    "region": [
+      0.5,
+      0.665,
+      0.75,
+      1
+    ],
+    "dest": [
+      297,
+      318,
+      38,
+      43
+    ],
+    "flip": false,
+    "crop": [
+      627,
+      858,
+      274,
+      337
+    ]
+  },
+  {
+    "atlas": "arms-back.png",
+    "file": "base/back/hand_far_open.png",
+    "region": [
+      0.75,
+      0.665,
+      1,
+      1
+    ],
+    "dest": [
+      177,
+      318,
+      38,
+      43
+    ],
+    "flip": false,
+    "crop": [
+      946,
+      857,
+      273,
+      339
+    ]
+  },
+  {
+    "atlas": "bow-arrow.png",
+    "file": "items/surveyor_bow/back/weapon.png",
+    "region": [
+      0,
+      0,
+      0.44,
+      1
+    ],
+    "dest": [
+      278.56,
+      231,
+      52,
+      210
+    ],
+    "flip": true,
+    "crop": [
+      372,
+      14,
+      236,
+      838
+    ]
+  },
+  {
+    "atlas": "bow-arrow.png",
+    "file": "effects/arrow.png",
+    "region": [
+      0.44,
+      0,
+      1,
+      1
+    ],
+    "dest": [
+      0,
+      0,
+      120,
+      16
+    ],
+    "flip": false,
+    "crop": [
+      840,
+      388,
+      889,
+      109
+    ]
+  }
+]

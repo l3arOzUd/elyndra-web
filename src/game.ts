@@ -7,12 +7,13 @@ import { EntState, type CombatEvent, type EntityAdd, type MsgOf, type ServerMsg 
 import { IsoCamera } from "./render/camera";
 import { Fx } from "./render/fx";
 import { wayfarerSprite } from "./render/paperDoll";
+import { skillAnimation } from "./render/combatAnimation";
 import { SpriteActor } from "./render/spriteActor";
 import type { SpriteDef } from "./render/spriteDef";
 import { animate, buildMap, makeCellMarker, type BuiltMap } from "./render/terrain";
 import { headingOf } from "./shared/dir";
 import type { Cell } from "./shared/path";
-import { HOTBAR, ITEM_KEYS, type Hud } from "./ui/hud";
+import { HOTBAR, ITEM_KEYS, TOTEM_KEYS, type Hud } from "./ui/hud";
 import { Minimap } from "./ui/minimap";
 import type { NpcDialog } from "./ui/npcDialog";
 import { Overlay, project, type Label } from "./ui/overlay";
@@ -47,7 +48,7 @@ interface Ent {
   leaving: boolean;
 }
 
-interface Pile { id: number; x: number; y: number; items: [string, number][]; mesh: THREE.Object3D; requestedAt: number }
+interface Pile { id: number; x: number; y: number; items: [string, number, string?][]; mesh: THREE.Object3D; requestedAt: number }
 
 const NPC_TINT: Record<string, [number, number, number]> = {
   guild_registrar: [1.1, 1, 0.75], merchant: [0.8, 1.1, 0.8], healer: [1.15, 0.85, 0.9], teleporter: [0.75, 1, 1.2],
@@ -115,9 +116,15 @@ export class Game {
     conn.onMessage((m) => this.onMessage(m));
     hud.onSkill = (s) => this.cast(s);
     hud.onUse = (i) => conn.send({ t: "use", item: i });
-    hud.onEquip = (i) => conn.send({ t: "equip", item: i });
+    hud.onEquip = (uid, slot) => conn.send({ t: "equip", gear: uid, slot });
     hud.onUnequip = (s) => conn.send({ t: "unequip", slot: s });
+    hud.onDiscard = (uid) => conn.send({ t: "discard", gear: uid });
+    hud.onStat = (stat, n) => conn.send({ t: "stat", arg: stat, qty: n });
+    hud.onResetStats = () => conn.send({ t: "reset_stats" });
+    hud.onTotem = (slot) => conn.send({ t: "totem", slot });
     dialog.onOp = (npc, op, arg, qty) => conn.send({ t: "npc", npc, op, arg, qty });
+    document.getElementById('clear-target')!.onclick = () => { this.targetId = null; this.hud.setTarget(null); };
+    document.querySelector<HTMLButtonElement>('[data-close=debug-win]')!.onclick = () => { this.debugOn = false; this.conn.send({ t: 'debug', on: false }); document.getElementById('debug-win')!.hidden = true; };
     this.bindInput();
     new ResizeObserver(() => this.resize()).observe(view);
     this.resize();
@@ -138,6 +145,7 @@ export class Game {
       case "inv": this.hud.setInventory(m); if (this.dialog.current) this.conn.send({ t: "npc", npc: this.dialog.current, op: "talk" }); break;
       case "stats": this.hud.setStats(m); { const me = this.self; if (me) { me.hp = m.hp; me.mhp = m.mhp; me.label?.setHp(m.hp, m.mhp); } } break;
       case "quests": this.hud.setQuests(m.quests); break;
+      case "sheet": this.hud.setSheet(m); break;
       case "npc": this.dialog.show(m); break;
       case "notice": this.hud.log(m.text, m.kind); break;
       case "correct": {
@@ -250,11 +258,11 @@ export class Game {
     const castMs = Math.max(150, m.hit_at - m.time);
     if (e) {
       e.actor.heading = headingOf(m.aim[0] - e.pos.x, m.aim[1] - e.pos.z);
-      e.actor.play("attack", { durationMs: castMs + 200 });
+      e.actor.play(e.kind === "p" ? skillAnimation(s) : "attack", { impactMs: castMs });
       if (s) this.fx.telegraph(s, e.pos.x, e.pos.z, m.aim[0], m.aim[1], castMs);
     }
     if (m.actor === this.selfId) {
-      this.hud.startCooldown(m.skill);
+      this.hud.startCooldown(m.skill, m.cd);
       this.predicted = null;
     }
   }
@@ -271,7 +279,10 @@ export class Game {
       t.hurtAt = performance.now();
       t.actor.hitFlash();
       if (!t.dead) t.actor.play("hit");
-      this.overlay.damage(id, dmg, (flags & 1) === 1, id === this.selfId ? "taken" : "dmg", tmpA.copy(t.pos).addScaledVector(UP, t.actor.height + 0.3));
+      const at = tmpA.copy(t.pos).addScaledVector(UP, t.actor.height + 0.3);
+      if (flags & 2) { this.overlay.text("Evade", at, "taken"); continue; } // evaded: no damage
+      if (flags & 4) { this.overlay.text("◈ " + dmg, at, "taken"); continue; } // the Aether Shield took it all
+      this.overlay.damage(id, dmg, (flags & 1) === 1, id === this.selfId ? "taken" : "dmg", at);
       if (id === this.selfId && dmg > t.mhp * 0.1) this.cam.kick(0.25);
     }
     for (const id of ev.deaths ?? []) {
@@ -289,10 +300,11 @@ export class Game {
 
   // --- loot ----------------------------------------------------------------------
 
-  private addPile(p: { id: number; x: number; y: number; items: [string, number][] }) {
+  private addPile(p: { id: number; x: number; y: number; items: [string, number, string?][] }) {
     this.removePile(p.id);
     const g = new THREE.Group();
-    const rare = p.items.some(([id]) => ["rare", "epic"].includes(this.c.items.get(id)?.rarity ?? ""));
+    // Rare materials, or a gear copy better than normal (third field: its rarity).
+    const rare = p.items.some(([id, , rarity]) => (rarity ? rarity !== "normal" : ["rare", "epic"].includes(this.c.items.get(id)?.rarity ?? "")));
     const bag = new THREE.Mesh(new THREE.IcosahedronGeometry(0.22, 0), new THREE.MeshLambertMaterial({ color: rare ? 0x7ab8ff : 0xd9b46a, emissive: rare ? 0x203a66 : 0x3a2a10, flatShading: true }));
     bag.position.y = 0.25;
     const ring = new THREE.Mesh(new THREE.RingGeometry(0.25, 0.34, 20).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: rare ? 0x7ab8ff : 0xffe08a, transparent: true, opacity: 0.7, depthWrite: false }));
@@ -397,18 +409,22 @@ export class Game {
     el.addEventListener("pointerup", (ev) => { if (ev.button === 2) rightDown = false; });
     el.addEventListener("wheel", (ev) => { ev.preventDefault(); this.cam.zoom(Math.sign(ev.deltaY)); }, { passive: false });
     window.addEventListener("keydown", (ev) => {
-      if ((ev.target as HTMLElement).tagName === "INPUT") return;
+      if (ev.key === "Escape") { this.dialog.close(); this.hud.closeWindows(); this.targetId = null; (document.activeElement as HTMLElement | null)?.blur(); return; }
+      const input = ev.target as HTMLElement;
+      if (["INPUT", "SELECT", "TEXTAREA"].includes(input.tagName) || input.isContentEditable || ev.ctrlKey || ev.metaKey || ev.altKey) return;
       // Physical keys (ev.code), not characters: with a Thai layout the 1 key
       // types "ๅ" and I/Z type other letters, so ev.key would miss them.
       const digit = /^(?:Digit|Numpad)(\d)$/.exec(ev.code);
       const n = digit ? Number(digit[1]) : NaN;
       if (n >= 1 && n <= HOTBAR.length) this.cast(HOTBAR[n - 1]);
       else if (n >= 5 && n < 5 + ITEM_KEYS.length) this.conn.send({ t: "use", item: ITEM_KEYS[n - 5] });
+      else if (digit && TOTEM_KEYS.includes(digit[1] as typeof TOTEM_KEYS[number])) this.conn.send({ t: "totem", slot: "charm" + (TOTEM_KEYS.indexOf(digit[1] as typeof TOTEM_KEYS[number]) + 1) });
+      else if (ev.code === "KeyC") this.hud.toggle("char-win");
       else if (ev.code === "KeyI") this.hud.toggle("inv-win");
+      else if (ev.code === "KeyQ") this.hud.toggle("journal-win");
       else if (ev.code === "KeyZ") this.pickupNearby(true);
       else if (ev.key === "Home") this.cam.reset();
       else if (ev.key === "F3") { ev.preventDefault(); this.debugOn = !this.debugOn; this.conn.send({ t: "debug", on: this.debugOn }); document.getElementById("debug-win")!.hidden = !this.debugOn; }
-      else if (ev.key === "Escape") { this.dialog.close(); this.targetId = null; }
     });
   }
 
@@ -518,7 +534,7 @@ export class Game {
         if (!e.dead) e.actor.setBase(moved > dt * 0.6 ? "walk" : "idle", e.msPerCell);
       }
       if (e.state !== prevState) {
-        if (e.state === EntState.Attack) e.actor.play("attack", { durationMs: e.kind === "m" ? 560 : 340 });
+        if (e.state === EntState.Attack && !["attack", "shoot", "cast"].includes(e.actor.animator.current)) e.actor.play("attack", { durationMs: e.kind === "m" ? 560 : 340 });
         if (e.state === EntState.Dead && !e.dead) this.die(e);
         if (prevState === EntState.Dead && e.state !== EntState.Dead) { e.dead = false; e.actor.revive(); e.label?.el.classList.remove("tag-dead"); }
       }
@@ -580,6 +596,7 @@ export class Game {
       (this.hoverMarker.material as THREE.MeshBasicMaterial).color.set(this.grid.walkable(cx, cz) ? 0xffffff : 0xff6060);
     }
     const target = this.targetId !== null ? this.ents.get(this.targetId) : undefined;
+    this.hud.setTarget(target && !target.dead ? target : null);
     this.targetMarker.visible = !!target;
     if (target) { this.targetMarker.position.set(target.pos.x, 0.06, target.pos.z); this.targetMarker.scale.setScalar(1.6 + Math.sin(now / 150) * 0.12); }
     this.clickAge = Math.min(1, this.clickAge + dt * 1.8);

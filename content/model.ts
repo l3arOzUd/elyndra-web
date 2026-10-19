@@ -9,20 +9,42 @@
 import type { Archetype, Behavior, PlayerCurveRow } from "../src/data/schema";
 
 // --- the reference player -------------------------------------------------
-// A Vanguard with no equipment, at level L. Gear (Lumeris crafts) adds about
-// 10-15% on top; the curve is the floor the world is balanced on.
+// CHARACTER_SYSTEMS.md: a character's own ATK is small (attack); most of it
+// comes from the weapon, scaled by POW. defense is the base Armour every
+// character has before gear. The world is balanced against ref_*: a
+// character at level L with half its stat points in POW, a plain weapon of
+// the highest tier it can use, and half of a pure Armour set of that tier.
+
+/** Gear tiers: the item level of each of the 10 tiers. */
+export const TIER_LEVELS = [1, 10, 20, 30, 40, 50, 60, 70, 80, 90] as const;
+export const tierLevelFor = (level: number) => [...TIER_LEVELS].reverse().find((t) => t <= level) ?? 1;
+/** A weapon's ATK at item level L. */
+export const weaponAttack = (itemLevel: number) => Math.round(12 + 3.6 * itemLevel + 0.02 * itemLevel * itemLevel);
+/** A whole pure Armour (or Evasion) set at item level L; head 30%, body 50%, boots 20%. */
+export const defenseSet = (itemLevel: number) => 20 + 12 * itemLevel;
+/** Stat points a character has at level L. */
+export const statPoints = (level: number) => 3 * (level - 1);
 
 export function playerAt(level: number): PlayerCurveRow {
   const l = level - 1;
+  const attack = Math.round(9 + 2.1 * l + 0.0225 * l * l);
+  const defense = Math.round(5 + 1.6 * l);
+  const tier = tierLevelFor(level);
+  const refPow = Math.floor(statPoints(level) / 2);
   return {
     level,
     max_hp: Math.round(120 + 26 * l + 0.9 * l * l),
     max_sp: Math.round(60 + 5 * l),
-    attack: Math.round(18 + 4.2 * l + 0.045 * l * l),
-    defense: Math.round(5 + 1.6 * l),
+    attack,
+    defense,
     exp_to_next: expToNext(level),
+    ref_attack: Math.round(attack + weaponAttack(tier) * (1 + refPow / 100)),
+    ref_armour: Math.round(defense + defenseSet(tier) / 2),
   };
 }
+
+/** Armour: share of a hit of `damage` that `armour` stops (cap 90%). */
+export const armourReduction = (armour: number, damage: number) => Math.min(0.9, armour / (armour + 5 * Math.max(1, damage)));
 
 // --- pacing ---------------------------------------------------------------
 // Horde pacing: a player on a level-appropriate field kills
@@ -42,8 +64,8 @@ export function expToNext(level: number): number {
 // --- monster archetypes ---------------------------------------------------
 // hits:  basic attacks a same-level reference player needs (the AoE skills,
 //        at 1.7x-4x, clear a swarm pack in two casts)
-// def:   DEF as a share of that player's ATK
-// dmg:   one hit as a share of that player's max HP, after his DEF. Swarm is
+// def:   share of the reference player's hit that the monster's Armour stops
+// dmg:   one hit as a share of that player's max HP, after its Armour. Swarm is
 //        low because 8 of them can stand around you at once: 8 x 1.2% per
 //        1.6s is ~6% HP/s, survivable for the 4-6s a pack lasts.
 // exp:   EXP relative to a swarm monster of the same level.
@@ -85,9 +107,14 @@ export interface StatMods {
 export function monsterStats(level: number, archetype: Archetype, mods: StatMods = {}) {
   const p = playerAt(level);
   const a = ARCHETYPES[archetype];
-  const defense = Math.round(p.attack * a.def * (mods.def ?? 1));
-  const hp = Math.round(a.hits * (mods.hp ?? 1) * (p.attack - defense));
-  const attack = Math.round(a.dmg * (mods.atk ?? 1) * p.max_hp + p.defense);
+  // Armour that stops `def` of a reference hit: A / (A + 5 * atk) = def.
+  const def = Math.min(0.85, a.def * (mods.def ?? 1));
+  const defense = Math.round((5 * p.ref_attack * def) / (1 - def));
+  const hp = Math.round(a.hits * (mods.hp ?? 1) * p.ref_attack * (1 - armourReduction(defense, p.ref_attack)));
+  // The raw hit that lands `dmg * max_hp` through the reference Armour:
+  // a - a * Ar / (Ar + 5a) = t  =>  5a^2 - 5ta - t*Ar = 0.
+  const t = a.dmg * (mods.atk ?? 1) * p.max_hp;
+  const attack = Math.max(1, Math.round((5 * t + Math.sqrt(25 * t * t + 20 * t * p.ref_armour)) / 10));
   const toughness = Math.sqrt((mods.hp ?? 1) * (mods.atk ?? 1));
   const base_exp = Math.max(1, Math.round(swarmExp(level) * a.exp * toughness));
   return {

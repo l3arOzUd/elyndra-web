@@ -3,12 +3,12 @@
 // pivots, and list part files that are still missing. Reload picks up new
 // PNGs without restarting anything.
 
-import { bakeWayfarer, loadPaperDoll, type PaperDollKit } from "../render/paperDoll";
+import { bakeWayfarer, loadPaperDoll, renderWayfarerPose, type PaperDollKit } from "../render/paperDoll";
 import type { AnimName, SpriteDef } from "../render/spriteDef";
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
-const ROW_NAMES = ["S หน้า", "SW เฉียงหน้า", "W ข้าง", "NW เฉียงหลัง", "N หลัง"];
-const ANIM_TH: Record<AnimName, string> = { idle: "ยืน (idle)", walk: "เดิน (walk)", attack: "โจมตี (attack)", hit: "โดนตี (hit)", death: "ตาย (death)" };
+const ROW_NAMES = ["S — ภาพหน้า", "SW — ใช้ภาพข้าง", "W — ภาพข้าง", "NW — ใช้ภาพข้าง", "N — ภาพหลัง"];
+const ANIM_TH: Record<AnimName, string> = { idle: "ยืน (idle)", walk: "เดิน (walk)", attack: "โจมตีตามอาวุธ", shoot: "เล็ง / ดึงสาย / ยิงธนู", cast: "รวบรวมพลัง / ร่ายเวท", hit: "โดนตี (hit)", death: "ตาย (death)" };
 
 let kit: PaperDollKit;
 let sprite: SpriteDef;
@@ -28,6 +28,7 @@ function buildControls() {
     sel.append(new Option(`${slot}: (ไม่ใส่)`, ""));
     for (const [id, name] of list) sel.append(new Option(`${slot}: ${name}`, id));
     sel.value = chosen.get(slot) ?? "";
+    sel.setAttribute("aria-label", slot);
     sel.onchange = () => { if (sel.value) chosen.set(slot, sel.value); else chosen.delete(slot); rebake(); };
     const row = document.createElement("div");
     row.className = "row";
@@ -42,8 +43,10 @@ function listMissing() {
   const want: string[] = [];
   for (const [view, v] of Object.entries(kit.rig.views)) {
     for (const part of Object.keys(v.parts)) want.push(`base/${view}/${part}.png`);
+    for (const [part, variants] of Object.entries(kit.rig.variants ?? {})) for (const variant of variants) want.push(`base/${view}/${part}_${variant}.png`);
     for (const it of Object.values(kit.items)) for (const layer of it.layers) want.push(`items/${it.visual}/${view}/${layer}.png`);
   }
+  want.push(...kit.rig.effects ?? []);
   const missing = want.filter((f) => !kit.img.has(f));
   const el = $("missing");
   el.className = missing.length ? "" : "ok";
@@ -98,18 +101,14 @@ function drawRest(gear: string[]) {
     const g = c.getContext("2d")!;
     g.setTransform(1, 0, 0, 1, 0, 0);
     g.clearRect(0, 0, c.width, c.height);
-    g.scale(0.5, 0.5);
-    const v = kit.rig.views[view];
-    for (const slot of v.order) {
-      const files = [v.parts[slot] ? `base/${view}/${slot}.png` : "", ...gear.map((id) => kit.items[id]).filter((it) => it?.layers.includes(slot)).map((it) => `items/${it.visual}/${view}/${slot}.png`)];
-      for (const f of files) { const im = f && kit.img.get(f); if (im) g.drawImage(im, 0, 0); }
-    }
-    g.strokeStyle = "#d24"; g.beginPath(); g.moveTo(0, kit.rig.feet[1]); g.lineTo(kit.rig.canvas, kit.rig.feet[1]); g.stroke();
+    const joints=renderWayfarerPose(g,kit,view,gear);
+    g.setTransform(1,0,0,1,0,0);
+    g.strokeStyle = "#d24"; g.beginPath(); g.moveTo(0, kit.rig.feet[1]/2); g.lineTo(kit.rig.canvas/2, kit.rig.feet[1]/2); g.stroke();
     if ($<HTMLInputElement>("pivots").checked) {
-      g.font = "20px system-ui";
-      for (const [name, p] of Object.entries(v.parts)) {
-        g.fillStyle = "#e33"; g.beginPath(); g.arc(p.pivot[0], p.pivot[1], 6, 0, Math.PI * 2); g.fill();
-        g.fillStyle = "#fbb"; g.fillText(name, p.pivot[0] + 9, p.pivot[1] - 6);
+      g.font = "10px system-ui";
+      for (const [name, pt] of Object.entries(joints)) {
+        g.fillStyle = "#e33"; g.beginPath(); g.arc(pt[0], pt[1], 3, 0, Math.PI * 2); g.fill();
+        g.fillStyle = "#fbb"; g.fillText(name, pt[0] + 5, pt[1] - 3);
       }
     }
   });
@@ -124,7 +123,9 @@ function tick(now: number) {
   const len = (frames / fps) * 1000;
   const el = (now - t0) * speed;
   // One-shot clips replay after a short pause so they can be watched again.
-  const f = loop ? Math.floor((el / 1000) * fps) % frames : Math.min(frames - 1, Math.floor(((el % (len + 700)) / 1000) * fps));
+  const slider=$<HTMLInputElement>("frame");slider.max=String(frames-1);
+  const f = $<HTMLInputElement>("paused").checked ? Math.min(frames-1,Number(slider.value)) : loop ? Math.floor((el / 1000) * fps) % frames : Math.min(frames - 1, Math.floor(((el % (len + 700)) / 1000) * fps));
+  $("frame-number").textContent=`${f+1} / ${frames}`;
   const F = sprite.json.frame.w;
   animCells.forEach((c, row) => {
     const g = c.getContext("2d")!;
@@ -140,9 +141,29 @@ async function main() {
   setup();
   listMissing();
   rebake();
+  document.querySelectorAll<HTMLButtonElement>("[data-outfit]").forEach((button) => {
+    button.onclick = () => {
+      chosen.clear();
+      const weapon = button.dataset.outfit;
+      if (weapon && weapon !== "base") {
+        chosen.set("boots", "itm_0078");
+        chosen.set("armor", "itm_0079");
+        chosen.set("weapon", weapon);
+      }
+      buildControls();
+      rebake();
+      $<HTMLSelectElement>("anim").value="idle";
+      $<HTMLInputElement>("paused").checked=false;
+      t0=performance.now();
+    };
+  });
   $("anim").onchange = () => { t0 = performance.now(); };
+  for(const [button,weapon,anim]of [["try-melee","itm_0080","attack"],["try-shoot","itm_0081","shoot"],["try-cast","itm_0082","cast"]]) {
+    $(button).onclick=()=>{chosen.set("weapon",weapon);buildControls();rebake();$<HTMLSelectElement>("anim").value=anim;t0=performance.now();$<HTMLInputElement>("paused").checked=false;};
+  }
+  $("frame").oninput=()=>{$<HTMLInputElement>("paused").checked=true;};
   $("pivots").onchange = () => rebake();
-  $("reload").onclick = async () => { await load(String(Date.now())); buildControls(); listMissing(); rebake(); };
+  $("reload").onclick = async () => { await load(String(Date.now())); buildControls(); setup(); listMissing(); rebake(); (window as unknown as {__wayfarer:{kit:PaperDollKit}}).__wayfarer.kit=kit; };
   requestAnimationFrame(tick);
   (window as unknown as { __wayfarer: object }).__wayfarer = { ready: true, kit, rebake, chosen };
 }

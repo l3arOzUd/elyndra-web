@@ -1,0 +1,1335 @@
+{
+  "canvas": 512,
+  "feet": [
+    256,
+    480
+  ],
+  "parts": [
+    {
+      "dest": [
+        171,
+        64,
+        170,
+        169
+      ],
+      "region": [
+        0,
+        0,
+        0.32,
+        0.505
+      ],
+      "file": "base/front/head.png",
+      "crop": [
+        74,
+        8,
+        458,
+        435
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-front.png"
+    },
+    {
+      "dest": [
+        201,
+        215,
+        110,
+        136
+      ],
+      "region": [
+        0.32,
+        0,
+        0.55,
+        0.505
+      ],
+      "file": "base/front/torso.png",
+      "crop": [
+        601,
+        68,
+        342,
+        360
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-front.png"
+    },
+    {
+      "dest": [
+        184,
+        224,
+        36,
+        126
+      ],
+      "region": [
+        0.55,
+        0,
+        0.76,
+        0.505
+      ],
+      "file": "base/front/arm_near.png",
+      "crop": [
+        1089,
+        23,
+        127,
+        419
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-front.png"
+    },
+    {
+      "dest": [
+        292,
+        224,
+        36,
+        126
+      ],
+      "region": [
+        0.76,
+        0,
+        1,
+        0.505
+      ],
+      "file": "base/front/arm_far.png",
+      "crop": [
+        1446,
+        20,
+        127,
+        422
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-front.png"
+    },
+    {
+      "dest": [
+        215,
+        320,
+        38,
+        104
+      ],
+      "region": [
+        0,
+        0.505,
+        0.25,
+        1
+      ],
+      "file": "base/front/thigh_near.png",
+      "crop": [
+        143,
+        454,
+        185,
+        405
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-front-joints.png"
+    },
+    {
+      "dest": [
+        259,
+        320,
+        38,
+        104
+      ],
+      "region": [
+        0.25,
+        0.505,
+        0.5,
+        1
+      ],
+      "file": "base/front/thigh_far.png",
+      "crop": [
+        574,
+        453,
+        184,
+        408
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-front-joints.png"
+    },
+    {
+      "dest": [
+        212,
+        393,
+        44,
+        87
+      ],
+      "region": [
+        0.5,
+        0.505,
+        0.75,
+        1
+      ],
+      "file": "base/front/shin_near.png",
+      "crop": [
+        1009,
+        453,
+        171,
+        413
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-front-joints.png"
+    },
+    {
+      "dest": [
+        256,
+        393,
+        44,
+        87
+      ],
+      "region": [
+        0.75,
+        0.505,
+        1,
+        1
+      ],
+      "file": "base/front/shin_far.png",
+      "crop": [
+        1483,
+        453,
+        171,
+        414
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-front-joints.png"
+    },
+    {
+      "dest": [
+        208,
+        414,
+        52,
+        66
+      ],
+      "region": [
+        0,
+        0,
+        0.385,
+        0.33
+      ],
+      "file": "items/traveler_boots/front/shin_near.png",
+      "crop": [
+        145,
+        41,
+        182,
+        358
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        252,
+        414,
+        52,
+        66
+      ],
+      "region": [
+        0.385,
+        0,
+        0.64,
+        0.33
+      ],
+      "file": "items/traveler_boots/front/shin_far.png",
+      "crop": [
+        540,
+        40,
+        178,
+        359
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        195,
+        211,
+        122,
+        149
+      ],
+      "region": [
+        0.64,
+        0,
+        1,
+        0.33
+      ],
+      "file": "items/leafweave_coat/front/torso.png",
+      "crop": [
+        876,
+        40,
+        305,
+        366
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        180,
+        221,
+        44,
+        91
+      ],
+      "region": [
+        0,
+        0.33,
+        0.385,
+        0.625
+      ],
+      "file": "items/leafweave_coat/front/arm_near.png",
+      "crop": [
+        111,
+        454,
+        213,
+        314
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        288,
+        221,
+        44,
+        91
+      ],
+      "region": [
+        0.385,
+        0.33,
+        0.64,
+        0.625
+      ],
+      "file": "items/leafweave_coat/front/arm_far.png",
+      "crop": [
+        536,
+        454,
+        212,
+        314
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        177,
+        217,
+        158,
+        189
+      ],
+      "region": [
+        0.64,
+        0.33,
+        1,
+        0.625
+      ],
+      "file": "items/leafweave_coat/front/cape.png",
+      "crop": [
+        831,
+        433,
+        401,
+        341
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        118,
+        322,
+        92,
+        100
+      ],
+      "region": [
+        0,
+        0.625,
+        0.385,
+        1
+      ],
+      "file": "items/copper_saber/front/weapon.png",
+      "crop": [
+        53,
+        810,
+        356,
+        373
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        184,
+        231,
+        52,
+        210
+      ],
+      "region": [
+        0.385,
+        0.625,
+        0.64,
+        1
+      ],
+      "file": "items/surveyor_bow/front/weapon.png",
+      "crop": [
+        571,
+        790,
+        121,
+        424
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        166,
+        96,
+        60,
+        320
+      ],
+      "region": [
+        0.64,
+        0.625,
+        1,
+        1
+      ],
+      "file": "items/aether_rod/front/weapon.png",
+      "crop": [
+        991,
+        793,
+        99,
+        431
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-front.png"
+    },
+    {
+      "dest": [
+        170,
+        64,
+        170,
+        169
+      ],
+      "region": [
+        0,
+        0,
+        0.32,
+        0.505
+      ],
+      "file": "base/side/head.png",
+      "crop": [
+        101,
+        9,
+        431,
+        427
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-side.png"
+    },
+    {
+      "dest": [
+        216,
+        215,
+        80,
+        136
+      ],
+      "region": [
+        0.32,
+        0,
+        0.55,
+        0.505
+      ],
+      "file": "base/side/torso.png",
+      "crop": [
+        635,
+        39,
+        270,
+        397
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-side.png"
+    },
+    {
+      "dest": [
+        242,
+        226,
+        36,
+        126
+      ],
+      "region": [
+        0.55,
+        0,
+        0.76,
+        0.505
+      ],
+      "file": "base/side/arm_near.png",
+      "crop": [
+        1059,
+        38,
+        134,
+        409
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-side.png"
+    },
+    {
+      "dest": [
+        234,
+        226,
+        36,
+        126
+      ],
+      "region": [
+        0.76,
+        0,
+        1,
+        0.505
+      ],
+      "file": "base/side/arm_far.png",
+      "crop": [
+        1491,
+        38,
+        133,
+        409
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-side.png"
+    },
+    {
+      "dest": [
+        231,
+        320,
+        38,
+        104
+      ],
+      "region": [
+        0,
+        0.505,
+        0.25,
+        1
+      ],
+      "file": "base/side/thigh_near.png",
+      "crop": [
+        187,
+        453,
+        186,
+        394
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-side-joints.png"
+    },
+    {
+      "dest": [
+        243,
+        320,
+        38,
+        104
+      ],
+      "region": [
+        0.25,
+        0.505,
+        0.5,
+        1
+      ],
+      "file": "base/side/thigh_far.png",
+      "crop": [
+        615,
+        453,
+        185,
+        395
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-side-joints.png"
+    },
+    {
+      "dest": [
+        207,
+        393,
+        60,
+        87
+      ],
+      "region": [
+        0.5,
+        0.505,
+        0.75,
+        1
+      ],
+      "file": "base/side/shin_near.png",
+      "crop": [
+        953,
+        460,
+        270,
+        389
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-side-joints.png"
+    },
+    {
+      "dest": [
+        223,
+        393,
+        60,
+        87
+      ],
+      "region": [
+        0.75,
+        0.505,
+        1,
+        1
+      ],
+      "file": "base/side/shin_far.png",
+      "crop": [
+        1387,
+        462,
+        246,
+        396
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-side-joints.png"
+    },
+    {
+      "dest": [
+        205,
+        414,
+        66,
+        66
+      ],
+      "region": [
+        0,
+        0,
+        0.385,
+        0.33
+      ],
+      "file": "items/traveler_boots/side/shin_near.png",
+      "crop": [
+        107,
+        51,
+        300,
+        351
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        221,
+        414,
+        66,
+        66
+      ],
+      "region": [
+        0.385,
+        0,
+        0.64,
+        0.33
+      ],
+      "file": "items/traveler_boots/side/shin_far.png",
+      "crop": [
+        493,
+        51,
+        287,
+        350
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        211,
+        211,
+        90,
+        149
+      ],
+      "region": [
+        0.64,
+        0,
+        1,
+        0.33
+      ],
+      "file": "items/leafweave_coat/side/torso.png",
+      "crop": [
+        930,
+        34,
+        226,
+        368
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        238,
+        223,
+        44,
+        91
+      ],
+      "region": [
+        0,
+        0.33,
+        0.385,
+        0.625
+      ],
+      "file": "items/leafweave_coat/side/arm_near.png",
+      "crop": [
+        135,
+        437,
+        233,
+        326
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        230,
+        223,
+        44,
+        91
+      ],
+      "region": [
+        0.385,
+        0.33,
+        0.64,
+        0.625
+      ],
+      "file": "items/leafweave_coat/side/arm_far.png",
+      "crop": [
+        547,
+        443,
+        221,
+        340
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        258,
+        219,
+        87,
+        185
+      ],
+      "region": [
+        0.64,
+        0.33,
+        1,
+        0.625
+      ],
+      "file": "items/leafweave_coat/side/cape.png",
+      "crop": [
+        936,
+        421,
+        292,
+        350
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        186,
+        324,
+        92,
+        100
+      ],
+      "region": [
+        0,
+        0.625,
+        0.385,
+        1
+      ],
+      "file": "items/copper_saber/side/weapon.png",
+      "crop": [
+        76,
+        807,
+        370,
+        382
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        252,
+        233,
+        52,
+        210
+      ],
+      "region": [
+        0.385,
+        0.625,
+        0.64,
+        1
+      ],
+      "file": "items/surveyor_bow/side/weapon.png",
+      "crop": [
+        594,
+        783,
+        131,
+        430
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        234,
+        98,
+        60,
+        320
+      ],
+      "region": [
+        0.64,
+        0.625,
+        1,
+        1
+      ],
+      "file": "items/aether_rod/side/weapon.png",
+      "crop": [
+        995,
+        791,
+        98,
+        433
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-side.png"
+    },
+    {
+      "dest": [
+        171,
+        64,
+        170,
+        169
+      ],
+      "region": [
+        0,
+        0,
+        0.32,
+        0.505
+      ],
+      "file": "base/back/head.png",
+      "crop": [
+        70,
+        9,
+        445,
+        431
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-back.png"
+    },
+    {
+      "dest": [
+        201,
+        215,
+        110,
+        136
+      ],
+      "region": [
+        0.32,
+        0,
+        0.55,
+        0.505
+      ],
+      "file": "base/back/torso.png",
+      "crop": [
+        597,
+        61,
+        341,
+        378
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-back.png"
+    },
+    {
+      "dest": [
+        292,
+        224,
+        36,
+        126
+      ],
+      "region": [
+        0.55,
+        0,
+        0.76,
+        0.505
+      ],
+      "file": "base/back/arm_near.png",
+      "crop": [
+        1058,
+        33,
+        150,
+        413
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-back.png"
+    },
+    {
+      "dest": [
+        184,
+        224,
+        36,
+        126
+      ],
+      "region": [
+        0.76,
+        0,
+        1,
+        0.505
+      ],
+      "file": "base/back/arm_far.png",
+      "crop": [
+        1450,
+        33,
+        149,
+        413
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-back.png"
+    },
+    {
+      "dest": [
+        259,
+        320,
+        38,
+        104
+      ],
+      "region": [
+        0,
+        0.505,
+        0.25,
+        1
+      ],
+      "file": "base/back/thigh_near.png",
+      "crop": [
+        141,
+        456,
+        192,
+        407
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-back-joints.png"
+    },
+    {
+      "dest": [
+        215,
+        320,
+        38,
+        104
+      ],
+      "region": [
+        0.25,
+        0.505,
+        0.5,
+        1
+      ],
+      "file": "base/back/thigh_far.png",
+      "crop": [
+        568,
+        455,
+        192,
+        408
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-back-joints.png"
+    },
+    {
+      "dest": [
+        256,
+        393,
+        44,
+        87
+      ],
+      "region": [
+        0.5,
+        0.505,
+        0.75,
+        1
+      ],
+      "file": "base/back/shin_near.png",
+      "crop": [
+        991,
+        455,
+        191,
+        411
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-back-joints.png"
+    },
+    {
+      "dest": [
+        212,
+        393,
+        44,
+        87
+      ],
+      "region": [
+        0.75,
+        0.505,
+        1,
+        1
+      ],
+      "file": "base/back/shin_far.png",
+      "crop": [
+        1479,
+        454,
+        188,
+        412
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "source": "base-back-joints.png"
+    },
+    {
+      "dest": [
+        252,
+        414,
+        52,
+        66
+      ],
+      "region": [
+        0,
+        0,
+        0.385,
+        0.33
+      ],
+      "file": "items/traveler_boots/back/shin_near.png",
+      "crop": [
+        155,
+        39,
+        184,
+        364
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    },
+    {
+      "dest": [
+        208,
+        414,
+        52,
+        66
+      ],
+      "region": [
+        0.385,
+        0,
+        0.64,
+        0.33
+      ],
+      "file": "items/traveler_boots/back/shin_far.png",
+      "crop": [
+        544,
+        39,
+        181,
+        364
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    },
+    {
+      "dest": [
+        195,
+        211,
+        122,
+        149
+      ],
+      "region": [
+        0.64,
+        0,
+        1,
+        0.33
+      ],
+      "file": "items/leafweave_coat/back/torso.png",
+      "crop": [
+        876,
+        34,
+        292,
+        374
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    },
+    {
+      "dest": [
+        288,
+        221,
+        44,
+        91
+      ],
+      "region": [
+        0,
+        0.33,
+        0.385,
+        0.625
+      ],
+      "file": "items/leafweave_coat/back/arm_near.png",
+      "crop": [
+        136,
+        450,
+        203,
+        316
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    },
+    {
+      "dest": [
+        180,
+        221,
+        44,
+        91
+      ],
+      "region": [
+        0.385,
+        0.33,
+        0.64,
+        0.625
+      ],
+      "file": "items/leafweave_coat/back/arm_far.png",
+      "crop": [
+        541,
+        451,
+        203,
+        314
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    },
+    {
+      "dest": [
+        177,
+        217,
+        158,
+        189
+      ],
+      "region": [
+        0.64,
+        0.33,
+        1,
+        0.625
+      ],
+      "file": "items/leafweave_coat/back/cape.png",
+      "crop": [
+        811,
+        426,
+        422,
+        346
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    },
+    {
+      "dest": [
+        302,
+        322,
+        92,
+        100
+      ],
+      "region": [
+        0,
+        0.625,
+        0.385,
+        1
+      ],
+      "file": "items/copper_saber/back/weapon.png",
+      "crop": [
+        98,
+        793,
+        373,
+        389
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    },
+    {
+      "dest": [
+        277,
+        231,
+        52,
+        210
+      ],
+      "region": [
+        0.385,
+        0.625,
+        0.64,
+        1
+      ],
+      "file": "items/surveyor_bow/back/weapon.png",
+      "crop": [
+        593,
+        783,
+        121,
+        429
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    },
+    {
+      "dest": [
+        286,
+        96,
+        60,
+        320
+      ],
+      "region": [
+        0.64,
+        0.625,
+        1,
+        1
+      ],
+      "file": "items/aether_rod/back/weapon.png",
+      "crop": [
+        971,
+        786,
+        101,
+        430
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "source": "equipment-back.png"
+    }
+  ]
+}

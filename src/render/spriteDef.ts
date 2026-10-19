@@ -7,7 +7,8 @@ import { DIRS, type Dir } from "../shared/dir";
 // another (the RO way: draw S, SW, W, NW, N and mirror the other three,
 // which saves 3/8 of the art).
 
-export type AnimName = "idle" | "walk" | "attack" | "hit" | "death";
+export type AnimName = "idle" | "walk" | "attack" | "shoot" | "cast" | "hit" | "death";
+export type BasicAnimName = Exclude<AnimName, "shoot" | "cast">;
 
 export interface AnimDef {
   file: string;

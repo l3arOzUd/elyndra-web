@@ -20,7 +20,8 @@
 // Broken Orchard, whose old pump-house cave is Hollowroot.
 
 import type { DialogueDef, ItemDef, NpcDef, Prop, QuestDef, RecipeDef } from "../../src/data/schema";
-import { expToNext } from "../model";
+import { expToNext, weaponAttack } from "../model";
+import { kindRequirement, pieceDefense } from "../systems";
 import type { MapDesign, RegionDesign } from "../types";
 
 const questExp = (level: number, share: number) => Math.round(expToNext(level) * share);
@@ -46,14 +47,14 @@ const monsters: RegionDesign["monsters"] = [
     mods: { def: 1.3, hp: 0.95, speed: 0.9 }, why: "Resin shell (+30% DEF), quick legs (10% faster). The first aggressive monster: it guards the resin trees along the trail and teaches players to watch where they walk.",
     drops: { common: "itm_0005", uncommon: "itm_0006", rare: "itm_0084" },
     ecology: "Six-legged mites that farm amber resin from the trail-side trees and swarm anything that comes near the sap.",
-    art_brief: "A beetle-sized six-legged mite under a translucent amber shell with a glowing core; honey-orange.", sprite: "p_ambermite",
+    art_brief: "A beetle-sized six-legged mite under a translucent amber shell with a glowing core; honey-orange.", sprite: "ambermite_2d",
   },
   {
     id: "mob_0004", name: "Lunari", level: 3, archetype: "swarm", family: "beast", element: "wind", behavior: "flee",
     mods: { hp: 0.8, atk: 0.8, speed: 0.75 }, why: "A skittish glider: frail (-20% HP, -20% ATK) and fast (25% faster) so it bolts when hit. A chase target, not a threat.",
     drops: { common: "itm_0007", uncommon: "itm_0008" },
     ecology: "Leaf-eared gliders nesting in the hollows of Amber Trail; they scatter from anything that hurts them.",
-    art_brief: "A sugar-glider-like beast with leaf-shaped ears and a banded tail, membrane glide flaps; moonlit silver-green.", sprite: "p_lunari",
+    art_brief: "A sugar-glider-like beast with leaf-shaped ears and a banded tail, membrane glide flaps; moonlit silver-green.", sprite: "lunari_2d",
   },
   {
     id: "mob_0005", name: "Craglet", level: 5, archetype: "bruiser", family: "reptile", element: "earth", behavior: "assist",
@@ -88,20 +89,20 @@ const monsters: RegionDesign["monsters"] = [
     mods: { range: 4 }, why: "Spits reed darts from 4 cells: the region's ranged lesson, mixed into melee packs so players learn to pull them in.",
     drops: { common: "itm_0017", uncommon: "itm_0018" },
     ecology: "Reed-camouflaged hunters of the Moonbrook marsh and its moonlit banks.",
-    art_brief: "A lanky stalk-creature woven from reeds, a seed-pod head that opens to spit darts; marsh green and brown.", sprite: "p_reedstalker",
+    art_brief: "A lanky stalk-creature woven from reeds, a seed-pod head that opens to spit darts; marsh green and brown.", sprite: "reedstalker_2d",
   },
   {
     id: "mob_0010", name: "Rotroot", level: 17, archetype: "swarm", family: "plant", element: "nature", behavior: "aggressive",
     mods: { hp: 1.2, speed: 1.15 }, why: "Fibrous (+20% HP), dragging roots (15% slower): a dense, slow horde that suits big AoE pulls before the dungeon.",
     drops: { common: "itm_0019", uncommon: "itm_0020" },
     ecology: "Roots of the dying orchard, animated by aether leaking from the pump house; they grow thickest round its broken machine.",
-    art_brief: "A knot of rotting roots with a glowing sap core, crawling on root-legs; dark wood, sickly teal glow.", sprite: "p_rotroot",
+    art_brief: "A knot of rotting roots with a glowing sap core, crawling on root-legs; dark wood, sickly teal glow.", sprite: "rotroot_2d",
   },
   {
     id: "mob_0011", name: "Barkwarden", level: 20, archetype: "construct", family: "construct", element: "earth", behavior: "assist",
     drops: { common: "itm_0021", uncommon: "itm_0022", extra: [{ item_id: "itm_0074", rate_bp: 800 }, { item_id: "itm_0073", rate_bp: 400 }] },
     ecology: "Aethrion maintenance frames that grew bark over their copper joints; they still patrol Hollowroot's tunnels and buried pump hall.",
-    art_brief: "A man-high wooden guardian with copper-jointed limbs, a cracked lens eye and moss in the seams.", sprite: "p_barkwarden",
+    art_brief: "A man-high wooden guardian with copper-jointed limbs, a cracked lens eye and moss in the seams.", sprite: "barkwarden_2d",
   },
   {
     id: "mob_0036", name: "Hollowroot Warden", level: 20, archetype: "boss", family: "construct", element: "earth", behavior: "aggressive",
@@ -148,11 +149,11 @@ const items: ItemDef[] = [
   { id: "itm_0075", name: "Field Ration", category: "consumable", rarity: "common", sell_price: 3, stack_max: 99, description: "Hard bread and dried fruit. Restores 10% HP.", use: { heal_hp_pct: 10, cooldown_ms: 1000 } },
   { id: "itm_0076", name: "Minor Vital Tonic", category: "consumable", rarity: "common", sell_price: 8, stack_max: 99, description: "A bitter green draught. Restores 25% HP.", use: { heal_hp_pct: 25, cooldown_ms: 1500 } },
   { id: "itm_0077", name: "Minor Focus Tonic", category: "consumable", rarity: "common", sell_price: 10, stack_max: 99, description: "A cool blue draught. Restores 30% SP.", use: { heal_sp_pct: 30, cooldown_ms: 1500 } },
-  { id: "itm_0078", name: "Traveler Boots", category: "equipment", rarity: "common", sell_price: 40, stack_max: 1, description: "Moss-lined boots. The first thing every Wayfarer crafts.", equip: { slot: "boots", defense: 3, max_hp: 20, min_level: 1 } },
-  { id: "itm_0079", name: "Leafweave Coat", category: "equipment", rarity: "common", sell_price: 150, stack_max: 1, description: "Glider fur woven on mycelium felt.", equip: { slot: "armor", defense: 7, max_hp: 60, min_level: 5 } },
-  { id: "itm_0080", name: "Copper Saber", category: "equipment", rarity: "uncommon", sell_price: 180, stack_max: 1, description: "Crag-scale blade on a copper-gear hilt. Vanguard.", equip: { slot: "weapon", job: "vanguard", attack: 14, min_level: 7 } },
-  { id: "itm_0081", name: "Surveyor Bow", category: "equipment", rarity: "uncommon", sell_price: 260, stack_max: 1, description: "Briar-spine bow strung with wing membrane. Strider.", equip: { slot: "weapon", job: "strider", attack: 13, min_level: 9 } },
-  { id: "itm_0082", name: "Aether Rod", category: "equipment", rarity: "uncommon", sell_price: 360, stack_max: 1, description: "A brook-scale rod tipped with Aetherite. Arcanist.", equip: { slot: "weapon", job: "arcanist", attack: 12, min_level: 12 } },
+  { id: "itm_0078", name: "Traveler Boots", category: "equipment", rarity: "common", sell_price: 40, stack_max: 1, description: "Moss-lined boots. The first thing every Wayfarer crafts.", equip: { slot: "boots", kind: "evasion", item_level: 1, min_level: 1, ...pieceDefense("boots", "evasion", 1) } },
+  { id: "itm_0079", name: "Leafweave Coat", category: "equipment", rarity: "common", sell_price: 150, stack_max: 1, description: "Glider fur woven on mycelium felt.", equip: { slot: "armor", kind: "evasion_shield", item_level: 5, min_level: 5, ...pieceDefense("armor", "evasion_shield", 5), req: kindRequirement("evasion_shield", 5) } },
+  { id: "itm_0080", name: "Copper Saber", category: "equipment", rarity: "uncommon", sell_price: 180, stack_max: 1, description: "Crag-scale blade on a copper-gear hilt. Vanguard.", equip: { slot: "weapon", job: "vanguard", item_level: 7, min_level: 7, attack: weaponAttack(7) } },
+  { id: "itm_0081", name: "Surveyor Bow", category: "equipment", rarity: "uncommon", sell_price: 260, stack_max: 1, description: "Briar-spine bow strung with wing membrane. Strider.", equip: { slot: "weapon", job: "strider", item_level: 9, min_level: 9, attack: weaponAttack(9) } },
+  { id: "itm_0082", name: "Aether Rod", category: "equipment", rarity: "uncommon", sell_price: 360, stack_max: 1, description: "A brook-scale rod tipped with Aetherite. Arcanist.", equip: { slot: "weapon", job: "arcanist", item_level: 12, min_level: 12, attack: weaponAttack(12) } },
   { id: "itm_0083", name: "Guild Pass", category: "quest", rarity: "uncommon", sell_price: 0, stack_max: 1, description: "Wayfarer Guild warrant. Opens Hollowroot Cavern's lift." },
 ];
 

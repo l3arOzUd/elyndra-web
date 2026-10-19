@@ -3,6 +3,8 @@ import type { AnimDef, AnimName } from "./spriteDef";
 export interface PlayOptions {
   /** Fit the whole animation into this long (an attack timed to the attack speed). */
   durationMs?: number;
+  /** Server wind-up: land the named hit/release frame after this many ms. */
+  impactMs?: number;
   onEvent?: (name: string) => void;
   onDone?: () => void;
 }
@@ -22,7 +24,7 @@ function eventsOf(name: AnimName, def: AnimDef | undefined): Record<string, numb
 }
 
 /** Which one-shot may cut off which: a flinch never cuts off a swing. */
-const PRIORITY: Record<AnimName, number> = { idle: 0, walk: 0, hit: 1, attack: 2, death: 3 };
+const PRIORITY: Record<AnimName, number> = { idle: 0, walk: 0, hit: 1, attack: 2, shoot: 2, cast: 2, death: 3 };
 
 /**
  * Picks the frame to show. A looping base animation (idle or walk) plays
@@ -70,7 +72,7 @@ export class Animator {
       return true;
     }
     const natural = (def.frames * 1000) / def.fps;
-    const rate = opts.durationMs ? Math.min(3, Math.max(0.5, natural / opts.durationMs)) : 1;
+    const rate = opts.impactMs !== undefined ? 1 : opts.durationMs ? Math.min(3, Math.max(0.5, natural / opts.durationMs)) : 1;
     this.shot = { name, rate, opts, fired: new Set() };
     this.time = 0;
     return true;
@@ -89,14 +91,20 @@ export class Animator {
       const shot = this.shot;
       const def = this.anims[shot.name]!;
       this.time += dtMs * shot.rate;
-      const frame = Math.floor((this.time * def.fps) / 1000);
+      const hitFrame = eventsOf(shot.name, def).hit;
+      const impact = shot.opts.impactMs;
+      const hitTime = hitFrame === undefined ? 0 : hitFrame * 1000 / def.fps;
+      const sampleTime = impact !== undefined && hitFrame !== undefined
+        ? this.time < Math.max(1, impact) ? this.time / Math.max(1, impact) * hitTime : hitTime + this.time - Math.max(1, impact)
+        : this.time;
+      const frame = Math.floor((sampleTime * def.fps) / 1000 + 1e-9);
       for (const [ev, at] of Object.entries(eventsOf(shot.name, def))) {
         if (frame >= at && !shot.fired.has(ev)) {
           shot.fired.add(ev);
           shot.opts.onEvent?.(ev);
         }
       }
-      if (frame < def.frames) return { anim: shot.name, frame, progress: Math.min(1, (this.time * def.fps) / 1000 / def.frames) };
+      if (frame < def.frames) return { anim: shot.name, frame, progress: Math.min(1, (sampleTime * def.fps) / 1000 / def.frames) };
       this.shot = null;
       if (def.hold || shot.name === "death") this.held = true;
       shot.opts.onDone?.();

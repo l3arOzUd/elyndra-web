@@ -1,4 +1,5 @@
 import "./style.css";
+import { mountShell } from "./ui/shell";
 import { loadContent } from "./data/content";
 import { Game } from "./game";
 import { Connection } from "./net/connection";
@@ -8,6 +9,8 @@ import { loadSprite, type SpriteDef } from "./render/spriteDef";
 import { Hud } from "./ui/hud";
 import { Inspector } from "./ui/inspector";
 import { NpcDialog } from "./ui/npcDialog";
+
+mountShell();
 
 const params = new URLSearchParams(location.search);
 const DEFAULT_SERVER = params.get("server") ?? `ws://${location.hostname || "localhost"}:7101/ws`;
@@ -55,6 +58,9 @@ async function main() {
     nameInput.value = params.get("name") ?? remember("elyndra.name") ?? "";
     serverInput.value = remember("elyndra.server") ?? DEFAULT_SERVER;
     const start = async () => {
+      const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+      if (submit.disabled) return;
+      submit.disabled = true;
       const name = nameInput.value.trim();
       $("login-error").textContent = "";
       const conn = new Connection(serverInput.value.trim());
@@ -66,13 +72,18 @@ async function main() {
       } catch (e) {
         $("login-error").textContent = (e as Error).message;
         game.renderer.domElement.remove();
+        submit.disabled = false;
         return;
       }
       remember("elyndra.name", name);
       remember("elyndra.server", serverInput.value.trim());
       form.hidden = true;
+      $("player-name").textContent = name;
+      $("equipment-name").textContent = name;
       $("hud").hidden = false;
       conn.onClose((reason) => {
+        const connectionLabel = document.querySelector('.status-dot');
+        if (connectionLabel) connectionLabel.textContent = 'OFFLINE';
         hud.log(`Disconnected: ${reason}. Reload to reconnect.`, "bad");
         $("disconnected").hidden = false;
         $("disconnected-reason").textContent = reason;

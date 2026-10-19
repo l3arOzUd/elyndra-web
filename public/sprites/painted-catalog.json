@@ -126,7 +126,7 @@
     "label": "Gust Wisp",
     "file": "13_Gust_Wisp",
     "hovering": true,
-    "referenceFlip": true,
+    "referenceFlip": false,
     "gameMonster": null
   },
   {
@@ -216,7 +216,7 @@
     "label": "Bloom Serpent",
     "file": "22_Bloom_Serpent",
     "hovering": false,
-    "referenceFlip": false,
+    "referenceFlip": true,
     "gameMonster": null
   },
   {
@@ -226,7 +226,7 @@
     "label": "Sky Manta",
     "file": "23_Sky_Manta",
     "hovering": true,
-    "referenceFlip": true,
+    "referenceFlip": false,
     "gameMonster": null
   },
   {

@@ -21,8 +21,10 @@ export interface Rig {
   facings: Partial<Record<Dir, string>>;
   attach: Record<string, string>;
   views: Record<string, ViewDef>;
+  variants?: Record<string, string[]>;
+  effects?: string[];
 }
-export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[] }
+export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[]; motion?: "melee" | "shoot" | "cast" }
 export interface PaperDollKit { rig: Rig; items: Record<string, ItemLook>; img: Map<string, HTMLImageElement> }
 
 const DIR = "sprites/wayfarer/";
@@ -47,8 +49,10 @@ export async function loadPaperDoll(base = DIR, bust = ""): Promise<PaperDollKit
   const files: string[] = [];
   for (const [view, v] of Object.entries(rig.views)) {
     for (const part of Object.keys(v.parts)) files.push(`base/${view}/${part}.png`);
+    for (const [part, variants] of Object.entries(rig.variants ?? {})) for (const variant of variants) files.push(`base/${view}/${part}_${variant}.png`);
     for (const it of Object.values(items)) for (const layer of it.layers) files.push(`items/${it.visual}/${view}/${layer}.png`);
   }
+  files.push(...rig.effects ?? []);
   const img = new Map<string, HTMLImageElement>();
   const loaded = await Promise.all(files.map((f) => loadImage(base + f + q)));
   files.forEach((f, i) => { if (loaded[i]) img.set(f, loaded[i]!); });
@@ -62,6 +66,8 @@ export const DOLL_ANIMS: SpriteDefJson["animations"] = {
   idle: { file: "(paper doll)", frames: 8, fps: 6, loop: true },
   walk: { file: "(paper doll)", frames: 8, fps: 12, loop: true, refMsPerCell: 150 },
   attack: { file: "(paper doll)", frames: 8, fps: 16, events: { hit: 4 } },
+  shoot: { file: "(paper doll)", frames: 12, fps: 20, events: { hit: 8 } },
+  cast: { file: "(paper doll)", frames: 12, fps: 16, events: { hit: 8 } },
   hit: { file: "(paper doll)", frames: 4, fps: 12 },
   death: { file: "(paper doll)", frames: 8, fps: 10, hold: true },
 };
@@ -75,6 +81,11 @@ interface Pose {
   angle: Record<string, number>;
   lift: Record<string, number>;
   hurt: number;
+  openHands?: string[];
+  bowDraw?: number;
+  arrowFlight?: number;
+  spell?: number;
+  farArmInFront?: boolean;
 }
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -146,6 +157,9 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
       const fall = Math.min(1, k * 1.25);
       p.rot = ease(fall) * 84;
       p.dx = -ease(fall) * 200; // the body is ~400 px long: centre it on the feet once it lies down
+      // A horizontal torso and cape extend below the standing sole. Keep the
+      // whole fallen silhouette inside the same frame, including its width.
+      p.dy = -ease(fall) * 72;
       p.hurt = 0.5 * (1 - k);
       p.angle.arm_near = (side ? 30 : -20 * out) * fall;
       p.angle.arm_far = (side ? -20 : 20 * out) * fall;
@@ -157,6 +171,92 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
 }
 
 // --- baking -------------------------------------------------------------------------------
+
+/** Two fixed-length arm bones. No per-frame scaling or stretched elbows. */
+export function aimArm(rig: Rig, view: string, p: Pose, side: "near" | "far", target: Vec, bend: number, wristAngle = 0) {
+  const parts = rig.views[view].parts;
+  const a = parts[`arm_${side}`], e = parts[`forearm_${side}`], w = parts[`hand_${side}`];
+  if (!a || !e || !w) return;
+  const [sx, sy] = a.pivot, [ex, ey] = e.pivot, [wx, wy] = w.pivot;
+  const l1 = Math.hypot(ex-sx, ey-sy), l2 = Math.hypot(wx-ex, wy-ey);
+  const dx = target[0]-sx, dy = target[1]-sy;
+  const d = Math.max(Math.abs(l1-l2)+0.01, Math.min(l1+l2-0.01, Math.hypot(dx,dy)));
+  const theta = Math.atan2(dy,dx);
+  const a1 = theta + bend*Math.acos(Math.max(-1,Math.min(1,(l1*l1+d*d-l2*l2)/(2*l1*d))));
+  const tx = sx+Math.cos(theta)*d, ty=sy+Math.sin(theta)*d;
+  const a2 = Math.atan2(ty-sy-Math.sin(a1)*l1, tx-sx-Math.cos(a1)*l1);
+  const rest1=Math.atan2(ey-sy,ex-sx), rest2=Math.atan2(wy-ey,wx-ex), deg=180/Math.PI;
+  p.angle[`arm_${side}`]=(a1-rest1)*deg;
+  p.angle[`forearm_${side}`]=(a2-a1-rest2+rest1)*deg;
+  p.angle[`hand_${side}`]=wristAngle-p.angle[`arm_${side}`]-p.angle[`forearm_${side}`];
+}
+
+/** Weapon actions add articulated elbows/wrists to the shared body poses. */
+export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n: number, motion = "melee"): Pose {
+  const p=poseAt(view,anim,f,n), side=view==="side", sign=view==="back"?-1:1;
+  const parts=rig.views[view].parts, near=parts.arm_near.pivot, far=parts.arm_far.pivot;
+  const k=f/Math.max(1,n-1), release=8/11;
+  const aim=(which:"near"|"far",x:number,y:number,bend:number,angle=0)=>aimArm(rig,view,p,which,[x,y],bend,angle);
+  const rest=(which:"near"|"far"):Vec=>which==="near"&&side&&motion!=="unarmed"?[near[0]-46,near[1]+65]:parts[`hand_${which}`]?.pivot ?? parts[`arm_${which}`].pivot;
+  const blendAim=(which:"near"|"far",target:Vec,t:number,bend:number,angle=0)=>{
+    const r=rest(which),start=which==="near"&&side&&motion!=="unarmed"?(motion==="cast"?-18:motion==="shoot"?-14:-5):0;
+    aim(which,lerp(r[0],target[0],t),lerp(r[1],target[1],t),bend,lerp(start,angle,t));
+  };
+  if(anim==="idle"||anim==="walk"||anim==="hit"||anim==="death") {
+    // Carry in FRONT of the chest/hips. The staff leans away from the face;
+    // moving the gripping hand behind the body is not a valid carry pose.
+    if(side && motion!=="unarmed") {
+      const sway=anim==="walk"?Math.sin(f/n*Math.PI*2)*4:0;
+      const carryAngle=motion==="cast"?-18:motion==="shoot"?-14:-5;
+      const angle=anim==="death"?lerp(carryAngle,0,ease(Math.min(1,k*3))):carryAngle;
+      aim("near",near[0]-46+sway,near[1]+65,-1,angle);
+    } else if(motion==="cast") aim("near",near[0]-28*sign,near[1]+72,-sign,-12*sign);
+    return p;
+  }
+  if(anim==="attack") {
+    // Reach keyframes keep the wrist attached and return to the actual carry pose.
+    const start=rest("near"),up:Vec=side?[near[0]+34,near[1]-29]:[near[0]-20*sign,near[1]-15];
+    const strike:Vec=side?[near[0]-76,near[1]+5]:[near[0]+62*sign,near[1]+20];
+    const mix=(a:Vec,b:Vec,t:number):Vec=>[lerp(a[0],b[0],t),lerp(a[1],b[1],t)];
+    const hand=k<.4?mix(start,up,ease(k/.4)):k<.62?mix(up,strike,ease((k-.4)/.22)):mix(strike,start,ease((k-.62)/.38));
+    const resting=side?-5:0,windup=95*sign,hit=side?25:-25*sign;
+    const wrist=k<.4?lerp(resting,windup,ease(k/.4)):k<.62?lerp(windup,hit,ease((k-.4)/.22)):lerp(hit,resting,ease((k-.62)/.38));
+    aim("near",hand[0],hand[1],side?-1:-sign,wrist);
+    p.angle.torso=(side?-5:4*sign)*Math.sin(k*Math.PI);
+    return p;
+  }
+  if(anim==="shoot") {
+    p.farArmInFront=true;
+    const ready=k<.22?ease(k/.22):k<.84?1:1-ease((k-.84)/.16);
+    const pull=k<.22?0:k<release?ease((k-.22)/(release-.22)):0;
+    const releaseHand=k<release?pull:Math.max(0,1-(k-release)/.14);
+    const bow:Vec=side?[near[0]-82,near[1]+8]:[near[0]-36*sign,near[1]+33];
+    const draw:Vec=side?[lerp(near[0]-45,far[0]+8,releaseHand),far[1]+8]:[lerp(near[0]+10*sign,far[0]-14*sign,releaseHand),far[1]+34];
+    blendAim("near",bow,ready,side?-1:-sign);
+    blendAim("far",draw,ready,side?-1:sign);
+    p.angle.thigh_near=(side?8:3*sign)*ready;p.angle.thigh_far=(side?-8:-3*sign)*ready;
+    p.bowDraw=pull;
+    if(k>=.22&&k<release)p.arrowFlight=-1;
+    if(k>=release&&k<.92)p.arrowFlight=(k-release)/(.92-release);
+    return p;
+  }
+  if(anim==="cast") {
+    p.farArmInFront=true;
+    // Near hand keeps the staff upright; far palm opens, gathers, then pushes outward.
+    const gather=k<.3?ease(k/.3):k<release?1:1-ease((k-release)/(1-release));
+    const burst=k>=release?Math.max(0,1-(k-release)/.2):0;
+    const staff:Vec=[near[0]-(side?46:28*sign),near[1]+(side?65:72)];
+    if(motion==="cast") aim("near",staff[0],staff[1],side?-1:-sign,side?-18:-12*sign);
+    else if(side&&motion!=="unarmed") aim("near",near[0]-46,near[1]+65,-1,motion==="shoot"?-14:-5);
+    const palm:Vec=side?[far[0]-58-burst*20,far[1]+20]:[far[0]+(30+burst*20)*sign,far[1]+20];
+    blendAim("far",palm,Math.max(gather,burst),side?-1:sign,side?95:160*sign);
+    p.openHands=["hand_far"];
+    p.spell=k<release?gather*.65:burst;
+    p.angle.head=0; // Do not reintroduce the unwanted tilted resting head.
+    return p;
+  }
+  return p;
+}
 
 const ROWS: Dir[] = ["S", "SW", "W", "NW", "N"];
 
@@ -187,11 +287,43 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
     g.setTransform(m);
     g.drawImage(im, 0, 0);
   };
-  for (const slot of v.order) {
+  const order=[...v.order];
+  if(view==="side"&&pose.farArmInFront) {
+    const far=["arm_far","forearm_far","hand_far"];
+    for(const part of far){const at=order.indexOf(part);if(at>=0)order.splice(at,1);}
+    order.splice(order.indexOf("weapon"),0,...far);
+  }
+  for (const slot of order) {
     const bone = v.parts[slot] ? slot : rig.attach[slot];
     const m = matrixOf(bone);
-    if (v.parts[slot] && !hidden.has(slot)) draw(`base/${view}/${slot}.png`, m);
+    if (v.parts[slot] && !hidden.has(slot)) draw(`base/${view}/${slot}${pose.openHands?.includes(slot) ? "_open" : ""}.png`, m);
     for (const it of gear) if (it.layers.includes(slot)) draw(`items/${it.visual}/${view}/${slot}.png`, m);
+  }
+  // Native line geometry follows the actual wrist transforms: a bowstring
+  // bends to the pulling hand; it is not another stretched painted limb.
+  const bow=gear.find(it=>it.motion==="shoot");
+  if(bow && v.parts.hand_near) {
+    const [wx,wy]=v.parts.hand_near.pivot, sign=view==="back"?-1:1;
+    const hand=matrixOf("hand_near"), other=matrixOf("hand_far");
+    const point=(m:DOMMatrix,x:number,y:number)=>new DOMPoint(x,y).matrixTransform(m);
+    const top=point(hand,wx+28*sign,wy+10-98), bottom=point(hand,wx+28*sign,wy+10+98);
+    const middle=pose.bowDraw!==undefined&&pose.bowDraw>0?point(other,...v.parts.hand_far.pivot):point(hand,wx+28*sign,wy+10);
+    g.setTransform(1,0,0,1,0,0);g.strokeStyle="#e9d6ac";g.lineWidth=1;
+    g.beginPath();g.moveTo(top.x,top.y);g.lineTo(middle.x,middle.y+((pose.bowDraw??0)>0?5:0));g.lineTo(bottom.x,bottom.y);g.stroke();
+    if(pose.arrowFlight!==undefined) {
+      const arrow=kit.img.get("effects/arrow.png");
+      const step=pose.arrowFlight<0?0:pose.arrowFlight*95;
+      const x=middle.x-sign*step, y=middle.y+5;
+      if(arrow&&x>65&&x<rig.frame-65){g.save();g.translate(x,y);g.scale(sign,1);g.drawImage(arrow,0,0,120,16,-60,-4,60,8);g.restore();}
+    }
+  }
+  if(pose.spell && v.parts.hand_far) {
+    const [x,y]=v.parts.hand_far.pivot;const pt=new DOMPoint(x,y+22).matrixTransform(matrixOf("hand_far"));
+    g.setTransform(1,0,0,1,0,0);const r=8+pose.spell*10;
+    const halo=g.createRadialGradient(pt.x,pt.y,0,pt.x,pt.y,r);
+    halo.addColorStop(0,"rgba(226,255,244,.95)");halo.addColorStop(.35,"rgba(96,224,218,.65)");halo.addColorStop(1,"rgba(70,190,212,0)");
+    g.fillStyle=halo;g.beginPath();g.arc(pt.x,pt.y,r,0,Math.PI*2);g.fill();
+    g.strokeStyle=`rgba(154,242,233,${pose.spell})`;g.lineWidth=1;g.beginPath();g.arc(pt.x,pt.y,r*.7,0,Math.PI*2);g.stroke();
   }
   g.setTransform(1, 0, 0, 1, 0, 0);
   if (pose.hurt > 0) {
@@ -200,6 +332,17 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
     g.fillRect(0, 0, rig.frame, rig.frame);
     g.globalCompositeOperation = "source-over";
   }
+  return Object.fromEntries(Object.entries(v.parts).map(([part,def])=>{
+    const pt=new DOMPoint(...def.pivot).matrixTransform(matrixOf(part));return [part,[pt.x,pt.y] as Vec];
+  }));
+}
+
+/** Same renderer for the artist's pose preview and the live sprite sheets. */
+export function renderWayfarerPose(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, gear: readonly string[], anim: AnimName="idle", frame=0) {
+  const looks=gear.map(id=>kit.items[id]).filter((it):it is ItemLook=>!!it);
+  const motion=looks.find(it=>it.slot==="weapon")?.motion ?? "unarmed";
+  const action=anim==="attack"&&(motion==="shoot"||motion==="cast")?motion:anim;
+  return drawCell(g,kit,view,actionPose(kit.rig,view,action,frame,DOLL_ANIMS[action]!.frames,motion),looks);
 }
 
 /** The sprite definition every baked outfit shares. */
@@ -219,7 +362,10 @@ export function dollJson(rig: Rig, id = "wayfarer"): SpriteDefJson {
 /** Bakes the sheets for one outfit (equipped item ids; unknown ids are ignored). */
 export function bakeWayfarer(kit: PaperDollKit, gear: readonly string[] = []): SpriteDef {
   const looks = gear.map((id) => kit.items[id]).filter((x): x is ItemLook => !!x);
+  const motion=looks.find(it=>it.slot==="weapon")?.motion ?? "unarmed";
   const json = dollJson(kit.rig, gear.length ? `wayfarer+${gear.join("+")}` : "wayfarer");
+  json.animations={...json.animations};
+  if(motion==="shoot"||motion==="cast") json.animations.attack={...DOLL_ANIMS[motion]!};
   const images: Partial<Record<AnimName, HTMLCanvasElement>> = {};
   const F = kit.rig.frame;
   for (const [name, def] of Object.entries(json.animations) as [AnimName, { frames: number }][]) {
@@ -233,7 +379,8 @@ export function bakeWayfarer(kit: PaperDollKit, gear: readonly string[] = []): S
         // Each frame on its own canvas so the hurt tint stays inside it.
         const cell = document.createElement("canvas");
         cell.width = cell.height = F;
-        drawCell(cell.getContext("2d")!, kit, view, poseAt(view, name, f, def.frames), looks);
+        const action=name==="attack"&&(motion==="shoot"||motion==="cast")?motion:name;
+        drawCell(cell.getContext("2d")!, kit, view, actionPose(kit.rig, view, action, f, def.frames, motion), looks);
         g.drawImage(cell, f * F, row * F);
       }
     });

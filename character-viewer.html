@@ -32,22 +32,35 @@
 <body>
   <header>
     <h1>Wayfarer Character Viewer</h1>
-    <p>วางไฟล์ PNG ใน <code>public/sprites/wayfarer/</code> แล้วกด "โหลดภาพใหม่" · หลักการวาดดู CHARACTER_ART_GUIDE.md</p>
+    <p>ภาพวาด Wayfarer · เปลี่ยนเสื้อ รองเท้า และอาวุธเพื่อเทียบรูปลักษณ์ · หน้าทดลองนี้ไม่เปลี่ยนอุปกรณ์ในบัญชีเกม</p>
   </header>
   <main>
     <aside>
       <h2>อุปกรณ์</h2>
       <div id="slots"></div>
+      <h2>ลองทั้งชุด</h2>
+      <div id="outfit-presets">
+        <button data-outfit="base">ชุดเริ่มต้น</button>
+        <button data-outfit="itm_0080">เสื้อคลุม + รองเท้า + ดาบ</button>
+        <button data-outfit="itm_0081">เสื้อคลุม + รองเท้า + ธนู</button>
+        <button data-outfit="itm_0082">เสื้อคลุม + รองเท้า + คทา</button>
+      </div>
       <h2>ท่า</h2>
       <select id="anim"></select>
+      <button id="try-melee">ทดสอบฟันดาบ</button>
+      <button id="try-shoot">ทดสอบยิงธนู</button>
+      <button id="try-cast">ทดสอบร่ายเวท</button>
+      <label><input type="checkbox" id="paused" /> หยุดเพื่อดูเฟรม</label>
+      <label>เฟรม <output id="frame-number">1</output><input type="range" id="frame" min="0" max="11" value="0" step="1" aria-label="เฟรมท่าทาง" /></label>
       <label><input type="checkbox" id="slow" /> เล่นช้า ×0.25</label>
-      <label><input type="checkbox" id="pivots" checked /> แสดงจุดหมุน (ท่ายืน)</label>
+      <label><input type="checkbox" id="pivots" /> แสดงจุดหมุน (ท่ายืน)</label>
       <button id="reload">โหลดภาพใหม่</button>
       <h2>ไฟล์ที่ยังไม่มี</h2>
       <div id="missing"></div>
     </aside>
     <section>
-      <h2>เคลื่อนไหว 5 ทิศ (อีก 3 ทิศเกมกลับด้านให้)</h2>
+      <h2>ทิศในเกม · ใช้ภาพวาด 3 มุม: หน้า / ข้าง / หลัง</h2>
+      <p>SW, W และ NW ใช้ภาพข้างร่วมกัน ส่วนอีกฝั่งกลับด้านภาพ · แยกท่าฟันดาบ ยิงธนู และร่ายเวท พร้อมข้อศอกและข้อมือ</p>
       <div class="cells" id="anim-cells"></div>
       <h2>ท่ายืนแยกมุม (ขนาดผืนวาดจริง 512×512 ย่อครึ่ง)</h2>
       <div class="cells" id="rest-cells"></div>

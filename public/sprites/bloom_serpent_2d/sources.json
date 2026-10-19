@@ -1,0 +1,9 @@
+{
+  "walk": "parts/walk-v2.png",
+  "actions": "parts/actions-v2.png",
+  "flipFrames": {
+    "actions": [
+      0
+    ]
+  }
+}

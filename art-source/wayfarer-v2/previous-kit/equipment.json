@@ -1,0 +1,10 @@
+{
+  "about": "How each equippable item looks on the Wayfarer. visual = folder under items/; layers = the parts it draws over (or 'weapon' / 'cape'). Files: items/<visual>/<front|side|back>/<layer>.png, same canvas and resting pose as the base parts. hides = base parts the item replaces instead of covering. See CHARACTER_ART_GUIDE.md.",
+  "items": {
+    "itm_0078": { "name": "Traveler Boots", "slot": "boots",  "visual": "traveler_boots", "layers": ["shin_near", "shin_far"] },
+    "itm_0079": { "name": "Leafweave Coat", "slot": "armor",  "visual": "leafweave_coat", "layers": ["torso", "arm_near", "arm_far", "cape"] },
+    "itm_0080": { "name": "Copper Saber",   "slot": "weapon", "visual": "copper_saber",   "layers": ["weapon"] },
+    "itm_0081": { "name": "Surveyor Bow",   "slot": "weapon", "visual": "surveyor_bow",   "layers": ["weapon"] },
+    "itm_0082": { "name": "Aether Rod",     "slot": "weapon", "visual": "aether_rod",     "layers": ["weapon"] }
+  }
+}

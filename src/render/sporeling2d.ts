@@ -1,5 +1,5 @@
 import { CLIPS, FRAME } from './mosskin2d';
-import type { AnimName, SpriteDefJson } from './spriteDef';
+import type { BasicAnimName as AnimName, SpriteDefJson } from './spriteDef';
 
 type PoseName = 'original' | 'walk' | 'attack' | 'collapse';
 type Box = [number, number, number, number];

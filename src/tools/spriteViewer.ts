@@ -3,7 +3,7 @@ import { CLIPS, FRAME, loadMosskinParts, makeMosskinSheets } from '../render/mos
 import { createSporelingSheets } from '../render/sporeling2d';
 import { createPaintedSheets } from '../render/paintedCreature2d';
 import { SpriteActor } from '../render/spriteActor';
-import { spriteFromImages, type AnimName } from '../render/spriteDef';
+import { spriteFromImages, type BasicAnimName as AnimName } from '../render/spriteDef';
 import './spriteViewer.css';
 
 interface Creature { id: string; name: string; number: string; label: string; hovering: boolean; gameMonster: string | null }
@@ -12,13 +12,13 @@ const creature = catalog.find(c => c.id === new URLSearchParams(location.search)
 const isSporeling = creature.id === 'sporeling';
 document.title = `${creature.name} · 2D Atelier`;
 
-const names: Record<AnimName, [string, string]> = {
+const names: Record<Exclude<AnimName, 'shoot' | 'cast'>, [string, string]> = {
   idle: ['ยืน', 'พักตัวเบา ๆ ในท่ายืนเดิม'], walk: ['เดิน', 'ภาพเต็มตัว 6 จังหวะ · ขาสั้นติดกับลำตัว'],
   attack: ['โจมตี', 'ย่อตัว เตรียมแรง แล้วพุ่งชน'], hit: ['โดนตี', 'ถอยรับแรงและกลับมาทรงตัว'],
   death: ['ตาย', 'ทรุดลง หลับตา และค้างท่าสุดท้าย'],
 };
 document.querySelector('#app')!.innerHTML = `
-  <header><a class="brand" href="/">ELYNDRA <span>/ ART ATELIER</span></a><nav><a href="/animation-viewer.html">ดูแบบ 3D ↗</a><span class="status">● 2D STUDY · 001</span></nav></header>
+  <header><a class="brand" href="/">ELYNDRA <span>/ ART ATELIER</span></a><nav><a href="/sprite-gallery.html">????? 25 ??? ?</a><a href="/animation-viewer.html">ดูแบบ 3D ↗</a><span class="status">● 2D STUDY · 001</span></nav></header>
   <main><section class="intro"><div><p class="eyebrow">LUMERIS · CREATURE ANIMATION</p><h1>A little life,<br><em>in two dimensions.</em></h1><p class="subtitle">Mosskin จากภาพต้นฉบับ สู่ตัวละคร 2D ที่ขยับได้</p></div><div class="edition">01<span>MOSSKIN</span></div></section>
   <section class="workspace"><div class="preview-panel"><div class="stage-top"><span><i></i> MOSSKIN <small>วิญญาณมอส</small></span><div class="segmented"><button data-mode="art" class="active">ภาพ 2D</button><button data-mode="game">ในฉากเกม</button></div></div>
     <div id="stage"><div class="stage-grid"></div><canvas id="art"></canvas><div id="game-stage" hidden></div><span class="stage-label">DAWNMEADOW SPECIMEN / 01</span><span id="loading">กำลังเตรียมภาพ…</span></div>

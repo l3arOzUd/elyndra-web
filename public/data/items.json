@@ -714,9 +714,10 @@
   "description": "Moss-lined boots. The first thing every Wayfarer crafts.",
   "equip": {
    "slot": "boots",
-   "defense": 3,
-   "max_hp": 20,
-   "min_level": 1
+   "kind": "evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 6
   }
  },
  {
@@ -729,9 +730,15 @@
   "description": "Glider fur woven on mycelium felt.",
   "equip": {
    "slot": "armor",
-   "defense": 7,
-   "max_hp": 60,
-   "min_level": 5
+   "kind": "evasion_shield",
+   "item_level": 5,
+   "min_level": 5,
+   "evasion": 24,
+   "shield": 18,
+   "req": {
+    "dex": 2,
+    "int": 2
+   }
   }
  },
  {
@@ -745,8 +752,9 @@
   "equip": {
    "slot": "weapon",
    "job": "vanguard",
-   "attack": 14,
-   "min_level": 7
+   "item_level": 7,
+   "min_level": 7,
+   "attack": 38
   }
  },
  {
@@ -760,8 +768,9 @@
   "equip": {
    "slot": "weapon",
    "job": "strider",
-   "attack": 13,
-   "min_level": 9
+   "item_level": 9,
+   "min_level": 9,
+   "attack": 46
   }
  },
  {
@@ -775,8 +784,9 @@
   "equip": {
    "slot": "weapon",
    "job": "arcanist",
-   "attack": 12,
-   "min_level": 12
+   "item_level": 12,
+   "min_level": 12,
+   "attack": 58
   }
  },
  {
@@ -1867,5 +1877,6554 @@
   "sell_price": 0,
   "stack_max": 1,
   "description": "A glyph-key cut from an Executor's mask. The Heart Warden lets its bearer descend into the Lattice Heart."
+ },
+ {
+  "id": "itm_1000",
+  "name": "Reset Scroll",
+  "category": "consumable",
+  "rarity": "uncommon",
+  "sell_price": 50,
+  "stack_max": 99,
+  "description": "Returns every stat point to be spent again.",
+  "use": {
+   "reset_stats": true,
+   "cooldown_ms": 1000
+  }
+ },
+ {
+  "id": "itm_1001",
+  "name": "Worn Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 42,
+  "stack_max": 1,
+  "description": "A tier 1 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 1,
+   "min_level": 1,
+   "attack": 16
+  }
+ },
+ {
+  "id": "itm_1002",
+  "name": "Worn Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 42,
+  "stack_max": 1,
+  "description": "A tier 1 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 1,
+   "min_level": 1,
+   "attack": 16
+  }
+ },
+ {
+  "id": "itm_1003",
+  "name": "Worn Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 42,
+  "stack_max": 1,
+  "description": "A tier 1 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 1,
+   "min_level": 1,
+   "attack": 16
+  }
+ },
+ {
+  "id": "itm_1004",
+  "name": "Worn Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 42,
+  "stack_max": 1,
+  "description": "A tier 1 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 1,
+   "min_level": 1,
+   "attack": 16
+  }
+ },
+ {
+  "id": "itm_1005",
+  "name": "Worn Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 21,
+  "stack_max": 1,
+  "description": "Tier 1 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 10,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1006",
+  "name": "Worn Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 21,
+  "stack_max": 1,
+  "description": "Tier 1 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 10,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1007",
+  "name": "Worn Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 21,
+  "stack_max": 1,
+  "description": "Tier 1 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 1,
+   "min_level": 1,
+   "shield": 9,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1008",
+  "name": "Worn Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 21,
+  "stack_max": 1,
+  "description": "Tier 1 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 6,
+   "evasion": 6,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1009",
+  "name": "Worn Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 21,
+  "stack_max": 1,
+  "description": "Tier 1 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 6,
+   "shield": 5,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1010",
+  "name": "Worn Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 21,
+  "stack_max": 1,
+  "description": "Tier 1 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 6,
+   "shield": 5,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1011",
+  "name": "Worn Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 30,
+  "stack_max": 1,
+  "description": "Tier 1 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 16,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1012",
+  "name": "Worn Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 30,
+  "stack_max": 1,
+  "description": "Tier 1 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 16,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1013",
+  "name": "Worn Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 30,
+  "stack_max": 1,
+  "description": "Tier 1 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 1,
+   "min_level": 1,
+   "shield": 15,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1014",
+  "name": "Worn Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 30,
+  "stack_max": 1,
+  "description": "Tier 1 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 10,
+   "evasion": 10,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1015",
+  "name": "Worn Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 30,
+  "stack_max": 1,
+  "description": "Tier 1 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 10,
+   "shield": 9,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1016",
+  "name": "Worn Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 30,
+  "stack_max": 1,
+  "description": "Tier 1 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 10,
+   "shield": 9,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1017",
+  "name": "Worn Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 6,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1018",
+  "name": "Worn Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 6,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1019",
+  "name": "Worn Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 1,
+   "min_level": 1,
+   "shield": 6,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1020",
+  "name": "Worn Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 4,
+   "evasion": 4,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1021",
+  "name": "Worn Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 4,
+   "shield": 4,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1022",
+  "name": "Worn Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 4,
+   "shield": 4,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1023",
+  "name": "Worn Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 24,
+  "stack_max": 1,
+  "description": "A tier 1 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 1,
+   "min_level": 1,
+   "implicit": [
+    [
+     "res_all",
+     2
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1024",
+  "name": "Bronze Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 154,
+  "stack_max": 1,
+  "description": "A tier 2 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 10,
+   "min_level": 10,
+   "attack": 50
+  }
+ },
+ {
+  "id": "itm_1025",
+  "name": "Bronze Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 154,
+  "stack_max": 1,
+  "description": "A tier 2 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 10,
+   "min_level": 10,
+   "attack": 50
+  }
+ },
+ {
+  "id": "itm_1026",
+  "name": "Bronze Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 154,
+  "stack_max": 1,
+  "description": "A tier 2 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 10,
+   "min_level": 10,
+   "attack": 50
+  }
+ },
+ {
+  "id": "itm_1027",
+  "name": "Bronze Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 154,
+  "stack_max": 1,
+  "description": "A tier 2 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 10,
+   "min_level": 10,
+   "attack": 50
+  }
+ },
+ {
+  "id": "itm_1028",
+  "name": "Bronze Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 77,
+  "stack_max": 1,
+  "description": "Tier 2 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 42,
+   "req": {
+    "vit": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1029",
+  "name": "Bronze Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 77,
+  "stack_max": 1,
+  "description": "Tier 2 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 10,
+   "min_level": 10,
+   "evasion": 42,
+   "req": {
+    "dex": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1030",
+  "name": "Bronze Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 77,
+  "stack_max": 1,
+  "description": "Tier 2 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 10,
+   "min_level": 10,
+   "shield": 32,
+   "req": {
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1031",
+  "name": "Bronze Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 77,
+  "stack_max": 1,
+  "description": "Tier 2 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 25,
+   "evasion": 25,
+   "req": {
+    "vit": 4,
+    "dex": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1032",
+  "name": "Bronze Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 77,
+  "stack_max": 1,
+  "description": "Tier 2 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 25,
+   "shield": 19,
+   "req": {
+    "vit": 4,
+    "int": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1033",
+  "name": "Bronze Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 77,
+  "stack_max": 1,
+  "description": "Tier 2 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 10,
+   "min_level": 10,
+   "evasion": 25,
+   "shield": 19,
+   "req": {
+    "dex": 4,
+    "int": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1034",
+  "name": "Bronze Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Tier 2 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 70,
+   "req": {
+    "vit": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1035",
+  "name": "Bronze Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Tier 2 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 10,
+   "min_level": 10,
+   "evasion": 70,
+   "req": {
+    "dex": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1036",
+  "name": "Bronze Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Tier 2 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 10,
+   "min_level": 10,
+   "shield": 54,
+   "req": {
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1037",
+  "name": "Bronze Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Tier 2 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 42,
+   "evasion": 42,
+   "req": {
+    "vit": 4,
+    "dex": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1038",
+  "name": "Bronze Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Tier 2 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 42,
+   "shield": 32,
+   "req": {
+    "vit": 4,
+    "int": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1039",
+  "name": "Bronze Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Tier 2 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 10,
+   "min_level": 10,
+   "evasion": 42,
+   "shield": 32,
+   "req": {
+    "dex": 4,
+    "int": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1040",
+  "name": "Bronze Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 28,
+   "req": {
+    "vit": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1041",
+  "name": "Bronze Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 10,
+   "min_level": 10,
+   "evasion": 28,
+   "req": {
+    "dex": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1042",
+  "name": "Bronze Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 10,
+   "min_level": 10,
+   "shield": 21,
+   "req": {
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1043",
+  "name": "Bronze Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 17,
+   "evasion": 17,
+   "req": {
+    "vit": 4,
+    "dex": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1044",
+  "name": "Bronze Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 17,
+   "shield": 13,
+   "req": {
+    "vit": 4,
+    "int": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1045",
+  "name": "Bronze Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 10,
+   "min_level": 10,
+   "evasion": 17,
+   "shield": 13,
+   "req": {
+    "dex": 4,
+    "int": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1046",
+  "name": "Bronze Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 88,
+  "stack_max": 1,
+  "description": "A tier 2 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 10,
+   "min_level": 10,
+   "implicit": [
+    [
+     "res_all",
+     3
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1047",
+  "name": "Iron Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 280,
+  "stack_max": 1,
+  "description": "A tier 3 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 20,
+   "min_level": 20,
+   "attack": 92
+  }
+ },
+ {
+  "id": "itm_1048",
+  "name": "Iron Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 280,
+  "stack_max": 1,
+  "description": "A tier 3 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 20,
+   "min_level": 20,
+   "attack": 92
+  }
+ },
+ {
+  "id": "itm_1049",
+  "name": "Iron Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 280,
+  "stack_max": 1,
+  "description": "A tier 3 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 20,
+   "min_level": 20,
+   "attack": 92
+  }
+ },
+ {
+  "id": "itm_1050",
+  "name": "Iron Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 280,
+  "stack_max": 1,
+  "description": "A tier 3 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 20,
+   "min_level": 20,
+   "attack": 92
+  }
+ },
+ {
+  "id": "itm_1051",
+  "name": "Iron Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 140,
+  "stack_max": 1,
+  "description": "Tier 3 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 78,
+   "req": {
+    "vit": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1052",
+  "name": "Iron Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 140,
+  "stack_max": 1,
+  "description": "Tier 3 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 20,
+   "min_level": 20,
+   "evasion": 78,
+   "req": {
+    "dex": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1053",
+  "name": "Iron Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 140,
+  "stack_max": 1,
+  "description": "Tier 3 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 20,
+   "min_level": 20,
+   "shield": 71,
+   "req": {
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1054",
+  "name": "Iron Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 140,
+  "stack_max": 1,
+  "description": "Tier 3 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 47,
+   "evasion": 47,
+   "req": {
+    "vit": 9,
+    "dex": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1055",
+  "name": "Iron Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 140,
+  "stack_max": 1,
+  "description": "Tier 3 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 47,
+   "shield": 42,
+   "req": {
+    "vit": 9,
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1056",
+  "name": "Iron Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 140,
+  "stack_max": 1,
+  "description": "Tier 3 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 20,
+   "min_level": 20,
+   "evasion": 47,
+   "shield": 42,
+   "req": {
+    "dex": 9,
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1057",
+  "name": "Iron Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 200,
+  "stack_max": 1,
+  "description": "Tier 3 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 130,
+   "req": {
+    "vit": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1058",
+  "name": "Iron Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 200,
+  "stack_max": 1,
+  "description": "Tier 3 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 20,
+   "min_level": 20,
+   "evasion": 130,
+   "req": {
+    "dex": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1059",
+  "name": "Iron Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 200,
+  "stack_max": 1,
+  "description": "Tier 3 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 20,
+   "min_level": 20,
+   "shield": 118,
+   "req": {
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1060",
+  "name": "Iron Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 200,
+  "stack_max": 1,
+  "description": "Tier 3 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 78,
+   "evasion": 78,
+   "req": {
+    "vit": 9,
+    "dex": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1061",
+  "name": "Iron Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 200,
+  "stack_max": 1,
+  "description": "Tier 3 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 78,
+   "shield": 71,
+   "req": {
+    "vit": 9,
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1062",
+  "name": "Iron Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 200,
+  "stack_max": 1,
+  "description": "Tier 3 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 20,
+   "min_level": 20,
+   "evasion": 78,
+   "shield": 71,
+   "req": {
+    "dex": 9,
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1063",
+  "name": "Iron Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 52,
+   "req": {
+    "vit": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1064",
+  "name": "Iron Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 20,
+   "min_level": 20,
+   "evasion": 52,
+   "req": {
+    "dex": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1065",
+  "name": "Iron Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 20,
+   "min_level": 20,
+   "shield": 47,
+   "req": {
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1066",
+  "name": "Iron Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 31,
+   "evasion": 31,
+   "req": {
+    "vit": 9,
+    "dex": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1067",
+  "name": "Iron Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 31,
+   "shield": 28,
+   "req": {
+    "vit": 9,
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1068",
+  "name": "Iron Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 20,
+   "min_level": 20,
+   "evasion": 31,
+   "shield": 28,
+   "req": {
+    "dex": 9,
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1069",
+  "name": "Iron Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 160,
+  "stack_max": 1,
+  "description": "A tier 3 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 20,
+   "min_level": 20,
+   "implicit": [
+    [
+     "res_all",
+     4
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1070",
+  "name": "Steel Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 406,
+  "stack_max": 1,
+  "description": "A tier 4 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 30,
+   "min_level": 30,
+   "attack": 138
+  }
+ },
+ {
+  "id": "itm_1071",
+  "name": "Steel Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 406,
+  "stack_max": 1,
+  "description": "A tier 4 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 30,
+   "min_level": 30,
+   "attack": 138
+  }
+ },
+ {
+  "id": "itm_1072",
+  "name": "Steel Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 406,
+  "stack_max": 1,
+  "description": "A tier 4 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 30,
+   "min_level": 30,
+   "attack": 138
+  }
+ },
+ {
+  "id": "itm_1073",
+  "name": "Steel Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 406,
+  "stack_max": 1,
+  "description": "A tier 4 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 30,
+   "min_level": 30,
+   "attack": 138
+  }
+ },
+ {
+  "id": "itm_1074",
+  "name": "Steel Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 203,
+  "stack_max": 1,
+  "description": "Tier 4 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 114,
+   "req": {
+    "vit": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1075",
+  "name": "Steel Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 203,
+  "stack_max": 1,
+  "description": "Tier 4 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 30,
+   "min_level": 30,
+   "evasion": 114,
+   "req": {
+    "dex": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1076",
+  "name": "Steel Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 203,
+  "stack_max": 1,
+  "description": "Tier 4 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 30,
+   "min_level": 30,
+   "shield": 122,
+   "req": {
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1077",
+  "name": "Steel Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 203,
+  "stack_max": 1,
+  "description": "Tier 4 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 68,
+   "evasion": 68,
+   "req": {
+    "vit": 14,
+    "dex": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1078",
+  "name": "Steel Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 203,
+  "stack_max": 1,
+  "description": "Tier 4 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 68,
+   "shield": 73,
+   "req": {
+    "vit": 14,
+    "int": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1079",
+  "name": "Steel Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 203,
+  "stack_max": 1,
+  "description": "Tier 4 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 30,
+   "min_level": 30,
+   "evasion": 68,
+   "shield": 73,
+   "req": {
+    "dex": 14,
+    "int": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1080",
+  "name": "Steel Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 290,
+  "stack_max": 1,
+  "description": "Tier 4 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 190,
+   "req": {
+    "vit": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1081",
+  "name": "Steel Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 290,
+  "stack_max": 1,
+  "description": "Tier 4 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 30,
+   "min_level": 30,
+   "evasion": 190,
+   "req": {
+    "dex": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1082",
+  "name": "Steel Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 290,
+  "stack_max": 1,
+  "description": "Tier 4 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 30,
+   "min_level": 30,
+   "shield": 204,
+   "req": {
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1083",
+  "name": "Steel Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 290,
+  "stack_max": 1,
+  "description": "Tier 4 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 114,
+   "evasion": 114,
+   "req": {
+    "vit": 14,
+    "dex": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1084",
+  "name": "Steel Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 290,
+  "stack_max": 1,
+  "description": "Tier 4 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 114,
+   "shield": 122,
+   "req": {
+    "vit": 14,
+    "int": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1085",
+  "name": "Steel Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 290,
+  "stack_max": 1,
+  "description": "Tier 4 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 30,
+   "min_level": 30,
+   "evasion": 114,
+   "shield": 122,
+   "req": {
+    "dex": 14,
+    "int": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1086",
+  "name": "Steel Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 76,
+   "req": {
+    "vit": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1087",
+  "name": "Steel Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 30,
+   "min_level": 30,
+   "evasion": 76,
+   "req": {
+    "dex": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1088",
+  "name": "Steel Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 30,
+   "min_level": 30,
+   "shield": 82,
+   "req": {
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1089",
+  "name": "Steel Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 46,
+   "evasion": 46,
+   "req": {
+    "vit": 14,
+    "dex": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1090",
+  "name": "Steel Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 46,
+   "shield": 49,
+   "req": {
+    "vit": 14,
+    "int": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1091",
+  "name": "Steel Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 30,
+   "min_level": 30,
+   "evasion": 46,
+   "shield": 49,
+   "req": {
+    "dex": 14,
+    "int": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1092",
+  "name": "Steel Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 232,
+  "stack_max": 1,
+  "description": "A tier 4 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 30,
+   "min_level": 30,
+   "implicit": [
+    [
+     "res_all",
+     5
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1093",
+  "name": "Cobalt Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 532,
+  "stack_max": 1,
+  "description": "A tier 5 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 40,
+   "min_level": 40,
+   "attack": 188
+  }
+ },
+ {
+  "id": "itm_1094",
+  "name": "Cobalt Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 532,
+  "stack_max": 1,
+  "description": "A tier 5 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 40,
+   "min_level": 40,
+   "attack": 188
+  }
+ },
+ {
+  "id": "itm_1095",
+  "name": "Cobalt Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 532,
+  "stack_max": 1,
+  "description": "A tier 5 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 40,
+   "min_level": 40,
+   "attack": 188
+  }
+ },
+ {
+  "id": "itm_1096",
+  "name": "Cobalt Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 532,
+  "stack_max": 1,
+  "description": "A tier 5 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 40,
+   "min_level": 40,
+   "attack": 188
+  }
+ },
+ {
+  "id": "itm_1097",
+  "name": "Cobalt Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 266,
+  "stack_max": 1,
+  "description": "Tier 5 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 150,
+   "req": {
+    "vit": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1098",
+  "name": "Cobalt Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 266,
+  "stack_max": 1,
+  "description": "Tier 5 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 40,
+   "min_level": 40,
+   "evasion": 150,
+   "req": {
+    "dex": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1099",
+  "name": "Cobalt Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 266,
+  "stack_max": 1,
+  "description": "Tier 5 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 40,
+   "min_level": 40,
+   "shield": 188,
+   "req": {
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1100",
+  "name": "Cobalt Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 266,
+  "stack_max": 1,
+  "description": "Tier 5 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 90,
+   "evasion": 90,
+   "req": {
+    "vit": 19,
+    "dex": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1101",
+  "name": "Cobalt Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 266,
+  "stack_max": 1,
+  "description": "Tier 5 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 90,
+   "shield": 113,
+   "req": {
+    "vit": 19,
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1102",
+  "name": "Cobalt Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 266,
+  "stack_max": 1,
+  "description": "Tier 5 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 40,
+   "min_level": 40,
+   "evasion": 90,
+   "shield": 113,
+   "req": {
+    "dex": 19,
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1103",
+  "name": "Cobalt Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 380,
+  "stack_max": 1,
+  "description": "Tier 5 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 250,
+   "req": {
+    "vit": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1104",
+  "name": "Cobalt Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 380,
+  "stack_max": 1,
+  "description": "Tier 5 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 40,
+   "min_level": 40,
+   "evasion": 250,
+   "req": {
+    "dex": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1105",
+  "name": "Cobalt Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 380,
+  "stack_max": 1,
+  "description": "Tier 5 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 40,
+   "min_level": 40,
+   "shield": 313,
+   "req": {
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1106",
+  "name": "Cobalt Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 380,
+  "stack_max": 1,
+  "description": "Tier 5 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 150,
+   "evasion": 150,
+   "req": {
+    "vit": 19,
+    "dex": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1107",
+  "name": "Cobalt Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 380,
+  "stack_max": 1,
+  "description": "Tier 5 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 150,
+   "shield": 188,
+   "req": {
+    "vit": 19,
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1108",
+  "name": "Cobalt Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 380,
+  "stack_max": 1,
+  "description": "Tier 5 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 40,
+   "min_level": 40,
+   "evasion": 150,
+   "shield": 188,
+   "req": {
+    "dex": 19,
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1109",
+  "name": "Cobalt Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 100,
+   "req": {
+    "vit": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1110",
+  "name": "Cobalt Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 40,
+   "min_level": 40,
+   "evasion": 100,
+   "req": {
+    "dex": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1111",
+  "name": "Cobalt Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 40,
+   "min_level": 40,
+   "shield": 125,
+   "req": {
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1112",
+  "name": "Cobalt Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 60,
+   "evasion": 60,
+   "req": {
+    "vit": 19,
+    "dex": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1113",
+  "name": "Cobalt Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 60,
+   "shield": 75,
+   "req": {
+    "vit": 19,
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1114",
+  "name": "Cobalt Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 40,
+   "min_level": 40,
+   "evasion": 60,
+   "shield": 75,
+   "req": {
+    "dex": 19,
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1115",
+  "name": "Cobalt Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 304,
+  "stack_max": 1,
+  "description": "A tier 5 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 40,
+   "min_level": 40,
+   "implicit": [
+    [
+     "res_all",
+     6
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1116",
+  "name": "Runic Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 658,
+  "stack_max": 1,
+  "description": "A tier 6 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 50,
+   "min_level": 50,
+   "attack": 242
+  }
+ },
+ {
+  "id": "itm_1117",
+  "name": "Runic Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 658,
+  "stack_max": 1,
+  "description": "A tier 6 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 50,
+   "min_level": 50,
+   "attack": 242
+  }
+ },
+ {
+  "id": "itm_1118",
+  "name": "Runic Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 658,
+  "stack_max": 1,
+  "description": "A tier 6 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 50,
+   "min_level": 50,
+   "attack": 242
+  }
+ },
+ {
+  "id": "itm_1119",
+  "name": "Runic Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 658,
+  "stack_max": 1,
+  "description": "A tier 6 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 50,
+   "min_level": 50,
+   "attack": 242
+  }
+ },
+ {
+  "id": "itm_1120",
+  "name": "Runic Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 329,
+  "stack_max": 1,
+  "description": "Tier 6 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 186,
+   "req": {
+    "vit": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1121",
+  "name": "Runic Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 329,
+  "stack_max": 1,
+  "description": "Tier 6 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 50,
+   "min_level": 50,
+   "evasion": 186,
+   "req": {
+    "dex": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1122",
+  "name": "Runic Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 329,
+  "stack_max": 1,
+  "description": "Tier 6 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 50,
+   "min_level": 50,
+   "shield": 267,
+   "req": {
+    "int": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1123",
+  "name": "Runic Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 329,
+  "stack_max": 1,
+  "description": "Tier 6 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 112,
+   "evasion": 112,
+   "req": {
+    "vit": 24,
+    "dex": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1124",
+  "name": "Runic Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 329,
+  "stack_max": 1,
+  "description": "Tier 6 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 112,
+   "shield": 160,
+   "req": {
+    "vit": 24,
+    "int": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1125",
+  "name": "Runic Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 329,
+  "stack_max": 1,
+  "description": "Tier 6 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 50,
+   "min_level": 50,
+   "evasion": 112,
+   "shield": 160,
+   "req": {
+    "dex": 24,
+    "int": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1126",
+  "name": "Runic Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 470,
+  "stack_max": 1,
+  "description": "Tier 6 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 310,
+   "req": {
+    "vit": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1127",
+  "name": "Runic Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 470,
+  "stack_max": 1,
+  "description": "Tier 6 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 50,
+   "min_level": 50,
+   "evasion": 310,
+   "req": {
+    "dex": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1128",
+  "name": "Runic Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 470,
+  "stack_max": 1,
+  "description": "Tier 6 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 50,
+   "min_level": 50,
+   "shield": 445,
+   "req": {
+    "int": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1129",
+  "name": "Runic Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 470,
+  "stack_max": 1,
+  "description": "Tier 6 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 186,
+   "evasion": 186,
+   "req": {
+    "vit": 24,
+    "dex": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1130",
+  "name": "Runic Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 470,
+  "stack_max": 1,
+  "description": "Tier 6 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 186,
+   "shield": 267,
+   "req": {
+    "vit": 24,
+    "int": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1131",
+  "name": "Runic Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 470,
+  "stack_max": 1,
+  "description": "Tier 6 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 50,
+   "min_level": 50,
+   "evasion": 186,
+   "shield": 267,
+   "req": {
+    "dex": 24,
+    "int": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1132",
+  "name": "Runic Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 124,
+   "req": {
+    "vit": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1133",
+  "name": "Runic Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 50,
+   "min_level": 50,
+   "evasion": 124,
+   "req": {
+    "dex": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1134",
+  "name": "Runic Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 50,
+   "min_level": 50,
+   "shield": 178,
+   "req": {
+    "int": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1135",
+  "name": "Runic Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 74,
+   "evasion": 74,
+   "req": {
+    "vit": 24,
+    "dex": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1136",
+  "name": "Runic Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 74,
+   "shield": 107,
+   "req": {
+    "vit": 24,
+    "int": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1137",
+  "name": "Runic Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 50,
+   "min_level": 50,
+   "evasion": 74,
+   "shield": 107,
+   "req": {
+    "dex": 24,
+    "int": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1138",
+  "name": "Runic Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 376,
+  "stack_max": 1,
+  "description": "A tier 6 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 50,
+   "min_level": 50,
+   "implicit": [
+    [
+     "res_all",
+     7
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1139",
+  "name": "Mythril Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 784,
+  "stack_max": 1,
+  "description": "A tier 7 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 60,
+   "min_level": 60,
+   "attack": 300
+  }
+ },
+ {
+  "id": "itm_1140",
+  "name": "Mythril Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 784,
+  "stack_max": 1,
+  "description": "A tier 7 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 60,
+   "min_level": 60,
+   "attack": 300
+  }
+ },
+ {
+  "id": "itm_1141",
+  "name": "Mythril Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 784,
+  "stack_max": 1,
+  "description": "A tier 7 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 60,
+   "min_level": 60,
+   "attack": 300
+  }
+ },
+ {
+  "id": "itm_1142",
+  "name": "Mythril Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 784,
+  "stack_max": 1,
+  "description": "A tier 7 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 60,
+   "min_level": 60,
+   "attack": 300
+  }
+ },
+ {
+  "id": "itm_1143",
+  "name": "Mythril Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 392,
+  "stack_max": 1,
+  "description": "Tier 7 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 222,
+   "req": {
+    "vit": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1144",
+  "name": "Mythril Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 392,
+  "stack_max": 1,
+  "description": "Tier 7 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 60,
+   "min_level": 60,
+   "evasion": 222,
+   "req": {
+    "dex": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1145",
+  "name": "Mythril Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 392,
+  "stack_max": 1,
+  "description": "Tier 7 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 60,
+   "min_level": 60,
+   "shield": 359,
+   "req": {
+    "int": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1146",
+  "name": "Mythril Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 392,
+  "stack_max": 1,
+  "description": "Tier 7 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 133,
+   "evasion": 133,
+   "req": {
+    "vit": 29,
+    "dex": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1147",
+  "name": "Mythril Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 392,
+  "stack_max": 1,
+  "description": "Tier 7 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 133,
+   "shield": 215,
+   "req": {
+    "vit": 29,
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1148",
+  "name": "Mythril Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 392,
+  "stack_max": 1,
+  "description": "Tier 7 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 60,
+   "min_level": 60,
+   "evasion": 133,
+   "shield": 215,
+   "req": {
+    "dex": 29,
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1149",
+  "name": "Mythril Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 560,
+  "stack_max": 1,
+  "description": "Tier 7 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 370,
+   "req": {
+    "vit": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1150",
+  "name": "Mythril Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 560,
+  "stack_max": 1,
+  "description": "Tier 7 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 60,
+   "min_level": 60,
+   "evasion": 370,
+   "req": {
+    "dex": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1151",
+  "name": "Mythril Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 560,
+  "stack_max": 1,
+  "description": "Tier 7 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 60,
+   "min_level": 60,
+   "shield": 599,
+   "req": {
+    "int": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1152",
+  "name": "Mythril Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 560,
+  "stack_max": 1,
+  "description": "Tier 7 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 222,
+   "evasion": 222,
+   "req": {
+    "vit": 29,
+    "dex": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1153",
+  "name": "Mythril Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 560,
+  "stack_max": 1,
+  "description": "Tier 7 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 222,
+   "shield": 359,
+   "req": {
+    "vit": 29,
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1154",
+  "name": "Mythril Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 560,
+  "stack_max": 1,
+  "description": "Tier 7 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 60,
+   "min_level": 60,
+   "evasion": 222,
+   "shield": 359,
+   "req": {
+    "dex": 29,
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1155",
+  "name": "Mythril Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 148,
+   "req": {
+    "vit": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1156",
+  "name": "Mythril Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 60,
+   "min_level": 60,
+   "evasion": 148,
+   "req": {
+    "dex": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1157",
+  "name": "Mythril Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 60,
+   "min_level": 60,
+   "shield": 239,
+   "req": {
+    "int": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1158",
+  "name": "Mythril Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 89,
+   "evasion": 89,
+   "req": {
+    "vit": 29,
+    "dex": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1159",
+  "name": "Mythril Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 89,
+   "shield": 144,
+   "req": {
+    "vit": 29,
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1160",
+  "name": "Mythril Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 60,
+   "min_level": 60,
+   "evasion": 89,
+   "shield": 144,
+   "req": {
+    "dex": 29,
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1161",
+  "name": "Mythril Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 448,
+  "stack_max": 1,
+  "description": "A tier 7 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 60,
+   "min_level": 60,
+   "implicit": [
+    [
+     "res_all",
+     8
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1162",
+  "name": "Ember Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 910,
+  "stack_max": 1,
+  "description": "A tier 8 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 70,
+   "min_level": 70,
+   "attack": 362
+  }
+ },
+ {
+  "id": "itm_1163",
+  "name": "Ember Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 910,
+  "stack_max": 1,
+  "description": "A tier 8 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 70,
+   "min_level": 70,
+   "attack": 362
+  }
+ },
+ {
+  "id": "itm_1164",
+  "name": "Ember Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 910,
+  "stack_max": 1,
+  "description": "A tier 8 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 70,
+   "min_level": 70,
+   "attack": 362
+  }
+ },
+ {
+  "id": "itm_1165",
+  "name": "Ember Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 910,
+  "stack_max": 1,
+  "description": "A tier 8 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 70,
+   "min_level": 70,
+   "attack": 362
+  }
+ },
+ {
+  "id": "itm_1166",
+  "name": "Ember Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 455,
+  "stack_max": 1,
+  "description": "Tier 8 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 258,
+   "req": {
+    "vit": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1167",
+  "name": "Ember Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 455,
+  "stack_max": 1,
+  "description": "Tier 8 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 70,
+   "min_level": 70,
+   "evasion": 258,
+   "req": {
+    "dex": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1168",
+  "name": "Ember Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 455,
+  "stack_max": 1,
+  "description": "Tier 8 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 70,
+   "min_level": 70,
+   "shield": 465,
+   "req": {
+    "int": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1169",
+  "name": "Ember Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 455,
+  "stack_max": 1,
+  "description": "Tier 8 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 155,
+   "evasion": 155,
+   "req": {
+    "vit": 34,
+    "dex": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1170",
+  "name": "Ember Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 455,
+  "stack_max": 1,
+  "description": "Tier 8 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 155,
+   "shield": 279,
+   "req": {
+    "vit": 34,
+    "int": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1171",
+  "name": "Ember Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 455,
+  "stack_max": 1,
+  "description": "Tier 8 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 70,
+   "min_level": 70,
+   "evasion": 155,
+   "shield": 279,
+   "req": {
+    "dex": 34,
+    "int": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1172",
+  "name": "Ember Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 650,
+  "stack_max": 1,
+  "description": "Tier 8 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 430,
+   "req": {
+    "vit": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1173",
+  "name": "Ember Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 650,
+  "stack_max": 1,
+  "description": "Tier 8 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 70,
+   "min_level": 70,
+   "evasion": 430,
+   "req": {
+    "dex": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1174",
+  "name": "Ember Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 650,
+  "stack_max": 1,
+  "description": "Tier 8 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 70,
+   "min_level": 70,
+   "shield": 775,
+   "req": {
+    "int": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1175",
+  "name": "Ember Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 650,
+  "stack_max": 1,
+  "description": "Tier 8 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 258,
+   "evasion": 258,
+   "req": {
+    "vit": 34,
+    "dex": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1176",
+  "name": "Ember Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 650,
+  "stack_max": 1,
+  "description": "Tier 8 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 258,
+   "shield": 465,
+   "req": {
+    "vit": 34,
+    "int": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1177",
+  "name": "Ember Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 650,
+  "stack_max": 1,
+  "description": "Tier 8 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 70,
+   "min_level": 70,
+   "evasion": 258,
+   "shield": 465,
+   "req": {
+    "dex": 34,
+    "int": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1178",
+  "name": "Ember Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 172,
+   "req": {
+    "vit": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1179",
+  "name": "Ember Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 70,
+   "min_level": 70,
+   "evasion": 172,
+   "req": {
+    "dex": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1180",
+  "name": "Ember Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 70,
+   "min_level": 70,
+   "shield": 310,
+   "req": {
+    "int": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1181",
+  "name": "Ember Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 103,
+   "evasion": 103,
+   "req": {
+    "vit": 34,
+    "dex": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1182",
+  "name": "Ember Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 103,
+   "shield": 186,
+   "req": {
+    "vit": 34,
+    "int": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1183",
+  "name": "Ember Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 70,
+   "min_level": 70,
+   "evasion": 103,
+   "shield": 186,
+   "req": {
+    "dex": 34,
+    "int": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1184",
+  "name": "Ember Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 520,
+  "stack_max": 1,
+  "description": "A tier 8 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 70,
+   "min_level": 70,
+   "implicit": [
+    [
+     "res_all",
+     9
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1185",
+  "name": "Star Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 1036,
+  "stack_max": 1,
+  "description": "A tier 9 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 80,
+   "min_level": 80,
+   "attack": 428
+  }
+ },
+ {
+  "id": "itm_1186",
+  "name": "Star Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 1036,
+  "stack_max": 1,
+  "description": "A tier 9 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 80,
+   "min_level": 80,
+   "attack": 428
+  }
+ },
+ {
+  "id": "itm_1187",
+  "name": "Star Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 1036,
+  "stack_max": 1,
+  "description": "A tier 9 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 80,
+   "min_level": 80,
+   "attack": 428
+  }
+ },
+ {
+  "id": "itm_1188",
+  "name": "Star Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 1036,
+  "stack_max": 1,
+  "description": "A tier 9 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 80,
+   "min_level": 80,
+   "attack": 428
+  }
+ },
+ {
+  "id": "itm_1189",
+  "name": "Star Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 518,
+  "stack_max": 1,
+  "description": "Tier 9 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 294,
+   "req": {
+    "vit": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1190",
+  "name": "Star Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 518,
+  "stack_max": 1,
+  "description": "Tier 9 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 80,
+   "min_level": 80,
+   "evasion": 294,
+   "req": {
+    "dex": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1191",
+  "name": "Star Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 518,
+  "stack_max": 1,
+  "description": "Tier 9 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 80,
+   "min_level": 80,
+   "shield": 584,
+   "req": {
+    "int": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1192",
+  "name": "Star Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 518,
+  "stack_max": 1,
+  "description": "Tier 9 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 176,
+   "evasion": 176,
+   "req": {
+    "vit": 39,
+    "dex": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1193",
+  "name": "Star Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 518,
+  "stack_max": 1,
+  "description": "Tier 9 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 176,
+   "shield": 351,
+   "req": {
+    "vit": 39,
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1194",
+  "name": "Star Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 518,
+  "stack_max": 1,
+  "description": "Tier 9 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 80,
+   "min_level": 80,
+   "evasion": 176,
+   "shield": 351,
+   "req": {
+    "dex": 39,
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1195",
+  "name": "Star Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 740,
+  "stack_max": 1,
+  "description": "Tier 9 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 490,
+   "req": {
+    "vit": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1196",
+  "name": "Star Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 740,
+  "stack_max": 1,
+  "description": "Tier 9 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 80,
+   "min_level": 80,
+   "evasion": 490,
+   "req": {
+    "dex": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1197",
+  "name": "Star Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 740,
+  "stack_max": 1,
+  "description": "Tier 9 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 80,
+   "min_level": 80,
+   "shield": 974,
+   "req": {
+    "int": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1198",
+  "name": "Star Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 740,
+  "stack_max": 1,
+  "description": "Tier 9 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 294,
+   "evasion": 294,
+   "req": {
+    "vit": 39,
+    "dex": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1199",
+  "name": "Star Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 740,
+  "stack_max": 1,
+  "description": "Tier 9 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 294,
+   "shield": 584,
+   "req": {
+    "vit": 39,
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1200",
+  "name": "Star Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 740,
+  "stack_max": 1,
+  "description": "Tier 9 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 80,
+   "min_level": 80,
+   "evasion": 294,
+   "shield": 584,
+   "req": {
+    "dex": 39,
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1201",
+  "name": "Star Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 196,
+   "req": {
+    "vit": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1202",
+  "name": "Star Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 80,
+   "min_level": 80,
+   "evasion": 196,
+   "req": {
+    "dex": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1203",
+  "name": "Star Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 80,
+   "min_level": 80,
+   "shield": 390,
+   "req": {
+    "int": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1204",
+  "name": "Star Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 118,
+   "evasion": 118,
+   "req": {
+    "vit": 39,
+    "dex": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1205",
+  "name": "Star Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 118,
+   "shield": 234,
+   "req": {
+    "vit": 39,
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1206",
+  "name": "Star Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 80,
+   "min_level": 80,
+   "evasion": 118,
+   "shield": 234,
+   "req": {
+    "dex": 39,
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1207",
+  "name": "Star Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 592,
+  "stack_max": 1,
+  "description": "A tier 9 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 80,
+   "min_level": 80,
+   "implicit": [
+    [
+     "res_all",
+     10
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1208",
+  "name": "Sovereign Saber",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 1162,
+  "stack_max": 1,
+  "description": "A tier 10 saber for a Vanguard.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 90,
+   "min_level": 90,
+   "attack": 498
+  }
+ },
+ {
+  "id": "itm_1209",
+  "name": "Sovereign Bow",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 1162,
+  "stack_max": 1,
+  "description": "A tier 10 bow for a Strider.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 90,
+   "min_level": 90,
+   "attack": 498
+  }
+ },
+ {
+  "id": "itm_1210",
+  "name": "Sovereign Rod",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 1162,
+  "stack_max": 1,
+  "description": "A tier 10 rod for a Arcanist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 90,
+   "min_level": 90,
+   "attack": 498
+  }
+ },
+ {
+  "id": "itm_1211",
+  "name": "Sovereign Gauntlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 1162,
+  "stack_max": 1,
+  "description": "A tier 10 gauntlet for a Machinist.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 90,
+   "min_level": 90,
+   "attack": 498
+  }
+ },
+ {
+  "id": "itm_1212",
+  "name": "Sovereign Helm",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 581,
+  "stack_max": 1,
+  "description": "Tier 10 headgear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 330,
+   "req": {
+    "vit": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1213",
+  "name": "Sovereign Hood",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 581,
+  "stack_max": 1,
+  "description": "Tier 10 headgear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion",
+   "item_level": 90,
+   "min_level": 90,
+   "evasion": 330,
+   "req": {
+    "dex": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1214",
+  "name": "Sovereign Circlet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 581,
+  "stack_max": 1,
+  "description": "Tier 10 headgear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 90,
+   "min_level": 90,
+   "shield": 717,
+   "req": {
+    "int": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1215",
+  "name": "Sovereign Sallet",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 581,
+  "stack_max": 1,
+  "description": "Tier 10 headgear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_evasion",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 198,
+   "evasion": 198,
+   "req": {
+    "vit": 44,
+    "dex": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1216",
+  "name": "Sovereign Warcrown",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 581,
+  "stack_max": 1,
+  "description": "Tier 10 headgear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "armour_shield",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 198,
+   "shield": 430,
+   "req": {
+    "vit": 44,
+    "int": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1217",
+  "name": "Sovereign Mask",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 581,
+  "stack_max": 1,
+  "description": "Tier 10 headgear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "head",
+   "kind": "evasion_shield",
+   "item_level": 90,
+   "min_level": 90,
+   "evasion": 198,
+   "shield": 430,
+   "req": {
+    "dex": 44,
+    "int": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1218",
+  "name": "Sovereign Plate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 830,
+  "stack_max": 1,
+  "description": "Tier 10 body armour (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 550,
+   "req": {
+    "vit": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1219",
+  "name": "Sovereign Leathers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 830,
+  "stack_max": 1,
+  "description": "Tier 10 body armour (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion",
+   "item_level": 90,
+   "min_level": 90,
+   "evasion": 550,
+   "req": {
+    "dex": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1220",
+  "name": "Sovereign Robe",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 830,
+  "stack_max": 1,
+  "description": "Tier 10 body armour (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "shield",
+   "item_level": 90,
+   "min_level": 90,
+   "shield": 1196,
+   "req": {
+    "int": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1221",
+  "name": "Sovereign Brigandine",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 830,
+  "stack_max": 1,
+  "description": "Tier 10 body armour (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_evasion",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 330,
+   "evasion": 330,
+   "req": {
+    "vit": 44,
+    "dex": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1222",
+  "name": "Sovereign Runeplate",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 830,
+  "stack_max": 1,
+  "description": "Tier 10 body armour (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "armour_shield",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 330,
+   "shield": 717,
+   "req": {
+    "vit": 44,
+    "int": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1223",
+  "name": "Sovereign Duskcloak",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 830,
+  "stack_max": 1,
+  "description": "Tier 10 body armour (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "armor",
+   "kind": "evasion_shield",
+   "item_level": 90,
+   "min_level": 90,
+   "evasion": 330,
+   "shield": 717,
+   "req": {
+    "dex": 44,
+    "int": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1224",
+  "name": "Sovereign Sabatons",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 footwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 220,
+   "req": {
+    "vit": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1225",
+  "name": "Sovereign Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 footwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 90,
+   "min_level": 90,
+   "evasion": 220,
+   "req": {
+    "dex": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1226",
+  "name": "Sovereign Slippers",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 footwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "shield",
+   "item_level": 90,
+   "min_level": 90,
+   "shield": 478,
+   "req": {
+    "int": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1227",
+  "name": "Sovereign Greaves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 footwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_evasion",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 132,
+   "evasion": 132,
+   "req": {
+    "vit": 44,
+    "dex": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1228",
+  "name": "Sovereign Warboots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 footwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "armour_shield",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 132,
+   "shield": 287,
+   "req": {
+    "vit": 44,
+    "int": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1229",
+  "name": "Sovereign Treads",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 footwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion_shield",
+   "item_level": 90,
+   "min_level": 90,
+   "evasion": 132,
+   "shield": 287,
+   "req": {
+    "dex": 44,
+    "int": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1230",
+  "name": "Sovereign Talisman",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 664,
+  "stack_max": 1,
+  "description": "A tier 10 talisman. Its own ward resists every element a little.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "accessory",
+   "item_level": 90,
+   "min_level": 90,
+   "implicit": [
+    [
+     "res_all",
+     11
+    ]
+   ]
+  }
+ },
+ {
+  "id": "itm_1231",
+  "name": "Lesser Fang Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "fang",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1232",
+  "name": "Greater Fang Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "fang",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1233",
+  "name": "Grand Fang Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "fang",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1234",
+  "name": "Lesser Clover Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "clover",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1235",
+  "name": "Greater Clover Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "clover",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1236",
+  "name": "Grand Clover Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "clover",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1237",
+  "name": "Lesser Razor Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "razor",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1238",
+  "name": "Greater Razor Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "razor",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1239",
+  "name": "Grand Razor Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "razor",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1240",
+  "name": "Lesser Hourglass Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "hourglass",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1241",
+  "name": "Greater Hourglass Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "hourglass",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1242",
+  "name": "Grand Hourglass Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "hourglass",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1243",
+  "name": "Lesser Quill Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "quill",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1244",
+  "name": "Greater Quill Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "quill",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1245",
+  "name": "Grand Quill Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "quill",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1246",
+  "name": "Lesser Tempo Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "tempo",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1247",
+  "name": "Greater Tempo Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "tempo",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1248",
+  "name": "Grand Tempo Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "tempo",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1249",
+  "name": "Lesser Expanse Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "expanse",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1250",
+  "name": "Greater Expanse Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "expanse",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1251",
+  "name": "Grand Expanse Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "expanse",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1252",
+  "name": "Lesser Viper Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "viper",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1253",
+  "name": "Greater Viper Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "viper",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1254",
+  "name": "Grand Viper Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "viper",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1255",
+  "name": "Lesser Wellspring Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "wellspring",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1256",
+  "name": "Greater Wellspring Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "wellspring",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1257",
+  "name": "Grand Wellspring Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "wellspring",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1258",
+  "name": "Lesser Heart Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "heart",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1259",
+  "name": "Greater Heart Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "heart",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1260",
+  "name": "Grand Heart Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "heart",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1261",
+  "name": "Lesser Bastion Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "bastion",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1262",
+  "name": "Greater Bastion Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "bastion",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1263",
+  "name": "Grand Bastion Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "bastion",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1264",
+  "name": "Lesser Prism Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "prism",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1265",
+  "name": "Greater Prism Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "prism",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1266",
+  "name": "Grand Prism Charm",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "prism",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1267",
+  "name": "Lesser Sigil of POW",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "sigil_pow",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1268",
+  "name": "Greater Sigil of POW",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "sigil_pow",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1269",
+  "name": "Grand Sigil of POW",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "sigil_pow",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1270",
+  "name": "Lesser Sigil of LUK",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "sigil_luk",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1271",
+  "name": "Greater Sigil of LUK",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "sigil_luk",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1272",
+  "name": "Grand Sigil of LUK",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "sigil_luk",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1273",
+  "name": "Lesser Sigil of AGI",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "sigil_agi",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1274",
+  "name": "Greater Sigil of AGI",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "sigil_agi",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1275",
+  "name": "Grand Sigil of AGI",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "sigil_agi",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1276",
+  "name": "Lesser Sigil of DEX",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "sigil_dex",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1277",
+  "name": "Greater Sigil of DEX",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "sigil_dex",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1278",
+  "name": "Grand Sigil of DEX",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "sigil_dex",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1279",
+  "name": "Lesser Sigil of INT",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "sigil_int",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1280",
+  "name": "Greater Sigil of INT",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "sigil_int",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1281",
+  "name": "Grand Sigil of INT",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "sigil_int",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1282",
+  "name": "Lesser Sigil of VIT",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "charm": {
+    "type": "sigil_vit",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1283",
+  "name": "Greater Sigil of VIT",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "charm": {
+    "type": "sigil_vit",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1284",
+  "name": "Grand Sigil of VIT",
+  "category": "charm",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "A charm worn in a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "charm": {
+    "type": "sigil_vit",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1285",
+  "name": "Lesser Totem of Fury",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "fury",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1286",
+  "name": "Greater Totem of Fury",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "fury",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1287",
+  "name": "Grand Totem of Fury",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "fury",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1288",
+  "name": "Lesser Totem of Haste",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "haste",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1289",
+  "name": "Greater Totem of Haste",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "haste",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1290",
+  "name": "Grand Totem of Haste",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "haste",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1291",
+  "name": "Lesser Totem of Focus",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "focus",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1292",
+  "name": "Greater Totem of Focus",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "focus",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1293",
+  "name": "Grand Totem of Focus",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "focus",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1294",
+  "name": "Lesser Totem of Precision",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "precision",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1295",
+  "name": "Greater Totem of Precision",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "precision",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1296",
+  "name": "Grand Totem of Precision",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "precision",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1297",
+  "name": "Lesser Totem of Wildfire",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "wildfire",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1298",
+  "name": "Greater Totem of Wildfire",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "wildfire",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1299",
+  "name": "Grand Totem of Wildfire",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "wildfire",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1300",
+  "name": "Lesser Totem of Bloodrush",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "bloodrush",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1301",
+  "name": "Greater Totem of Bloodrush",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "bloodrush",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1302",
+  "name": "Grand Totem of Bloodrush",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "bloodrush",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1303",
+  "name": "Lesser Totem of Surge",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "surge",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1304",
+  "name": "Greater Totem of Surge",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "surge",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1305",
+  "name": "Grand Totem of Surge",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "surge",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1306",
+  "name": "Lesser Totem of Bulwark",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "bulwark",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1307",
+  "name": "Greater Totem of Bulwark",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "bulwark",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1308",
+  "name": "Grand Totem of Bulwark",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "bulwark",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1309",
+  "name": "Lesser Totem of Aegis",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "aegis",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1310",
+  "name": "Greater Totem of Aegis",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "aegis",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1311",
+  "name": "Grand Totem of Aegis",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "aegis",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1312",
+  "name": "Lesser Totem of Mending",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "mending",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1313",
+  "name": "Greater Totem of Mending",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "mending",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1314",
+  "name": "Grand Totem of Mending",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "mending",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1315",
+  "name": "Lesser Totem of Gale",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "gale",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1316",
+  "name": "Greater Totem of Gale",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "gale",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1317",
+  "name": "Grand Totem of Gale",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "gale",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1318",
+  "name": "Lesser Totem of the Hunt",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 110,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "hunt",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1319",
+  "name": "Greater Totem of the Hunt",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "hunt",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1320",
+  "name": "Grand Totem of the Hunt",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 1680,
+  "stack_max": 1,
+  "description": "Fills with charges as you kill; use it from a Charm slot.",
+  "drop_pool": true,
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "hunt",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1321",
+  "name": "Hollowroot Crown",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 800,
+  "stack_max": 1,
+  "description": "A skill that kills 20 or more at once takes 1s off your other cooldowns.",
+  "equip": {
+   "slot": "head",
+   "kind": "armour",
+   "item_level": 20,
+   "min_level": 18,
+   "armour": 78,
+   "implicit": [
+    [
+     "inc_area",
+     15
+    ],
+    [
+     "stat_vit",
+     10
+    ]
+   ],
+   "unique": "hollowroot_crown"
+  }
+ },
+ {
+  "id": "itm_1322",
+  "name": "Emberwake Treads",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 2240,
+  "stack_max": 1,
+  "description": "While you run you leave fire behind: 20% of your ATK per second to monsters you pass. Standing still, nothing.",
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 60,
+   "min_level": 58,
+   "evasion": 148,
+   "implicit": [
+    [
+     "inc_move_speed",
+     15
+    ]
+   ],
+   "unique": "emberwake_treads"
+  }
+ },
+ {
+  "id": "itm_1323",
+  "name": "Lattice Heart",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 3320,
+  "stack_max": 1,
+  "description": "Each kill restores 1% of your Aether Shield.",
+  "equip": {
+   "slot": "accessory",
+   "item_level": 90,
+   "min_level": 88,
+   "implicit": [
+    [
+     "stat_int",
+     25
+    ],
+    [
+     "inc_shield",
+     30
+    ]
+   ],
+   "unique": "lattice_heart"
+  }
+ },
+ {
+  "id": "itm_1324",
+  "name": "Harvester's Knot",
+  "category": "charm",
+  "rarity": "epic",
+  "sell_price": 870,
+  "stack_max": 1,
+  "description": "40% more Area of Effect, 15% less Damage.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 30,
+   "min_level": 30,
+   "implicit": [
+    [
+     "more_area",
+     40
+    ],
+    [
+     "more_damage",
+     -15
+    ]
+   ],
+   "unique": "harvesters_knot"
+  }
+ },
+ {
+  "id": "itm_1325",
+  "name": "Brawler's Oath",
+  "category": "charm",
+  "rarity": "epic",
+  "sell_price": 870,
+  "stack_max": 1,
+  "description": "Basic attacks hit everything within 2 cells for 50% more damage. Skill cooldowns are doubled.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 30,
+   "min_level": 30,
+   "unique": "brawlers_oath"
+  }
+ },
+ {
+  "id": "itm_1326",
+  "name": "Aether Conduit",
+  "category": "charm",
+  "rarity": "epic",
+  "sell_price": 870,
+  "stack_max": 1,
+  "description": "30% of your Max HP becomes Aether Shield. -20% Shadow Resistance.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 30,
+   "min_level": 30,
+   "implicit": [
+    [
+     "res_shadow",
+     -20
+    ]
+   ],
+   "unique": "aether_conduit"
+  }
+ },
+ {
+  "id": "itm_1327",
+  "name": "Blood Pact",
+  "category": "charm",
+  "rarity": "epic",
+  "sell_price": 870,
+  "stack_max": 1,
+  "description": "Your leech rate cap is doubled. You no longer regenerate HP over time.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 30,
+   "min_level": 30,
+   "unique": "blood_pact"
+  }
+ },
+ {
+  "id": "itm_1328",
+  "name": "Lodestone",
+  "category": "charm",
+  "rarity": "epic",
+  "sell_price": 870,
+  "stack_max": 1,
+  "description": "Monsters notice you from twice as far. 10% reduced Movement Speed.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 30,
+   "min_level": 30,
+   "implicit": [
+    [
+     "grip",
+     100
+    ],
+    [
+     "inc_move_speed",
+     -10
+    ]
+   ],
+   "unique": "lodestone"
+  }
+ },
+ {
+  "id": "itm_1329",
+  "name": "Glass Ember",
+  "category": "charm",
+  "rarity": "epic",
+  "sell_price": 870,
+  "stack_max": 1,
+  "description": "+60% Critical Damage. 20% reduced Max HP.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 30,
+   "min_level": 30,
+   "implicit": [
+    [
+     "crit_mult",
+     60
+    ],
+    [
+     "inc_hp",
+     -20
+    ]
+   ],
+   "unique": "glass_ember"
+  }
  }
 ]

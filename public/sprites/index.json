@@ -10,10 +10,10 @@
    "sprite": "sporeling_2d"
   },
   "mob_0003": {
-   "sprite": "p_ambermite"
+   "sprite": "ambermite_2d"
   },
   "mob_0004": {
-   "sprite": "p_lunari"
+   "sprite": "lunari_2d"
   },
   "mob_0005": {
    "sprite": "mosskin",
@@ -56,13 +56,13 @@
    "placeholder": true
   },
   "mob_0009": {
-   "sprite": "p_reedstalker"
+   "sprite": "reedstalker_2d"
   },
   "mob_0010": {
-   "sprite": "p_rotroot"
+   "sprite": "rotroot_2d"
   },
   "mob_0011": {
-   "sprite": "p_barkwarden"
+   "sprite": "barkwarden_2d"
   },
   "mob_0036": {
    "sprite": "mosskin",
