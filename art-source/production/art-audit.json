@@ -1,0 +1,6606 @@
+{
+  "scope": "All game monster definitions, equipment definitions and skills. Existence is not visual approval.",
+  "monsters": [
+    {
+      "id": "mob_0001",
+      "name": "Mosskin",
+      "region": "lum",
+      "brief": "A round four-legged seed with a mossy shell and two twig antennae; friendly face; earth-green palette.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/01_Mosskin_front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "back": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/01_Mosskin_back.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "left": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/01_Mosskin_left.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "right": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/01_Mosskin_right.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        }
+      },
+      "sprite": "mosskin_2d",
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/mosskin_2d/idle.png",
+          "width": 6144,
+          "height": 384
+        },
+        "walk": {
+          "path": "public/sprites/mosskin_2d/walk.png",
+          "width": 2304,
+          "height": 384
+        },
+        "attack": {
+          "path": "public/sprites/mosskin_2d/attack.png",
+          "width": 4608,
+          "height": 384
+        },
+        "hit": {
+          "path": "public/sprites/mosskin_2d/hit.png",
+          "width": 3072,
+          "height": 384
+        },
+        "death": {
+          "path": "public/sprites/mosskin_2d/death.png",
+          "width": 7680,
+          "height": 384
+        }
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0002",
+      "name": "Sporeling",
+      "region": "lum",
+      "brief": "A waddling mushroom with a speckled cream-and-rust cap, stubby root feet, puffs of glowing spores.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/02_Sporeling_front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "back": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/02_Sporeling_back.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "left": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/02_Sporeling_left.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "right": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/02_Sporeling_right.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        }
+      },
+      "sprite": "sporeling_2d",
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/sporeling_2d/idle.png",
+          "width": 6144,
+          "height": 384
+        },
+        "walk": {
+          "path": "public/sprites/sporeling_2d/walk.png",
+          "width": 2304,
+          "height": 384
+        },
+        "attack": {
+          "path": "public/sprites/sporeling_2d/attack.png",
+          "width": 4608,
+          "height": 384
+        },
+        "hit": {
+          "path": "public/sprites/sporeling_2d/hit.png",
+          "width": 3072,
+          "height": 384
+        },
+        "death": {
+          "path": "public/sprites/sporeling_2d/death.png",
+          "width": 7680,
+          "height": 384
+        }
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0003",
+      "name": "Ambermite",
+      "region": "lum",
+      "brief": "A beetle-sized six-legged mite under a translucent amber shell with a glowing core; honey-orange.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/03_Ambermite_front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "back": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/03_Ambermite_back.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "left": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/03_Ambermite_left.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "right": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/03_Ambermite_right.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        }
+      },
+      "sprite": "ambermite_2d",
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/ambermite_2d/idle.png",
+          "width": 6144,
+          "height": 384
+        },
+        "walk": {
+          "path": "public/sprites/ambermite_2d/walk.png",
+          "width": 2304,
+          "height": 384
+        },
+        "attack": {
+          "path": "public/sprites/ambermite_2d/attack.png",
+          "width": 4608,
+          "height": 384
+        },
+        "hit": {
+          "path": "public/sprites/ambermite_2d/hit.png",
+          "width": 3072,
+          "height": 384
+        },
+        "death": {
+          "path": "public/sprites/ambermite_2d/death.png",
+          "width": 7680,
+          "height": 384
+        }
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0004",
+      "name": "Lunari",
+      "region": "lum",
+      "brief": "A sugar-glider-like beast with leaf-shaped ears and a banded tail, membrane glide flaps; moonlit silver-green.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/04_Lunari_front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "back": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/04_Lunari_back.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "left": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/04_Lunari_left.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "right": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/04_Lunari_right.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        }
+      },
+      "sprite": "lunari_2d",
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/lunari_2d/idle.png",
+          "width": 6144,
+          "height": 384
+        },
+        "walk": {
+          "path": "public/sprites/lunari_2d/walk.png",
+          "width": 2304,
+          "height": 384
+        },
+        "attack": {
+          "path": "public/sprites/lunari_2d/attack.png",
+          "width": 4608,
+          "height": 384
+        },
+        "hit": {
+          "path": "public/sprites/lunari_2d/hit.png",
+          "width": 3072,
+          "height": 384
+        },
+        "death": {
+          "path": "public/sprites/lunari_2d/death.png",
+          "width": 7680,
+          "height": 384
+        }
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0005",
+      "name": "Craglet",
+      "region": "lum",
+      "brief": "A squat lizard covered in slate plates, quartz flecks along the spine, a gear glinting in its belly seam.",
+      "views": {
+        "front": {
+          "master": {
+            "path": "art-source/monsters/mob_0005/front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "existingReference": null,
+          "status": "master-created"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0006",
+      "name": "Thornback",
+      "region": "lum",
+      "brief": "A stocky boar with a back of woody thorns and bark-like hide; mossy tusks.",
+      "views": {
+        "front": {
+          "master": {
+            "path": "art-source/monsters/mob_0006/front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "existingReference": null,
+          "status": "master-created"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0007",
+      "name": "Dustwing",
+      "region": "lum",
+      "brief": "A large moth with sandy, powder-dusted wings and brass-coloured eyespots; trailing dust motes.",
+      "views": {
+        "front": {
+          "master": {
+            "path": "art-source/monsters/mob_0007/front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "existingReference": null,
+          "status": "master-created"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0008",
+      "name": "Brookfin",
+      "region": "lum",
+      "brief": "A fat fish on stubby fin-legs, glass-clear fins showing faint aether veins; blue-green.",
+      "views": {
+        "front": {
+          "master": {
+            "path": "art-source/monsters/mob_0008/front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "existingReference": null,
+          "status": "master-created"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0009",
+      "name": "Reedstalker",
+      "region": "lum",
+      "brief": "A lanky stalk-creature woven from reeds, a seed-pod head that opens to spit darts; marsh green and brown.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/12_Reedstalker_front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "back": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/12_Reedstalker_back.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "left": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/12_Reedstalker_left.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "right": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/12_Reedstalker_right.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        }
+      },
+      "sprite": "reedstalker_2d",
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/reedstalker_2d/idle.png",
+          "width": 6144,
+          "height": 384
+        },
+        "walk": {
+          "path": "public/sprites/reedstalker_2d/walk.png",
+          "width": 2304,
+          "height": 384
+        },
+        "attack": {
+          "path": "public/sprites/reedstalker_2d/attack.png",
+          "width": 4608,
+          "height": 384
+        },
+        "hit": {
+          "path": "public/sprites/reedstalker_2d/hit.png",
+          "width": 3072,
+          "height": 384
+        },
+        "death": {
+          "path": "public/sprites/reedstalker_2d/death.png",
+          "width": 7680,
+          "height": 384
+        }
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0010",
+      "name": "Rotroot",
+      "region": "lum",
+      "brief": "A knot of rotting roots with a glowing sap core, crawling on root-legs; dark wood, sickly teal glow.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/16_Rotroot_front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "back": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/16_Rotroot_back.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "left": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/16_Rotroot_left.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "right": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/16_Rotroot_right.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        }
+      },
+      "sprite": "rotroot_2d",
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/rotroot_2d/idle.png",
+          "width": 6144,
+          "height": 384
+        },
+        "walk": {
+          "path": "public/sprites/rotroot_2d/walk.png",
+          "width": 2304,
+          "height": 384
+        },
+        "attack": {
+          "path": "public/sprites/rotroot_2d/attack.png",
+          "width": 4608,
+          "height": 384
+        },
+        "hit": {
+          "path": "public/sprites/rotroot_2d/hit.png",
+          "width": 3072,
+          "height": 384
+        },
+        "death": {
+          "path": "public/sprites/rotroot_2d/death.png",
+          "width": 7680,
+          "height": 384
+        }
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0011",
+      "name": "Barkwarden",
+      "region": "lum",
+      "brief": "A man-high wooden guardian with copper-jointed limbs, a cracked lens eye and moss in the seams.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/17_Barkwarden_front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "back": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/17_Barkwarden_back.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "left": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/17_Barkwarden_left.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        },
+        "right": {
+          "master": null,
+          "existingReference": {
+            "path": "../sprite/tripo_ready/17_Barkwarden_right.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "status": "existing-needs-review"
+        }
+      },
+      "sprite": "barkwarden_2d",
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/barkwarden_2d/idle.png",
+          "width": 6144,
+          "height": 384
+        },
+        "walk": {
+          "path": "public/sprites/barkwarden_2d/walk.png",
+          "width": 2304,
+          "height": 384
+        },
+        "attack": {
+          "path": "public/sprites/barkwarden_2d/attack.png",
+          "width": 4608,
+          "height": 384
+        },
+        "hit": {
+          "path": "public/sprites/barkwarden_2d/hit.png",
+          "width": 3072,
+          "height": 384
+        },
+        "death": {
+          "path": "public/sprites/barkwarden_2d/death.png",
+          "width": 7680,
+          "height": 384
+        }
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0012",
+      "name": "Graftling",
+      "region": "ver",
+      "brief": "A knee-high bundle of living twigs on three folding brass hinge-legs, a jade sap bead glowing at the joint; leaf tufts for a head; bark brown, brass, jade.",
+      "views": {
+        "front": {
+          "master": {
+            "path": "art-source/monsters/mob_0012/front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "existingReference": null,
+          "status": "master-created"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0013",
+      "name": "Sapdrone",
+      "region": "ver",
+      "brief": "A fist-sized brass beetle-drone with four glassy wings and a long needle proboscis, its belly tank sloshing with glowing jade sap.",
+      "views": {
+        "front": {
+          "master": {
+            "path": "art-source/monsters/mob_0013/front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "existingReference": null,
+          "status": "master-created"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0014",
+      "name": "Vinecrawler",
+      "region": "ver",
+      "brief": "A spider-shaped brass gear-frame wrapped and pulled by thick green vines, leaves sprouting from the gear teeth, a cracked jade lens at the core.",
+      "views": {
+        "front": {
+          "master": {
+            "path": "art-source/monsters/mob_0014/front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "existingReference": null,
+          "status": "master-created"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0015",
+      "name": "Root Sentinel",
+      "region": "ver",
+      "brief": "A three-metre humanoid guard of brass and stone, completely laced with thick roots, a lantern-like jade eye under a hood of bark.",
+      "views": {
+        "front": {
+          "master": {
+            "path": "art-source/monsters/mob_0015/front.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "existingReference": null,
+          "status": "master-created"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0016",
+      "name": "Sandcoil",
+      "region": "sol",
+      "brief": "A thick, short serpent coiled like a spring, scales the colour and grain of saffron sand, ember-orange belly, heat shimmer above it.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0017",
+      "name": "Glass Scarab",
+      "region": "sol",
+      "brief": "A dog-sized scarab whose shell is clear amber glass with a glowing ember core showing through, legs of dark chitin.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0018",
+      "name": "Dune Sentry",
+      "region": "sol",
+      "brief": "A blocky humanoid of carved sandstone with brass bands at the joints, a slit visor glowing orange, sand pouring from its cracks.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0019",
+      "name": "Sun Warden",
+      "region": "sol",
+      "brief": "A tall bronze guardian with a halo-ring of sun mirrors on its back, a faceless polished face, a long spear-gnomon.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0020",
+      "name": "Tidehopper",
+      "region": "tha",
+      "brief": "A frog-sized blue-grey hopper with oversized hind legs, a shell-plate back and bulbous wet eyes; barnacle specks; sea-glass blue.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0021",
+      "name": "Coral Claw",
+      "region": "tha",
+      "brief": "A crab the size of a dog, its shell overgrown with pink and orange coral branches, one claw much larger than the other; wet teal legs.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0022",
+      "name": "Brine Automaton",
+      "region": "tha",
+      "brief": "A barrel-chested copper automaton with piston arms, brine-crusted gauges for eyes and a tank on its back hissing steam; verdigris green and brass.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0023",
+      "name": "Relay Guardian",
+      "region": "tha",
+      "brief": "A tall diving-suit construct with a dish-shaped sonar head, ribbed hoses and lead boots; dark bronze with pulsing cyan rings.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0024",
+      "name": "Frost Mite",
+      "region": "cry",
+      "brief": "A palm-sized mite whose shell is a cluster of clear ice crystals, six thin blue legs, a faint glow inside; frost-white and pale cyan.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0025",
+      "name": "Prism Wisp",
+      "region": "cry",
+      "brief": "A glowing orb inside an open lattice of hexagonal crystal, casting rainbow beams; white core, prismatic edges.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0026",
+      "name": "Icegear",
+      "region": "cry",
+      "brief": "A spider-like walker with a body of stacked frozen gears and eight jointed brass legs, icicles hanging from the cogs; steel blue and brass.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0027",
+      "name": "Archive Keeper",
+      "region": "cry",
+      "brief": "A tall slender construct in faceted crystal armour, a glowing data-slate for a face, long fingers made for handling cores; ice-blue and silver.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0028",
+      "name": "Ashcrawler",
+      "region": "emb",
+      "brief": "A dog-sized segmented crawler with a grey ash shell, ember light glowing between the plates, soot-black legs; slow and placid.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0029",
+      "name": "Cinder Imp",
+      "region": "emb",
+      "brief": "A knee-high charcoal imp with a cracked ember belly, flame wisps for horns, long ash-grey fingers; leaves glowing footprints.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0030",
+      "name": "Smelt Hound",
+      "region": "emb",
+      "brief": "A lean hound of riveted iron plates over a molten core, glowing slag dripping from the jaw, bellows-ribs that pump sparks when it runs.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0031",
+      "name": "Furnace Knight",
+      "region": "emb",
+      "brief": "A tall armoured automaton whose chest is an open furnace door, riveted iron plate, a long blade glowing at the edge, smoke from the helm vents.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0032",
+      "name": "Null Wisp",
+      "region": "noc",
+      "brief": "A floating smudge of violet-black light with a hollow white core, trailing wisps that dim everything they pass; no face.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0033",
+      "name": "Shade Carrier",
+      "region": "noc",
+      "brief": "A boxy six-wheeled freight hauler with a smashed cab full of moving shadow, violet headlamps, cargo doors that open like a jaw.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0034",
+      "name": "Lattice Drone",
+      "region": "noc",
+      "brief": "A floating hexagonal frame of dark metal around a violet lattice core, six thin vanes, a lens that tracks before it fires.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0035",
+      "name": "Meridian Executor",
+      "region": "noc",
+      "brief": "A gaunt four-armed automaton in black ceramic, each arm ending in a long violet blade, a mask with a single vertical slit of light.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0036",
+      "name": "Hollowroot Warden",
+      "region": "lum",
+      "brief": "A hulking root-and-copper colossus around a pulsing aetherite heart; pipes for arms, roots for legs.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0040",
+      "name": "Mossback Newt",
+      "region": "ver",
+      "brief": "A plump newt with a carpet of green moss on its back, a pale belly and round jade eyes; small water droplets glinting on the moss.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0041",
+      "name": "Jadewing Moth",
+      "region": "ver",
+      "brief": "A moth the size of a hawk with translucent jade wings veined like circuitry, glowing eyespots and trailing luminous dust.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0042",
+      "name": "Barkhound",
+      "region": "ver",
+      "brief": "A lean wolf with overlapping bark plates on its back and shoulders, moss on its tail, jade-green eyes; heavy jaws with wooden fangs.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0043",
+      "name": "Pruning Tender",
+      "region": "ver",
+      "brief": "A barrel-bodied brass gardener on three spindly legs with shear-arms and a sap nozzle, a glass tank of jade sap on its back, moss on the lid.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0044",
+      "name": "Thistlehare",
+      "region": "ver",
+      "brief": "A long-eared hare whose fur is a mass of purple-green thistle burrs, a white cotton tail, huge dark eyes; mid-leap pose.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0045",
+      "name": "Antlered Engine",
+      "region": "ver",
+      "brief": "A huge stag of brass ribs and living wood, antlers made of coiled copper and branches hung with moss, a furnace-glow of jade in its chest.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0046",
+      "name": "Sporebloat",
+      "region": "ver",
+      "brief": "A floating puffball the size of a barrel, dark violet with glowing jade spore-vents, short root tendrils hanging below.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0047",
+      "name": "Spore Matron",
+      "region": "ver",
+      "brief": "A tall mushroom with a wide frilled cap, a stalk like a robed figure, jade spore-lanterns hanging under the cap.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0048",
+      "name": "Heartwood Pistonguard",
+      "region": "ver",
+      "brief": "A squat brass guardian with pistons for arms, its body cased in polished heartwood, steam and spores venting from its back.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0049",
+      "name": "Heartwood Regent",
+      "region": "ver",
+      "brief": "A towering figure of living wood grown round a brass pump-heart, a crown of branches, roots for legs, jade light pulsing through its veins with each pump stroke.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0050",
+      "name": "Ochre Jackal",
+      "region": "sol",
+      "brief": "A rangy jackal with ochre fur, huge ears, a dark stripe down the spine and a brass tag from a long-gone caravan on its collar.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0051",
+      "name": "Brass Kite",
+      "region": "sol",
+      "brief": "A diamond-shaped kite of brass foil and cloth on a gear-driven frame, a single focusing lens in its nose, ribbon tails streaming.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0052",
+      "name": "Glasstail Basilisk",
+      "region": "sol",
+      "brief": "A low, heavy basilisk with a tail ending in a club of glowing glass, ridged sandy scales, a frilled crest that flares orange.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0053",
+      "name": "Gnomon Acolyte",
+      "region": "sol",
+      "brief": "A slim brass automaton in sun-bleached robes, a gnomon-shaped crest on its head, mirror-plate hands that catch the light.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0054",
+      "name": "Canal Strider",
+      "region": "sol",
+      "brief": "A water-strider the size of a pony, stilt legs tipped with silver pads, a slim teal body and silt-pearl eyes.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0055",
+      "name": "Dust Revenant",
+      "region": "sol",
+      "brief": "A floating figure in sand-coloured burial wraps trailing dust, an empty hood lit by a dim surveyor's lamp held in a bony hand.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0056",
+      "name": "Sand-buried Colossus",
+      "region": "sol",
+      "brief": "A giant sandstone-and-brass figure buried to the waist, one arm free and dragging, a cracked sun-disc face glowing orange.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0057",
+      "name": "Prism Lens-drone",
+      "region": "sol",
+      "brief": "A floating ring of brass holding a large prism, three small fins, a beam of orange light idling from its centre.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0058",
+      "name": "Vault Mirrorguard",
+      "region": "sol",
+      "brief": "A knight-shaped construct plated in polished mirror bronze, a round shield that is a heliostat mirror, a visor like a lens.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0059",
+      "name": "Heliostat Sovereign",
+      "region": "sol",
+      "brief": "A colossal throne-machine of brass rings and mirrors around a burning sun-core, arms of articulated mirror panels, a crown of lenses.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0060",
+      "name": "Gullwing Skimmer",
+      "region": "tha",
+      "brief": "A long-winged gull with brass-tinted primaries, a hooked orange beak and a crest of storm-grey feathers; mid-dive pose.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0061",
+      "name": "Polyp Spitter",
+      "region": "tha",
+      "brief": "A squat lump of polyps on stubby root-legs, a ring of open tube mouths on top glowing magenta; pink-violet with white tips.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0062",
+      "name": "Kelp Tender",
+      "region": "tha",
+      "brief": "A tall swaying figure of braided kelp with a bulb head glowing soft green, frond arms trailing; small oysters clinging to its stalk.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0063",
+      "name": "Hullborer",
+      "region": "tha",
+      "brief": "A pale segmented worm with a drill-bit shell at its head, wood shavings stuck to its slime; bone-white with rust-red rasp.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0064",
+      "name": "Pearl Skate",
+      "region": "tha",
+      "brief": "A wide diamond-shaped skate with a pearlescent back and a whip tail, skimming on its wing tips; sand-cream with nacre sheen.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0065",
+      "name": "Thunderhull Turtle",
+      "region": "tha",
+      "brief": "A huge turtle whose shell is fused with riveted copper hull plates and a broken porthole; storm-grey skin, barnacles, glowing amber eyes.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0066",
+      "name": "Squall Ray",
+      "region": "tha",
+      "brief": "A manta ray with wing edges crackling blue, a long stinger tail with a copper tip; indigo back, white belly, floating above the ground.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0067",
+      "name": "Pressure Drone",
+      "region": "tha",
+      "brief": "A football-sized brass sphere with three propeller fins and a single red lamp eye, valves venting bubbles; pitted copper and red.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0068",
+      "name": "Gloom Medusa",
+      "region": "tha",
+      "brief": "A translucent violet bell trailing long glowing tendrils, an aether-blue nucleus pulsing inside; dark halo.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0069",
+      "name": "Drowned Signalmind",
+      "region": "tha",
+      "brief": "A colossal brass-and-coral head on cable tentacles, a ring of sonar dishes for a crown, one great cracked lens eye glowing cyan; bubbles and sparks.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0070",
+      "name": "Rimehare",
+      "region": "cry",
+      "brief": "A big white hare with frost-tipped ears and long whiskers rimed with ice, hind legs built for bounding; snow-white, silver-blue shadows.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0071",
+      "name": "Glassback Ram",
+      "region": "cry",
+      "brief": "A shaggy grey ram with curled horns of translucent blue glass and a back of glassy plates; breath steaming.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0072",
+      "name": "Frostcoil Serpent",
+      "region": "cry",
+      "brief": "A long pale-blue serpent with frost-ridged scales and a hood of thin ice fins, glowing coolant-cyan veins along its belly.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0073",
+      "name": "Glacier Juggernaut",
+      "region": "cry",
+      "brief": "A tracked mech twice a man's height with a huge wedge plough blade, a furnace glowing in its chest and frost-crusted armour; rust-red and steel.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0074",
+      "name": "Mirrorshade",
+      "region": "cry",
+      "brief": "A humanoid silhouette of dark mirror glass, reflecting its surroundings warped, edges smoking into shadow; one bright eye-glint.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0075",
+      "name": "Hoarfrost Behemoth",
+      "region": "cry",
+      "brief": "A mammoth-sized beast with a hump of frost-matted wool, four curling tusks and icicles in its fur; white and slate grey.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0076",
+      "name": "Cryo Sentry",
+      "region": "cry",
+      "brief": "A tripod construct with a long frost lance for a head, a cryo cell glowing in its chest, frost venting from its joints; white enamel and cyan.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0077",
+      "name": "Archive Specter",
+      "region": "cry",
+      "brief": "A flickering translucent figure made of scrolling glyph-light, trailing like smoke, face a blank of static; violet and cold white.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0078",
+      "name": "Cryo Lancer",
+      "region": "cry",
+      "brief": "A slim armoured construct with a long rifle-like lance arm, a prism focus at its tip, frosted visor; white and pale blue.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0079",
+      "name": "Cryocore Curator",
+      "region": "cry",
+      "brief": "A towering construct of crystal shelving and brass arms around a glowing blue cryocore, data-slates orbiting it like moons, a frost crown.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0080",
+      "name": "Slagback Toad",
+      "region": "emb",
+      "brief": "A boulder-sized toad with a cracked black slag shell on its back, orange heat in the cracks, wide throat sac glowing like a bellows.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0081",
+      "name": "Crucible Tender",
+      "region": "emb",
+      "brief": "A four-legged brass spider-frame with a welding arc on one arm and a slag scoop on the other; blue-white arc light, soot-stained lens.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0082",
+      "name": "Vent Skink",
+      "region": "emb",
+      "brief": "A slim lizard with glossy black basalt scales, a glowing orange throat and tail tip, heat shimmer over its back.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0083",
+      "name": "Magma Spitter",
+      "region": "emb",
+      "brief": "A thick segmented worm half out of a fissure, a crusted shell collar and a tube mouth dripping magma; dull red with yellow-hot gullet.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0084",
+      "name": "Rivet Scrapling",
+      "region": "emb",
+      "brief": "A fist-sized rattling bundle of rivets, bolts and a single glowing gear-eye on wire legs; moves in jittering hops.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0085",
+      "name": "Slagforged Brute",
+      "region": "emb",
+      "brief": "A hulking ogre-shape of rough black slag with mould seams down its sides, a molten core showing through cracks, iron bands still on its fists.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0086",
+      "name": "Pour Wraith",
+      "region": "emb",
+      "brief": "A dripping humanoid of white-hot liquid metal with no face, trailing a cooling grey skin that cracks and re-melts; a mould seam down its middle.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0087",
+      "name": "Zero Stoker",
+      "region": "emb",
+      "brief": "A broad-shouldered iron automaton with a shovel for one arm and a coal hopper on its back, firebox glow behind a grille face.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0088",
+      "name": "Kiln Prime",
+      "region": "emb",
+      "brief": "A colossal kiln-shaped automaton rising from the core floor, crucible arms that pour molten metal, a white-hot Aetherite heart behind a lattice grille.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0090",
+      "name": "Gutter Lurk",
+      "region": "noc",
+      "brief": "A hairless grey cat-sized scavenger with long fingers, huge reflective eyes and a ridge of violet-lit bristles along the spine.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0091",
+      "name": "Nullbloom",
+      "region": "noc",
+      "brief": "A waist-high flower with petals of matte black glass, a violet light-drinking eye at the centre, roots that leave grey patches where they walk.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0092",
+      "name": "Coupler Mite",
+      "region": "noc",
+      "brief": "A beetle-sized steel mite shaped like a rail coupler, pincer jaws, a single violet status light blinking on its back.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0093",
+      "name": "Riftling",
+      "region": "noc",
+      "brief": "A dog-shaped hole in the world: a black silhouette with violet edges and white pinpoint eyes, flickering at the outline.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0094",
+      "name": "Sparkwing",
+      "region": "noc",
+      "brief": "A crow-sized bird with feathers like copper foil, sparks crackling between the wingtips, violet arcs jumping when it lands.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0095",
+      "name": "Array Sentinel",
+      "region": "noc",
+      "brief": "A tall, faceless sentinel in layered dark plate, a halberd of lattice light, a violet ring rotating behind its head.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0096",
+      "name": "Glyph Swarm",
+      "region": "noc",
+      "brief": "A cloud of glowing violet glyphs that hangs together in the shape of a sigil, spinning when it attacks.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0097",
+      "name": "Lattice Weaver",
+      "region": "noc",
+      "brief": "A long-legged spider of dark brass with a violet spinneret, drawing lines of light between its legs as it moves.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    },
+    {
+      "id": "mob_0098",
+      "name": "Lattice Sovereign",
+      "region": "noc",
+      "brief": "A vast crowned lattice of violet light suspended over the chamber floor, a dark crystalline core inside, sentinel-like arms unfolding from the grid.",
+      "views": {
+        "front": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "back": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "left": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        },
+        "right": {
+          "master": null,
+          "existingReference": null,
+          "status": "missing"
+        }
+      },
+      "sprite": null,
+      "animationFiles": {
+        "idle": null,
+        "walk": null,
+        "attack": null,
+        "hit": null,
+        "death": null
+      },
+      "animationReview": "pending-all-required-views"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "itm_0078",
+      "name": "Traveler Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": false,
+      "status": "painted-look-existing"
+    },
+    {
+      "id": "itm_0079",
+      "name": "Leafweave Coat",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": false,
+      "status": "painted-look-existing"
+    },
+    {
+      "id": "itm_0080",
+      "name": "Copper Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": false,
+      "status": "painted-look-existing"
+    },
+    {
+      "id": "itm_0081",
+      "name": "Surveyor Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": false,
+      "status": "painted-look-existing"
+    },
+    {
+      "id": "itm_0082",
+      "name": "Aether Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": false,
+      "status": "painted-look-existing"
+    },
+    {
+      "id": "itm_1001",
+      "name": "Worn Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1002",
+      "name": "Worn Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1003",
+      "name": "Worn Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1004",
+      "name": "Worn Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1005",
+      "name": "Worn Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1006",
+      "name": "Worn Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1007",
+      "name": "Worn Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1008",
+      "name": "Worn Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1009",
+      "name": "Worn Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1010",
+      "name": "Worn Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1011",
+      "name": "Worn Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1012",
+      "name": "Worn Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1013",
+      "name": "Worn Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1014",
+      "name": "Worn Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1015",
+      "name": "Worn Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1016",
+      "name": "Worn Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1017",
+      "name": "Worn Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1018",
+      "name": "Worn Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1019",
+      "name": "Worn Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1020",
+      "name": "Worn Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1021",
+      "name": "Worn Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1022",
+      "name": "Worn Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1023",
+      "name": "Worn Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1024",
+      "name": "Bronze Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1025",
+      "name": "Bronze Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1026",
+      "name": "Bronze Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1027",
+      "name": "Bronze Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1028",
+      "name": "Bronze Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1029",
+      "name": "Bronze Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1030",
+      "name": "Bronze Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1031",
+      "name": "Bronze Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1032",
+      "name": "Bronze Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1033",
+      "name": "Bronze Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1034",
+      "name": "Bronze Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1035",
+      "name": "Bronze Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1036",
+      "name": "Bronze Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1037",
+      "name": "Bronze Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1038",
+      "name": "Bronze Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1039",
+      "name": "Bronze Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1040",
+      "name": "Bronze Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1041",
+      "name": "Bronze Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1042",
+      "name": "Bronze Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1043",
+      "name": "Bronze Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1044",
+      "name": "Bronze Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1045",
+      "name": "Bronze Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1046",
+      "name": "Bronze Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1047",
+      "name": "Iron Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1048",
+      "name": "Iron Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1049",
+      "name": "Iron Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1050",
+      "name": "Iron Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1051",
+      "name": "Iron Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1052",
+      "name": "Iron Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1053",
+      "name": "Iron Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1054",
+      "name": "Iron Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1055",
+      "name": "Iron Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1056",
+      "name": "Iron Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1057",
+      "name": "Iron Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1058",
+      "name": "Iron Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1059",
+      "name": "Iron Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1060",
+      "name": "Iron Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1061",
+      "name": "Iron Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1062",
+      "name": "Iron Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1063",
+      "name": "Iron Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1064",
+      "name": "Iron Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1065",
+      "name": "Iron Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1066",
+      "name": "Iron Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1067",
+      "name": "Iron Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1068",
+      "name": "Iron Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1069",
+      "name": "Iron Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1070",
+      "name": "Steel Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1071",
+      "name": "Steel Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1072",
+      "name": "Steel Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1073",
+      "name": "Steel Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1074",
+      "name": "Steel Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1075",
+      "name": "Steel Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1076",
+      "name": "Steel Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1077",
+      "name": "Steel Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1078",
+      "name": "Steel Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1079",
+      "name": "Steel Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1080",
+      "name": "Steel Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1081",
+      "name": "Steel Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1082",
+      "name": "Steel Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1083",
+      "name": "Steel Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1084",
+      "name": "Steel Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1085",
+      "name": "Steel Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1086",
+      "name": "Steel Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1087",
+      "name": "Steel Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1088",
+      "name": "Steel Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1089",
+      "name": "Steel Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1090",
+      "name": "Steel Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1091",
+      "name": "Steel Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1092",
+      "name": "Steel Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1093",
+      "name": "Cobalt Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1094",
+      "name": "Cobalt Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1095",
+      "name": "Cobalt Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1096",
+      "name": "Cobalt Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1097",
+      "name": "Cobalt Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1098",
+      "name": "Cobalt Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1099",
+      "name": "Cobalt Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1100",
+      "name": "Cobalt Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1101",
+      "name": "Cobalt Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1102",
+      "name": "Cobalt Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1103",
+      "name": "Cobalt Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1104",
+      "name": "Cobalt Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1105",
+      "name": "Cobalt Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1106",
+      "name": "Cobalt Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1107",
+      "name": "Cobalt Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1108",
+      "name": "Cobalt Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1109",
+      "name": "Cobalt Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1110",
+      "name": "Cobalt Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1111",
+      "name": "Cobalt Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1112",
+      "name": "Cobalt Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1113",
+      "name": "Cobalt Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1114",
+      "name": "Cobalt Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1115",
+      "name": "Cobalt Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1116",
+      "name": "Runic Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1117",
+      "name": "Runic Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1118",
+      "name": "Runic Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1119",
+      "name": "Runic Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1120",
+      "name": "Runic Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1121",
+      "name": "Runic Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1122",
+      "name": "Runic Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1123",
+      "name": "Runic Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1124",
+      "name": "Runic Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1125",
+      "name": "Runic Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1126",
+      "name": "Runic Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1127",
+      "name": "Runic Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1128",
+      "name": "Runic Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1129",
+      "name": "Runic Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1130",
+      "name": "Runic Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1131",
+      "name": "Runic Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1132",
+      "name": "Runic Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1133",
+      "name": "Runic Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1134",
+      "name": "Runic Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1135",
+      "name": "Runic Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1136",
+      "name": "Runic Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1137",
+      "name": "Runic Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1138",
+      "name": "Runic Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1139",
+      "name": "Mythril Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1140",
+      "name": "Mythril Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1141",
+      "name": "Mythril Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1142",
+      "name": "Mythril Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1143",
+      "name": "Mythril Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1144",
+      "name": "Mythril Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1145",
+      "name": "Mythril Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1146",
+      "name": "Mythril Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1147",
+      "name": "Mythril Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1148",
+      "name": "Mythril Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1149",
+      "name": "Mythril Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1150",
+      "name": "Mythril Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1151",
+      "name": "Mythril Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1152",
+      "name": "Mythril Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1153",
+      "name": "Mythril Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1154",
+      "name": "Mythril Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1155",
+      "name": "Mythril Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1156",
+      "name": "Mythril Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1157",
+      "name": "Mythril Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1158",
+      "name": "Mythril Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1159",
+      "name": "Mythril Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1160",
+      "name": "Mythril Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1161",
+      "name": "Mythril Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1162",
+      "name": "Ember Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1163",
+      "name": "Ember Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1164",
+      "name": "Ember Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1165",
+      "name": "Ember Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1166",
+      "name": "Ember Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1167",
+      "name": "Ember Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1168",
+      "name": "Ember Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1169",
+      "name": "Ember Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1170",
+      "name": "Ember Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1171",
+      "name": "Ember Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1172",
+      "name": "Ember Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1173",
+      "name": "Ember Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1174",
+      "name": "Ember Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1175",
+      "name": "Ember Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1176",
+      "name": "Ember Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1177",
+      "name": "Ember Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1178",
+      "name": "Ember Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1179",
+      "name": "Ember Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1180",
+      "name": "Ember Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1181",
+      "name": "Ember Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1182",
+      "name": "Ember Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1183",
+      "name": "Ember Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1184",
+      "name": "Ember Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1185",
+      "name": "Star Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1186",
+      "name": "Star Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1187",
+      "name": "Star Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1188",
+      "name": "Star Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1189",
+      "name": "Star Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1190",
+      "name": "Star Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1191",
+      "name": "Star Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1192",
+      "name": "Star Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1193",
+      "name": "Star Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1194",
+      "name": "Star Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1195",
+      "name": "Star Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1196",
+      "name": "Star Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1197",
+      "name": "Star Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1198",
+      "name": "Star Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1199",
+      "name": "Star Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1200",
+      "name": "Star Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1201",
+      "name": "Star Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1202",
+      "name": "Star Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1203",
+      "name": "Star Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1204",
+      "name": "Star Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1205",
+      "name": "Star Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1206",
+      "name": "Star Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1207",
+      "name": "Star Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1208",
+      "name": "Sovereign Saber",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1209",
+      "name": "Sovereign Bow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1210",
+      "name": "Sovereign Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1211",
+      "name": "Sovereign Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1212",
+      "name": "Sovereign Helm",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1213",
+      "name": "Sovereign Hood",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1214",
+      "name": "Sovereign Circlet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1215",
+      "name": "Sovereign Sallet",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1216",
+      "name": "Sovereign Warcrown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1217",
+      "name": "Sovereign Mask",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1218",
+      "name": "Sovereign Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1219",
+      "name": "Sovereign Leathers",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1220",
+      "name": "Sovereign Robe",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1221",
+      "name": "Sovereign Brigandine",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1222",
+      "name": "Sovereign Runeplate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1223",
+      "name": "Sovereign Duskcloak",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1224",
+      "name": "Sovereign Sabatons",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1225",
+      "name": "Sovereign Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1226",
+      "name": "Sovereign Slippers",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1227",
+      "name": "Sovereign Greaves",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1228",
+      "name": "Sovereign Warboots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1229",
+      "name": "Sovereign Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1230",
+      "name": "Sovereign Talisman",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1231",
+      "name": "Lesser Fang Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1232",
+      "name": "Greater Fang Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1233",
+      "name": "Grand Fang Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1234",
+      "name": "Lesser Clover Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1235",
+      "name": "Greater Clover Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1236",
+      "name": "Grand Clover Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1237",
+      "name": "Lesser Razor Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1238",
+      "name": "Greater Razor Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1239",
+      "name": "Grand Razor Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1240",
+      "name": "Lesser Hourglass Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1241",
+      "name": "Greater Hourglass Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1242",
+      "name": "Grand Hourglass Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1243",
+      "name": "Lesser Quill Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1244",
+      "name": "Greater Quill Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1245",
+      "name": "Grand Quill Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1246",
+      "name": "Lesser Tempo Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1247",
+      "name": "Greater Tempo Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1248",
+      "name": "Grand Tempo Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1249",
+      "name": "Lesser Expanse Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1250",
+      "name": "Greater Expanse Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1251",
+      "name": "Grand Expanse Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1252",
+      "name": "Lesser Viper Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1253",
+      "name": "Greater Viper Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1254",
+      "name": "Grand Viper Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1255",
+      "name": "Lesser Wellspring Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1256",
+      "name": "Greater Wellspring Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1257",
+      "name": "Grand Wellspring Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1258",
+      "name": "Lesser Heart Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1259",
+      "name": "Greater Heart Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1260",
+      "name": "Grand Heart Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1261",
+      "name": "Lesser Bastion Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1262",
+      "name": "Greater Bastion Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1263",
+      "name": "Grand Bastion Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1264",
+      "name": "Lesser Prism Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1265",
+      "name": "Greater Prism Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1266",
+      "name": "Grand Prism Charm",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1267",
+      "name": "Lesser Sigil of POW",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1268",
+      "name": "Greater Sigil of POW",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1269",
+      "name": "Grand Sigil of POW",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1270",
+      "name": "Lesser Sigil of LUK",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1271",
+      "name": "Greater Sigil of LUK",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1272",
+      "name": "Grand Sigil of LUK",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1273",
+      "name": "Lesser Sigil of AGI",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1274",
+      "name": "Greater Sigil of AGI",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1275",
+      "name": "Grand Sigil of AGI",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1276",
+      "name": "Lesser Sigil of DEX",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1277",
+      "name": "Greater Sigil of DEX",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1278",
+      "name": "Grand Sigil of DEX",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1279",
+      "name": "Lesser Sigil of INT",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1280",
+      "name": "Greater Sigil of INT",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1281",
+      "name": "Grand Sigil of INT",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1282",
+      "name": "Lesser Sigil of VIT",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1283",
+      "name": "Greater Sigil of VIT",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1284",
+      "name": "Grand Sigil of VIT",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1285",
+      "name": "Lesser Totem of Fury",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1286",
+      "name": "Greater Totem of Fury",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1287",
+      "name": "Grand Totem of Fury",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1288",
+      "name": "Lesser Totem of Haste",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1289",
+      "name": "Greater Totem of Haste",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1290",
+      "name": "Grand Totem of Haste",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1291",
+      "name": "Lesser Totem of Focus",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1292",
+      "name": "Greater Totem of Focus",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1293",
+      "name": "Grand Totem of Focus",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1294",
+      "name": "Lesser Totem of Precision",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1295",
+      "name": "Greater Totem of Precision",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1296",
+      "name": "Grand Totem of Precision",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1297",
+      "name": "Lesser Totem of Wildfire",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1298",
+      "name": "Greater Totem of Wildfire",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1299",
+      "name": "Grand Totem of Wildfire",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1300",
+      "name": "Lesser Totem of Bloodrush",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1301",
+      "name": "Greater Totem of Bloodrush",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1302",
+      "name": "Grand Totem of Bloodrush",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1303",
+      "name": "Lesser Totem of Surge",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1304",
+      "name": "Greater Totem of Surge",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1305",
+      "name": "Grand Totem of Surge",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1306",
+      "name": "Lesser Totem of Bulwark",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1307",
+      "name": "Greater Totem of Bulwark",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1308",
+      "name": "Grand Totem of Bulwark",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1309",
+      "name": "Lesser Totem of Aegis",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1310",
+      "name": "Greater Totem of Aegis",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1311",
+      "name": "Grand Totem of Aegis",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1312",
+      "name": "Lesser Totem of Mending",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1313",
+      "name": "Greater Totem of Mending",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1314",
+      "name": "Grand Totem of Mending",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1315",
+      "name": "Lesser Totem of Gale",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1316",
+      "name": "Greater Totem of Gale",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1317",
+      "name": "Grand Totem of Gale",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1318",
+      "name": "Lesser Totem of the Hunt",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1319",
+      "name": "Greater Totem of the Hunt",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1320",
+      "name": "Grand Totem of the Hunt",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1321",
+      "name": "Hollowroot Crown",
+      "slot": "head",
+      "visual": "none",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1322",
+      "name": "Emberwake Treads",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1323",
+      "name": "Lattice Heart",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1324",
+      "name": "Harvester's Knot",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1325",
+      "name": "Brawler's Oath",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1326",
+      "name": "Aether Conduit",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1327",
+      "name": "Blood Pact",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1328",
+      "name": "Lodestone",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1329",
+      "name": "Glass Ember",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1330",
+      "name": "Lesser Echo of Slaughter",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1331",
+      "name": "Greater Echo of Slaughter",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1332",
+      "name": "Grand Echo of Slaughter",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1333",
+      "name": "Lesser Echo of Fury",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1334",
+      "name": "Greater Echo of Fury",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1335",
+      "name": "Grand Echo of Fury",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1336",
+      "name": "Lesser Echo of Spite",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1337",
+      "name": "Greater Echo of Spite",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1338",
+      "name": "Grand Echo of Spite",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    }
+  ],
+  "skills": [
+    {
+      "id": "cleaving_arc",
+      "name": "Cleaving Arc",
+      "vfx": "fx_cleaving_arc",
+      "implemented": true,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "iron_cyclone",
+      "name": "Iron Cyclone",
+      "vfx": "fx_iron_cyclone",
+      "implemented": true,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "anchor_shout",
+      "name": "Anchor Shout",
+      "vfx": "fx_anchor_shout",
+      "implemented": true,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "sundering_pulse",
+      "name": "Sundering Pulse",
+      "vfx": "fx_sundering_pulse",
+      "implemented": true,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "prism_field",
+      "name": "Prism Field",
+      "vfx": "fx_prism_field",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "aether_nova",
+      "name": "Aether Nova",
+      "vfx": "fx_aether_nova",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "gravity_coil",
+      "name": "Gravity Coil",
+      "vfx": "fx_gravity_coil",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "meridian_lance",
+      "name": "Meridian Lance",
+      "vfx": "fx_meridian_lance",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "splitshot_array",
+      "name": "Splitshot Array",
+      "vfx": "fx_splitshot",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "dash_circuit",
+      "name": "Dash Circuit",
+      "vfx": "fx_dash",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "coil_mine",
+      "name": "Coil Mine",
+      "vfx": "fx_coil_mine",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "gearstorm",
+      "name": "Gearstorm",
+      "vfx": "fx_gearstorm",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    },
+    {
+      "id": "pulse_beacon",
+      "name": "Pulse Beacon",
+      "vfx": "fx_pulse_beacon",
+      "implemented": false,
+      "status": "generic-shape-effect-needs-authored-skill-vfx"
+    }
+  ]
+}
