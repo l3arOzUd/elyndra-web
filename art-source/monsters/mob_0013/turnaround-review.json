@@ -1,0 +1,19 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Brass beetle shell, glass wings, jade sap reservoir and forward needle identity retained",
+    "Rear has no duplicated eyes or needle",
+    "Side needle points forward and downward; tank remains beneath shell",
+    "Revised left has narrower wings and improved clear margin",
+    "All four final images pass alpha and frame-edge checks"
+  ],
+  "limitations": [
+    "Side wings still change pose relative to spread front wings; same-pose orthographic projection is unapproved",
+    "Six-leg attachment anatomy remains unresolved: front/rear overlap hides legs and profiles do not prove all six distinct chains",
+    "Right profile body and wings are larger than left; register shell center, tank and wing roots before animation",
+    "Front and rear wing tips have tight margins despite no opaque edge pixels",
+    "Wing ribs, rivets and sap liquid details vary between views"
+  ],
+  "next": "Resolve six leg roots and four wing roots explicitly, refine wing projection and scale, then author independent wingbeats, folded leg motion, needle attack and sap slosh."
+}

@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "SAPDRONE RIGHT-facing counterpart of first left view, same brass beetle drone, same compact shell proportions, body scale and pose. Needle projects down RIGHT from face, one near jade eye at front RIGHT, same spherical jade sap tank below shell. Three near folded mechanical insect legs distinct, opposite three mostly occluded. Four glass wings two pairs total, opposite pairs overlap in side projection so two narrow wing silhouettes visible, match left reference's wing size and angles. Front image second reference controls material and identity. Antique brass rivets, pale aqua glass, jade liquid bubbles. Eye-level orthographic right, entire needle and wings within square transparent canvas, at least clear margins, no shadows ground text or additional views.",
+  "references": [
+    "left.png",
+    "front.png"
+  ],
+  "review": "Created; cross-view review pending."
+}
