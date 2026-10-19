@@ -1,0 +1,8 @@
+{
+  "id": "mob_0087",
+  "name": "Zero Stoker",
+  "view": "front",
+  "prompt": "Single full-body FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Zero Stoker: a broad-shouldered iron automaton with a SHOVEL FOR ONE ARM and a coal hopper on its back, firebox glow behind a grille face. Heavy two-legged dark iron worker robot, broad rounded shoulders, riveted soot-dark plates, face is rectangular furnace grille with warm orange light inside. Character RIGHT arm (viewer left) ends directly in a wide heavy coal shovel, no hand on that arm. Left arm normal oversized iron hand. Back-mounted open coal hopper rises above shoulders with black coal visible, strapped to torso with iron brackets. Neutral standing front pose, square shoulders hips and face, shovel angled down and outward with blade visible. Warm painterly worn metal detail, clear readable industrial fantasy silhouette. Full hopper, shovel tip, hands and both feet inside square transparent canvas with generous margins. No ground, shadow, smoke, sparks, detached coal, text or other creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Character right arm is a shovel; left hand normal; coal hopper on back; grille face."
+}

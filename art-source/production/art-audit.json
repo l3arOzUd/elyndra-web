@@ -3635,9 +3635,13 @@
       "brief": "A broad-shouldered iron automaton with a shovel for one arm and a coal hopper on its back, firebox glow behind a grille face.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0087/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3672,9 +3676,13 @@
       "brief": "A colossal kiln-shaped automaton rising from the core floor, crucible arms that pour molten metal, a white-hot Aetherite heart behind a lattice grille.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0088/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3709,9 +3717,13 @@
       "brief": "A hairless grey cat-sized scavenger with long fingers, huge reflective eyes and a ridge of violet-lit bristles along the spine.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0090/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

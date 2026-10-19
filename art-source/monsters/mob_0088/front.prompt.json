@@ -1,0 +1,8 @@
+{
+  "id": "mob_0088",
+  "name": "Kiln Prime",
+  "view": "front",
+  "prompt": "Single full FRONT orthographic eye-level boss master for Elyndra hand-painted stylized fantasy MMORPG. Kiln Prime: a colossal KILN-SHAPED automaton rising from the core floor, CRUCIBLE ARMS that pour molten metal, a white-hot Aetherite heart behind a lattice grille. Monumental cylindrical industrial kiln torso of scorched refractory brick and riveted black iron bands, central broad lattice grille reveals brilliant white-hot faceted Aetherite heart surrounded by orange furnace glow. Two massive articulated arms ending in deep pouring crucibles with spout lips, visible molten metal inside each cup; no normal hands. Broad heavy integrated kiln base, no humanoid walking legs, no human face. Neutral frontal pose, crucibles held slightly outward with openings readable, all body square to camera. Warm detailed painterly game materials, bold powerful silhouette, scorched iron and brick contrast with contained heat. Entire kiln top arms base within square transparent canvas with generous margins. No floor plane, lava streams, smoke, sparks, shadow, text, scenery or extra creatures. Pouring streams added as separate animation.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Kiln body, two pouring crucible arms, white-hot Aetherite core behind lattice; pouring streams separate."
+}

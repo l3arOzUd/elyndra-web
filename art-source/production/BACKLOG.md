@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 76; existing front references needing review: 7; missing front references: 11.
+Monsters: 94; front masters created: 79; existing front references needing review: 7; missing front references: 8.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -92,9 +92,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0084 | Rivet Scrapling | master-created | missing | missing | missing | placeholder |
 | mob_0085 | Slagforged Brute | master-created | missing | missing | missing | placeholder |
 | mob_0086 | Pour Wraith | master-created | missing | missing | missing | placeholder |
-| mob_0087 | Zero Stoker | missing | missing | missing | missing | placeholder |
-| mob_0088 | Kiln Prime | missing | missing | missing | missing | placeholder |
-| mob_0090 | Gutter Lurk | missing | missing | missing | missing | placeholder |
+| mob_0087 | Zero Stoker | master-created | missing | missing | missing | placeholder |
+| mob_0088 | Kiln Prime | master-created | missing | missing | missing | placeholder |
+| mob_0090 | Gutter Lurk | master-created | missing | missing | missing | placeholder |
 | mob_0091 | Nullbloom | missing | missing | missing | missing | placeholder |
 | mob_0092 | Coupler Mite | missing | missing | missing | missing | placeholder |
 | mob_0093 | Riftling | missing | missing | missing | missing | placeholder |
