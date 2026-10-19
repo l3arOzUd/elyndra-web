@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Frost Mite LEFT-facing true profile from exact front and rear references. Strict orthographic eye-level camera, head facing image LEFT, one near blue eye beneath forward crystal edge, far eye hidden, small mouth mandibles forward LEFT. Tall ice crystal dome on compact oval body, tallest central prism, clear frost white pale cyan facets internal faint glow. SIX jointed blue legs total: three near legs visibly attached at separate front middle rear sockets, three far legs partly occluded; no eight-leg spider anatomy. Near front leg reaches left, middle supports beneath body, rear reaches right, same neutral stance. No tail wings antennae. Match shell height relative to legs and same painted icy material. All tips inside square transparent canvas generous margins no shadow floor snow particles or text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

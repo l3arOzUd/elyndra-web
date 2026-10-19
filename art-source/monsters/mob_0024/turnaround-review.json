@@ -1,0 +1,19 @@
+{
+  "id": "mob_0024",
+  "name": "Frost Mite",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual inspection of four references; file validation not anatomy approval.",
+  "confirmed": [
+    "Frost-white cyan crystal dome, central tall prism and blue jointed legs preserved.",
+    "Rear has no face; profiles show one eye and forward mandibles.",
+    "Three near-side leg attachments readable in profiles."
+  ],
+  "limitations": [
+    "Far-side legs overlap and cannot all be traced; six complete joint chains need construction review.",
+    "Front and rear use similar leg silhouettes; verify opposite-view stance and support-foot locations.",
+    "Crystal counts, facet boundaries and orientation differ across views; establish fixed shell landmarks.",
+    "Profile body length and eye size need scale alignment with front.",
+    "Ice glow and edge opacity vary; inspect against game terrain during sprite production."
+  ],
+  "next": "Resolve six-leg topology and shell landmarks, normalize frame and ground line, separate limbs and author alternating tripod movement without stretching."
+}
