@@ -1,0 +1,21 @@
+{
+  "id": "mob_0033",
+  "name": "Shade Carrier",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual review of four references; file validation separate from vehicle construction approval.",
+  "confirmed": [
+    "Six-wheel design: three near-side wheels visible in each profile, front/back show three per side.",
+    "Rear closed cargo doors differ from smashed cab/front jaw.",
+    "Dark iron freight body violet shadow windows and energy seams retained."
+  ],
+  "limitations": [
+    "Front headlights are painted facing camera in side views, inconsistent with forward-facing mounts.",
+    "Side exhaust placement includes rear stack unlike front pair near cab; establish fixed locations.",
+    "Front/rear views retain perspective with visible sidewalls; not strict orthographic.",
+    "Jaw-door hinges and open angles require common construction map.",
+    "Wheel size, axle spacing and body length need normalized scale comparison.",
+    "Cargo panel seam patterns vary; preserve landmarks for animation.",
+    "Side bumpers have tight frame margins."
+  ],
+  "next": "Resolve fixed six-wheel chassis dimensions, lamp/exhaust mounts and jaw hinges; separate wheels, body, doors and shadow layers for roll/attack/collapse animation."
+}

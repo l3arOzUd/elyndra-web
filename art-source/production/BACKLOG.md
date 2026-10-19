@@ -41,7 +41,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0030 | Smelt Hound | master-created | master-created | master-created | master-created | placeholder |
 | mob_0031 | Furnace Knight | master-created | master-created | master-created | master-created | placeholder |
 | mob_0032 | Null Wisp | master-created | master-created | master-created | master-created | placeholder |
-| mob_0033 | Shade Carrier | master-created | missing | missing | missing | placeholder |
+| mob_0033 | Shade Carrier | master-created | master-created | master-created | master-created | placeholder |
 | mob_0034 | Lattice Drone | master-created | missing | missing | missing | placeholder |
 | mob_0035 | Meridian Executor | master-created | missing | missing | missing | placeholder |
 | mob_0036 | Hollowroot Warden | master-created | missing | missing | missing | placeholder |
