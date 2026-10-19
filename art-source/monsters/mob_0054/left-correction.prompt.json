@@ -1,0 +1,7 @@
+{
+  "view": "left",
+  "prompt": "Edit this insect image only to correct leg count from SEVEN to SIX. REMOVE the extra central long leg directly beneath abdomen: its bent knee near image center x570 y760, lower shaft descending toward x660 y980, and silver pad at x690 y1070. Fill that entire removed limb region with transparent background. Keep exactly two SHORT raised legs at left near chest, and FOUR LONG legs ending in pads at far-left bottom, left-bottom, right-bottom and far-right bottom. Keep all other anatomy, antennae, colors, framing and pose unchanged. No additional legs. Transparent background.",
+  "references": [
+    "left-seven-leg-draft.png"
+  ]
+}

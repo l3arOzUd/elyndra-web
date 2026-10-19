@@ -1,0 +1,19 @@
+{
+  "id": "mob_0054",
+  "name": "Canal Strider",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front identity, rear reference and corrected left profile. Original seven-leg left draft preserved.",
+  "confirmed": [
+    "Teal insect with silt-pearl eyes, two antennae and silver foot pads retains front identity.",
+    "Left extra central seventh leg removed; final views show two short forelegs and four long legs.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Antennae sweep backward in left profile but forward in right; reconcile 3D direction and joint locations.",
+    "Side leg roots and spread differ; trace each of six chains consistently before rigging.",
+    "Front master is upright and mantis-like rather than a natural low water-strider; this posture must be reconciled with Bible and locomotion.",
+    "Rear silhouette largely repeats front stance; front/back depth remains unproven.",
+    "Segment seams and pad perspective vary; no animation-ready separated assets yet."
+  ],
+  "next": "Reconcile posture, antenna direction and six leg attachment chains, then author skitter locomotion, attack, hit and death with fixed-length articulated legs."
+}

@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Canal Strider BACK view, turn reference character 180 degrees about vertical axis preserving pose and anatomy. Slim teal insect, six jointed legs ONLY: two short raised forelegs beside upper thorax, two long widely spread middle legs, two long hind legs. Each ends in a single silver pad. Two antennae from head, NOT legs. Rear of head no face/eyes, dorsal teal segmented thorax and tapered abdomen with gold seams; no wings or shell added. Match upright body proportions and leg lengths of reference, neutral pose. Full antennae and six pads inside square transparent canvas generous margin. Orthographic eye-level, hand-painted fantasy MMORPG, no water ground shadow text.",
+  "references": [
+    "front.png"
+  ]
+}

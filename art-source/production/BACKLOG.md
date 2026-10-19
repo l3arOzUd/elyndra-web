@@ -59,7 +59,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0051 | Brass Kite | master-created | master-created | master-created | master-created | placeholder |
 | mob_0052 | Glasstail Basilisk | master-created | master-created | master-created | master-created | placeholder |
 | mob_0053 | Gnomon Acolyte | master-created | master-created | master-created | master-created | placeholder |
-| mob_0054 | Canal Strider | master-created | missing | missing | missing | placeholder |
+| mob_0054 | Canal Strider | master-created | master-created | master-created | master-created | placeholder |
 | mob_0055 | Dust Revenant | master-created | missing | missing | missing | placeholder |
 | mob_0056 | Sand-buried Colossus | master-created | missing | missing | missing | placeholder |
 | mob_0057 | Prism Lens-drone | master-created | missing | missing | missing | placeholder |
