@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "RIGHT-facing counterpart of exact Dustwing side profile in first reference. Match body height, wing projection and stance precisely, facing RIGHT instead of LEFT. Second reference front identity. One visible teal eye, two feather antennae, cream furry thorax and segmented abdomen, SIX small legs on ventral side screen RIGHT with far pair occluded naturally. Four sand cream wings two pairs narrow/foreshortened as first reference, same brass upper eyespots and teal scale bands, no added wings. Same upright hovering pose, full moth centered on square transparent canvas with wide margins beyond antennae and wing tips. No floor shadow labels.",
+  "references": [
+    "left.png",
+    "front.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

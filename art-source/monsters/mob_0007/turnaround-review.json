@@ -1,0 +1,17 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct four-view browser comparison on a light background.",
+  "confirmed": [
+    "Sandy moth identity, cream furry body, feathery antennae and brass eyespots retained",
+    "Rear view omits facial eyes",
+    "Opposing profiles broadly match body and wing silhouettes",
+    "All four files pass transparent-background and edge checks"
+  ],
+  "limitations": [
+    "Side wings change plane relative to spread front wings; these are not strict same-pose orthographic projections",
+    "Six-leg anatomy cannot be verified from overlapping profile limbs; establish explicit limb attachments before animation",
+    "Body scale varies across views and wing tips have tight margins",
+    "Wing veins and markings vary; exact surface continuity is unapproved"
+  ],
+  "next": "Refine same-pose wing projection, register body landmarks and separate four wing layers and six leg chains before authored flight animation."
+}

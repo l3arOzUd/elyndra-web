@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "Make the matching RIGHT-FACING reference of BROOKFIN using attached left-facing image as primary shape reference and front image as identity reference. Same round fat teal fish, cream belly, single amber-green eye visible on near side, glass-clear pale aqua fins with fine luminous veins, four short fin-foot legs total, no toes or frog limbs. Mirror counterpart to left: mouth points RIGHT, short fan tail behind to LEFT, median tall dorsal fin, near pectoral fin lies against flank separate from feet. Preserve body proportions, fin shape, leg lengths, relative body scale and baseline of left reference; do not add legs or second visible eye. Eye-level orthographic side, avoid turning face towards camera. Premium hand-painted fantasy MMORPG style exact match. Transparent background, complete silhouette within square frame, no shadows, ground, text, inset or duplicate.",
+  "references": [
+    "left.png",
+    "front.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

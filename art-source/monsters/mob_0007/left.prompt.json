@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "Dustwing exact same moth, strict LEFT SIDE PROFILE, rotated exactly 90 degrees from supplied front. Reference1 front identity reference2 back. Upright hovering body remains vertical, head faces LEFT one teal eye visible, furry cream thorax segmented abdomen, TWO feathery antennae overlapping in profile, SIX small insect legs attached to ventral surface on screen LEFT, far legs partly hidden. FOUR wings remain spread LATERALLY in same pose as reference; from side they are seen strongly FORESHORTENED nearly edge-on extending toward and away from camera, NOT a broad butterfly fan laid flat to viewer, NOT folded upright over back. Sand/cream powder scales and brass eyespot only partly visible due to angle. Preserve anatomy colors body height. Complete creature with 12% transparent margins, square canvas, orthographic eye level, no floor shadow labels.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

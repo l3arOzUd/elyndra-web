@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "Generate LEFT side reference of the exact BROOKFIN fish shown in attached front and back. True orthographic side profile facing LEFT, eye-level, same neutral four-fin-foot stance, one near eye visible, far eye fully hidden. Fat nearly spherical teal scaled body, cream underbelly, amber-green eye, broad short fish mouth. Four stubby fin legs total, near front and rear fin feet visible separated under body, far pair mostly occluded. Separate translucent near pectoral fin at shoulder, tall glass-clear aqua dorsal fin on midline, SHORT fan tail projecting behind body to image right. Use rear reference for tail's two rounded lobes; retain translucent fine teal veins in all fins. No frog haunches, toes, ears, hands or mammal anatomy. Same premium hand-painted MMORPG shading. Do not turn head towards viewer. Whole creature centered with generous transparent margin, square canvas, no shadow, ground, text, extra views or particles.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

@@ -1,0 +1,8 @@
+{
+  "view": "back",
+  "prompt": "Create the BACK reference of BROOKFIN, the exact same single fantasy fish creature as the attached front master. Rotate camera 180 degrees, eye level orthographic rear, same neutral stance and same proportions. Fat round blue-green scaled fish, creamy lower belly only where it wraps underneath, translucent glass-clear aqua fins with faint teal aether veins. Four short fin-legs with flared fin feet (two rear feet prominent, two front feet partly occluded); preserve two lateral pectoral fins separate from legs. Tall median dorsal fin, short broad fish tail attached at the rear center visible from behind. No face, eyes or mouth on back. Keep the chubby fish anatomy, no frog thighs, toes, mammal paws or arms. Match painted scales, soft warm highlights and fantasy MMORPG illustration style precisely. Entire silhouette centered within square 1024x1024 canvas with at least 8 percent clear margin around every fin tip. Transparent alpha background, no ground, shadow, scenery, particles, text, diagram or additional views.",
+  "references": [
+    "front.png"
+  ],
+  "review": "Created; direct and cross-view review pending."
+}

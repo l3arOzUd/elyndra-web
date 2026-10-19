@@ -1,0 +1,18 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Round blue-green scaled fish, cream belly and translucent veined fins retained",
+    "Rear has no duplicated face; lateral views each show one eye",
+    "Short fin-feet retained without frog toes or mammal paws",
+    "All four images pass alpha and frame-edge checks"
+  ],
+  "limitations": [
+    "Lateral views still expose some frontal mouth and chest surface rather than strict orthographic profile",
+    "Tail is presented broadside in the rear view; its plane is inconsistent with the lateral fan tail",
+    "Dorsal fin bends and fin-ray patterns differ across views",
+    "Four leg attachments need explicit layer design; rear far legs and profile far rear leg are obscured",
+    "Register body landmarks and foot baseline before animation; file framing alone is insufficient"
+  ],
+  "next": "Correct rear tail plane and lateral camera, then define four fin-leg attachment points and separate fin layers for a waddling gait."
+}
