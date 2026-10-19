@@ -307,6 +307,41 @@ function fieldDialogues(f: FieldSpec, look: Lookup, next?: FieldSpec): DialogueD
   ];
 }
 
+// --- text that named the v2 towns and fields --------------------------------------------
+
+/** Quest summaries that sent players to maps that no longer exist. */
+const QUEST_SUMMARY: Record<string, string> = {
+  q_ver_intro: "Herd and clear the Graftlings in Moonbrook Vale's Reed Marsh. A gentle first horde after Hollowroot.",
+  q_ver_heartwood: "Stop the Heartwood Regent in the dungeon under Elderroot Expanse and report back. The road east to the Saffron Wastes opens.",
+  q_sol_intro: "Clear the Sandcoils basking on Graftwood Wilds' Trellis Dunes. A gentle first horde in the heat.",
+  q_sol_heliostat: "Shut down the Heliostat Sovereign in the Vault beneath Pearl Coast and report back. The way east to Frostfire Divide opens.",
+  q_tha_drowned_relay: "Silence the Drowned Signalmind where it surfaces at Frostfire Divide's Sentry Vents and report back. Its pulses kept the constructs hostile.",
+  q_cry_intro: "Thin the Frost Mites at the Saffron Wastes' Frost Seep: a passive warm-up that shows how the cold changes a fight.",
+  q_cry_cryocore: "Shut down the Cryocore Curator in the Archive beneath Cinder Expanse and report back. The thaw opens the way to the Veil Rift.",
+  q_emb_intro: "Thin the Ashcrawler herds on Frostfire Divide's Ash Flats. A gentle first train.",
+  q_emb_red_crucible: "Clear the pour channels and the mould yard. Leads on to Kiln Prime's heights in the Veil Rift.",
+  q_emb_furnace_zero: "Shut down Kiln Prime on the Veil Rift's Stoker Heights and report back. Opens the road to Meridian Gate.",
+  q_noc_intro: "Put out the Null Wisps drifting through Cinder Expanse's Spitter Vents.",
+  q_noc_lattice_heart: "Silence the Lattice Sovereign below Meridian Gate and report back. The end of the Wayfarer's road through Elyndra.",
+};
+
+/** Dialogue lines that named the v2 towns, gates and lifts. */
+const DIALOGUE_LINES: Record<string, string[]> = {
+  dlg_lum_merchant: ["Rations, tonics, feathers, all fresh. Prices are Guild-fixed, so don't haggle.", "Sell me your field materials, one by one or the whole bag at once."],
+  dlg_lum_teleporter: ["The transit lattice runs to the camp of every field. A little coin keeps the crystals charged.", "The further the field, the more it costs."],
+  dlg_lum_east_gate_guard: ["East Gate. Dawnmeadow lies beyond, and past it every field in turn, each ten levels harder.", "If you see three dozen of anything chasing you, run for a camp."],
+  dlg_lum_north_gate_guard: ["The North Gate is closed: the road north runs through the fields now.", "Take the East Gate, or the transit by the square."],
+  dlg_ver_merchant: ["Rations and tonics, marked up for the long road.", "Bring me sap and scales; the alchemists pay well for anything green."],
+  dlg_ver_heartwood_keeper: ["Root lift's working. Avelorn, or back up to Elderroot Expanse?", "Don't touch the sap lines; they bite."],
+  dlg_sol_merchant: ["Water's dear out in the Wastes, and everything else costs too.", "Rations and tonics at Guild prices. Sell me your glass; the observatory buys it all."],
+  dlg_sol_vault_keeper: ["The lift runs to Avelorn or back up to Pearl Coast.", "Don't look straight into the mirrors."],
+  dlg_tha_merchant: ["Rations, tonics, the same Guild prices as everywhere, plus the cost of shipping them.", "Bring me what the reef gives you. Inland buyers pay well for anything from the sea."],
+  dlg_cry_archive_lift_keeper: ["Going up? Back to Cinder Expanse or all the way to Avelorn.", "The vault is past the index gallery. The lancers there shoot far."],
+  dlg_emb_merchant: ["Rations and tonics, hauled a long way. Heat spoils everything, so I charge what it costs to keep them cool.", "Bring me Emberfall scrap; the foundries buy all I can ship."],
+  dlg_noc_merchant: ["Rations and tonics, brought in on the transit. Nothing grows past the Rift any more, so nothing's cheap.", "Bring me lattice scrap. The scholars pay in coin they don't need."],
+  dlg_noc_heart_lift: ["Back up? Avelorn or the Gate.", "Don't look at the lattice too long. It looks back."],
+};
+
 // --- the world ----------------------------------------------------------------------------
 
 /** Rebuilds the seven region designs into the v3 world. */
@@ -346,6 +381,7 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
     return town.npcs.filter((n) => n.role === "merchant" || n.role === "craftsman");
   });
   placeInTown(avelorn, movers);
+  avelorn.role = "The one town: services, quest hub, every region's merchants and craftsmen, and paid transit to the camp of every field.";
   for (const lm of avelorn.landmarks) {
     if (lm.id === "lm_avelorn_east_gate") lm.note = `To ${FIELDS[0].name} (Lv${FIELDS[0].levels[0]}-${FIELDS[0].levels[1]}) and on east to every field.`;
     if (lm.id === "lm_avelorn_north_gate") lm.note = "Closed: the north road now runs through the fields.";
@@ -398,6 +434,7 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       const moveGiver = !kept.has(q.giver_npc_id) || (collect && npcMap.get(q.giver_npc_id) !== target && newMaps.get(npcMap.get(q.giver_npc_id)!)?.design.type !== "town");
       const giver = moveGiver ? npcOn(target) : q.giver_npc_id;
       const turnIn = q.turn_in_npc_id === q0.giver_npc_id ? giver : kept.has(q.turn_in_npc_id) ? q.turn_in_npc_id : "npc_lum_guild_registrar";
+      if (QUEST_SUMMARY[q.id]) q.summary = QUEST_SUMMARY[q.id];
       q.giver_npc_id = giver;
       q.turn_in_npc_id = turnIn;
       return q;
@@ -412,7 +449,7 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
     const fieldsHere = FIELDS.filter((f) => f.region === r.region.id);
     const generated = new Set(FIELDS.flatMap((f) => fieldDialogues(f, look).map((d) => d.id)));
     const dialogues = [
-      ...r.dialogues.filter((d) => kept.has(d.npc_id) && !generated.has(d.id)),
+      ...r.dialogues.filter((d) => kept.has(d.npc_id) && !generated.has(d.id)).map((d) => (DIALOGUE_LINES[d.id] ? { ...d, lines: DIALOGUE_LINES[d.id] } : d)),
       ...fieldsHere.flatMap((f) => fieldDialogues(f, look, FIELDS[FIELDS.indexOf(f) + 1])),
     ];
     return {

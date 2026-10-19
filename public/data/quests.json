@@ -273,7 +273,7 @@
     }
    ]
   },
-  "summary": "Herd and clear the Graftlings of Fernreach through the East Gate. A gentle first horde after Hollowroot."
+  "summary": "Herd and clear the Graftlings in Moonbrook Vale's Reed Marsh. A gentle first horde after Hollowroot."
  },
  {
   "id": "q_ver_mossbridge",
@@ -505,7 +505,7 @@
     }
    ]
   },
-  "summary": "Stop the Heartwood Regent and report to Sylvara. Opens the transit to Solenia's Duskhar."
+  "summary": "Stop the Heartwood Regent in the dungeon under Elderroot Expanse and report back. The road east to the Saffron Wastes opens."
  },
  {
   "id": "q_sol_intro",
@@ -532,7 +532,7 @@
     }
    ]
   },
-  "summary": "Clear the Sandcoils basking on the Saffron Dunes beyond the West Gate. A gentle first horde in the heat."
+  "summary": "Clear the Sandcoils basking on Graftwood Wilds' Trellis Dunes. A gentle first horde in the heat."
  },
  {
   "id": "q_sol_caravan",
@@ -736,7 +736,7 @@
     }
    ]
   },
-  "summary": "Shut down the Heliostat Sovereign and report to Duskhar. Opens the transit to Thalassia's Port Merrow."
+  "summary": "Shut down the Heliostat Sovereign in the Vault beneath Pearl Coast and report back. The way east to Frostfire Divide opens."
  },
  {
   "id": "q_tha_intro",
@@ -999,7 +999,7 @@
     }
    ]
   },
-  "summary": "Silence the Drowned Signalmind in the Sonar Chamber and report to Port Merrow. Its pulses kept Thalassia's constructs hostile; the road to Crystallis opens."
+  "summary": "Silence the Drowned Signalmind where it surfaces at Frostfire Divide's Sentry Vents and report back. Its pulses kept the constructs hostile."
  },
  {
   "id": "q_cry_intro",
@@ -1030,7 +1030,7 @@
     }
    ]
   },
-  "summary": "Thin the Frost Mites on Frostline's thaw strip: a passive warm-up that shows a newcomer from Thalassia how the cold changes a fight."
+  "summary": "Thin the Frost Mites at the Saffron Wastes' Frost Seep: a passive warm-up that shows how the cold changes a fight."
  },
  {
   "id": "q_cry_frostline",
@@ -1271,7 +1271,7 @@
     }
    ]
   },
-  "summary": "Shut down the Cryocore Curator and report to Vaelspire. The thaw it brings opens the passes down to Emberfall."
+  "summary": "Shut down the Cryocore Curator in the Archive beneath Cinder Expanse and report back. The thaw opens the way to the Veil Rift."
  },
  {
   "id": "q_emb_intro",
@@ -1298,7 +1298,7 @@
     }
    ]
   },
-  "summary": "Thin the Ashcrawler herds on the Ashfield flats. A gentle first train for Wayfarers fresh from Crystallis."
+  "summary": "Thin the Ashcrawler herds on Frostfire Divide's Ash Flats. A gentle first train."
  },
  {
   "id": "q_emb_slag_pools",
@@ -1490,7 +1490,7 @@
     }
    ]
   },
-  "summary": "Clear the pour channels and the mould yard. Leads to the hatch down to Furnace Zero."
+  "summary": "Clear the pour channels and the mould yard. Leads on to Kiln Prime's heights in the Veil Rift."
  },
  {
   "id": "q_emb_furnace_zero",
@@ -1521,7 +1521,7 @@
     }
    ]
   },
-  "summary": "Shut down Kiln Prime in the Zero Core and report to Cindervale. Opens the road to Nocthaven."
+  "summary": "Shut down Kiln Prime on the Veil Rift's Stoker Heights and report back. Opens the road to Meridian Gate."
  },
  {
   "id": "q_noc_intro",
@@ -1548,7 +1548,7 @@
     }
    ]
   },
-  "summary": "Put out the Null Wisps drinking the last streetlamps of the Dusk Verge."
+  "summary": "Put out the Null Wisps drifting through Cinder Expanse's Spitter Vents."
  },
  {
   "id": "q_noc_dusk_verge",
@@ -1780,6 +1780,6 @@
     }
    ]
   },
-  "summary": "Silence the Lattice Sovereign and report to Umbracrest. The end of the Wayfarer's road through Elyndra."
+  "summary": "Silence the Lattice Sovereign below Meridian Gate and report back. The end of the Wayfarer's road through Elyndra."
  }
 ]

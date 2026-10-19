@@ -4,7 +4,7 @@
   "region_id": "lum",
   "name": "Avelorn",
   "type": "town",
-  "role": "Region capital: services, quest hub, crafting, transit to Lumeris fields and Sylvara.",
+  "role": "The one town: services, quest hub, every region's merchants and craftsmen, and paid transit to the camp of every field.",
   "recommended_level_min": 1,
   "recommended_level_max": 20,
   "width_cells": 120,

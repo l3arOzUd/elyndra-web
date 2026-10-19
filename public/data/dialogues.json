@@ -11,8 +11,8 @@
   "id": "dlg_lum_merchant",
   "npc_id": "npc_lum_merchant",
   "lines": [
-   "Rations, tonics, all fresh. Prices are Guild-fixed, so don't haggle.",
-   "Sell me your field materials; I ship them to Sylvara."
+   "Rations, tonics, feathers, all fresh. Prices are Guild-fixed, so don't haggle.",
+   "Sell me your field materials, one by one or the whole bag at once."
   ]
  },
  {
@@ -27,8 +27,8 @@
   "id": "dlg_lum_teleporter",
   "npc_id": "npc_lum_teleporter",
   "lines": [
-   "The transit lattice still runs between camps. A little coin keeps the crystals charged.",
-   "Sylvara is further, and costs more."
+   "The transit lattice runs to the camp of every field. A little coin keeps the crystals charged.",
+   "The further the field, the more it costs."
   ]
  },
  {
@@ -43,16 +43,16 @@
   "id": "dlg_lum_east_gate_guard",
   "npc_id": "npc_lum_east_gate_guard",
   "lines": [
-   "East Gate. Dawnmeadow lies beyond: Mosskin and Sporelings. The amber mites are further east, on the Amber Trail.",
-   "If you see three dozen of anything chasing you, run back here."
+   "East Gate. Dawnmeadow lies beyond, and past it every field in turn, each ten levels harder.",
+   "If you see three dozen of anything chasing you, run for a camp."
   ]
  },
  {
   "id": "dlg_lum_north_gate_guard",
   "npc_id": "npc_lum_north_gate_guard",
   "lines": [
-   "North Gate to Whispergrass. Craglets and Thornbacks; not for a first day out.",
-   "The rune circle out there hums at night."
+   "The North Gate is closed: the road north runs through the fields now.",
+   "Take the East Gate, or the transit by the square."
   ]
  },
  {
@@ -129,8 +129,8 @@
   "id": "dlg_ver_merchant",
   "npc_id": "npc_ver_merchant",
   "lines": [
-   "Rations and tonics, carried up from Avelorn and marked up for the climb.",
-   "Bring me sap and scales; Duskhar's alchemists pay well for anything green."
+   "Rations and tonics, marked up for the long road.",
+   "Bring me sap and scales; the alchemists pay well for anything green."
   ]
  },
  {
@@ -145,7 +145,7 @@
   "id": "dlg_ver_heartwood_keeper",
   "npc_id": "npc_ver_heartwood_keeper",
   "lines": [
-   "Root lift's working. Sylvara or the Basin?",
+   "Root lift's working. Avelorn, or back up to Elderroot Expanse?",
    "Don't touch the sap lines; they bite."
   ]
  },
@@ -215,8 +215,8 @@
   "id": "dlg_sol_merchant",
   "npc_id": "npc_sol_merchant",
   "lines": [
-   "Water's free in Duskhar, thanks to the canal. Everything else costs.",
-   "Rations and tonics, brought up from Sylvara. Sell me your glass; the observatory buys it all."
+   "Water's dear out in the Wastes, and everything else costs too.",
+   "Rations and tonics at Guild prices. Sell me your glass; the observatory buys it all."
   ]
  },
  {
@@ -231,7 +231,7 @@
   "id": "dlg_sol_vault_keeper",
   "npc_id": "npc_sol_vault_keeper",
   "lines": [
-   "The lift runs to Duskhar or the causeway.",
+   "The lift runs to Avelorn or back up to Pearl Coast.",
    "Don't look straight into the mirrors."
   ]
  },
@@ -270,8 +270,8 @@
   "id": "dlg_tha_merchant",
   "npc_id": "npc_tha_merchant",
   "lines": [
-   "Rations, tonics, the same Guild prices as the mainland, plus the cost of shipping them here.",
-   "Bring me what the reef gives you. Merchants in Vaelspire pay well for anything from the sea."
+   "Rations, tonics, the same Guild prices as everywhere, plus the cost of shipping them.",
+   "Bring me what the reef gives you. Inland buyers pay well for anything from the sea."
   ]
  },
  {
@@ -333,7 +333,7 @@
   "id": "dlg_cry_archive_lift_keeper",
   "npc_id": "npc_cry_archive_lift_keeper",
   "lines": [
-   "Going up? Back to the Circuit or all the way to Vaelspire.",
+   "Going up? Back to Cinder Expanse or all the way to Avelorn.",
    "The vault is past the index gallery. The lancers there shoot far."
   ]
  },
@@ -372,8 +372,8 @@
   "id": "dlg_emb_merchant",
   "npc_id": "npc_emb_merchant",
   "lines": [
-   "Rations and tonics, hauled up from Vaelspire. Heat spoils everything, so I charge what it costs to keep them cool.",
-   "Bring me Emberfall scrap; the foundries in the south buy all I can ship."
+   "Rations and tonics, hauled a long way. Heat spoils everything, so I charge what it costs to keep them cool.",
+   "Bring me Emberfall scrap; the foundries buy all I can ship."
   ]
  },
  {
@@ -419,8 +419,8 @@
   "id": "dlg_noc_merchant",
   "npc_id": "npc_noc_merchant",
   "lines": [
-   "Rations and tonics, brought in on the Cindervale transit. Nothing grows here any more, so nothing's cheap.",
-   "Bring me lattice scrap. The scholars upstairs pay in coin they don't need."
+   "Rations and tonics, brought in on the transit. Nothing grows past the Rift any more, so nothing's cheap.",
+   "Bring me lattice scrap. The scholars pay in coin they don't need."
   ]
  },
  {
@@ -435,7 +435,7 @@
   "id": "dlg_noc_heart_lift",
   "npc_id": "npc_noc_heart_lift",
   "lines": [
-   "Back up? Umbracrest or the Gate.",
+   "Back up? Avelorn or the Gate.",
    "Don't look at the lattice too long. It looks back."
   ]
  },
