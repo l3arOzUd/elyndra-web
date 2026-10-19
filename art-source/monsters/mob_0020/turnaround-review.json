@@ -1,0 +1,19 @@
+{
+  "id": "mob_0020",
+  "name": "Tidehopper",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual review of front, back and both generated profiles. File validation is separate from design approval.",
+  "confirmed": [
+    "Blue-grey frog with cream underside, large folded hind limbs and small forelimbs preserved.",
+    "Pearly overlapping shell dome and barnacles present in all views.",
+    "Profiles face opposite directions with one eye visible; no added tail or fins."
+  ],
+  "limitations": [
+    "Rear webbed toes spread toward viewer; verify rear foot orientation against side stance.",
+    "Shell tile arrangement and barnacle placement vary across views; establish fixed landmark map.",
+    "Side eyes and chest retain some oblique volume; strict orthographic alignment not proven.",
+    "Hidden far hind limb attachments require anatomical construction before animation.",
+    "Image scale differs between front/rear and side references."
+  ],
+  "next": "Resolve landmarks, foot direction and hidden joints, normalize framing, then separate articulated parts and author animation. Not an animation-ready approval."
+}

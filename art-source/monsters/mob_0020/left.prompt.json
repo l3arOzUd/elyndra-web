@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Create LEFT PROFILE reference of exactly this Tidehopper creature, facing image LEFT. Orthographic eye-level strict side view, not three-quarter: only near eye visible, far eye fully occluded. Same squat blue-grey frog, massive folded hind thigh, small foreleg, four limbs total with far pair mostly hidden, cream underside, pearly overlapping scallop-shell shingles making a tall rounded back dome and sparse ivory barnacles. Match front and rear reference design and proportions, no tail, fins or additional limbs. Near hind leg has anatomically coherent folded frog thigh/shin and webbed foot pointing forward left, small forefoot forward under head. Neutral crouch matching refs. Full creature comfortably inside square canvas, transparent background no shadow floor text or decorations. Painted fantasy MMORPG, same rich blue grey skin and pearl shell texture.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

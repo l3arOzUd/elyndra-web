@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Create RIGHT PROFILE turnaround of exact Tidehopper in references, facing image RIGHT. Opposite view of left reference: match its silhouette, height, shell dome, crouch, leg folds, eye and snout proportions. Strict orthographic eye-level side profile, only one eye visible, no front chest three-quarter turn. Blue-grey wet frog with two small forelegs and two huge folded hind legs (far limbs mostly occluded), webbed feet pointing toward right, cream underside, pearl scallop overlapping shell shingles and sparse ivory barnacles. Front reference establishes bilateral design. Four limbs total no tail fins or extra toes/legs. Preserve painted fantasy MMORPG style and materials. Full body generous transparent margin, no cast shadow floor water text or inset. This is a coherent opposite side, not a new pose.",
+  "references": [
+    "left.png",
+    "front.png"
+  ]
+}
