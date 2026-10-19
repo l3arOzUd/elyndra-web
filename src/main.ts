@@ -6,7 +6,7 @@ import { Connection } from "./net/connection";
 import { buildHeroSprite } from "./render/heroSprite";
 import { loadPaperDoll, setPaperDollKit, wayfarerSprite } from "./render/paperDoll";
 import { loadSprite, type SpriteDef } from "./render/spriteDef";
-import { Hud } from "./ui/hud";
+import { Hud, JOB_INFO } from "./ui/hud";
 import { Inspector } from "./ui/inspector";
 import { NpcDialog } from "./ui/npcDialog";
 
@@ -62,13 +62,14 @@ async function main() {
       if (submit.disabled) return;
       submit.disabled = true;
       const name = nameInput.value.trim();
+      const job = (form.querySelector<HTMLInputElement>('input[name="job"]:checked')?.value) ?? "vanguard";
       $("login-error").textContent = "";
       const conn = new Connection(serverInput.value.trim());
       const hud = new Hud(content);
       const dialog = new NpcDialog(content, hud);
       const game = new Game($("view"), conn, content, sprites, hud, dialog);
       try {
-        await conn.connect(name);
+        await conn.connect(name, job);
       } catch (e) {
         $("login-error").textContent = (e as Error).message;
         game.renderer.domElement.remove();
@@ -101,6 +102,10 @@ async function main() {
       requestAnimationFrame(loop);
     };
     form.onsubmit = (ev) => { ev.preventDefault(); void start(); };
+    // Job choice: only a brand-new character takes it; existing ones keep theirs.
+    const showJob = () => { const v = form.querySelector<HTMLInputElement>('input[name="job"]:checked')?.value ?? 'vanguard'; $("job-info").textContent = JOB_INFO[v]; };
+    form.querySelectorAll<HTMLInputElement>('input[name="job"]').forEach((r) => (r.onchange = showJob));
+    showJob();
     if (params.get("auto") === "1" && nameInput.value) void start();
   } catch (err) {
     console.error(err);

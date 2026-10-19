@@ -11,6 +11,19 @@ function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: stri
   return e;
 }
 export const HOTBAR = ['cleaving_arc', 'iron_cyclone', 'anchor_shout', 'sundering_pulse'] as const;
+/** Skills on keys 1-4 for each job: its three skills, then Sundering Pulse. */
+export const JOB_SKILLS: Record<string, string[]> = {
+  vanguard: [...HOTBAR],
+  arcanist: ['prism_field', 'aether_nova', 'gravity_coil', 'sundering_pulse'],
+  strider: ['meridian_lance', 'splitshot_array', 'dash_circuit', 'sundering_pulse'],
+  machinist: ['coil_mine', 'gearstorm', 'pulse_beacon', 'sundering_pulse'],
+};
+export const JOB_INFO: Record<string, string> = {
+  vanguard: 'Front line: cleaving cones, a spinning blade storm and a taunt.',
+  arcanist: 'Caster: a ticking prism field, an aether nova and a coil that pulls the horde in.',
+  strider: 'Ranged: a piercing lance, a spread volley and a dash.',
+  machinist: 'Engineer: mines, a gear storm and a beacon that strengthens allies.',
+};
 export const ITEM_KEYS = ['itm_0075', 'itm_0076', 'itm_0077'] as const;
 /** Totems worn in the Charm slots fire from keys 8, 9 and 0. */
 export const TOTEM_KEYS = ['8', '9', '0'] as const;
@@ -43,15 +56,18 @@ export class Hud {
   onTotemFired: (type: string) => void = () => {};
   onLevelUp: (level: number) => void = () => {};
 
+  /** The skills on keys 1-4 (JOB_SKILLS of the character's job). */
+  hotbar: string[] = [...HOTBAR];
+
   constructor(private readonly c: ClientContent) {
     const bar = $('hotbar'); bar.replaceChildren();
-    HOTBAR.forEach((id, i) => {
-      const s = c.skills.get(id), b = el('button', 'slot'); b.dataset.skill = id;
-      b.append(el('span', 'key', String(i + 1)), skillIcon(id), el('span', 'name', s?.name ?? id), el('span', 'cd'));
-      b.title = s ? s.name + ' · ' + s.resource_cost + ' SP · ' + s.cooldown_ms / 1000 + 's · up to ' + s.max_targets + ' targets' : id;
-      this.bindTooltip(b, s?.name ?? id, () => this.skillText(id));
-      b.setAttribute('aria-label', b.title); b.onclick = () => this.onSkill(id); bar.append(b);
+    HOTBAR.forEach((_, i) => {
+      const b = el('button', 'slot');
+      b.append(el('span', 'key', String(i + 1)), skillIcon(HOTBAR[i]), el('span', 'name'), el('span', 'cd'));
+      this.bindTooltip(b, () => c.skills.get(b.dataset.skill!)?.name ?? '', () => this.skillText(b.dataset.skill!));
+      b.onclick = () => this.onSkill(b.dataset.skill!); bar.append(b);
     });
+    this.setSkillSlots('vanguard');
     ITEM_KEYS.forEach((id, i) => {
       const it = c.items.get(id), b = el('button', 'slot item'); b.dataset.item = id;
       b.append(el('span', 'key', String(i + 5)), itemIcon(it), el('span', 'name', it?.name ?? id), el('span', 'qty'));
@@ -110,10 +126,23 @@ export class Hud {
     const more = (rank - 1) * m.more_damage_per_rank;
     return 'Rank ' + rank + (more ? ' (+' + more + '% damage)' : '') + ' · ' + Math.round(cost) + ' SP · cast ' + cast.toFixed(2) + 's · cooldown ' + cd.toFixed(1) + 's · ' + s.damage_multiplier + 'x ATK · up to ' + s.max_targets + ' targets';
   }
-  private bindTooltip(button: HTMLButtonElement, title: string, copy: string | (() => string)) {
+  /** Puts a job's skills on keys 1-4. */
+  setSkillSlots(job: string) {
+    this.hotbar = JOB_SKILLS[job] ?? [...HOTBAR];
+    document.querySelectorAll<HTMLButtonElement>('#hotbar .slot:not(.item)').forEach((b, i) => {
+      const id = this.hotbar[i], s = this.c.skills.get(id);
+      if (!id || b.dataset.skill === id) return;
+      b.dataset.skill = id;
+      b.querySelector('.painted-icon')?.replaceWith(skillIcon(id));
+      b.querySelector('.name')!.textContent = s?.name ?? id;
+      b.title = s ? s.name + ' · ' + s.resource_cost + ' SP · ' + s.cooldown_ms / 1000 + 's' : id;
+      b.setAttribute('aria-label', b.title);
+    });
+  }
+  private bindTooltip(button: HTMLButtonElement, title: string | (() => string), copy: string | (() => string)) {
     const tip = $('skill-tooltip');
     const show = () => {
-      tip.replaceChildren(el('strong', '', title), el('p', '', typeof copy === 'function' ? copy() : copy)); tip.hidden = false;
+      tip.replaceChildren(el('strong', '', typeof title === 'function' ? title() : title), el('p', '', typeof copy === 'function' ? copy() : copy)); tip.hidden = false;
       const rect = button.getBoundingClientRect();
       tip.style.left = Math.max(8, Math.min(innerWidth - tip.offsetWidth - 8, rect.left + rect.width / 2 - tip.offsetWidth / 2)) + 'px';
       tip.style.top = Math.max(8, rect.top - tip.offsetHeight - 12) + 'px';
@@ -139,6 +168,7 @@ export class Hud {
   setStats(s: MsgOf<'stats'>) {
     const prev = this.stats; this.stats = s;
     $('lv').textContent = String(s.lv); $('job').textContent = s.job.toUpperCase();
+    if (prev?.job !== s.job) this.setSkillSlots(s.job);
     for (const [key, v, max] of [['hp', s.hp, s.mhp], ['sp', s.sp, s.msp]] as const) {
       $(key + '-text').textContent = v + ' / ' + max;
       $(key + '-fill').style.width = (max ? Math.max(0, Math.min(100, v / max * 100)) : 0) + '%';

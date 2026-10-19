@@ -13,7 +13,7 @@ import type { SpriteDef } from "./render/spriteDef";
 import { animate, buildMap, makeCellMarker, type BuiltMap } from "./render/terrain";
 import { headingOf } from "./shared/dir";
 import type { Cell } from "./shared/path";
-import { HOTBAR, ITEM_KEYS, TOTEM_KEYS, type Hud } from "./ui/hud";
+import { ITEM_KEYS, TOTEM_KEYS, type Hud } from "./ui/hud";
 import { Minimap } from "./ui/minimap";
 import type { NpcDialog } from "./ui/npcDialog";
 import { Overlay, project, type Label } from "./ui/overlay";
@@ -431,7 +431,7 @@ export class Game {
       // types "ๅ" and I/Z type other letters, so ev.key would miss them.
       const digit = /^(?:Digit|Numpad)(\d)$/.exec(ev.code);
       const n = digit ? Number(digit[1]) : NaN;
-      if (n >= 1 && n <= HOTBAR.length) this.cast(HOTBAR[n - 1]);
+      if (n >= 1 && n <= this.hud.hotbar.length) this.cast(this.hud.hotbar[n - 1]);
       else if (n >= 5 && n < 5 + ITEM_KEYS.length) this.conn.send({ t: "use", item: ITEM_KEYS[n - 5] });
       else if (digit && TOTEM_KEYS.includes(digit[1] as typeof TOTEM_KEYS[number])) this.conn.send({ t: "totem", slot: "charm" + (TOTEM_KEYS.indexOf(digit[1] as typeof TOTEM_KEYS[number]) + 1) });
       else if (ev.code === "KeyC") this.hud.toggle("char-win");

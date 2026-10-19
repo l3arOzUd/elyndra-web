@@ -20,12 +20,13 @@ export class Connection {
 
   constructor(readonly url: string) {}
 
-  connect(name: string): Promise<void> {
+  /** job: the job a brand-new character starts as (ignored for existing ones). */
+  connect(name: string, job?: string): Promise<void> {
     return new Promise((resolve, reject) => {
       const ws = new WebSocket(this.url);
       this.ws = ws;
       let welcomed = false;
-      ws.onopen = () => this.send({ t: "hello", v: PROTOCOL_VERSION, name });
+      ws.onopen = () => this.send({ t: "hello", v: PROTOCOL_VERSION, name, job });
       ws.onmessage = (ev) => {
         const text = String(ev.data);
         this.bytesIn += text.length;

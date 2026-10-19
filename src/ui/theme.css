@@ -203,3 +203,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .stat-alloc { grid-template-columns:34px 1fr auto auto auto; }.stat-alloc > .painted-icon { width:34px; height:34px; border:1px solid #9f7f48; border-radius:3px; }
 .rank-head { align-items:center; gap:6px; }.rank-head > .painted-icon { width:22px; height:22px; border-radius:2px; }.rank-head strong { flex:1; }
 .detail-action:disabled,.stat-add:disabled { opacity:.45; cursor:not-allowed; filter:grayscale(.6); }
+.job-pick { display:grid; grid-template-columns:1fr 1fr; gap:4px 10px; margin:10px 0 4px; padding:8px 10px; border:1px solid #b89b6788; border-radius:3px; text-align:left; }
+.job-pick legend { font-size:11px; color:#7a5d33; padding:0 4px; }.job-pick label { display:flex; align-items:center; gap:6px; font-size:13px; color:#4f3a20; margin:0; }
+.job-pick small { grid-column:1 / -1; font-size:11px; line-height:1.35; }
+#login .job-pick label { display:flex !important; flex-direction:row; justify-content:flex-start; align-items:center; text-align:left; }#login .job-pick input { width:auto; margin:0; }

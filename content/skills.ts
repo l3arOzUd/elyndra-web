@@ -3,8 +3,9 @@
 // takes 3.2 basic hits, so a 1.7x cone kills one in two casts and a 2.4x
 // circle in about one and a half.
 //
-// `implemented` marks what the server and client actually run today: the
-// Vanguard kit plus Sundering Pulse. The other jobs are data only.
+// `implemented` marks what the server and client actually run: every skill
+// (elyndra-server internal/game/combat.go and skills.go). A new character
+// picks its job on the login screen.
 
 import type { SkillDef } from "../src/data/schema";
 
@@ -15,13 +16,13 @@ export const skills: SkillDef[] = [
   { ...base, id: "iron_cyclone", name: "Iron Cyclone", job: "vanguard", shape: "circle", radius: 5, range: 0, max_targets: 40, cast_ms: 500, cooldown_ms: 12000, resource_cost: 22, damage_multiplier: 2.4, unlock_level: 5, vfx: "fx_iron_cyclone", implemented: true },
   { ...base, id: "anchor_shout", name: "Anchor Shout", job: "vanguard", shape: "taunt", radius: 8, range: 0, max_targets: 40, cast_ms: 200, cooldown_ms: 18000, resource_cost: 15, damage_multiplier: 0, unlock_level: 8, vfx: "fx_anchor_shout", implemented: true },
   { ...base, id: "sundering_pulse", name: "Sundering Pulse", job: "all", shape: "circle", radius: 7, range: 0, max_targets: 50, cast_ms: 1200, cooldown_ms: 45000, resource_cost: 45, damage_multiplier: 4, unlock_level: 15, vfx: "fx_sundering_pulse", implemented: true },
-  { ...base, id: "prism_field", name: "Prism Field", job: "arcanist", shape: "ground", radius: 4, range: 8, max_targets: 25, cast_ms: 600, cooldown_ms: 14000, resource_cost: 24, damage_multiplier: 0.6, ticks: 8, tick_ms: 500, unlock_level: 1, vfx: "fx_prism_field", implemented: false },
-  { ...base, id: "aether_nova", name: "Aether Nova", job: "arcanist", shape: "circle", radius: 5, range: 0, max_targets: 40, cast_ms: 600, cooldown_ms: 10000, resource_cost: 25, damage_multiplier: 2.5, unlock_level: 5, vfx: "fx_aether_nova", implemented: false },
-  { ...base, id: "gravity_coil", name: "Gravity Coil", job: "arcanist", shape: "pull", radius: 6, range: 8, max_targets: 40, cast_ms: 400, cooldown_ms: 20000, resource_cost: 20, damage_multiplier: 0.3, unlock_level: 8, vfx: "fx_gravity_coil", implemented: false },
-  { ...base, id: "meridian_lance", name: "Meridian Lance", job: "strider", shape: "line", length: 10, width: 2, range: 10, max_targets: 35, cast_ms: 350, cooldown_ms: 8000, resource_cost: 16, damage_multiplier: 2.0, unlock_level: 1, vfx: "fx_meridian_lance", implemented: false },
-  { ...base, id: "splitshot_array", name: "Splitshot Array", job: "strider", shape: "cone", angle_deg: 70, radius: 8, range: 8, max_targets: 30, cast_ms: 300, cooldown_ms: 7000, resource_cost: 14, damage_multiplier: 1.6, unlock_level: 5, vfx: "fx_splitshot", implemented: false },
-  { ...base, id: "dash_circuit", name: "Dash Circuit", job: "strider", shape: "mobility", range: 6, max_targets: 0, cast_ms: 0, cooldown_ms: 12000, resource_cost: 10, damage_multiplier: 0, unlock_level: 8, vfx: "fx_dash", implemented: false },
-  { ...base, id: "coil_mine", name: "Coil Mine", job: "machinist", shape: "ground", radius: 3, range: 6, max_targets: 30, cast_ms: 400, cooldown_ms: 10000, resource_cost: 18, damage_multiplier: 2.2, unlock_level: 1, vfx: "fx_coil_mine", implemented: false },
-  { ...base, id: "gearstorm", name: "Gearstorm", job: "machinist", shape: "circle", radius: 5, range: 0, max_targets: 40, cast_ms: 700, cooldown_ms: 16000, resource_cost: 28, damage_multiplier: 2.6, unlock_level: 5, vfx: "fx_gearstorm", implemented: false },
-  { ...base, id: "pulse_beacon", name: "Pulse Beacon", job: "machinist", shape: "ally", radius: 8, range: 0, max_targets: 20, cast_ms: 500, cooldown_ms: 24000, resource_cost: 30, damage_multiplier: 0, unlock_level: 8, vfx: "fx_pulse_beacon", implemented: false },
+  { ...base, id: "prism_field", name: "Prism Field", job: "arcanist", shape: "ground", radius: 4, range: 8, max_targets: 25, cast_ms: 600, cooldown_ms: 14000, resource_cost: 24, damage_multiplier: 0.6, ticks: 8, tick_ms: 500, unlock_level: 1, vfx: "fx_prism_field", implemented: true },
+  { ...base, id: "aether_nova", name: "Aether Nova", job: "arcanist", shape: "circle", radius: 5, range: 0, max_targets: 40, cast_ms: 600, cooldown_ms: 10000, resource_cost: 25, damage_multiplier: 2.5, unlock_level: 5, vfx: "fx_aether_nova", implemented: true },
+  { ...base, id: "gravity_coil", name: "Gravity Coil", job: "arcanist", shape: "pull", radius: 6, range: 8, max_targets: 40, cast_ms: 400, cooldown_ms: 20000, resource_cost: 20, damage_multiplier: 0.3, unlock_level: 8, vfx: "fx_gravity_coil", implemented: true },
+  { ...base, id: "meridian_lance", name: "Meridian Lance", job: "strider", shape: "line", length: 10, width: 2, range: 10, max_targets: 35, cast_ms: 350, cooldown_ms: 8000, resource_cost: 16, damage_multiplier: 2.0, unlock_level: 1, vfx: "fx_meridian_lance", implemented: true },
+  { ...base, id: "splitshot_array", name: "Splitshot Array", job: "strider", shape: "cone", angle_deg: 70, radius: 8, range: 8, max_targets: 30, cast_ms: 300, cooldown_ms: 7000, resource_cost: 14, damage_multiplier: 1.6, unlock_level: 5, vfx: "fx_splitshot", implemented: true },
+  { ...base, id: "dash_circuit", name: "Dash Circuit", job: "strider", shape: "mobility", range: 6, max_targets: 0, cast_ms: 0, cooldown_ms: 12000, resource_cost: 10, damage_multiplier: 0, unlock_level: 8, vfx: "fx_dash", implemented: true },
+  { ...base, id: "coil_mine", name: "Coil Mine", job: "machinist", shape: "ground", radius: 3, range: 6, max_targets: 30, cast_ms: 400, cooldown_ms: 10000, resource_cost: 18, damage_multiplier: 2.2, unlock_level: 1, vfx: "fx_coil_mine", implemented: true },
+  { ...base, id: "gearstorm", name: "Gearstorm", job: "machinist", shape: "circle", radius: 5, range: 0, max_targets: 40, cast_ms: 700, cooldown_ms: 16000, resource_cost: 28, damage_multiplier: 2.6, unlock_level: 5, vfx: "fx_gearstorm", implemented: true },
+  { ...base, id: "pulse_beacon", name: "Pulse Beacon", job: "machinist", shape: "ally", radius: 8, range: 0, max_targets: 20, cast_ms: 500, cooldown_ms: 24000, resource_cost: 30, damage_multiplier: 0, unlock_level: 8, vfx: "fx_pulse_beacon", implemented: true },
 ];

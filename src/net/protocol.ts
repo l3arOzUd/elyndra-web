@@ -11,7 +11,7 @@ export const enum EntState {
 }
 
 export type ClientMsg =
-  | { t: "hello"; v: number; name: string }
+  | { t: "hello"; v: number; name: string; job?: string }
   | { t: "move"; seq: number; to: [number, number] }
   | { t: "attack"; target: number }
   | { t: "cast"; skill: string; aim: [number, number] }

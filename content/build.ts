@@ -61,18 +61,23 @@ const ELEMENT_TINT: Record<string, [number, number, number]> = {
  */
 function writePaperDollLooks(gear: ItemDef[], path: string) {
   if (!existsSync(path)) return;
-  const file = JSON.parse(readFileSync(path, "utf8")) as { items: Record<string, { generated?: boolean }> };
+  type Look = { name?: string; slot?: string; visual?: string; layers?: string[]; hides?: string[]; generated?: boolean };
+  const file = JSON.parse(readFileSync(path, "utf8")) as { items: Record<string, Look> };
   for (const [id, look] of Object.entries(file.items)) if (look.generated) delete file.items[id];
+  // Borrow the hand-drawn look of the same visual whole (layers, hides), so
+  // art changes there reach every generated base on the next build.
+  const byVisual = new Map(Object.values(file.items).filter((l) => l.visual).map((l) => [l.visual!, l]));
   const weapon: Record<string, string> = { vanguard: "copper_saber", strider: "surveyor_bow", arcanist: "aether_rod", machinist: "copper_saber" };
   for (const g of gear) {
     const e = g.equip;
     if (!e || file.items[g.id] || !["weapon", "armor", "boots", "head"].includes(e.slot)) continue;
-    const [visual, layers] = e.slot === "weapon" ? [weapon[e.job ?? "vanguard"], ["weapon"]]
-      : e.slot === "armor" ? ["leafweave_coat", ["torso", "arm_near", "arm_far", "cape"]]
-      : e.slot === "boots" ? ["traveler_boots", ["shin_near", "shin_far"]] : ["none", []];
-    file.items[g.id] = { name: g.name, slot: e.slot, visual, layers, generated: true } as { generated: boolean };
+    const visual = e.slot === "weapon" ? weapon[e.job ?? "vanguard"] : e.slot === "armor" ? "leafweave_coat" : e.slot === "boots" ? "traveler_boots" : "none";
+    const src = byVisual.get(visual);
+    const look: Look = { name: g.name, slot: e.slot, visual, layers: [...(src?.layers ?? [])], generated: true };
+    if (src?.hides) look.hides = [...src.hides];
+    file.items[g.id] = look;
   }
-  writeFileSync(path, JSON.stringify(file, null, 1));
+  writeFileSync(path, `${JSON.stringify(file, null, 1)}\n`);
 }
 
 /** Writes the runtime JSON for `regions` into `OUT` (and the sprite index beside it). */
