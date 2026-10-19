@@ -4146,7 +4146,11 @@
     "species": [
      {
       "monster_id": "mob_0081",
-      "weight": 1
+      "weight": 40
+     },
+     {
+      "monster_id": "mob_0030",
+      "weight": 60
      }
     ],
     "target_alive": 25,
@@ -4154,7 +4158,7 @@
      8,
      16
     ],
-    "design_note": "South of the channel near camp: fleeing tenders scavenging on their own, a quieter farm for Tender materials (the focus-tonic recipe)."
+    "design_note": "South of the channel near camp: aggressive hounds guard the scavenging tenders, so the pack charges in and the tenders stay to mend it instead of fleeing alone. Kill the tenders first; the farm for Tender materials (the focus-tonic recipe)."
    }
   ]
  },
