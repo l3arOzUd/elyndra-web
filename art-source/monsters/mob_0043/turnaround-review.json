@@ -1,0 +1,19 @@
+{
+  "id": "mob_0043",
+  "name": "Pruning Tender",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front master, rear tank definition and opposite profile reference; visual review distinct from alpha/framing checks.",
+  "confirmed": [
+    "Three tripod feet, two shear arms and separate chest nozzle visible in each view.",
+    "Single broad jade sap reservoir on rear explains glass side bulges of front image.",
+    "Rear has no eye lenses or frontal nozzle; side tank lies behind barrel and nozzle projects forward.",
+    "Moss lid, brass material and tool identity preserved."
+  ],
+  "limitations": [
+    "Side views retain some three-quarter front-panel exposure; eye/nozzle projection needs stricter lateral alignment.",
+    "Shear opening angles and arm pitch differ between profiles and front; reconcile neutral joint pose.",
+    "Far leg roots overlap near front legs; exact tripod attachment correspondence not fully verified.",
+    "Rear reservoir straps/pipe and moss placement vary; normalize landmarks and framing before part extraction."
+  ],
+  "next": "Correct arm pose and tripod root correspondence, then separate articulated legs/shears and author walking, pruning attack and sap-spray animation/VFX."
+}
