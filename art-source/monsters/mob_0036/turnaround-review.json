@@ -1,0 +1,19 @@
+{
+  "id": "mob_0036",
+  "name": "Hollowroot Warden",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation with front master and opposite profile references; left camera correction; visual anatomy inspection separate from file checks.",
+  "confirmed": [
+    "Copper pipe arms, thick root legs, moss and weathered copper preserve Bible identity.",
+    "Front has exposed teal Aetherite heart; back has opaque boiler/root plating without frontal face or exposed heart.",
+    "Corrected side views face opposite directions with one eye visible and heart restricted to front edge.",
+    "No added hands or separate weapons."
+  ],
+  "limitations": [
+    "Back pipe ends look capped and point toward viewer; must correct nozzle orientation and open-pipe construction before approval.",
+    "Side rear boiler depth and protruding fittings need reconciliation with rear master.",
+    "Side root-foot routes differ and far limbs are occluded; joint anchors cannot yet be traced reliably across all views.",
+    "Side pipe angle and elbow height differ slightly; neutral-pose correspondence and consistent scale remain pending."
+  ],
+  "next": "Correct rear nozzle geometry and cross-view joint landmarks, then separate parts and author fixed-length articulated animation; not runtime-ready."
+}

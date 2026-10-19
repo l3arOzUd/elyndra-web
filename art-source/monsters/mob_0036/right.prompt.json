@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Draw RIGHT SIDE turnaround of the SAME Hollowroot Warden facing RIGHT. First reference is corrected left profile: match its silhouette, scale, planted stance, pipe arm angle, root feet and depth from opposite side. Second is front identity. Exactly two pipe arms/two root legs, near pair visible far pair naturally occluded. Only ONE eye at right face edge. Chest teal heart is a narrow sliver at RIGHT front edge, solid copper/root boiler back on LEFT. Near round shoulder above elbow and long open pipe nozzle angled down-right. Open nozzle not capped. Same copper patina/moss/root wraps, boss bulk, no invented limbs. Strict orthographic 90degree eye-level profile, no three-quarter, full-body transparent square with margins. Hand-painted fantasy reference style, no ground/shadows/text.",
+  "references": [
+    "left.png",
+    "front.png"
+  ]
+}

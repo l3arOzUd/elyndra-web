@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Create LEFT SIDE orthographic profile of Hollowroot Warden, facing LEFT. Reference1 front identity, reference2 rear plating design only. Same massive root-and-copper boss, exactly TWO segmented copper pipe arms with hollow nozzle ends and TWO intertwined root legs, no hands or extra limbs. Fixed neutral stance unchanged, feet planted, knees slightly bent. View directly sideways at eye level, NOT three-quarter. Deep bulky torso; exposed teal crystal heart ONLY on forward LEFT chest edge, solid copper/root boiler back toward RIGHT. Recessed small face under root brow points left. Near shoulder round copper armor, elbow joint, long forearm hollow pipe aims diagonally forward-left and down; its terminal mouth is open, NEVER capped. Far arm partially occluded, no extra nozzle. Root feet face left with heel mass right, no turned-to-camera toes. Preserve scale/proportions, weathered copper, moss, thick root wraps, teal patina, premium hand-painted fantasy style. Square canvas, whole creature with generous transparent margins, no floor/shadows/text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}
