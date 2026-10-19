@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 79; existing front references needing review: 7; missing front references: 8.
+Monsters: 94; front masters created: 82; existing front references needing review: 7; missing front references: 5.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -95,9 +95,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0087 | Zero Stoker | master-created | missing | missing | missing | placeholder |
 | mob_0088 | Kiln Prime | master-created | missing | missing | missing | placeholder |
 | mob_0090 | Gutter Lurk | master-created | missing | missing | missing | placeholder |
-| mob_0091 | Nullbloom | missing | missing | missing | missing | placeholder |
-| mob_0092 | Coupler Mite | missing | missing | missing | missing | placeholder |
-| mob_0093 | Riftling | missing | missing | missing | missing | placeholder |
+| mob_0091 | Nullbloom | master-created | missing | missing | missing | placeholder |
+| mob_0092 | Coupler Mite | master-created | missing | missing | missing | placeholder |
+| mob_0093 | Riftling | master-created | missing | missing | missing | placeholder |
 | mob_0094 | Sparkwing | missing | missing | missing | missing | placeholder |
 | mob_0095 | Array Sentinel | missing | missing | missing | missing | placeholder |
 | mob_0096 | Glyph Swarm | missing | missing | missing | missing | placeholder |

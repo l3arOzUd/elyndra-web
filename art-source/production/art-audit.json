@@ -3758,9 +3758,13 @@
       "brief": "A waist-high flower with petals of matte black glass, a violet light-drinking eye at the centre, roots that leave grey patches where they walk.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0091/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3795,9 +3799,13 @@
       "brief": "A beetle-sized steel mite shaped like a rail coupler, pincer jaws, a single violet status light blinking on its back.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0092/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3832,9 +3840,13 @@
       "brief": "A dog-shaped hole in the world: a black silhouette with violet edges and white pinpoint eyes, flickering at the outline.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0093/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

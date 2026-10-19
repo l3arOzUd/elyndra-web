@@ -1,0 +1,8 @@
+{
+  "id": "mob_0092",
+  "name": "Coupler Mite",
+  "view": "front",
+  "prompt": "Single full FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Coupler Mite: a beetle-sized steel mite shaped like a RAIL COUPLER, PINCER JAWS, a SINGLE violet status light blinking on its back. Small compact heavy steel insect-like robot, chunky railroad coupler knuckle-shaped central body with riveted worn dark steel plates, two front interlocking pincer jaws, exactly six small jointed steel legs with three on each side clearly separated, one small violet lamp mounted on upper back visible above body. No extra eyes or lamps. Front of coupler and jaws square to viewer, neutral stance, mechanical anatomy clear. Warm painterly detailed weathered metal, subtle rust and grease, bold readable silhouette at game scale. Full pincers feet back lamp inside square transparent canvas with generous empty margin. No rails, ground, shadows, sparks, smoke, labels, text or other creatures. Status blink added later.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Rail coupler body, pincer jaws, one violet dorsal status lamp; blinking requires animation."
+}

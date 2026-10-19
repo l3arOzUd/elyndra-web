@@ -1,0 +1,8 @@
+{
+  "id": "mob_0093",
+  "name": "Riftling",
+  "view": "front",
+  "prompt": "Single full-body FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Riftling: a DOG-SHAPED HOLE IN THE WORLD, a BLACK SILHOUETTE with VIOLET EDGES and WHITE PINPOINT EYES, flickering at outline. Natural lean canine silhouette, pointed ears, four legs and paws, narrow muzzle, tail curved behind toward viewer right. Body interior is almost perfectly opaque void black, NOT normal furry grey dog, no stars or galaxy texture, no visible armor. Thin irregular violet luminous edge traces canine silhouette with a few attached sharp flicker wisps, exactly two tiny white pinpoint eyes. Entire head chest pelvis squarely forward in neutral alert standing pose, rear paws visible beside forepaws. Stylized painted fantasy shape design, elegant readable silhouette. All ears paws and tail inside square transparent canvas with broad margins. Transparent BACKGROUND but body must stay opaque black, not transparent cutout hole. No ground, shadow, haze cloud, text or extra creatures. Outline flicker animation later.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Opaque black canine body, violet edge, two white pinpoint eyes; outline flicker required."
+}

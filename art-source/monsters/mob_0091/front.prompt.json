@@ -1,0 +1,8 @@
+{
+  "id": "mob_0091",
+  "name": "Nullbloom",
+  "view": "front",
+  "prompt": "Single full-body FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Nullbloom: a waist-high flower with petals of matte black glass, a violet light-drinking eye at the centre, roots that leave grey patches where they walk. Large dark blossom faces directly forward, layered angular matte smoky-black glass petals surrounding exactly one deep violet eye with dark pupil, slender dark twisted stem supporting flower, four articulated rootlike walking limbs spreading at base. Subtle muted grey edge highlights make black glass readable, soft restrained purple light absorbed into central eye rather than bright aura. Neutral front pose, elegant sinister plant silhouette, no humanoid limbs or mouth. Warm painterly refined fantasy game art, clear material shapes. Entire petal tips and root feet within square transparent canvas with generous margins. No grey ground patches in master: walking trail added separately later. No ground, shadow, fog, text, detached particles or other creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Single violet eye in black glass flower; grey walking patches require separate effect."
+}
