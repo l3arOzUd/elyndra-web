@@ -36,7 +36,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0025 | Prism Wisp | master-created | master-created | master-created | master-created | placeholder |
 | mob_0026 | Icegear | master-created | master-created | master-created | master-created | placeholder |
 | mob_0027 | Archive Keeper | master-created | master-created | master-created | master-created | placeholder |
-| mob_0028 | Ashcrawler | master-created | missing | missing | missing | placeholder |
+| mob_0028 | Ashcrawler | master-created | master-created | master-created | master-created | placeholder |
 | mob_0029 | Cinder Imp | master-created | missing | missing | missing | placeholder |
 | mob_0030 | Smelt Hound | master-created | missing | missing | missing | placeholder |
 | mob_0031 | Furnace Knight | master-created | missing | missing | missing | placeholder |

@@ -1,0 +1,20 @@
+{
+  "id": "mob_0028",
+  "name": "Ashcrawler",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual review of all four views; file validation separate from cross-view construction approval.",
+  "confirmed": [
+    "Rounded ash-grey overlapping plates, restrained ember seams and soot-black legs preserved.",
+    "Rear has no eyes; profiles show one gentle amber eye and six near-side legs.",
+    "No added spikes wings or machinery."
+  ],
+  "limitations": [
+    "Front/rear leg roots hidden; twelve complete leg chains not yet proven.",
+    "Rear repeats front-like plate overlap; verify actual plate direction from common body construction.",
+    "Side shell length and height need projection alignment to frontal dome.",
+    "Plate counts and seam routes vary between views; fix landmarks before articulation.",
+    "Side extremities have tight horizontal margins despite passing edge check.",
+    "Far legs require complete drawings for crawl cycle."
+  ],
+  "next": "Align shell segmentation and twelve leg sockets, normalize frame and ground line, separate overlapping rigid plates and author slow sequential crawl without limb stretching."
+}
