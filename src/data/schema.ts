@@ -225,6 +225,12 @@ export interface TotemTypeDef {
   charges: number;
   /** "{key}" is replaced by effects[key]. */
   text: string;
+  /**
+   * Echo Totems: no button. Every `charges` kills / hits landed / hits taken
+   * (evades count) they cast the skill linked to them, free of SP and
+   * cooldown, at effects.echo_damage % damage.
+   */
+  trigger?: "kills" | "hits" | "taken";
 }
 
 /** public/data/systems.json: CHARACTER_SYSTEMS.md as numbers. */
@@ -247,6 +253,8 @@ export interface SystemsDef {
   relic_caps: { id: string; values: number[]; elements: string[] }[];
   totem_types: TotemTypeDef[];
   charm_slot_levels: number[];
+  /** Echo Totems: count multiplier by grade (Lesser, Greater, Grand), x for ultimates, affixes they can roll. */
+  echo: { grade_charges: number[]; ultimate_mult: number; affixes: string[] };
   /** Job -> the tier 1 weapon a new character starts with. */
   starter_weapons: Record<string, string>;
 }

@@ -2,7 +2,7 @@ import type { ClientContent } from '../data/content';
 import type { GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
 import { paintedIcon } from './art';
-import { CHARM_SLOTS, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
+import { CHARM_SLOTS, ECHO_COUNT, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
 
 const $ = (id: string) => document.getElementById(id)!;
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: string): HTMLElementTagNameMap[K] {
@@ -37,6 +37,7 @@ export class Hud {
   onStat: (stat: string, n: number) => void = () => {};
   onResetStats: () => void = () => {};
   onTotem: (slot: string) => void = () => {};
+  onLink: (slot: string, skill: string) => void = () => {};
 
   constructor(private readonly c: ClientContent) {
     const bar = $('hotbar'); bar.replaceChildren();
@@ -58,7 +59,13 @@ export class Hud {
       const b = el('button', 'slot item totem'); b.dataset.totem = slot;
       b.append(el('span', 'key', TOTEM_KEYS[i]), paintedIcon(31), el('span', 'name', 'Totem'), el('span', 'qty'), el('span', 'cd'));
       b.setAttribute('aria-label', 'Totem in ' + SLOT_LABEL[slot]);
-      b.onclick = () => this.onTotem(slot); bar.append(b);
+      b.onclick = () => {
+        // An Echo Totem has nothing to press: open it to see or change its link.
+        const t = this.totems.find((x) => x.slot === slot);
+        if (t?.trigger) { const g = this.worn(slot); if (g) { this.selected = gearKey(g.uid); this.toggle('inv-win', true); this.showBag(); this.renderInventory(); } }
+        else this.onTotem(slot);
+      };
+      bar.append(b);
     });
     $('toggle-inv').onclick = () => this.toggle('inv-win');
     $('toggle-char').onclick = () => this.toggle('char-win');
@@ -156,6 +163,14 @@ export class Hud {
       } else if (b.dataset.totem) {
         const t = this.totems.find((x) => x.slot === b.dataset.totem);
         const worn = [...this.gear.values()].find((g) => g.slot === b.dataset.totem), it = worn && this.c.items.get(worn.base);
+        if (t?.trigger) {
+          const linked = t.link ? this.c.skills.get(t.link)?.name : undefined;
+          b.classList.remove('cooling', 'active'); b.classList.toggle('locked', !t.link); b.classList.add('echo');
+          b.querySelector('.qty')!.textContent = t.ch + '/' + t.need;
+          b.querySelector('.cd')!.textContent = t.link ? '' : 'Link';
+          b.title = (it?.name ?? 'Echo Totem') + ' · ' + (linked ? 'casts ' + linked + ' every ' + t.need + ' ' + ECHO_COUNT[t.trigger] : 'no skill linked: click to link one');
+          b.disabled = false; continue;
+        }
         const ready = !!t && t.ch >= t.need && !t.left;
         b.classList.toggle('locked', !t); b.classList.toggle('cooling', !!t && !ready); b.classList.toggle('active', !!t?.left);
         b.querySelector('.qty')!.textContent = t ? (t.left ? '' : t.ch + '/' + t.need) : '';
@@ -249,6 +264,24 @@ export class Hud {
       d.append(el('p', 'muted small', 'Compared with ' + (gearItem(this.c, wearing)?.name ?? '')));
     }
     if (this.sheet?.inactive?.includes(g.uid)) d.append(el('p', 'bad small', 'Worn, but its requirements are not met: it has no effect.'));
+    const echo = e.totem && this.c.systems.totem_types.find((x) => x.id === e.totem!.type)?.trigger;
+    if (echo) {
+      const box = el('div', 'echo-link'), linked = g.link ? this.c.skills.get(g.link) : undefined;
+      box.append(el('p', 'eyebrow', 'Linked skill'), el('p', linked ? 'item-stat' : 'bad small', linked ? linked.name : 'None: it casts nothing until you link a skill'));
+      if (!g.slot) box.append(el('p', 'muted small', 'Wear it in a Charm slot to link a skill. Changing the link starts the count over.'));
+      else {
+        const lv = this.stats?.lv ?? 1, job = this.stats?.job;
+        const choices = [...this.c.skills.values()].filter((s) => s.implemented && (s.job === job || s.job === 'all') && (s.damage_multiplier > 0 || s.shape === 'taunt'));
+        const row = el('div', 'detail-actions');
+        for (const s of choices) {
+          const b = el('button', s.id === g.link ? 'primary detail-action' : 'subtle detail-action', s.name);
+          b.disabled = lv < s.unlock_level || s.id === g.link; if (lv < s.unlock_level) b.title = 'Unlocks at Lv ' + s.unlock_level;
+          b.onclick = () => this.onLink(g.slot!, s.id); row.append(b);
+        }
+        box.append(row);
+      }
+      d.append(box);
+    }
     const actions = el('div', 'detail-actions');
     const met = reqs.every(([, ok]) => ok);
     if (g.slot) {

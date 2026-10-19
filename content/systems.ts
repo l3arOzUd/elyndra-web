@@ -119,6 +119,17 @@ export const TOTEM_TYPES: TotemTypeDef[] = [
   { id: "hunt", name: "the Hunt", effects: { exp_bonus: 20 }, duration_ms: 30000, charges: 80, text: "{exp_bonus}% more EXP" },
 ];
 
+/**
+ * Echo Totems (CHARACTER_SYSTEMS.md §5.7): each casts the skill the player
+ * links to it, free, after a count of kills, of hits landed, or of hits taken
+ * (evaded hits included). Counts are the Grand grade's.
+ */
+export const ECHO_TYPES: TotemTypeDef[] = [
+  { id: "echo_slaughter", name: "Echo of Slaughter", trigger: "kills", effects: { echo_damage: 80 }, duration_ms: 0, charges: 40, text: "Casts its linked skill for {echo_damage}% damage" },
+  { id: "echo_fury", name: "Echo of Fury", trigger: "hits", effects: { echo_damage: 80 }, duration_ms: 0, charges: 100, text: "Casts its linked skill for {echo_damage}% damage" },
+  { id: "echo_spite", name: "Echo of Spite", trigger: "taken", effects: { echo_damage: 80 }, duration_ms: 0, charges: 40, text: "Casts its linked skill for {echo_damage}% damage" },
+];
+
 /** Totem affixes: values for tiers 1-4 (Lesser to T2, Greater T3, Grand T4). */
 export const TOTEM_AFFIXES: AffixDef[] = [
   { id: "totem_duration", kind: "suffix", label: EXTRA_LABELS.totem_duration, slots: ["charm"], values: T(10, 20, 30, 40) },
@@ -327,6 +338,13 @@ export function gearItems(): ItemDef[] {
       equip: { slot: "charm", item_level: 30, min_level: 30, implicit: [["crit_mult", 60], ["inc_hp", -20]], unique: "glass_ember" } },
   ];
   for (const u of uniques) out.push({ ...u, id: id() });
+  // Echo Totems come last so the ids above never move.
+  ECHO_TYPES.forEach((tt) => GRADES.forEach((g, i) => out.push({
+    id: id(), name: `${g} ${tt.name}`, category: "totem", rarity: "common",
+    sell_price: price(GRADE_LEVELS[i], 12 * (i + 1)), stack_max: 1, drop_pool: true,
+    description: "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+    equip: { slot: "charm", item_level: GRADE_LEVELS[i], min_level: GRADE_LEVELS[i], totem: { type: tt.id, grade: i + 1 } },
+  })));
   return out;
 }
 
@@ -346,8 +364,9 @@ export const UNIQUE_DROPS: { boss: string; item: string; rate_bp: number }[] = [
 export function systems(): SystemsDef {
   return {
     rules: SYSTEMS_RULES, mastery: MASTERY, drops: DROPS, affixes: AFFIXES, totem_affixes: TOTEM_AFFIXES,
-    labels: EXTRA_LABELS, charm_types: CHARM_TYPES, relic_caps: RELIC_CAPS, totem_types: TOTEM_TYPES,
+    labels: EXTRA_LABELS, charm_types: CHARM_TYPES, relic_caps: RELIC_CAPS, totem_types: [...TOTEM_TYPES, ...ECHO_TYPES],
     charm_slot_levels: [10, 30, 60],
+    echo: { grade_charges: [1.5, 1.2, 1], ultimate_mult: 2, affixes: ["totem_charges", "totem_effect", "totem_boss_charges", "totem_heal"] },
     starter_weapons: {},
   };
 }

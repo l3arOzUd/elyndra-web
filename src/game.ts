@@ -122,6 +122,7 @@ export class Game {
     hud.onStat = (stat, n) => conn.send({ t: "stat", arg: stat, qty: n });
     hud.onResetStats = () => conn.send({ t: "reset_stats" });
     hud.onTotem = (slot) => conn.send({ t: "totem", slot });
+    hud.onLink = (slot, skill) => conn.send({ t: "link", slot, skill });
     dialog.onOp = (npc, op, arg, qty) => conn.send({ t: "npc", npc, op, arg, qty });
     document.getElementById('clear-target')!.onclick = () => { this.targetId = null; this.hud.setTarget(null); };
     document.querySelector<HTMLButtonElement>('[data-close=debug-win]')!.onclick = () => { this.debugOn = false; this.conn.send({ t: 'debug', on: false }); document.getElementById('debug-win')!.hidden = true; };
@@ -261,7 +262,8 @@ export class Game {
       e.actor.play(e.kind === "p" ? skillAnimation(s) : "attack", { impactMs: castMs });
       if (s) this.fx.telegraph(s, e.pos.x, e.pos.z, m.aim[0], m.aim[1], castMs);
     }
-    if (m.actor === this.selfId) {
+    // An Echo Totem's cast is free: the skill's own cooldown does not start.
+    if (m.actor === this.selfId && !m.echo) {
       this.hud.startCooldown(m.skill, m.cd);
       this.predicted = null;
     }

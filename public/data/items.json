@@ -8426,5 +8426,176 @@
    ],
    "unique": "glass_ember"
   }
+ },
+ {
+  "id": "itm_1330",
+  "name": "Lesser Echo of Slaughter",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 132,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "echo_slaughter",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1331",
+  "name": "Greater Echo of Slaughter",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 816,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "echo_slaughter",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1332",
+  "name": "Grand Echo of Slaughter",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 2016,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "echo_slaughter",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1333",
+  "name": "Lesser Echo of Fury",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 132,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "echo_fury",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1334",
+  "name": "Greater Echo of Fury",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 816,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "echo_fury",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1335",
+  "name": "Grand Echo of Fury",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 2016,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "echo_fury",
+    "grade": 3
+   }
+  }
+ },
+ {
+  "id": "itm_1336",
+  "name": "Lesser Echo of Spite",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 132,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 10,
+   "min_level": 10,
+   "totem": {
+    "type": "echo_spite",
+    "grade": 1
+   }
+  }
+ },
+ {
+  "id": "itm_1337",
+  "name": "Greater Echo of Spite",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 816,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 35,
+   "min_level": 35,
+   "totem": {
+    "type": "echo_spite",
+    "grade": 2
+   }
+  }
+ },
+ {
+  "id": "itm_1338",
+  "name": "Grand Echo of Spite",
+  "category": "totem",
+  "rarity": "common",
+  "sell_price": 2016,
+  "stack_max": 1,
+  "drop_pool": true,
+  "description": "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 60,
+   "min_level": 60,
+   "totem": {
+    "type": "echo_spite",
+    "grade": 3
+   }
+  }
  }
 ]

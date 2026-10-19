@@ -23,6 +23,7 @@ export type ClientMsg =
   | { t: "stat"; arg: string; qty: number }
   | { t: "reset_stats" }
   | { t: "totem"; slot: string }
+  | { t: "link"; slot: string; skill: string }
   | { t: "npc"; npc: string; op: string; arg?: string; qty?: number }
   | { t: "debug"; on: boolean }
   | { t: "ping"; c: number };
@@ -62,6 +63,8 @@ export interface GearView {
   ilvl: number;
   affixes: [string, number, number][];
   slot?: string;
+  /** Echo Totems: the linked skill. */
+  link?: string;
 }
 
 export interface TotemView {
@@ -70,6 +73,9 @@ export interface TotemView {
   need: number;
   /** ms of effect left; 0 = not active. */
   left: number;
+  /** Echo Totems: what they count, and the skill they cast. */
+  trigger?: "kills" | "hits" | "taken";
+  link?: string;
 }
 
 /** CHARACTER_SYSTEMS.md character window. mastery: skill -> [rank, kills, kills for next rank]. */
@@ -105,7 +111,7 @@ export type ServerMsg =
   | { t: "welcome"; v: number; name: string; tick_ms: number; snap_ms: number; time: number }
   | { t: "map"; map: string; you: number; pos: [number, number]; time: number }
   | { t: "snap"; tick: number; time: number; add?: EntityAdd[]; e?: [number, number, number, number, number, number][]; gone?: number[] }
-  | { t: "cast"; cast: number; actor: number; skill: string; aim: [number, number]; hit_at: number; time: number; cd?: number }
+  | { t: "cast"; cast: number; actor: number; skill: string; aim: [number, number]; hit_at: number; time: number; cd?: number; echo?: boolean }
   | { t: "combat"; time: number; ev: CombatEvent[] }
   | { t: "loot"; piles: { id: number; x: number; y: number; items: [string, number, string?][] }[] }
   | { t: "loot_gone"; ids: number[] }

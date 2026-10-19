@@ -21,6 +21,8 @@ export const STAT_INFO: Record<string, { name: string; text: string }> = {
   vit: { name: 'VIT', text: 'Max HP +0.5% per point and Poise against cast pushback. Worn by Armour.' },
 };
 
+export const ECHO_COUNT: Record<string, string> = { kills: 'kills', hits: 'hits landed', taken: 'hits taken (evades count)' };
+
 const fmt = (v: number) => (Math.abs(v) < 10 && v % 1 ? v.toFixed(2).replace(/0$/, '') : String(Math.round(v * 100) / 100));
 
 /** "{v}% increased Damage" with the value filled in. */
@@ -62,9 +64,12 @@ export function baseLines(c: ClientContent, it: ItemDef, g?: GearView): string[]
     const t = c.systems.totem_types.find((x) => x.id === e.totem!.type);
     if (t) {
       const scale = [0.6, 0.8, 1][e.totem.grade - 1] ?? 1;
-      const noScale = new Set(['cap_cdr_bonus', 'cap_cast_bonus', 'cap_crit_bonus', 'armour_mult', 'leech_cap_mult', 'free_skills', 'poise']);
+      const noScale = new Set(['echo_damage', 'cap_cdr_bonus', 'cap_cast_bonus', 'cap_crit_bonus', 'armour_mult', 'leech_cap_mult', 'free_skills', 'poise']);
       out.push(t.text.replace(/\{(\w+)\}/g, (_, k) => fmt(noScale.has(k) ? t.effects[k] : Math.round(t.effects[k] * scale * 10) / 10)));
-      out.push((t.duration_ms ? t.duration_ms / 1000 + 's · ' : 'Instant · ') + t.charges + ' kills to charge');
+      if (t.trigger) {
+        const n = Math.round(t.charges * (c.systems.echo.grade_charges[e.totem.grade - 1] ?? 1));
+        out.push('Every ' + n + ' ' + ECHO_COUNT[t.trigger] + ' (x' + c.systems.echo.ultimate_mult + ' for skills with a 30s+ cooldown) · free: no SP, no cooldown');
+      } else out.push((t.duration_ms ? t.duration_ms / 1000 + 's · ' : 'Instant · ') + t.charges + ' kills to charge');
     }
   }
   return out;
