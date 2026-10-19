@@ -761,6 +761,60 @@
     30,
     35
    ]
+  },
+  {
+   "id": "chance_burn",
+   "kind": "suffix",
+   "label": "{v}% chance to Burn (half the hit again over 4s)",
+   "slots": [
+    "weapon",
+    "accessory"
+   ],
+   "values": [
+    3,
+    4,
+    6,
+    8,
+    10,
+    12,
+    15
+   ]
+  },
+  {
+   "id": "chance_shock",
+   "kind": "suffix",
+   "label": "{v}% chance to Shock (15% more damage taken for 4s)",
+   "slots": [
+    "weapon",
+    "accessory"
+   ],
+   "values": [
+    3,
+    4,
+    6,
+    8,
+    10,
+    12,
+    15
+   ]
+  },
+  {
+   "id": "chance_chill",
+   "kind": "suffix",
+   "label": "{v}% chance to Chill (30% slower for 3s)",
+   "slots": [
+    "weapon",
+    "accessory"
+   ],
+   "values": [
+    3,
+    4,
+    6,
+    8,
+    10,
+    12,
+    15
+   ]
   }
  ],
  "totem_affixes": [

@@ -36,7 +36,7 @@ async function main() {
   let uid = 1;
   const copy = (it: typeof items[number], rarity: GearView['rarity'], affixes: GearView['affixes'] = [], slot?: string, link?: string): GearView => ({ uid: uid++, base: it.id, rarity, ilvl: it.equip?.item_level ?? 30, affixes, slot, link });
   const sampleGear: GearView[] = [
-    copy(tier('weapon'), 'rare', [['inc_damage', 4, 11], ['crit_mult', 3, 11], ['stat_pow', 4, 9], ['inc_crit', 3, 28]], 'weapon'),
+    { ...copy(tier('weapon'), 'rare', [['inc_damage', 4, 11], ['crit_mult', 3, 11], ['chance_burn', 3, 6], ['inc_crit', 3, 28]], 'weapon'), refine: 4 },
     copy(tier('head', 'armour'), 'magic', [['inc_area', 3, 8]], 'head'),
     copy(tier('armor', 'armour'), 'rare', [['inc_local_defense', 3, 27], ['flat_hp', 3, 74], ['res_fire', 3, 15]], 'armor'),
     copy(tier('boots', 'armour_evasion'), 'magic', [['inc_move_speed', 3, 9], ['stat_vit', 2, 4]], 'boots'),
@@ -50,7 +50,8 @@ async function main() {
     copy(base(it => it.equip?.unique === 'glass_ember'), 'unique'),
   ];
   hud.setStats({ t:'stats', lv:30, job:'vanguard', hp:1980, mhp:2240, sp:186, msp:300, sh:160, msh:410, atk:412, def:268, exp:684, next:1200,
-    tot:[{ slot:'charm2', ch:31, need:40, left:0 }, { slot:'charm3', ch:62, need:98, left:0, trigger:'hits', link:'iron_cyclone' }] });
+    tot:[{ slot:'charm2', ch:31, need:40, left:0 }, { slot:'charm3', ch:62, need:98, left:0, trigger:'hits', link:'iron_cyclone' }],
+    ail:[{ kind:'burn', left:2400 }, { kind:'chill', left:1300 }] });
   const bag: Record<string, number> = {};
   items.filter(it => !it.equip).slice(0, 18).forEach((it, i) => bag[it.id] = 3 + i * 2);
   for (const it of items.filter(it => it.use)) bag[it.id] = 24;

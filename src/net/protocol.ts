@@ -65,6 +65,8 @@ export interface GearView {
   slot?: string;
   /** Echo Totems: the linked skill. */
   link?: string;
+  /** Refine level +1..+10. */
+  refine?: number;
 }
 
 /** A timed consumable bonus (Haste Draught, Scholar's Tea, Fortune Incense). */
@@ -119,7 +121,7 @@ export type ServerMsg =
   | { t: "loot"; piles: { id: number; x: number; y: number; items: [string, number, string?][] }[] }
   | { t: "loot_gone"; ids: number[] }
   | { t: "inv"; ver: number; items: Record<string, number>; full?: boolean; zeny: number; equip?: Record<string, string>; gear?: GearView[]; gear_gone?: number[] }
-  | { t: "stats"; lv: number; exp: number; next: number; hp: number; mhp: number; sp: number; msp: number; sh?: number; msh?: number; atk: number; def: number; job: string; tot?: TotemView[]; buffs?: BuffView[] }
+  | { t: "stats"; lv: number; exp: number; next: number; hp: number; mhp: number; sp: number; msp: number; sh?: number; msh?: number; atk: number; def: number; job: string; tot?: TotemView[]; ail?: { kind: "burn" | "shock" | "chill"; left: number }[]; buffs?: BuffView[] }
   | SheetMsg
   | { t: "quests"; quests: QuestView[] }
   | { t: "npc"; npc: string; name: string; role: string; lines: string[]; shop?: [string, number][]; recipes?: RecipeView[]; dest?: [string, number][]; offer?: QuestView[]; ready?: string[] }

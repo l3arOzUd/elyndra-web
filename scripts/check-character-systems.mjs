@@ -155,6 +155,22 @@ ws.onopen = async () => {
     check('shop: buying gear gives a plain copy and costs its price', z2 >= buy.price && state.gear.size === count + 1 && state.zeny === z2 - buy.price && !!bought, `${items.get(buy.item_id).name} for ${buy.price}z (had ${z2}z)`);
   } else check('shop: reach the merchant', false, state.map);
 
+  // Refining at the craftsman: +1 on the worn weapon, paid in zeny.
+  const smith = npcs.find((n) => n.map_id === state.map && n.role === 'craftsman');
+  // The cheapest weapon copy (the starter saber), worn so its ATK shows on the sheet.
+  const weapon = [...state.gear.values()].filter((g) => items.get(g.base)?.equip?.slot === 'weapon' && items.get(g.base).equip.job === 'vanguard')
+    .sort((a, b) => items.get(a.base).sell_price - items.get(b.base).sell_price)[0];
+  if (weapon && weapon.slot !== 'weapon') { send({ t: 'equip', gear: weapon.uid }); await until(() => state.gear.get(weapon.uid)?.slot === 'weapon', 3000); await sleep(300); }
+  if (smith && weapon && await walkTo(smith.position[0], smith.position[1] + 1)) {
+    const z = state.zeny, atk = state.sheet.d.weapon;
+    send({ t: 'npc', npc: smith.id, op: 'refine', arg: String(weapon.uid) });
+    await until(() => (state.gear.get(weapon.uid)?.refine ?? 0) === 1, 3000);
+    await sleep(300);
+    const cost = Math.max(10, items.get(weapon.base).sell_price * 2);
+    check('refine: +1 costs zeny and raises weapon ATK 5%', state.gear.get(weapon.uid)?.refine === 1 && state.zeny === z - cost && Math.abs(state.sheet.d.weapon - atk * 1.05) < 0.01,
+      `+${state.gear.get(weapon.uid)?.refine}, paid ${z - state.zeny}z (cost ${cost}), weapon ATK ${atk} -> ${state.sheet.d.weapon}`);
+  } else check('refine: reach the craftsman', false, state.map);
+
   // Field: fight, watch hits, kills, the Echo Totem and drops.
   const tele = npcs.find((n) => n.map_id === state.map && n.role === 'teleporter');
   // A field a little below the character: the point is the systems, not survival.

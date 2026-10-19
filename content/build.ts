@@ -71,9 +71,11 @@ function writePaperDollLooks(gear: ItemDef[], path: string) {
   for (const g of gear) {
     const e = g.equip;
     if (!e || file.items[g.id] || !["weapon", "armor", "boots", "head"].includes(e.slot)) continue;
-    const visual = e.slot === "weapon" ? weapon[e.job ?? "vanguard"] : e.slot === "armor" ? "leafweave_coat" : e.slot === "boots" ? "traveler_boots" : "none";
+    // Heads (scripts/paint-head-gear.py): Armour helm, Evasion hood, Aether Shield circlet.
+    const head = e.kind?.includes("armour") ? "iron_helm" : e.kind?.includes("evasion") ? "leather_hood" : "aether_circlet";
+    const visual = e.slot === "weapon" ? weapon[e.job ?? "vanguard"] : e.slot === "armor" ? "leafweave_coat" : e.slot === "boots" ? "traveler_boots" : head;
     const src = byVisual.get(visual);
-    const look: Look = { name: g.name, slot: e.slot, visual, layers: [...(src?.layers ?? [])], generated: true };
+    const look: Look = { name: g.name, slot: e.slot, visual, layers: [...(src?.layers ?? (e.slot === "head" ? ["head"] : []))], generated: true };
     if (src?.hides) look.hides = [...src.hides];
     file.items[g.id] = look;
   }

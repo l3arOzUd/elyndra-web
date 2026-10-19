@@ -2,7 +2,7 @@ import type { ClientContent } from '../data/content';
 import type { BuffView, GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
 import { skillIcon, systemIcon } from './art';
-import { CHARM_SLOTS, ECHO_COUNT, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
+import { CHARM_SLOTS, ECHO_COUNT, gearTitle, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
 
 const $ = (id: string) => document.getElementById(id)!;
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: string): HTMLElementTagNameMap[K] {
@@ -252,7 +252,7 @@ export class Hud {
       const g = this.worn(slot), it = g && this.c.items.get(g.base), row = el('div', 'eq-row' + (g ? ' rarity-' + g.rarity : '')), label = el('div', 'eq-label');
       const open = this.c.systems.charm_slot_levels[CHARM_SLOTS.indexOf(slot as typeof CHARM_SLOTS[number])] ?? 0;
       row.append(it ? itemIcon(it, g!.rarity) : icon(slot === 'weapon' ? 'sword' : slot === 'armor' || slot === 'boots' ? slot : slot === 'head' ? 'shield' : 'crystal', 'empty-equip'));
-      label.append(el('small', 'eyebrow', SLOT_LABEL[slot]), el('strong', '', it ? it.name : lv < open ? 'Opens at Lv ' + open : 'Empty'));
+      label.append(el('small', 'eyebrow', SLOT_LABEL[slot]), el('strong', '', it ? gearTitle(it, g!) : lv < open ? 'Opens at Lv ' + open : 'Empty'));
       if (g && inactive.has(g.uid)) label.append(el('small', 'bad', 'Requirements not met: no effect'));
       row.append(label);
       if (g) {
@@ -272,7 +272,7 @@ export class Hud {
       const g = id.startsWith('g:') ? this.gear.get(Number(id.slice(2))) : undefined;
       const it = itemOf(id), li = el('li'), b = el('button', 'item-cell rarity-' + (g ? g.rarity : it?.rarity ?? 'common') + (id === this.selected ? ' selected' : ''));
       b.title = nameOf(id) + (g ? ' · ' + RARITY_LABEL[g.rarity] : ''); b.setAttribute('aria-label', g ? nameOf(id) + ', ' + RARITY_LABEL[g.rarity] + ', item level ' + g.ilvl : (it?.name ?? id) + ', quantity ' + this.inventory[id]); b.setAttribute('aria-pressed', String(id === this.selected)); b.dataset.item = id;
-      b.append(itemIcon(it, g?.rarity), el('span', 'item-quantity', g ? (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
+      b.append(itemIcon(it, g?.rarity), el('span', 'item-quantity', g ? (g.refine ? '+' + g.refine + ' ' : '') + (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
       b.onclick = () => { this.selected = id; this.renderInventory(); (list.querySelector('[data-item="' + CSS.escape(id) + '"]') as HTMLButtonElement | null)?.focus(); };
       li.append(b); list.append(li);
     }
@@ -289,7 +289,7 @@ export class Hud {
   private renderGearDetail(d: HTMLElement, g: GearView) {
     const it = gearItem(this.c, g);
     if (!it?.equip) { d.append(el('p', 'muted', g.base)); return; }
-    const e = it.equip, title = el('h3', 'rarity-text-' + g.rarity, it.name);
+    const e = it.equip, title = el('h3', 'rarity-text-' + g.rarity, gearTitle(it, g));
     d.append(itemIcon(it, g.rarity), el('p', 'eyebrow', RARITY_LABEL[g.rarity] + ' · ' + kindLabel(it) + ' · item level ' + g.ilvl), title);
     if (e.unique || it.category === 'totem' || it.description) d.append(el('p', 'item-description', it.description));
     for (const line of baseLines(this.c, it, g)) d.append(el('p', 'item-stat', line));
@@ -456,6 +456,12 @@ export class Hud {
       b.append(el('small', '', t.trigger ? Math.floor(t.ch / t.need * 100) + '%' : Math.ceil(t.left / 1000) + 's'));
       b.title = (it?.name ?? '') + (t.trigger ? ' · ' + t.ch + '/' + t.need + (t.link ? ' → ' + (this.c.skills.get(t.link)?.name ?? t.link) : ' · no skill linked') : ' · ' + (t.left / 1000).toFixed(1) + 's left');
       bar.append(b);
+    }
+    // Ailments an elite or boss put on you.
+    const AIL: Record<string, [string, string]> = { burn: ['wildfire', 'Burning: fire damage every second'], shock: ['surge', 'Shocked: 10% more damage taken'], chill: ['haste', 'Chilled: 20% slower attacks, casts and movement'] };
+    for (const a of this.stats?.ail ?? []) {
+      const b = el('div', 'buff ailment ' + a.kind); b.append(systemIcon(AIL[a.kind][0]), el('small', '', Math.ceil(a.left / 1000) + 's'));
+      b.title = AIL[a.kind][1] + ' · ' + (a.left / 1000).toFixed(1) + 's'; bar.append(b);
     }
     // Consumable buffs (World v3): Haste Draught, Scholar's Tea, Fortune Incense.
     for (const f of this.buffs) {

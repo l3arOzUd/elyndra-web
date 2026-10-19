@@ -288,6 +288,8 @@ export class Game {
       if (!t.dead) t.actor.play("hit");
       const at = tmpA.copy(t.pos).addScaledVector(UP, t.actor.height + 0.3);
       if (flags & 2) { this.overlay.text("Evade", at, "taken"); continue; } // evaded: no damage
+      // Ailments landing (8 burn, 16 shock, 32 chill): a word above the target.
+      if (flags & 56 && dmg > 0 && (flags & 8 ? ev.src !== id : true)) this.overlay.text(flags & 16 ? "Shock" : flags & 32 ? "Chill" : "Burn", at.clone().addScaledVector(UP, 0.4), "info");
       if (flags & 4) { this.overlay.text("◈ " + dmg, at, "taken"); continue; } // the Aether Shield took it all
       this.overlay.damage(id, dmg, (flags & 1) === 1, id === this.selfId ? "taken" : "dmg", at);
       if (id === this.selfId && dmg > t.mhp * 0.1) this.cam.kick(0.25);

@@ -35,6 +35,14 @@ export function affixText(c: ClientContent, id: string, v: number): string {
 
 export const gearItem = (c: ClientContent, g: GearView) => c.items.get(g.base);
 
+/** Refining (elyndra-server internal/game/refine.go): keep in step. */
+export const REFINE = { max: 10, stepPct: 5, dropFrom: 7, costMult: 2, chance: [100, 100, 100, 100, 100, 80, 70, 60, 50, 40] };
+export const refinable = (it?: ItemDef) => !!it?.equip && ['weapon', 'head', 'armor', 'boots'].includes(it.equip.slot);
+export const refineCost = (it: ItemDef, g: GearView) => Math.max(10, it.sell_price * ((g.refine ?? 0) + 1) * REFINE.costMult);
+const refineMult = (g?: GearView) => 1 + ((g?.refine ?? 0) * REFINE.stepPct) / 100;
+/** "+3 Iron Saber". */
+export const gearTitle = (it: ItemDef | undefined, g: GearView) => (g.refine ? '+' + g.refine + ' ' : '') + (it?.name ?? g.base);
+
 /** Name shown for a copy: its base's name. */
 export const gearName = (c: ClientContent, g: GearView) => gearItem(c, g)?.name ?? g.base;
 
@@ -50,8 +58,8 @@ export function kindLabel(it?: ItemDef): string {
 export function baseLines(c: ClientContent, it: ItemDef, g?: GearView): string[] {
   const e = it.equip!;
   const out: string[] = [];
-  const local = 1 + (g?.affixes.filter(([id]) => id === 'inc_local_defense').reduce((s, [, , v]) => s + v, 0) ?? 0) / 100;
-  if (e.attack) out.push('Weapon ATK ' + e.attack);
+  const local = (1 + (g?.affixes.filter(([id]) => id === 'inc_local_defense').reduce((s, [, , v]) => s + v, 0) ?? 0) / 100) * refineMult(g);
+  if (e.attack) out.push('Weapon ATK ' + Math.round(e.attack * refineMult(g) * 100) / 100);
   if (e.armour) out.push('Armour ' + Math.round(e.armour * local));
   if (e.evasion) out.push('Evasion ' + Math.round(e.evasion * local));
   if (e.shield) out.push('Aether Shield ' + Math.round(e.shield * local));
@@ -87,9 +95,9 @@ export function requirements(it: ItemDef, level: number, job: string | undefined
 /** Totals a copy adds, for the comparison with what is worn: ATK and defences. */
 export function gearNumbers(it?: ItemDef, g?: GearView): Record<string, number> {
   if (!it?.equip) return {};
-  const local = 1 + (g?.affixes.filter(([id]) => id === 'inc_local_defense').reduce((s, [, , v]) => s + v, 0) ?? 0) / 100;
+  const local = (1 + (g?.affixes.filter(([id]) => id === 'inc_local_defense').reduce((s, [, , v]) => s + v, 0) ?? 0) / 100) * refineMult(g);
   const out: Record<string, number> = {};
-  if (it.equip.attack) out['Weapon ATK'] = it.equip.attack;
+  if (it.equip.attack) out['Weapon ATK'] = it.equip.attack * refineMult(g);
   if (it.equip.armour) out.Armour = Math.round(it.equip.armour * local);
   if (it.equip.evasion) out.Evasion = Math.round(it.equip.evasion * local);
   if (it.equip.shield) out['Aether Shield'] = Math.round(it.equip.shield * local);

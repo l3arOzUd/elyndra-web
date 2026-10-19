@@ -94,43 +94,55 @@
   "itm_1005": {
    "name": "Worn Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1006": {
    "name": "Worn Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1007": {
    "name": "Worn Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1008": {
    "name": "Worn Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1009": {
    "name": "Worn Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1010": {
    "name": "Worn Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1011": {
@@ -346,43 +358,55 @@
   "itm_1028": {
    "name": "Bronze Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1029": {
    "name": "Bronze Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1030": {
    "name": "Bronze Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1031": {
    "name": "Bronze Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1032": {
    "name": "Bronze Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1033": {
    "name": "Bronze Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1034": {
@@ -598,43 +622,55 @@
   "itm_1051": {
    "name": "Iron Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1052": {
    "name": "Iron Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1053": {
    "name": "Iron Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1054": {
    "name": "Iron Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1055": {
    "name": "Iron Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1056": {
    "name": "Iron Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1057": {
@@ -850,43 +886,55 @@
   "itm_1074": {
    "name": "Steel Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1075": {
    "name": "Steel Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1076": {
    "name": "Steel Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1077": {
    "name": "Steel Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1078": {
    "name": "Steel Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1079": {
    "name": "Steel Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1080": {
@@ -1102,43 +1150,55 @@
   "itm_1097": {
    "name": "Cobalt Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1098": {
    "name": "Cobalt Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1099": {
    "name": "Cobalt Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1100": {
    "name": "Cobalt Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1101": {
    "name": "Cobalt Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1102": {
    "name": "Cobalt Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1103": {
@@ -1354,43 +1414,55 @@
   "itm_1120": {
    "name": "Runic Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1121": {
    "name": "Runic Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1122": {
    "name": "Runic Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1123": {
    "name": "Runic Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1124": {
    "name": "Runic Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1125": {
    "name": "Runic Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1126": {
@@ -1606,43 +1678,55 @@
   "itm_1143": {
    "name": "Mythril Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1144": {
    "name": "Mythril Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1145": {
    "name": "Mythril Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1146": {
    "name": "Mythril Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1147": {
    "name": "Mythril Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1148": {
    "name": "Mythril Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1149": {
@@ -1858,43 +1942,55 @@
   "itm_1166": {
    "name": "Ember Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1167": {
    "name": "Ember Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1168": {
    "name": "Ember Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1169": {
    "name": "Ember Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1170": {
    "name": "Ember Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1171": {
    "name": "Ember Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1172": {
@@ -2110,43 +2206,55 @@
   "itm_1189": {
    "name": "Star Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1190": {
    "name": "Star Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1191": {
    "name": "Star Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1192": {
    "name": "Star Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1193": {
    "name": "Star Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1194": {
    "name": "Star Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1195": {
@@ -2362,43 +2470,55 @@
   "itm_1212": {
    "name": "Sovereign Helm",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1213": {
    "name": "Sovereign Hood",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1214": {
    "name": "Sovereign Circlet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1215": {
    "name": "Sovereign Sallet",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1216": {
    "name": "Sovereign Warcrown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1217": {
    "name": "Sovereign Mask",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "leather_hood",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1218": {
@@ -2578,8 +2698,10 @@
   "itm_1321": {
    "name": "Hollowroot Crown",
    "slot": "head",
-   "visual": "none",
-   "layers": [],
+   "visual": "iron_helm",
+   "layers": [
+    "head"
+   ],
    "generated": true
   },
   "itm_1322": {

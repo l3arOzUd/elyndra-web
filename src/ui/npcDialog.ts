@@ -2,6 +2,7 @@ import type { ClientContent } from '../data/content';
 import type { MsgOf } from '../net/protocol';
 import type { Hud } from './hud';
 import { icon, itemIcon } from './icons';
+import { REFINE, gearTitle, refinable, refineCost } from './gear';
 
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: string): HTMLElementTagNameMap[K] {
   const e = document.createElement(tag); e.className = cls; if (text !== undefined) e.textContent = text; return e;
@@ -100,6 +101,18 @@ export class NpcDialog {
       for (const [id, cost] of m.dest) {
         const map = this.c.maps.get(id), card = row(map?.name ?? id, (map ? 'Recommended level ' + map.recommended_level_min + '–' + map.recommended_level_max + ' · ' : '') + (cost ? cost.toLocaleString() + ' z' : 'Free passage'), icon('portal', 'service-art'));
         card.append(button('Travel →', 'teleport', id, undefined, this.hud.zeny < cost)); s.append(card);
+      }
+    }
+    if (m.role === 'craftsman') {
+      // Refining: weapons and armour, +1 at a time to +10 (refine.go).
+      const s = section('Refine');
+      const list = [...this.hud.gear.values()].filter((g) => refinable(this.c.items.get(g.base))).sort((a, b) => Number(!!b.slot) - Number(!!a.slot) || (b.refine ?? 0) - (a.refine ?? 0));
+      if (!list.length) s.append(el('p', 'empty-state', 'No weapons or armour to refine.'));
+      for (const g of list) {
+        const it = this.c.items.get(g.base)!, lvl = g.refine ?? 0, cost = refineCost(it, g);
+        const risk = lvl >= REFINE.max ? 'At the +' + REFINE.max + ' maximum' : REFINE.chance[lvl] + '% to reach +' + (lvl + 1) + ' · ' + cost.toLocaleString() + ' z' + (lvl >= REFINE.dropFrom ? ' · failure drops to +' + (lvl - 1) : REFINE.chance[lvl] < 100 ? ' · failure keeps +' + lvl : '');
+        const card = row(gearTitle(it, g) + (g.slot ? ' (worn)' : ''), '+' + REFINE.stepPct + '% base numbers a level · ' + risk, itemIcon(it, g.rarity));
+        card.append(button('Refine', 'refine', String(g.uid), undefined, lvl >= REFINE.max || this.hud.zeny < cost)); s.append(card);
       }
     }
     if (m.recipes?.length) {

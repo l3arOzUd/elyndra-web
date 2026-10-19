@@ -40,6 +40,10 @@ export const AFFIXES: AffixDef[] = [
   { id: "inc_move_speed", kind: "suffix", label: "{v}% increased Movement Speed", slots: ["boots"], values: T(5, 7, 9, 11, 13, 16, 20) },
   { id: "magnet", kind: "suffix", label: "+{v} cells loot pickup radius", slots: ["boots", "accessory"], values: T(1, 1, 2, 2, 2, 3, 3) },
   { id: "grip", kind: "suffix", label: "{v}% increased monster aggro radius", slots: ["armor", "accessory"], values: T(8, 12, 16, 20, 25, 30, 35) },
+  // Ailments (§2.10): chance per hit, scaled by the hit's proc coefficient.
+  { id: "chance_burn", kind: "suffix", label: "{v}% chance to Burn (half the hit again over 4s)", slots: ["weapon", "accessory"], values: T(3, 4, 6, 8, 10, 12, 15) },
+  { id: "chance_shock", kind: "suffix", label: "{v}% chance to Shock (15% more damage taken for 4s)", slots: ["weapon", "accessory"], values: T(3, 4, 6, 8, 10, 12, 15) },
+  { id: "chance_chill", kind: "suffix", label: "{v}% chance to Chill (30% slower for 3s)", slots: ["weapon", "accessory"], values: T(3, 4, 6, 8, 10, 12, 15) },
 ];
 
 /** Affix ids that only Charms, Totems and uniques grant (labels for the UI). */
