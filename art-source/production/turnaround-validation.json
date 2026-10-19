@@ -1012,5 +1012,83 @@
       }
     },
     "visualConsistency": "requires-direct-review"
+  },
+  {
+    "id": "mob_0014",
+    "views": {
+      "front": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          21,
+          244,
+          1223,
+          1135
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "back": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          16,
+          242,
+          1234,
+          1135
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "left": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          45,
+          228,
+          1229,
+          1129
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "right": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          17,
+          224,
+          1248,
+          1130
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      }
+    },
+    "visualConsistency": "requires-direct-review"
   }
 ]

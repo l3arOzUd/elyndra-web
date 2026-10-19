@@ -1,0 +1,18 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct generated-image and four-view browser inspection on a light background.",
+  "confirmed": [
+    "Brass spider gear-frame, thick living vines and leaf sprouts retained",
+    "Cracked jade lens remains on forward face; rear has gears instead of duplicate lens",
+    "Four near-side leg silhouettes distinguishable in each profile",
+    "All four files pass alpha and frame-edge checks"
+  ],
+  "limitations": [
+    "Profiles are visibly oblique, exposing too much front lens and top surface for strict orthographic side references",
+    "All eight complete leg chains cannot be traced through overlap in front/rear; hidden attachment anatomy is unresolved",
+    "Gear tooth patterns, vine routing and leaf positions vary across views",
+    "Far legs appear translucent in profiles; solid limb layers must replace that rendering before animation",
+    "Foot contacts and central body volume require consistent registration across views"
+  ],
+  "next": "Resolve eight explicit leg attachments and opaque far limbs, refine side camera, then separate gear-body and eight articulated legs for spider gait and collapse."
+}
