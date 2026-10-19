@@ -97,16 +97,7 @@
    "cleaving_arc": "Cone widens from 100° to 140°",
    "iron_cyclone": "A second spin follows at once for 50% damage",
    "anchor_shout": "Taunted monsters take 10% more damage for 4s",
-   "sundering_pulse": "Hitting 30 or more targets refunds 25% SP",
-   "prism_field": "The field lands 4 more times",
-   "aether_nova": "A second nova follows at once for 50% damage",
-   "gravity_coil": "Pulled monsters take 10% more damage for 4s",
-   "meridian_lance": "The lance is 2 cells wider",
-   "splitshot_array": "The spread widens from 70° to 110°",
-   "dash_circuit": "30% shorter cooldown",
-   "coil_mine": "Blast radius +1 cell",
-   "gearstorm": "A second storm follows at once for 50% damage",
-   "pulse_beacon": "Heals 20% of Max HP instead of 10%"
+   "sundering_pulse": "Hitting 30 or more targets refunds 25% SP"
   }
  },
  "drops": {
