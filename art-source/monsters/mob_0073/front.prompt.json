@@ -1,0 +1,8 @@
+{
+  "id": "mob_0073",
+  "name": "Glacier Juggernaut",
+  "view": "front",
+  "prompt": "Single full FRONT orthographic eye-level master of Elyndra Glacier Juggernaut, hand-painted stylized fantasy MMORPG monster. Bible: A tracked mech twice a man's height with a huge wedge plough blade, a furnace glowing in its chest and frost-crusted armour; rust-red and steel. Massive squat industrial mech torso riding exactly TWO wide steel caterpillar tracks, no walking legs. Huge V-shaped steel wedge snowplough attached low across front with central ridge pointing toward camera, chest above blade contains rectangular grated furnace glowing warm orange, heavy rust-red armor plates crusted with white frost and short icicles. Two compact mechanical piston arms brace plough at sides. Small recessed armored head. Entire body faces directly forward, neutral parked pose. Warm detailed painterly materials, clear rusty red versus frosted steel versus orange furnace, readable powerful silhouette. Entire blade edges, tracks and head inside square transparent canvas with broad empty margins. No snowy ground, smoke, steam, particles, shadow, scenery, text or extra characters. Fire glow contained in furnace.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Two caterpillar tracks, huge wedge plough, chest furnace; no walking legs."
+}

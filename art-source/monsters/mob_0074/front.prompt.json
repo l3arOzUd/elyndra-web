@@ -1,0 +1,8 @@
+{
+  "id": "mob_0074",
+  "name": "Mirrorshade",
+  "view": "front",
+  "prompt": "Single full-body FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Mirrorshade: a humanoid silhouette of dark mirror glass, reflecting its surroundings warped, edges smoking into shadow; ONE bright eye-glint. Slender uncanny genderless humanoid made wholly of polished dark smoky mirror glass, two arms and two legs, long natural fingers, smooth featureless face except a single small sharp white eye glint on character left (viewer right). Warped abstract silver-blue and muted violet reflections embedded in glossy charcoal surfaces, no literal landscape image or text. Shadow-dark tapered edge wisps attached closely to limbs; external smoke will be separate VFX, no background cloud. Neutral frontal stance with arms relaxed slightly apart, feet planted, shoulders and hips square. Painterly fantasy rendering, clear readable silhouette with controlled rim highlights to remain visible against dark game environments. Entire fingers head feet inside square transparent canvas with broad margins. No clothing, armor, weapon, floor, cast shadow, haze background or other creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "One eye glint at character left; dark mirror humanoid; external shadow smoke separate."
+}

@@ -3020,9 +3020,13 @@
       "brief": "A long pale-blue serpent with frost-ridged scales and a hood of thin ice fins, glowing coolant-cyan veins along its belly.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0072/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3057,9 +3061,13 @@
       "brief": "A tracked mech twice a man's height with a huge wedge plough blade, a furnace glowing in its chest and frost-crusted armour; rust-red and steel.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0073/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3094,9 +3102,13 @@
       "brief": "A humanoid silhouette of dark mirror glass, reflecting its surroundings warped, edges smoking into shadow; one bright eye-glint.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0074/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
