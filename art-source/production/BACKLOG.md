@@ -30,7 +30,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0019 | Sun Warden | master-created | master-created | master-created | master-created | placeholder |
 | mob_0020 | Tidehopper | master-created | master-created | master-created | master-created | placeholder |
 | mob_0021 | Coral Claw | master-created | master-created | master-created | master-created | placeholder |
-| mob_0022 | Brine Automaton | master-created | missing | missing | missing | placeholder |
+| mob_0022 | Brine Automaton | master-created | master-created | master-created | master-created | placeholder |
 | mob_0023 | Relay Guardian | master-created | missing | missing | missing | placeholder |
 | mob_0024 | Frost Mite | master-created | missing | missing | missing | placeholder |
 | mob_0025 | Prism Wisp | master-created | missing | missing | missing | placeholder |

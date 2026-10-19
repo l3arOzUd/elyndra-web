@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "Exact Brine Automaton RIGHT-facing orthographic profile. Match attached LEFT profile silhouette reversed in facing direction, same body thickness and neutral stance; FRONT and BACK references define actual construction. Front of barrel points RIGHT with nearest gauge seen only obliquely at anterior edge, rear tank projects LEFT with straps and pipes. One near piston arm hanging down and clamp hand, far arm occluded; two short legs overlap, toes RIGHT heels LEFT. Copper brass turquoise verdigris white salt, no extra head, no extra valves (two total) or limbs. Keep valve axes at equal height in 3D; strict orthographic eye-level no perspective. Full body leave at least 7 percent clear margin around highest valve and feet. Square transparent background no steam floor shadows labels. Painted fantasy MMORPG matching references.",
+  "references": [
+    "left.png",
+    "front.png",
+    "back.png"
+  ]
+}

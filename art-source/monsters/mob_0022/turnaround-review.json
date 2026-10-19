@@ -1,0 +1,20 @@
+{
+  "id": "mob_0022",
+  "name": "Brine Automaton",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual inspection of four references; framing validation is not mechanical consistency approval.",
+  "confirmed": [
+    "Copper barrel, verdigris, brass, salt, piston limbs and gauge eyes preserved.",
+    "Rear replaces eyes and belly wheel with tank straps and maintenance hatch.",
+    "Profiles point opposite directions with tank behind torso and toes facing forward."
+  ],
+  "limitations": [
+    "Side valve stems appear at different heights despite front paired level layout; must align fixed mount positions.",
+    "Side knee plates retain frontal appearance; define hinge axes and distinguish near/far legs.",
+    "Rear clamp hands resemble front-facing fingers; finger curvature needs construction review.",
+    "Tank depth and gauge face exposure in profiles need strict orthographic alignment.",
+    "Top valve margins are tight; normalize framing before animation.",
+    "Salt and rivet patterns vary; fixed surface landmark map pending."
+  ],
+  "next": "Correct mechanical axes, tank and valve mounts and hand orientation, then normalize, separate rigid parts and animate. Steam should be runtime VFX."
+}
