@@ -1,0 +1,19 @@
+{
+  "id": "mob_0041",
+  "name": "Jadewing Moth",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front master; corrected folded-wing left draft into edge-on wing projection before creating right.",
+  "confirmed": [
+    "Four jade wings with golden circuit-like veins, large upper eyespots, sage furry thorax, emerald abdomen and two feathered antennae preserve identity.",
+    "Back has no face eyes/mouth; dorsal fur replaces ventral facial details.",
+    "Side views face opposite directions with one visible eye and thin wing-edge projection rather than broad folded membranes.",
+    "Particle dust omitted from body reference intentionally for later separate VFX."
+  ],
+  "limitations": [
+    "Side wing extremities extend higher/lower relative to body than front/back; fixed-pose projection not yet geometrically consistent.",
+    "Six legs overlap; individual far-side roots and full limb count cannot be traced confidently in side images.",
+    "Front/back wing tips have very narrow canvas margins; normalize framing before animation exports.",
+    "Wing vein landmarks and abdominal segment contours differ slightly; four-view consistency approval pending."
+  ],
+  "next": "Align wing hinge/extremity landmarks and six-leg topology, separate wings/body/legs for articulated flap animation and author luminous dust VFX."
+}

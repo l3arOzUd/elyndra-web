@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Create RIGHT SIDE orthographic turnaround of SAME Jadewing Moth facing RIGHT. First reference corrected left profile determines silhouette/pose, second front determines identity. Upright hovering moth head above vertically descending emerald segmented abdomen. One jade face eye at right edge; mouth right. Two feather antennae; six insect legs folded downward on ventral RIGHT side with near three and partly occluded far three. Pale sage furry thorax. Four wings stay spread in same frontal plane, viewed EDGE-ON from side, visible only thin jade/gold edge strips behind body on LEFT, not broad wing membranes. Match corrected opposite view wing-edge shape and body proportions exactly. Do not fold wings, expose broad eyespots or turn body horizontal. Premium hand-painted fantasy MMORPG style. Whole body and all appendages square transparent canvas with margins, no text, floor, shadows or particle cloud.",
+  "references": [
+    "left.png",
+    "front.png"
+  ]
+}

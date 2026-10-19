@@ -1,0 +1,7 @@
+{
+  "view": "left",
+  "prompt": "Edit only wing projection of this left-facing upright moth. Current wings are folded with broad faces visible, wrong. Wings must remain fully spread LEFT-RIGHT in world space, pointing toward and away from side camera, so they are seen EDGE-ON. Replace the broad upper and lower wing panels at imageRIGHT with extremely narrow jade/gold curved edge strips just behind thorax, width at most 25 pixels. Upper strip extends from thorax y560 up to y210 (not y60); lower strip from y610 down to y970. NO broad wing membranes or eyespots visible from this side, because viewed edge-on. Keep body, head, antennae, legs, abdomen, scale, left-facing profile completely unchanged. This is anatomical orthographic side reference with unchanged open-wing pose, transparent background.",
+  "references": [
+    "left-folded-wing-draft.png"
+  ]
+}
