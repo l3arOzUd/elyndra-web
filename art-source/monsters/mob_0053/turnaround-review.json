@@ -1,0 +1,20 @@
+{
+  "id": "mob_0053",
+  "name": "Gnomon Acolyte",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from Bible front identity, rear construction and opposite profile.",
+  "confirmed": [
+    "Slim brass automaton, sun-bleached robes, triangular sundial crest and mirror palms retained.",
+    "Rear helmet has no face; rear hand plates opaque rather than mirrored.",
+    "Right hip pendant visible on right profile and rear image right; not duplicated on left profile.",
+    "Four RGBA images pass nonempty/transparent/framing checks."
+  ],
+  "limitations": [
+    "Profile palms still turn toward camera rather than preserving exact front pose; wrist orientation needs reconciliation.",
+    "Far arm and leg overlap or disappear in profiles; hidden limb continuity not proven.",
+    "Robe tears, folds and pendant segment shapes differ across views; stable garment seam and ornament map required.",
+    "Crest nearly touches upper edge; passes technical edge check but lacks requested generous margin.",
+    "Not separated into animation parts or approved for runtime."
+  ],
+  "next": "Reconcile wrist orientation, crest geometry, robe seams and pendant segments; build articulated limb parts and cloth layers for idle/walk/mirror-cast/hit/death."
+}
