@@ -1,0 +1,19 @@
+{
+  "id": "mob_0047",
+  "name": "Spore Matron",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front master, rear ridge and opposite profile; visual review of fungal structure and lantern attachments.",
+  "confirmed": [
+    "Tall cream fibrous stalk, layered plum/ochre frilled cap and attached jade lanterns preserve Bible identity.",
+    "Rear central ridge lacks frontal slit; side silhouettes show cap depth.",
+    "No humanoid limbs, weapons or clothing added.",
+    "Front/back eight-lantern design retained as target for rig."
+  ],
+  "limitations": [
+    "Side lantern overlap prevents verifying all eight independent attachments; visible cord routes differ and require explicit mapping.",
+    "Side cap projection remains somewhat oblique; front ridge/slit position and gill folds not exactly consistent.",
+    "Root branches and layered stalk shelves change across views; establish stable deformation landmarks.",
+    "Top cap margin narrow; normalize framing before sprite extraction. File checks do not prove consistent topology."
+  ],
+  "next": "Map eight lantern anchors and consistent cap/stalk/root surfaces, then separate hanging pods for sway and author movement/attack/hit/death with spore VFX."
+}

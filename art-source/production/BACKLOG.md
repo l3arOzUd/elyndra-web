@@ -52,7 +52,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0044 | Thistlehare | master-created | master-created | master-created | master-created | placeholder |
 | mob_0045 | Antlered Engine | master-created | master-created | master-created | master-created | placeholder |
 | mob_0046 | Sporebloat | master-created | master-created | master-created | master-created | placeholder |
-| mob_0047 | Spore Matron | master-created | missing | missing | missing | placeholder |
+| mob_0047 | Spore Matron | master-created | master-created | master-created | master-created | placeholder |
 | mob_0048 | Heartwood Pistonguard | master-created | missing | missing | missing | placeholder |
 | mob_0049 | Heartwood Regent | master-created | missing | missing | missing | placeholder |
 | mob_0050 | Ochre Jackal | master-created | missing | missing | missing | placeholder |
