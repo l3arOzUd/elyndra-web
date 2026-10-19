@@ -1,0 +1,8 @@
+{
+  "id": "mob_0069",
+  "name": "Drowned Signalmind",
+  "view": "front",
+  "prompt": "One full FRONT orthographic eye-level boss master for Elyndra, beautiful hand-painted stylized fantasy MMORPG. Drowned Signalmind: a colossal brass-and-coral head on cable tentacles, a ring of sonar dishes for a crown, one great cracked lens eye glowing cyan; bubbles and sparks. Huge ancient rounded brass mechanical head encrusted with pink-orange coral and barnacles, exactly ONE giant cracked cyan optical lens eye centered on front. Crown of small round concave sonar dishes arranged in a ring atop head, articulated mounts. Six thick flexible braided cable tentacles extend beneath like an octopus, distinct visible tips splayed gently, no humanoid body or legs. Warm aged brass with verdigris, rich painted coral detail and clear forms. Neutral frontal pose, full crown and tentacles entirely within square canvas with generous empty margins. Cyan light contained within lens, no detached bubbles or sparks in master; those will be separate animated VFX. True transparent background, no sea, floor, shadows, haze, text or extra creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "One cracked cyan lens eye; sonar dish crown; cable tentacles. Bubbles and sparks require separate VFX."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "mob_0071",
+  "name": "Glassback Ram",
+  "view": "front",
+  "prompt": "One full-body FRONT orthographic eye-level monster master for Elyndra hand-painted stylized fantasy MMORPG. Glassback Ram: a shaggy grey ram with curled horns of translucent blue glass and a back of glassy plates; breath steaming. Sturdy natural FOUR-legged mountain ram, thick shaggy grey wool, two massive curled translucent icy-blue glass horns wrapping symmetrically around sides of head, glass plates embedded along upper back visible over shoulders. Dark alert eyes, blunt sheep muzzle. Head chest pelvis all square to viewer, two front hooves and two rear hooves visible naturally behind, neutral grounded stance. Warm painterly fur detail with cool glass highlights, readable powerful silhouette. Breath steam reserved for separate animation, no baked vapor. Entire horn curls and all hooves inside square transparent canvas with generous margins. No snow ground, shadows, haze, text, extra limbs or other creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Four legs; two curled blue-glass horns; glass plates on back. Breath steam separate."
+}

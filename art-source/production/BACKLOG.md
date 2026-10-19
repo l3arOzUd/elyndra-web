@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 58; existing front references needing review: 7; missing front references: 29.
+Monsters: 94; front masters created: 61; existing front references needing review: 7; missing front references: 26.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -74,9 +74,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0066 | Squall Ray | master-created | missing | missing | missing | placeholder |
 | mob_0067 | Pressure Drone | master-created | missing | missing | missing | placeholder |
 | mob_0068 | Gloom Medusa | master-created | missing | missing | missing | placeholder |
-| mob_0069 | Drowned Signalmind | missing | missing | missing | missing | placeholder |
-| mob_0070 | Rimehare | missing | missing | missing | missing | placeholder |
-| mob_0071 | Glassback Ram | missing | missing | missing | missing | placeholder |
+| mob_0069 | Drowned Signalmind | master-created | missing | missing | missing | placeholder |
+| mob_0070 | Rimehare | master-created | missing | missing | missing | placeholder |
+| mob_0071 | Glassback Ram | master-created | missing | missing | missing | placeholder |
 | mob_0072 | Frostcoil Serpent | missing | missing | missing | missing | placeholder |
 | mob_0073 | Glacier Juggernaut | missing | missing | missing | missing | placeholder |
 | mob_0074 | Mirrorshade | missing | missing | missing | missing | placeholder |

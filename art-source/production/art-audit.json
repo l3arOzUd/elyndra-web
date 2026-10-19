@@ -2897,9 +2897,13 @@
       "brief": "A colossal brass-and-coral head on cable tentacles, a ring of sonar dishes for a crown, one great cracked lens eye glowing cyan; bubbles and sparks.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0069/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2934,9 +2938,13 @@
       "brief": "A big white hare with frost-tipped ears and long whiskers rimed with ice, hind legs built for bounding; snow-white, silver-blue shadows.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0070/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2971,9 +2979,13 @@
       "brief": "A shaggy grey ram with curled horns of translucent blue glass and a back of glassy plates; breath steaming.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0071/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
