@@ -56,78 +56,6 @@
   ]
  },
  {
-  "id": "dlg_lum_dawnmeadow_scout",
-  "npc_id": "npc_lum_dawnmeadow_scout",
-  "lines": [
-   "Mosskin graze north-west and won't bother you. Sporelings by the pond answer each other's cries.",
-   "Past the east road the Amber Trail is Ambermite country. They come to you."
-  ]
- },
- {
-  "id": "dlg_lum_amber_trail_scout",
-  "npc_id": "npc_lum_amber_trail_scout",
-  "lines": [
-   "The trail follows the old pipeline all the way to the windmill hills.",
-   "Gliders bolt when hurt; drive them against the trees."
-  ]
- },
- {
-  "id": "dlg_lum_whispergrass_scout",
-  "npc_id": "npc_lum_whispergrass_scout",
-  "lines": [
-   "Craglets nest in the scree, and they swallow gears. Bring me some back.",
-   "Thornbacks on the ridge travel in herds; take them together."
-  ]
- },
- {
-  "id": "dlg_lum_windmill_medic",
-  "npc_id": "npc_lum_windmill_medic",
-  "lines": [
-   "Rest a while. The Dustwings never stop coming while the sails turn.",
-   "I patch up more Wayfarers here than anywhere in Lumeris."
-  ]
- },
- {
-  "id": "dlg_lum_windmill_scout",
-  "npc_id": "npc_lum_windmill_scout",
-  "lines": [
-   "Sail Hill is all Dustwing. Pull forty and spin, if you're brave.",
-   "The millrace goes east to Moonbrook."
-  ]
- },
- {
-  "id": "dlg_lum_moonbrook_scout",
-  "npc_id": "npc_lum_moonbrook_scout",
-  "lines": [
-   "Brookfin won't bite unless you start it. The reeds in the marsh, though, spit.",
-   "Pull the Reedstalkers round a corner; they'll follow you into reach."
-  ]
- },
- {
-  "id": "dlg_lum_orchard_scout",
-  "npc_id": "npc_lum_orchard_scout",
-  "lines": [
-   "This was the finest orchard in Lumeris before the pump went wrong.",
-   "Mind the pump house. The rot grows thickest round it."
-  ]
- },
- {
-  "id": "dlg_lum_orchard_medic",
-  "npc_id": "npc_lum_orchard_medic",
-  "lines": [
-   "The rot comes from below. Something in Hollowroot is feeding it.",
-   "Clear the rows, then go down. You'll need the Guild Pass for the lift."
-  ]
- },
- {
-  "id": "dlg_lum_hollowroot_gatekeeper",
-  "npc_id": "npc_lum_hollowroot_gatekeeper",
-  "lines": [
-   "Guild Pass only beyond this point. Guild orders.",
-   "The Warden's in the Heart Chamber, east of the pump hall."
-  ]
- },
- {
   "id": "dlg_lum_hollowroot_lift",
   "npc_id": "npc_lum_hollowroot_lift",
   "lines": [
@@ -136,11 +64,65 @@
   ]
  },
  {
-  "id": "dlg_ver_guild_registrar",
-  "npc_id": "npc_ver_guild_registrar",
+  "id": "dlg_lum_dawnmeadow_scout",
+  "npc_id": "npc_lum_dawnmeadow_scout",
   "lines": [
-   "Welcome to Sylvara, Wayfarer. The forest grows over everything here, machines included.",
-   "Start in Fernreach through the East Gate. The Graftlings there won't fight back; Mossbridge's newts and drones will."
+   "Dawnmeadow runs from Lv 1 by this camp to Lv 10 in the east.",
+   "Mosskin Meadow (Lv 1-1): Mosskin. Sporeling Hollow (Lv 2-3): Sporeling, Ambermite. Glider Rise (Lv 3-5): Lunari, Craglet. Bramble Mill (Lv 8-9): Thornback, Dustwing."
+  ]
+ },
+ {
+  "id": "dlg_lum_dawnmeadow_medic",
+  "npc_id": "npc_lum_dawnmeadow_medic",
+  "lines": [
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
+  ]
+ },
+ {
+  "id": "dlg_lum_dawnmeadow_transit",
+  "npc_id": "npc_lum_dawnmeadow_transit",
+  "lines": [
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
+  ]
+ },
+ {
+  "id": "dlg_lum_dawnmeadow_post",
+  "npc_id": "npc_lum_dawnmeadow_post",
+  "lines": [
+   "East is Moonbrook Vale, Lv 11 and up.",
+   "I can send you back to Avelorn."
+  ]
+ },
+ {
+  "id": "dlg_lum_moonbrook_vale_scout",
+  "npc_id": "npc_lum_moonbrook_vale_scout",
+  "lines": [
+   "Moonbrook Vale runs from Lv 11 by this camp to Lv 20 in the east.",
+   "Brookbed (Lv 12-12): Brookfin. Reed Marsh (Lv 14-16): Reedstalker, Graftling. Rotting Rows (Lv 17-18): Rotroot, Mossback Newt. Sap Groves (Lv 20-20): Sapdrone."
+  ]
+ },
+ {
+  "id": "dlg_lum_moonbrook_vale_medic",
+  "npc_id": "npc_lum_moonbrook_vale_medic",
+  "lines": [
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
+  ]
+ },
+ {
+  "id": "dlg_lum_moonbrook_vale_transit",
+  "npc_id": "npc_lum_moonbrook_vale_transit",
+  "lines": [
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
+  ]
+ },
+ {
+  "id": "dlg_lum_moonbrook_vale_post",
+  "npc_id": "npc_lum_moonbrook_vale_post",
+  "lines": [
+   "East is Graftwood Wilds, Lv 21 and up.",
+   "I can send you back to Avelorn."
   ]
  },
  {
@@ -152,115 +134,11 @@
   ]
  },
  {
-  "id": "dlg_ver_healer",
-  "npc_id": "npc_ver_healer",
-  "lines": [
-   "Hold still. Spore rash, sap burns... nothing the lodge hasn't seen.",
-   "If you go down to the Basin, breathe through cloth."
-  ]
- },
- {
-  "id": "dlg_ver_teleporter",
-  "npc_id": "npc_ver_teleporter",
-  "lines": [
-   "The lattice runs between every camp in Verdantis, and to Avelorn and Duskhar beyond.",
-   "The further the jump, the more crystal it burns. Coin first."
-  ]
- },
- {
   "id": "dlg_ver_craftsman",
   "npc_id": "npc_ver_craftsman",
   "lines": [
    "Field drops make better supplies than the merchant's, if you bring enough of them.",
    "Newt slick for vital tonic, moth scale for focus. Graftling twigs make decent bread ovens, too."
-  ]
- },
- {
-  "id": "dlg_ver_east_gate_guard",
-  "npc_id": "npc_ver_east_gate_guard",
-  "lines": [
-   "East Gate. Fernreach is ferns and Graftlings, nothing else.",
-   "The Graftlings won't touch you. Herd them up; it's good practice for Mossbridge."
-  ]
- },
- {
-  "id": "dlg_ver_north_gate_guard",
-  "npc_id": "npc_ver_north_gate_guard",
-  "lines": [
-   "North Gate to Mossbridge. Two old bridges over the creek; take either.",
-   "Newts croak for their whole bank, and the drones dive at anyone near their taps."
-  ]
- },
- {
-  "id": "dlg_ver_fernreach_scout",
-  "npc_id": "npc_ver_fernreach_scout",
-  "lines": [
-   "Graftlings everywhere here, and none of them fight. Gather a big herd before you swing.",
-   "The ruins up north are where the Aethrion grafted the first ones."
-  ]
- },
- {
-  "id": "dlg_ver_mossbridge_scout",
-  "npc_id": "npc_ver_mossbridge_scout",
-  "lines": [
-   "Hit one newt and the whole bank comes for you. Use that.",
-   "Hives are north of the creek, more drones on the north-west slope. Canopy Steps is up the north path."
-  ]
- },
- {
-  "id": "dlg_ver_canopy_scout",
-  "npc_id": "npc_ver_canopy_scout",
-  "lines": [
-   "Three terraces, two kinds of trouble. Hounds down here, moths in the middle, both on top.",
-   "Pull moths along the terrace; they can't shoot you through the walls."
-  ]
- },
- {
-  "id": "dlg_ver_graftwood_scout",
-  "npc_id": "npc_ver_graftwood_scout",
-  "lines": [
-   "The grafting engine stalled years ago. The Tenders went down to the Vineworks; the crawlers stayed.",
-   "The trellis rows funnel Vinecrawlers. Use that."
-  ]
- },
- {
-  "id": "dlg_ver_vineworks_scout",
-  "npc_id": "npc_ver_vineworks_scout",
-  "lines": [
-   "The press still turns, slowly. Something in it still wants grapes.",
-   "Tenders spray from range and patch each other up. Kill the ones at the back first."
-  ]
- },
- {
-  "id": "dlg_ver_vineworks_medic",
-  "npc_id": "npc_ver_vineworks_medic",
-  "lines": [
-   "Sit. Vine-lash and sap burns are most of my work.",
-   "The hares at the pump bolt the moment you touch them. Corner them first."
-  ]
- },
- {
-  "id": "dlg_ver_elderroot_scout",
-  "npc_id": "npc_ver_elderroot_scout",
-  "lines": [
-   "These are the oldest trees in Verdantis. The Aethrion ran their conduits through the roots.",
-   "Four Antlered Engines graze under the Eldest. Don't fight two at once."
-  ]
- },
- {
-  "id": "dlg_ver_spore_basin_scout",
-  "npc_id": "npc_ver_spore_basin_scout",
-  "lines": [
-   "The haze comes from the Engine's vents in the east. The bloats are born in it.",
-   "The Matrons that seed them live inside the Engine. Bring me bloat membranes and I'll prove it."
-  ]
- },
- {
-  "id": "dlg_ver_engine_watch",
-  "npc_id": "npc_ver_engine_watch",
-  "lines": [
-   "The Heartwood Engine's mouth. The Guild's been watching it since the spores thickened.",
-   "The Regent's in the heart chamber, past the piston hall. End it and the Basin will clear."
   ]
  },
  {
@@ -272,11 +150,65 @@
   ]
  },
  {
-  "id": "dlg_sol_guild_registrar",
-  "npc_id": "npc_sol_guild_registrar",
+  "id": "dlg_ver_graftwood_wilds_scout",
+  "npc_id": "npc_ver_graftwood_wilds_scout",
   "lines": [
-   "Welcome to Duskhar, Wayfarer. Every mirror in Solenia still turns to follow the sun, and something is aiming them.",
-   "Start with the Saffron Dunes past the West Gate. The Sandcoils there won't trouble you unless you trouble them."
+   "Graftwood Wilds runs from Lv 21 by this camp to Lv 30 in the east.",
+   "Jadewing Glade (Lv 22-23): Jadewing Moth, Barkhound. Trellis Dunes (Lv 25-26): Vinecrawler, Sandcoil. Press Terraces (Lv 27-28): Pruning Tender, Ochre Jackal. Glass Burrows (Lv 29-30): Thistlehare, Glass Scarab."
+  ]
+ },
+ {
+  "id": "dlg_ver_graftwood_wilds_medic",
+  "npc_id": "npc_ver_graftwood_wilds_medic",
+  "lines": [
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
+  ]
+ },
+ {
+  "id": "dlg_ver_graftwood_wilds_transit",
+  "npc_id": "npc_ver_graftwood_wilds_transit",
+  "lines": [
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
+  ]
+ },
+ {
+  "id": "dlg_ver_graftwood_wilds_post",
+  "npc_id": "npc_ver_graftwood_wilds_post",
+  "lines": [
+   "East is Elderroot Expanse, Lv 31 and up.",
+   "I can send you back to Avelorn."
+  ]
+ },
+ {
+  "id": "dlg_ver_elderroot_expanse_scout",
+  "npc_id": "npc_ver_elderroot_expanse_scout",
+  "lines": [
+   "Elderroot Expanse runs from Lv 31 by this camp to Lv 40 in the east.",
+   "Root Ridge (Lv 32-32): Root Sentinel, Brass Kite. Antler Glade (Lv 34-35): Dune Sentry, Antlered Engine. Spore Drift (Lv 35-36): Sporebloat, Tidehopper. Basilisk Flats (Lv 37-38): Glasstail Basilisk, Gullwing Skimmer. Coral Steps (Lv 39-40): Gnomon Acolyte, Coral Claw."
+  ]
+ },
+ {
+  "id": "dlg_ver_elderroot_expanse_medic",
+  "npc_id": "npc_ver_elderroot_expanse_medic",
+  "lines": [
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
+  ]
+ },
+ {
+  "id": "dlg_ver_elderroot_expanse_transit",
+  "npc_id": "npc_ver_elderroot_expanse_transit",
+  "lines": [
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
+  ]
+ },
+ {
+  "id": "dlg_ver_elderroot_expanse_post",
+  "npc_id": "npc_ver_elderroot_expanse_post",
+  "lines": [
+   "East is Saffron Wastes, Lv 41 and up.",
+   "I can send you back to Avelorn."
   ]
  },
  {
@@ -288,107 +220,11 @@
   ]
  },
  {
-  "id": "dlg_sol_healer",
-  "npc_id": "npc_sol_healer",
-  "lines": [
-   "Sunburn, glass cuts, heatstroke. Sit in the shade and drink this.",
-   "Out there, rest at the camps. The sand gives nothing back."
-  ]
- },
- {
-  "id": "dlg_sol_teleporter",
-  "npc_id": "npc_sol_teleporter",
-  "lines": [
-   "The lattice reaches every camp in Solenia, back to Sylvara, and on to Port Merrow.",
-   "Duskhar to the coast costs more. The crystals don't like salt air."
-  ]
- },
- {
   "id": "dlg_sol_craftsman",
   "npc_id": "npc_sol_craftsman",
   "lines": [
    "Sand and glass make good supplies if you know what to do with them.",
    "Jackal pelts render down for vital tonic. Scarab glass makes a decent focus draught."
-  ]
- },
- {
-  "id": "dlg_sol_west_gate_guard",
-  "npc_id": "npc_sol_west_gate_guard",
-  "lines": [
-   "West Gate. The Saffron Dunes: Sandcoils on the crests and the glass, and jackals at the oasis.",
-   "Keep to the pipeline trail and you'll find the way north."
-  ]
- },
- {
-  "id": "dlg_sol_north_gate_guard",
-  "npc_id": "npc_sol_north_gate_guard",
-  "lines": [
-   "Caravan Gate. The road runs to Caravan Verge: brass kites overhead, glass scarabs in the washes.",
-   "Watch the sky there. The kites still survey the road, and the scarabs come for anyone."
-  ]
- },
- {
-  "id": "dlg_sol_dunes_scout",
-  "npc_id": "npc_sol_dunes_scout",
-  "lines": [
-   "Sandcoils bask on the crests and won't bite unless you start it.",
-   "Jackals at the oasis hunt as a pack. More Sandcoils sun themselves on the glass under the mesa."
-  ]
- },
- {
-  "id": "dlg_sol_verge_scout",
-  "npc_id": "npc_sol_verge_scout",
-  "lines": [
-   "The caravanserai is where three roads meet. Nobody's traded there in years.",
-   "Kites shoot from the heights. Pull them round the walls into reach."
-  ]
- },
- {
-  "id": "dlg_sol_flats_scout",
-  "npc_id": "npc_sol_flats_scout",
-  "lines": [
-   "Lightning fused this whole plain to glass. The Sentries still walk their old lines on it.",
-   "Basilisks call each other. Fight them one pack at a time."
-  ]
- },
- {
-  "id": "dlg_sol_dial_scout",
-  "npc_id": "npc_sol_dial_scout",
-  "lines": [
-   "The Dial still keeps Aethrion time. The Acolytes keep the Wardens running.",
-   "Kill the Acolytes first, or the Wardens just keep standing up."
-  ]
- },
- {
-  "id": "dlg_sol_dial_medic",
-  "npc_id": "npc_sol_dial_medic",
-  "lines": [
-   "Rest in the shade of the tent. The Dial's stone holds the heat all night.",
-   "The graveyard south of here is quieter if you need to catch your breath."
-  ]
- },
- {
-  "id": "dlg_sol_aqueduct_scout",
-  "npc_id": "npc_sol_aqueduct_scout",
-  "lines": [
-   "The canal's the last running water for leagues. The Striders live on it.",
-   "Herd them along the channel walls before they scatter. They skate the sluices and the cistern too."
-  ]
- },
- {
-  "id": "dlg_sol_causeway_scout",
-  "npc_id": "npc_sol_causeway_scout",
-  "lines": [
-   "The causeway runs to the Vault. The surveyors who sealed it never left.",
-   "Clear the Revenants and bring down two Colossi, and the Guild will trust you with the Key Prism."
-  ]
- },
- {
-  "id": "dlg_sol_vault_gatekeeper",
-  "npc_id": "npc_sol_vault_gatekeeper",
-  "lines": [
-   "Key Prism only. Guild orders, and the door's orders too.",
-   "The Sovereign sits under the heliostat, past the foundry. Shut it down."
   ]
  },
  {
@@ -400,11 +236,34 @@
   ]
  },
  {
-  "id": "dlg_tha_guild_registrar",
-  "npc_id": "npc_tha_guild_registrar",
+  "id": "dlg_sol_saffron_wastes_scout",
+  "npc_id": "npc_sol_saffron_wastes_scout",
   "lines": [
-   "Merrow chapter of the Wayfarer Guild. Out here the sea took the Aethrion machines, and the sea gives them back broken.",
-   "Start on Saltwind Shore through the East Gate. The Tidehoppers will show you how thick the packs run in Thalassia."
+   "Saffron Wastes runs from Lv 41 by this camp to Lv 50 in the east.",
+   "Warden Causeway (Lv 42-42): Sun Warden, Polyp Spitter. Canal Shallows (Lv 44-44): Canal Strider, Kelp Tender. Frost Seep (Lv 45-47): Brine Automaton, Frost Mite, Dust Revenant. Colossus Sands (Lv 48-49): Rimehare, Sand-buried Colossus. Prism Reach (Lv 49-50): Hullborer, Prism Wisp."
+  ]
+ },
+ {
+  "id": "dlg_sol_saffron_wastes_medic",
+  "npc_id": "npc_sol_saffron_wastes_medic",
+  "lines": [
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
+  ]
+ },
+ {
+  "id": "dlg_sol_saffron_wastes_transit",
+  "npc_id": "npc_sol_saffron_wastes_transit",
+  "lines": [
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
+  ]
+ },
+ {
+  "id": "dlg_sol_saffron_wastes_post",
+  "npc_id": "npc_sol_saffron_wastes_post",
+  "lines": [
+   "East is Pearl Coast, Lv 51 and up.",
+   "I can send you back to Avelorn."
   ]
  },
  {
@@ -416,22 +275,6 @@
   ]
  },
  {
-  "id": "dlg_tha_healer",
-  "npc_id": "npc_tha_healer",
-  "lines": [
-   "Salt in a wound stings less than a Polyp barb. Hold still.",
-   "If you're heading for the reef, bring more tonics than you think you need."
-  ]
- },
- {
-  "id": "dlg_tha_teleporter",
-  "npc_id": "npc_tha_teleporter",
-  "lines": [
-   "The lattice runs between every camp on the islands. The tide doesn't bother it.",
-   "Duskhar and Vaelspire are further, and cost more. Crystal charge isn't cheap out here."
-  ]
- },
- {
   "id": "dlg_tha_craftsman",
   "npc_id": "npc_tha_craftsman",
   "lines": [
@@ -440,107 +283,34 @@
   ]
  },
  {
-  "id": "dlg_tha_east_gate_guard",
-  "npc_id": "npc_tha_east_gate_guard",
+  "id": "dlg_tha_pearl_coast_scout",
+  "npc_id": "npc_tha_pearl_coast_scout",
   "lines": [
-   "East Gate. Saltwind Shore is past the dunes: hoppers at the tidepools, gulls on the cliffs.",
-   "The crabs on the wrack line bite back. Don't wander into them looking up at the gulls."
+   "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
+   "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
   ]
  },
  {
-  "id": "dlg_tha_harbourmaster",
-  "npc_id": "npc_tha_harbourmaster",
+  "id": "dlg_tha_pearl_coast_medic",
+  "npc_id": "npc_tha_pearl_coast_medic",
   "lines": [
-   "Ferry to Tidewheel Bay leaves from the end of the pier. Walk on, the pilot knows the way.",
-   "The bay's pumps still run, and so do the automatons that maintain them. Kelp tenders in the shallows, too."
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
   ]
  },
  {
-  "id": "dlg_tha_saltwind_scout",
-  "npc_id": "npc_tha_saltwind_scout",
+  "id": "dlg_tha_pearl_coast_transit",
+  "npc_id": "npc_tha_pearl_coast_transit",
   "lines": [
-   "Tidehoppers won't trouble you. The Gullwings will, once you're under the cliffs.",
-   "The reef path is past the east camp. Coral Reach starts where the sand turns pink."
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
   ]
  },
  {
-  "id": "dlg_tha_coral_reach_scout",
-  "npc_id": "npc_tha_coral_reach_scout",
+  "id": "dlg_tha_pearl_coast_post",
+  "npc_id": "npc_tha_pearl_coast_post",
   "lines": [
-   "Stay on the boardwalks where you can; the channel runs deep in the middle.",
-   "Spitters behind the coral heads will pick you apart. Draw them round to you."
-  ]
- },
- {
-  "id": "dlg_tha_tidewheel_scout",
-  "npc_id": "npc_tha_tidewheel_scout",
-  "lines": [
-   "Those wheels have turned for a thousand years and the automatons won't let anyone stop them.",
-   "Kill the kelp tenders first. They knit the others back together."
-  ]
- },
- {
-  "id": "dlg_tha_tidewheel_medic",
-  "npc_id": "npc_tha_tidewheel_medic",
-  "lines": [
-   "Off the ferry and straight into the kelp? Sit, let me look at you.",
-   "The bay air's good for you. The pumps' brine spray isn't."
-  ]
- },
- {
-  "id": "dlg_tha_wreck_shoal_scout",
-  "npc_id": "npc_tha_wreck_shoal_scout",
-  "lines": [
-   "Every hull out there is full of borers. Hit one and the whole wreck comes out.",
-   "The freighter's no better. The borers have eaten clean through to the cargo hold."
-  ]
- },
- {
-  "id": "dlg_tha_pearl_flats_scout",
-  "npc_id": "npc_tha_pearl_flats_scout",
-  "lines": [
-   "The skates run when you hurt them. Come at them from the open mud and they'll pile up against the pools.",
-   "That mast still pings something under the sea. The guardians around it don't like visitors."
-  ]
- },
- {
-  "id": "dlg_tha_stormbreak_scout",
-  "npc_id": "npc_tha_stormbreak_scout",
-  "lines": [
-   "Rays ride the storm round the masts. When the wind turns, so do they.",
-   "The turtles behind the breakwater move as a herd. Take them all or none."
-  ]
- },
- {
-  "id": "dlg_tha_stormbreak_medic",
-  "npc_id": "npc_tha_stormbreak_medic",
-  "lines": [
-   "The lightning out here isn't natural. It comes up from the relay.",
-   "Rest before you go to the hatch. There's no medic down there."
-  ]
- },
- {
-  "id": "dlg_tha_relay_hatch_keeper",
-  "npc_id": "npc_tha_relay_hatch_keeper",
-  "lines": [
-   "This hatch goes down to the Drowned Relay. The drones down there swarm the halls when the pumps surge.",
-   "Something below is still sending. If you can stop it, the machines up here might calm."
-  ]
- },
- {
-  "id": "dlg_tha_relay_diver",
-  "npc_id": "npc_tha_relay_diver",
-  "lines": [
-   "Going up? I can take you to the headland or all the way back to Merrow.",
-   "Mind the gallery. The jellies shield the drones."
-  ]
- },
- {
-  "id": "dlg_cry_guild_registrar",
-  "npc_id": "npc_cry_guild_registrar",
-  "lines": [
-   "Vaelspire chapter. The researchers here built half of what's trying to kill you out there, and they'd like it back in one piece.",
-   "Start at Frostline through the West Gate. The mites on the thaw strip are harmless; learn the cold on them."
+   "East is Frostfire Divide, Lv 61 and up.",
+   "I can send you back to Avelorn."
   ]
  },
  {
@@ -552,107 +322,11 @@
   ]
  },
  {
-  "id": "dlg_cry_healer",
-  "npc_id": "npc_cry_healer",
-  "lines": [
-   "Frostbite first, then the cuts. Hold your hands near the vent.",
-   "Stay out of the open snow at night. The cold does more than the monsters."
-  ]
- },
- {
-  "id": "dlg_cry_teleporter",
-  "npc_id": "npc_cry_teleporter",
-  "lines": [
-   "The lattice is clearer up here than anywhere. Cold crystals hold a charge.",
-   "Port Merrow and Cindervale cost more, but the crystals don't freeze."
-  ]
- },
- {
   "id": "dlg_cry_craftsman",
   "npc_id": "npc_cry_craftsman",
   "lines": [
    "Hare haunch, mite gel, wisp dust. The mountain feeds you if you know what to boil.",
    "I'll make rations and tonics from your materials, cheaper than the merchant."
-  ]
- },
- {
-  "id": "dlg_cry_west_gate_guard",
-  "npc_id": "npc_cry_west_gate_guard",
-  "lines": [
-   "West Gate. Frostline's past the pines: mites, hares, and lights over the lake.",
-   "The lights shoot. Don't stand on open ice while they're watching."
-  ]
- },
- {
-  "id": "dlg_cry_lift_warden",
-  "npc_id": "npc_cry_lift_warden",
-  "lines": [
-   "The cable lift goes up to Snowcoil. Hold the rail, the wind is strong at the top.",
-   "The serpents up there came out of the coils, and the gear walkers still tend the dead pumps. Nobody knows how many serpents there are."
-  ]
- },
- {
-  "id": "dlg_cry_frostline_scout",
-  "npc_id": "npc_cry_frostline_scout",
-  "lines": [
-   "Hares run when they're hurt. Drive them north into the trees and they'll pile up.",
-   "Wisps over the lake hit from far off. Use the shore."
-  ]
- },
- {
-  "id": "dlg_cry_blueglass_scout",
-  "npc_id": "npc_cry_blueglass_scout",
-  "lines": [
-   "Rams on the terraces defend each other. Hit one, fight the flock.",
-   "Mind the chasm on the saddle. It's further down than it looks."
-  ]
- },
- {
-  "id": "dlg_cry_snowcoil_scout",
-  "npc_id": "npc_cry_snowcoil_scout",
-  "lines": [
-   "Welcome to the coils. The serpents fill those trenches faster than we can clear them.",
-   "The pump yard's gear walkers are slow. Don't let them corner you anyway."
-  ]
- },
- {
-  "id": "dlg_cry_snowcoil_medic",
-  "npc_id": "npc_cry_snowcoil_medic",
-  "lines": [
-   "Off the lift and into the cold. Let me warm those hands.",
-   "The steam vents are warm, but don't drink from them."
-  ]
- },
- {
-  "id": "dlg_cry_prism_pass_scout",
-  "npc_id": "npc_cry_prism_pass_scout",
-  "lines": [
-   "The plough mechs still run the road. Two of them, and they don't stop for anyone.",
-   "The vault doors at the east end are sealed. The keepers would like to keep it that way."
-  ]
- },
- {
-  "id": "dlg_cry_mirror_ice_scout",
-  "npc_id": "npc_cry_mirror_ice_scout",
-  "lines": [
-   "The reflections step out of the ice. Kill them first; they mend everything around them.",
-   "The big grazers on the south shore won't touch you unless you start it."
-  ]
- },
- {
-  "id": "dlg_cry_white_circuit_scout",
-  "npc_id": "npc_cry_white_circuit_scout",
-  "lines": [
-   "The ring conduit still carries power to the Archive. The sentries guard every pylon.",
-   "Specters are seeping out of the breach by the door. That's new."
-  ]
- },
- {
-  "id": "dlg_cry_archive_door_warden",
-  "npc_id": "npc_cry_archive_door_warden",
-  "lines": [
-   "This is the Archive door. Beyond it, the Curator keeps the records, and freezes anything that disturbs them.",
-   "If you mean to go in, go ready: the lancers inside shoot far. The lift keeper below can bring you back."
   ]
  },
  {
@@ -664,11 +338,34 @@
   ]
  },
  {
-  "id": "dlg_emb_guild_registrar",
-  "npc_id": "npc_emb_guild_registrar",
+  "id": "dlg_cry_frostfire_divide_scout",
+  "npc_id": "npc_cry_frostfire_divide_scout",
   "lines": [
-   "Cindervale chapter of the Wayfarer Guild. Everything here was built to make iron, and most of it still thinks that's its job.",
-   "Start on the Ashfield flats past the East Bridge. Come back when the herds have thinned."
+   "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
+   "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
+  ]
+ },
+ {
+  "id": "dlg_cry_frostfire_divide_medic",
+  "npc_id": "npc_cry_frostfire_divide_medic",
+  "lines": [
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
+  ]
+ },
+ {
+  "id": "dlg_cry_frostfire_divide_transit",
+  "npc_id": "npc_cry_frostfire_divide_transit",
+  "lines": [
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
+  ]
+ },
+ {
+  "id": "dlg_cry_frostfire_divide_post",
+  "npc_id": "npc_cry_frostfire_divide_post",
+  "lines": [
+   "East is Cinder Expanse, Lv 71 and up.",
+   "I can send you back to Avelorn."
   ]
  },
  {
@@ -680,22 +377,6 @@
   ]
  },
  {
-  "id": "dlg_emb_healer",
-  "npc_id": "npc_emb_healer",
-  "lines": [
-   "Burns, mostly. Hold still, the salve stings before it cools.",
-   "Drink water out there. More Wayfarers fall to the heat than to the imps."
-  ]
- },
- {
-  "id": "dlg_emb_teleporter",
-  "npc_id": "npc_emb_teleporter",
-  "lines": [
-   "The lattice runs hot here, but it runs. Every camp in Emberfall, or Vaelspire and Umbracrest for the long haul.",
-   "Umbracrest's beyond the Crucible. Nobody walks there twice."
-  ]
- },
- {
   "id": "dlg_emb_craftsman",
   "npc_id": "npc_emb_craftsman",
   "lines": [
@@ -704,99 +385,34 @@
   ]
  },
  {
-  "id": "dlg_emb_east_gate_guard",
-  "npc_id": "npc_emb_east_gate_guard",
+  "id": "dlg_emb_cinder_expanse_scout",
+  "npc_id": "npc_emb_cinder_expanse_scout",
   "lines": [
-   "East Bridge. Ashfield's beyond: grazers on the flats and the ridge, toads in the slag pools and round the old heat-sink.",
-   "If the bridge rattles, something big is crossing it. Step aside."
+   "Cinder Expanse runs from Lv 71 by this camp to Lv 80 in the east.",
+   "Tender Yards (Lv 71-71): Crucible Tender. Skink Flow (Lv 74-74): Vent Skink. Spitter Vents (Lv 75-76): Magma Spitter, Null Wisp. Knight's Road (Lv 77-77): Furnace Knight, Gutter Lurk. Rivet Moraine (Lv 79-80): Rivet Scrapling, Shade Carrier, Nullbloom."
   ]
  },
  {
-  "id": "dlg_emb_north_gate_guard",
-  "npc_id": "npc_emb_north_gate_guard",
+  "id": "dlg_emb_cinder_expanse_medic",
+  "npc_id": "npc_emb_cinder_expanse_medic",
   "lines": [
-   "North Bridge, start of the old causeway. Forge country: hounds in the kennels, brass tenders in the cold forges, and the hounds still think they're on duty.",
-   "Hounds are faster than you. Don't run; stand and swing."
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
   ]
  },
  {
-  "id": "dlg_emb_ashfield_scout",
-  "npc_id": "npc_emb_ashfield_scout",
+  "id": "dlg_emb_cinder_expanse_transit",
+  "npc_id": "npc_emb_cinder_expanse_transit",
   "lines": [
-   "Ashcrawlers graze the flats and won't touch you. The toads in the slag pools will, and they bring their friends.",
-   "More toads squat by the heat-sink east of the crossroads. Hit one and the rest come."
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
   ]
  },
  {
-  "id": "dlg_emb_cinder_track_scout",
-  "npc_id": "npc_emb_cinder_track_scout",
+  "id": "dlg_emb_cinder_expanse_post",
+  "npc_id": "npc_emb_cinder_expanse_post",
   "lines": [
-   "The haul road crosses the lava stream once, on the iron bridge. Imps on both banks, and every one of them bites.",
-   "Imps fill the hollows west of the bridge, the scree under the falls and the old rail trestles."
-  ]
- },
- {
-  "id": "dlg_emb_forge_scout",
-  "npc_id": "npc_emb_forge_scout",
-  "lines": [
-   "The causeway runs over the Great Channel. Kennels to the east, cold forges to the west.",
-   "The brass spiders weld the hounds back together. Kill the spiders first."
-  ]
- },
- {
-  "id": "dlg_emb_magma_scout",
-  "npc_id": "npc_emb_magma_scout",
-  "lines": [
-   "Skinks ring the vent pool; pull them round it and they bunch up nicely.",
-   "The worms on the fissure spit from across the lava. Make them come to you."
-  ]
- },
- {
-  "id": "dlg_emb_ironfall_scout",
-  "npc_id": "npc_emb_ironfall_scout",
-  "lines": [
-   "Two spans left over the river: the High Span on the road, the Lower Span south.",
-   "Scraplings ring like bells when you hit one. Then all of them come."
-  ]
- },
- {
-  "id": "dlg_emb_crucible_scout",
-  "npc_id": "npc_emb_crucible_scout",
-  "lines": [
-   "The ring road goes round the lake. Don't take a short cut across it.",
-   "Wraiths in the channels east, Brutes on the scrap heap west and up in the mould yard."
-  ]
- },
- {
-  "id": "dlg_emb_crucible_medic",
-  "npc_id": "npc_emb_crucible_medic",
-  "lines": [
-   "Everything down there answers to something in the Zero Core. The foundry has a mind, and it's awake.",
-   "Clear the pour channels and the yard, then go down through the hatch."
-  ]
- },
- {
-  "id": "dlg_emb_furnace_gatekeeper",
-  "npc_id": "npc_emb_furnace_gatekeeper",
-  "lines": [
-   "Furnace Zero's below. The lift still works; the heat hits you at the bottom.",
-   "The core's at the far end, past the pens or through the stoker halls."
-  ]
- },
- {
-  "id": "dlg_emb_furnace_lift",
-  "npc_id": "npc_emb_furnace_lift",
-  "lines": [
-   "Going up? Cindervale or the Crucible rim.",
-   "Keep your hands off the rails; they're hotter than they look."
-  ]
- },
- {
-  "id": "dlg_noc_guild_registrar",
-  "npc_id": "npc_noc_guild_registrar",
-  "lines": [
-   "Umbracrest chapter, the last one on the road. Everything past these walls belongs to the Lattice now.",
-   "Start in the Dusk Verge, through the South Gate. Put out the wisps before they drink our last lamps."
+   "East is Veil Rift, Lv 81 and up.",
+   "I can send you back to Avelorn."
   ]
  },
  {
@@ -808,22 +424,6 @@
   ]
  },
  {
-  "id": "dlg_noc_healer",
-  "npc_id": "npc_noc_healer",
-  "lines": [
-   "Shadow burns don't bleed; they go cold. Sit by the lamp while I work.",
-   "If you start seeing violet at the edge of your eyes, come straight back."
-  ]
- },
- {
-  "id": "dlg_noc_teleporter",
-  "npc_id": "npc_noc_teleporter",
-  "lines": [
-   "The lattice still carries us, for now. Every camp out there, or Cindervale if you need the heat.",
-   "Don't ask me who else is listening on the line."
-  ]
- },
- {
   "id": "dlg_noc_craftsman",
   "npc_id": "npc_noc_craftsman",
   "lines": [
@@ -832,91 +432,73 @@
   ]
  },
  {
-  "id": "dlg_noc_south_gate_guard",
-  "npc_id": "npc_noc_south_gate_guard",
-  "lines": [
-   "South Gate. The Verge is all wisps and lurks; the wisps leave you be, but one squealing lurk brings the whole street.",
-   "If the lamps out there go dark, run toward the gate."
-  ]
- },
- {
-  "id": "dlg_noc_east_gate_guard",
-  "npc_id": "npc_noc_east_gate_guard",
-  "lines": [
-   "East Station. No trains have run since the Sundering, but the yards are busy all the same.",
-   "Mites in the sidings, drones on the gantries. Mind both."
-  ]
- },
- {
-  "id": "dlg_noc_dusk_scout",
-  "npc_id": "npc_noc_dusk_scout",
-  "lines": [
-   "Wisps drift on the boulevard and won't bother you. Lurks under the overpass will, all at once.",
-   "Mind the square under the obelisk: lurks there drag the wisps into the fight."
-  ]
- },
- {
-  "id": "dlg_noc_nullgarden_scout",
-  "npc_id": "npc_noc_nullgarden_scout",
-  "lines": [
-   "The flowers drink colour. Burn the beds first, or they shade everything fighting near them.",
-   "The glasshouses south are thick with blooms, and haulers circle the dead pond."
-  ]
- },
- {
-  "id": "dlg_noc_tracks_scout",
-  "npc_id": "npc_noc_tracks_scout",
-  "lines": [
-   "Coupler crews work the sidings; hit one and the whole yard comes.",
-   "Drones on the gantries can't shoot through the carriages. Use that."
-  ]
- },
- {
-  "id": "dlg_noc_rift_scout",
-  "npc_id": "npc_noc_rift_scout",
-  "lines": [
-   "Two ways across the tear: the bridge in the middle, the planks at the west end.",
-   "Riftlings come out of the edge faster than you'd like. Pull them away from it."
-  ]
- },
- {
-  "id": "dlg_noc_array_scout",
-  "npc_id": "npc_noc_array_scout",
-  "lines": [
-   "The Array still listens to the Lattice. Sentinels ring the great dish and walk the lines north of here.",
-   "The birds scatter when you hit them. Catch the whole flock in one swing."
-  ]
- },
- {
-  "id": "dlg_noc_gate_scout",
-  "npc_id": "npc_noc_gate_scout",
-  "lines": [
-   "Every lattice line in the city meets on that plaza. So do the glyphs.",
-   "Cut a Keysigil from the Executors in the court; the Warden won't open the Descent without one."
-  ]
- },
- {
-  "id": "dlg_noc_gate_medic",
-  "npc_id": "npc_noc_gate_medic",
-  "lines": [
-   "Whatever is in the Heart runs all of this. Every drone, every glyph.",
-   "Bring me the Keysigil, rest, and then go down. I'll be here when you come back up."
-  ]
- },
- {
-  "id": "dlg_noc_heart_warden",
-  "npc_id": "npc_noc_heart_warden",
-  "lines": [
-   "The Descent opens for the Keysigil and nothing else.",
-   "The Sovereign's chamber lies past the loom or through the spindle hall."
-  ]
- },
- {
   "id": "dlg_noc_heart_lift",
   "npc_id": "npc_noc_heart_lift",
   "lines": [
    "Back up? Umbracrest or the Gate.",
    "Don't look at the lattice too long. It looks back."
+  ]
+ },
+ {
+  "id": "dlg_noc_veil_rift_scout",
+  "npc_id": "npc_noc_veil_rift_scout",
+  "lines": [
+   "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
+   "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
+  ]
+ },
+ {
+  "id": "dlg_noc_veil_rift_medic",
+  "npc_id": "npc_noc_veil_rift_medic",
+  "lines": [
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
+  ]
+ },
+ {
+  "id": "dlg_noc_veil_rift_transit",
+  "npc_id": "npc_noc_veil_rift_transit",
+  "lines": [
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
+  ]
+ },
+ {
+  "id": "dlg_noc_veil_rift_post",
+  "npc_id": "npc_noc_veil_rift_post",
+  "lines": [
+   "East is Meridian Gate, Lv 91 and up.",
+   "I can send you back to Avelorn."
+  ]
+ },
+ {
+  "id": "dlg_noc_meridian_gate_scout",
+  "npc_id": "npc_noc_meridian_gate_scout",
+  "lines": [
+   "Meridian Gate runs from Lv 91 by this camp to Lv 99 in the east.",
+   "Sentinel Colonnade (Lv 91-91): Array Sentinel. Glyph Plaza (Lv 92-95): Glyph Swarm, Meridian Executor. Lattice Verge (Lv 95-95): Glyph Swarm."
+  ]
+ },
+ {
+  "id": "dlg_noc_meridian_gate_medic",
+  "npc_id": "npc_noc_meridian_gate_medic",
+  "lines": [
+   "Sit a while. Nothing follows you into the camp.",
+   "Drag them as far as you like, but come back breathing."
+  ]
+ },
+ {
+  "id": "dlg_noc_meridian_gate_transit",
+  "npc_id": "npc_noc_meridian_gate_transit",
+  "lines": [
+   "Back to Avelorn whenever you want it. The ride is on the Guild."
+  ]
+ },
+ {
+  "id": "dlg_noc_meridian_gate_post",
+  "npc_id": "npc_noc_meridian_gate_post",
+  "lines": [
+   "This is as far as the road goes.",
+   "I can send you back to Avelorn."
   ]
  }
 ]

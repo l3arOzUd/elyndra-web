@@ -10,11 +10,11 @@
  "loot_expire_sec": 90,
  "respawn_town_by_region": {
   "lum": "lum_town_01",
-  "ver": "ver_town_01",
-  "sol": "sol_town_01",
-  "tha": "tha_town_01",
-  "cry": "cry_town_01",
-  "emb": "emb_town_01",
-  "noc": "noc_town_01"
+  "ver": "lum_town_01",
+  "sol": "lum_town_01",
+  "tha": "lum_town_01",
+  "cry": "lum_town_01",
+  "emb": "lum_town_01",
+  "noc": "lum_town_01"
  }
 }

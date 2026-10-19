@@ -10,8 +10,8 @@
    7
   ],
   "spawn_point": [
-   9,
-   63
+   20,
+   128
   ],
   "pair_id": "warp_0002",
   "requirements": [],
@@ -23,7 +23,7 @@
   "to_map": "lum_town_01",
   "trigger_rect": [
    0,
-   60,
+   125,
    3,
    7
   ],
@@ -37,244 +37,352 @@
  },
  {
   "id": "warp_0003",
-  "from_map": "lum_town_01",
-  "to_map": "lum_fld_03",
-  "trigger_rect": [
-   57,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   63,
-   117
-  ],
-  "pair_id": "warp_0004",
-  "requirements": [],
-  "label": "Avelorn North Gate ⇄ Whispergrass"
- },
- {
-  "id": "warp_0004",
-  "from_map": "lum_fld_03",
-  "to_map": "lum_town_01",
-  "trigger_rect": [
-   60,
-   125,
-   7,
-   3
-  ],
-  "spawn_point": [
-   60,
-   9
-  ],
-  "pair_id": "warp_0003",
-  "requirements": [],
-  "label": "Avelorn North Gate ⇄ Whispergrass"
- },
- {
-  "id": "warp_0005",
   "from_map": "lum_fld_01",
   "to_map": "lum_fld_02",
   "trigger_rect": [
+   253,
    125,
-   41,
    3,
    7
   ],
   "spawn_point": [
-   9,
-   48
+   20,
+   128
   ],
-  "pair_id": "warp_0006",
+  "pair_id": "warp_0004",
   "requirements": [],
-  "label": "Dawnmeadow ⇄ Amber Trail"
+  "label": "Dawnmeadow ⇄ Moonbrook Vale"
  },
  {
-  "id": "warp_0006",
+  "id": "warp_0004",
   "from_map": "lum_fld_02",
   "to_map": "lum_fld_01",
   "trigger_rect": [
    0,
-   45,
+   125,
    3,
    7
   ],
   "spawn_point": [
-   117,
-   44
+   238,
+   132
+  ],
+  "pair_id": "warp_0003",
+  "requirements": [],
+  "label": "Dawnmeadow ⇄ Moonbrook Vale"
+ },
+ {
+  "id": "warp_0005",
+  "from_map": "lum_fld_02",
+  "to_map": "ver_fld_01",
+  "trigger_rect": [
+   253,
+   125,
+   3,
+   7
+  ],
+  "spawn_point": [
+   20,
+   128
+  ],
+  "pair_id": "warp_0006",
+  "requirements": [],
+  "label": "Moonbrook Vale ⇄ Graftwood Wilds"
+ },
+ {
+  "id": "warp_0006",
+  "from_map": "ver_fld_01",
+  "to_map": "lum_fld_02",
+  "trigger_rect": [
+   0,
+   125,
+   3,
+   7
+  ],
+  "spawn_point": [
+   238,
+   132
   ],
   "pair_id": "warp_0005",
   "requirements": [],
-  "label": "Dawnmeadow ⇄ Amber Trail"
+  "label": "Moonbrook Vale ⇄ Graftwood Wilds"
  },
  {
   "id": "warp_0007",
-  "from_map": "lum_fld_02",
-  "to_map": "lum_fld_04",
+  "from_map": "ver_fld_01",
+  "to_map": "ver_fld_02",
   "trigger_rect": [
-   146,
-   0,
-   7,
-   3
+   253,
+   125,
+   3,
+   7
   ],
   "spawn_point": [
-   73,
-   101
+   20,
+   128
   ],
   "pair_id": "warp_0008",
   "requirements": [],
-  "label": "Amber Trail ⇄ Old Windmill"
+  "label": "Graftwood Wilds ⇄ Elderroot Expanse"
  },
  {
   "id": "warp_0008",
-  "from_map": "lum_fld_04",
-  "to_map": "lum_fld_02",
+  "from_map": "ver_fld_02",
+  "to_map": "ver_fld_01",
   "trigger_rect": [
-   70,
-   109,
-   7,
-   3
+   0,
+   125,
+   3,
+   7
   ],
   "spawn_point": [
-   149,
-   10
+   238,
+   132
   ],
   "pair_id": "warp_0007",
   "requirements": [],
-  "label": "Amber Trail ⇄ Old Windmill"
+  "label": "Graftwood Wilds ⇄ Elderroot Expanse"
  },
  {
   "id": "warp_0009",
-  "from_map": "lum_fld_03",
-  "to_map": "lum_fld_04",
+  "from_map": "ver_fld_02",
+  "to_map": "sol_fld_01",
   "trigger_rect": [
+   253,
    125,
-   40,
    3,
    7
   ],
   "spawn_point": [
-   9,
-   55
+   20,
+   128
   ],
   "pair_id": "warp_0010",
   "requirements": [],
-  "label": "Whispergrass ⇄ Old Windmill"
+  "label": "Elderroot Expanse ⇄ Saffron Wastes"
  },
  {
   "id": "warp_0010",
-  "from_map": "lum_fld_04",
-  "to_map": "lum_fld_03",
+  "from_map": "sol_fld_01",
+  "to_map": "ver_fld_02",
   "trigger_rect": [
    0,
-   52,
+   125,
    3,
    7
   ],
   "spawn_point": [
-   117,
-   43
+   238,
+   132
   ],
   "pair_id": "warp_0009",
   "requirements": [],
-  "label": "Whispergrass ⇄ Old Windmill"
+  "label": "Elderroot Expanse ⇄ Saffron Wastes"
  },
  {
   "id": "warp_0011",
-  "from_map": "lum_fld_04",
-  "to_map": "lum_fld_05",
+  "from_map": "sol_fld_01",
+  "to_map": "tha_fld_01",
   "trigger_rect": [
-   141,
-   30,
+   253,
+   125,
    3,
    7
   ],
   "spawn_point": [
-   9,
-   33
+   20,
+   128
   ],
   "pair_id": "warp_0012",
   "requirements": [],
-  "label": "Old Windmill ⇄ Moonbrook"
+  "label": "Saffron Wastes ⇄ Pearl Coast"
  },
  {
   "id": "warp_0012",
-  "from_map": "lum_fld_05",
-  "to_map": "lum_fld_04",
+  "from_map": "tha_fld_01",
+  "to_map": "sol_fld_01",
   "trigger_rect": [
    0,
-   30,
+   125,
    3,
    7
   ],
   "spawn_point": [
-   133,
-   33
+   238,
+   132
   ],
   "pair_id": "warp_0011",
   "requirements": [],
-  "label": "Old Windmill ⇄ Moonbrook"
+  "label": "Saffron Wastes ⇄ Pearl Coast"
  },
  {
   "id": "warp_0013",
-  "from_map": "lum_fld_05",
-  "to_map": "lum_fld_06",
+  "from_map": "tha_fld_01",
+  "to_map": "cry_fld_01",
   "trigger_rect": [
-   54,
-   141,
-   7,
-   3
+   253,
+   125,
+   3,
+   7
   ],
   "spawn_point": [
-   63,
-   9
+   20,
+   128
   ],
   "pair_id": "warp_0014",
   "requirements": [],
-  "label": "Moonbrook ⇄ Broken Orchard"
+  "label": "Pearl Coast ⇄ Frostfire Divide"
  },
  {
   "id": "warp_0014",
-  "from_map": "lum_fld_06",
-  "to_map": "lum_fld_05",
+  "from_map": "cry_fld_01",
+  "to_map": "tha_fld_01",
   "trigger_rect": [
-   60,
    0,
-   7,
-   3
+   125,
+   3,
+   7
   ],
   "spawn_point": [
-   57,
-   133
+   238,
+   132
   ],
   "pair_id": "warp_0013",
   "requirements": [],
-  "label": "Moonbrook ⇄ Broken Orchard"
+  "label": "Pearl Coast ⇄ Frostfire Divide"
  },
  {
   "id": "warp_0015",
-  "from_map": "lum_fld_06",
-  "to_map": "lum_dun_01",
+  "from_map": "cry_fld_01",
+  "to_map": "emb_fld_01",
   "trigger_rect": [
-   128,
-   96,
+   253,
+   125,
    3,
    7
+  ],
+  "spawn_point": [
+   20,
+   128
+  ],
+  "pair_id": "warp_0016",
+  "requirements": [],
+  "label": "Frostfire Divide ⇄ Cinder Expanse"
+ },
+ {
+  "id": "warp_0016",
+  "from_map": "emb_fld_01",
+  "to_map": "cry_fld_01",
+  "trigger_rect": [
+   0,
+   125,
+   3,
+   7
+  ],
+  "spawn_point": [
+   238,
+   132
+  ],
+  "pair_id": "warp_0015",
+  "requirements": [],
+  "label": "Frostfire Divide ⇄ Cinder Expanse"
+ },
+ {
+  "id": "warp_0017",
+  "from_map": "emb_fld_01",
+  "to_map": "noc_fld_01",
+  "trigger_rect": [
+   253,
+   125,
+   3,
+   7
+  ],
+  "spawn_point": [
+   20,
+   128
+  ],
+  "pair_id": "warp_0018",
+  "requirements": [],
+  "label": "Cinder Expanse ⇄ Veil Rift"
+ },
+ {
+  "id": "warp_0018",
+  "from_map": "noc_fld_01",
+  "to_map": "emb_fld_01",
+  "trigger_rect": [
+   0,
+   125,
+   3,
+   7
+  ],
+  "spawn_point": [
+   238,
+   132
+  ],
+  "pair_id": "warp_0017",
+  "requirements": [],
+  "label": "Cinder Expanse ⇄ Veil Rift"
+ },
+ {
+  "id": "warp_0019",
+  "from_map": "noc_fld_01",
+  "to_map": "noc_fld_02",
+  "trigger_rect": [
+   253,
+   125,
+   3,
+   7
+  ],
+  "spawn_point": [
+   20,
+   128
+  ],
+  "pair_id": "warp_0020",
+  "requirements": [],
+  "label": "Veil Rift ⇄ Meridian Gate"
+ },
+ {
+  "id": "warp_0020",
+  "from_map": "noc_fld_02",
+  "to_map": "noc_fld_01",
+  "trigger_rect": [
+   0,
+   125,
+   3,
+   7
+  ],
+  "spawn_point": [
+   238,
+   132
+  ],
+  "pair_id": "warp_0019",
+  "requirements": [],
+  "label": "Veil Rift ⇄ Meridian Gate"
+ },
+ {
+  "id": "warp_0021",
+  "from_map": "lum_fld_02",
+  "to_map": "lum_dun_01",
+  "trigger_rect": [
+   236,
+   96,
+   6,
+   4
   ],
   "spawn_point": [
    14,
    60
   ],
-  "pair_id": "warp_0016",
+  "pair_id": "warp_0022",
   "requirements": [
    "item:itm_0083"
   ],
-  "label": "Broken Orchard ⇄ Hollowroot Cavern"
+  "label": "Moonbrook Vale ⇄ Hollowroot Cavern"
  },
  {
-  "id": "warp_0016",
+  "id": "warp_0022",
   "from_map": "lum_dun_01",
-  "to_map": "lum_fld_06",
+  "to_map": "lum_fld_02",
   "trigger_rect": [
    3,
    57,
@@ -282,323 +390,35 @@
    6
   ],
   "spawn_point": [
-   118,
-   99
-  ],
-  "pair_id": "warp_0015",
-  "requirements": [],
-  "label": "Broken Orchard ⇄ Hollowroot Cavern"
- },
- {
-  "id": "warp_0017",
-  "from_map": "ver_town_01",
-  "to_map": "ver_fld_01",
-  "trigger_rect": [
-   133,
-   63,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   55
-  ],
-  "pair_id": "warp_0018",
-  "requirements": [],
-  "label": "Sylvara East Gate ⇄ Fernreach"
- },
- {
-  "id": "warp_0018",
-  "from_map": "ver_fld_01",
-  "to_map": "ver_town_01",
-  "trigger_rect": [
-   0,
-   52,
-   3,
-   7
-  ],
-  "spawn_point": [
-   124,
-   66
-  ],
-  "pair_id": "warp_0017",
-  "requirements": [],
-  "label": "Sylvara East Gate ⇄ Fernreach"
- },
- {
-  "id": "warp_0019",
-  "from_map": "ver_town_01",
-  "to_map": "ver_fld_02",
-  "trigger_rect": [
-   71,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   59,
-   125
-  ],
-  "pair_id": "warp_0020",
-  "requirements": [],
-  "label": "Sylvara North Gate ⇄ Mossbridge"
- },
- {
-  "id": "warp_0020",
-  "from_map": "ver_fld_02",
-  "to_map": "ver_town_01",
-  "trigger_rect": [
-   56,
-   133,
-   7,
-   3
-  ],
-  "spawn_point": [
-   73,
-   10
-  ],
-  "pair_id": "warp_0019",
-  "requirements": [],
-  "label": "Sylvara North Gate ⇄ Mossbridge"
- },
- {
-  "id": "warp_0021",
-  "from_map": "ver_fld_01",
-  "to_map": "ver_fld_02",
-  "trigger_rect": [
-   100,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   109,
-   45
-  ],
-  "pair_id": "warp_0022",
-  "requirements": [],
-  "label": "Fernreach ⇄ Mossbridge"
- },
- {
-  "id": "warp_0022",
-  "from_map": "ver_fld_02",
-  "to_map": "ver_fld_01",
-  "trigger_rect": [
-   117,
-   41,
-   3,
-   7
-  ],
-  "spawn_point": [
-   103,
-   10
+   234,
+   122
   ],
   "pair_id": "warp_0021",
   "requirements": [],
-  "label": "Fernreach ⇄ Mossbridge"
+  "label": "Moonbrook Vale ⇄ Hollowroot Cavern"
  },
  {
   "id": "warp_0023",
   "from_map": "ver_fld_02",
-  "to_map": "ver_fld_03",
-  "trigger_rect": [
-   30,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   28,
-   93
-  ],
-  "pair_id": "warp_0024",
-  "requirements": [],
-  "label": "Mossbridge ⇄ Canopy Steps"
- },
- {
-  "id": "warp_0024",
-  "from_map": "ver_fld_03",
-  "to_map": "ver_fld_02",
-  "trigger_rect": [
-   24,
-   101,
-   7,
-   3
-  ],
-  "spawn_point": [
-   37,
-   9
-  ],
-  "pair_id": "warp_0023",
-  "requirements": [],
-  "label": "Mossbridge ⇄ Canopy Steps"
- },
- {
-  "id": "warp_0025",
-  "from_map": "ver_fld_03",
-  "to_map": "ver_fld_04",
-  "trigger_rect": [
-   149,
-   30,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   63
-  ],
-  "pair_id": "warp_0026",
-  "requirements": [],
-  "label": "Canopy Steps ⇄ Graftwood"
- },
- {
-  "id": "warp_0026",
-  "from_map": "ver_fld_04",
-  "to_map": "ver_fld_03",
-  "trigger_rect": [
-   0,
-   60,
-   3,
-   7
-  ],
-  "spawn_point": [
-   141,
-   34
-  ],
-  "pair_id": "warp_0025",
-  "requirements": [],
-  "label": "Canopy Steps ⇄ Graftwood"
- },
- {
-  "id": "warp_0027",
-  "from_map": "ver_fld_04",
-  "to_map": "ver_fld_05",
-  "trigger_rect": [
-   94,
-   137,
-   7,
-   3
-  ],
-  "spawn_point": [
-   67,
-   9
-  ],
-  "pair_id": "warp_0028",
-  "requirements": [],
-  "label": "Graftwood ⇄ Vineworks"
- },
- {
-  "id": "warp_0028",
-  "from_map": "ver_fld_05",
-  "to_map": "ver_fld_04",
-  "trigger_rect": [
-   64,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   97,
-   129
-  ],
-  "pair_id": "warp_0027",
-  "requirements": [],
-  "label": "Graftwood ⇄ Vineworks"
- },
- {
-  "id": "warp_0029",
-  "from_map": "ver_fld_05",
-  "to_map": "ver_fld_06",
-  "trigger_rect": [
-   141,
-   84,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   43
-  ],
-  "pair_id": "warp_0030",
-  "requirements": [],
-  "label": "Vineworks ⇄ Elderroot"
- },
- {
-  "id": "warp_0030",
-  "from_map": "ver_fld_06",
-  "to_map": "ver_fld_05",
-  "trigger_rect": [
-   0,
-   40,
-   3,
-   7
-  ],
-  "spawn_point": [
-   133,
-   85
-  ],
-  "pair_id": "warp_0029",
-  "requirements": [],
-  "label": "Vineworks ⇄ Elderroot"
- },
- {
-  "id": "warp_0031",
-  "from_map": "ver_fld_06",
-  "to_map": "ver_fld_07",
-  "trigger_rect": [
-   100,
-   129,
-   7,
-   3
-  ],
-  "spawn_point": [
-   43,
-   9
-  ],
-  "pair_id": "warp_0032",
-  "requirements": [],
-  "label": "Elderroot ⇄ Spore Basin"
- },
- {
-  "id": "warp_0032",
-  "from_map": "ver_fld_07",
-  "to_map": "ver_fld_06",
-  "trigger_rect": [
-   40,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   103,
-   121
-  ],
-  "pair_id": "warp_0031",
-  "requirements": [],
-  "label": "Elderroot ⇄ Spore Basin"
- },
- {
-  "id": "warp_0033",
-  "from_map": "ver_fld_07",
   "to_map": "ver_dun_01",
   "trigger_rect": [
-   133,
-   70,
-   3,
-   7
+   236,
+   96,
+   6,
+   4
   ],
   "spawn_point": [
    13,
    60
   ],
-  "pair_id": "warp_0034",
+  "pair_id": "warp_0024",
   "requirements": [],
-  "label": "Spore Basin ⇄ Heartwood Engine"
+  "label": "Elderroot Expanse ⇄ Heartwood Engine"
  },
  {
-  "id": "warp_0034",
+  "id": "warp_0024",
   "from_map": "ver_dun_01",
-  "to_map": "ver_fld_07",
+  "to_map": "ver_fld_02",
   "trigger_rect": [
    2,
    57,
@@ -606,289 +426,37 @@
    6
   ],
   "spawn_point": [
-   125,
-   73
+   234,
+   122
   ],
-  "pair_id": "warp_0033",
+  "pair_id": "warp_0023",
   "requirements": [],
-  "label": "Spore Basin ⇄ Heartwood Engine"
+  "label": "Elderroot Expanse ⇄ Heartwood Engine"
  },
  {
-  "id": "warp_0035",
-  "from_map": "sol_town_01",
-  "to_map": "sol_fld_01",
-  "trigger_rect": [
-   0,
-   69,
-   3,
-   7
-  ],
-  "spawn_point": [
-   137,
-   53
-  ],
-  "pair_id": "warp_0036",
-  "requirements": [],
-  "label": "Duskhar West Gate ⇄ Saffron Dunes"
- },
- {
-  "id": "warp_0036",
-  "from_map": "sol_fld_01",
-  "to_map": "sol_town_01",
-  "trigger_rect": [
-   145,
-   50,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   72
-  ],
-  "pair_id": "warp_0035",
-  "requirements": [],
-  "label": "Duskhar West Gate ⇄ Saffron Dunes"
- },
- {
-  "id": "warp_0037",
-  "from_map": "sol_town_01",
-  "to_map": "sol_fld_02",
-  "trigger_rect": [
-   43,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   113,
-   83
-  ],
-  "pair_id": "warp_0038",
-  "requirements": [],
-  "label": "Duskhar Caravan Gate ⇄ Caravan Verge"
- },
- {
-  "id": "warp_0038",
-  "from_map": "sol_fld_02",
-  "to_map": "sol_town_01",
-  "trigger_rect": [
-   121,
-   80,
-   3,
-   7
-  ],
-  "spawn_point": [
-   47,
-   10
-  ],
-  "pair_id": "warp_0037",
-  "requirements": [],
-  "label": "Duskhar Caravan Gate ⇄ Caravan Verge"
- },
- {
-  "id": "warp_0039",
-  "from_map": "sol_fld_01",
-  "to_map": "sol_fld_02",
-  "trigger_rect": [
-   25,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   73,
-   125
-  ],
-  "pair_id": "warp_0040",
-  "requirements": [],
-  "label": "Saffron Dunes ⇄ Caravan Verge"
- },
- {
-  "id": "warp_0040",
-  "from_map": "sol_fld_02",
-  "to_map": "sol_fld_01",
-  "trigger_rect": [
-   70,
-   133,
-   7,
-   3
-  ],
-  "spawn_point": [
-   30,
-   9
-  ],
-  "pair_id": "warp_0039",
-  "requirements": [],
-  "label": "Saffron Dunes ⇄ Caravan Verge"
- },
- {
-  "id": "warp_0041",
-  "from_map": "sol_fld_02",
-  "to_map": "sol_fld_03",
-  "trigger_rect": [
-   36,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   44,
-   89
-  ],
-  "pair_id": "warp_0042",
-  "requirements": [],
-  "label": "Caravan Verge ⇄ Glass Flats"
- },
- {
-  "id": "warp_0042",
-  "from_map": "sol_fld_03",
-  "to_map": "sol_fld_02",
-  "trigger_rect": [
-   40,
-   97,
-   7,
-   3
-  ],
-  "spawn_point": [
-   39,
-   9
-  ],
-  "pair_id": "warp_0041",
-  "requirements": [],
-  "label": "Caravan Verge ⇄ Glass Flats"
- },
- {
-  "id": "warp_0043",
-  "from_map": "sol_fld_03",
-  "to_map": "sol_fld_04",
-  "trigger_rect": [
-   157,
-   30,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   98
-  ],
-  "pair_id": "warp_0044",
-  "requirements": [],
-  "label": "Glass Flats ⇄ Sun Dial"
- },
- {
-  "id": "warp_0044",
-  "from_map": "sol_fld_04",
-  "to_map": "sol_fld_03",
-  "trigger_rect": [
-   0,
-   96,
-   3,
-   7
-  ],
-  "spawn_point": [
-   149,
-   35
-  ],
-  "pair_id": "warp_0043",
-  "requirements": [],
-  "label": "Glass Flats ⇄ Sun Dial"
- },
- {
-  "id": "warp_0045",
-  "from_map": "sol_fld_04",
-  "to_map": "sol_fld_05",
-  "trigger_rect": [
-   133,
-   24,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   34
-  ],
-  "pair_id": "warp_0046",
-  "requirements": [],
-  "label": "Sun Dial ⇄ Dust Aqueduct"
- },
- {
-  "id": "warp_0046",
-  "from_map": "sol_fld_05",
-  "to_map": "sol_fld_04",
-  "trigger_rect": [
-   0,
-   30,
-   3,
-   7
-  ],
-  "spawn_point": [
-   125,
-   29
-  ],
-  "pair_id": "warp_0045",
-  "requirements": [],
-  "label": "Sun Dial ⇄ Dust Aqueduct"
- },
- {
-  "id": "warp_0047",
-  "from_map": "sol_fld_05",
-  "to_map": "sol_fld_06",
-  "trigger_rect": [
-   80,
-   145,
-   7,
-   3
-  ],
-  "spawn_point": [
-   113,
-   9
-  ],
-  "pair_id": "warp_0048",
-  "requirements": [],
-  "label": "Dust Aqueduct ⇄ Buried Causeway"
- },
- {
-  "id": "warp_0048",
-  "from_map": "sol_fld_06",
-  "to_map": "sol_fld_05",
-  "trigger_rect": [
-   110,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   83,
-   137
-  ],
-  "pair_id": "warp_0047",
-  "requirements": [],
-  "label": "Dust Aqueduct ⇄ Buried Causeway"
- },
- {
-  "id": "warp_0049",
-  "from_map": "sol_fld_06",
+  "id": "warp_0025",
+  "from_map": "tha_fld_01",
   "to_map": "sol_dun_01",
   "trigger_rect": [
-   40,
-   117,
-   7,
-   3
+   236,
+   96,
+   6,
+   4
   ],
   "spawn_point": [
    61,
    11
   ],
-  "pair_id": "warp_0050",
+  "pair_id": "warp_0026",
   "requirements": [
    "item:itm_0150"
   ],
-  "label": "Buried Causeway ⇄ Heliostat Vault"
+  "label": "Pearl Coast ⇄ Heliostat Vault"
  },
  {
-  "id": "warp_0050",
+  "id": "warp_0026",
   "from_map": "sol_dun_01",
-  "to_map": "sol_fld_06",
+  "to_map": "tha_fld_01",
   "trigger_rect": [
    58,
    0,
@@ -896,575 +464,35 @@
    3
   ],
   "spawn_point": [
-   43,
-   109
+   234,
+   122
   ],
-  "pair_id": "warp_0049",
+  "pair_id": "warp_0025",
   "requirements": [],
-  "label": "Buried Causeway ⇄ Heliostat Vault"
+  "label": "Pearl Coast ⇄ Heliostat Vault"
  },
  {
-  "id": "warp_0051",
-  "from_map": "tha_town_01",
-  "to_map": "tha_fld_01",
-  "trigger_rect": [
-   133,
-   47,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   40
-  ],
-  "pair_id": "warp_0052",
-  "requirements": [],
-  "label": "Port Merrow East Gate ⇄ Saltwind Shore"
- },
- {
-  "id": "warp_0052",
-  "from_map": "tha_fld_01",
-  "to_map": "tha_town_01",
-  "trigger_rect": [
-   0,
-   37,
-   3,
-   7
-  ],
-  "spawn_point": [
-   126,
-   50
-  ],
-  "pair_id": "warp_0051",
-  "requirements": [],
-  "label": "Port Merrow East Gate ⇄ Saltwind Shore"
- },
- {
-  "id": "warp_0053",
-  "from_map": "tha_town_01",
-  "to_map": "tha_fld_03",
-  "trigger_rect": [
-   62,
-   117,
-   4,
-   3
-  ],
-  "spawn_point": [
-   10,
-   91
-  ],
-  "pair_id": "warp_0054",
-  "requirements": [],
-  "label": "Port Merrow Ferry ⇄ Tidewheel Bay"
- },
- {
-  "id": "warp_0054",
-  "from_map": "tha_fld_03",
-  "to_map": "tha_town_01",
-  "trigger_rect": [
-   0,
-   88,
-   3,
-   7
-  ],
-  "spawn_point": [
-   64,
-   108
-  ],
-  "pair_id": "warp_0053",
-  "requirements": [],
-  "label": "Port Merrow Ferry ⇄ Tidewheel Bay"
- },
- {
-  "id": "warp_0055",
-  "from_map": "tha_fld_01",
-  "to_map": "tha_fld_02",
-  "trigger_rect": [
-   141,
-   25,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   104
-  ],
-  "pair_id": "warp_0056",
-  "requirements": [],
-  "label": "Saltwind Shore ⇄ Coral Reach"
- },
- {
-  "id": "warp_0056",
-  "from_map": "tha_fld_02",
-  "to_map": "tha_fld_01",
-  "trigger_rect": [
-   0,
-   101,
-   3,
-   7
-  ],
-  "spawn_point": [
-   134,
-   28
-  ],
-  "pair_id": "warp_0055",
-  "requirements": [],
-  "label": "Saltwind Shore ⇄ Coral Reach"
- },
- {
-  "id": "warp_0057",
-  "from_map": "tha_fld_02",
-  "to_map": "tha_fld_03",
-  "trigger_rect": [
-   81,
-   133,
-   7,
-   3
-  ],
-  "spawn_point": [
-   40,
-   9
-  ],
-  "pair_id": "warp_0058",
-  "requirements": [],
-  "label": "Coral Reach ⇄ Tidewheel Bay"
- },
- {
-  "id": "warp_0058",
-  "from_map": "tha_fld_03",
-  "to_map": "tha_fld_02",
-  "trigger_rect": [
-   37,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   84,
-   126
-  ],
-  "pair_id": "warp_0057",
-  "requirements": [],
-  "label": "Coral Reach ⇄ Tidewheel Bay"
- },
- {
-  "id": "warp_0059",
-  "from_map": "tha_fld_03",
-  "to_map": "tha_fld_04",
-  "trigger_rect": [
-   133,
-   52,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   61
-  ],
-  "pair_id": "warp_0060",
-  "requirements": [],
-  "label": "Tidewheel Bay ⇄ Wreck Shoal"
- },
- {
-  "id": "warp_0060",
-  "from_map": "tha_fld_04",
-  "to_map": "tha_fld_03",
-  "trigger_rect": [
-   0,
-   58,
-   3,
-   7
-  ],
-  "spawn_point": [
-   125,
-   55
-  ],
-  "pair_id": "warp_0059",
-  "requirements": [],
-  "label": "Tidewheel Bay ⇄ Wreck Shoal"
- },
- {
-  "id": "warp_0061",
-  "from_map": "tha_fld_04",
-  "to_map": "tha_fld_05",
-  "trigger_rect": [
-   118,
-   107,
-   7,
-   3
-  ],
-  "spawn_point": [
-   33,
-   9
-  ],
-  "pair_id": "warp_0062",
-  "requirements": [],
-  "label": "Wreck Shoal ⇄ Pearl Flats"
- },
- {
-  "id": "warp_0062",
-  "from_map": "tha_fld_05",
-  "to_map": "tha_fld_04",
-  "trigger_rect": [
-   30,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   121,
-   100
-  ],
-  "pair_id": "warp_0061",
-  "requirements": [],
-  "label": "Wreck Shoal ⇄ Pearl Flats"
- },
- {
-  "id": "warp_0063",
-  "from_map": "tha_fld_05",
-  "to_map": "tha_fld_06",
-  "trigger_rect": [
-   125,
-   84,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   123
-  ],
-  "pair_id": "warp_0064",
-  "requirements": [],
-  "label": "Pearl Flats ⇄ Stormbreak"
- },
- {
-  "id": "warp_0064",
-  "from_map": "tha_fld_06",
-  "to_map": "tha_fld_05",
-  "trigger_rect": [
-   0,
-   120,
-   3,
-   7
-  ],
-  "spawn_point": [
-   117,
-   87
-  ],
-  "pair_id": "warp_0063",
-  "requirements": [],
-  "label": "Pearl Flats ⇄ Stormbreak"
- },
- {
-  "id": "warp_0065",
-  "from_map": "tha_fld_06",
-  "to_map": "tha_dun_01",
-  "trigger_rect": [
-   54,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   13,
-   51
-  ],
-  "pair_id": "warp_0066",
-  "requirements": [],
-  "label": "Stormbreak ⇄ Drowned Relay"
- },
- {
-  "id": "warp_0066",
-  "from_map": "tha_dun_01",
-  "to_map": "tha_fld_06",
-  "trigger_rect": [
-   2,
-   48,
-   3,
-   6
-  ],
-  "spawn_point": [
-   57,
-   9
-  ],
-  "pair_id": "warp_0065",
-  "requirements": [],
-  "label": "Stormbreak ⇄ Drowned Relay"
- },
- {
-  "id": "warp_0067",
-  "from_map": "cry_town_01",
-  "to_map": "cry_fld_01",
-  "trigger_rect": [
-   0,
-   79,
-   3,
-   7
-  ],
-  "spawn_point": [
-   137,
-   55
-  ],
-  "pair_id": "warp_0068",
-  "requirements": [],
-  "label": "Vaelspire West Gate ⇄ Frostline"
- },
- {
-  "id": "warp_0068",
-  "from_map": "cry_fld_01",
-  "to_map": "cry_town_01",
-  "trigger_rect": [
-   145,
-   52,
-   3,
-   7
-  ],
-  "spawn_point": [
-   9,
-   82
-  ],
-  "pair_id": "warp_0067",
-  "requirements": [],
-  "label": "Vaelspire West Gate ⇄ Frostline"
- },
- {
-  "id": "warp_0069",
-  "from_map": "cry_town_01",
-  "to_map": "cry_fld_03",
-  "trigger_rect": [
-   63,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   69,
-   120
-  ],
-  "pair_id": "warp_0070",
-  "requirements": [],
-  "label": "Vaelspire Cable Lift ⇄ Snowcoil"
- },
- {
-  "id": "warp_0070",
-  "from_map": "cry_fld_03",
-  "to_map": "cry_town_01",
-  "trigger_rect": [
-   66,
-   127,
-   7,
-   3
-  ],
-  "spawn_point": [
-   65,
-   9
-  ],
-  "pair_id": "warp_0069",
-  "requirements": [],
-  "label": "Vaelspire Cable Lift ⇄ Snowcoil"
- },
- {
-  "id": "warp_0071",
-  "from_map": "cry_fld_01",
-  "to_map": "cry_fld_02",
-  "trigger_rect": [
-   24,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   43,
-   132
-  ],
-  "pair_id": "warp_0072",
-  "requirements": [],
-  "label": "Frostline ⇄ Blueglass Ridge"
- },
- {
-  "id": "warp_0072",
-  "from_map": "cry_fld_02",
-  "to_map": "cry_fld_01",
-  "trigger_rect": [
-   40,
-   139,
-   7,
-   3
-  ],
-  "spawn_point": [
-   27,
-   9
-  ],
-  "pair_id": "warp_0071",
-  "requirements": [],
-  "label": "Frostline ⇄ Blueglass Ridge"
- },
- {
-  "id": "warp_0073",
-  "from_map": "cry_fld_02",
-  "to_map": "cry_fld_03",
-  "trigger_rect": [
-   105,
-   40,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   63
-  ],
-  "pair_id": "warp_0074",
-  "requirements": [],
-  "label": "Blueglass Ridge ⇄ Snowcoil"
- },
- {
-  "id": "warp_0074",
-  "from_map": "cry_fld_03",
-  "to_map": "cry_fld_02",
-  "trigger_rect": [
-   0,
-   60,
-   3,
-   7
-  ],
-  "spawn_point": [
-   97,
-   43
-  ],
-  "pair_id": "warp_0073",
-  "requirements": [],
-  "label": "Blueglass Ridge ⇄ Snowcoil"
- },
- {
-  "id": "warp_0075",
-  "from_map": "cry_fld_03",
-  "to_map": "cry_fld_04",
-  "trigger_rect": [
-   100,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   23,
-   78
-  ],
-  "pair_id": "warp_0076",
-  "requirements": [],
-  "label": "Snowcoil ⇄ Prism Pass"
- },
- {
-  "id": "warp_0076",
-  "from_map": "cry_fld_04",
-  "to_map": "cry_fld_03",
-  "trigger_rect": [
-   20,
-   85,
-   7,
-   3
-  ],
-  "spawn_point": [
-   99,
-   9
-  ],
-  "pair_id": "warp_0075",
-  "requirements": [],
-  "label": "Snowcoil ⇄ Prism Pass"
- },
- {
-  "id": "warp_0077",
-  "from_map": "cry_fld_04",
-  "to_map": "cry_fld_05",
-  "trigger_rect": [
-   161,
-   40,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   93
-  ],
-  "pair_id": "warp_0078",
-  "requirements": [],
-  "label": "Prism Pass ⇄ Mirror Ice"
- },
- {
-  "id": "warp_0078",
-  "from_map": "cry_fld_05",
-  "to_map": "cry_fld_04",
-  "trigger_rect": [
-   0,
-   90,
-   3,
-   7
-  ],
-  "spawn_point": [
-   153,
-   43
-  ],
-  "pair_id": "warp_0077",
-  "requirements": [],
-  "label": "Prism Pass ⇄ Mirror Ice"
- },
- {
-  "id": "warp_0079",
-  "from_map": "cry_fld_05",
-  "to_map": "cry_fld_06",
-  "trigger_rect": [
-   86,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   33,
-   118
-  ],
-  "pair_id": "warp_0080",
-  "requirements": [],
-  "label": "Mirror Ice ⇄ White Circuit"
- },
- {
-  "id": "warp_0080",
-  "from_map": "cry_fld_06",
-  "to_map": "cry_fld_05",
-  "trigger_rect": [
-   30,
-   125,
-   7,
-   3
-  ],
-  "spawn_point": [
-   89,
-   9
-  ],
-  "pair_id": "warp_0079",
-  "requirements": [],
-  "label": "Mirror Ice ⇄ White Circuit"
- },
- {
-  "id": "warp_0081",
-  "from_map": "cry_fld_06",
+  "id": "warp_0027",
+  "from_map": "emb_fld_01",
   "to_map": "cry_dun_01",
   "trigger_rect": [
-   137,
-   30,
-   3,
-   7
+   236,
+   96,
+   6,
+   4
   ],
   "spawn_point": [
    12,
    105
   ],
-  "pair_id": "warp_0082",
+  "pair_id": "warp_0028",
   "requirements": [],
-  "label": "White Circuit ⇄ Cryocore Archive"
+  "label": "Cinder Expanse ⇄ Cryocore Archive"
  },
  {
-  "id": "warp_0082",
+  "id": "warp_0028",
   "from_map": "cry_dun_01",
-  "to_map": "cry_fld_06",
+  "to_map": "emb_fld_01",
   "trigger_rect": [
    2,
    102,
@@ -1472,577 +500,37 @@
    6
   ],
   "spawn_point": [
-   129,
-   33
+   234,
+   122
   ],
-  "pair_id": "warp_0081",
+  "pair_id": "warp_0027",
   "requirements": [],
-  "label": "White Circuit ⇄ Cryocore Archive"
+  "label": "Cinder Expanse ⇄ Cryocore Archive"
  },
  {
-  "id": "warp_0083",
-  "from_map": "emb_town_01",
-  "to_map": "emb_fld_01",
-  "trigger_rect": [
-   141,
-   69,
-   3,
-   7
-  ],
-  "spawn_point": [
-   10,
-   60
-  ],
-  "pair_id": "warp_0084",
-  "requirements": [],
-  "label": "Cindervale East Bridge ⇄ Ashfield"
- },
- {
-  "id": "warp_0084",
-  "from_map": "emb_fld_01",
-  "to_map": "emb_town_01",
-  "trigger_rect": [
-   0,
-   57,
-   3,
-   7
-  ],
-  "spawn_point": [
-   132,
-   72
-  ],
-  "pair_id": "warp_0083",
-  "requirements": [],
-  "label": "Cindervale East Bridge ⇄ Ashfield"
- },
- {
-  "id": "warp_0085",
-  "from_map": "emb_town_01",
-  "to_map": "emb_fld_03",
-  "trigger_rect": [
-   59,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   64,
-   129
-  ],
-  "pair_id": "warp_0086",
-  "requirements": [],
-  "label": "Cindervale North Bridge ⇄ Forge Approach"
- },
- {
-  "id": "warp_0086",
-  "from_map": "emb_fld_03",
-  "to_map": "emb_town_01",
-  "trigger_rect": [
-   61,
-   137,
-   7,
-   3
-  ],
-  "spawn_point": [
-   62,
-   11
-  ],
-  "pair_id": "warp_0085",
-  "requirements": [],
-  "label": "Cindervale North Bridge ⇄ Forge Approach"
- },
- {
-  "id": "warp_0087",
-  "from_map": "emb_fld_01",
-  "to_map": "emb_fld_02",
-  "trigger_rect": [
-   93,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   56,
-   137
-  ],
-  "pair_id": "warp_0088",
-  "requirements": [],
-  "label": "Ashfield ⇄ Cinder Track"
- },
- {
-  "id": "warp_0088",
-  "from_map": "emb_fld_02",
-  "to_map": "emb_fld_01",
-  "trigger_rect": [
-   53,
-   145,
-   7,
-   3
-  ],
-  "spawn_point": [
-   96,
-   10
-  ],
-  "pair_id": "warp_0087",
-  "requirements": [],
-  "label": "Ashfield ⇄ Cinder Track"
- },
- {
-  "id": "warp_0089",
-  "from_map": "emb_fld_02",
-  "to_map": "emb_fld_03",
-  "trigger_rect": [
-   0,
-   37,
-   3,
-   7
-  ],
-  "spawn_point": [
-   117,
-   48
-  ],
-  "pair_id": "warp_0090",
-  "requirements": [],
-  "label": "Cinder Track ⇄ Forge Approach"
- },
- {
-  "id": "warp_0090",
-  "from_map": "emb_fld_03",
-  "to_map": "emb_fld_02",
-  "trigger_rect": [
-   125,
-   43,
-   3,
-   7
-  ],
-  "spawn_point": [
-   11,
-   40
-  ],
-  "pair_id": "warp_0089",
-  "requirements": [],
-  "label": "Cinder Track ⇄ Forge Approach"
- },
- {
-  "id": "warp_0091",
-  "from_map": "emb_fld_03",
-  "to_map": "emb_fld_04",
-  "trigger_rect": [
-   37,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   40,
-   104
-  ],
-  "pair_id": "warp_0092",
-  "requirements": [],
-  "label": "Forge Approach ⇄ Magma Vents"
- },
- {
-  "id": "warp_0092",
-  "from_map": "emb_fld_04",
-  "to_map": "emb_fld_03",
-  "trigger_rect": [
-   37,
-   113,
-   7,
-   3
-  ],
-  "spawn_point": [
-   40,
-   10
-  ],
-  "pair_id": "warp_0091",
-  "requirements": [],
-  "label": "Forge Approach ⇄ Magma Vents"
- },
- {
-  "id": "warp_0093",
-  "from_map": "emb_fld_04",
-  "to_map": "emb_fld_05",
-  "trigger_rect": [
-   149,
-   55,
-   3,
-   7
-  ],
-  "spawn_point": [
-   11,
-   52
-  ],
-  "pair_id": "warp_0094",
-  "requirements": [],
-  "label": "Magma Vents ⇄ Ironfall"
- },
- {
-  "id": "warp_0094",
-  "from_map": "emb_fld_05",
-  "to_map": "emb_fld_04",
-  "trigger_rect": [
-   0,
-   49,
-   3,
-   7
-  ],
-  "spawn_point": [
-   141,
-   58
-  ],
-  "pair_id": "warp_0093",
-  "requirements": [],
-  "label": "Magma Vents ⇄ Ironfall"
- },
- {
-  "id": "warp_0095",
-  "from_map": "emb_fld_05",
-  "to_map": "emb_fld_06",
-  "trigger_rect": [
-   141,
-   27,
-   3,
-   7
-  ],
-  "spawn_point": [
-   11,
-   36
-  ],
-  "pair_id": "warp_0096",
-  "requirements": [],
-  "label": "Ironfall ⇄ Red Crucible"
- },
- {
-  "id": "warp_0096",
-  "from_map": "emb_fld_06",
-  "to_map": "emb_fld_05",
-  "trigger_rect": [
-   0,
-   33,
-   3,
-   7
-  ],
-  "spawn_point": [
-   133,
-   32
-  ],
-  "pair_id": "warp_0095",
-  "requirements": [],
-  "label": "Ironfall ⇄ Red Crucible"
- },
- {
-  "id": "warp_0097",
-  "from_map": "emb_fld_06",
-  "to_map": "emb_dun_01",
-  "trigger_rect": [
-   83,
-   125,
-   7,
-   3
-  ],
-  "spawn_point": [
-   60,
-   11
-  ],
-  "pair_id": "warp_0098",
-  "requirements": [],
-  "label": "Red Crucible ⇄ Furnace Zero"
- },
- {
-  "id": "warp_0098",
-  "from_map": "emb_dun_01",
-  "to_map": "emb_fld_06",
-  "trigger_rect": [
-   57,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   86,
-   116
-  ],
-  "pair_id": "warp_0097",
-  "requirements": [],
-  "label": "Red Crucible ⇄ Furnace Zero"
- },
- {
-  "id": "warp_0099",
-  "from_map": "noc_town_01",
-  "to_map": "noc_fld_01",
-  "trigger_rect": [
-   77,
-   125,
-   7,
-   3
-  ],
-  "spawn_point": [
-   60,
-   11
-  ],
-  "pair_id": "warp_0100",
-  "requirements": [],
-  "label": "Umbracrest South Gate ⇄ Dusk Verge"
- },
- {
-  "id": "warp_0100",
-  "from_map": "noc_fld_01",
-  "to_map": "noc_town_01",
-  "trigger_rect": [
-   57,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   77,
-   116
-  ],
-  "pair_id": "warp_0099",
-  "requirements": [],
-  "label": "Umbracrest South Gate ⇄ Dusk Verge"
- },
- {
-  "id": "warp_0101",
-  "from_map": "noc_town_01",
-  "to_map": "noc_fld_03",
-  "trigger_rect": [
-   147,
-   53,
-   3,
-   7
-  ],
-  "spawn_point": [
-   11,
-   50
-  ],
-  "pair_id": "warp_0102",
-  "requirements": [],
-  "label": "Umbracrest East Station ⇄ Silent Tracks"
- },
- {
-  "id": "warp_0102",
-  "from_map": "noc_fld_03",
-  "to_map": "noc_town_01",
-  "trigger_rect": [
-   0,
-   47,
-   3,
-   7
-  ],
-  "spawn_point": [
-   138,
-   58
-  ],
-  "pair_id": "warp_0101",
-  "requirements": [],
-  "label": "Umbracrest East Station ⇄ Silent Tracks"
- },
- {
-  "id": "warp_0103",
-  "from_map": "noc_fld_01",
-  "to_map": "noc_fld_02",
-  "trigger_rect": [
-   129,
-   77,
-   3,
-   7
-  ],
-  "spawn_point": [
-   11,
-   96
-  ],
-  "pair_id": "warp_0104",
-  "requirements": [],
-  "label": "Dusk Verge ⇄ Nullgarden"
- },
- {
-  "id": "warp_0104",
+  "id": "warp_0029",
   "from_map": "noc_fld_02",
-  "to_map": "noc_fld_01",
-  "trigger_rect": [
-   0,
-   93,
-   3,
-   7
-  ],
-  "spawn_point": [
-   121,
-   80
-  ],
-  "pair_id": "warp_0103",
-  "requirements": [],
-  "label": "Dusk Verge ⇄ Nullgarden"
- },
- {
-  "id": "warp_0105",
-  "from_map": "noc_fld_02",
-  "to_map": "noc_fld_03",
-  "trigger_rect": [
-   67,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   40,
-   88
-  ],
-  "pair_id": "warp_0106",
-  "requirements": [],
-  "label": "Nullgarden ⇄ Silent Tracks"
- },
- {
-  "id": "warp_0106",
-  "from_map": "noc_fld_03",
-  "to_map": "noc_fld_02",
-  "trigger_rect": [
-   37,
-   97,
-   7,
-   3
-  ],
-  "spawn_point": [
-   70,
-   11
-  ],
-  "pair_id": "warp_0105",
-  "requirements": [],
-  "label": "Nullgarden ⇄ Silent Tracks"
- },
- {
-  "id": "warp_0107",
-  "from_map": "noc_fld_03",
-  "to_map": "noc_fld_04",
-  "trigger_rect": [
-   117,
-   0,
-   7,
-   3
-  ],
-  "spawn_point": [
-   96,
-   121
-  ],
-  "pair_id": "warp_0108",
-  "requirements": [],
-  "label": "Silent Tracks ⇄ Veil Rift"
- },
- {
-  "id": "warp_0108",
-  "from_map": "noc_fld_04",
-  "to_map": "noc_fld_03",
-  "trigger_rect": [
-   93,
-   129,
-   7,
-   3
-  ],
-  "spawn_point": [
-   120,
-   10
-  ],
-  "pair_id": "warp_0107",
-  "requirements": [],
-  "label": "Silent Tracks ⇄ Veil Rift"
- },
- {
-  "id": "warp_0109",
-  "from_map": "noc_fld_04",
-  "to_map": "noc_fld_05",
-  "trigger_rect": [
-   0,
-   37,
-   3,
-   7
-  ],
-  "spawn_point": [
-   137,
-   44
-  ],
-  "pair_id": "warp_0110",
-  "requirements": [],
-  "label": "Veil Rift ⇄ Black Array"
- },
- {
-  "id": "warp_0110",
-  "from_map": "noc_fld_05",
-  "to_map": "noc_fld_04",
-  "trigger_rect": [
-   145,
-   41,
-   3,
-   7
-  ],
-  "spawn_point": [
-   11,
-   40
-  ],
-  "pair_id": "warp_0109",
-  "requirements": [],
-  "label": "Veil Rift ⇄ Black Array"
- },
- {
-  "id": "warp_0111",
-  "from_map": "noc_fld_05",
-  "to_map": "noc_fld_06",
-  "trigger_rect": [
-   0,
-   67,
-   3,
-   7
-  ],
-  "spawn_point": [
-   109,
-   64
-  ],
-  "pair_id": "warp_0112",
-  "requirements": [],
-  "label": "Black Array ⇄ Meridian Gate"
- },
- {
-  "id": "warp_0112",
-  "from_map": "noc_fld_06",
-  "to_map": "noc_fld_05",
-  "trigger_rect": [
-   117,
-   61,
-   3,
-   7
-  ],
-  "spawn_point": [
-   11,
-   70
-  ],
-  "pair_id": "warp_0111",
-  "requirements": [],
-  "label": "Black Array ⇄ Meridian Gate"
- },
- {
-  "id": "warp_0113",
-  "from_map": "noc_fld_06",
   "to_map": "noc_dun_01",
   "trigger_rect": [
-   53,
-   117,
-   7,
-   3
+   236,
+   96,
+   6,
+   4
   ],
   "spawn_point": [
    56,
    11
   ],
-  "pair_id": "warp_0114",
+  "pair_id": "warp_0030",
   "requirements": [
    "item:itm_0268"
   ],
   "label": "Meridian Gate ⇄ Lattice Heart"
  },
  {
-  "id": "warp_0114",
+  "id": "warp_0030",
   "from_map": "noc_dun_01",
-  "to_map": "noc_fld_06",
+  "to_map": "noc_fld_02",
   "trigger_rect": [
    53,
    0,
@@ -2050,10 +538,10 @@
    3
   ],
   "spawn_point": [
-   56,
-   108
+   234,
+   122
   ],
-  "pair_id": "warp_0113",
+  "pair_id": "warp_0029",
   "requirements": [],
   "label": "Meridian Gate ⇄ Lattice Heart"
  }

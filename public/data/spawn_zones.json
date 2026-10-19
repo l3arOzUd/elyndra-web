@@ -2,19 +2,19 @@
  {
   "map_id": "lum_fld_01",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "mosskin_meadow",
+    "id": "mosskin_meadow_1",
     "name": "Mosskin Meadow",
     "rects": [
      [
-      16,
-      14,
-      34,
-      30
+      44,
+      92,
+      28,
+      22
      ]
     ],
     "species": [
@@ -23,70 +23,22 @@
       "weight": 1
      }
     ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Open grass, few trees: passive Mosskin to learn movement and the basic attack loop. ~25 cells per mob so new players are never surrounded."
-   },
-   {
-    "id": "sporeling_grove",
-    "name": "Sporeling Grove",
-    "rects": [
-     [
-      70,
-      72,
-      30,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0002",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
+    "target_alive": 50,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Damp ground by the pond. Assist behaviour: hitting one pulls its neighbours, the first 'pack'."
+    "design_note": "Open grass by the camp: passive herds to learn movement and the first pull."
    },
    {
-    "id": "amber_rise",
-    "name": "Amber Rise",
+    "id": "mosskin_meadow_2",
+    "name": "Mosskin Meadow",
     "rects": [
      [
-      66,
-      24,
-      34,
-      18
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0002",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Beside the road east: assisting Sporelings cluster under the resin trees, so one stray hit from the road pulls the cluster; path around or pull deliberately."
-   },
-   {
-    "id": "irrigation_ruins",
-    "name": "Old Irrigation Ruins",
-    "rects": [
-     [
-      30,
+      84,
       92,
-      34,
-      24
+      28,
+      22
      ]
     ],
     "species": [
@@ -95,354 +47,283 @@
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 50,
     "respawn_sec": [
-     8,
-     18
+     6,
+     14
     ],
-    "design_note": "Walls make chokepoints: herd passive Mosskin through a gap and AoE them. Construct prototype planned here once art exists."
+    "design_note": "Open grass by the camp: passive herds to learn movement and the first pull."
+   },
+   {
+    "id": "mosskin_meadow_3",
+    "name": "Mosskin Meadow",
+    "rects": [
+     [
+      64,
+      122,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0001",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Open grass by the camp: passive herds to learn movement and the first pull."
+   },
+   {
+    "id": "sporeling_hollow_1",
+    "name": "Sporeling Hollow",
+    "rects": [
+     [
+      97,
+      166,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0002",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Damp hollow where assisting spores and aggressive mites meet: the first mixed pack."
+   },
+   {
+    "id": "sporeling_hollow_2",
+    "name": "Sporeling Hollow",
+    "rects": [
+     [
+      137,
+      166,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0003",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Damp hollow where assisting spores and aggressive mites meet: the first mixed pack."
+   },
+   {
+    "id": "sporeling_hollow_3",
+    "name": "Sporeling Hollow",
+    "rects": [
+     [
+      117,
+      196,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0002",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0003",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Damp hollow where assisting spores and aggressive mites meet: the first mixed pack."
+   },
+   {
+    "id": "glider_rise_1",
+    "name": "Glider Rise",
+    "rects": [
+     [
+      98,
+      18,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0004",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Upland grass: fleeing gliders and the first assisting bruisers."
+   },
+   {
+    "id": "glider_rise_2",
+    "name": "Glider Rise",
+    "rects": [
+     [
+      138,
+      18,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0005",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Upland grass: fleeing gliders and the first assisting bruisers."
+   },
+   {
+    "id": "glider_rise_3",
+    "name": "Glider Rise",
+    "rects": [
+     [
+      118,
+      48,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0004",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0005",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Upland grass: fleeing gliders and the first assisting bruisers."
+   },
+   {
+    "id": "bramble_mill_1",
+    "name": "Bramble Mill",
+    "rects": [
+     [
+      151,
+      92,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0006",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Brambles round an old mill: boar herds and the dust-moth horde, the field's hardest pulls."
+   },
+   {
+    "id": "bramble_mill_2",
+    "name": "Bramble Mill",
+    "rects": [
+     [
+      191,
+      92,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0007",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Brambles round an old mill: boar herds and the dust-moth horde, the field's hardest pulls."
+   },
+   {
+    "id": "bramble_mill_3",
+    "name": "Bramble Mill",
+    "rects": [
+     [
+      171,
+      122,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0006",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0007",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Brambles round an old mill: boar herds and the dust-moth horde, the field's hardest pulls."
    }
   ]
  },
  {
   "map_id": "lum_fld_02",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "resin_thicket",
-    "name": "Resin Thicket",
-    "rects": [
-     [
-      20,
-      8,
-      36,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0003",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Dense aggressive mites under resin trees: a ready-made 30-mob train for players who just unlocked Iron Cyclone at Lv5."
-   },
-   {
-    "id": "glider_hollow",
-    "name": "Glider Hollow",
-    "rects": [
-     [
-      60,
-      60,
-      40,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0004",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Lunari flee when hit; the hollow is ringed by forest so fleeing gliders bunch against the trees for a clean AoE."
-   },
-   {
-    "id": "crag_outcrop",
-    "name": "Crag Outcrop",
-    "rects": [
-     [
-      106,
-      54,
-      38,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0003",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     18
-    ],
-    "design_note": "Rock-strewn ground splits the aggressive mites into small packs that pour out of the gaps; walk in carelessly and the whole outcrop comes to you."
-   },
-   {
-    "id": "trailside_grove",
-    "name": "Trailside Grove",
-    "rects": [
-     [
-      64,
-      8,
-      36,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0003",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0004",
-      "weight": 50
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Mixed aggressive + fleeing: an aggressive pack drags fleeing gliders along, a small lesson in mixed AI."
-   }
-  ]
- },
- {
-  "map_id": "lum_fld_03",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "cliffside_run",
-    "name": "Cliffside Run",
-    "rects": [
-     [
-      70,
-      64,
-      32,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0005",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Wide-open grass bounded by the east cliff: assisting Craglets answer each other's calls, so a pull here becomes a slow wall of bruisers backed against the cliff face."
-   },
-   {
-    "id": "craglet_scree",
-    "name": "Scree Slope",
-    "rects": [
-     [
-      14,
-      14,
-      36,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0005",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Main Craglet farm at the low end of the band; rocks break line so packs come in waves."
-   },
-   {
-    "id": "thornback_brambles",
-    "name": "Bramble Ridge",
-    "rects": [
-     [
-      64,
-      10,
-      40,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0006",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Thornback at the top of the band (Lv8): the step-up before Old Windmill."
-   },
-   {
-    "id": "rune_circle",
-    "name": "Rune Circle",
-    "rects": [
-     [
-      10,
-      54,
-      28,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0005",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0006",
-      "weight": 50
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Standing stones split a mixed bruiser pack; good practice for cone skills through gaps."
-   }
-  ]
- },
- {
-  "map_id": "lum_fld_04",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "bramble_fields",
-    "name": "Bramble Fields",
-    "rects": [
-     [
-      10,
-      66,
-      44,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0007",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Aggressive Dustwings over the fenced pasture: the fence funnels a diving swarm through the gate into one tight train."
-   },
-   {
-    "id": "mill_sails",
-    "name": "Sail Hill",
-    "rects": [
-     [
-      48,
-      12,
-      48,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0007",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The signature horde: 40 aggressive, fast Dustwings that will happily form a 30-60 train. Respawn is quick so the hill refills between trains."
-   },
-   {
-    "id": "gear_yard",
-    "name": "Gear Yard",
-    "rects": [
-     [
-      8,
-      10,
-      34,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0007",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Scrap piles break the ground into lanes; Dustwing packs dive down each lane at once."
-   },
-   {
-    "id": "millrace",
-    "name": "Millrace",
-    "rects": [
-     [
-      92,
-      64,
-      26,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0007",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Dustwings hunting over the channel by the waterwheel: the water splits the pocket, so trains have to loop round it."
-   }
-  ]
- },
- {
-  "map_id": "lum_fld_05",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "brookbed",
+    "id": "brookbed_1",
     "name": "Brookbed",
     "rects": [
      [
-      66,
-      10,
-      34,
-      34
+      43,
+      95,
+      28,
+      22
      ]
     ],
     "species": [
@@ -451,22 +332,70 @@
       "weight": 1
      }
     ],
-    "target_alive": 40,
+    "target_alive": 50,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Passive Brookfin on the east bank: gather them with Anchor Shout (unlocked Lv8) for the first deliberate taunt-pull."
+    "design_note": "Passive fish on the shallow banks next to camp: an easy first horde."
    },
    {
-    "id": "reed_marsh",
+    "id": "brookbed_2",
+    "name": "Brookbed",
+    "rects": [
+     [
+      83,
+      95,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0008",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Passive fish on the shallow banks next to camp: an easy first horde."
+   },
+   {
+    "id": "brookbed_3",
+    "name": "Brookbed",
+    "rects": [
+     [
+      63,
+      125,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0008",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Passive fish on the shallow banks next to camp: an easy first horde."
+   },
+   {
+    "id": "reed_marsh_1",
     "name": "Reed Marsh",
     "rects": [
      [
-      8,
-      68,
-      36,
-      38
+      96,
+      169,
+      28,
+      22
      ]
     ],
     "species": [
@@ -475,83 +404,74 @@
       "weight": 1
      }
     ],
-    "target_alive": 35,
+    "target_alive": 50,
     "respawn_sec": [
-     7,
-     16
+     6,
+     14
     ],
-    "design_note": "Aggressive ranged Reedstalkers among marsh pools: players learn to break line of sight and pull them into melee."
+    "design_note": "Ranged reeds among passive grafted twigs: pull the spitters into the herd."
    },
    {
-    "id": "moonlit_banks",
-    "name": "Moonlit Banks",
+    "id": "reed_marsh_2",
+    "name": "Reed Marsh",
     "rects": [
      [
-      70,
-      94,
-      32,
-      30
+      136,
+      169,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0008",
+      "monster_id": "mob_0012",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged reeds among passive grafted twigs: pull the spitters into the herd."
+   },
+   {
+    "id": "reed_marsh_3",
+    "name": "Reed Marsh",
+    "rects": [
+     [
+      116,
+      199,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0009",
       "weight": 50
      },
      {
-      "monster_id": "mob_0009",
+      "monster_id": "mob_0012",
       "weight": 50
      }
     ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Mixed passive + ranged: the region's most efficient pack if pulled correctly."
-   },
-   {
-    "id": "dust_flats",
-    "name": "Dust Flats",
-    "rects": [
-     [
-      8,
-      110,
-      32,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0008",
-      "weight": 1
-     }
-    ],
-    "target_alive": 20,
+    "target_alive": 50,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Passive Brookfin sunning on the dry southern flats: a quiet, easy gather for under-levelled arrivals."
-   }
-  ]
- },
- {
-  "map_id": "lum_fld_06",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
+    "design_note": "Ranged reeds among passive grafted twigs: pull the spitters into the herd."
+   },
    {
-    "id": "rotting_rows",
+    "id": "rotting_rows_1",
     "name": "Rotting Rows",
     "rects": [
      [
-      20,
-      20,
-      46,
-      40
+      97,
+      21,
+      28,
+      22
      ]
     ],
     "species": [
@@ -560,84 +480,136 @@
       "weight": 1
      }
     ],
-    "target_alive": 40,
+    "target_alive": 50,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Slow, dense Rotroot in tree rows: rows channel a 40-60 train into lines for Meridian-style line skills."
+    "design_note": "Rot creeps into the orchard rows; newts call their whole bank."
    },
    {
-    "id": "irrigation_ditch",
-    "name": "Irrigation Ditch",
+    "id": "rotting_rows_2",
+    "name": "Rotting Rows",
     "rects": [
      [
-      80,
-      12,
-      40,
-      30
+      137,
+      21,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0040",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Rot creeps into the orchard rows; newts call their whole bank."
+   },
+   {
+    "id": "rotting_rows_3",
+    "name": "Rotting Rows",
+    "rects": [
+     [
+      117,
+      51,
+      28,
+      22
      ]
     ],
     "species": [
      {
       "monster_id": "mob_0010",
-      "weight": 1
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0040",
+      "weight": 50
      }
     ],
-    "target_alive": 30,
+    "target_alive": 50,
     "respawn_sec": [
-     7,
-     16
+     6,
+     14
     ],
-    "design_note": "Rotroot strung out across water channels: the channels cut a slow horde into short lines."
+    "design_note": "Rot creeps into the orchard rows; newts call their whole bank."
    },
    {
-    "id": "collapsed_greenhouse",
-    "name": "Collapsed Greenhouse",
+    "id": "sap_groves_1",
+    "name": "Sap Groves",
     "rects": [
      [
-      14,
-      76,
-      38,
-      34
+      150,
+      95,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0010",
+      "monster_id": "mob_0013",
       "weight": 1
      }
     ],
-    "target_alive": 30,
+    "target_alive": 50,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "Aggressive Rotroot among broken walls; pull them through a gap for a tight AoE."
+    "design_note": "Tapped trunks above Hollowroot: aggressive drones dive at anyone near the taps."
    },
    {
-    "id": "old_pump_house",
-    "name": "Old Pump House",
+    "id": "sap_groves_2",
+    "name": "Sap Groves",
     "rects": [
      [
-      82,
-      60,
-      22,
-      18
+      190,
+      95,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0010",
+      "monster_id": "mob_0013",
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 50,
     "respawn_sec": [
-     7,
-     16
+     6,
+     14
     ],
-    "design_note": "Rotroot packed thickest round the leaking pump: a small, dense pocket and a taste of the rot that feeds from Hollowroot below."
+    "design_note": "Tapped trunks above Hollowroot: aggressive drones dive at anyone near the taps."
+   },
+   {
+    "id": "sap_groves_3",
+    "name": "Sap Groves",
+    "rects": [
+     [
+      170,
+      125,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0013",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Tapped trunks above Hollowroot: aggressive drones dive at anyone near the taps."
    }
   ]
  },
@@ -749,616 +721,480 @@
  {
   "map_id": "ver_fld_01",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "fern_hollow",
-    "name": "Fern Hollow",
+    "id": "jadewing_glade_1",
+    "name": "Jadewing Glade",
     "rects": [
      [
-      22,
-      68,
-      32,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0012",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Passive Graftlings on open fern floor at the bottom of the band, a short walk from camp: ~21 cells each, room to gather a 40-herd with Anchor Shout."
-   },
-   {
-    "id": "sap_grove",
-    "name": "Sap Grove",
-    "rects": [
-     [
-      108,
-      28,
-      26,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0012",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Tapped trunks in the north-east, beside the road to Mossbridge: passive Graftlings rooting round the taps, a safe 30-herd on the way north."
-   },
-   {
-    "id": "glimmer_run",
-    "name": "Glimmer Run",
-    "rects": [
-     [
-      96,
-      74,
-      32,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0012",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Graftlings on the banks of the stream and pond (the water takes ~16% of the rect); passive, so the banks are a slow, safe herd to gather along the water."
-   },
-   {
-    "id": "grafted_ruins",
-    "name": "Grafted Ruins",
-    "rects": [
-     [
-      40,
-      20,
+      43,
+      107,
       28,
       22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0012",
+      "monster_id": "mob_0041",
       "weight": 1
      }
     ],
-    "target_alive": 20,
+    "target_alive": 50,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "Gear ruins and rune stones break the yard into lanes; passive Graftlings wander where they were first bolted together, a herd that has to be gathered round obstacles."
+    "design_note": "Ranged moths over assisting hound packs."
+   },
+   {
+    "id": "jadewing_glade_2",
+    "name": "Jadewing Glade",
+    "rects": [
+     [
+      83,
+      107,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0042",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged moths over assisting hound packs."
+   },
+   {
+    "id": "jadewing_glade_3",
+    "name": "Jadewing Glade",
+    "rects": [
+     [
+      63,
+      137,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0041",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0042",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged moths over assisting hound packs."
+   },
+   {
+    "id": "trellis_dunes_1",
+    "name": "Trellis Dunes",
+    "rects": [
+     [
+      96,
+      181,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0014",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Where the grafted woods run into sand: vine constructs and basking coils."
+   },
+   {
+    "id": "trellis_dunes_2",
+    "name": "Trellis Dunes",
+    "rects": [
+     [
+      136,
+      181,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0016",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Where the grafted woods run into sand: vine constructs and basking coils."
+   },
+   {
+    "id": "trellis_dunes_3",
+    "name": "Trellis Dunes",
+    "rects": [
+     [
+      116,
+      211,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0014",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0016",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Where the grafted woods run into sand: vine constructs and basking coils."
+   },
+   {
+    "id": "press_terraces_1",
+    "name": "Press Terraces",
+    "rects": [
+     [
+      97,
+      33,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0043",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Gardener constructs mend each other; jackal packs hunt the terraces."
+   },
+   {
+    "id": "press_terraces_2",
+    "name": "Press Terraces",
+    "rects": [
+     [
+      137,
+      33,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0050",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Gardener constructs mend each other; jackal packs hunt the terraces."
+   },
+   {
+    "id": "press_terraces_3",
+    "name": "Press Terraces",
+    "rects": [
+     [
+      117,
+      63,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0043",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0050",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Gardener constructs mend each other; jackal packs hunt the terraces."
+   },
+   {
+    "id": "glass_burrows_1",
+    "name": "Glass Burrows",
+    "rects": [
+     [
+      150,
+      107,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0044",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Fleeing hares and aggressive glass scarabs on fused sand."
+   },
+   {
+    "id": "glass_burrows_2",
+    "name": "Glass Burrows",
+    "rects": [
+     [
+      190,
+      107,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0017",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Fleeing hares and aggressive glass scarabs on fused sand."
+   },
+   {
+    "id": "glass_burrows_3",
+    "name": "Glass Burrows",
+    "rects": [
+     [
+      170,
+      137,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0044",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0017",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Fleeing hares and aggressive glass scarabs on fused sand."
    }
   ]
  },
  {
   "map_id": "ver_fld_02",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "newt_shallows",
-    "name": "Newt Shallows",
+    "id": "root_ridge_1",
+    "name": "Root Ridge",
     "rects": [
      [
-      8,
-      70,
-      40,
+      42,
+      100,
+      28,
       22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0040",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "The main Newt bank, on the south shore at the bottom of the band. Banks are long and thin, so assist pulls string out along the water into a line."
-   },
-   {
-    "id": "bridge_hives",
-    "name": "Bridge Hives",
-    "rects": [
-     [
-      62,
-      16,
-      36,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0013",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "North of the creek between the two bridges: an aggressive drone cloud mid-band that players cross on the way to Canopy Steps."
-   },
-   {
-    "id": "mossfield",
-    "name": "Mossfield",
-    "rects": [
-     [
-      72,
-      90,
-      34,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0040",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "A quieter Newt bank by the obelisk, looser than the Shallows: small assist pulls for players arriving at the bottom of the band."
-   },
-   {
-    "id": "drone_rise",
-    "name": "Drone Rise",
-    "rects": [
-     [
-      8,
-      18,
-      24,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0013",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Lv20 drones mid-band on the slope under the canopy, kept off the main road: a second aggressive cloud away from the bridge traffic."
-   }
-  ]
- },
- {
-  "map_id": "ver_fld_03",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "barkhound_den",
-    "name": "Barkhound Den",
-    "rects": [
-     [
-      84,
-      68,
-      40,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0042",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Bruiser packs on the lower terrace; ~40 cells each because hounds come in assist packs and need room to be kited round the den."
-   },
-   {
-    "id": "jadewing_galleries",
-    "name": "Jadewing Galleries",
-    "rects": [
-     [
-      8,
-      40,
-      48,
-      20
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0041",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "The main moth farm on the middle terrace: the terrace walls above and below cut line of sight, so ranged moths must be pulled along the shelf."
-   },
-   {
-    "id": "sap_lifts",
-    "name": "Sap Lifts",
-    "rects": [
-     [
-      10,
-      8,
-      36,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0041",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Moths alone on the upper terrace among the old lift-rails: the rails break line of sight, so the ranged pack must be pulled round them."
-   },
-   {
-    "id": "vine_terrace",
-    "name": "Vine Terrace",
-    "rects": [
-     [
-      72,
-      8,
-      40,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0042",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Lv23 hound packs mid-band on the top terrace, where the road leaves for Graftwood: a second assist den, ~40 cells each to kite round."
-   }
-  ]
- },
- {
-  "map_id": "ver_fld_04",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "trellis_rows",
-    "name": "Trellis Rows",
-    "rects": [
-     [
-      70,
-      30,
-      44,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0014",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "The signature construct horde: fence rows (open at both ends) channel a Vinecrawler train into lanes, ideal for cones and lines."
-   },
-   {
-    "id": "grafting_yard",
-    "name": "Grafting Yard",
-    "rects": [
-     [
-      14,
-      12,
-      36,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0014",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Vinecrawlers still crawl round the stalled engine they once served: a construct train that has to be kited round a central obstacle."
-   },
-   {
-    "id": "stockwood",
-    "name": "Stockwood",
-    "rects": [
-     [
-      10,
-      84,
-      34,
-      34
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0014",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Vinecrawlers in the south-west woods among old graft-stock: the trees break up the train, a quieter farm for players arriving at the bottom of the band."
-   },
-   {
-    "id": "overgrown_graft",
-    "name": "Overgrown Graft",
-    "rects": [
-     [
-      52,
-      96,
-      26,
-      22
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0014",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Vinecrawlers in a run-wild corner beside the south road: a small, dense construct pocket, the last stop before Vineworks."
-   }
-  ]
- },
- {
-  "map_id": "ver_fld_05",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "press_terraces",
-    "name": "Press Terraces",
-    "rects": [
-     [
-      86,
-      92,
-      36,
-      22
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0043",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Tenders alone on their own terraces at the bottom of the band: low damage, assist pulls, a calm place to learn their 5-cell spray."
-   },
-   {
-    "id": "hare_terraces",
-    "name": "Hare Terraces",
-    "rects": [
-     [
-      10,
-      26,
-      40,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0044",
+      "monster_id": "mob_0015",
       "weight": 1
      }
     ],
     "target_alive": 40,
     "respawn_sec": [
-     5,
-     12
+     6,
+     14
     ],
-    "design_note": "Mid-band flee swarm: the terraces are fenced on the west and north by forest, so fleeing hares pile into the corner for a clean AoE."
+    "design_note": "Slow sentinels on the ridges, brass kites shooting from above."
    },
    {
-    "id": "tender_conduits",
-    "name": "Tender Conduits",
+    "id": "root_ridge_2",
+    "name": "Root Ridge",
     "rects": [
      [
-      110,
-      12,
-      28,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0043",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Tenders along the conduit wall at the bottom of the band: the wall stops the assist pack spreading, so one pull is a line you can sweep."
-   },
-   {
-    "id": "pump_warren",
-    "name": "Pump Warren",
-    "rects": [
-     [
-      40,
-      74,
-      26,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0044",
-      "weight": 1
-     }
-    ],
-    "target_alive": 15,
-    "respawn_sec": [
-     14,
-     28
-    ],
-    "design_note": "A few Thistlehares round the waterwheel pump: sparse (~40 cells each) and quick to bolt, so the pump and wheel are the corners to trap them against."
-   }
-  ]
- },
- {
-  "map_id": "ver_fld_06",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "sentinel_roots",
-    "name": "Sentinel Roots",
-    "rects": [
-     [
-      74,
-      12,
-      42,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0015",
-      "weight": 1
-     }
-    ],
-    "target_alive": 36,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "The region's main Root Sentinel farm at mid-band: slow, aggressive and thick, so a 30+ train walks into one big Sundering Pulse."
-   },
-   {
-    "id": "root_burrows",
-    "name": "Root Burrows",
-    "rects": [
-     [
-      8,
       82,
-      40,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0015",
-      "weight": 1
-     }
-    ],
-    "target_alive": 42,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Sentinels in soft ground between the elder roots: a second slow, thick horde with room to gather a train, nearer the camp than the ridges."
-   },
-   {
-    "id": "spore_drift",
-    "name": "Spore Drift",
-    "rects": [
-     [
-      58,
       100,
-      30,
-      24
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0051",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Slow sentinels on the ridges, brass kites shooting from above."
+   },
+   {
+    "id": "root_ridge_3",
+    "name": "Root Ridge",
+    "rects": [
+     [
+      62,
+      130,
+      28,
+      22
      ]
     ],
     "species": [
      {
       "monster_id": "mob_0015",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0051",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Slow sentinels on the ridges, brass kites shooting from above."
+   },
+   {
+    "id": "antler_glade_1",
+    "name": "Antler Glade",
+    "rects": [
+     [
+      75,
+      176,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0018",
       "weight": 1
      }
     ],
-    "target_alive": 28,
+    "target_alive": 40,
     "respawn_sec": [
-     7,
-     16
+     6,
+     14
     ],
-    "design_note": "Sentinels next to the descent to the Basin, where the Engine's spores have drifted up: the last Sentinel train before the next field."
+    "design_note": "Sandstone sentries under the elder trees; a few Antlered Engines graze the glade."
    },
    {
-    "id": "engine_glade",
-    "name": "Engine Glade",
+    "id": "antler_glade_2",
+    "name": "Antler Glade",
     "rects": [
      [
-      84,
-      68,
-      30,
+      115,
+      176,
+      28,
       22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0018",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Sandstone sentries under the elder trees; a few Antlered Engines graze the glade."
+   },
+   {
+    "id": "antler_glade_3",
+    "name": "Antler Glade",
+    "rects": [
+     [
+      95,
+      206,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0018",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Sandstone sentries under the elder trees; a few Antlered Engines graze the glade."
+   },
+   {
+    "id": "antler_glade_antlered_engine",
+    "name": "Antler Glade (Antlered Engine)",
+    "rects": [
+     [
+      101,
+      232,
+      16,
+      12
      ]
     ],
     "species": [
@@ -1369,29 +1205,20 @@
     ],
     "target_alive": 4,
     "respawn_sec": [
-     120,
-     180
+     45,
+     90
     ],
-    "design_note": "Four Lv34 elites in an open glade under the root ridge: room to circle a charging stag. Slow respawn so the glade is a hunt, not a farm."
-   }
-  ]
- },
- {
-  "map_id": "ver_fld_07",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
+    "design_note": "A few Antlered Engine elites hold this part of Antler Glade."
+   },
    {
-    "id": "bloat_fields",
-    "name": "Bloat Fields",
+    "id": "spore_drift_1",
+    "name": "Spore Drift",
     "rects": [
      [
-      70,
-      14,
-      44,
-      30
+      76,
+      24,
+      28,
+      22
      ]
     ],
     "species": [
@@ -1402,82 +1229,214 @@
     ],
     "target_alive": 40,
     "respawn_sec": [
-     5,
-     12
+     6,
+     14
     ],
-    "design_note": "The Basin's signature horde: 40 slow aggressive bloats on open ground under the vents, sized for 50+ trains with quick refill."
+    "design_note": "Spores drift down to a tidal pool: aggressive bloats and passive hoppers."
    },
    {
-    "id": "obelisk_ring",
-    "name": "Obelisk Ring",
+    "id": "spore_drift_2",
+    "name": "Spore Drift",
     "rects": [
      [
-      12,
-      56,
-      38,
-      40
+      116,
+      24,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0046",
+      "monster_id": "mob_0020",
       "weight": 1
      }
     ],
-    "target_alive": 35,
+    "target_alive": 40,
     "respawn_sec": [
-     7,
-     16
+     6,
+     14
     ],
-    "design_note": "Bloats round the obelisk in a wide pocket: the obelisk splits the train, so drag them round it into one stack before the AoE."
+    "design_note": "Spores drift down to a tidal pool: aggressive bloats and passive hoppers."
    },
    {
-    "id": "pool_drift",
-    "name": "Pool Drift",
+    "id": "spore_drift_3",
+    "name": "Spore Drift",
     "rects": [
      [
       96,
-      88,
-      30,
-      20
+      54,
+      28,
+      22
      ]
     ],
     "species": [
      {
       "monster_id": "mob_0046",
-      "weight": 1
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0020",
+      "weight": 50
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     8,
-     18
+     6,
+     14
     ],
-    "design_note": "Bloats by the spore pool: a smaller, quieter farm away from the main field for players at the bottom of the band."
+    "design_note": "Spores drift down to a tidal pool: aggressive bloats and passive hoppers."
    },
    {
-    "id": "engine_vents",
-    "name": "Engine Vents",
+    "id": "basilisk_flats_1",
+    "name": "Basilisk Flats",
     "rects": [
      [
-      94,
-      46,
+      165,
+      172,
       28,
-      14
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0046",
+      "monster_id": "mob_0052",
       "weight": 1
      }
     ],
-    "target_alive": 20,
+    "target_alive": 40,
     "respawn_sec": [
-     10,
-     20
+     6,
+     14
     ],
-    "design_note": "Bloats crowding the Engine's vents beside the mouth: a narrow strip that packs a train tight, the last farm before the dungeon."
+    "design_note": "Assisting basilisks on the flats, skimmers diving from the cliffs."
+   },
+   {
+    "id": "basilisk_flats_2",
+    "name": "Basilisk Flats",
+    "rects": [
+     [
+      205,
+      172,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0060",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Assisting basilisks on the flats, skimmers diving from the cliffs."
+   },
+   {
+    "id": "basilisk_flats_3",
+    "name": "Basilisk Flats",
+    "rects": [
+     [
+      185,
+      202,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0052",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0060",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Assisting basilisks on the flats, skimmers diving from the cliffs."
+   },
+   {
+    "id": "coral_steps_1",
+    "name": "Coral Steps",
+    "rects": [
+     [
+      166,
+      30,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0053",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Acolytes heal the crab packs on the old coral steps; the Heartwood Engine's vents are close."
+   },
+   {
+    "id": "coral_steps_2",
+    "name": "Coral Steps",
+    "rects": [
+     [
+      206,
+      30,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0021",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Acolytes heal the crab packs on the old coral steps; the Heartwood Engine's vents are close."
+   },
+   {
+    "id": "coral_steps_3",
+    "name": "Coral Steps",
+    "rects": [
+     [
+      186,
+      60,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0053",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0021",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Acolytes heal the crab packs on the old coral steps; the Heartwood Engine's vents are close."
    }
   ]
  },
@@ -1589,455 +1548,95 @@
  {
   "map_id": "sol_fld_01",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "coil_dunes",
-    "name": "Coil Dunes",
+    "id": "warden_causeway_1",
+    "name": "Warden Causeway",
     "rects": [
      [
-      92,
-      74,
-      40,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0016",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Passive Sandcoils on open dunes beside the camp, at the bottom of the band: ~28 cells each, room to gather 40 with Anchor Shout."
-   },
-   {
-    "id": "jackal_draw",
-    "name": "Jackal Draw",
-    "rects": [
-     [
-      10,
-      68,
-      44,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0050",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Jackals den round the oasis (the water takes ~8% of the rect); assist packs come in from all sides of the water."
-   },
-   {
-    "id": "mesa_glass",
-    "name": "Mesa Glass",
-    "rects": [
-     [
-      70,
-      10,
-      34,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0016",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "More passive Sandcoils basking on the lightning-glass below the mesa, off the main trail: a quieter second gathering ground away from the camp."
-   },
-   {
-    "id": "buried_pipeline",
-    "name": "Buried Pipeline",
-    "rects": [
-     [
-      42,
-      36,
-      28,
-      20
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0016",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0050",
-      "weight": 50
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Sandcoils sleeping on the warm pipe with jackals hunting them, astride the trail north: a mixed passive/assist pack."
-   }
-  ]
- },
- {
-  "map_id": "sol_fld_02",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "kite_heights",
-    "name": "Kite Heights",
-    "rects": [
-     [
-      70,
-      18,
-      40,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0051",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Ranged kites mid-band round the survey tower, ~37 cells each so a player can break line and pull them in a few at a time."
-   },
-   {
-    "id": "scarab_wash",
-    "name": "Scarab Wash",
-    "rects": [
-     [
-      8,
-      100,
-      40,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0017",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "The main Scarab farm in a dry wash: aggressive, dense, quick refill — the Verge's horde for 30+ trains."
-   },
-   {
-    "id": "kite_checkpoint",
-    "name": "Kite Checkpoint",
-    "rects": [
-     [
-      84,
-      94,
-      30,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0051",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Aggressive ranged kites over the old checkpoint between the two camps: break line on the ruined walls and pull them in a few at a time."
-   },
-   {
-    "id": "serai_scarabs",
-    "name": "Serai Scarabs",
-    "rects": [
-     [
-      10,
-      54,
-      28,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0017",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Lv30 scarabs near the bottom of the band west of the serai: a smaller aggressive swarm for players arriving from the Dunes."
-   }
-  ]
- },
- {
-  "map_id": "sol_fld_03",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "basilisk_glare",
-    "name": "Basilisk Glare",
-    "rects": [
-     [
-      104,
-      50,
       38,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0052",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Assist bruisers at mid-band on the open glass east of the crossroads; ~30 cells each so packs can be kited round the crystal outcrop."
-   },
-   {
-    "id": "sentry_field",
-    "name": "Sentry Field",
-    "rects": [
-     [
-      8,
-      8,
-      44,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0018",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "The signature construct horde of the Flats: slow aggressive Sentries in a wide open corner, made for 30+ trains."
-   },
-   {
-    "id": "heliograph_mirrors",
-    "name": "Heliograph Mirrors",
-    "rects": [
-     [
-      56,
-      6,
-      34,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0018",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0052",
-      "weight": 50
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Lv35 Sentries with Lv37 basilisks among the mirror towers mid-band: slow constructs and assist bruisers, so pull round the towers to split the pack."
-   },
-   {
-    "id": "glass_scar",
-    "name": "Glass Scar",
-    "rects": [
-     [
-      58,
-      70,
-      30,
+      98,
+      28,
       22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0018",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0052",
-      "weight": 50
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Mixed constructs and bruisers near the camp: a heavier pack for the top of the band."
-   }
-  ]
- },
- {
-  "map_id": "sol_fld_04",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "dial_face",
-    "name": "Dial Face",
-    "rects": [
-     [
-      54,
-      50,
-      28,
-      28
-     ]
-    ],
-    "species": [
-     {
       "monster_id": "mob_0019",
-      "weight": 40
-     },
-     {
-      "monster_id": "mob_0053",
-      "weight": 60
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Acolytes tending Wardens round the gnomon: the stone ring and gnomon split the pack, so the supports must be hunted inside it."
-   },
-   {
-    "id": "acolyte_sands",
-    "name": "Acolyte Sands",
-    "rects": [
-     [
-      12,
-      12,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0053",
       "weight": 1
      }
     ],
-    "target_alive": 35,
+    "target_alive": 40,
     "respawn_sec": [
-     7,
-     16
+     6,
+     14
     ],
-    "design_note": "Lv39 assist Acolytes mid-band on open sand with no Wardens to hide behind: the main support farm for new arrivals."
+    "design_note": "Bronze wardens on the causeway, polyps spitting from the old canal."
    },
    {
-    "id": "warden_causeway",
+    "id": "warden_causeway_2",
     "name": "Warden Causeway",
     "rects": [
      [
-      94,
-      52,
-      32,
-      30
+      78,
+      98,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0061",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Bronze wardens on the causeway, polyps spitting from the old canal."
+   },
+   {
+    "id": "warden_causeway_3",
+    "name": "Warden Causeway",
+    "rects": [
+     [
+      58,
+      128,
+      28,
+      22
      ]
     ],
     "species": [
      {
       "monster_id": "mob_0019",
-      "weight": 1
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0061",
+      "weight": 50
      }
     ],
-    "target_alive": 20,
+    "target_alive": 40,
     "respawn_sec": [
-     10,
-     20
+     6,
+     14
     ],
-    "design_note": "Lv42 Wardens at the top of the band on the east approach: hard-hitting constructs in smaller numbers (~48 cells each)."
+    "design_note": "Bronze wardens on the causeway, polyps spitting from the old canal."
    },
    {
-    "id": "sentry_graveyard",
-    "name": "Sentry Graveyard",
+    "id": "canal_shallows_1",
+    "name": "Canal Shallows",
     "rects": [
      [
-      24,
-      108,
-      44,
-      20
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0053",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Lv39 Acolytes among grave markers, mending broken sentries that never rise: an easier assist farm south of the camp."
-   }
-  ]
- },
- {
-  "map_id": "sol_fld_05",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "strider_canal",
-    "name": "Strider Canal",
-    "rects": [
-     [
-      40,
-      54,
-      40,
-      34
+      71,
+      174,
+      28,
+      22
      ]
     ],
     "species": [
@@ -2048,101 +1647,120 @@
     ],
     "target_alive": 40,
     "respawn_sec": [
-     5,
-     12
+     6,
+     14
     ],
-    "design_note": "The signature flee swarm mid-band, straddling the canal (~12% water): fleeing Striders run along the channel walls, so herd them down its length."
+    "design_note": "Fleeing striders and kelp tenders that knit the packs back together."
    },
    {
-    "id": "north_piers",
-    "name": "North Piers",
+    "id": "canal_shallows_2",
+    "name": "Canal Shallows",
+    "rects": [
+     [
+      111,
+      174,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0062",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Fleeing striders and kelp tenders that knit the packs back together."
+   },
+   {
+    "id": "canal_shallows_3",
+    "name": "Canal Shallows",
+    "rects": [
+     [
+      91,
+      204,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0054",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0062",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Fleeing striders and kelp tenders that knit the packs back together."
+   },
+   {
+    "id": "frost_seep_1",
+    "name": "Frost Seep",
     "rects": [
      [
       72,
-      8,
-      36,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0054",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Lv44 Striders mid-band round the aqueduct's head beside the bridge from camp: pin the fleeing swarm against the piers."
-   },
-   {
-    "id": "south_sluice",
-    "name": "South Sluice",
-    "rects": [
-     [
-      8,
-      116,
-      40,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0054",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     16
-    ],
-    "design_note": "Striders in the dry south sluices: the sluice walls stop the fleeing swarm scattering, so herd them into the corners."
-   },
-   {
-    "id": "old_cistern",
-    "name": "Old Cistern",
-    "rects": [
-     [
-      90,
-      92,
       22,
-      30
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0054",
+      "monster_id": "mob_0022",
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "Striders round the cistern by the south road: a fast, low-threat fleeing pack, easy to pin against the cistern rim."
-   }
-  ]
- },
- {
-  "map_id": "sol_fld_06",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
+    "design_note": "A cold seep in the desert: pump constructs, passive mites and dust revenants."
+   },
    {
-    "id": "revenant_road",
-    "name": "Revenant Road",
+    "id": "frost_seep_2",
+    "name": "Frost Seep",
     "rects": [
      [
-      56,
-      24,
-      34,
-      28
+      112,
+      22,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0024",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "A cold seep in the desert: pump constructs, passive mites and dust revenants."
+   },
+   {
+    "id": "frost_seep_3",
+    "name": "Frost Seep",
+    "rects": [
+     [
+      92,
+      52,
+      28,
+      22
      ]
     ],
     "species": [
@@ -2153,44 +1771,92 @@
     ],
     "target_alive": 40,
     "respawn_sec": [
-     5,
-     12
+     6,
+     14
     ],
-    "design_note": "The Causeway's signature horde mid-band, on and beside the road: fast aggressive Revenants that form 40+ trains along the paving."
+    "design_note": "A cold seep in the desert: pump constructs, passive mites and dust revenants."
    },
    {
-    "id": "seep_sinks",
-    "name": "Seep Sinks",
+    "id": "colossus_sands_1",
+    "name": "Colossus Sands",
     "rects": [
      [
-      8,
-      72,
-      36,
-      30
+      161,
+      170,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0057",
+      "monster_id": "mob_0070",
       "weight": 1
      }
     ],
-    "target_alive": 35,
+    "target_alive": 40,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Lv50 Lens-drones at the top of the band round the seep pools in the west: a 7-cell ranged pocket, pulled out of line of sight so they bunch up."
+    "design_note": "Hares herd round three half-buried colossi."
    },
    {
-    "id": "colossus_bed",
-    "name": "Colossus Bed",
+    "id": "colossus_sands_2",
+    "name": "Colossus Sands",
     "rects": [
      [
-      104,
-      70,
-      30,
-      26
+      201,
+      170,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0070",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Hares herd round three half-buried colossi."
+   },
+   {
+    "id": "colossus_sands_3",
+    "name": "Colossus Sands",
+    "rects": [
+     [
+      181,
+      200,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0070",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Hares herd round three half-buried colossi."
+   },
+   {
+    "id": "colossus_sands_sand_buried_colossus",
+    "name": "Colossus Sands (Sand-buried Colossus)",
+    "rects": [
+     [
+      187,
+      226,
+      16,
+      12
      ]
     ],
     "species": [
@@ -2199,40 +1865,88 @@
       "weight": 1
      }
     ],
-    "target_alive": 3,
+    "target_alive": 4,
     "respawn_sec": [
-     150,
-     210
+     45,
+     90
     ],
-    "design_note": "Three Lv49 elites in open sand off the side road: slow giants with room to kite. Slow respawn makes them a hunt, and the Key Prism quest needs two."
+    "design_note": "A few Sand-buried Colossus elites hold this part of Colossus Sands."
    },
    {
-    "id": "lens_array",
-    "name": "Lens Array",
+    "id": "prism_reach_1",
+    "name": "Prism Reach",
     "rects": [
      [
-      72,
-      100,
-      40,
-      16
+      162,
+      28,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0057",
-      "weight": 60
-     },
-     {
-      "monster_id": "mob_0055",
-      "weight": 40
+      "monster_id": "mob_0063",
+      "weight": 1
      }
     ],
-    "target_alive": 35,
+    "target_alive": 40,
     "respawn_sec": [
-     7,
-     16
+     6,
+     14
     ],
-    "design_note": "Lv50 Lens-drones (top of band) with Revenant escorts in a long strip before the Vault door: a 7-cell ranged threat that must be pulled behind the collapsed span."
+    "design_note": "Borers in the old hulls, prism wisps beaming from the mirrors near the Vault."
+   },
+   {
+    "id": "prism_reach_2",
+    "name": "Prism Reach",
+    "rects": [
+     [
+      202,
+      28,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0025",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Borers in the old hulls, prism wisps beaming from the mirrors near the Vault."
+   },
+   {
+    "id": "prism_reach_3",
+    "name": "Prism Reach",
+    "rects": [
+     [
+      182,
+      58,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0063",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0025",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Borers in the old hulls, prism wisps beaming from the mirrors near the Vault."
    }
   ]
  },
@@ -2280,7 +1994,7 @@
     ],
     "species": [
      {
-      "monster_id": "mob_0058",
+      "monster_id": "mob_0057",
       "weight": 1
      }
     ],
@@ -2344,443 +2058,163 @@
  {
   "map_id": "tha_fld_01",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "tidepool_flats",
-    "name": "Tidepool Flats",
+    "id": "relay_strand_1",
+    "name": "Relay Strand",
     "rects": [
      [
-      30,
-      58,
-      34,
-      18
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0020",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     6,
-     13
-    ],
-    "design_note": "Passive Tidehoppers on the sand between the lagoon and the surf: a dense (~14 cells each) but harmless herd to re-learn AoE pulls on arrival in the region."
-   },
-   {
-    "id": "gull_cliffs",
-    "name": "Gull Cliffs",
-    "rects": [
-     [
-      22,
-      6,
-      38,
+      41,
+      93,
+      28,
       22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0060",
+      "monster_id": "mob_0023",
       "weight": 1
      }
     ],
-    "target_alive": 35,
+    "target_alive": 40,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "The aggressive flock nests under the north cliffs, away from the road but within sight of the camp: players choose when to pull it."
+    "design_note": "Assisting guardians on the buoy cables by the camp."
    },
    {
-    "id": "wrack_line",
-    "name": "Wrack Line",
+    "id": "relay_strand_2",
+    "name": "Relay Strand",
     "rects": [
      [
-      84,
-      50,
-      36,
-      20
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0021",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     18
-    ],
-    "design_note": "Coral Claw bruisers on the east beach at the top of the band (Lv40); the seaweed rocks break their line so they arrive in twos and threes."
-   },
-   {
-    "id": "beached_buoy",
-    "name": "Beached Pump-Buoy",
-    "rects": [
-     [
-      84,
-      6,
-      30,
-      18
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0020",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0060",
-      "weight": 50
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Gulls perch on the stranded buoy while hoppers shelter in its shadow: an aggressive flock drags passive hoppers into the fight."
-   }
-  ]
- },
- {
-  "map_id": "tha_fld_02",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "polyp_gardens",
-    "name": "Polyp Gardens",
-    "rects": [
-     [
-      76,
-      50,
-      36,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0061",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Ranged Polyp Spitters among tall coral heads on the east reef: the heads break line of sight, so players pull spitters round them into melee."
-   },
-   {
-    "id": "kelp_shallows",
-    "name": "Kelp Shallows",
-    "rects": [
-     [
-      10,
-      12,
-      38,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0061",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Polyp Spitters (Lv42) spread through the north-west shallows: the kelp screens their line of sight, so players learn to pull ranged fire out into the open."
-   },
-   {
-    "id": "west_reef",
-    "name": "West Reef",
-    "rects": [
-     [
-      12,
-      58,
-      38,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0061",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     18
-    ],
-    "design_note": "Polyp Spitters on the old crab burrows near the camp: aggressive ranged fire a short run from safety, for players who arrive at 39."
-   },
-   {
-    "id": "dead_coral_heads",
-    "name": "Dead Coral Heads",
-    "rects": [
-     [
-      72,
-      8,
-      40,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0061",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Polyp Spitters crowded on the north reef's dead coral heads: a dense ranged pack with little cover, so players must close the gap fast."
-   }
-  ]
- },
- {
-  "map_id": "tha_fld_03",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "pumpworks",
-    "name": "Pumpworks",
-    "rects": [
-     [
-      84,
-      6,
-      40,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0022",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Brine Automatons round the pump house: constructs need room (~33 cells each) and the pump blocks the middle, so packs come round both sides."
-   },
-   {
-    "id": "kelp_beds",
-    "name": "Kelp Beds",
-    "rects": [
-     [
-      8,
-      38,
-      24,
-      40
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0062",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Kelp Tenders among the west pools, straddling the rim road: assist means a careless walk pulls the bed, and supports heal each other, so focus fire matters."
-   },
-   {
-    "id": "barnacle_paddles",
-    "name": "Barnacle Paddles",
-    "rects": [
-     [
-      100,
-      66,
-      24,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0062",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Kelp Tenders (Lv44) grown over the east tidewheels' paddles; the bay at their back means they can only be approached from the land side, and assist pulls the whole bed at once."
-   },
-   {
-    "id": "quay_pilings",
-    "name": "Old Pilings",
-    "rects": [
-     [
-      54,
-      6,
-      26,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0022",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Brine Automatons patching the old quay timbers near the reef-road camp: a smaller construct pocket than the pumpworks, a second Aetherite source for players arriving from the reef."
-   }
-  ]
- },
- {
-  "map_id": "tha_fld_04",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "hulk_graveyard",
-    "name": "Hulk Graveyard",
-    "rects": [
-     [
-      64,
-      72,
-      40,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0063",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The signature horde: 40 assisting Hullborers among hull ribs, ~23 cells each. Assist empties a wreck at once; respawn is quick so the graveyard refills between trains."
-   },
-   {
-    "id": "salvage_field",
-    "name": "Sunken Freighter",
-    "rects": [
-     [
-      60,
-      6,
-      34,
+      81,
+      93,
+      28,
       22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0063",
+      "monster_id": "mob_0023",
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     10,
-     20
+     6,
+     14
     ],
-    "design_note": "Hullborers riddling the half-sunk freighter: a smaller assist swarm that boils out of the hull, away from the graveyard's crowds."
+    "design_note": "Assisting guardians on the buoy cables by the camp."
    },
    {
-    "id": "buoy_line",
-    "name": "Buoy Line",
+    "id": "relay_strand_3",
+    "name": "Relay Strand",
     "rects": [
      [
-      120,
-      8,
-      26,
-      40
+      61,
+      123,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0063",
+      "monster_id": "mob_0023",
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     12,
-     24
+     6,
+     14
     ],
-    "design_note": "Hullborers in the timber floats of the relay buoys on the seaward bar; their shared tunnels (assist) make the whole line answer one pull."
+    "design_note": "Assisting guardians on the buoy cables by the camp."
    },
    {
-    "id": "drift_bar",
-    "name": "Drift Bar",
+    "id": "ram_terraces_1",
+    "name": "Ram Terraces",
     "rects": [
      [
-      8,
       74,
-      36,
-      26
+      169,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0063",
+      "monster_id": "mob_0071",
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "West of the channel, close to camp: a quieter Hullborer pocket in the driftwood for small groups."
-   }
-  ]
- },
- {
-  "map_id": "tha_fld_05",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
+    "design_note": "Glass-backed ram flocks on the terraces."
+   },
    {
-    "id": "pearl_beds",
+    "id": "ram_terraces_2",
+    "name": "Ram Terraces",
+    "rects": [
+     [
+      114,
+      169,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0071",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Glass-backed ram flocks on the terraces."
+   },
+   {
+    "id": "ram_terraces_3",
+    "name": "Ram Terraces",
+    "rects": [
+     [
+      94,
+      199,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0071",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Glass-backed ram flocks on the terraces."
+   },
+   {
+    "id": "pearl_beds_1",
     "name": "Pearl Beds",
     "rects": [
      [
-      44,
-      74,
-      40,
-      30
+      75,
+      17,
+      28,
+      22
      ]
     ],
     "species": [
@@ -2794,207 +2228,274 @@
      6,
      14
     ],
-    "design_note": "Fleeing skates among oyster pools: the pools pen them in, so a player who herds from the open side gets them bunched for an AoE."
+    "design_note": "Fleeing skates on the pearl beds, gear walkers at the frozen pumps."
    },
    {
-    "id": "relay_mast",
-    "name": "Relay Mast",
+    "id": "pearl_beds_2",
+    "name": "Pearl Beds",
     "rects": [
      [
-      84,
-      10,
-      34,
-      30
+      115,
+      17,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0023",
+      "monster_id": "mob_0026",
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     12,
-     24
+     6,
+     14
     ],
-    "design_note": "Relay Guardians (Lv52, low end of the band) guard the mast: the construct farm of the flats and a steady Aetherite source."
+    "design_note": "Fleeing skates on the pearl beds, gear walkers at the frozen pumps."
    },
    {
-    "id": "south_strand",
-    "name": "South Strand",
+    "id": "pearl_beds_3",
+    "name": "Pearl Beds",
     "rects": [
      [
-      88,
-      98,
-      30,
-      16
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0023",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Relay Guardians (Lv52) walking the buoy cables on the south strand, tucked against the mangroves so a pull comes from one direction; shared sonar (assist) wakes the whole cable."
-   },
-   {
-    "id": "stilt_ruins",
-    "name": "Stilt Ruins",
-    "rects": [
-     [
-      8,
-      30,
-      34,
-      36
+      95,
+      47,
+      28,
+      22
      ]
     ],
     "species": [
      {
       "monster_id": "mob_0064",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Skates (Lv53) buried in the mud under the stilt houses: fleeing targets that scatter through the pilings, an easy herding pocket next to the arrival camp."
-   }
-  ]
- },
- {
-  "map_id": "tha_fld_06",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "lightning_masts",
-    "name": "Lightning Masts",
-    "rects": [
-     [
-      10,
-      12,
-      36,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0066",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Aggressive ranged rays circling the masts: the masts block, so players fight among them and pull rays into melee range one ring at a time."
-   },
-   {
-    "id": "intake_vents",
-    "name": "Intake Vents",
-    "rects": [
-     [
-      70,
-      14,
-      22,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0065",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Thunderhull Turtles (Lv56) basking in the warm vent outflow beside the hatch camp: assist means the vent herd moves as one, a tanky last stop before going down."
-   },
-   {
-    "id": "breakwater",
-    "name": "Ruined Breakwater",
-    "rects": [
-     [
-      66,
-      60,
-      26,
-      40
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0065",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Turtle herd (Lv56, low end) in the lee of the breakwater, the sea at their backs: assist means the herd moves as one."
-   },
-   {
-    "id": "storm_flats",
-    "name": "Storm Flats",
-    "rects": [
-     [
-      20,
-      60,
-      32,
-      40
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0066",
       "weight": 50
      },
      {
-      "monster_id": "mob_0065",
+      "monster_id": "mob_0026",
       "weight": 50
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "Storm-wrack mix of rays and turtles round the storm pool: ranged and bruiser behaviours in one pull, the region's final mixed-AI test."
+    "design_note": "Fleeing skates on the pearl beds, gear walkers at the frozen pumps."
+   },
+   {
+    "id": "turtle_coils_1",
+    "name": "Turtle Coils",
+    "rects": [
+     [
+      164,
+      165,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0065",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Turtle herds and the serpent horde in the coil trenches."
+   },
+   {
+    "id": "turtle_coils_2",
+    "name": "Turtle Coils",
+    "rects": [
+     [
+      204,
+      165,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0072",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Turtle herds and the serpent horde in the coil trenches."
+   },
+   {
+    "id": "turtle_coils_3",
+    "name": "Turtle Coils",
+    "rects": [
+     [
+      184,
+      195,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0065",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0072",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Turtle herds and the serpent horde in the coil trenches."
+   },
+   {
+    "id": "squall_point_1",
+    "name": "Squall Point",
+    "rects": [
+     [
+      165,
+      23,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0066",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged rays on the point; a Glacier Juggernaut guards the way to the Heliostat Vault."
+   },
+   {
+    "id": "squall_point_2",
+    "name": "Squall Point",
+    "rects": [
+     [
+      205,
+      23,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0066",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged rays on the point; a Glacier Juggernaut guards the way to the Heliostat Vault."
+   },
+   {
+    "id": "squall_point_3",
+    "name": "Squall Point",
+    "rects": [
+     [
+      185,
+      53,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0066",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged rays on the point; a Glacier Juggernaut guards the way to the Heliostat Vault."
+   },
+   {
+    "id": "squall_point_glacier_juggernaut",
+    "name": "Squall Point (Glacier Juggernaut)",
+    "rects": [
+     [
+      191,
+      79,
+      16,
+      12
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0073",
+      "weight": 1
+     }
+    ],
+    "target_alive": 4,
+    "respawn_sec": [
+     45,
+     90
+    ],
+    "design_note": "A few Glacier Juggernaut elites hold this part of Squall Point."
    }
   ]
  },
  {
-  "map_id": "tha_dun_01",
+  "map_id": "cry_fld_01",
   "instance_rules": {
-   "min_alive": 60,
-   "max_alive": 120
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "pressure_hall",
-    "name": "Pressure Hall",
+    "id": "ash_flats_1",
+    "name": "Ash Flats",
     "rects": [
      [
-      32,
-      20,
+      48,
+      102,
       28,
-      20
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0028",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Passive ash grazers and drone swarms where ice meets the first lava."
+   },
+   {
+    "id": "ash_flats_2",
+    "name": "Ash Flats",
+    "rects": [
+     [
+      88,
+      102,
+      28,
+      22
      ]
     ],
     "species": [
@@ -3008,16 +2509,68 @@
      6,
      14
     ],
-    "design_note": "The densest drone nest (~12 cells each) in a round hall players can kite around: the dungeon's main AoE farm."
+    "design_note": "Passive ash grazers and drone swarms where ice meets the first lava."
    },
    {
-    "id": "flooded_gallery",
-    "name": "Flooded Gallery",
+    "id": "ash_flats_3",
+    "name": "Ash Flats",
     "rects": [
      [
-      38,
-      66,
-      36,
+      68,
+      132,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0028",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0067",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Passive ash grazers and drone swarms where ice meets the first lava."
+   },
+   {
+    "id": "drowned_archive_1",
+    "name": "Drowned Archive",
+    "rects": [
+     [
+      68,
+      178,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0027",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Keepers in a flooded archive wing; medusas heal them."
+   },
+   {
+    "id": "drowned_archive_2",
+    "name": "Drowned Archive",
+    "rects": [
+     [
+      108,
+      178,
+      28,
       22
      ]
     ],
@@ -3027,27 +2580,27 @@
       "weight": 1
      }
     ],
-    "target_alive": 30,
+    "target_alive": 40,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "Medusae over a flooded floor: supports alone are slow to kill but safe, a breather between drone pulls."
+    "design_note": "Keepers in a flooded archive wing; medusas heal them."
    },
    {
-    "id": "pump_ring",
-    "name": "Pump Ring",
+    "id": "drowned_archive_3",
+    "name": "Drowned Archive",
     "rects": [
      [
-      84,
-      70,
-      20,
-      18
+      88,
+      208,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0067",
+      "monster_id": "mob_0027",
       "weight": 50
      },
      {
@@ -3055,21 +2608,249 @@
       "weight": 50
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "Drones shielded by medusae on the way to the boss: the real test of focusing supports first."
+    "design_note": "Keepers in a flooded archive wing; medusas heal them."
    },
    {
-    "id": "sonar_chamber",
-    "name": "Sonar Chamber",
+    "id": "slag_mirrors_1",
+    "name": "Slag Mirrors",
     "rects": [
      [
-      102,
-      24,
+      69,
+      26,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0080",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Toads in the slag pools under mirror ice; mirrorshades mend them."
+   },
+   {
+    "id": "slag_mirrors_2",
+    "name": "Slag Mirrors",
+    "rects": [
+     [
+      109,
+      26,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0074",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Toads in the slag pools under mirror ice; mirrorshades mend them."
+   },
+   {
+    "id": "slag_mirrors_3",
+    "name": "Slag Mirrors",
+    "rects": [
+     [
+      89,
+      56,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0080",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0074",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Toads in the slag pools under mirror ice; mirrorshades mend them."
+   },
+   {
+    "id": "behemoth_ice_1",
+    "name": "Behemoth Ice",
+    "rects": [
+     [
+      158,
+      174,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0029",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Aggressive imps among passive behemoths."
+   },
+   {
+    "id": "behemoth_ice_2",
+    "name": "Behemoth Ice",
+    "rects": [
+     [
+      198,
+      174,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0075",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Aggressive imps among passive behemoths."
+   },
+   {
+    "id": "behemoth_ice_3",
+    "name": "Behemoth Ice",
+    "rects": [
+     [
+      178,
+      204,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0029",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0075",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Aggressive imps among passive behemoths."
+   },
+   {
+    "id": "sentry_vents_1",
+    "name": "Sentry Vents",
+    "rects": [
+     [
+      159,
+      32,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0076",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Sentries and hound packs at the vents; the Drowned Signalmind surfaces here."
+   },
+   {
+    "id": "sentry_vents_2",
+    "name": "Sentry Vents",
+    "rects": [
+     [
+      199,
+      32,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0030",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Sentries and hound packs at the vents; the Drowned Signalmind surfaces here."
+   },
+   {
+    "id": "sentry_vents_3",
+    "name": "Sentry Vents",
+    "rects": [
+     [
+      179,
+      62,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0076",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0030",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Sentries and hound packs at the vents; the Drowned Signalmind surfaces here."
+   },
+   {
+    "id": "drowned_signalmind_arena",
+    "name": "Drowned Signalmind's Arena",
+    "rects": [
+     [
+      186,
       12,
+      14,
       12
      ]
     ],
@@ -3084,653 +2865,7 @@
      300,
      420
     ],
-    "design_note": "Region boss, 5-7 minute respawn, alone in its chamber."
-   }
-  ]
- },
- {
-  "map_id": "cry_fld_01",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "thaw_strip",
-    "name": "Thaw Strip",
-    "rects": [
-     [
-      78,
-      62,
-      32,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0024",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Passive mites packed along the heat pipes (~19 cells each), close to the arrival camp: the warm-up herd for players arriving from Thalassia."
-   },
-   {
-    "id": "snowfield",
-    "name": "Snowfield",
-    "rects": [
-     [
-      96,
-      10,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0070",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Open snow bounded by the north forest edge: fleeing hares run into the trees and bunch there."
-   },
-   {
-    "id": "lake_shore",
-    "name": "Frozen Lake",
-    "rects": [
-     [
-      14,
-      58,
-      48,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0025",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Ranged wisps at the top of the band (Lv50) over the ice; the open water in the middle breaks their line, so players pull them round the shore."
-   },
-   {
-    "id": "survey_line",
-    "name": "Survey Line",
-    "rects": [
-     [
-      50,
-      8,
-      40,
-      22
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0024",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0070",
-      "weight": 50
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Mites and hares among the survey ruins on the way north: a quieter mixed pocket of passive and fleeing monsters."
-   }
-  ]
- },
- {
-  "map_id": "cry_fld_02",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "ram_terraces",
-    "name": "Ram Terraces",
-    "rects": [
-     [
-      60,
-      100,
-      38,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0071",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     8,
-     18
-    ],
-    "design_note": "Assisting ram flocks on the south terraces, mid-band (Lv52): the region's first bruiser pack, best pulled whole and burned with AoE."
-   },
-   {
-    "id": "glass_spines",
-    "name": "Glass Spines",
-    "rects": [
-     [
-      26,
-      12,
-      40,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0071",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Assisting rams among crystal spines, mid-band (Lv52); the spines split the flock into small groups, so players pull them a few at a time."
-   },
-   {
-    "id": "windscour",
-    "name": "Windscour",
-    "rects": [
-     [
-      26,
-      82,
-      22,
-      34
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0071",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Rams (Lv52) in a narrow strip between the west cliff and the road: the assisting flock charges as one and pins itself against the cliff."
-   },
-   {
-    "id": "obelisk_field",
-    "name": "Obelisk Field",
-    "rects": [
-     [
-      70,
-      8,
-      30,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0071",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Assisting rams sheltering round the obelisks near the east exit: the last flock before Snowcoil, pulled whole between the stones."
-   }
-  ]
- },
- {
-  "map_id": "cry_fld_03",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "coil_trenches",
-    "name": "Coil Trenches",
-    "rects": [
-     [
-      78,
-      40,
-      36,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0072",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The signature horde: 40 aggressive serpents in trenches between frozen coils. The coils split the pocket into lanes that funnel a train into lines; quick respawn refills it."
-   },
-   {
-    "id": "pumphouse_yard",
-    "name": "Pumphouse Yard",
-    "rects": [
-     [
-      12,
-      10,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0026",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Icegears at the low end of the band in the old pump yard: constructs at ~40 cells each, a steady Aetherite farm."
-   },
-   {
-    "id": "lower_slopes",
-    "name": "Lower Slopes",
-    "rects": [
-     [
-      10,
-      80,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0026",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     18
-    ],
-    "design_note": "Icegears (Lv55, low end) wandering the south slopes near the lift: aggressive constructs on open ground, an easier Aetherite farm for players who took the lift up early."
-   },
-   {
-    "id": "research_huts",
-    "name": "Research Huts",
-    "rects": [
-     [
-      96,
-      96,
-      34,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0072",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0026",
-      "weight": 50
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Serpents and gear walkers among abandoned huts: crates and walls break the ground into rooms, a mixed swarm-plus-construct pull."
-   }
-  ]
- },
- {
-  "map_id": "cry_fld_04",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "vault_hollow",
-    "name": "Vault Hollow",
-    "rects": [
-     [
-      70,
-      56,
-      40,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0027",
-      "weight": 1
-     }
-    ],
-    "target_alive": 45,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The pass's horde: assisting keepers (Lv62, top of the band) packed in a hollow below the road, ~22 cells each; one pull wakes the hollow, and the south cliff pins the train."
-   },
-   {
-    "id": "vault_doors",
-    "name": "Vault Doors",
-    "rects": [
-     [
-      116,
-      8,
-      32,
-      22
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0027",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     12,
-     24
-    ],
-    "design_note": "Keepers at the top of the band guard the sealed doors; assist means the whole facade answers one pull."
-   },
-   {
-    "id": "plough_road",
-    "name": "Plough Road",
-    "rects": [
-     [
-      34,
-      54,
-      30,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0027",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Keepers (Lv62) strung along the plough route near the arrival camp: assist means a careless pull from the road brings the whole line."
-   },
-   {
-    "id": "plough_shed",
-    "name": "Plough Shed",
-    "rects": [
-     [
-      124,
-      50,
-      18,
-      16
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0073",
-      "weight": 1
-     }
-    ],
-    "target_alive": 2,
-    "respawn_sec": [
-     120,
-     200
-    ],
-    "design_note": "The region's elite: two Glacier Juggernauts on a 2-3 minute respawn, slow enough to kite round the shed; worth a group pull for the Aetherite."
-   }
-  ]
- },
- {
-  "map_id": "cry_fld_05",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "mirror_field",
-    "name": "Mirror Field",
-    "rects": [
-     [
-      76,
-      40,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0074",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Mirrorshades alone on the polished centre: supports that heal each other, so the pocket teaches burst AoE over steady damage."
-   },
-   {
-    "id": "lens_islands",
-    "name": "Lens Islands",
-    "rects": [
-     [
-      12,
-      8,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0074",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     12,
-     24
-    ],
-    "design_note": "Mirrorshades (Lv64, mid-band) on the lens islands among rocks, ~38 cells each: supports that mend each other, so players burst them an island at a time."
-   },
-   {
-    "id": "lakeshore_grazing",
-    "name": "Lakeshore Grazing",
-    "rects": [
-     [
-      76,
-      98,
-      44,
-      20
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0075",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Passive Behemoths at the top of the band on the south shore: players gather them with taunts at their own pace."
-   },
-   {
-    "id": "shatter_line",
-    "name": "Shatter Line",
-    "rects": [
-     [
-      14,
-      48,
-      36,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0074",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0075",
-      "weight": 50
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Mirrorshades healing grazers along an open lead: the support-first lesson in a real mixed pack."
-   }
-  ]
- },
- {
-  "map_id": "cry_fld_06",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "snowdrift_pasture",
-    "name": "Haunted Drifts",
-    "rects": [
-     [
-      84,
-      96,
-      40,
-      24
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0077",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Aggressive specters (Lv71, +1 over the band) swarming the soft snow over the warm conduit: a dense open-field AoE farm away from the Archive door."
-   },
-   {
-    "id": "conduit_pylons",
-    "name": "Conduit Pylons",
-    "rects": [
-     [
-      44,
-      6,
-      44,
-      22
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0076",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Aggressive sentries along the north arc's pylons, ~27 cells each: walking the ring here pulls them, by design."
-   },
-   {
-    "id": "west_arc",
-    "name": "West Arc",
-    "rects": [
-     [
-      6,
-      36,
-      26,
-      46
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0076",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Aggressive sentries (Lv68, mid-band) on the west arc nearest the arrival camp: their lances reach 3 cells, so players close in before they pull."
-   },
-   {
-    "id": "vent_breach",
-    "name": "Vent Breach",
-    "rects": [
-     [
-      104,
-      62,
-      30,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0077",
-      "weight": 60
-     },
-     {
-      "monster_id": "mob_0076",
-      "weight": 40
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     6,
-     14
-    ],
-    "design_note": "Lv71 specters (+1 over the band) leaking from the breach with sentries chasing them: the Archive's leak boiling out beside its door."
+    "design_note": "Drowned Signalmind roams the open field here: a world boss for groups."
    }
   ]
  },
@@ -3754,7 +2889,7 @@
     ],
     "species": [
      {
-      "monster_id": "mob_0078",
+      "monster_id": "mob_0077",
       "weight": 1
      }
     ],
@@ -3802,7 +2937,7 @@
     ],
     "species": [
      {
-      "monster_id": "mob_0078",
+      "monster_id": "mob_0077",
       "weight": 1
      }
     ],
@@ -3842,418 +2977,91 @@
  {
   "map_id": "emb_fld_01",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "ash_flats",
-    "name": "Ash Flats",
+    "id": "tender_yards_1",
+    "name": "Tender Yards",
     "rects": [
      [
-      20,
-      12,
-      40,
-      30
+      41,
+      100,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0028",
+      "monster_id": "mob_0081",
       "weight": 1
      }
     ],
     "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Open ash with only two rock outcrops: passive Ashcrawlers at the bottom of the band, ~27 cells each, so returning players can gather a 40-pack with a taunt and test their AoE on a new region's numbers."
-   },
-   {
-    "id": "slag_pools",
-    "name": "Slag Pools",
-    "rects": [
-     [
-      14,
-      72,
-      40,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0080",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Assisting bruisers round two lava pools: one hit wakes the pool, so the pocket is sized for a deliberate 10-15 bruiser pull, not a wander-through."
-   },
-   {
-    "id": "heat_sink_vents",
-    "name": "Heat-Sink Vents",
-    "rects": [
-     [
-      96,
-      50,
-      30,
-      40
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0080",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Assisting Lv63 toads round the toppled heat-sink under the lava fissure: a second, larger toad pull kept off the main road so the camp-to-crossroads walk stays calm."
+    "design_note": "Gardener constructs scavenging the yards by the camp."
    },
    {
-    "id": "crust_ridge",
-    "name": "Crust Ridge",
+    "id": "tender_yards_2",
+    "name": "Tender Yards",
     "rects": [
      [
-      60,
-      12,
-      24,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0028",
-      "weight": 1
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Beside the north road: a small passive grazer herd on the lava crust, an easy top-up for a train on the way to Cinder Track."
-   }
-  ]
- },
- {
-  "map_id": "emb_fld_02",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "slag_terraces",
-    "name": "Slag Terraces",
-    "rects": [
-     [
-      64,
-      104,
-      36,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0029",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Aggressive Lv65 imps on stepped slag south of the lava stream, next to camp: a smaller first taste of the horde before the bridge."
-   },
-   {
-    "id": "imp_hollows",
-    "name": "Imp Hollows",
-    "rects": [
-     [
-      8,
-      56,
-      32,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0029",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The signature horde: 40 aggressive imps (~22 cells each) between the stream and the west road; quick respawn so the hollow refills between 30-mob trains."
-   },
-   {
-    "id": "scorch_scree",
-    "name": "Scorch Scree",
-    "rects": [
-     [
-      70,
-      34,
-      34,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0029",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Aggressive imps on the open scree under the lava falls: packs rush down on anyone climbing the east road, so trains build themselves."
-   },
-   {
-    "id": "rail_trestles",
-    "name": "Rail Trestles",
-    "rects": [
-     [
-      16,
-      8,
-      40,
-      22
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0029",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Rail pipes break the ground into lanes; imp packs funnel along them, good for stringing a train between the trestles."
-   }
-  ]
- },
- {
-  "map_id": "emb_fld_03",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "hound_kennels",
-    "name": "Hound Kennels",
-    "rects": [
-     [
-      78,
-      58,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0030",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The main horde: 40 fast hounds in the open kennel yard. They are the quickest monster in the region, so the yard is wide (~29 cells each) to give room to kite into a stack."
-   },
-   {
-    "id": "cold_forges",
-    "name": "Cold Forges",
-    "rects": [
-     [
-      10,
-      22,
-      36,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0081",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0030",
-      "weight": 50
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Tenders weld the hounds they live with and flee when hit: the pocket teaches killing the support first. Forge machinery splits the yard into lanes."
-   },
-   {
-    "id": "channel_bank",
-    "name": "Channel Bank",
-    "rects": [
-     [
-      8,
-      76,
-      44,
-      20
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0030",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Aggressive hounds along the bank between two lava channels: a long thin pocket that strings the fast packs out along the lava, an overflow for the kennels."
-   },
-   {
-    "id": "slag_heaps",
-    "name": "Slag Heaps",
-    "rects": [
-     [
-      86,
-      106,
-      30,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0081",
-      "weight": 40
-     },
-     {
-      "monster_id": "mob_0030",
-      "weight": 60
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "South of the channel near camp: aggressive hounds guard the scavenging tenders, so the pack charges in and the tenders stay to mend it instead of fleeing alone. Kill the tenders first; the farm for Tender materials (the focus-tonic recipe)."
-   }
-  ]
- },
- {
-  "map_id": "emb_fld_04",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "vent_pool",
-    "name": "The Vent Pool",
-    "rects": [
-     [
-      56,
-      16,
-      34,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0082",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The signature horde: 40 durable skinks circling the magma pool. The pool in the middle means a train loops round it naturally; crystal outcrops break line of sight."
-   },
-   {
-    "id": "southern_fissure",
-    "name": "Southern Fissure",
-    "rects": [
-     [
-      94,
-      84,
-      34,
-      22
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0083",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Ranged worms along the fissure: the lava sits between them and the road, so players must path round and pull them off the edge."
-   },
-   {
-    "id": "heat_tap_ridge",
-    "name": "Heat-Tap Ridge",
-    "rects": [
-     [
+      81,
       100,
-      6,
-      40,
-      28
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0082",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0083",
-      "weight": 50
+      "monster_id": "mob_0081",
+      "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     10,
-     20
+     6,
+     14
     ],
-    "design_note": "Skinks and ranged Spitters mixed round the drill: the skinks rush while the worms spit from behind the machinery, the hardest pocket on the map."
+    "design_note": "Gardener constructs scavenging the yards by the camp."
    },
    {
-    "id": "ash_wash",
-    "name": "Ash Wash",
+    "id": "tender_yards_3",
+    "name": "Tender Yards",
     "rects": [
      [
-      8,
-      16,
-      36,
-      40
+      61,
+      130,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0081",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Gardener constructs scavenging the yards by the camp."
+   },
+   {
+    "id": "skink_flow_1",
+    "name": "Skink Flow",
+    "rects": [
+     [
+      74,
+      176,
+      28,
+      22
      ]
     ],
     "species": [
@@ -4262,31 +3070,222 @@
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     7,
-     15
+     6,
+     14
     ],
-    "design_note": "Skinks alone in the western gully, away from the Spitters: the catch-up pocket for players arriving under-levelled."
-   }
-  ]
- },
- {
-  "map_id": "emb_fld_05",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
+    "design_note": "Skinks along the lava channels."
+   },
    {
-    "id": "girder_fields",
-    "name": "Girder Fields",
+    "id": "skink_flow_2",
+    "name": "Skink Flow",
     "rects": [
      [
-      86,
-      52,
+      114,
+      176,
       28,
-      40
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0082",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Skinks along the lava channels."
+   },
+   {
+    "id": "skink_flow_3",
+    "name": "Skink Flow",
+    "rects": [
+     [
+      94,
+      206,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0082",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Skinks along the lava channels."
+   },
+   {
+    "id": "spitter_vents_1",
+    "name": "Spitter Vents",
+    "rects": [
+     [
+      75,
+      24,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0083",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged spitters at the vents, passive wisps drifting through."
+   },
+   {
+    "id": "spitter_vents_2",
+    "name": "Spitter Vents",
+    "rects": [
+     [
+      115,
+      24,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0032",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged spitters at the vents, passive wisps drifting through."
+   },
+   {
+    "id": "spitter_vents_3",
+    "name": "Spitter Vents",
+    "rects": [
+     [
+      95,
+      54,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0083",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0032",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Ranged spitters at the vents, passive wisps drifting through."
+   },
+   {
+    "id": "knight_s_road_1",
+    "name": "Knight's Road",
+    "rects": [
+     [
+      164,
+      172,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0031",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Knight patrols and lurk packs on the old road."
+   },
+   {
+    "id": "knight_s_road_2",
+    "name": "Knight's Road",
+    "rects": [
+     [
+      204,
+      172,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0090",
+      "weight": 1
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Knight patrols and lurk packs on the old road."
+   },
+   {
+    "id": "knight_s_road_3",
+    "name": "Knight's Road",
+    "rects": [
+     [
+      184,
+      202,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0031",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0090",
+      "weight": 50
+     }
+    ],
+    "target_alive": 40,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Knight patrols and lurk packs on the old road."
+   },
+   {
+    "id": "rivet_moraine_1",
+    "name": "Rivet Moraine",
+    "rects": [
+     [
+      165,
+      30,
+      28,
+      22
      ]
     ],
     "species": [
@@ -4297,148 +3296,76 @@
     ],
     "target_alive": 40,
     "respawn_sec": [
-     5,
-     12
+     6,
+     14
     ],
-    "design_note": "The signature horde across the river: 40 assisting scraplings, so one hit rings the whole heap into a 30-40 train. Crates and gear scrap give a few corners to gather against."
+    "design_note": "Scraplings, haulers and blooms on the rivet heaps by the Cryocore Archive."
    },
    {
-    "id": "truss_graveyard",
-    "name": "Truss Graveyard",
+    "id": "rivet_moraine_2",
+    "name": "Rivet Moraine",
     "rects": [
      [
-      10,
-      8,
-      46,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0031",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Furnace Knights in their own ground: aggressive constructs among fallen trusses, ~40 cells each so they come in twos and threes, never all at once."
-   },
-   {
-    "id": "lava_banks",
-    "name": "Lava Banks",
-    "rects": [
-     [
-      84,
-      6,
+      205,
       30,
-      24
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0031",
+      "monster_id": "mob_0033",
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     7,
-     15
+     6,
+     14
     ],
-    "design_note": "Lv77 knights patrolling the east bank above the High Span road: aggressive constructs spread along the ledge, so they come one or two at a time."
+    "design_note": "Scraplings, haulers and blooms on the rivet heaps by the Cryocore Archive."
    },
    {
-    "id": "lower_span",
-    "name": "Lower Span Approach",
+    "id": "rivet_moraine_3",
+    "name": "Rivet Moraine",
     "rects": [
      [
-      14,
-      64,
-      40,
-      30
+      185,
+      60,
+      28,
+      22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0084",
+      "monster_id": "mob_0091",
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 40,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "Assisting scraplings by the southern bridge: one ring pulls the heap round the corner of the span, a smaller overflow for the Girder Fields."
+    "design_note": "Scraplings, haulers and blooms on the rivet heaps by the Cryocore Archive."
    }
   ]
  },
  {
-  "map_id": "emb_fld_06",
+  "map_id": "noc_fld_01",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "pour_channels",
-    "name": "Pour Channels",
+    "id": "brute_pens_1",
+    "name": "Brute Pens",
     "rects": [
      [
-      94,
-      64,
-      24,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0086",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Lv85 wraiths (top of band) between the channel and the ring road: fragile but hard-hitting, so packs die fast and refill fast."
-   },
-   {
-    "id": "scrap_moraine",
-    "name": "Scrap Moraine",
-    "rects": [
-     [
-      8,
-      70,
-      24,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0085",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Lv83 brutes packed on the scrap heap by the west channel: aggressive bruisers in the open, a steadier fight than the yard's aisles for players just arrived from Ironfall."
-   },
-   {
-    "id": "mould_yard",
-    "name": "Mould Yard",
-    "rects": [
-     [
-      84,
-      6,
-      34,
+      45,
+      87,
+      28,
       22
      ]
     ],
@@ -4448,22 +3375,194 @@
       "weight": 1
      }
     ],
-    "target_alive": 25,
+    "target_alive": 50,
     "respawn_sec": [
-     9,
-     18
+     6,
+     14
     ],
-    "design_note": "Aggressive bruisers among the mould rows: the moulds split the yard into aisles, so Brutes come one aisle at a time."
+    "design_note": "Assisting brutes in the pens by the camp."
    },
    {
-    "id": "crucible_rim",
-    "name": "Crucible Rim",
+    "id": "brute_pens_2",
+    "name": "Brute Pens",
     "rects": [
      [
-      40,
-      92,
-      30,
-      18
+      85,
+      87,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0085",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Assisting brutes in the pens by the camp."
+   },
+   {
+    "id": "brute_pens_3",
+    "name": "Brute Pens",
+    "rects": [
+     [
+      65,
+      117,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0085",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Assisting brutes in the pens by the camp."
+   },
+   {
+    "id": "coupler_yards_1",
+    "name": "Coupler Yards",
+    "rects": [
+     [
+      98,
+      161,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0092",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Mite crews and ranged drones in the rail yards."
+   },
+   {
+    "id": "coupler_yards_2",
+    "name": "Coupler Yards",
+    "rects": [
+     [
+      138,
+      161,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0034",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Mite crews and ranged drones in the rail yards."
+   },
+   {
+    "id": "coupler_yards_3",
+    "name": "Coupler Yards",
+    "rects": [
+     [
+      118,
+      191,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0092",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0034",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Mite crews and ranged drones in the rail yards."
+   },
+   {
+    "id": "wraith_pour_1",
+    "name": "Wraith Pour",
+    "rects": [
+     [
+      99,
+      13,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0086",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Wraiths and the riftling horde along the tear."
+   },
+   {
+    "id": "wraith_pour_2",
+    "name": "Wraith Pour",
+    "rects": [
+     [
+      139,
+      13,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0093",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Wraiths and the riftling horde along the tear."
+   },
+   {
+    "id": "wraith_pour_3",
+    "name": "Wraith Pour",
+    "rects": [
+     [
+      119,
+      43,
+      28,
+      22
      ]
     ],
     "species": [
@@ -4472,106 +3571,101 @@
       "weight": 50
      },
      {
-      "monster_id": "mob_0085",
+      "monster_id": "mob_0093",
       "weight": 50
      }
     ],
-    "target_alive": 25,
+    "target_alive": 50,
     "respawn_sec": [
-     8,
-     16
+     6,
+     14
     ],
-    "design_note": "Wraiths and Brutes mixed below the ring road: fast-dying hitters behind a bruiser wall, the last field test before Furnace Zero."
-   }
-  ]
- },
- {
-  "map_id": "emb_dun_01",
-  "instance_rules": {
-   "min_alive": 60,
-   "max_alive": 120
-  },
-  "pockets": [
+    "design_note": "Wraiths and the riftling horde along the tear."
+   },
    {
-    "id": "pour_gallery",
-    "name": "Pour Gallery",
+    "id": "stoker_heights_1",
+    "name": "Stoker Heights",
     "rects": [
      [
+      152,
+      87,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0087",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Stokers and fleeing sparkwings; Kiln Prime walks the heights."
+   },
+   {
+    "id": "stoker_heights_2",
+    "name": "Stoker Heights",
+    "rects": [
+     [
+      192,
+      87,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0094",
+      "weight": 1
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Stokers and fleeing sparkwings; Kiln Prime walks the heights."
+   },
+   {
+    "id": "stoker_heights_3",
+    "name": "Stoker Heights",
+    "rects": [
+     [
+      172,
+      117,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0087",
+      "weight": 50
+     },
+     {
+      "monster_id": "mob_0094",
+      "weight": 50
+     }
+    ],
+    "target_alive": 50,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Stokers and fleeing sparkwings; Kiln Prime walks the heights."
+   },
+   {
+    "id": "kiln_prime_arena",
+    "name": "Kiln Prime's Arena",
+    "rects": [
+     [
+      179,
+      67,
       14,
-      30,
-      32,
-      20
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0087",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The dungeon's main farm: 40 assisting stokers in an oval hall you can circle round the pour pit; one pull wakes the gallery, the densest construct horde in Emberfall."
-   },
-   {
-    "id": "coal_pens",
-    "name": "Coal Pens",
-    "rects": [
-     [
-      78,
-      32,
-      30,
-      18
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0087",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Assisting Lv88 stokers on the short route to the core: they answer as one, so clear the pens or go round through the halls."
-   },
-   {
-    "id": "stoker_halls",
-    "name": "Stoker Halls",
-    "rects": [
-     [
-      16,
-      72,
-      36,
-      20
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0087",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Assisting constructs at the cap: one pull is the whole hall. The best Living Ember and Aetherite source in the region."
-   },
-   {
-    "id": "zero_core",
-    "name": "The Zero Core",
-    "rects": [
-     [
-      94,
-      82,
-      12,
       12
      ]
     ],
@@ -4586,525 +3680,49 @@
      300,
      420
     ],
-    "design_note": "Region boss, 5-7 minute respawn; two approaches (pens or halls) so a party can choose its fight on the way in."
-   }
-  ]
- },
- {
-  "map_id": "noc_fld_01",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "wisp_boulevard",
-    "name": "Wisp Boulevard",
-    "rects": [
-     [
-      6,
-      84,
-      36,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0032",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Open boulevard of passive wisps (~25 cells each): the safe first horde of the endgame, gathered with a taunt."
-   },
-   {
-    "id": "lurk_underpass",
-    "name": "The Underpass",
-    "rects": [
-     [
-      72,
-      36,
-      30,
-      22
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0090",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     6,
-     13
-    ],
-    "design_note": "Assisting scavengers between two tower stumps: one squeal pulls the underpass, so it is sized for a 20-30 train with walls on two sides to stack against."
-   },
-   {
-    "id": "overpass_fall",
-    "name": "Overpass Fall",
-    "rects": [
-     [
-      8,
-      10,
-      26,
-      40
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0032",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Passive wisps drifting along the fallen overpass by the west road: a quieter second boulevard, gathered with a taunt well away from the lurk packs."
-   },
-   {
-    "id": "conduit_square",
-    "name": "Conduit Square",
-    "rects": [
-     [
-      46,
-      80,
-      24,
-      18
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0032",
-      "weight": 50
-     },
-     {
-      "monster_id": "mob_0090",
-      "weight": 50
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Lurks hunt among the wisps under the obelisk: assisting scavengers drag passive wisps into a fight, the mixed-AI lesson of the region."
+    "design_note": "Kiln Prime roams the open field here: a world boss for groups."
    }
   ]
  },
  {
   "map_id": "noc_fld_02",
   "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
+   "min_alive": 450,
+   "max_alive": 800
   },
   "pockets": [
    {
-    "id": "nullbloom_beds",
-    "name": "Nullbloom Beds",
+    "id": "sentinel_colonnade_1",
+    "name": "Sentinel Colonnade",
     "rects": [
      [
-      8,
-      14,
-      34,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0091",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "Rooted supports in fenced beds: they barely move, so the beds are a static AoE farm. Sized at ~33 cells each so a cone clears a row at a time."
-   },
-   {
-    "id": "pond_shore",
-    "name": "Dead Pond",
-    "rects": [
-     [
-      78,
-      64,
-      34,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0033",
-      "weight": 1
-     }
-    ],
-    "target_alive": 35,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Haulers on the boardwalk shore: aggressive bruisers on an open loop round the water, met one or two at a time."
-   },
-   {
-    "id": "black_glasshouses",
-    "name": "Black Glasshouses",
-    "rects": [
-     [
-      62,
-      100,
       44,
-      28
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0091",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Blooms shade each other in packs: burn a row before the next one wakes. Glass and crystal break the hall into aisles."
-   },
-   {
-    "id": "promenade",
-    "name": "Promenade",
-    "rects": [
-     [
-      20,
-      52,
-      30,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0033",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Haulers run a loop round the grey copse: aggressive bruisers that come one at a time round the trees."
-   }
-  ]
- },
- {
-  "map_id": "noc_fld_03",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "coupler_sidings",
-    "name": "Coupler Sidings",
-    "rects": [
-     [
-      84,
-      62,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0092",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The signature horde: 40 assisting mite crews in the open sidings (~30 cells each); one pull is the yard, a 30-40 train for the big AoE."
-   },
-   {
-    "id": "stalled_line",
-    "name": "Stalled Line",
-    "rects": [
-     [
-      8,
-      8,
-      40,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0092",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     9,
-     18
-    ],
-    "design_note": "Assisting mite crews on the stalled line behind the signal tower: a smaller yard next to the camp, one crew to a pull."
-   },
-   {
-    "id": "signal_gantries",
-    "name": "Signal Gantries",
-    "rects": [
-     [
-      56,
-      8,
-      44,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0034",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Ranged drones among stalled carriages: the carriages block their line of fire, so players break LOS and pull them in."
-   },
-   {
-    "id": "junction_pit",
-    "name": "Junction Pit",
-    "rects": [
-     [
-      132,
-      20,
-      20,
-      50
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0092",
-      "weight": 60
-     },
-     {
-      "monster_id": "mob_0034",
-      "weight": 40
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "A long narrow strip at the yard's east end: mites rush along it while drones fire down its length, a corridor fight."
-   }
-  ]
- },
- {
-  "map_id": "noc_fld_04",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "riftside",
-    "name": "Riftside",
-    "rects": [
-     [
-      64,
-      80,
-      40,
+      90,
+      28,
       22
      ]
     ],
     "species": [
      {
-      "monster_id": "mob_0093",
+      "monster_id": "mob_0095",
       "weight": 1
      }
     ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "The signature horde on the south bank where the tear is widest: 40 aggressive Riftlings with the chasm at their back, so trains are pulled south, away from the edge."
-   },
-   {
-    "id": "tilted_blocks",
-    "name": "Tilted Blocks",
-    "rects": [
-     [
-      10,
-      50,
-      34,
-      26
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0093",
-      "weight": 1
-     }
-    ],
-    "target_alive": 30,
+    "target_alive": 67,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Riftlings on the north bank by the Array road: a smaller pack away from the tear, a breather between Riftside trains."
+    "design_note": "Assisting sentinels between the columns."
    },
    {
-    "id": "leaning_spires",
-    "name": "Leaning Spires",
+    "id": "sentinel_colonnade_2",
+    "name": "Sentinel Colonnade",
     "rects": [
      [
-      54,
-      8,
-      36,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0093",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     7,
-     15
-    ],
-    "design_note": "Riftlings charge down from among the spires: the spires break up the pack, so trains arrive in strings."
-   },
-   {
-    "id": "lower_rift",
-    "name": "Lower Rift",
-    "rects": [
-     [
-      10,
-      110,
-      30,
-      16
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0093",
-      "weight": 1
-     }
-    ],
-    "target_alive": 20,
-    "respawn_sec": [
-     8,
-     16
-    ],
-    "design_note": "A quiet south-west corner past the narrow crossing: a small Riftling pack for players who want a lighter pull."
-   }
-  ]
- },
- {
-  "map_id": "noc_fld_05",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
-   {
-    "id": "mast_field",
-    "name": "Mast Field",
-    "rects": [
-     [
-      100,
-      64,
-      40,
-      34
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0094",
-      "weight": 1
-     }
-    ],
-    "target_alive": 45,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Fleeing flocks spread through the masts: the main horde, ~30 cells each; they scatter between the pillars when hit, so line skills down the mast rows pay best."
-   },
-   {
-    "id": "static_dishes",
-    "name": "Static Dishes",
-    "rects": [
-     [
-      16,
-      12,
-      36,
-      32
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0094",
-      "weight": 1
-     }
-    ],
-    "target_alive": 40,
-    "respawn_sec": [
-     5,
-     12
-    ],
-    "design_note": "Fleeing flocks round the western dish: they scatter when hit and land again nearby, so cone and line skills that catch a whole flock pay best."
-   },
-   {
-    "id": "sentinel_ring",
-    "name": "Sentinel Ring",
-    "rects": [
-     [
-      52,
-      64,
-      36,
-      30
-     ]
-    ],
-    "species": [
-     {
-      "monster_id": "mob_0095",
-      "weight": 1
-     }
-    ],
-    "target_alive": 25,
-    "respawn_sec": [
-     10,
-     20
-    ],
-    "design_note": "Assisting constructs round the great dish: engage one and the ring closes. Lattice Node and Aetherite source."
-   },
-   {
-    "id": "control_walk",
-    "name": "Control Walk",
-    "rects": [
-     [
-      100,
-      14,
-      36,
+      84,
+      90,
+      28,
       22
      ]
     ],
@@ -5114,31 +3732,46 @@
       "weight": 1
      }
     ],
-    "target_alive": 30,
+    "target_alive": 67,
     "respawn_sec": [
-     7,
-     16
+     6,
+     14
     ],
-    "design_note": "Assisting sentinels pacing the control lines north of camp: engage one and the patrol closes, the ring's lesson stretched along a strip."
-   }
-  ]
- },
- {
-  "map_id": "noc_fld_06",
-  "instance_rules": {
-   "min_alive": 80,
-   "max_alive": 150
-  },
-  "pockets": [
+    "design_note": "Assisting sentinels between the columns."
+   },
    {
-    "id": "glyph_plaza",
-    "name": "Convergence Plaza",
+    "id": "sentinel_colonnade_3",
+    "name": "Sentinel Colonnade",
     "rects": [
      [
-      36,
-      38,
-      44,
-      32
+      64,
+      120,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0095",
+      "weight": 1
+     }
+    ],
+    "target_alive": 67,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Assisting sentinels between the columns."
+   },
+   {
+    "id": "glyph_plaza_1",
+    "name": "Glyph Plaza",
+    "rects": [
+     [
+      97,
+      14,
+      28,
+      22
      ]
     ],
     "species": [
@@ -5147,22 +3780,22 @@
       "weight": 1
      }
     ],
-    "target_alive": 45,
+    "target_alive": 67,
     "respawn_sec": [
-     5,
-     12
+     6,
+     14
     ],
-    "design_note": "The densest swarm in the game (Lv95) round the obelisk ring at the crossroads: every road passes through it, so the plaza is the fight."
+    "design_note": "The glyph swarm horde; a court of Executors stands at the plaza's heart."
    },
    {
-    "id": "glyph_colonnade",
-    "name": "Great Colonnade",
+    "id": "glyph_plaza_2",
+    "name": "Glyph Plaza",
     "rects": [
      [
-      44,
-      8,
-      34,
-      24
+      137,
+      14,
+      28,
+      22
      ]
     ],
     "species": [
@@ -5171,22 +3804,46 @@
       "weight": 1
      }
     ],
-    "target_alive": 28,
+    "target_alive": 67,
     "respawn_sec": [
-     10,
-     20
+     6,
+     14
     ],
-    "design_note": "Aggressive glyph swarms between the columns: the columns split them into lanes, so the colonnade is fought one lane at a time."
+    "design_note": "The glyph swarm horde; a court of Executors stands at the plaza's heart."
    },
    {
-    "id": "executor_court",
-    "name": "Executor Court",
+    "id": "glyph_plaza_3",
+    "name": "Glyph Plaza",
     "rects": [
      [
-      84,
-      12,
-      30,
-      26
+      117,
+      44,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0096",
+      "weight": 1
+     }
+    ],
+    "target_alive": 67,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "The glyph swarm horde; a court of Executors stands at the plaza's heart."
+   },
+   {
+    "id": "glyph_plaza_meridian_executor",
+    "name": "Glyph Plaza (Meridian Executor)",
+    "rects": [
+     [
+      123,
+      70,
+      16,
+      12
      ]
     ],
     "species": [
@@ -5195,22 +3852,22 @@
       "weight": 1
      }
     ],
-    "target_alive": 6,
+    "target_alive": 4,
     "respawn_sec": [
-     60,
-     120
+     45,
+     90
     ],
-    "design_note": "Six elites round the violet crystal: the Keysigil quest's target, fought one or two at a time."
+    "design_note": "A few Meridian Executor elites hold this part of Glyph Plaza."
    },
    {
-    "id": "lattice_verge",
+    "id": "lattice_verge_1",
     "name": "Lattice Verge",
     "rects": [
      [
-      10,
-      74,
-      34,
-      30
+      150,
+      90,
+      28,
+      22
      ]
     ],
     "species": [
@@ -5219,12 +3876,60 @@
       "weight": 1
      }
     ],
-    "target_alive": 35,
+    "target_alive": 67,
     "respawn_sec": [
-     7,
-     15
+     6,
+     14
     ],
-    "design_note": "Glyph swarms among the rune stones in the south-west: a smaller swarm farm off the plaza, and the last stop before the Heart."
+    "design_note": "A second glyph farm by the sealed descent to the Lattice Heart."
+   },
+   {
+    "id": "lattice_verge_2",
+    "name": "Lattice Verge",
+    "rects": [
+     [
+      190,
+      90,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0096",
+      "weight": 1
+     }
+    ],
+    "target_alive": 67,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "A second glyph farm by the sealed descent to the Lattice Heart."
+   },
+   {
+    "id": "lattice_verge_3",
+    "name": "Lattice Verge",
+    "rects": [
+     [
+      170,
+      120,
+      28,
+      22
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0096",
+      "weight": 1
+     }
+    ],
+    "target_alive": 67,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "A second glyph farm by the sealed descent to the Lattice Heart."
    }
   ]
  },

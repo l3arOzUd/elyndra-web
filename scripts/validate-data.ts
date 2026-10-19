@@ -310,7 +310,8 @@ function checkSpawns(b: ContentBundle, g: Map<string, Grid>) {
     const rules = z.instance_rules;
     if (m.horde && (rules.min_alive !== m.horde.min_alive || rules.max_alive !== m.horde.max_alive)) report("error", "spawn.horde_rules", m.id, "instance_rules differ from maps.json horde");
     if (total < rules.min_alive || total > rules.max_alive) report("error", "spawn.population", m.id, `pockets total ${total}, rules ${rules.min_alive}-${rules.max_alive}`);
-    if (m.type === "field" && (rules.min_alive < 80 || rules.max_alive > 150)) report("error", "spawn.horde_band", m.id, `field rules ${rules.min_alive}-${rules.max_alive} outside the Extreme Horde band 80-150`);
+    // World v3: one 256x256 field holds what four old fields did (WORLD_V3_PLAN.md).
+    if (m.type === "field" && (rules.min_alive < 400 || rules.max_alive > 900)) report("error", "spawn.horde_band", m.id, `field rules ${rules.min_alive}-${rules.max_alive} outside the v3 band 400-900`);
     if (m.type === "dungeon" && (total < 50 || total > 150)) report("warning", "spawn.horde_band", m.id, `dungeon population ${total}`);
 
     const grid = g.get(m.id);
@@ -344,7 +345,6 @@ function checkSpawns(b: ContentBundle, g: Map<string, Grid>) {
         const tolerance = mob.archetype === "boss" || mob.archetype === "elite" ? 4 : 2;
         if (mob.level < lo - tolerance || mob.level > hi + tolerance)
           report("error", "spawn.level", where, `${mob.name} Lv${mob.level} on a Lv${lo}-${hi} map`);
-        if (mob.region_id !== m.region_id) report("warning", "spawn.region", where, `${mob.name} belongs to ${mob.region_id}`);
       }
     }
   }
@@ -393,7 +393,6 @@ function checkNpcs(b: ContentBundle, g: Map<string, Grid>) {
     for (const [dest, cost] of n.destinations ?? []) {
       if (cost < 0) report("error", "npc.teleport_cost", n.id, `negative cost to ${dest}`);
       const d = maps.get(dest);
-      if (d && d.region_id !== region && d.type !== "town") report("warning", "npc.teleport_scope", n.id, `sends to ${dest} in another region`);
     }
     if (!(n.destinations ?? []).length) report("error", "npc.teleport_empty", n.id, "teleporter with no destinations");
   }
@@ -462,7 +461,6 @@ function checkQuests(b: ContentBundle) {
         const mob = mobs.get(o.monster_id);
         const where2 = spawnMaps.get(o.monster_id);
         if (!where2) report("error", "quest.impossible", where, `${o.monster_id} never spawns`);
-        else if (![...where2].some((m) => maps.get(m)?.region_id === q.region_id)) report("warning", "quest.region", where, `${mob?.name} spawns outside ${q.region_id}`);
         if (mob && mob.level > q.min_level + 8) report("warning", "quest.level", where, `${mob.name} Lv${mob.level} for a Lv${q.min_level} quest`);
       }
       // A quest handed out in a field or dungeon asks for drops found there:
@@ -475,7 +473,6 @@ function checkQuests(b: ContentBundle) {
       }
     }
     const giver = npcs.get(q.giver_npc_id);
-    if (giver && maps.get(giver.map_id)?.region_id !== q.region_id) report("warning", "quest.giver_region", where, "giver stands in another region");
     // Prerequisite chains must not loop.
     const seen = new Set<string>();
     for (let cur: string | null = q.id; cur; cur = byId.get(cur)?.prerequisite ?? null) {
@@ -578,10 +575,11 @@ function checkMaps(b: ContentBundle) {
     }
     if (!b.npcs.some((n) => n.map_id === m.id)) report("error", "map.no_npc", m.id, `${m.type} has no NPC`);
   }
+  // World v3: regions are biomes sharing one town; fields mix monsters of several
+  // regions on purpose, so a region's town and dungeon may sit in another region.
   for (const r of b.regions) {
-    const maps = b.maps.filter((m) => m.region_id === r.id);
-    if (!maps.some((m) => m.id === r.town_map_id && m.type === "town")) report("error", "region.town", r.id, "town_map_id is not a town in the region");
-    if (!maps.some((m) => m.id === r.dungeon_map_id && m.type === "dungeon")) report("error", "region.dungeon", r.id, "dungeon_map_id is not a dungeon in the region");
+    if (!b.maps.some((m) => m.id === r.town_map_id && m.type === "town")) report("error", "region.town", r.id, "town_map_id is not a town");
+    if (!b.maps.some((m) => m.id === r.dungeon_map_id && m.type === "dungeon")) report("error", "region.dungeon", r.id, "dungeon_map_id is not a dungeon");
   }
 }
 

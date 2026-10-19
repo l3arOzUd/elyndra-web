@@ -22,7 +22,7 @@
   "id": "ver",
   "name": "Verdantis",
   "capital": "Sylvara",
-  "town_map_id": "ver_town_01",
+  "town_map_id": "lum_town_01",
   "dungeon_map_id": "ver_dun_01",
   "level_range": [
    15,
@@ -41,7 +41,7 @@
   "id": "sol",
   "name": "Solenia",
   "capital": "Duskhar",
-  "town_map_id": "sol_town_01",
+  "town_map_id": "lum_town_01",
   "dungeon_map_id": "sol_dun_01",
   "level_range": [
    25,
@@ -60,8 +60,8 @@
   "id": "tha",
   "name": "Thalassia",
   "capital": "Port Merrow",
-  "town_map_id": "tha_town_01",
-  "dungeon_map_id": "tha_dun_01",
+  "town_map_id": "lum_town_01",
+  "dungeon_map_id": "cry_dun_01",
   "level_range": [
    35,
    65
@@ -79,7 +79,7 @@
   "id": "cry",
   "name": "Crystallis",
   "capital": "Vaelspire",
-  "town_map_id": "cry_town_01",
+  "town_map_id": "lum_town_01",
   "dungeon_map_id": "cry_dun_01",
   "level_range": [
    45,
@@ -98,8 +98,8 @@
   "id": "emb",
   "name": "Emberfall",
   "capital": "Cindervale",
-  "town_map_id": "emb_town_01",
-  "dungeon_map_id": "emb_dun_01",
+  "town_map_id": "lum_town_01",
+  "dungeon_map_id": "noc_dun_01",
   "level_range": [
    60,
    90
@@ -117,7 +117,7 @@
   "id": "noc",
   "name": "Nocthaven",
   "capital": "Umbracrest",
-  "town_map_id": "noc_town_01",
+  "town_map_id": "lum_town_01",
   "dungeon_map_id": "noc_dun_01",
   "level_range": [
    75,

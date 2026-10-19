@@ -1,4 +1,5 @@
 import type { RegionDesign } from "../types";
+import { buildWorld } from "../world";
 import { crystallis } from "./cry";
 import { emberfall } from "./emb";
 import { lumeris } from "./lum";
@@ -7,5 +8,8 @@ import { solenia } from "./sol";
 import { thalassia } from "./tha";
 import { verdantis } from "./ver";
 
-/** Regions in level order. Lumeris is the production reference. */
-export const REGIONS: RegionDesign[] = [lumeris, verdantis, solenia, thalassia, crystallis, emberfall, nocthaven];
+/** The seven region designs as written: monsters, items, quests and the v2 maps. */
+export const REGIONS_V2: RegionDesign[] = [lumeris, verdantis, solenia, thalassia, crystallis, emberfall, nocthaven];
+
+/** The world the game runs (WORLD_V3_PLAN.md): one town, ten large fields, five dungeons. */
+export const REGIONS: RegionDesign[] = buildWorld(REGIONS_V2);
