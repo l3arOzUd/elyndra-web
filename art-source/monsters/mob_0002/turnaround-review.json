@@ -1,0 +1,17 @@
+{
+  "status": "reference-set-created-animation-pending",
+  "method": "Direct image inspection and browser four-view comparison on light background.",
+  "confirmed": [
+    "Cream/rust mushroom cap and gills retained",
+    "Two root feet retained, far foot partly occluded in profiles",
+    "Rear has no face; side profiles show one eye",
+    "Tiny fungal arms and squat stalk proportions retained",
+    "Four RGBA masters pass alpha/framing checks"
+  ],
+  "limitations": [
+    "Cap speckle positions vary between views; exact surface marking continuity is not approved",
+    "Spore motes vary in size and position; separate them into runtime VFX for animated assets",
+    "Side-view framing is slightly taller than front and needs uniform scale/baseline normalization during sprite preparation"
+  ],
+  "next": "Complete roster turnarounds, then author articulated waddling and action clips; do not substitute whole-body rotation for walking or death."
+}

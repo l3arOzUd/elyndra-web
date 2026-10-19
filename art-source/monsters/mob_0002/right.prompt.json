@@ -1,0 +1,10 @@
+{
+  "view": "right",
+  "prompt": "RIGHT-FACING SIDE PROFILE turnaround of exact same Sporeling mushroom. Reference 1 front identity, reference 2 LEFT profile is authoritative for silhouette depth and cap/body proportions, reference 3 rear. Render opposite profile looking RIGHT, one visible eye at right contour, no protruding snout. Preserve shallow broad domed cream/rust cap, cream gills, squat pale stalk, tiny floppy near arm, two root feet with far foot partly occluded. No new legs or tail. Match profile reference height and width, neutral pose, same painted material and color. Keep full character and spores away from edges on square transparent canvas; cap 12% down, feet 12% above bottom. No ground shadow or text.",
+  "references": [
+    "front.png",
+    "left.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}
