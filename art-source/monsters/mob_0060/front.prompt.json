@@ -1,0 +1,8 @@
+{
+  "id": "mob_0060",
+  "name": "Gullwing Skimmer",
+  "view": "front",
+  "prompt": "Single Elyndra monster master, hand-painted stylized fantasy MMORPG art. Gullwing Skimmer: a long-winged gull with brass-tinted primaries, a hooked orange beak and a crest of storm-grey feathers; MID-DIVE pose. Strict frontal orthographic view of bird diving toward viewer, body and beak centered, both long wings spread equally to left and right, tipped slightly upward, swept streamlined tail behind, two tucked bird feet partially visible below belly. White gull chest, storm grey crest, golden brass tinted outer primary feathers, hooked orange beak, sharp alert eyes. Exactly two wings and two feet, feather anatomy clear. Painterly warm soft lighting and rich feather detail, readable silhouette. Wide wing span fully visible on square transparent canvas with substantial empty margin around wingtips and crest; do not crop. No ocean, sky, clouds, speed lines, cast shadow, text or extra creatures. True transparent background. Master preserves the Bible dive pose for later consistent turnarounds.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Bible mid-dive pose; two wings with brass primaries and two tucked feet."
+}

@@ -2528,9 +2528,13 @@
       "brief": "A long-winged gull with brass-tinted primaries, a hooked orange beak and a crest of storm-grey feathers; mid-dive pose.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0060/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2565,9 +2569,13 @@
       "brief": "A squat lump of polyps on stubby root-legs, a ring of open tube mouths on top glowing magenta; pink-violet with white tips.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0061/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2602,9 +2610,13 @@
       "brief": "A tall swaying figure of braided kelp with a bulb head glowing soft green, frond arms trailing; small oysters clinging to its stalk.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0062/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
