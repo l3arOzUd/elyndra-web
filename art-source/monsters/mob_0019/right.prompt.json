@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "SUN WARDEN RIGHT-facing profile of same bronze guardian. First LEFT ref defines proportions, second FRONT defines handedness. Character RIGHT hand ALWAYS grips spear, so in this RIGHT-facing view weapon arm is FAR side: near LEFT arm hangs relaxed beside hip in foreground; far right elbow bent forward with gripping hand visible beyond torso to image RIGHT holding upright spear in front of body. Do NOT mirror grip onto near arm. Full upright spear at image RIGHT, point and butt inside canvas. Featureless smooth face no eyes nose mouth facing RIGHT. Back-mounted vertical halo behind to image LEFT, narrow edge-on ring and thin mirror panel edges, same diameter and mechanical mount. Same elegant tall bronze figure, neutral feet planted toes right, warm painted fantasy MMORPG. Square transparent canvas with clear margins, no ground shadow rays text cloth wings extra hands.",
+  "references": [
+    "left.png",
+    "front.png"
+  ],
+  "review": "Created; cross-view review pending."
+}
