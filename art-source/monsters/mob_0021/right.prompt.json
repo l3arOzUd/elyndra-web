@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Coral Claw opposite side turnaround, facing image RIGHT. NOT a mirrored left image: animal LEFT side is near camera, SMALL LEFT CLAW in foreground attached to near shoulder; enormous RIGHT CLAW on far side, behind near small claw and partly occluded by front body. Keep giant far claw visibly much larger, cream pincers extending right. Front reference defines handedness, left reference defines shape. True orthographic eye-level profile, only near eyestalk visible, same neutral pose, four near walking legs plus partially obscured four far legs. Broad wet teal crab shell with cream orange rim and dense pink orange branching coral dorsal reef. No tail, no additional claws, no humanoid anatomy. Same painted fantasy MMORPG. Full body generous transparent margins, no water floor shadow text.",
+  "references": [
+    "front.png",
+    "left.png"
+  ]
+}

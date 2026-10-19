@@ -1,0 +1,19 @@
+{
+  "id": "mob_0021",
+  "name": "Coral Claw",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual inspection of all four views; alpha validation is not anatomy approval.",
+  "confirmed": [
+    "Large anatomical right claw preserved: viewer-left front, viewer-right rear, near on left-facing view and far on right-facing view.",
+    "Teal cream shell and pink orange branching coral preserved.",
+    "Rear has no face or eyestalks."
+  ],
+  "limitations": [
+    "Side views retain three-quarter body exposure rather than strict orthographic profile.",
+    "Eight walking-leg chains are not individually traceable in all views; near/far overlap needs construction review.",
+    "Coral branch topology and attachment landmarks vary across views.",
+    "Small claw gains coral compared with front; match surface detailing.",
+    "Rear claw orientation and arm attachment are partially hidden and not proven coherent."
+  ],
+  "next": "Resolve strict profile cameras, eight walking-leg attachments and fixed coral landmarks before part separation and animation."
+}
