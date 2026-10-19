@@ -1,0 +1,8 @@
+{
+  "id": "mob_0086",
+  "name": "Pour Wraith",
+  "view": "front",
+  "prompt": "Single full-body FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Pour Wraith: a dripping humanoid of white-hot liquid metal with NO FACE, trailing a cooling grey skin that cracks and re-melts; a mould seam down its middle. Tall uncanny genderless molten metal figure, smooth blank head with no eyes mouth or nose, two flowing arms and fingers, lower body tapering into heavy attached liquid-metal drips and short melted leg-like forms. White-hot ivory-yellow liquid core, strips of cooling matte grey metallic skin peeling and cracking along outer limbs and torso, clearly visible vertical casting mould seam down center from head through chest. No clothing or armor. Neutral front stance, body square to viewer. Beautiful painterly controlled highlights and grey metal contrast, readable silhouette, no overexposed featureless blob. Entire head and all attached drips inside square transparent canvas with generous empty margins. No floor puddle, smoke, sparks, external aura, shadow, text or extra creatures. Cooling and remelting motion added later.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Faceless white-hot metal humanoid with central mould seam and cooling grey skin."
+}

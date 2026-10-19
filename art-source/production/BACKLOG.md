@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 73; existing front references needing review: 7; missing front references: 14.
+Monsters: 94; front masters created: 76; existing front references needing review: 7; missing front references: 11.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -89,9 +89,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0081 | Crucible Tender | master-created | missing | missing | missing | placeholder |
 | mob_0082 | Vent Skink | master-created | missing | missing | missing | placeholder |
 | mob_0083 | Magma Spitter | master-created | missing | missing | missing | placeholder |
-| mob_0084 | Rivet Scrapling | missing | missing | missing | missing | placeholder |
-| mob_0085 | Slagforged Brute | missing | missing | missing | missing | placeholder |
-| mob_0086 | Pour Wraith | missing | missing | missing | missing | placeholder |
+| mob_0084 | Rivet Scrapling | master-created | missing | missing | missing | placeholder |
+| mob_0085 | Slagforged Brute | master-created | missing | missing | missing | placeholder |
+| mob_0086 | Pour Wraith | master-created | missing | missing | missing | placeholder |
 | mob_0087 | Zero Stoker | missing | missing | missing | missing | placeholder |
 | mob_0088 | Kiln Prime | missing | missing | missing | missing | placeholder |
 | mob_0090 | Gutter Lurk | missing | missing | missing | missing | placeholder |

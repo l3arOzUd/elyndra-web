@@ -3512,9 +3512,13 @@
       "brief": "A fist-sized rattling bundle of rivets, bolts and a single glowing gear-eye on wire legs; moves in jittering hops.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0084/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3549,9 +3553,13 @@
       "brief": "A hulking ogre-shape of rough black slag with mould seams down its sides, a molten core showing through cracks, iron bands still on its fists.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0085/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3586,9 +3594,13 @@
       "brief": "A dripping humanoid of white-hot liquid metal with no face, trailing a cooling grey skin that cracks and re-melts; a mould seam down its middle.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0086/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

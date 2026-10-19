@@ -1,0 +1,8 @@
+{
+  "id": "mob_0084",
+  "name": "Rivet Scrapling",
+  "view": "front",
+  "prompt": "Single full FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Rivet Scrapling: a fist-sized rattling bundle of rivets, bolts and a SINGLE glowing gear-eye on wire legs; moves in jittering hops. Tiny charming scrap-metal creature, compact irregular ball assembled from recognizable rusty bolts nuts rivets and washers, one central glowing amber eye inside a toothed gear ring. Exactly two thin bent spring-wire legs with small loop feet, no arms, no extra eyes. Neutral poised stance ready to hop, frontal body, clear separated wire legs, handcrafted industrial fantasy design. Warm rich painterly worn metal detail, bold readable silhouette despite tiny creature. Entire bundle and wire feet comfortably inside square transparent canvas with broad empty margins. No floor, shadow, motion lines, detached scrap, sparks, text or other creatures. Hopping animation later.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "One gear-eye, two spring-wire legs; jittering hops required in animation."
+}
