@@ -62,7 +62,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0054 | Canal Strider | master-created | master-created | master-created | master-created | placeholder |
 | mob_0055 | Dust Revenant | master-created | master-created | master-created | master-created | placeholder |
 | mob_0056 | Sand-buried Colossus | master-created | master-created | master-created | master-created | placeholder |
-| mob_0057 | Prism Lens-drone | master-created | missing | missing | missing | placeholder |
+| mob_0057 | Prism Lens-drone | master-created | master-created | master-created | master-created | placeholder |
 | mob_0058 | Vault Mirrorguard | master-created | missing | missing | missing | placeholder |
 | mob_0059 | Heliostat Sovereign | master-created | missing | missing | missing | placeholder |
 | mob_0060 | Gullwing Skimmer | master-created | missing | missing | missing | placeholder |

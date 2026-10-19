@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Prism Lens-drone LEFT profile facing LEFT, strict 90degree orthographic lateral. Reference1 front, reference2 rear. Ring plane becomes EDGE-ON narrow vertical brass band (NOT broad circle/oval). Central diamond prism thick biconvex faceted glass silhouette viewed edge, central orange optical aperture projects toward imageLEFT, rear opaque brass service cap imageRIGHT. Exactly THREE fins fixed in ring plane: top fin edge-on, lower left and lower right fins overlap in depth at same lower height, near lower fin occludes far lower fin. Do NOT spread fins forward/backward to reveal them. Same ring diameter and glass size. Hovering neutral unchanged pose full tips within square transparent margins. Hand-painted fantasy MMORPG no beam trail ground shadow text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

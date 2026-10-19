@@ -1,0 +1,20 @@
+{
+  "id": "mob_0057",
+  "name": "Prism Lens-drone",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front identity, rear service cap and opposite profile.",
+  "confirmed": [
+    "Brass ring, faceted prism and three fins preserved.",
+    "Orange front aperture points left/right appropriately; rear cap opaque.",
+    "Side ring rendered narrow rather than full frontal circle.",
+    "Four images pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Lower fins shifted fore/aft and vertically to expose both; fixed coplanar anchors require correction.",
+    "Top fin stays too broad in profile; edge thickness inconsistent with front.",
+    "Optical aperture and rear cap show too much circular face in strict lateral projection.",
+    "Prism depth and bracket routes need reconciliation; highlights do not prove consistent geometry.",
+    "No separated rigid parts, beam VFX or runtime animation yet."
+  ],
+  "next": "Lock ring/prism depth and three fin anchors, separate optical aperture from rigid body, then author hover/aim/fire/hit/shatter and orange beam VFX."
+}
