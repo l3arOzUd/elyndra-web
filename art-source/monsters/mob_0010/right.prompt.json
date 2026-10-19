@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "Create RIGHT-facing side reference of same Rotroot. First attached LEFT view defines matching opposite silhouette and limb placement, second FRONT defines design. Monster FRONT points RIGHT. Compact low rotten root knot with exactly FOUR root walking legs, near front and rear legs separated, far pair occluded naturally. Match body volume and crooked legs from left, same stance and size. No head arms face or humanoid features. Dense rotten dark bark woven around teal sap core: exposed front core only narrow glimmer at RIGHT leading rim, no new large side hole. Upper broken wood crest, peeling wet wood, tiny moss, fine teal cracks. Eye-level orthographic profile, not three-quarter, no camera looking down. Whole root toes within clear margins, square transparent canvas, hand-painted fantasy MMORPG matching source, no floor shadow background text particles.",
+  "references": [
+    "left.png",
+    "front.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

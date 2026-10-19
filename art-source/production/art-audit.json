@@ -720,31 +720,43 @@
           "status": "master-created"
         },
         "back": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0010/back.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/16_Rotroot_back.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "status": "master-created"
         },
         "left": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0010/left.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/16_Rotroot_left.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "status": "master-created"
         },
         "right": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0010/right.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/16_Rotroot_right.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "status": "master-created"
         }
       },
       "sprite": "rotroot_2d",
