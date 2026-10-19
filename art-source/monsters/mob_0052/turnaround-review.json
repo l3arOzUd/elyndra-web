@@ -1,0 +1,19 @@
+{
+  "id": "mob_0052",
+  "name": "Glasstail Basilisk",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation using front identity and corrected rear reference; preserved drafts of branched tail and clipped left profile.",
+  "confirmed": [
+    "Four-legged sandy scaled basilisk with orange frill and a single amber glass tail club preserves Bible identity.",
+    "Rear extra tail stub removed; one continuous tail remains.",
+    "Left outer tail contour now fully inside canvas; all four files pass alpha/nonempty/edge validation."
+  ],
+  "limitations": [
+    "Side images remain three-quarter rather than strict lateral; frill and chest show too much width.",
+    "Rear feet retain front-facing claws; heel and toe orientation requires repainting.",
+    "Tail near/far routing and scale landmarks differ across views; not a consistent reconstruction reference yet.",
+    "Canvas margins and subject scale vary; normalize after anatomical corrections.",
+    "No animation-ready separated parts or completed runtime animation supplied by this reference set."
+  ],
+  "next": "Correct camera, rear feet and tail topology, then separate four leg chains, torso/head/frill and tail club for idle/walk/attack/hit/death animation."
+}

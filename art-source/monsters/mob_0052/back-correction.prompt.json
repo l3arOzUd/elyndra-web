@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Correct only tail topology in this REAR basilisk. Remove extra short curled tail stub in center foreground (x520..820 y800..1000). Instead show ONE continuous thick tail emerging pelvis center x730 y790, curving LEFT across lower rump in foreground toward x360 y920, then continuing into existing left tail curve and rising to existing amber glass club at upper-left. No free central tip and no bifurcation. The only tail endpoint is amber glass club. Preserve four legs, body, frill, scales/materials, pose, transparent background. Make central root-to-left-tail connection clear and smooth, not two disconnected tails.",
+  "references": [
+    "back-tail-draft.png"
+  ]
+}

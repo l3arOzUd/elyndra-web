@@ -1,0 +1,7 @@
+{
+  "view": "left",
+  "prompt": "Edit target: this Glasstail Basilisk image. Correct framing only: reduce the entire creature uniformly to fit comfortably in a square transparent canvas with at least 8% clear margin on ALL sides, reconstruct the tiny clipped outer tail contour at right. Preserve the exact sandy scale design, orange frill, four feet, left-facing head, single continuous tail and amber glass club, same pose and painting. No text, ground or cast shadow. Entire creature fully visible.",
+  "references": [
+    "left-tight-draft.png"
+  ]
+}
