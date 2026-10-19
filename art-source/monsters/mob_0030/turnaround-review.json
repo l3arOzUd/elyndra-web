@@ -1,0 +1,21 @@
+{
+  "id": "mob_0030",
+  "name": "Smelt Hound",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual inspection; alpha/framing pass does not validate canine gait construction.",
+  "confirmed": [
+    "Lean iron canine with molten bellows ribs pointed ears narrow muzzle and four legs preserved.",
+    "Rear shows spine and tail attachment without face.",
+    "Profiles expose articulated hind legs and attached jaw slag bead."
+  ],
+  "limitations": [
+    "Profiles have staggered/lifted-looking far paws and differ from front neutral stance; align support plane before rigging.",
+    "Side views retain three-quarter chest and muzzle exposure.",
+    "Tail curve projects as mirrored broadside arc; shared rightward curl path unverified.",
+    "Rear ears show inner surfaces and rear paws retain toe-like fronts; correct orientation.",
+    "Rib counts rivet layout and armor boundaries vary.",
+    "Digitigrade knee/hock axis correspondence and segment lengths require construction review.",
+    "Horizontal margins tight in side views."
+  ],
+  "next": "Resolve four fixed-length canine leg chains and support feet, tail path and rib landmarks; separate armor/bellows layers and author grounded gait, jaw attack, collapse and separate spark/slag VFX."
+}
