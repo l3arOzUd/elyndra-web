@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "Sporebloat RIGHT SIDE orthographic turnaround. Reference1 left profile for volume/pose, ref2 front for vent locations, ref3 rear for closed lobes. Rotate to opposite side, FRONT points imageRIGHT and BACK imageLEFT. Largest front vent appears foreshortened at RIGHT edge, medium existing right-flank vent is central side opening, rear closed purple lobes wrap at LEFT. Same round violet fungus sack, speckled layered lobes and jade spore vents, short root tendrils hanging below same lengths/attachment distribution. No face eyes or limbs. Preserve central cap apex height and sphere proportions, no added huge vent replacing rear closed patch. True eye-level lateral, full creature square transparent margins, hand-painted fantasy style, no ground/shadow/text/particles.",
+  "references": [
+    "left.png",
+    "front.png",
+    "back.png"
+  ]
+}

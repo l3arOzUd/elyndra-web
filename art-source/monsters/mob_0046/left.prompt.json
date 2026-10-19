@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Sporebloat LEFT SIDE orthographic turnaround. Ref1 front giant central jade vent; ref2 rear closed central violet lobe. Same floating round violet fungus sack with layered speckled velvety lobes, jade spore vents, short dangling roots, no face/limbs. Rotate 90degrees so FRONT points imageLEFT, BACK imageRIGHT. Largest FRONT central vent visible only as foreshortened edge opening at LEFT silhouette, not moved to center side. Existing medium lateral vent becomes main side opening at center; rear closed cap wraps around RIGHT. Preserve sphere depth and apex cap, root cluster length/neutral hanging pose, jade/purple palette and hand-painted material. No new eyes mouth accessories or extra particle clouds. True eye-level lateral view, full centered creature square transparent margins, no floor/shadow/text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

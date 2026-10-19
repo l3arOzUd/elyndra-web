@@ -1,0 +1,19 @@
+{
+  "id": "mob_0046",
+  "name": "Sporebloat",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front/rear masters and opposite profile; visual review of vent orientation and hanging-root identity.",
+  "confirmed": [
+    "Violet floating fungus sack, jade vent openings, layered speckled lobes and root tendrils preserve Bible identity.",
+    "Rear central lobe is closed and distinct from large frontal vent.",
+    "Side front vent lies at left edge in left view and right edge in right view.",
+    "No humanoid limbs or accessories; detached spore VFX excluded from body art."
+  ],
+  "limitations": [
+    "Root count, branching and attachment routes differ across views; define stable root rig topology before animation.",
+    "Side vent size/position and pore patterns differ from corresponding frontal flank openings.",
+    "Rear vent arrangement has not been mapped to side lobe boundaries; continuous surface layout unverified.",
+    "Cap overlap and body volume vary slightly; normalize silhouette and landmarks before part extraction."
+  ],
+  "next": "Resolve vent/root correspondence, separate articulated roots and vent masks, then author float, pulse, attack/spore release, hit and death with separate particle VFX."
+}
