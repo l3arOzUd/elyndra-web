@@ -1090,5 +1090,68 @@
     "sourceMode": "RGBA",
     "sha256": "2641f9f4ef421f4be72983def540f3f5738e6e65559a4582abb02950d47407bf",
     "passes": true
+  },
+  {
+    "id": "mob_0063",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      53,
+      81,
+      1214,
+      1173
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "677a082e1357ef2c4981ff91715e5c902a7a949547199e0a05b307e4d74bce3c",
+    "passes": true
+  },
+  {
+    "id": "mob_0064",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      25,
+      188,
+      1230,
+      1068
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "2904e8cecee8f108f9d99b93dd9744c98a7b49c63bae0185f8725df499d18957",
+    "passes": true
+  },
+  {
+    "id": "mob_0065",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      10,
+      63,
+      1245,
+      1175
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "3b39fb044189bb47162b4f8ce661bc5662b3d8f08fcae7fb27a98070e655b7ca",
+    "passes": true
   }
 ]

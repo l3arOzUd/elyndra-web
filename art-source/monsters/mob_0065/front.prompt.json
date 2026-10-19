@@ -1,0 +1,8 @@
+{
+  "id": "mob_0065",
+  "name": "Thunderhull Turtle",
+  "view": "front",
+  "prompt": "One full-body FRONT orthographic eye-level master reference for Elyndra, beautifully hand-painted stylized fantasy MMORPG monster. Thunderhull Turtle: a huge turtle whose shell is fused with riveted copper hull plates and a broken porthole; storm-grey skin, barnacles, glowing amber eyes. Massive stocky turtle with four sturdy reptile legs, low broad storm-grey head centered, amber luminous eyes, immense domed shell formed from natural scutes fused with curved weathered COPPER ship hull plates with visible rivets, restrained verdigris at seams, barnacles in clusters. Exactly one broken round brass porthole embedded in upper front-right shell (viewer left), chipped glass and dark opening. Natural turtle anatomy, no weapons or extra limbs. Entire head chest and pelvis square to camera; rear feet visible beside front feet, neutral grounded stance. Strong readable silhouette, warm painterly material detail and soft light. Entire shell and four feet comfortably within square transparent canvas with broad margins. No sea, floor, cast shadow, debris, background haze, text or other creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Four turtle legs; single broken porthole on character right-front shell (viewer left)."
+}

@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 52; existing front references needing review: 7; missing front references: 35.
+Monsters: 94; front masters created: 55; existing front references needing review: 7; missing front references: 32.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -68,9 +68,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0060 | Gullwing Skimmer | master-created | missing | missing | missing | placeholder |
 | mob_0061 | Polyp Spitter | master-created | missing | missing | missing | placeholder |
 | mob_0062 | Kelp Tender | master-created | missing | missing | missing | placeholder |
-| mob_0063 | Hullborer | missing | missing | missing | missing | placeholder |
-| mob_0064 | Pearl Skate | missing | missing | missing | missing | placeholder |
-| mob_0065 | Thunderhull Turtle | missing | missing | missing | missing | placeholder |
+| mob_0063 | Hullborer | master-created | missing | missing | missing | placeholder |
+| mob_0064 | Pearl Skate | master-created | missing | missing | missing | placeholder |
+| mob_0065 | Thunderhull Turtle | master-created | missing | missing | missing | placeholder |
 | mob_0066 | Squall Ray | missing | missing | missing | missing | placeholder |
 | mob_0067 | Pressure Drone | missing | missing | missing | missing | placeholder |
 | mob_0068 | Gloom Medusa | missing | missing | missing | missing | placeholder |
