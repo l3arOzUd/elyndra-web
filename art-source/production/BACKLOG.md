@@ -20,7 +20,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0009 | Reedstalker | master-created | master-created | master-created | master-created | reedstalker_2d |
 | mob_0010 | Rotroot | master-created | master-created | master-created | master-created | rotroot_2d |
 | mob_0011 | Barkwarden | master-created | master-created | master-created | master-created | barkwarden_2d |
-| mob_0012 | Graftling | master-created | missing | missing | missing | placeholder |
+| mob_0012 | Graftling | master-created | master-created | master-created | master-created | placeholder |
 | mob_0013 | Sapdrone | master-created | missing | missing | missing | placeholder |
 | mob_0014 | Vinecrawler | master-created | missing | missing | missing | placeholder |
 | mob_0015 | Root Sentinel | master-created | missing | missing | missing | placeholder |

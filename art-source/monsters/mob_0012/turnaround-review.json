@@ -1,0 +1,18 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct four-view browser comparison on a light background and alpha/frame-edge checks.",
+  "confirmed": [
+    "Three brass-hinged wooden legs, twig bundle, leaf tuft and jade hub retained",
+    "Rear has no duplicated eyes or jade hub bead",
+    "Side views show one near eye and forward-edge hub bead",
+    "Revised left removes short dangling foot; both profiles now show paired forward supports and single rear support",
+    "All four files pass alpha and frame-edge checks"
+  ],
+  "limitations": [
+    "Side front-leg pair remains spread visibly rather than fully occluded in strict orthographic projection",
+    "Rear leg in front master appears shorter due to camera perspective; ground-plane and camera consistency require refinement",
+    "Leaf arrangement, twig weave and brass hinge details vary between views",
+    "Left paired feet spread farther than right; register hub, hinge axes and foot contacts before animation"
+  ],
+  "next": "Refine same-camera tripod support geometry; separate three complete leg chains and author sequential three-leg stepping with stable body support, hub glow and folding collapse."
+}

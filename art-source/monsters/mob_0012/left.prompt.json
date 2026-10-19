@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "Graftling LEFT-facing orthographic profile, same creature in front/back refs. Knee-high twig bundle with green oval leaf tuft, jade eyes on FRONT so only near eye at leading LEFT edge visible, no new lateral eyes. Exactly THREE folding brass hinge legs with wooden lower segments arranged tripod: two FRONT legs project toward LEFT, near one fully visible, far front leg mostly hidden behind it; SINGLE rear leg projects RIGHT behind hub. Do not create four legs, arms or humanoid torso. Single jade hub bead is on front facing LEFT, only edge glimmer visible from side; no new big side gemstone. Same neutral stance, no raised feet, all supports grounded, comparable height and scale to refs. Preserve rounded twig bundle, broad leaves, warm bark, antique brass hinges and moss details. Strict side 90 degree eye-level not 3/4, full character square transparent canvas generous margins, no ground shadow text background.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}
