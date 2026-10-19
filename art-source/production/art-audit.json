@@ -3266,9 +3266,13 @@
       "brief": "A slim armoured construct with a long rifle-like lance arm, a prism focus at its tip, frosted visor; white and pale blue.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0078/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3303,9 +3307,13 @@
       "brief": "A towering construct of crystal shelving and brass arms around a glowing blue cryocore, data-slates orbiting it like moons, a frost crown.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0079/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3340,9 +3348,13 @@
       "brief": "A boulder-sized toad with a cracked black slag shell on its back, orange heat in the cracks, wide throat sac glowing like a bellows.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0080/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

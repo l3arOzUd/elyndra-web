@@ -1,0 +1,8 @@
+{
+  "id": "mob_0078",
+  "name": "Cryo Lancer",
+  "view": "front",
+  "prompt": "Single full-body FRONT orthographic eye-level monster master for Elyndra hand-painted stylized fantasy MMORPG. Cryo Lancer: a slim armoured construct with a long rifle-like lance arm, a prism focus at its tip, frosted visor; white and pale blue. Slender bipedal mechanical soldier, white enamel and pale icy blue armor, narrow frosted glass visor concealing all face details, two articulated legs. Character RIGHT arm (viewer left) is an integrated long rifle-shaped frost lance with faceted prism emitter at its tip; angle that arm diagonally downward outward in neutral carry so full lance length is visible. Left arm ends in normal mechanical hand, relaxed. No separate handheld rifle. Torso head hips face squarely forward, feet grounded, elegant readable silhouette with clear joints. Detailed warm painterly materials, subtle frost and brass joint fittings. Entire lance tip, head and both feet well within square transparent canvas with generous margins. No shots, beams, smoke, floor, shadow, background haze, text or extra characters.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Integrated rifle-lance replaces character right forearm; left hand normal; prism at lance tip."
+}

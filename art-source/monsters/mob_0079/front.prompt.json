@@ -1,0 +1,8 @@
+{
+  "id": "mob_0079",
+  "name": "Cryocore Curator",
+  "view": "front",
+  "prompt": "One full FRONT orthographic eye-level boss master for Elyndra, beautiful hand-painted stylized fantasy MMORPG. Cryocore Curator: a towering construct of CRYSTAL SHELVING and brass arms around a glowing blue cryocore, data-slates orbiting it like moons, a frost crown. Tall architectural archive construct, vertical translucent crystal shelf columns frame a large central cyan cryogenic core vessel, shelves hold small crystalline data plates. Two long articulated antique brass arms flank structure, hands relaxed. Crown of pointed frost crystals at top, heavy compact crystal-and-brass pedestal base. Four small rectangular crystal DATA SLATES float separately in balanced positions around torso, all fully visible and distinct from body; no readable text. Not a generic armored knight: visibly shelves, archive machinery and central blue core. Warm painted brass and cool faceted crystal, rich detailed materials with readable silhouette. Neutral front view, complete crown base arms and orbiting slates within square transparent canvas with generous margins. No floor, shadow, haze, snow, beams, labels or extra creatures. Orbital motion added later.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Crystal shelving around blue cryocore; brass arms; frost crown. Floating data-slates need separate animated layers."
+}
