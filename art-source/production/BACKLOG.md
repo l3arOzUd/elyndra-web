@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 82; existing front references needing review: 7; missing front references: 5.
+Monsters: 94; front masters created: 87; existing front references needing review: 7; missing front references: 0.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -98,8 +98,8 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0091 | Nullbloom | master-created | missing | missing | missing | placeholder |
 | mob_0092 | Coupler Mite | master-created | missing | missing | missing | placeholder |
 | mob_0093 | Riftling | master-created | missing | missing | missing | placeholder |
-| mob_0094 | Sparkwing | missing | missing | missing | missing | placeholder |
-| mob_0095 | Array Sentinel | missing | missing | missing | missing | placeholder |
-| mob_0096 | Glyph Swarm | missing | missing | missing | missing | placeholder |
-| mob_0097 | Lattice Weaver | missing | missing | missing | missing | placeholder |
-| mob_0098 | Lattice Sovereign | missing | missing | missing | missing | placeholder |
+| mob_0094 | Sparkwing | master-created | missing | missing | missing | placeholder |
+| mob_0095 | Array Sentinel | master-created | missing | missing | missing | placeholder |
+| mob_0096 | Glyph Swarm | master-created | missing | missing | missing | placeholder |
+| mob_0097 | Lattice Weaver | master-created | missing | missing | missing | placeholder |
+| mob_0098 | Lattice Sovereign | master-created | missing | missing | missing | placeholder |

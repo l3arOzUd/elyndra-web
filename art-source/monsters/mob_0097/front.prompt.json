@@ -1,0 +1,8 @@
+{
+  "id": "mob_0097",
+  "name": "Lattice Weaver",
+  "view": "front",
+  "prompt": "Single Lattice Weaver full creature front master for Elyndra hand-painted stylized fantasy MMORPG. Bible: A long-legged spider of dark brass with a violet spinneret, drawing lines of light between its legs as it moves. Front orthographic at creature eye-level, not looking down. Mechanical spider, exactly EIGHT articulated long dark aged brass legs, FOUR on each side clearly separated, two small mouth pincers not legs, low oval abdomen behind small cephalothorax. Violet spinneret at rear visible as small glow behind upper abdomen, no human face. Painted worn brass highlights and dark plate joints. Neutral resting stance, all eight feet visible. Only a few delicate violet thread lines between legs, no large web or background. Square image; entire spider including every leg and light thread contained within middle 75 percent of frame, generous empty margin all sides. Transparent background, no ground no shadow no text no labels.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Eight brass legs, violet rear spinneret. Moving light threads require runtime VFX."
+}

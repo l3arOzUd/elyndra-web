@@ -1,0 +1,8 @@
+{
+  "id": "mob_0095",
+  "name": "Array Sentinel",
+  "view": "front",
+  "prompt": "Single full-body Array Sentinel monster front reference, Elyndra hand-painted stylized fantasy MMORPG art, detailed painted material with warm soft highlights. Exact Bible: A tall, faceless sentinel in layered dark plate, a halberd of lattice light, a violet ring rotating behind its head. Front orthographic eye-level, shoulders hips knees face square to viewer, neutral upright stance. Blank smooth dark metal face with NO eyes or mouth. Two arms two legs, layered charcoal iron plate, subtle brass connections. Character right hand (viewer left) grips a complete tall halberd whose axe blade and spear tip are violet luminous lattice, left hand relaxed. One complete violet ring behind head. No wings, no cape, no extra weapons. Full figure entire weapon and ring visible, occupy central 75 percent of a square image with wide empty margins. True transparent background no floor no ground shadow no text no labels.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Faceless plate sentinel. Right hand holds lattice halberd; one violet ring behind head."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "mob_0096",
+  "name": "Glyph Swarm",
+  "view": "front",
+  "prompt": "Elyndra monster front master: Glyph Swarm. Exact Bible: A cloud of glowing violet glyphs that hangs together in the shape of a sigil, spinning when it attacks. One floating coherent creature made ENTIRELY of many separate violet luminous invented angular magical glyphs, assembling a thick circular sigil cloud with small central diamond and three concentric broken rings. Visible gaps between glyphs, depth through overlapping front and rear glyphs. Not a humanoid, no face, no limbs, no physical frame. Hand-painted stylized fantasy MMORPG painted magical light, violet lavender highlights dark purple depth, clear readable silhouette. Orthographic front at eye level neutral still reference, no motion blur. Glyphs are fictional decorative symbols not readable words or alphabet letters. Square canvas, compact whole sigil cloud inside central 70 percent with large empty transparent margins including all glow. True transparency outside glyphs and between glyphs. No background, floor, shadow, caption or watermark.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Glyph cloud is the body, not an overlay on a humanoid. Spinning attack remains animation work."
+}

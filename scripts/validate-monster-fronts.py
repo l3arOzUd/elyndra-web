@@ -18,7 +18,9 @@ for path in sorted((root / 'art-source/monsters').glob('*/front.png')):
         rows.append(dict(id=path.parent.name, size=[w, h], alphaRange=alpha.getextrema(),
                          bounds=bounds, edgePixels=edge, sourceMode=source.mode,
                          sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
-                         passes=bool(bounds) and alpha.getextrema() == (0, 255) and edge == 0))
+                         # Ethereal creatures can be translucent throughout. Require
+                         # a visible subject and transparent exterior, not opaque flesh.
+                         passes=source.mode == 'RGBA' and bool(bounds) and alpha.getextrema()[0] == 0 and edge == 0))
 out = root / 'art-source/production/front-validation.json'
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_text(json.dumps(rows, indent=2) + '\n', encoding='utf-8')

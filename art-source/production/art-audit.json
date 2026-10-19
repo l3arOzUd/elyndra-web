@@ -3881,9 +3881,13 @@
       "brief": "A crow-sized bird with feathers like copper foil, sparks crackling between the wingtips, violet arcs jumping when it lands.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0094/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3918,9 +3922,13 @@
       "brief": "A tall, faceless sentinel in layered dark plate, a halberd of lattice light, a violet ring rotating behind its head.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0095/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3955,9 +3963,13 @@
       "brief": "A cloud of glowing violet glyphs that hangs together in the shape of a sigil, spinning when it attacks.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0096/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3992,9 +4004,13 @@
       "brief": "A long-legged spider of dark brass with a violet spinneret, drawing lines of light between its legs as it moves.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0097/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -4029,9 +4045,13 @@
       "brief": "A vast crowned lattice of violet light suspended over the chamber floor, a dark crystalline core inside, sentinel-like arms unfolding from the grid.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0098/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

@@ -1,0 +1,8 @@
+{
+  "id": "mob_0094",
+  "name": "Sparkwing",
+  "view": "front",
+  "prompt": "Create one production character front master for Elyndra, hand-painted stylized fantasy MMORPG, rich painted surfaces, warm soft light. Bible: A crow-sized bird with feathers like copper foil, sparks crackling between the wingtips, violet arcs jumping when it lands. Full bird straight-on front orthographic eye-level, body and beak face directly forward, two feet, two wings held partly open symmetrically so individual layered hammered copper foil feathers are readable. Dark copper body, brighter worn copper feather edges, small violet electrical sparks close to wingtips only. Neutral reference pose, no flying action. Square canvas, whole bird and every wingtip inside central 80 percent with generous transparent margin. True transparent background, no floor, no cast shadow, no labels, no text. One character only.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Two wings, two feet; copper foil plumage. Landing arcs require runtime VFX."
+}
