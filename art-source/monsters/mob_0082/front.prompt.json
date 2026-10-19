@@ -1,0 +1,8 @@
+{
+  "id": "mob_0082",
+  "name": "Vent Skink",
+  "view": "front",
+  "prompt": "Single full-body FRONT orthographic eye-level monster master for Elyndra hand-painted stylized fantasy MMORPG. Vent Skink: a slim lizard with glossy black basalt scales, a glowing orange throat and tail tip, heat shimmer over its back. Sleek low slender skink, small smooth glossy basalt-black scales, narrow rounded reptile head with amber eyes, bright orange throat patch, four short natural lizard legs and slender toes, long tapering tail curves behind to viewer right with orange glowing tip visible. Head chest and pelvis face squarely forward, neutral low stance, not three-quarter body. Detailed painterly dark scales with controlled highlights, warm orange glow contained in throat and tail, strong readable silhouette. Heat shimmer will be separate animated effect, no baked haze. Entire four feet and tail tip inside square transparent canvas with generous clear margin. No ground, rock, lava, shadows, smoke, text, extra limbs or creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Four skink legs, orange throat and tail tip, heat shimmer separate."
+}

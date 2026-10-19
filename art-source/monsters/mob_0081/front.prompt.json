@@ -1,0 +1,8 @@
+{
+  "id": "mob_0081",
+  "name": "Crucible Tender",
+  "view": "front",
+  "prompt": "Single full FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Crucible Tender: a FOUR-LEGGED brass spider-frame with a welding arc on one arm and a slag scoop on the other; blue-white arc light, soot-stained lens. Compact industrial brass spider robot chassis with exactly four splayed articulated walking legs, each foot clearly distinct, and TWO separate upper tool arms. Character right tool arm (viewer left) ends in welding torch with small contained blue-white lit electrode; character left tool arm (viewer right) ends in broad dirty slag scoop. One central round soot-stained lens in body, aged brass joints and heat-darkened plates. No extra legs. Head and chassis square to viewer in neutral stance, tool arms spread enough to identify tools. Warm painterly detailed metal, clear bold silhouette. Full four feet, torch tip and scoop within square transparent canvas with generous margins. No floor, shadows, sparks, arc beam cloud, smoke, text or other objects. Full welding effect animated separately.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Four walking legs plus two tool arms: right welding torch, left slag scoop."
+}

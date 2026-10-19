@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 70; existing front references needing review: 7; missing front references: 17.
+Monsters: 94; front masters created: 73; existing front references needing review: 7; missing front references: 14.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -86,9 +86,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0078 | Cryo Lancer | master-created | missing | missing | missing | placeholder |
 | mob_0079 | Cryocore Curator | master-created | missing | missing | missing | placeholder |
 | mob_0080 | Slagback Toad | master-created | missing | missing | missing | placeholder |
-| mob_0081 | Crucible Tender | missing | missing | missing | missing | placeholder |
-| mob_0082 | Vent Skink | missing | missing | missing | missing | placeholder |
-| mob_0083 | Magma Spitter | missing | missing | missing | missing | placeholder |
+| mob_0081 | Crucible Tender | master-created | missing | missing | missing | placeholder |
+| mob_0082 | Vent Skink | master-created | missing | missing | missing | placeholder |
+| mob_0083 | Magma Spitter | master-created | missing | missing | missing | placeholder |
 | mob_0084 | Rivet Scrapling | missing | missing | missing | missing | placeholder |
 | mob_0085 | Slagforged Brute | missing | missing | missing | missing | placeholder |
 | mob_0086 | Pour Wraith | missing | missing | missing | missing | placeholder |
