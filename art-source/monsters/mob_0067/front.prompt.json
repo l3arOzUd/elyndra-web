@@ -1,0 +1,8 @@
+{
+  "id": "mob_0067",
+  "name": "Pressure Drone",
+  "view": "front",
+  "prompt": "Single full FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Pressure Drone: a football-sized brass sphere with THREE propeller fins and a SINGLE red lamp eye, valves venting bubbles; pitted copper and red. Round compact brass/copper riveted pressure vessel body, one central red glass lamp facing camera, three small propeller-fin assemblies arranged triangularly at top, lower left and lower right, small valve nozzles on sphere. Exactly three stabilizer/propeller units, no legs, no arms, no face or second eye. Pitted warm copper with weathering and red enamel details, subtle glass reflections, charming antique engineering, painterly texture with bold readable forms. Neutral hovering pose, full sphere and all fins inside square canvas with at least 10 percent clear margin. Transparent background, no water, no detached bubbles in master (bubble VFX later), no ground shadow, haze, labels, letters or extra objects.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Three propeller-fin assemblies; one red lamp eye. Bubble emission separate."
+}

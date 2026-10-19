@@ -1,0 +1,8 @@
+{
+  "id": "mob_0068",
+  "name": "Gloom Medusa",
+  "view": "front",
+  "prompt": "Single full FRONT orthographic eye-level monster master for Elyndra hand-painted stylized fantasy MMORPG. Gloom Medusa: a translucent violet bell trailing long glowing tendrils, an aether-blue nucleus pulsing inside; dark halo. Ethereal jellyfish creature, wide softly domed translucent violet bell, visible single luminous aether-blue nucleus inside, delicate violet ribbing, long flowing slender glowing lavender tendrils and a few ruffled oral arms. No human face or eyes, no humanoid body. Dark violet outer rim evokes shadow; separate external dark halo will be added as game VFX later, do NOT bake background haze into image. Neutral floating front view, entire bell and all lowest tendril tips clearly in square frame with broad empty margins. Beautiful refined painted fantasy material detail, visible internal transparency but substantial readable bell edge, soft shading, restrained glow contained on creature. Transparent background, no ocean, bubbles, stars, floor, cast shadow, text or additional creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Single aether-blue nucleus within violet translucent bell; external dark halo required as separate runtime VFX."
+}

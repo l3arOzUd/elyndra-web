@@ -2774,9 +2774,13 @@
       "brief": "A manta ray with wing edges crackling blue, a long stinger tail with a copper tip; indigo back, white belly, floating above the ground.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0066/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2811,9 +2815,13 @@
       "brief": "A football-sized brass sphere with three propeller fins and a single red lamp eye, valves venting bubbles; pitted copper and red.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0067/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2848,9 +2856,13 @@
       "brief": "A translucent violet bell trailing long glowing tendrils, an aether-blue nucleus pulsing inside; dark halo.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0068/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

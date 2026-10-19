@@ -1,0 +1,8 @@
+{
+  "id": "mob_0066",
+  "name": "Squall Ray",
+  "view": "front",
+  "prompt": "One full creature FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Squall Ray: a manta ray with wing edges crackling blue, a long stinger tail with a copper tip; indigo back, white belly, floating above ground. Broad natural manta disc with two cephalic lobes near front mouth, two eyes, graceful spread pectoral wings; wings slightly flexed to reveal indigo upper surface along top and clean white underside facing viewer. Long thin tail curves behind toward viewer right and ends in distinct copper tip. Front-facing neutral hovering pose, symmetric body, no three-quarter view, no legs. Thin blue luminescent edge accents along fins, no detached lightning bolts in master; electrical animation added separately. Warm painterly form shading, rich indigo and pearly white, clear silhouette. Entire wings and copper tail tip inside square transparent canvas with broad margins. No water, clouds, ground, cast shadow, text or other creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Indigo dorsal surface, white belly, copper tail tip; lightning VFX separate."
+}
