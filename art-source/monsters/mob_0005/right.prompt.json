@@ -1,0 +1,10 @@
+{
+  "view": "right",
+  "prompt": "RIGHT-facing side profile of EXACT same Craglet. Reference1 front identity including gear, reference2 left silhouette, reference3 rear. Orthographic eye-level, head points RIGHT with ONE amber eye, squat slate plated lizard, four short clawed legs, dorsal quartz, beige underside. Near fore/hind legs separate, far legs partly hidden. ONE stout tail extends to screen LEFT curled slightly upward with complete tip. This view shows character LEFT side, so the tiny brass gear in LEFT FRONT BELLY SEAM can peek below chest just behind near foreleg; keep SMALL and partly occluded, no giant gear on side, no duplicate gears. Match left view body length, head size, tail and plate material. Neutral pose. Whole creature contained inside central 75 percent of square transparent canvas with wide margins, no floor shadow text.",
+  "references": [
+    "front.png",
+    "left.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

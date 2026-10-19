@@ -94,14 +94,14 @@
       255
     ],
     "bounds": [
-      57,
-      158,
-      1232,
-      1127
+      82,
+      240,
+      1226,
+      1070
     ],
     "edgePixels": 0,
     "sourceMode": "RGBA",
-    "sha256": "afd46dc790deb4fbf84d57dd93a71c40e9d62070bf8981418ecc2e3c166c4713",
+    "sha256": "d4c6fd6a94a32ecc204668ae285048693bb92e4042dd4c4fd4033078eae6875f",
     "passes": true
   },
   {

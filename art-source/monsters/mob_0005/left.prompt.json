@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "Exact Craglet lizard turnaround, strict side profile FACING LEFT. Reference1 front identity, reference2 rear tail and spine. Orthographic eye-level lateral camera, one amber eye visible, low broad reptilian head, squat horizontal four-legged body, slate gray overlapping plates and quartz crystals along dorsal spine, beige belly. Two near short clawed legs clearly separate fore/hind, far two naturally occluded. Stout single tail extends behind to screen RIGHT and curls slightly upward, complete tip visible. Tiny brass gear is on character LEFT front belly seam: this left-facing view shows character right side, so gear should be occluded, do NOT move it onto visible flank. Same proportions and warm painted style, no new spikes or armor accessories. Square transparent canvas with generous empty padding all sides, fit whole tail and claws inside central 75 percent. No ground shadow text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}
