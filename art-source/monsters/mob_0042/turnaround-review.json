@@ -1,0 +1,19 @@
+{
+  "id": "mob_0042",
+  "name": "Barkhound",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation using front identity and opposite side reference; visual inspection of canine limbs, tail and bark landmarks.",
+  "confirmed": [
+    "Brown quadrupedal wolf with jade eyes, wooden fangs, layered bark and mossy tail preserves Bible design.",
+    "Four planted paws visible in both profiles, no added limbs or weapons.",
+    "Rear face is hidden; tail appears image-left behind versus image-right in front.",
+    "Right profile near hind leg overlaps tail rather than tail painted over leg."
+  ],
+  "limitations": [
+    "Profile hind-leg stance is staggered relative to front/back; fix neutral pose and hock landmarks before rigging.",
+    "Rear paws still show dark claw-like shapes facing viewer; heel/toe orientation needs correction.",
+    "Bark plates and moss routes differ across views; establish stable shoulder/spine landmarks.",
+    "Profile head and forepaws slightly oblique; nose/tail margins narrow. Normalize projection and framing before exports."
+  ],
+  "next": "Reconcile hind-leg pose and rear paw orientation, then separate body/head/four articulated legs/tail and author walk/attack/hit/death animations."
+}

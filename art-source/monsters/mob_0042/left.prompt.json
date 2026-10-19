@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Barkhound LEFT SIDE orthographic turnaround facing LEFT. Reference1 front identity, reference2 back bark/tail design. Same lean quadrupedal wolf: long canine muzzle, pointed ears, jade eye, two wooden upper canines one near visible, dark brown fur cream chin/chest, overlapping rough bark plates on shoulders/back and shins, moss on thick tail. Exactly FOUR canine legs with correct front elbows and rear hocks, all FOUR paws planted neutral alert standing pose, no stepping or lifted leg. Near foreleg and hindleg fully visible, far pair slightly offset only for readability. Head points left, torso horizontal behind it to right, tail rooted at rump and hangs down curving toward anatomicalLEFT (near side), single tail. Strict 90degree lateral eye-level view, ONE eye visible no face turned toward viewer. Preserve front height and athletic proportions, no extra limbs, antlers, metal. Entire creature square transparent canvas with generous margin, hand-painted fantasy MMORPG matching refs, no ground/shadows/text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

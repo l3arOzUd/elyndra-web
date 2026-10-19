@@ -47,7 +47,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0036 | Hollowroot Warden | master-created | master-created | master-created | master-created | placeholder |
 | mob_0040 | Mossback Newt | master-created | master-created | master-created | master-created | placeholder |
 | mob_0041 | Jadewing Moth | master-created | master-created | master-created | master-created | placeholder |
-| mob_0042 | Barkhound | master-created | missing | missing | missing | placeholder |
+| mob_0042 | Barkhound | master-created | master-created | master-created | master-created | placeholder |
 | mob_0043 | Pruning Tender | master-created | missing | missing | missing | placeholder |
 | mob_0044 | Thistlehare | master-created | missing | missing | missing | placeholder |
 | mob_0045 | Antlered Engine | master-created | missing | missing | missing | placeholder |
