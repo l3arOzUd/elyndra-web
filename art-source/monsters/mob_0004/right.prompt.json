@@ -1,0 +1,10 @@
+{
+  "view": "right",
+  "prompt": "Exact same Lunari character, RIGHT-facing side profile, opposite of reference2 left profile. Reference1 front identity, reference2 side body depth, reference3 back stripe. Orthographic eye-level view, head and short muzzle point RIGHT one eye visible. Silver sage fur, leaf shaped ears, four limbs, both forearms held out laterally in same neutral reference pose (foreshortened in profile), near sage wrist-to-ankle membrane partly visible, far membrane occluded. ONE thick sage/silver banded tail attached at rump behind body curls upward at screen LEFT. Preserve tail length thickness band pattern, ear size and body proportions of left reference. No extra arms wings or tails. Complete creature on square transparent canvas with safe empty margins all sides; same height and baseline as left view. No floor shadow labels.",
+  "references": [
+    "front.png",
+    "left.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

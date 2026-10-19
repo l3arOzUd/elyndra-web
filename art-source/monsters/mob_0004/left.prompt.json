@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "Exact same Lunari sugar glider in references, strict LEFT-facing side profile at eye-level orthographic. Reference1 front anatomy and palette; reference2 back stripe and tail. Preserve silver-sage fur, leaf-shaped ears, short muzzle one visible eye, four limbs, ONE banded fluffy tail behind body curling upward to screen RIGHT. Same neutral standing pose: forearms extended laterally to the animal's sides as in front, so near arm is foreshortened toward camera; DO NOT rotate arm to point forward just to show membrane. Near wrist-to-ankle sage gliding membrane visible partially along flank, far membrane naturally occluded. Two hind feet with far foot partly behind near one. No feather wings, no extra arms or tails. Same head/body proportions and painterly texture. Full creature centered on square transparent canvas with wide safe margins including tail and ears, same height as front. No floor shadows labels.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

@@ -218,10 +218,88 @@
           1254
         ],
         "bounds": [
-          78,
-          242,
-          1216,
-          1053
+          63,
+          216,
+          1186,
+          1074
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      }
+    },
+    "visualConsistency": "requires-direct-review"
+  },
+  {
+    "id": "mob_0004",
+    "views": {
+      "front": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          113,
+          117,
+          1195,
+          1100
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "back": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          44,
+          123,
+          1165,
+          1105
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "left": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          189,
+          98,
+          1210,
+          1143
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "right": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          109,
+          104,
+          1118,
+          1151
         ],
         "alphaRange": [
           0,

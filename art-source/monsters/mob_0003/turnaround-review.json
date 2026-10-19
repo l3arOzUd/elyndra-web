@@ -9,9 +9,9 @@
     "Four PNGs pass alpha/framing diagnostics"
   ],
   "limitations": [
-    "Right side shows more far-leg tips than left; camera/stance consistency requires refinement before animation",
+    "Opposite profile corrected: three near feet now visible on both sides; far legs occluded consistently",
     "Side framing is slightly larger than front/rear; normalize uniform scale and ground baseline without stretching anatomy",
     "Bubbles and internal shell highlights vary by view; this does not establish exact 3D surface correspondence"
   ],
-  "next": "Refine opposite side stance, then prepare separate limb assets and a six-leg gait after roster turnarounds."
+  "next": "Normalize framing, then prepare separate limb assets and a six-leg gait after roster turnarounds."
 }

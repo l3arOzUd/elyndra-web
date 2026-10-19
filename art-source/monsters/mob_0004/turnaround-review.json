@@ -1,0 +1,17 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct image inspection plus browser comparison of all four views on light background.",
+  "confirmed": [
+    "Leaf-shaped ears, silver-green fur and four limbs retained",
+    "Rear stripe continues forehead stripe, no rear face",
+    "Single banded tail changes screen side correctly between front/rear and left/right",
+    "Wrist-to-ankle glide membranes retained",
+    "All four images pass alpha/framing checks"
+  ],
+  "limitations": [
+    "Side torso/arms retain a partial three-quarter presentation rather than strict orthographic lateral foreshortening; refine before pose rigging",
+    "Tail bands and fur stripe boundaries vary slightly across views",
+    "Uniform scale and foot baseline need normalization for sprite use"
+  ],
+  "next": "Refine lateral torso/arm projection, then author separate tail and membrane-aware limb animation after roster references."
+}
