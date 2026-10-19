@@ -2182,5 +2182,83 @@
       }
     },
     "visualConsistency": "requires-direct-review"
+  },
+  {
+    "id": "mob_0029",
+    "views": {
+      "front": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          292,
+          20,
+          967,
+          1227
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "back": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          285,
+          11,
+          979,
+          1218
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "left": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          402,
+          21,
+          934,
+          1228
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "right": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          348,
+          23,
+          857,
+          1226
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      }
+    },
+    "visualConsistency": "requires-direct-review"
   }
 ]

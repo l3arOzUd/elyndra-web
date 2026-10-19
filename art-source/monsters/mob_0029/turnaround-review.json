@@ -1,0 +1,20 @@
+{
+  "id": "mob_0029",
+  "name": "Cinder Imp",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual inspection; file alpha/framing validation separate from design approval.",
+  "confirmed": [
+    "Charcoal body, amber eyes, round glowing cracked belly, ash-grey hands and two flame horns preserved.",
+    "Rear face removed and belly glow reduced.",
+    "Opposite side profiles show short snout, forward belly and feet."
+  ],
+  "limitations": [
+    "Finger counts differ: front master shows fewer separated digits than profile; resolve canonical hand anatomy.",
+    "Right profile mirrors tall near horn appearance rather than reliably preserving asymmetric horn roots.",
+    "Profile far hand reads as tail-like silhouette; draw clear limb connection or occlude fully.",
+    "Crack landmarks vary across views; fixed surface map needed.",
+    "Rear ears show inner surfaces and knee shapes need anatomical correction.",
+    "Flame and head framing tight; normalize body scale independently of animated flame tips."
+  ],
+  "next": "Correct hands, horn roots and far arm, align crack map and joints; separate horn flame layers and author grounded footsteps plus separate glowing footprint VFX."
+}
