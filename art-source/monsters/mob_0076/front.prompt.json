@@ -1,0 +1,8 @@
+{
+  "id": "mob_0076",
+  "name": "Cryo Sentry",
+  "view": "front",
+  "prompt": "One full FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Cryo Sentry: a TRIPOD construct with a long frost lance for a head, a cryo cell glowing in its chest, frost venting from its joints; white enamel and cyan. Elegant white enamel mechanical sentry with compact torso, visible cyan cryogenic glass cell in chest, exactly THREE articulated legs in triangular stance: two splayed side legs and one clearly visible central rear leg. No arms. Head itself is a long narrow faceted frost lance projecting upward from neck, sharp ice spearhead instead of human face. Cold cyan seams and frosted metal joints, small icicles, subtle worn enamel, clear separated leg silhouette. Entire torso and lance face directly forward, neutral stance. Warm painterly fantasy texture with cool accents, readable at game scale. Complete lance tip and three feet well inside square transparent canvas with generous margins. No vapor clouds or detached frost in master; joint venting animated separately. No ground, shadow, text, scenery or extra creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Three legs; lance head, cyan chest cell; joint frost emission separate."
+}

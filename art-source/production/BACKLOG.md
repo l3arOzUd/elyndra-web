@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 64; existing front references needing review: 7; missing front references: 23.
+Monsters: 94; front masters created: 67; existing front references needing review: 7; missing front references: 20.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -80,9 +80,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0072 | Frostcoil Serpent | master-created | missing | missing | missing | placeholder |
 | mob_0073 | Glacier Juggernaut | master-created | missing | missing | missing | placeholder |
 | mob_0074 | Mirrorshade | master-created | missing | missing | missing | placeholder |
-| mob_0075 | Hoarfrost Behemoth | missing | missing | missing | missing | placeholder |
-| mob_0076 | Cryo Sentry | missing | missing | missing | missing | placeholder |
-| mob_0077 | Archive Specter | missing | missing | missing | missing | placeholder |
+| mob_0075 | Hoarfrost Behemoth | master-created | missing | missing | missing | placeholder |
+| mob_0076 | Cryo Sentry | master-created | missing | missing | missing | placeholder |
+| mob_0077 | Archive Specter | master-created | missing | missing | missing | placeholder |
 | mob_0078 | Cryo Lancer | missing | missing | missing | missing | placeholder |
 | mob_0079 | Cryocore Curator | missing | missing | missing | missing | placeholder |
 | mob_0080 | Slagback Toad | missing | missing | missing | missing | placeholder |

@@ -1,0 +1,8 @@
+{
+  "id": "mob_0075",
+  "name": "Hoarfrost Behemoth",
+  "view": "front",
+  "prompt": "One full-body FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Hoarfrost Behemoth: a mammoth-sized beast with a hump of frost-matted wool, FOUR curling tusks and icicles in its fur; white and slate grey. Huge shaggy mammoth-like quadruped, broad heavy head, short thick trunk, mighty shoulder hump of frost-matted white and slate grey wool, FOUR distinct ivory tusks: one large outer curling pair and one shorter inner curling pair, all four bases and tips readable. Four massive pillar legs and broad feet, rear feet visible beside front feet, dark alert eyes, small ears under wool, icicles dangling from fur. Entire head torso pelvis square to viewer, neutral stance. Warm painterly detail with cool snow highlights, strong readable silhouette. All tusks feet hump inside square transparent canvas with generous margins. No ground snow, shadow, fog, particles, text, extra limbs or other creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Four curling tusks, four legs, frost-matted wool hump."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "mob_0077",
+  "name": "Archive Specter",
+  "view": "front",
+  "prompt": "Single full FRONT orthographic eye-level master for Elyndra hand-painted stylized fantasy MMORPG. Archive Specter: a flickering translucent figure made of scrolling glyph-light, trailing like smoke, face a blank of static; violet and cold white. Ethereal upright humanoid spectral silhouette composed entirely of flowing bands of luminous ABSTRACT invented arcane glyph shapes, violet and icy white light, two loosely formed arms with wispy fingers, lower body tapering into flowing smoke-like light ribbons instead of legs. Smooth blank oval face filled with fine white static texture, no eyes mouth or human features. Glyphs are decorative non-readable geometric marks embedded in body, not written words. Neutral front pose, shoulders square, painterly soft energy forms and readable silhouette with translucent interior. Keep all wispy trails inside square canvas with generous empty margins. Transparent background everywhere outside figure; no background glow cloud, floor, shadow, scenery, labels or extra figures. This is a still animation master; flicker and glyph scrolling added later.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Blank static face; glyph-light body. Flicker and scrolling require animation."
+}

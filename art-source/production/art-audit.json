@@ -3143,9 +3143,13 @@
       "brief": "A mammoth-sized beast with a hump of frost-matted wool, four curling tusks and icicles in its fur; white and slate grey.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0075/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3180,9 +3184,13 @@
       "brief": "A tripod construct with a long frost lance for a head, a cryo cell glowing in its chest, frost venting from its joints; white enamel and cyan.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0076/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3217,9 +3225,13 @@
       "brief": "A flickering translucent figure made of scrolling glyph-light, trailing like smoke, face a blank of static; violet and cold white.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0077/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
