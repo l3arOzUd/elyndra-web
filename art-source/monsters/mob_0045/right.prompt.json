@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Antlered Engine RIGHT SIDE orthographic facing RIGHT. Reference1 left establishes proportions/pose, reference2 front identity. Same quadrupedal stag of living wood with brass ribs, copper-coiled branching antlers hung moss, jade eye. Four deer legs, split hooves, all planted neutral stance, near and partly visible far pairs. Head/long neck right, rump/small tail left, torso horizontal. IMPORTANT jade furnace only in CHEST behind front shoulder at imageRIGHT; hip/rump imageLEFT is opaque wood beneath brass braces, no second jade furnace at hip. Two antlers with natural side overlap same branch pattern, not extra horns. One eye, strict lateral eye-level no three-quarter face. Whole antlers and hooves square transparent with clear margins, same hand-painted fantasy style, no floor/shadows/text.",
+  "references": [
+    "left.png",
+    "front.png"
+  ]
+}

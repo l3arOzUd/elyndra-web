@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Antlered Engine LEFT SIDE orthographic facing LEFT. Reference front exact identity and rear material. A true FOUR-LEGGED STAG with horizontal deer torso, long upright deer neck/head at left, rump and small tail right. Living dark wood limbs/body, antique brass rib cage around glowing jade furnace at forward thorax behind shoulder, solid wooden abdomen/rump. Paired branching wood antlers wrapped copper coils with moss, two deer ears and one jade eye visible. Exactly four slender deer legs with normal front knees and rear hocks, split hooves all planted neutral stance, far pair slightly visible no extra legs. Strict 90degree lateral eye-level, do not flatten chest cage into humanoid torso, no turned-to-camera face. Antlers retain same branch structure viewed from side with natural overlap, not a new crown. Full antlers/hooves square transparent canvas clear margins, hand-painted fantasy MMORPG style, no ground/shadow/text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

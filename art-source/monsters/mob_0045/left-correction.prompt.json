@@ -1,0 +1,7 @@
+{
+  "view": "left",
+  "prompt": "Precise local material edit only: remove the green glowing patch at REAR HIP on imageRIGHT beneath brass hip braces in this left-facing Antlered Engine. Replace green hip inset with matching opaque dark brown living wood grain. Keep brass braces and round hip joint exactly. Preserve the luminous jade CHEST on imageLEFT unchanged. Everything else unchanged: four legs, antlers, moss, head, pose, scale and transparent background. Only one chest furnace, no hip furnace.",
+  "references": [
+    "left-hip-glow-draft.png"
+  ]
+}

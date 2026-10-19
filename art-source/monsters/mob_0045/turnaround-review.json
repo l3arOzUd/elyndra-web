@@ -1,0 +1,19 @@
+{
+  "id": "mob_0045",
+  "name": "Antlered Engine",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front master and opposite side reference; targeted removal of unintended hip furnace in left profile.",
+  "confirmed": [
+    "Four-legged stag, living wood, brass ribs, copper/wood antlers and moss preserve Bible identity.",
+    "Both profiles now restrict large jade furnace to chest; hip glow removed from left.",
+    "Rear has no face/eyes and shows wood spine/rump with small tail.",
+    "Four hooves visible in profiles."
+  ],
+  "limitations": [
+    "Antler branch paths and copper coil overlaps vary; individual tines not yet mapped across views.",
+    "Rear view anatomy is overly flattened with front-like hooves and rib placement; correct rump/hock depth and ear backs.",
+    "Profile hind-leg stance differs from frontal neutral stance; joint landmarks need alignment.",
+    "Rear faint green side insets may conflict with opaque profile hips; reconcile material placement before rigging."
+  ],
+  "next": "Resolve rear anatomy, antler correspondence and neutral leg pose; separate fixed-length limb parts and author locomotion/attack/death plus chest glow VFX."
+}
