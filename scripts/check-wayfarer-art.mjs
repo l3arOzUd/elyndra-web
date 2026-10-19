@@ -70,11 +70,17 @@ try{
     }
    }
   }
-  return {parts:kit.img.size,records,pictures};
+  const expected=new Set(kit.rig.effects??[]);
+  for(const [view,v] of Object.entries(kit.rig.views)) {
+   for(const part of Object.keys(v.parts))expected.add(`base/${view}/${part}.png`);
+   for(const [part,variants] of Object.entries(kit.rig.variants??{}))for(const variant of variants)expected.add(`base/${view}/${part}_${variant}.png`);
+   for(const item of Object.values(kit.items))for(const layer of item.layers)expected.add(`items/${item.visual}/${view}/${layer}.png`);
+  }
+  return {parts:kit.img.size,missing:[...expected].filter(file=>!kit.img.has(file)),records,pictures};
  });
  for(const p of result.pictures)await writeFile(resolve(out,`motion-${p.name}.png`),Buffer.from(p.data,'base64'));
- const report={parts:result.parts,records:result.records,errors};await writeFile(resolve(out,'validation.json'),JSON.stringify(report,null,2)+'\n');
- assert.equal(result.parts,79);assert.equal(errors.length,0);assert.ok(result.records.every(r=>!r.emptyFrames));
+ const report={parts:result.parts,missing:result.missing,records:result.records,errors};await writeFile(resolve(out,'validation.json'),JSON.stringify(report,null,2)+'\n');
+ assert.deepEqual(result.missing,[],'Every declared rig and equipment image must load');assert.equal(errors.length,0);assert.ok(result.records.every(r=>!r.emptyFrames));
  assert.ok(result.records.every(r=>!r.edgeFrames),'No outfit may be cropped at a frame edge');
  assert.equal(new Set(result.records.filter(r=>r.anim==='idle').map(r=>r.hash)).size,9,'Each outfit must visibly differ');
  console.log(JSON.stringify({parts:result.parts,outfits:9,animations:7,errors,clipped:result.records.filter(r=>r.edgeFrames)},null,2));
