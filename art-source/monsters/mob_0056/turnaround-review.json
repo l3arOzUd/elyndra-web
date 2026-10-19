@@ -1,0 +1,21 @@
+{
+  "id": "mob_0056",
+  "name": "Sand-buried Colossus",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front identity; corrected rear front-like chest and fingers before side references.",
+  "confirmed": [
+    "Waist burial without visible legs, free anatomical right arm and trapped left arm maintained.",
+    "Rear corrected to shoulder blades and structural back bands; original failed draft retained.",
+    "Sun-disc rear opaque, orange front remains forward in profiles.",
+    "All four images pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Left profile remains oblique; disc face too broad and chest too visible.",
+    "Corrected rear right forearm appears suspended rather than visibly dragging; ground-contact and occlusion need reconciliation.",
+    "Disc thickness, radial braces and body depth differ between profiles.",
+    "Sand crust footprint and brass band routes vary; define fixed cut-off and attachment map before animation.",
+    "Front master foreshortens free hand strongly; size must remain constant through action poses.",
+    "No separated stone segments or runtime animation yet."
+  ],
+  "next": "Resolve arm contact, disc thickness and burial footprint; separate rigid shoulder/elbow/wrist/disc parts and sand layer for idle, drag, slam, hit and collapse animation."
+}
