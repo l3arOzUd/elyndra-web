@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "Furnace Knight RIGHT-facing orthographic side turnaround. CRITICAL handedness: anatomical LEFT arm NEAR camera EMPTY relaxed open gauntlet visible foreground; anatomical RIGHT arm FAR side holds single long sword DOWN, sword partially occluded by far leg but tip extends forward/down and fully within frame. Do NOT mirror left reference sword into near hand. Front furnace faces RIGHT; hinged door on anatomical LEFT near side, same hinge as original front. Rear vent box LEFT, two chimneys, dark riveted iron plate same proportions neutral stance toes RIGHT heels LEFT. Helmet visor right. Match sword design and length, furnace door dimensions. No shield cape second sword smoke sparks. Full figure and blade generous transparent square margins painted fantasy MMORPG no floor shadow text.",
+  "references": [
+    "front.png",
+    "left.png",
+    "back.png"
+  ]
+}

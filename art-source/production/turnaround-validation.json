@@ -2338,5 +2338,83 @@
       }
     },
     "visualConsistency": "requires-direct-review"
+  },
+  {
+    "id": "mob_0031",
+    "views": {
+      "front": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          250,
+          41,
+          944,
+          1215
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "back": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          305,
+          39,
+          1056,
+          1221
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "left": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          386,
+          27,
+          842,
+          1219
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "right": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          385,
+          29,
+          1080,
+          1204
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      }
+    },
+    "visualConsistency": "requires-direct-review"
   }
 ]

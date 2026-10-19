@@ -1,0 +1,20 @@
+{
+  "id": "mob_0031",
+  "name": "Furnace Knight",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual review of four views; file checks do not prove mechanical consistency.",
+  "confirmed": [
+    "Right-hand sword retained: front viewer-left, rear viewer-right, left-facing near hand, right-facing far hand with near hand empty.",
+    "Rear has closed vent housing and rear helmet instead of open front furnace and visor.",
+    "Dark riveted armor twin exhausts heated blade and furnace identity preserved."
+  ],
+  "limitations": [
+    "Side furnace door hinge/open angle does not reconcile reliably with front; establish fixed hinge construction.",
+    "Sides remain three-quarter and show too much front furnace.",
+    "Sword angle shifts forward and blade proportions/glow vary; align grip and fixed weapon dimensions.",
+    "Chimney heights/mount offsets vary with viewpoint.",
+    "Rear shin plates and side knee axes require mechanical construction review.",
+    "Armor rivet/panel landmarks and frame scale need normalization."
+  ],
+  "next": "Resolve furnace door hinge, right-hand grip, rigid blade and armor joint axes, then separate parts and author heavy walk/slash/collapse plus separate smoke and heat VFX."
+}
