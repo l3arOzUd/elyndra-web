@@ -214,6 +214,8 @@ export class Game {
       const e = this.ents.get(id);
       if (!e) continue;
       if (e.dead && e.kind === "m") e.leaving = true; // let the death play out
+      // A monster that leaves alive (lost far from home, or out of view) fades.
+      else if (e.kind === "m") e.actor.fadeOut(600, () => { if (this.ents.get(id) === e) this.removeEnt(id); });
       else this.removeEnt(id);
     }
   }
@@ -436,6 +438,9 @@ export class Game {
       else if (ev.code === "KeyI") this.hud.toggle("inv-win");
       else if (ev.code === "KeyQ") this.hud.toggle("journal-win");
       else if (ev.code === "KeyZ") this.pickupNearby(true);
+      // World v3 horde tools: R rings a Lure Bell, T crushes a Camp Feather.
+      else if (ev.code === "KeyR") this.conn.send({ t: "use", item: "itm_0900" });
+      else if (ev.code === "KeyT") this.conn.send({ t: "use", item: "itm_0902" });
       else if (ev.key === "Home") this.cam.reset();
       else if (ev.key === "F3") { ev.preventDefault(); this.debugOn = !this.debugOn; this.conn.send({ t: "debug", on: this.debugOn }); document.getElementById("debug-win")!.hidden = !this.debugOn; }
     });

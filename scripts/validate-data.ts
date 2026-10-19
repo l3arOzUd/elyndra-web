@@ -438,6 +438,9 @@ function checkItems(b: ContentBundle) {
     const inputValue = r.inputs.reduce((s, i) => s + (items.get(i.item_id)?.sell_price ?? 0) * i.qty, 0) + r.currency;
     if (out && out.sell_price * r.output.qty > inputValue) report("error", "economy.recipe_profit", r.id, `output sells for ${out.sell_price * r.output.qty}, inputs worth ${inputValue}`);
   }
+  // World v3: every common/uncommon material is an input to some recipe (WORLD_GDD_v3 §5.2).
+  const used = new Set(b.recipes.flatMap((r) => r.inputs.map((i) => i.item_id)));
+  for (const it of b.items) if (it.category === "material" && !used.has(it.id)) report("error", "economy.material_unused", it.id, `${it.name} is in no recipe`);
   // Same name, different id.
   const names = new Map<string, string>();
   for (const it of b.items) { if (names.has(it.name)) report("error", "item.name_duplicate", it.id, `same name as ${names.get(it.name)}`); names.set(it.name, it.id); }

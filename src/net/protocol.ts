@@ -67,6 +67,9 @@ export interface GearView {
   link?: string;
 }
 
+/** A timed consumable bonus (Haste Draught, Scholar's Tea, Fortune Incense). */
+export interface BuffView { kind: "move" | "exp" | "drop"; item: string; pct: number; /** ms left */ left: number }
+
 export interface TotemView {
   slot: string;
   ch: number;
@@ -116,7 +119,7 @@ export type ServerMsg =
   | { t: "loot"; piles: { id: number; x: number; y: number; items: [string, number, string?][] }[] }
   | { t: "loot_gone"; ids: number[] }
   | { t: "inv"; ver: number; items: Record<string, number>; full?: boolean; zeny: number; equip?: Record<string, string>; gear?: GearView[]; gear_gone?: number[] }
-  | { t: "stats"; lv: number; exp: number; next: number; hp: number; mhp: number; sp: number; msp: number; sh?: number; msh?: number; atk: number; def: number; job: string; tot?: TotemView[] }
+  | { t: "stats"; lv: number; exp: number; next: number; hp: number; mhp: number; sp: number; msp: number; sh?: number; msh?: number; atk: number; def: number; job: string; tot?: TotemView[]; buffs?: BuffView[] }
   | SheetMsg
   | { t: "quests"; quests: QuestView[] }
   | { t: "npc"; npc: string; name: string; role: string; lines: string[]; shop?: [string, number][]; recipes?: RecipeView[]; dest?: [string, number][]; offer?: QuestView[]; ready?: string[] }

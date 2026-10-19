@@ -170,7 +170,15 @@ export interface ItemDef {
   /** Generated gear base: drops from any monster of its item level or above (systems.json drops). */
   drop_pool?: boolean;
   /** Consumables: what using one does. */
-  use?: { heal_hp_pct?: number; heal_sp_pct?: number; reset_stats?: boolean; cooldown_ms: number };
+  use?: {
+    heal_hp_pct?: number; heal_sp_pct?: number; reset_stats?: boolean; cooldown_ms: number;
+    /** Every monster within this many cells chases the user (World v3 Lure Bell). */
+    lure_radius?: number;
+    /** town: Avelorn's arrival; camp: the current map's arrival. */
+    teleport?: "town" | "camp";
+    /** A timed bonus on the player; using another of the same kind restarts it. */
+    buff?: { kind: "move" | "exp" | "drop"; pct: number; duration_ms: number };
+  };
   /**
    * Equipment, Charms and Totems. Each copy a player owns is its own item
    * with a rarity and random affixes (CHARACTER_SYSTEMS.md §4-5).

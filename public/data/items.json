@@ -1879,6 +1879,96 @@
   "description": "A glyph-key cut from an Executor's mask. The Heart Warden lets its bearer descend into the Lattice Heart."
  },
  {
+  "id": "itm_0900",
+  "name": "Lure Bell",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 2,
+  "stack_max": 99,
+  "description": "Rings out over the field: every monster within 14 cells turns and comes for you, even the shy ones. The heart of a drag.",
+  "use": {
+   "lure_radius": 14,
+   "cooldown_ms": 8000
+  }
+ },
+ {
+  "id": "itm_0901",
+  "name": "Return Feather",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 3,
+  "stack_max": 99,
+  "description": "A Guild courier's feather. Crush it to be carried back to Avelorn.",
+  "use": {
+   "teleport": "town",
+   "cooldown_ms": 3000
+  }
+ },
+ {
+  "id": "itm_0902",
+  "name": "Camp Feather",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 2,
+  "stack_max": 99,
+  "description": "Carries you to the camp of the map you stand on. For a narrow escape or a fresh pull.",
+  "use": {
+   "teleport": "camp",
+   "cooldown_ms": 3000
+  }
+ },
+ {
+  "id": "itm_0903",
+  "name": "Haste Draught",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 3,
+  "stack_max": 99,
+  "description": "Move 30% faster for 60 seconds: drag the herd across a zone before it catches you.",
+  "use": {
+   "buff": {
+    "kind": "move",
+    "pct": 30,
+    "duration_ms": 60000
+   },
+   "cooldown_ms": 1000
+  }
+ },
+ {
+  "id": "itm_0904",
+  "name": "Scholar's Tea",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 5,
+  "stack_max": 99,
+  "description": "Clears the head. +30% EXP from kills for 10 minutes.",
+  "use": {
+   "buff": {
+    "kind": "exp",
+    "pct": 30,
+    "duration_ms": 600000
+   },
+   "cooldown_ms": 1000
+  }
+ },
+ {
+  "id": "itm_0905",
+  "name": "Fortune Incense",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 5,
+  "stack_max": 99,
+  "description": "Its smoke clings to what you kill. +50% material drop chance for 10 minutes.",
+  "use": {
+   "buff": {
+    "kind": "drop",
+    "pct": 50,
+    "duration_ms": 600000
+   },
+   "cooldown_ms": 1000
+  }
+ },
+ {
   "id": "itm_1000",
   "name": "Reset Scroll",
   "category": "consumable",

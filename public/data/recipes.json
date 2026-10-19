@@ -111,6 +111,282 @@
   "currency": 900
  },
  {
+  "id": "rcp_lure_bell_b1",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0001",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0013",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0012",
+    "qty": 2
+   }
+  ],
+  "currency": 12
+ },
+ {
+  "id": "rcp_return_feather_b1",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0003",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0002",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0014",
+    "qty": 2
+   }
+  ],
+  "currency": 12
+ },
+ {
+  "id": "rcp_camp_feather_b1",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0005",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0004",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0073",
+    "qty": 2
+   }
+  ],
+  "currency": 12
+ },
+ {
+  "id": "rcp_haste_draught_b1",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0007",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0006",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0074",
+    "qty": 2
+   }
+  ],
+  "currency": 12
+ },
+ {
+  "id": "rcp_scholars_tea_b1",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0009",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0008",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0001",
+    "qty": 6
+   }
+  ],
+  "currency": 12
+ },
+ {
+  "id": "rcp_fortune_incense_b1",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0011",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0010",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0003",
+    "qty": 6
+   }
+  ],
+  "currency": 12
+ },
+ {
+  "id": "rcp_lure_bell_b2",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0015",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0100",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0026",
+    "qty": 2
+   }
+  ],
+  "currency": 32
+ },
+ {
+  "id": "rcp_return_feather_b2",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0017",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0016",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0101",
+    "qty": 2
+   }
+  ],
+  "currency": 32
+ },
+ {
+  "id": "rcp_camp_feather_b2",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0019",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0018",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0015",
+    "qty": 6
+   }
+  ],
+  "currency": 32
+ },
+ {
+  "id": "rcp_haste_draught_b2",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0021",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0020",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0017",
+    "qty": 6
+   }
+  ],
+  "currency": 32
+ },
+ {
+  "id": "rcp_scholars_tea_b2",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0023",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0022",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0019",
+    "qty": 6
+   }
+  ],
+  "currency": 32
+ },
+ {
+  "id": "rcp_fortune_incense_b2",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0025",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0024",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0021",
+    "qty": 6
+   }
+  ],
+  "currency": 32
+ },
+ {
   "id": "rcp_ver_field_ration",
   "npc_id": "npc_ver_craftsman",
   "output": {
@@ -160,6 +436,306 @@
   "currency": 25
  },
  {
+  "id": "rcp_lure_bell_b3",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0027",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0108",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0105",
+    "qty": 2
+   }
+  ],
+  "currency": 52
+ },
+ {
+  "id": "rcp_return_feather_b3",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0031",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0130",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0107",
+    "qty": 2
+   }
+  ],
+  "currency": 52
+ },
+ {
+  "id": "rcp_camp_feather_b3",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0033",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0028",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0109",
+    "qty": 2
+   }
+  ],
+  "currency": 52
+ },
+ {
+  "id": "rcp_haste_draught_b3",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0102",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0032",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0131",
+    "qty": 2
+   }
+  ],
+  "currency": 52
+ },
+ {
+  "id": "rcp_scholars_tea_b3",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0104",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0034",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0027",
+    "qty": 6
+   }
+  ],
+  "currency": 52
+ },
+ {
+  "id": "rcp_fortune_incense_b3",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0106",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0103",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0031",
+    "qty": 6
+   }
+  ],
+  "currency": 52
+ },
+ {
+  "id": "rcp_lure_bell_b4",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0029",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0114",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0030",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0115",
+    "qty": 2
+   }
+  ],
+  "currency": 72
+ },
+ {
+  "id": "rcp_return_feather_b4",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0035",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0116",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0036",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0117",
+    "qty": 2
+   }
+  ],
+  "currency": 72
+ },
+ {
+  "id": "rcp_camp_feather_b4",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0039",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0132",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0040",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0133",
+    "qty": 2
+   }
+  ],
+  "currency": 72
+ },
+ {
+  "id": "rcp_haste_draught_b4",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0041",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0134",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0042",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0135",
+    "qty": 2
+   }
+  ],
+  "currency": 72
+ },
+ {
+  "id": "rcp_scholars_tea_b4",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0110",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0136",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0111",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0137",
+    "qty": 2
+   }
+  ],
+  "currency": 72
+ },
+ {
+  "id": "rcp_fortune_incense_b4",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0112",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0160",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0113",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0161",
+    "qty": 2
+   }
+  ],
+  "currency": 72
+ },
+ {
   "id": "rcp_sol_field_ration",
   "npc_id": "npc_sol_craftsman",
   "output": {
@@ -203,6 +779,176 @@
    }
   ],
   "currency": 25
+ },
+ {
+  "id": "rcp_lure_bell_b5",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0037",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0142",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0190",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0141",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0167",
+    "qty": 2
+   }
+  ],
+  "currency": 92
+ },
+ {
+  "id": "rcp_return_feather_b5",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0043",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0144",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0038",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0143",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0191",
+    "qty": 2
+   }
+  ],
+  "currency": 92
+ },
+ {
+  "id": "rcp_camp_feather_b5",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0047",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0146",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0044",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0145",
+    "qty": 2
+   }
+  ],
+  "currency": 92
+ },
+ {
+  "id": "rcp_haste_draught_b5",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0049",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0162",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0048",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0147",
+    "qty": 2
+   }
+  ],
+  "currency": 92
+ },
+ {
+  "id": "rcp_scholars_tea_b5",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0138",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0164",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0050",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0163",
+    "qty": 2
+   }
+  ],
+  "currency": 92
+ },
+ {
+  "id": "rcp_fortune_incense_b5",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0140",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0166",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0139",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0165",
+    "qty": 2
+   }
+  ],
+  "currency": 92
  },
  {
   "id": "rcp_tha_kelp_ration",
@@ -258,6 +1004,144 @@
   "currency": 40
  },
  {
+  "id": "rcp_lure_bell_b6",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0045",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0194",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0173",
+    "qty": 2
+   }
+  ],
+  "currency": 112
+ },
+ {
+  "id": "rcp_return_feather_b6",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0051",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0196",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0193",
+    "qty": 2
+   }
+  ],
+  "currency": 112
+ },
+ {
+  "id": "rcp_camp_feather_b6",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0168",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0046",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0195",
+    "qty": 2
+   }
+  ],
+  "currency": 112
+ },
+ {
+  "id": "rcp_haste_draught_b6",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0170",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0052",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0197",
+    "qty": 2
+   }
+  ],
+  "currency": 112
+ },
+ {
+  "id": "rcp_scholars_tea_b6",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0172",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0169",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0045",
+    "qty": 6
+   }
+  ],
+  "currency": 112
+ },
+ {
+  "id": "rcp_fortune_incense_b6",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0192",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0171",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0051",
+    "qty": 6
+   }
+  ],
+  "currency": 112
+ },
+ {
   "id": "rcp_cry_hare_ration",
   "npc_id": "npc_cry_craftsman",
   "output": {
@@ -305,6 +1189,168 @@
    }
   ],
   "currency": 40
+ },
+ {
+  "id": "rcp_lure_bell_b7",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0053",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0198",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0054",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0199",
+    "qty": 2
+   }
+  ],
+  "currency": 132
+ },
+ {
+  "id": "rcp_return_feather_b7",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0055",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0200",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0056",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0201",
+    "qty": 2
+   }
+  ],
+  "currency": 132
+ },
+ {
+  "id": "rcp_camp_feather_b7",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0057",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0202",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0058",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0203",
+    "qty": 2
+   }
+  ],
+  "currency": 132
+ },
+ {
+  "id": "rcp_haste_draught_b7",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0059",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0204",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0060",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0205",
+    "qty": 2
+   }
+  ],
+  "currency": 132
+ },
+ {
+  "id": "rcp_scholars_tea_b7",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0174",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0206",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0175",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0207",
+    "qty": 2
+   }
+  ],
+  "currency": 132
+ },
+ {
+  "id": "rcp_fortune_incense_b7",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0176",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0220",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0177",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0221",
+    "qty": 2
+   }
+  ],
+  "currency": 132
  },
  {
   "id": "rcp_emb_ash_ration",
@@ -360,6 +1406,144 @@
   "currency": 150
  },
  {
+  "id": "rcp_lure_bell_b8",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0061",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0228",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0223",
+    "qty": 2
+   }
+  ],
+  "currency": 152
+ },
+ {
+  "id": "rcp_return_feather_b8",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0063",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0250",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0225",
+    "qty": 2
+   }
+  ],
+  "currency": 152
+ },
+ {
+  "id": "rcp_camp_feather_b8",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0065",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0252",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0227",
+    "qty": 2
+   }
+  ],
+  "currency": 152
+ },
+ {
+  "id": "rcp_haste_draught_b8",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0222",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0062",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0229",
+    "qty": 2
+   }
+  ],
+  "currency": 152
+ },
+ {
+  "id": "rcp_scholars_tea_b8",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0224",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0064",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0251",
+    "qty": 2
+   }
+  ],
+  "currency": 152
+ },
+ {
+  "id": "rcp_fortune_incense_b8",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0226",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0066",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0253",
+    "qty": 2
+   }
+  ],
+  "currency": 152
+ },
+ {
   "id": "rcp_noc_bristle_ration",
   "npc_id": "npc_noc_craftsman",
   "output": {
@@ -411,5 +1595,281 @@
    }
   ],
   "currency": 180
+ },
+ {
+  "id": "rcp_lure_bell_b9",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0067",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0258",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0257",
+    "qty": 2
+   }
+  ],
+  "currency": 172
+ },
+ {
+  "id": "rcp_return_feather_b9",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0230",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0068",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0259",
+    "qty": 2
+   }
+  ],
+  "currency": 172
+ },
+ {
+  "id": "rcp_camp_feather_b9",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0232",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0231",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0067",
+    "qty": 6
+   }
+  ],
+  "currency": 172
+ },
+ {
+  "id": "rcp_haste_draught_b9",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0234",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0233",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0230",
+    "qty": 6
+   }
+  ],
+  "currency": 172
+ },
+ {
+  "id": "rcp_scholars_tea_b9",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0254",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0235",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0232",
+    "qty": 6
+   }
+  ],
+  "currency": 172
+ },
+ {
+  "id": "rcp_fortune_incense_b9",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0256",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0255",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0234",
+    "qty": 6
+   }
+  ],
+  "currency": 172
+ },
+ {
+  "id": "rcp_lure_bell_b10",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0900",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0069",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0263",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0260",
+    "qty": 6
+   }
+  ],
+  "currency": 192
+ },
+ {
+  "id": "rcp_return_feather_b10",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0901",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0260",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0265",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0262",
+    "qty": 6
+   }
+  ],
+  "currency": 192
+ },
+ {
+  "id": "rcp_camp_feather_b10",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0902",
+   "qty": 2
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0262",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0264",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0070",
+    "qty": 2
+   }
+  ],
+  "currency": 192
+ },
+ {
+  "id": "rcp_haste_draught_b10",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0903",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0264",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0261",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0263",
+    "qty": 2
+   }
+  ],
+  "currency": 192
+ },
+ {
+  "id": "rcp_scholars_tea_b10",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0904",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0070",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0265",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0069",
+    "qty": 6
+   }
+  ],
+  "currency": 192
+ },
+ {
+  "id": "rcp_fortune_incense_b10",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0905",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0261",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0260",
+    "qty": 6
+   },
+   {
+    "item_id": "itm_0262",
+    "qty": 6
+   }
+  ],
+  "currency": 192
  }
 ]

@@ -1,5 +1,5 @@
 import type { ClientContent } from '../data/content';
-import type { GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
+import type { BuffView, GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
 import { skillIcon, systemIcon } from './art';
 import { CHARM_SLOTS, ECHO_COUNT, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
@@ -26,6 +26,7 @@ export class Hud {
   stats: MsgOf<'stats'> | null = null;
   sheet: SheetMsg | null = null;
   private totems: TotemView[] = [];
+  private buffs: BuffView[] = [];
   private cooldownUntil: Record<string, number> = {};
   private selected: string | null = null;
   private toastTimer = 0;
@@ -148,6 +149,7 @@ export class Hud {
     if (msh) $('hp-text').textContent += ' · ◈ ' + sh;
     const before = new Map(this.totems.map((t) => [t.slot, t.left]));
     this.totems = s.tot ?? [];
+    this.buffs = s.buffs ?? [];
     for (const t of this.totems) if (t.left && !before.get(t.slot)) { const g = this.worn(t.slot); const type = g && this.c.items.get(g.base)?.equip?.totem?.type; if (type) this.onTotemFired(type); }
     if (prev && s.lv > prev.lv) this.onLevelUp(s.lv);
     this.renderBuffs();
@@ -423,6 +425,13 @@ export class Hud {
       const b = el('div', 'buff' + (t.trigger ? ' echo' : '')); b.append(systemIcon(type));
       b.append(el('small', '', t.trigger ? Math.floor(t.ch / t.need * 100) + '%' : Math.ceil(t.left / 1000) + 's'));
       b.title = (it?.name ?? '') + (t.trigger ? ' · ' + t.ch + '/' + t.need + (t.link ? ' → ' + (this.c.skills.get(t.link)?.name ?? t.link) : ' · no skill linked') : ' · ' + (t.left / 1000).toFixed(1) + 's left');
+      bar.append(b);
+    }
+    // Consumable buffs (World v3): Haste Draught, Scholar's Tea, Fortune Incense.
+    for (const f of this.buffs) {
+      const it = this.c.items.get(f.item), b = el('div', 'buff consumable');
+      b.append(itemIcon(it), el('small', '', f.left >= 60000 ? Math.ceil(f.left / 60000) + 'm' : Math.ceil(f.left / 1000) + 's'));
+      b.title = (it?.name ?? f.item) + ' · +' + f.pct + '% ' + ({ move: 'move speed', exp: 'EXP', drop: 'material drops' }[f.kind]) + ' · ' + Math.ceil(f.left / 1000) + 's left';
       bar.append(b);
     }
   }

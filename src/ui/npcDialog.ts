@@ -76,6 +76,13 @@ export class NpcDialog {
       const sellable = Object.entries(this.hud.inventory).filter(([id]) => { const it = this.c.items.get(id); return it && it.category !== 'quest' && it.sell_price > 0 && !Object.values(this.hud.equip).includes(id); });
       const gear = [...this.hud.gear.values()].filter(g => !g.slot);
       if (!sellable.length && !gear.length) s.append(el('p', 'empty-state', 'No unequipped items to sell.'));
+      // World v3: one click sells all common/uncommon monster materials (rares and active quest items stay).
+      const junk = sellable.filter(([id]) => this.c.items.get(id)!.category === 'material');
+      if (junk.length) {
+        const n = junk.reduce((a, [, q]) => a + q, 0), z = junk.reduce((a, [id, q]) => a + q * this.c.items.get(id)!.sell_price, 0);
+        const card = row('All materials', n.toLocaleString() + ' common and uncommon materials (' + junk.length + ' kinds) · about ' + z.toLocaleString() + ' z. Rare materials and items an active quest needs are kept.', icon('crystal', 'service-art'));
+        const actions = el('div', 'service-actions'); actions.append(button('Sell all materials', 'sell_junk')); card.append(actions); s.append(card);
+      }
       for (const g of gear) {
         const it = this.c.items.get(g.base); if (!it) continue;
         const price = Math.round(it.sell_price * ({ normal: 1, magic: 1.5, rare: 2.5, relic: 5, unique: 4 }[g.rarity] ?? 1));
