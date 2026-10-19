@@ -12,7 +12,8 @@
     "validate:data": "tsx scripts/validate-data.ts",
     "build:content": "tsx content/build.ts",
     "balance:report": "tsx content/report.ts",
-    "bible": "tsx scripts/generate-bible.ts"
+    "bible": "tsx scripts/generate-bible.ts",
+    "roadmap": "tsx scripts/validate-data.ts && tsx scripts/generate-roadmap.ts"
   },
   "dependencies": {
     "three": "^0.186.0"
