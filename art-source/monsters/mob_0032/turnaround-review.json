@@ -1,0 +1,19 @@
+{
+  "id": "mob_0032",
+  "name": "Null Wisp",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual inspection of four reference images; no proof of a shared volumetric vapor shape.",
+  "confirmed": [
+    "Faceless violet-black spectral knot and hollow luminous white core retained.",
+    "Side core narrows and moves toward facing contour; front/back core circular.",
+    "No introduced limbs eyes mouth skull or props."
+  ],
+  "limitations": [
+    "Side core remains an oblique ellipse rather than exact edge-on torus; settle physical core shape before rotations.",
+    "Rear largely mirrors front; connected tendril depth and landmarks unverified.",
+    "Side silhouette widths and curls differ; normalize underlying mass.",
+    "Dark core-center opacity differs by view; inspect compositing on actual terrain.",
+    "Top/bottom tendrils have tight margins, require safe animation padding."
+  ],
+  "next": "Define consistent core cross-section and vapor layers, normalize frame, author flowing hover/attack/dissipation animation and separate dimming trail VFX."
+}
