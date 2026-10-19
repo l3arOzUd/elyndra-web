@@ -1,0 +1,8 @@
+{
+  "id": "mob_0057",
+  "name": "Prism Lens-drone",
+  "view": "front",
+  "prompt": "One full FRONT orthographic eye-level monster reference for Elyndra hand-painted stylized fantasy MMORPG. Prism Lens-drone: a floating ring of brass holding a large prism, THREE small fins, a beam of orange light idling from its centre. Round aged brass mechanical ring surrounds a large faceted translucent prism, suspended by small metal brackets, exactly three compact stabilizer fins spaced at top, lower left and lower right around ring. Central orange optical aperture glows within prism, very short contained orange beam stub directed forward; full beam will be animated separately. No humanoid body or eyes. Warm painterly brass and nuanced iridescent glass, bold readable silhouette with finely painted material detail. Hovering neutral pose with ring plane square to camera. Single subject occupying 75 percent square canvas, all fins inside broad empty margins. True transparent background, no cloud, no haze, no floor, no cast shadow, no text, no extra props or characters.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Three stabilizer fins; animated beam separate from master."
+}

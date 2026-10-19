@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 46; existing front references needing review: 7; missing front references: 41.
+Monsters: 94; front masters created: 49; existing front references needing review: 7; missing front references: 38.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -62,9 +62,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0054 | Canal Strider | master-created | missing | missing | missing | placeholder |
 | mob_0055 | Dust Revenant | master-created | missing | missing | missing | placeholder |
 | mob_0056 | Sand-buried Colossus | master-created | missing | missing | missing | placeholder |
-| mob_0057 | Prism Lens-drone | missing | missing | missing | missing | placeholder |
-| mob_0058 | Vault Mirrorguard | missing | missing | missing | missing | placeholder |
-| mob_0059 | Heliostat Sovereign | missing | missing | missing | missing | placeholder |
+| mob_0057 | Prism Lens-drone | master-created | missing | missing | missing | placeholder |
+| mob_0058 | Vault Mirrorguard | master-created | missing | missing | missing | placeholder |
+| mob_0059 | Heliostat Sovereign | master-created | missing | missing | missing | placeholder |
 | mob_0060 | Gullwing Skimmer | missing | missing | missing | missing | placeholder |
 | mob_0061 | Polyp Spitter | missing | missing | missing | missing | placeholder |
 | mob_0062 | Kelp Tender | missing | missing | missing | missing | placeholder |

@@ -2405,9 +2405,13 @@
       "brief": "A floating ring of brass holding a large prism, three small fins, a beam of orange light idling from its centre.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0057/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2442,9 +2446,13 @@
       "brief": "A knight-shaped construct plated in polished mirror bronze, a round shield that is a heliostat mirror, a visor like a lens.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0058/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2479,9 +2487,13 @@
       "brief": "A colossal throne-machine of brass rings and mirrors around a burning sun-core, arms of articulated mirror panels, a crown of lenses.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0059/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

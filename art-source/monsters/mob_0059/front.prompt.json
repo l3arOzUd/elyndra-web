@@ -1,0 +1,8 @@
+{
+  "id": "mob_0059",
+  "name": "Heliostat Sovereign",
+  "view": "front",
+  "prompt": "One colossal boss master reference for Elyndra, beautiful detailed hand-painted stylized fantasy MMORPG art. Heliostat Sovereign: a colossal THRONE-MACHINE of brass rings and mirrors around a burning sun-core, arms of articulated mirror panels, a crown of lenses. Not a humanoid knight, no seated person. The machine itself is a grand ancient solar throne: broad brass mechanical base, tall throne-back of nested concentric brass rings surrounding one brilliant contained orange sun sphere, fanlike crown of optical lenses above, two articulated arms made of linked rectangular mirror panels extending outward from throne armrests. Intricate warm aged brass gears, painted polished mirror plates, strong readable monumental silhouette. Strict FRONT orthographic eye-level, all rings square to viewer, balanced neutral machine posture. Full crown, entire arms and base fit comfortably inside SQUARE transparent canvas with 12 percent empty margin all around. Contain sun glow inside central ring; no background halo, smoke, rays or particles. No floor, ground shadow, scenery, text, labels or additional creatures. Warm soft painted shading with clear material separation.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Throne-machine is the creature; no seated humanoid. Two arms of articulated mirror panels."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "mob_0058",
+  "name": "Vault Mirrorguard",
+  "view": "front",
+  "prompt": "One full-body front orthographic eye-level monster reference for Elyndra, beautiful hand-painted stylized fantasy MMORPG art. Vault Mirrorguard: a knight-shaped construct plated in polished mirror bronze, a round shield that is a heliostat mirror, a visor like a lens. Tall sturdy mechanical knight with warm reflective bronze plates, articulated joints, helmet with a single broad convex optical lens visor, no human face. Its LEFT forearm (viewer right) carries a large ROUND heliostat mirror shield in a brass gimbal rim angled nearly front, right hand relaxed empty. No added sword. Legs and chest square to camera, neutral stance, shield held to side so torso stays readable. Elegant ancient solar engineering, painted controlled reflections and warm metal highlights, no literal reflected scenery, robust readable silhouette. Entire helmet shield and both feet fully visible inside square transparent canvas, 10 percent empty margins. No ground, cast shadow, text, haze, particles or extra characters.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Round heliostat mirror shield on character left arm, viewer right in front."
+}
