@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "Lattice Drone RIGHT SIDE orthographic opposite attached left. Single tracking lens faces image RIGHT, opaque rear cap LEFT. Same spherical violet lattice core enclosed dark curved bands, flat hexagonal iron frame EDGE-ON vertical at center, six radial vanes fixed in frame plane with opposite diagonal pairs occluding each other; top bottom upright vanes same lengths. Preserve frame thickness lens depth core diameter and fixed band routes, no additional lens or vanes. Same neutral hovering pose, no tilt. All tips within generous square transparent margins painted fantasy MMORPG charcoal metal restrained violet highlights no beam particles text ground shadow.",
+  "references": [
+    "left.png",
+    "front.png",
+    "back.png"
+  ]
+}

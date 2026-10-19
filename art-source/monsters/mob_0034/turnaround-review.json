@@ -1,0 +1,20 @@
+{
+  "id": "mob_0034",
+  "name": "Lattice Drone",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual review of all four references; file checks do not verify shared mechanical topology.",
+  "confirmed": [
+    "Six radial vanes and hexagonal dark frame retained in front/rear.",
+    "Single front tracking lens, opaque rear cap, spherical violet lattice core.",
+    "Profiles point lens in opposite directions and narrow the frame."
+  ],
+  "limitations": [
+    "Right profile adds visible diagonal fin tips absent on left; inconsistent edge-on projection must be corrected.",
+    "Six vane roots cannot all be traced in profiles; define fixed coplanar frame and vane geometry.",
+    "Lens remains oblique rather than exactly edge-on.",
+    "Lattice band routes change across views; establish shared core structure.",
+    "Frame/core thickness and top/bottom vane dimensions need normalization.",
+    "Tips close to canvas edge require animation padding."
+  ],
+  "next": "Correct lateral vane projection and fixed frame geometry, separate lens/core/frame/vanes, then author tracking aim, hover, firing and breakup with separate beam VFX."
+}

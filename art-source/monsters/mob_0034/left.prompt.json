@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Lattice Drone LEFT SIDE orthographic reference. Rotate exact drone 90 degrees around VERTICAL axis. Front lens points image LEFT, seen edge-on protruding slightly left from spherical violet lattice core; rear opaque cap RIGHT. Flat regular hexagonal outer frame and SIX radial vanes lie in vertical transverse plane now EDGE-ON: top bottom vanes remain vertical, diagonal vane pairs overlap in projection at upper/lower middle, do not spread six vanes into a new frontal star. Core stays spherical with dark curved lattice bands, frame thickness modest dark iron. Same heights proportions materials from front/back. No second lens extra fins. Full object all tips inside generous square transparent margins no beam particles floor shadow text. Painted fantasy MMORPG.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}
