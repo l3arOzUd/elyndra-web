@@ -1,0 +1,20 @@
+{
+  "id": "mob_0023",
+  "name": "Relay Guardian",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual review of four images; file/alpha validation separate from structural approval.",
+  "confirmed": [
+    "Single sonar dish with cyan concave front, bronze ribbed rear and narrow bowl profiles.",
+    "Dark bronze diving-suit armor, ribbed hoses, lead boots and cyan joint accents preserved.",
+    "Rear knee flexion gaps and heel blocks differentiated from front."
+  ],
+  "limitations": [
+    "Profiles show cyan face as a broad luminous strip rather than thin ring intersections; reconcile dish depth and ring projection.",
+    "Hose endpoints and neck bracket geometry need common construction map across all views.",
+    "Far limbs fully occluded in profiles; separate hidden parts needed for rigging.",
+    "Finger counts and joint axes not established by references.",
+    "Top dish attachment has tight margin; normalize scale and baseline before sprite production.",
+    "Patina, rivets and backing rib placement vary between images."
+  ],
+  "next": "Align dish cross-section and hose mounts, define hidden limbs and fixed joints, then separate parts and animate sonar emission as runtime VFX."
+}

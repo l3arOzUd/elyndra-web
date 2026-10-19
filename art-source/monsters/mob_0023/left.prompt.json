@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Relay Guardian LEFT-facing strict orthographic SIDE reference, exact same construct as front/back. Camera sees right flank; torso and toes face image LEFT. Key head geometry: a SINGLE shallow circular sonar dish facing LEFT, viewed EDGE-ON, so head silhouette is a narrow shallow bowl tall vertically, not a circle or helmet. Concave glowing cyan inner surface points LEFT; convex bronze radial-backed surface points RIGHT. Dish mounted to neck via bracket at bottom. No full glowing circle visible from side. Thick ribbed hose routes from dish/shoulder down toward FRONT chest LEFT, same front hose design. Long bronze diving suit limbs, near gauntlet relaxed, far limbs occluded, heavy lead boots toes LEFT heel RIGHT. Match original tall proportions, dark aged bronze slate armor brass trim cyan joint rings. All body comfortably inside square transparent canvas no text floor shadow effects. Premium painted fantasy MMORPG.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "Relay Guardian exact RIGHT-facing orthographic SIDE turnaround. Match left profile opposite facing, same height proportions posture limb lengths and shallow sonar dish depth. Front is image RIGHT, convex dish BACK image LEFT. Single vertical circular sonar dish seen edge-on as narrow bowl, cyan interior faces right no full circular front visible. Bronze radial backing on left, bottom neck mounting bracket and ribbed hose running from head/shoulder toward front chest on RIGHT. Dark slate aged bronze diving suit brass trims cyan joint rings long arms relaxed metal hands and lead boots pointing right. Far arm/leg mostly occluded, no extra limbs or head. Use front/back refs to preserve original construction, not a new design. Full creature generous clear transparent square margins including top dish fixture and soles, no floor shadow text particles. Same painted fantasy MMORPG.",
+  "references": [
+    "left.png",
+    "front.png",
+    "back.png"
+  ]
+}
