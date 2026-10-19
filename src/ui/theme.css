@@ -202,3 +202,4 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .buff .painted-icon { width:100%; height:100%; margin:0; border:0; }.buff small { position:absolute; right:1px; bottom:0; font:bold 10px/1.2 var(--ui-font-body); color:#fff; text-shadow:1px 1px #000,-1px -1px #000; }
 .stat-alloc { grid-template-columns:34px 1fr auto auto auto; }.stat-alloc > .painted-icon { width:34px; height:34px; border:1px solid #9f7f48; border-radius:3px; }
 .rank-head { align-items:center; gap:6px; }.rank-head > .painted-icon { width:22px; height:22px; border-radius:2px; }.rank-head strong { flex:1; }
+.detail-action:disabled,.stat-add:disabled { opacity:.45; cursor:not-allowed; filter:grayscale(.6); }
