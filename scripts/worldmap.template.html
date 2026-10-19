@@ -100,14 +100,14 @@
     <p class="sub" id="sub"></p>
     <div class="legend">
       <span><i class="k-walk"></i>เดินข้ามแผนที่ (warp)</span>
-      <span><i class="k-transit"></i>ส่งตัวระหว่างเมือง (ค่าเดินทาง zeny)</span>
+      <span>สีแถบซ้ายของการ์ด = ถิ่นของมอน (ดูรายชื่อถิ่นด้านล่าง)</span>
       <span><i class="k-town"></i>เมือง</span>
       <span><i class="k-dun"></i>ดันเจี้ยน</span>
       <span>กดที่แผนที่เพื่อดูมอน NPC เควสต์ และทางออก</span>
     </div>
   </header>
 
-  <p class="sub">เลื่อนดูแผนที่ในกรอบได้ทั้งแนวตั้งและแนวนอน ลำดับภูมิภาคเรียงตามเส้นทางส่งตัว (Lumeris → Nocthaven)</p>
+  <p class="sub">เลื่อนดูแผนที่ในกรอบได้ทั้งแนวตั้งและแนวนอน เดินจาก Avelorn ไปทางตะวันออกผ่านทุ่ง 1 → 10 ดันเจี้ยนอยู่เหนือทุ่งที่เป็นทางเข้า (คนส่งตัวในเมืองพาไปแคมป์ของทุ่งไหนก็ได้)</p>
   <div class="stage">
     <div class="chart" id="chart" aria-label="แผนที่โลก ELYNDRA"></div>
     <aside class="ledger" id="ledger" aria-live="polite"></aside>
@@ -142,7 +142,7 @@ function draw() {
   const W = PAD * 2 + maxX * CW, H = PAD * 2 + maxY * CH;
   const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img" });
   // Region grounds and labels.
-  for (const r of WORLD.regions) {
+  for (const r of WORLD.regions.filter((x) => x.box)) {
     const [x0, y0, x1, y1] = r.box;
     const g = el("g", {}, svg);
     el("rect", { x: PAD + x0 * CW + 4, y: PAD + y0 * CH - 34, width: (x1 - x0 + 1) * CW - 8, height: (y1 - y0 + 1) * CH + 30, rx: 14,

@@ -39,64 +39,34 @@ function edgeOf(w: WarpDef): Dir {
   return Math.abs(dx) >= Math.abs(dy) ? (dx > 0 ? "E" : "W") : dy > 0 ? "S" : "N";
 }
 
-// --- layout: grid positions per region, then regions placed along the transit line --------
+// --- layout: grid positions from Avelorn, following the warps ---------------------------
 
 const pos = new Map<string, [number, number]>();
-const regionBox = new Map<string, { x0: number; y0: number; x1: number; y1: number }>();
-for (const r of regions) {
-  const local = new Map<string, [number, number]>([[r.town_map_id, [0, 0]]]);
+{
+  // World v3: one walk from Avelorn over every warp; dungeons sit above the field they open from.
+  const hub = regions[0].town_map_id;
+  pos.set(hub, [0, 0]);
   const taken = new Set(["0,0"]);
-  const queue = [r.town_map_id];
+  const queue = [hub];
   while (queue.length) {
     const a = queue.shift()!;
-    const [ax, ay] = local.get(a)!;
-    for (const w of warps.filter((x) => x.from_map === a && mapById.get(x.to_map)?.region_id === r.id)) {
-      if (local.has(w.to_map)) continue;
-      const [sx, sy] = STEP[edgeOf(w)];
-      // Next free cell in that direction; if blocked, try sideways.
+    const [ax, ay] = pos.get(a)!;
+    for (const w of warps.filter((x) => x.from_map === a)) {
+      if (pos.has(w.to_map)) continue;
+      const [sx, sy] = STEP[mapById.get(w.to_map)!.type === "dungeon" ? "N" : edgeOf(w)];
       const tries: [number, number][] = [[ax + sx, ay + sy], [ax + 2 * sx, ay + 2 * sy], [ax + sx + sy, ay + sy + sx], [ax + sx - sy, ay + sy - sx]];
       const spot = tries.find(([x, y]) => !taken.has(`${x},${y}`)) ?? [ax + 3 * sx, ay + 3 * sy];
-      local.set(w.to_map, spot);
+      pos.set(w.to_map, spot);
       taken.add(`${spot[0]},${spot[1]}`);
       queue.push(w.to_map);
     }
   }
-  // Anything unreachable by walking (should not happen) goes under the town.
-  for (const m of maps.filter((x) => x.region_id === r.id && !local.has(x.id))) {
-    let y = 1;
-    while (taken.has(`0,${y}`)) y++;
-    local.set(m.id, [0, y]);
-    taken.add(`0,${y}`);
-  }
-  const xs = [...local.values()].map((p) => p[0]), ys = [...local.values()].map((p) => p[1]);
-  regionBox.set(r.id, { x0: Math.min(...xs), y0: Math.min(...ys), x1: Math.max(...xs), y1: Math.max(...ys) });
-  for (const [id, p] of local) pos.set(id, p);
+  let y = 2;
+  for (const m of maps) if (!pos.has(m.id)) { pos.set(m.id, [0, y++]); }
+  // Shift so the top-left map is at 0,0.
+  const minX = Math.min(...[...pos.values()].map((p) => p[0])), minY = Math.min(...[...pos.values()].map((p) => p[1]));
+  for (const [id, [x, yy]] of pos) pos.set(id, [x - minX, yy - minY]);
 }
-
-// Regions in transit order, snaking: first row left to right, second row right to left.
-const ROW = 2;
-const placed = new Map<string, [number, number]>(); // region -> offset
-let cursorX = 0;
-let rowTop = 0;
-const rows: string[][] = [];
-regions.forEach((r, i) => { (rows[Math.floor(i / ROW)] ??= []).push(r.id); });
-rows.forEach((row, ri) => {
-  const order = ri % 2 ? [...row].reverse() : row;
-  const height = Math.max(...row.map((id) => regionBox.get(id)!.y1 - regionBox.get(id)!.y0 + 1));
-  cursorX = 0;
-  if (ri % 2) {
-    // Right-align the reversed row under the end of the row above.
-    const above = rows[ri - 1].reduce((s, id) => s + regionBox.get(id)!.x1 - regionBox.get(id)!.x0 + 2, 0);
-    const mine = row.reduce((s, id) => s + regionBox.get(id)!.x1 - regionBox.get(id)!.x0 + 2, 0);
-    cursorX = Math.max(0, above - mine);
-  }
-  for (const id of order) {
-    const b = regionBox.get(id)!;
-    placed.set(id, [cursorX - b.x0, rowTop - b.y0]);
-    cursorX += b.x1 - b.x0 + 2;
-  }
-  rowTop += height + 1; // one empty row between rows holds the region labels
-});
 
 // --- per-map facts ----------------------------------------------------------------------
 
@@ -104,12 +74,9 @@ const ROLE_TH: Record<string, string> = { guild_registrar: "กิลด์", me
 const DIR_TH: Record<Dir, string> = { E: "ตะวันออก", W: "ตะวันตก", N: "เหนือ", S: "ใต้" };
 const world = {
   generated: new Date().toISOString().slice(0, 10),
-  regions: regions.map((r) => {
-    const b = regionBox.get(r.id)!, [ox, oy] = placed.get(r.id)!;
-    return { id: r.id, name: r.name, capital: r.capital, lv: r.level_range, color: r.palette.accent, theme: r.theme, box: [b.x0 + ox, b.y0 + oy, b.x1 + ox, b.y1 + oy] };
-  }),
+  regions: regions.map((r) => ({ id: r.id, name: r.name, capital: r.capital, lv: r.level_range, color: r.palette.accent, theme: r.theme })),
   maps: maps.map((m) => {
-    const [x, y] = pos.get(m.id)!, [ox, oy] = placed.get(m.region_id)!;
+    const [x, y] = pos.get(m.id)!;
     const z = zones.find((q) => q.map_id === m.id);
     const count = new Map<string, number>();
     for (const p of z?.pockets ?? []) {
@@ -119,7 +86,7 @@ const world = {
     const ns = npcs.filter((n) => n.map_id === m.id);
     return {
       id: m.id, region: m.region_id, name: m.name, type: m.type, role: m.role, lv: m.type === "town" ? null : [m.recommended_level_min, m.recommended_level_max],
-      x: x + ox, y: y + oy,
+      x, y,
       monsters: [...count.entries()].sort((a, b) => mob.get(a[0])!.level - mob.get(b[0])!.level).map(([id, n]) => {
         const mm = mob.get(id)!;
         return { name: mm.name, lv: mm.level, kind: mm.archetype, ai: mm.behavior, n: Math.round(n), art: !!sprites.monsters[id] && !sprites.monsters[id].placeholder };
