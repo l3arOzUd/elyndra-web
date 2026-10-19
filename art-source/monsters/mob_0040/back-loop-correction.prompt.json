@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Fix ONLY tail loop in rear newt image. Tail currently forms closed ring connecting back to LEFT flank. Break that loop: DELETE upper-left tail section between image x40..360 y650..910 and replace with transparency (except preserve actual left hind leg at x330..490). Keep central tail root at x700 y750 flowing down to x650 y1030 then left along bottom to x150 y1000. End it there as a small rounded TAPERED FREE TIP pointing left, separated from left flank by a large transparent gap. One continuous tail root-to-tip, not a ring. Body and four legs/moss/dew unchanged, genuine transparent background.",
+  "references": [
+    "back-loop-draft.png"
+  ]
+}

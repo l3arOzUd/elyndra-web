@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Correct tail anatomy ONLY in this BACK VIEW of Mossback Newt. Image incorrectly has two apparent tails: central downward dangling moss-covered lobe and curled tail at left. Make ONE continuous thick tail starting at central rear pelvis, sweeping diagonally DOWN-LEFT across foreground between hind legs, joining seamlessly into the existing left curled portion and ending at its existing left-bottom rounded tip. Remove central dangling free-ended lobe entirely; it must instead be the continuous curved tail ROOT connecting to the left curl. Clearly visible continuous S-shaped flow, one root and one tip, no bifurcation. Keep body, moss, dew, FOUR limbs, rear view no face, colors, scale unchanged. Transparent background, no text/shadows.",
+  "references": [
+    "back-tail-draft.png"
+  ]
+}

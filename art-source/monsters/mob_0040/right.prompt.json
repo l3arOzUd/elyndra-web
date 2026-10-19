@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Mossback Newt RIGHT SIDE orthographic view facing RIGHT. Reference1 left side for exact proportions and stance; reference2 front for identity. Same plump olive newt with cream underside, one round jade eye in profile, moss carpet and attached dew, exactly FOUR short planted legs and ONE long thick tapering tail. Reverse camera to opposite side of same creature, not new pose. Head imageRIGHT, tail root imageLEFT. Tail curves toward anatomicalLEFT which is FAR side now: distal curl may be partly obscured behind tail base/body, never add second tail. Preserve short newt limbs, body length/head height, no frog thighs, no horn/shell. Strict eye-level side elevation one eye only, no three-quarter. Full creature square transparent canvas generous margins all around, hand-painted fantasy game style matches refs. No text, ground, cast shadow or detached droplets.",
+  "references": [
+    "left.png",
+    "front.png"
+  ]
+}

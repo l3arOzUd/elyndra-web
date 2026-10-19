@@ -1,0 +1,19 @@
+{
+  "id": "mob_0040",
+  "name": "Mossback Newt",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front master; rear tail corrected in two targeted edits; opposite profile reference used.",
+  "confirmed": [
+    "Olive amphibian skin, pale belly, jade eyes and moss/dew preserve Bible identity.",
+    "Rear no longer has two free tail lobes or closed tail loop; one central root leads to a tapered leftward tip.",
+    "Side images face opposite directions with one visible eye and four limb positions, far hind foot partly occluded.",
+    "All generated files saved with prompts and discarded rear variants."
+  ],
+  "limitations": [
+    "Right profile tail curl appears on near side as in left profile, rather than preserving anatomical-left curl depth; must reconcile before rigging.",
+    "Rear feet point partly toward viewer and require anatomical heel/toe review.",
+    "Side views remain slightly oblique in face/forefeet; strict projection and body-height alignment pending.",
+    "Moss/dew landmarks and toe counts differ; root-to-tip tail shape across all four views not yet consistent."
+  ],
+  "next": "Correct tail depth and joint landmarks, then author separated fixed-length limb animation and verify in game. Reference availability is not animation readiness."
+}
