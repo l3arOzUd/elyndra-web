@@ -1,0 +1,19 @@
+{
+  "id": "mob_0051",
+  "name": "Brass Kite",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front identity, rear housing and opposite profile; checked lens direction, sail thickness and ribbon anchors.",
+  "confirmed": [
+    "Diamond brass/cream cloth kite, central gear drive and one focusing lens preserve Bible identity.",
+    "Rear lens housing opaque; profile lens points left/right correctly.",
+    "Side sail is narrow rather than broad frontal diamond.",
+    "Three ribbon attachment groups remain target topology; no bird anatomy added."
+  ],
+  "limitations": [
+    "Side corner spars project fore/aft rather than fully overlapping depth; strict lateral frame geometry needs correction.",
+    "Far side ribbon group hidden or omitted; cannot prove all strip attachments from side images.",
+    "Ribbon curves/counts and gear details vary across views; define stable anchors and strip topology.",
+    "Sail thickness and lens housing depth unverified against front/back; validate on light background before export."
+  ],
+  "next": "Reconcile spars and ribbon topology, separate rigid kite frame/lens/gears from deformable ribbons, then author hover/attack/hit/death and lens VFX."
+}

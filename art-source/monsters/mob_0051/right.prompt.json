@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Brass Kite RIGHT SIDE orthographic turnaround. Reference1 left profile determines exact frame depth and pose, reference2 front determines single lens and three ribbon anchor groups. Same upright diamond brass/cream cloth mechanical kite rotated opposite side; FRONT lens points imageRIGHT, opaque rear cap imageLEFT. Sail edge-on narrow vertical silhouette, central gear drive, four diamond corners with lateral corners overlapped in depth. Three ribbon anchor groups (two side corners at middle spar, one bottom), far group naturally occluded not deleted, lengths and cloth/brass palette match. Do not add wings/bird limbs/new lens. Strict eye-level side, full device and ribbons square transparent margins. Warm hand-painted fantasy MMORPG art, no ground/shadow/text/haze.",
+  "references": [
+    "left.png",
+    "front.png"
+  ]
+}
