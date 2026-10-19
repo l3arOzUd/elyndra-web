@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "Reedstalker exact character turnaround, LEFT side view facing image LEFT. Reference 1 front is authoritative design, reference 2 rear is material guide. Strict orthographic 90 degree profile eye-level. Do NOT turn head or shoulders towards viewer. Tall lanky woven reeds creature: oval upright seed pod head with its small dart-spitting opening on forward LEFT rim only (not a large hole on visible side), slender neck and narrow reed torso, two long reed arms hanging relaxed to mid-shin, two long legs ending in splayed root feet. Near shoulder, elbow, hip and knee in profile; far limbs mostly occluded with only small edges showing. Preserve long arm proportions and slim silhouette. No human face, eye, beak or weapon. Marsh green leaves and dry straw-brown reed fibers, leaf shoulder and knee tufts, ankle reed bindings. Same neutral stance, scale, head height and ground baseline as front. Soft painted fantasy MMORPG illustration. Transparent background, square image, complete toes and head clear of edges, no text ground cast shadow or additional views.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

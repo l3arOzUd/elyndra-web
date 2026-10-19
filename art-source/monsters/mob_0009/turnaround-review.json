@@ -1,0 +1,18 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Lanky woven reed anatomy and segmented seed-pod head retained; no bird anatomy",
+    "Rear pod has no dart aperture; side openings stay on forward rim",
+    "Revised left opening removes projecting tube",
+    "Revised rear feet show heel bases rather than forward-facing root fans",
+    "Removed unwanted background from rear revision; all four final files pass alpha and edge checks"
+  ],
+  "limitations": [
+    "Rear and side figures occupy more canvas height than front; register neck, hips and ground baseline before animation",
+    "Rear shoulders and hands are broader than front; body proportions still require refinement",
+    "Exact reed weave, pod seam placement and root finger counts vary between views",
+    "Side far limbs are occluded and require separate authored layers for a complete walk cycle"
+  ],
+  "next": "Refine cross-view shoulder and hand proportions and normalize landmark framing, then author reed-leg gait and seed-pod opening/dart attack with separate overlapping limb layers."
+}
