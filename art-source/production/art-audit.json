@@ -1175,9 +1175,13 @@
       "brief": "A palm-sized mite whose shell is a cluster of clear ice crystals, six thin blue legs, a faint glow inside; frost-white and pale cyan.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0024/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1212,9 +1216,13 @@
       "brief": "A glowing orb inside an open lattice of hexagonal crystal, casting rainbow beams; white core, prismatic edges.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0025/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1249,9 +1257,13 @@
       "brief": "A spider-like walker with a body of stacked frozen gears and eight jointed brass legs, icicles hanging from the cogs; steel blue and brass.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0026/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1286,9 +1298,13 @@
       "brief": "A tall slender construct in faceted crystal armour, a glowing data-slate for a face, long fingers made for handling cores; ice-blue and silver.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0027/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1323,9 +1339,13 @@
       "brief": "A dog-sized segmented crawler with a grey ash shell, ember light glowing between the plates, soot-black legs; slow and placid.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0028/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1360,9 +1380,13 @@
       "brief": "A knee-high charcoal imp with a cracked ember belly, flame wisps for horns, long ash-grey fingers; leaves glowing footprints.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0029/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1397,9 +1421,13 @@
       "brief": "A lean hound of riveted iron plates over a molten core, glowing slag dripping from the jaw, bellows-ribs that pump sparks when it runs.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0030/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1434,9 +1462,13 @@
       "brief": "A tall armoured automaton whose chest is an open furnace door, riveted iron plate, a long blade glowing at the edge, smoke from the helm vents.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0031/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1471,9 +1503,13 @@
       "brief": "A floating smudge of violet-black light with a hollow white core, trailing wisps that dim everything they pass; no face.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0032/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1508,9 +1544,13 @@
       "brief": "A boxy six-wheeled freight hauler with a smashed cab full of moving shadow, violet headlamps, cargo doors that open like a jaw.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0033/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1545,9 +1585,13 @@
       "brief": "A floating hexagonal frame of dark metal around a violet lattice core, six thin vanes, a lens that tracks before it fires.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0034/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1582,9 +1626,13 @@
       "brief": "A gaunt four-armed automaton in black ceramic, each arm ending in a long violet blade, a mask with a single vertical slit of light.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0035/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -6575,63 +6623,63 @@
       "id": "prism_field",
       "name": "Prism Field",
       "vfx": "fx_prism_field",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     },
     {
       "id": "aether_nova",
       "name": "Aether Nova",
       "vfx": "fx_aether_nova",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     },
     {
       "id": "gravity_coil",
       "name": "Gravity Coil",
       "vfx": "fx_gravity_coil",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     },
     {
       "id": "meridian_lance",
       "name": "Meridian Lance",
       "vfx": "fx_meridian_lance",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     },
     {
       "id": "splitshot_array",
       "name": "Splitshot Array",
       "vfx": "fx_splitshot",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     },
     {
       "id": "dash_circuit",
       "name": "Dash Circuit",
       "vfx": "fx_dash",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     },
     {
       "id": "coil_mine",
       "name": "Coil Mine",
       "vfx": "fx_coil_mine",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     },
     {
       "id": "gearstorm",
       "name": "Gearstorm",
       "vfx": "fx_gearstorm",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     },
     {
       "id": "pulse_beacon",
       "name": "Pulse Beacon",
       "vfx": "fx_pulse_beacon",
-      "implemented": false,
+      "implemented": true,
       "status": "generic-shape-effect-needs-authored-skill-vfx"
     }
   ]

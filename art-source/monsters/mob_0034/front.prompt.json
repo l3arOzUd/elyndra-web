@@ -1,0 +1,8 @@
+{
+  "id": "mob_0034",
+  "name": "Lattice Drone",
+  "view": "front",
+  "prompt": "ELYNDRA LATTICE DRONE mob_0034 front master. Exact bible: A floating hexagonal frame of dark metal around a violet lattice core, six thin vanes, a lens that tracks before it fires. One hovering ancient combat drone: open regular HEXAGONAL dark iron outer frame, violet interwoven energy lattice suspended inside, single central tracking lens in a small dark metal ring facing camera, EXACTLY SIX slender dark-metal vanes projecting radially one from each vertex. Six vanes of equal length with narrow violet inset lines, arranged evenly like a six-point compass but not a star made of solid crystal. Empty gaps remain between frame and core, no wings like a bird, no limbs, no face or organic eyes. Matte charcoal metal, muted purple core and restrained violet rim glow. Premium stylized hand-painted fantasy MMORPG art, clean strong readable silhouette, soft brushed highlights. Strict FRONT orthographic eye-level view, flat neutral hover orientation facing viewer, entire frame plus all six vanes inside square canvas with very generous margin. Transparent background real alpha, no ground, shadow, beam, scenery, particles, text, labels or border. One creature only.",
+  "designInvariant": "Six vanes, six-sided metal frame, one tracking lens.",
+  "review": "Created; visual and alpha audit pending."
+}

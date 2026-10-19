@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 16; existing front references needing review: 7; missing front references: 71.
+Monsters: 94; front masters created: 28; existing front references needing review: 7; missing front references: 59.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -32,18 +32,18 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0021 | Coral Claw | master-created | missing | missing | missing | placeholder |
 | mob_0022 | Brine Automaton | master-created | missing | missing | missing | placeholder |
 | mob_0023 | Relay Guardian | master-created | missing | missing | missing | placeholder |
-| mob_0024 | Frost Mite | missing | missing | missing | missing | placeholder |
-| mob_0025 | Prism Wisp | missing | missing | missing | missing | placeholder |
-| mob_0026 | Icegear | missing | missing | missing | missing | placeholder |
-| mob_0027 | Archive Keeper | missing | missing | missing | missing | placeholder |
-| mob_0028 | Ashcrawler | missing | missing | missing | missing | placeholder |
-| mob_0029 | Cinder Imp | missing | missing | missing | missing | placeholder |
-| mob_0030 | Smelt Hound | missing | missing | missing | missing | placeholder |
-| mob_0031 | Furnace Knight | missing | missing | missing | missing | placeholder |
-| mob_0032 | Null Wisp | missing | missing | missing | missing | placeholder |
-| mob_0033 | Shade Carrier | missing | missing | missing | missing | placeholder |
-| mob_0034 | Lattice Drone | missing | missing | missing | missing | placeholder |
-| mob_0035 | Meridian Executor | missing | missing | missing | missing | placeholder |
+| mob_0024 | Frost Mite | master-created | missing | missing | missing | placeholder |
+| mob_0025 | Prism Wisp | master-created | missing | missing | missing | placeholder |
+| mob_0026 | Icegear | master-created | missing | missing | missing | placeholder |
+| mob_0027 | Archive Keeper | master-created | missing | missing | missing | placeholder |
+| mob_0028 | Ashcrawler | master-created | missing | missing | missing | placeholder |
+| mob_0029 | Cinder Imp | master-created | missing | missing | missing | placeholder |
+| mob_0030 | Smelt Hound | master-created | missing | missing | missing | placeholder |
+| mob_0031 | Furnace Knight | master-created | missing | missing | missing | placeholder |
+| mob_0032 | Null Wisp | master-created | missing | missing | missing | placeholder |
+| mob_0033 | Shade Carrier | master-created | missing | missing | missing | placeholder |
+| mob_0034 | Lattice Drone | master-created | missing | missing | missing | placeholder |
+| mob_0035 | Meridian Executor | master-created | missing | missing | missing | placeholder |
 | mob_0036 | Hollowroot Warden | missing | missing | missing | missing | placeholder |
 | mob_0040 | Mossback Newt | missing | missing | missing | missing | placeholder |
 | mob_0041 | Jadewing Moth | missing | missing | missing | missing | placeholder |

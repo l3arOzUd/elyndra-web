@@ -334,5 +334,257 @@
     "sourceMode": "RGBA",
     "sha256": "6608051de168f87c6e223ce192c40a574e7681ced8061847714c4ecb4e4341e1",
     "passes": true
+  },
+  {
+    "id": "mob_0024",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      58,
+      167,
+      1199,
+      1146
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "e613fa786e55a5b64683ab6986760eeee64e7f925988ea41ae7a97da177dc933",
+    "passes": true
+  },
+  {
+    "id": "mob_0025",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      112,
+      43,
+      1143,
+      1192
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "cdfda95c1244ba3d7b5280107d76606bb7ca4664d579561468a168f6ae7289b7",
+    "passes": true
+  },
+  {
+    "id": "mob_0026",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      16,
+      241,
+      1239,
+      1057
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "15179367858b387b12bdc9fef0022b00f0a52285f6bcecc93c3e6fe1d88d687f",
+    "passes": true
+  },
+  {
+    "id": "mob_0027",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      396,
+      6,
+      859,
+      1240
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "a6435064640abc9358f77995f897b4f801fb4dd0bfa493ca97e90c263095a258",
+    "passes": true
+  },
+  {
+    "id": "mob_0028",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      39,
+      136,
+      1216,
+      1120
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "1d4cc4574f52f28f05bbc0f0dfee76d5d433ff166a52e46c6c6d7d104f7d6a12",
+    "passes": true
+  },
+  {
+    "id": "mob_0029",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      292,
+      20,
+      967,
+      1227
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "2b4004e267b5c1cc3ca3ce9caa4f722eb5f0c69a6947d636f4b71d60bab0d0b3",
+    "passes": true
+  },
+  {
+    "id": "mob_0030",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      346,
+      12,
+      904,
+      1235
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "0535ad702d3fe682df6ac4f539f3bbe2cb940c5dae46205f436b1cc96938fe43",
+    "passes": true
+  },
+  {
+    "id": "mob_0031",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      250,
+      41,
+      944,
+      1215
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "e9dff299204d1c380c8551cd05066c6f1dbbdd37cbe3725c0ef5bbce89d83f71",
+    "passes": true
+  },
+  {
+    "id": "mob_0032",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      149,
+      12,
+      1119,
+      1217
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "b4a831eabd9fa7fa51866b9a0fdafb951008c68d2e71c2696a0a580919e25099",
+    "passes": true
+  },
+  {
+    "id": "mob_0033",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      40,
+      101,
+      1215,
+      1132
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "77c972eb9a8e13015aa1f396247c597bf0e7146b7ccfb5e7e24b84c675d725aa",
+    "passes": true
+  },
+  {
+    "id": "mob_0034",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      83,
+      2,
+      1172,
+      1231
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "b00265b4cd73b138b8f71ba01d941047313c01bf1fc3d8ea1e1e960dcbb8d039",
+    "passes": true
+  },
+  {
+    "id": "mob_0035",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      136,
+      30,
+      1120,
+      1180
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "8b2278b6c0b5e847fc59b64f5e1fc9b2c5590f921f9e151ba4dab8319c6b3e65",
+    "passes": true
   }
 ]

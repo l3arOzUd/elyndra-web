@@ -1,0 +1,8 @@
+{
+  "id": "mob_0031",
+  "name": "Furnace Knight",
+  "view": "front",
+  "prompt": "ELYNDRA FURNACE KNIGHT mob_0031 front master. Exact bible: A tall armoured automaton whose chest is an open furnace door, riveted iron plate, a long blade glowing at the edge, smoke from the helm vents. One heavy biped knight automaton of dark riveted iron plates, clearly articulated arms and legs, chest contains a rectangular OPEN FURNACE aperture with glowing orange coals behind a sparse grate and hinged furnace door swung slightly aside. Helmet has narrow orange visor and two small smoke vents, no human face. One long iron sword with thin glowing heated orange edge held DOWNWARD beside its right leg (viewer LEFT), blade entirely visible from hilt to tip; other hand relaxed iron gauntlet. No shield, no cape, no vegetation, no second sword. Charcoal iron and restrained fiery orange. Premium stylized hand-painted fantasy MMORPG art, warm painted highlights, clean powerful silhouette. Strict FRONT orthographic eye-level camera, neutral standing pose, FULL FIGURE PLUS ENTIRE SWORD occupying only center 75 percent of square canvas, generous EMPTY TRANSPARENT padding above helmet and below sword tip and feet. Real alpha background, no floor, cast shadow, smoke plume (separate VFX later), sparks, text, border or inset.",
+  "designInvariant": "Sword held in creature right hand (viewer left); preserve handedness in turnaround.",
+  "review": "Created; visual and alpha audit pending."
+}

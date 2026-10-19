@@ -1,0 +1,8 @@
+{
+  "id": "mob_0033",
+  "name": "Shade Carrier",
+  "view": "front",
+  "prompt": "ELYNDRA SHADE CARRIER mob_0033 front monster master. Exact bible: A boxy SIX-WHEELED freight hauler with a smashed cab full of moving shadow, violet headlamps, cargo doors that open like a jaw. One compact ancient industrial freight vehicle creature, blocky dark iron cargo chassis, THREE axles with SIX total heavy wheels (three on each side, aligned front-to-back), frontmost wheels visible at sides and rear wheels partially visible behind them. Smashed angular cab windshield filled with deep violet living shadow, no driver or face. Two bright violet headlights. Front cargo double doors hang partly open like a jagged mechanical jaw, revealing purple darkness inside, sturdy iron bumper. Rivets and weathered black metal, subtle violet energy seams. NOT a humanoid robot, not a regular modern truck, no arms or legs. Premium hand-painted stylized fantasy MMORPG creature/vehicle design, readable squat silhouette, soft painted material highlights. Strict FRONT orthographic eye-level camera, front wheels straight, full complete vehicle centered with large clear margins. Transparent square background real alpha, no road, ground shadow, smoke cloud, text, license plate lettering, border or inset.",
+  "designInvariant": "Three axles and six wheels, including rear wheels occluded in front view.",
+  "review": "Created; visual and alpha audit pending."
+}

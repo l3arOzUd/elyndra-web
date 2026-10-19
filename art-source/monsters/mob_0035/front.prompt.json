@@ -1,0 +1,8 @@
+{
+  "id": "mob_0035",
+  "name": "Meridian Executor",
+  "view": "front",
+  "prompt": "ELYNDRA MERIDIAN EXECUTOR mob_0035 front master. Exact bible: A gaunt FOUR-ARMED automaton in black ceramic, each arm ending in a long violet blade, a mask with a single vertical slit of light. One tall lean menacing ancient automaton with narrow black ceramic torso and exactly FOUR arms, two upper arms attached at shoulders and two lower arms attached below ribs. Each arm has visible elbow joint and ends directly in ONE long straight violet energy-edged ceramic BLADE, NO hands holding swords. Four distinct blade arms separated in a relaxed low fan: upper pair angled outward/down, lower pair down beside hips, no overlap or crossed blades. Two long legs and black ceramic feet. Smooth narrow mask with ONE VERTICAL purple slit only, no eyes mouth nose. Black lacquered ceramic, muted violet seams, sparse silver joints. Premium stylized hand-painted fantasy MMORPG bestiary, clear readable silhouette, soft painted highlights. Strict FRONT orthographic eye-level view, neutral stance, ENTIRE figure plus all FOUR blade tips inside central 75 percent of square canvas with substantial transparent margin. No floor, shadow, scene, smoke, text, border or inset. Single creature.",
+  "designInvariant": "Four arms ending directly in four blades, two legs, one vertical face slit.",
+  "review": "Created; visual and alpha audit pending."
+}

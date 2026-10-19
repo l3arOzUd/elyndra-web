@@ -1,0 +1,7 @@
+{
+  "id": "mob_0025",
+  "name": "Prism Wisp",
+  "view": "front",
+  "prompt": "ELYNDRA PRISM WISP mob_0025 frontal monster master. Exact bible: A glowing orb inside an open lattice of hexagonal crystal, casting rainbow beams; white core, prismatic edges. One hovering luminous WHITE SPHERE suspended within a delicate OPEN three-dimensional cage made of translucent hexagonal crystal struts, hexagonal windows with empty gaps clearly visible, iridescent rainbow refraction along crystal edges, pale cyan/lilac/rose accents. No eyes, face, mouth, limbs, clothing or mechanical brass. The white core is a solid luminous orb, NOT a hole. Lattice is open, not a solid crystal ball. Soft tightly contained glow only; rainbow beams will be separate game VFX, no rays filling background. Premium hand-painted stylized fantasy MMORPG bestiary object-creature, gentle brush texture and readable simple silhouette. Strict frontal eye-level orthographic reference, one entire orb and lattice centered occupying 70 percent of square canvas, generous clear margins. Transparent background real alpha, no floor, cast shadow, sky, text, labels, border, inset or extra creature.",
+  "review": "Created; visual and alpha audit pending."
+}
