@@ -139,6 +139,7 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
     height: h,
     theme: d.theme,
     ground: d.ground,
+    ...(d.ground_patches?.length ? { ground_patches: d.ground_patches } : {}),
     roads: d.roads,
     blockers,
     props,

@@ -4,7 +4,7 @@
 // recipe, quest and dialogue, and their old maps serve as theme templates
 // (ground, border, decoration). This file replaces the world itself: which
 // maps exist, how they connect, where each monster lives (zones of 2–10
-// levels inside a 256×256 field), and which NPCs remain.
+// levels inside a 384×384 field), and which NPCs remain.
 //
 // To move a monster, edit the zone lists in FIELDS (by monster name). The
 // build and validator check the rest.
@@ -14,7 +14,7 @@ import { bakeLayout, shapeContains } from "./layout";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
 
 export const HUB = "lum_town_01";
-const SIZE = 256;
+const SIZE = 384;
 
 interface ZoneSpec { name: string; species: string[]; note: string }
 interface FieldSpec {
@@ -103,35 +103,40 @@ const DUNGEON_BOSS: Record<string, string> = {
 };
 
 // --- field geometry ------------------------------------------------------------------------
+//
+// A 384×384 field (WORLD_GDD_v3.md §2): the camp on the west edge, the zones on a horseshoe
+// round the central crossroads (west → north → east → south, rising in level), a ring road
+// joining them, the east post on the east edge and the dungeon gate beside the last zone.
 
-const CAMP_W: Rect = [6, 116, 26, 24];
-const CAMP_E: Rect = [226, 118, 24, 20];
-const WEST_TRIGGER: Rect = [0, 125, 3, 7];
-const EAST_TRIGGER: Rect = [253, 125, 3, 7];
-const WEST_LANDING: [number, number] = [20, 128];
-const EAST_LANDING: [number, number] = [238, 132];
-const GATE_TRIGGER: Rect = [236, 96, 6, 4];
-const GATE_LANDING: [number, number] = [234, 122];
-const CENTRE: [number, number] = [128, 128];
-const ZONE_CENTRES: Record<number, [number, number][]> = {
-  // The west zone keeps clear of the camp (x < 32) even after a field's nudge.
-  3: [[76, 128], [128, 52], [180, 128]],
-  4: [[76, 128], [128, 202], [128, 54], [180, 128]],
-  5: [[76, 128], [108, 204], [108, 52], [196, 200], [196, 58]],
+const CAMP_W: Rect = [6, 180, 28, 24];
+const CAMP_E: Rect = [350, 182, 26, 20];
+const WEST_TRIGGER: Rect = [0, 189, 3, 7];
+const EAST_TRIGGER: Rect = [SIZE - 3, 189, 3, 7];
+const WEST_LANDING: [number, number] = [22, 192];
+const EAST_LANDING: [number, number] = [362, 196];
+const CENTRE: [number, number] = [192, 192];
+const RING: [number, number] = [108, 128];
+/** Angle (degrees, screen y down) of zone i of n: 180 = west, 270 = north, 360 = east, 450 = south. */
+const zoneAngle = (i: number, n: number) => 180 + (270 * i) / (n - 1);
+const onRing = (deg: number): [number, number] => {
+  const a = (deg * Math.PI) / 180;
+  return [Math.round(CENTRE[0] + RING[0] * Math.cos(a)), Math.round(CENTRE[1] + RING[1] * Math.sin(a))];
 };
-// Three pocket rects per zone, round its centre.
-const POCKET_OFFSETS: [number, number][] = [[-34, -26], [6, -26], [-14, 4]];
-const POCKET_SIZE: [number, number] = [28, 22];
-const FIELD_ALIVE = { min_alive: 450, max_alive: 800 };
-const TARGET_TOTAL = 600;
+// Four pocket rects per zone in a 2×2 block; the gap in the middle holds the zone's elites.
+const POCKET_OFFSETS: [number, number][] = [[-42, -34], [10, -34], [-42, 8], [10, 8]];
+const POCKET_SIZE: [number, number] = [32, 26];
+const FIELD_ALIVE = { min_alive: 550, max_alive: 900 };
+const TARGET_TOTAL = 700;
 
-type Lookup = { byName: Map<string, { id: string; archetype: string; level: number }> };
+type Lookup = { byName: Map<string, { id: string; archetype: string; level: number; region: string }> };
 
-function themeFrom(regions: RegionDesign[], f: FieldSpec): MapDesign {
-  const r = regions.find((x) => x.region.id === f.region)!;
+/** The old field of a region nearest a level: its ground, theme, border and scatter. */
+function themeOf(regions: RegionDesign[], region: string, level: number): MapDesign {
+  const r = regions.find((x) => x.region.id === region)!;
   const fields = r.maps.filter((m) => m.type === "field");
-  return fields.reduce((best, m) => (Math.abs(m.levels[0] - f.levels[0]) < Math.abs(best.levels[0] - f.levels[0]) ? m : best), fields[0]);
+  return fields.reduce((best, m) => (Math.abs(m.levels[0] - level) < Math.abs(best.levels[0] - level) ? m : best), fields[0]);
 }
+const themeFrom = (regions: RegionDesign[], f: FieldSpec) => themeOf(regions, f.region, f.levels[0]);
 
 /** npc_<region>_<field name>: ids take letters and underscores only. */
 const stem = (f: FieldSpec) => `${f.region}_${f.name.toLowerCase().replace(/[^a-z]+/g, "_")}`;
@@ -143,103 +148,151 @@ function jitter(f: FieldSpec, i: number): [number, number] {
   return [(h % 13) - 6, ((h >> 8) % 11) - 5];
 }
 
+/** Zone centres of a field: on the ring, nudged. */
+function zoneCentres(f: FieldSpec): [number, number][] {
+  const n = f.zones.length;
+  return f.zones.map((_, i) => { const [x, y] = onRing(zoneAngle(i, n)); const [dx, dy] = jitter(f, i); return [x + dx, y + dy] as [number, number]; });
+}
+
+/** The dungeon gate east of the last zone, with a small safe yard to land in. */
+function gateOf(f: FieldSpec): { trigger: Rect; landing: [number, number]; safe: Rect } {
+  const c = zoneCentres(f), last = c[c.length - 1];
+  return { trigger: [last[0] + 60, last[1] - 2, 6, 4], landing: [last[0] + 60, last[1] + 8], safe: [last[0] + 50, last[1] - 10, 22, 24] };
+}
+
+/** Distance from a point to a polyline. */
+function distToLine(x: number, y: number, pts: [number, number][]): number {
+  let best = Infinity;
+  for (let i = 0; i + 1 < pts.length; i++) {
+    const [ax, ay] = pts[i], [bx, by] = pts[i + 1];
+    const dx = bx - ax, dy = by - ay, len = dx * dx + dy * dy || 1;
+    const t = Math.max(0, Math.min(1, ((x - ax) * dx + (y - ay) * dy) / len));
+    best = Math.min(best, Math.hypot(x - (ax + t * dx), y - (ay + t * dy)));
+  }
+  return best;
+}
+
 function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField: FieldSpec | undefined): MapDesign {
   const t = themeFrom(regions, f);
-  const centres = ZONE_CENTRES[f.zones.length]?.map(([x, y], i) => { const [dx, dy] = jitter(f, i); return [x + dx, y + dy] as [number, number]; });
-  if (!centres) throw new Error(`${f.id}: ${f.zones.length} zones (3-5 supported)`);
+  const n = f.zones.length;
+  if (n < 3 || n > 6) throw new Error(`${f.id}: ${n} zones (3-6 supported)`);
+  const angles = f.zones.map((_, i) => zoneAngle(i, n));
+  const centres = zoneCentres(f);
   const roadKind = t.roads[0]?.kind ?? "dirt";
   const blockerKinds = [...new Set(t.blockers.map((b) => b.kind))].filter((k) => k !== "building" && k !== "fence") as MapDesign["blockers"][number]["kind"][];
   const pockets: SpawnPocket[] = [];
   const mid = (name: string) => look.byName.get(name) ?? (() => { throw new Error(`${f.id}: unknown monster "${name}"`); })();
 
-  // Regular species share each zone's three rects; elites get a small pocket of their own.
-  const rectsTotal = f.zones.length * POCKET_OFFSETS.length;
-  const perRect = Math.round(TARGET_TOTAL / rectsTotal);
+  // Regular species share each zone's four rects; elites get a small pocket in the middle.
+  const perRect = Math.round(TARGET_TOTAL / (n * POCKET_OFFSETS.length));
   const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
   f.zones.forEach((z, zi) => {
     const [cx, cy] = centres[zi];
-    const regular = z.species.filter((n) => mid(n).archetype !== "elite");
-    const elites = z.species.filter((n) => mid(n).archetype === "elite");
+    const regular = z.species.filter((s) => mid(s).archetype !== "elite");
+    const elites = z.species.filter((s) => mid(s).archetype === "elite");
     POCKET_OFFSETS.forEach(([dx, dy], pi) => {
       const rect: Rect = [cx + dx, cy + dy, POCKET_SIZE[0], POCKET_SIZE[1]];
-      // 1 species: all three; 2: one each and a mixed third; 3: one each.
-      const names = regular.length === 2 && pi === 2 ? regular : [regular[pi % regular.length]];
+      // One rect per species first, then the rest mixed.
+      const names = pi < regular.length && regular.length > 1 ? [regular[pi]] : regular;
       pockets.push({
         id: `${slug(z.name)}_${pi + 1}`, name: z.name, rects: [rect],
-        species: names.map((n) => ({ monster_id: mid(n).id, weight: names.length > 1 ? 50 : 1 })),
+        species: names.map((s) => ({ monster_id: mid(s).id, weight: names.length > 1 ? 50 : 1 })),
         target_alive: perRect, respawn_sec: [6, 14], design_note: z.note,
       });
     });
     for (const e of elites) {
-      pockets.push({ id: `${slug(z.name)}_${slug(e)}`, name: `${z.name} (${e})`, rects: [[cx - 8, cy + 30, 16, 12]], species: [{ monster_id: mid(e).id, weight: 1 }],
-        target_alive: 4, respawn_sec: [45, 90], design_note: `A few ${e} elites hold this part of ${z.name}.` });
+      pockets.push({ id: `${slug(z.name)}_${slug(e)}`, name: `${z.name} (${e})`, rects: [[cx - 8, cy - 6, 16, 12]], species: [{ monster_id: mid(e).id, weight: 1 }],
+        target_alive: 4, respawn_sec: [45, 90], design_note: `A few ${e} elites hold the middle of ${z.name}.` });
     }
   });
-  const topZone = f.zones.length - 1;
+  const last = centres[n - 1];
+  // The world boss stands between the crossroads and the last zone.
+  const bossAt: [number, number] = [Math.round(CENTRE[0] + (last[0] - CENTRE[0]) * 0.45), Math.round(CENTRE[1] + (last[1] - CENTRE[1]) * 0.45)];
   if (f.fieldBoss) {
-    const [cx, cy] = centres[topZone];
-    pockets.push({ id: `${slug(f.fieldBoss)}_arena`, name: `${f.fieldBoss}'s Arena`, rects: [[cx - 7, cy - 46, 14, 12]], species: [{ monster_id: mid(f.fieldBoss).id, weight: 1 }],
+    pockets.push({ id: `${slug(f.fieldBoss)}_arena`, name: `${f.fieldBoss}'s Arena`, rects: [[bossAt[0] - 7, bossAt[1] - 6, 14, 12]], species: [{ monster_id: mid(f.fieldBoss).id, weight: 1 }],
       target_alive: 1, respawn_sec: [300, 420], design_note: `${f.fieldBoss} roams the open field here: a world boss for groups.` });
   }
+  const gate = gateOf(f);
 
-  // Decoration clusters between zones, never on a zone, a camp, the crossroads or a gate.
+  // Roads: west edge → camp → first zone, the ring through every zone, spokes from the
+  // crossroads, the east zone out to the east post, and a spur to the gate.
+  const ring: [number, number][] = [];
+  for (let deg = angles[0]; deg <= angles[n - 1] + 0.01; deg += 15) ring.push(onRing(deg));
+  const roads: MapDesign["roads"] = [
+    { points: [[0, 192], WEST_LANDING, centres[0]], width: 5, kind: roadKind },
+    { points: ring, width: 5, kind: roadKind },
+    ...centres.map((c) => ({ points: [CENTRE, c] as [number, number][], width: 3, kind: roadKind })),
+    { points: [CENTRE, WEST_LANDING], width: 4, kind: roadKind },
+    { points: [onRing(360), [EAST_LANDING[0], 192], [nextField ? SIZE - 1 : EAST_LANDING[0] + 8, 192]], width: 5, kind: roadKind },
+  ];
+  if (f.dungeon) roads.push({ points: [last, [gate.landing[0], last[1]], [gate.landing[0], gate.trigger[1] + 2]], width: 4, kind: roadKind });
+
+  // Decoration clusters between zones, never on a zone, a road, a camp, the crossroads or a gate.
   const blockers: MapDesign["blockers"] = [];
+  const keepOut: Rect[] = [CAMP_W, CAMP_E, gate.safe, [bossAt[0] - 10, bossAt[1] - 10, 20, 20]];
   const clear = (x: number, y: number, r: number) =>
-    centres.every(([zx, zy]) => Math.max(Math.abs(zx - x) - 40, Math.abs(zy - y) - 32) > r + 6) &&
+    centres.every(([zx, zy]) => Math.max(Math.abs(zx - x) - 46, Math.abs(zy - y) - 38) > r + 4) &&
     Math.hypot(x - CENTRE[0], y - CENTRE[1]) > r + 18 &&
-    [CAMP_W, CAMP_E, GATE_TRIGGER].every(([rx, ry, rw, rh]) => x + r + 10 < rx || x - r - 10 > rx + rw || y + r + 10 < ry || y - r - 10 > ry + rh) &&
+    roads.every((rd) => distToLine(x, y, rd.points) > r + rd.width + 3) &&
+    keepOut.every(([rx, ry, rw, rh]) => x + r + 10 < rx || x - r - 10 > rx + rw || y + r + 10 < ry || y - r - 10 > ry + rh) &&
     x - r > 8 && y - r > 8 && x + r < SIZE - 8 && y + r < SIZE - 8;
+  // A field-specific grid offset and a hash skip, so fields differ and clusters spread over the whole map.
+  const [ox, oy] = jitter(f, 99);
   let k = 0;
-  for (let y = 22; y < SIZE; y += 30) for (let x = 22 + ((y / 30) % 2) * 15; x < SIZE; x += 30) {
-    const r = 9 + ((x * 7 + y * 13) % 8);
-    if (!clear(x, y, r) || blockers.length >= 16) continue;
+  for (let y = 22 + oy; y < SIZE; y += 32) for (let x = 22 + ox + ((Math.round(y / 32) % 2) * 16); x < SIZE; x += 32) {
+    const r = 9 + ((x * 7 + y * 13) % 9);
+    if (((x * 31 + y * 17 + ox * 7) % 10) < 3 || !clear(x, y, r) || blockers.length >= 40) continue;
     blockers.push({ kind: blockerKinds[k++ % Math.max(1, blockerKinds.length)] ?? "rock", shape: { ellipse: [x, y, r, Math.round(r * 0.8)] } });
   }
 
-  const roads: MapDesign["roads"] = [
-    { points: [[0, 128], [20, 128], CENTRE], width: 5, kind: roadKind },
-    ...centres.map((c) => ({ points: [CENTRE, c] as [number, number][], width: 4, kind: roadKind })),
-  ];
-  if (nextField) roads.push({ points: [CENTRE, [236, 128], [255, 128]], width: 5, kind: roadKind });
-  else roads.push({ points: [CENTRE, [236, 128]], width: 5, kind: roadKind });
-  if (f.dungeon) roads.push({ points: [[236, 128], [239, 100]], width: 4, kind: roadKind });
+  // Each zone wears the ground of the land its monsters come from.
+  const ground_patches: NonNullable<MapDesign["ground_patches"]> = [];
+  f.zones.forEach((z, zi) => {
+    const votes = new Map<string, number>();
+    for (const s of z.species) votes.set(mid(s).region, (votes.get(mid(s).region) ?? 0) + 1);
+    const origin = [...votes].sort((a, b) => b[1] - a[1] || (a[0] === f.region ? -1 : b[0] === f.region ? 1 : 0))[0][0];
+    const g = themeOf(regions, origin, mid(z.species[0]).level).ground;
+    if (g !== t.ground) ground_patches.push({ ground: g, shape: { ellipse: [centres[zi][0], centres[zi][1], 60, 50] } });
+  });
 
   const landmarks: MapDesign["landmarks"] = [
-    { id: `lm_${stem(f)}_camp`, name: "Wayfarer Camp", kind: "camp", x: 16, y: 128, note: "Arrival from the west; scout, medic and the transit back to Avelorn." },
+    { id: `lm_${stem(f)}_camp`, name: "Wayfarer Camp", kind: "camp", x: 18, y: 192, note: "Arrival from the west and where the fallen wake; scout, medic and the transit back to Avelorn." },
     { id: `lm_${stem(f)}_crossroads`, name: `${f.name} Crossroads`, kind: "crossroads", x: CENTRE[0], y: CENTRE[1], note: "Roads to every zone meet here." },
     ...f.zones.map((z, i) => {
-      const lv = z.species.map((n) => mid(n).level);
-      return { id: `lm_${stem(f)}_${z.name.toLowerCase().replace(/[^a-z]+/g, "_")}`, name: z.name, kind: "farm" as const, x: centres[i][0], y: centres[i][1], note: `Lv ${Math.min(...lv)}-${Math.max(...lv)}: ${z.species.filter((n, j, a) => a.indexOf(n) === j).join(", ")}.` };
+      const lv = z.species.map((s) => mid(s).level);
+      return { id: `lm_${stem(f)}_${z.name.toLowerCase().replace(/[^a-z]+/g, "_")}`, name: z.name, kind: "farm" as const, x: centres[i][0], y: centres[i][1], note: `Lv ${Math.min(...lv)}-${Math.max(...lv)}: ${z.species.filter((s, j, a) => a.indexOf(s) === j).join(", ")}.` };
     }),
-    { id: `lm_${stem(f)}_east_camp`, name: "East Post", kind: "camp", x: 238, y: 128, note: nextField ? `The road east to ${nextField.name}.` : "The end of the road." },
+    { id: `lm_${stem(f)}_east_camp`, name: "East Post", kind: "camp", x: 362, y: 192, note: nextField ? `The road east to ${nextField.name}.` : "The end of the road." },
   ];
-  if (f.dungeon) landmarks.push({ id: `lm_${stem(f)}_dungeon_gate`, name: "Dungeon Gate", kind: "gate", x: 239, y: 98, note: `The way down to the ${DUNGEON_BOSS[f.dungeon.id]}'s dungeon.` });
-  if (f.fieldBoss) landmarks.push({ id: `lm_${stem(f)}_boss`, name: `${f.fieldBoss}'s Arena`, kind: "boss_arena", x: centres[topZone][0], y: centres[topZone][1] - 40, note: "World boss." });
+  if (f.dungeon) landmarks.push({ id: `lm_${stem(f)}_dungeon_gate`, name: "Dungeon Gate", kind: "gate", x: gate.trigger[0] + 3, y: gate.trigger[1], note: `The way down to the ${DUNGEON_BOSS[f.dungeon.id]}'s dungeon.` });
+  if (f.fieldBoss) landmarks.push({ id: `lm_${stem(f)}_boss`, name: `${f.fieldBoss}'s Arena`, kind: "boss_arena", x: bossAt[0], y: bossAt[1], note: "World boss." });
 
   const props: MapDesign["props"] = [
-    { kind: "tent", x: 10, y: 120, block: 2 }, { kind: "lamp_post", x: 22, y: 121, block: 1 }, { kind: "crate", x: 26, y: 136, block: 1 },
+    { kind: "tent", x: 10, y: 184, block: 2 }, { kind: "lamp_post", x: 28, y: 185, block: 1 }, { kind: "crate", x: 30, y: 200, block: 1 },
     { kind: "rune_stone", x: CENTRE[0] + 6, y: CENTRE[1] + 6, block: 1 },
-    { kind: "tent", x: 244, y: 120, block: 2 }, { kind: "lamp_post", x: 230, y: 121, block: 1 },
+    { kind: "tent", x: 370, y: 184, block: 2 }, { kind: "lamp_post", x: 354, y: 185, block: 1 },
   ];
-  if (f.dungeon) props.push({ kind: "cave_mouth", x: 245, y: 96, block: 0, scale: 1.4 });
+  if (f.dungeon) props.push({ kind: "cave_mouth", x: gate.trigger[0] + 3, y: gate.trigger[1] - 3, block: 0, scale: 1.4 });
 
   const lo = f.levels[0];
   return {
     id: f.id, name: f.name, type: "field",
-    role: `${f.zones.length} zones from Lv ${lo} to ${f.levels[1]}: ${f.zones.map((z) => z.name).join(", ")}.${f.dungeon ? ` Gate to the ${DUNGEON_BOSS[f.dungeon.id]}'s dungeon.` : ""}${f.fieldBoss ? ` World boss: ${f.fieldBoss}.` : ""}`,
+    role: `${n} zones from Lv ${lo} to ${f.levels[1]}: ${f.zones.map((z) => z.name).join(", ")}.${f.dungeon ? ` Gate to the ${DUNGEON_BOSS[f.dungeon.id]}'s dungeon.` : ""}${f.fieldBoss ? ` World boss: ${f.fieldBoss}.` : ""}`,
     levels: f.levels, size: [SIZE, SIZE], arrival: WEST_LANDING, ground: t.ground, theme: t.theme,
+    ...(ground_patches.length ? { ground_patches } : {}),
     border: t.border ? { width: 4, kind: t.border.kind } : { width: 4, kind: "forest" },
     roads, blockers, props,
-    scatter: t.scatter.map((s) => ({ kind: s.kind, count: Math.min(400, s.count * 4), block: s.block, scale: s.scale })),
-    landmarks, safe_areas: [CAMP_W, CAMP_E], horde: FIELD_ALIVE, pockets,
+    scatter: t.scatter.map((s) => ({ kind: s.kind, count: Math.min(560, s.count * 7), block: s.block, scale: s.scale })),
+    landmarks, safe_areas: f.dungeon ? [CAMP_W, CAMP_E, gate.safe] : [CAMP_W, CAMP_E], horde: FIELD_ALIVE, pockets,
     npcs: [
-      { id: `npc_${stem(f)}_scout`, name: `${f.name} Scout`, position: [12, 123], facing: "E", role: "scout", dialogue_id: `dlg_${stem(f)}_scout`, shop_id: null },
-      { id: `npc_${stem(f)}_medic`, name: `${f.name} Medic`, position: [24, 134], facing: "E", role: "healer", dialogue_id: `dlg_${stem(f)}_medic`, shop_id: null },
-      { id: `npc_${stem(f)}_transit`, name: `${f.name} Transit`, position: [12, 134], facing: "E", role: "teleporter", dialogue_id: `dlg_${stem(f)}_transit`, shop_id: null, destinations: [[HUB, 0]] },
-      { id: `npc_${stem(f)}_post`, name: `${f.name} East Post`, position: [242, 124], facing: "W", role: "teleporter", dialogue_id: `dlg_${stem(f)}_post`, shop_id: null, destinations: [[HUB, 0]] },
+      { id: `npc_${stem(f)}_scout`, name: `${f.name} Scout`, position: [14, 186], facing: "E", role: "scout", dialogue_id: `dlg_${stem(f)}_scout`, shop_id: null },
+      { id: `npc_${stem(f)}_medic`, name: `${f.name} Medic`, position: [28, 198], facing: "E", role: "healer", dialogue_id: `dlg_${stem(f)}_medic`, shop_id: null },
+      { id: `npc_${stem(f)}_transit`, name: `${f.name} Transit`, position: [14, 198], facing: "E", role: "teleporter", dialogue_id: `dlg_${stem(f)}_transit`, shop_id: null, destinations: [[HUB, 0]] },
+      { id: `npc_${stem(f)}_post`, name: `${f.name} East Post`, position: [372, 190], facing: "W", role: "teleporter", dialogue_id: `dlg_${stem(f)}_post`, shop_id: null, destinations: [[HUB, 0]] },
     ],
   };
 }
+
 
 function fieldDialogues(f: FieldSpec, look: Lookup, next?: FieldSpec): DialogueDef[] {
   const zoneLine = f.zones.map((z) => {
@@ -259,7 +312,7 @@ function fieldDialogues(f: FieldSpec, look: Lookup, next?: FieldSpec): DialogueD
 /** Rebuilds the seven region designs into the v3 world. */
 export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
   const look: Lookup = { byName: new Map() };
-  for (const r of regions) for (const m of r.monsters) look.byName.set(m.name, { id: m.id, archetype: m.archetype, level: m.level });
+  for (const r of regions) for (const m of r.monsters) look.byName.set(m.name, { id: m.id, archetype: m.archetype, level: m.level, region: r.region.id });
 
   const oldMaps = new Map(regions.flatMap((r) => r.maps.map((m) => [m.id, m] as const)));
   const oldNpcMap = new Map(regions.flatMap((r) => r.maps.flatMap((m) => m.npcs.map((n) => [n.id, m.id] as const))));
@@ -308,7 +361,7 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
   for (const [did, f] of dungeonField) {
     const old = oldLinks.find((l) => l.a.map === did || l.b.map === did)!;
     const inside = old.a.map === did ? old.a : old.b;
-    links.push({ label: `${f.name} ⇄ ${oldMaps.get(did)!.name}`, requirements: old.requirements, a: { map: f.id, trigger: GATE_TRIGGER, landing: GATE_LANDING }, b: inside });
+    links.push({ label: `${f.name} ⇄ ${oldMaps.get(did)!.name}`, requirements: old.requirements, a: { map: f.id, trigger: gateOf(f).trigger, landing: gateOf(f).landing }, b: inside });
   }
 
   // Where each monster lives now, for moving quests.

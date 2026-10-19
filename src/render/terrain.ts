@@ -10,6 +10,32 @@ import { applyLumerisTiles, type TerrainSurface } from "./terrainTiles";
 // (x, y) spans x..x+1, z = y..y+1.
 
 const TEX_PER_CELL = 8;
+/** Big world-v3 fields (384 cells) paint at 6 px a cell to keep the canvas near 2300 px. */
+const texPerCell = (l: MapLayout) => (l.width > 256 ? 6 : TEX_PER_CELL);
+
+/** Is cell (x, y) inside a shape (cell centres, as content/layout.ts bakes them)? */
+function inShape(s: Shape, x: number, y: number): boolean {
+  const px = x + 0.5, py = y + 0.5;
+  if ("rect" in s) { const [rx, ry, rw, rh] = s.rect; return x >= rx && y >= ry && x < rx + rw && y < ry + rh; }
+  if ("ellipse" in s) { const [cx, cy, rx, ry] = s.ellipse; return ((px - cx) / rx) ** 2 + ((py - cy) / ry) ** 2 <= 1; }
+  let inside = false;
+  for (let i = 0, j = s.poly.length - 1; i < s.poly.length; j = i++) {
+    const [xi, yi] = s.poly[i], [xj, yj] = s.poly[j];
+    if (yi > py !== yj > py && px < ((xj - xi) * (py - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+
+/** The ground of every cell: the map's own, unless a patch covers it. */
+export function groundAt(l: MapLayout): (x: number, y: number) => MapLayout["ground"] {
+  const patches = l.ground_patches ?? [];
+  if (!patches.length) return () => l.ground;
+  return (x, y) => {
+    let g = l.ground;
+    for (const p of patches) if (inShape(p.shape, x, y)) g = p.ground;
+    return g;
+  };
+}
 
 const GROUND: Record<MapLayout["ground"], string[]> = {
   grass: ["#5e8c56", "#668f58", "#6f9a5e", "#5a8552", "#73a062"],
@@ -59,15 +85,16 @@ function toShape(s: Shape): THREE.Shape {
 }
 
 function paintGround(l: MapLayout, region: RegionDef | undefined): HTMLCanvasElement {
-  const T = TEX_PER_CELL;
+  const T = texPerCell(l);
   const c = document.createElement("canvas");
   c.width = l.width * T;
   c.height = l.height * T;
   const g = c.getContext("2d")!;
   let seed = 1234567;
   const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
-  const pal = GROUND[l.ground];
+  const ground = groundAt(l);
   for (let y = 0; y < l.height; y++) for (let x = 0; x < l.width; x++) {
+    const pal = GROUND[ground(x, y)];
     g.fillStyle = pal[Math.floor(rand() * pal.length)];
     g.fillRect(x * T, y * T, T, T);
   }
@@ -77,11 +104,13 @@ function paintGround(l: MapLayout, region: RegionDef | undefined): HTMLCanvasEle
     g.arc(rand() * c.width, rand() * c.height, 6 + rand() * 26, 0, Math.PI * 2);
     g.fill();
   }
-  if (l.ground === "grass" || l.ground === "moss") {
-    for (let i = 0; i < l.width * l.height * 0.3; i++) {
-      g.fillStyle = ["#e8d98a", "#f2f0e2", "#c9a8dc", "#3f6b3f"][Math.floor(rand() * 4)];
-      g.fillRect(rand() * c.width, rand() * c.height, 1.6, 1.6);
-    }
+  // Flower specks on grass and moss only (patches included).
+  for (let i = 0; i < l.width * l.height * 0.3; i++) {
+    const x = rand() * c.width, y = rand() * c.height, gr = ground(Math.floor(x / T), Math.floor(y / T));
+    const colour = ["#e8d98a", "#f2f0e2", "#c9a8dc", "#3f6b3f"][Math.floor(rand() * 4)];
+    if (gr !== "grass" && gr !== "moss") continue;
+    g.fillStyle = colour;
+    g.fillRect(x, y, 1.6, 1.6);
   }
   // Safe areas (camps, plazas): trampled ground.
   for (const [x, y, w, h] of l.safe_areas) {

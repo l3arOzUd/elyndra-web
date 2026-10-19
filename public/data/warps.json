@@ -10,8 +10,8 @@
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0002",
   "requirements": [],
@@ -23,7 +23,7 @@
   "to_map": "lum_town_01",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
@@ -40,14 +40,14 @@
   "from_map": "lum_fld_01",
   "to_map": "lum_fld_02",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0004",
   "requirements": [],
@@ -59,13 +59,13 @@
   "to_map": "lum_fld_01",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0003",
   "requirements": [],
@@ -76,14 +76,14 @@
   "from_map": "lum_fld_02",
   "to_map": "ver_fld_01",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0006",
   "requirements": [],
@@ -95,13 +95,13 @@
   "to_map": "lum_fld_02",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0005",
   "requirements": [],
@@ -112,14 +112,14 @@
   "from_map": "ver_fld_01",
   "to_map": "ver_fld_02",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0008",
   "requirements": [],
@@ -131,13 +131,13 @@
   "to_map": "ver_fld_01",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0007",
   "requirements": [],
@@ -148,14 +148,14 @@
   "from_map": "ver_fld_02",
   "to_map": "sol_fld_01",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0010",
   "requirements": [],
@@ -167,13 +167,13 @@
   "to_map": "ver_fld_02",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0009",
   "requirements": [],
@@ -184,14 +184,14 @@
   "from_map": "sol_fld_01",
   "to_map": "tha_fld_01",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0012",
   "requirements": [],
@@ -203,13 +203,13 @@
   "to_map": "sol_fld_01",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0011",
   "requirements": [],
@@ -220,14 +220,14 @@
   "from_map": "tha_fld_01",
   "to_map": "cry_fld_01",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0014",
   "requirements": [],
@@ -239,13 +239,13 @@
   "to_map": "tha_fld_01",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0013",
   "requirements": [],
@@ -256,14 +256,14 @@
   "from_map": "cry_fld_01",
   "to_map": "emb_fld_01",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0016",
   "requirements": [],
@@ -275,13 +275,13 @@
   "to_map": "cry_fld_01",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0015",
   "requirements": [],
@@ -292,14 +292,14 @@
   "from_map": "emb_fld_01",
   "to_map": "noc_fld_01",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0018",
   "requirements": [],
@@ -311,13 +311,13 @@
   "to_map": "emb_fld_01",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0017",
   "requirements": [],
@@ -328,14 +328,14 @@
   "from_map": "noc_fld_01",
   "to_map": "noc_fld_02",
   "trigger_rect": [
-   253,
-   125,
+   381,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   20,
-   128
+   22,
+   192
   ],
   "pair_id": "warp_0020",
   "requirements": [],
@@ -347,13 +347,13 @@
   "to_map": "noc_fld_01",
   "trigger_rect": [
    0,
-   125,
+   189,
    3,
    7
   ],
   "spawn_point": [
-   238,
-   132
+   362,
+   196
   ],
   "pair_id": "warp_0019",
   "requirements": [],
@@ -364,8 +364,8 @@
   "from_map": "lum_fld_02",
   "to_map": "lum_dun_01",
   "trigger_rect": [
-   236,
-   96,
+   256,
+   311,
    6,
    4
   ],
@@ -390,8 +390,8 @@
    6
   ],
   "spawn_point": [
-   234,
-   122
+   256,
+   321
   ],
   "pair_id": "warp_0021",
   "requirements": [],
@@ -402,8 +402,8 @@
   "from_map": "ver_fld_02",
   "to_map": "ver_dun_01",
   "trigger_rect": [
-   236,
-   96,
+   256,
+   316,
    6,
    4
   ],
@@ -426,8 +426,8 @@
    6
   ],
   "spawn_point": [
-   234,
-   122
+   256,
+   326
   ],
   "pair_id": "warp_0023",
   "requirements": [],
@@ -438,8 +438,8 @@
   "from_map": "tha_fld_01",
   "to_map": "sol_dun_01",
   "trigger_rect": [
-   236,
-   96,
+   255,
+   309,
    6,
    4
   ],
@@ -464,8 +464,8 @@
    3
   ],
   "spawn_point": [
-   234,
-   122
+   255,
+   319
   ],
   "pair_id": "warp_0025",
   "requirements": [],
@@ -476,8 +476,8 @@
   "from_map": "emb_fld_01",
   "to_map": "cry_dun_01",
   "trigger_rect": [
-   236,
-   96,
+   255,
+   316,
    6,
    4
   ],
@@ -500,8 +500,8 @@
    6
   ],
   "spawn_point": [
-   234,
-   122
+   255,
+   326
   ],
   "pair_id": "warp_0027",
   "requirements": [],
@@ -512,8 +512,8 @@
   "from_map": "noc_fld_02",
   "to_map": "noc_dun_01",
   "trigger_rect": [
-   236,
-   96,
+   256,
+   306,
    6,
    4
   ],
@@ -538,8 +538,8 @@
    3
   ],
   "spawn_point": [
-   234,
-   122
+   256,
+   316
   ],
   "pair_id": "warp_0029",
   "requirements": [],

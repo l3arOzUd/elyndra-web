@@ -52,6 +52,14 @@ export function terrainBlendMask(layout: MapLayout): { data: Uint8Array; width: 
     traceShape(moss, b.shape);
     moss.fill(); moss.lineWidth = b.kind === "water" ? 2.2 : 1.5; moss.stroke();
   }
+  // World v3 zones with their own ground: the nearest of the four painted materials.
+  for (const p of layout.ground_patches ?? []) {
+    const g = p.ground === "moss" || p.ground === "grass" ? (p.ground === "moss" ? moss : null) : p.ground === "stone" || p.ground === "metal" || p.ground === "snow" ? stone : dirt;
+    if (!g) continue;
+    g.globalAlpha = 0.75;
+    traceShape(g, p.shape);
+    g.fill();
+  }
   for (const [x, y, w, h] of layout.safe_areas) {
     if (w >= layout.width && h >= layout.height || layout.ground === "stone") continue;
     dirt.globalAlpha = 0.32;

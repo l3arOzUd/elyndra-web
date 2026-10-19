@@ -25,17 +25,17 @@
   "role": "4 zones from Lv 1 to 10: Mosskin Meadow, Sporeling Hollow, Glider Rise, Bramble Mill.",
   "recommended_level_min": 1,
   "recommended_level_max": 10,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/lum_fld_01.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -46,17 +46,17 @@
   "role": "4 zones from Lv 11 to 20: Brookbed, Reed Marsh, Rotting Rows, Sap Groves. Gate to the Hollowroot Warden's dungeon.",
   "recommended_level_min": 11,
   "recommended_level_max": 20,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/lum_fld_02.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -88,17 +88,17 @@
   "role": "4 zones from Lv 21 to 30: Jadewing Glade, Trellis Dunes, Press Terraces, Glass Burrows.",
   "recommended_level_min": 21,
   "recommended_level_max": 30,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/ver_fld_01.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -109,17 +109,17 @@
   "role": "5 zones from Lv 31 to 40: Root Ridge, Antler Glade, Spore Drift, Basilisk Flats, Coral Steps. Gate to the Heartwood Regent's dungeon.",
   "recommended_level_min": 31,
   "recommended_level_max": 40,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/ver_fld_02.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -151,17 +151,17 @@
   "role": "5 zones from Lv 41 to 50: Warden Causeway, Canal Shallows, Frost Seep, Colossus Sands, Prism Reach.",
   "recommended_level_min": 41,
   "recommended_level_max": 50,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/sol_fld_01.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -193,17 +193,17 @@
   "role": "5 zones from Lv 51 to 60: Relay Strand, Ram Terraces, Pearl Beds, Turtle Coils, Squall Point. Gate to the Heliostat Sovereign's dungeon.",
   "recommended_level_min": 51,
   "recommended_level_max": 60,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/tha_fld_01.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -214,17 +214,17 @@
   "role": "5 zones from Lv 61 to 70: Ash Flats, Drowned Archive, Slag Mirrors, Behemoth Ice, Sentry Vents. World boss: Drowned Signalmind.",
   "recommended_level_min": 61,
   "recommended_level_max": 70,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/cry_fld_01.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -256,17 +256,17 @@
   "role": "5 zones from Lv 71 to 80: Tender Yards, Skink Flow, Spitter Vents, Knight's Road, Rivet Moraine. Gate to the Cryocore Curator's dungeon.",
   "recommended_level_min": 71,
   "recommended_level_max": 80,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/emb_fld_01.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -277,17 +277,17 @@
   "role": "4 zones from Lv 81 to 90: Brute Pens, Coupler Yards, Wraith Pour, Stoker Heights. World boss: Kiln Prime.",
   "recommended_level_min": 81,
   "recommended_level_max": 90,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/noc_fld_01.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {
@@ -298,17 +298,17 @@
   "role": "3 zones from Lv 91 to 99: Sentinel Colonnade, Glyph Plaza, Lattice Verge. Gate to the Lattice Sovereign's dungeon.",
   "recommended_level_min": 91,
   "recommended_level_max": 99,
-  "width_cells": 256,
-  "height_cells": 256,
+  "width_cells": 384,
+  "height_cells": 384,
   "safe_zone": false,
   "layout": "maps/noc_fld_02.json",
   "arrival": [
-   20,
-   128
+   22,
+   192
   ],
   "horde": {
-   "min_alive": 450,
-   "max_alive": 800
+   "min_alive": 550,
+   "max_alive": 900
   }
  },
  {

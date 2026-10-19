@@ -103,6 +103,8 @@ export interface MapLayout {
   height: number;
   theme: string;
   ground: "grass" | "sand" | "snow" | "ash" | "stone" | "moss" | "shore" | "cave" | "metal";
+  /** Parts of the map with another ground (world v3 zones); later patches win. */
+  ground_patches?: { ground: MapLayout["ground"]; shape: Shape }[];
   roads: Road[];
   blockers: { kind: BlockerKind; shape: Shape }[];
   props: Prop[];

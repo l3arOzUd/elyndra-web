@@ -44,6 +44,8 @@ export interface MapDesign {
   /** Teleport/respawn point, inside a safe area. */
   arrival: Point;
   ground: MapLayout["ground"];
+  /** Zones with their own ground (world v3); later patches win. */
+  ground_patches?: MapLayout["ground_patches"];
   theme: string;
   /** Dungeons start solid and are carved out. */
   solid?: boolean;
