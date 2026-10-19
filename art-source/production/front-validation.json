@@ -796,5 +796,110 @@
     "sourceMode": "RGBA",
     "sha256": "ec481c4dbf50eb5bfbc7925dc01bf1fee6bce8fa855832a223867a90ac55690d",
     "passes": true
+  },
+  {
+    "id": "mob_0049",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      194,
+      12,
+      1064,
+      1237
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "c96a6c111eaa9290286355ed67409a993a77a2ec3ebcd84204fe28655ab60502",
+    "passes": true
+  },
+  {
+    "id": "mob_0050",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      454,
+      8,
+      827,
+      1235
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "23eb19d2a6643c5afcc22e21bf6b23802d7ce6f29526a35d5d830ffe2dc2afe7",
+    "passes": true
+  },
+  {
+    "id": "mob_0051",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      103,
+      23,
+      1211,
+      1236
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "9e064ea6b3b9f0c2c4c32a1a4cebf530941ffa84af87b638b115cb71df65d5e1",
+    "passes": true
+  },
+  {
+    "id": "mob_0052",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      16,
+      84,
+      1246,
+      1165
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "b08db8d9b6e68f3f7493fc779835be1d3844d8864e64e2164afa900253d19032",
+    "passes": true
+  },
+  {
+    "id": "mob_0053",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bounds": [
+      284,
+      9,
+      969,
+      1218
+    ],
+    "edgePixels": 0,
+    "sourceMode": "RGBA",
+    "sha256": "1c38718f252f7480977a93f07e14d40b38722e680f2a37bd335c8766d1d8529d",
+    "passes": true
   }
 ]

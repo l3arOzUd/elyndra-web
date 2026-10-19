@@ -2077,9 +2077,13 @@
       "brief": "A towering figure of living wood grown round a brass pump-heart, a crown of branches, roots for legs, jade light pulsing through its veins with each pump stroke.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0049/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2114,9 +2118,13 @@
       "brief": "A rangy jackal with ochre fur, huge ears, a dark stripe down the spine and a brass tag from a long-gone caravan on its collar.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0050/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2151,9 +2159,13 @@
       "brief": "A diamond-shaped kite of brass foil and cloth on a gear-driven frame, a single focusing lens in its nose, ribbon tails streaming.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0051/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2188,9 +2200,13 @@
       "brief": "A low, heavy basilisk with a tail ending in a club of glowing glass, ridged sandy scales, a frilled crest that flares orange.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0052/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2225,9 +2241,13 @@
       "brief": "A slim brass automaton in sun-bleached robes, a gnomon-shaped crest on its head, mirror-plate hands that catch the light.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0053/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 38; existing front references needing review: 7; missing front references: 49.
+Monsters: 94; front masters created: 43; existing front references needing review: 7; missing front references: 44.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -54,11 +54,11 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0046 | Sporebloat | master-created | missing | missing | missing | placeholder |
 | mob_0047 | Spore Matron | master-created | missing | missing | missing | placeholder |
 | mob_0048 | Heartwood Pistonguard | master-created | missing | missing | missing | placeholder |
-| mob_0049 | Heartwood Regent | missing | missing | missing | missing | placeholder |
-| mob_0050 | Ochre Jackal | missing | missing | missing | missing | placeholder |
-| mob_0051 | Brass Kite | missing | missing | missing | missing | placeholder |
-| mob_0052 | Glasstail Basilisk | missing | missing | missing | missing | placeholder |
-| mob_0053 | Gnomon Acolyte | missing | missing | missing | missing | placeholder |
+| mob_0049 | Heartwood Regent | master-created | missing | missing | missing | placeholder |
+| mob_0050 | Ochre Jackal | master-created | missing | missing | missing | placeholder |
+| mob_0051 | Brass Kite | master-created | missing | missing | missing | placeholder |
+| mob_0052 | Glasstail Basilisk | master-created | missing | missing | missing | placeholder |
+| mob_0053 | Gnomon Acolyte | master-created | missing | missing | missing | placeholder |
 | mob_0054 | Canal Strider | missing | missing | missing | missing | placeholder |
 | mob_0055 | Dust Revenant | missing | missing | missing | missing | placeholder |
 | mob_0056 | Sand-buried Colossus | missing | missing | missing | missing | placeholder |
