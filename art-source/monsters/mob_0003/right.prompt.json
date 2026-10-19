@@ -1,0 +1,10 @@
+{
+  "view": "right",
+  "prompt": "RIGHT-FACING SIDE PROFILE of same Ambermite. Reference 1 front identity, reference 2 left profile authoritative body depth, reference 3 rear. Head points RIGHT, only one eye visible, small mandibles. Same smooth translucent honey amber dome with glowing core inside, same trapped bubbles and warm painterly material, NO spikes. Exactly SIX legs in total, THREE near articulated legs clearly separated front middle rear, other three occluded naturally. Match left profile shape and proportions as opposite side; no elongated body or new appendages. Neutral stance, orthographic eye-level. Square transparent canvas, complete bug including claws safely inside generous empty margins, shell top about 20% down and feet 20% above bottom. No floor shadow labels.",
+  "references": [
+    "front.png",
+    "left.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

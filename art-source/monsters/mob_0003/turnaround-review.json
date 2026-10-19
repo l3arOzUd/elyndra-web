@@ -1,0 +1,17 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct generated-image inspection and four-view browser comparison on light background.",
+  "confirmed": [
+    "Honey-orange translucent dome with visible internal luminous core retained",
+    "Front and rear show six leg tips; rear has no eyes or mandibles",
+    "Side images retain three near articulated legs, one visible eye and small mandibles",
+    "No introduced crystal spikes or tail",
+    "Four PNGs pass alpha/framing diagnostics"
+  ],
+  "limitations": [
+    "Right side shows more far-leg tips than left; camera/stance consistency requires refinement before animation",
+    "Side framing is slightly larger than front/rear; normalize uniform scale and ground baseline without stretching anatomy",
+    "Bubbles and internal shell highlights vary by view; this does not establish exact 3D surface correspondence"
+  ],
+  "next": "Refine opposite side stance, then prepare separate limb assets and a six-leg gait after roster turnarounds."
+}
