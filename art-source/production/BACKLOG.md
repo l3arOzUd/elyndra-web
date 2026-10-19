@@ -23,7 +23,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0012 | Graftling | master-created | master-created | master-created | master-created | placeholder |
 | mob_0013 | Sapdrone | master-created | master-created | master-created | master-created | placeholder |
 | mob_0014 | Vinecrawler | master-created | master-created | master-created | master-created | placeholder |
-| mob_0015 | Root Sentinel | master-created | missing | missing | missing | placeholder |
+| mob_0015 | Root Sentinel | master-created | master-created | master-created | master-created | placeholder |
 | mob_0016 | Sandcoil | master-created | missing | missing | missing | placeholder |
 | mob_0017 | Glass Scarab | master-created | missing | missing | missing | placeholder |
 | mob_0018 | Dune Sentry | master-created | missing | missing | missing | placeholder |

@@ -1,0 +1,19 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct image inspection and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Massive rooted stone-and-brass humanoid with bark hood and single jade lantern eye retained",
+    "Revised rear replaces duplicated chest emblem and front groin plate with scapula plates and brass spine",
+    "Revised rear knees show hinge recesses and feet show heel blocks",
+    "Side eye stays inside forward hood opening",
+    "All four images pass alpha and frame-edge checks"
+  ],
+  "limitations": [
+    "Profiles still expose frontal chest surface; strict side projection remains unapproved",
+    "Root routes, stone cracks and small vegetation differ between views",
+    "Clear margin above hood is very narrow despite no opaque edge pixels",
+    "Near fist and knee overlap hides limb joints; complete separated layers are needed for animation",
+    "Shoulder, hip and foot landmarks need consistent registration before rigging"
+  ],
+  "next": "Refine camera and hood framing, separate heavy rigid segments at brass joints, then author weighted steps, fist strike and staged knee/torso collapse."
+}
