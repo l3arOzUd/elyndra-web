@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Dust Revenant RIGHT SIDE profile facing RIGHT. Reference front identity, left reference cloth style. Anatomical RIGHT arm is NEAR camera raised at elbow with bony hand holding same amber brass lantern ahead imageRIGHT at chest height. Near sleeve and raised forearm visibly connect to near shoulder. Anatomical LEFT hand relaxed FAR behind torso partially hidden; exactly two hands no third. Hollow empty hood opening points RIGHT, no eyes/skull; closed cloth rear imageLEFT. Strict 90degree orthographic eye-level, narrow torso, not threequarter. Floating sandy burial wraps with long frayed strips same length, no feet. Full silhouette square transparent margin, no dust particles ground shadow text, glow only lantern and adjacent fabric. Hand-painted fantasy MMORPG.",
+  "references": [
+    "front.png",
+    "left.png"
+  ]
+}

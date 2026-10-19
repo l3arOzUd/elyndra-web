@@ -1,0 +1,20 @@
+{
+  "id": "mob_0055",
+  "name": "Dust Revenant",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation using front identity and opposite-view references.",
+  "confirmed": [
+    "Hollow hood without skull or eyes; rear hood closed cloth.",
+    "Lantern remains in anatomical right hand: image left front, image right rear, far arm left profile and near arm right profile.",
+    "Two skeletal hands, floating wraps without feet; dust kept separate.",
+    "Four files pass transparent/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Profiles remain oblique; left shows too much chest and right too much back.",
+    "Raised arm extends farther forward in profiles than front; reconcile wrist/lantern anchor before rigging.",
+    "Cloth strips, tear locations and winding directions differ across views; need stable strip count and attachment map.",
+    "Lantern glass/cage proportions and hood depth vary; margins at top/bottom tight.",
+    "No separated cloth layers, dust VFX or runtime animations delivered yet."
+  ],
+  "next": "Reconcile hood depth, lantern grip and cloth strip topology; separate rigid lantern/skeletal arms from cloth for hover, move, attack, hit and dissolve death plus dust VFX."
+}

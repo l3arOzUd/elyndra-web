@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Dust Revenant LEFT SIDE strict orthographic eye-level facing LEFT. Reference front exact identity and rear cloth. Empty hollow hood opening at left only, no skull eyes face. Sandy frayed burial wraps narrow floating torso, no feet. Anatomical LEFT arm is NEAR camera and hangs relaxed with skeletal hand visible. Anatomical RIGHT arm is FAR and raised forward holding brass amber surveyor lantern, partially occluded by body but visible ahead imageLEFT at chest height. Do NOT swap arms to show lantern; no third hand. Same hovering neutral pose and strip lengths; preserve wrapped anatomy. Full hood and trailing cloth within square transparent canvas with margins, hand-painted fantasy MMORPG no dust particles ground shadow text. Light confined to lantern and nearby cloth.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}
