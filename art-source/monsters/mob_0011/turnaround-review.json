@@ -1,0 +1,19 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Wooden biped guardian with copper joints and moss seams retained",
+    "Single cracked lens retained in front; no duplicated lens on back",
+    "Side lens stays at forward head plane rather than becoming a side-mounted eye",
+    "Rear heel blocks are shorter than forward toes",
+    "All four images pass transparent-background and frame-edge checks"
+  ],
+  "limitations": [
+    "Side head still exposes more lens surface than a strict 90-degree projection",
+    "Left and right chest thickness and head angle differ slightly",
+    "Rear plate arrangement remains similar to front; confirm intended back construction before layer separation",
+    "Individual wood plates, moss seams and hand articulation differ across views; structural continuity unapproved",
+    "Far side limbs are hidden and need authored complete layers for animation"
+  ],
+  "next": "Refine profile head projection and joint registration, then separate rigid wooden segments at copper pivots for weight-bearing gait, attack and joint-collapse death."
+}

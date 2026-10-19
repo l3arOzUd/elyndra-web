@@ -816,31 +816,43 @@
           "status": "master-created"
         },
         "back": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0011/back.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/17_Barkwarden_back.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "status": "master-created"
         },
         "left": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0011/left.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/17_Barkwarden_left.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "status": "master-created"
         },
         "right": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0011/right.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/17_Barkwarden_right.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "status": "master-created"
         }
       },
       "sprite": "barkwarden_2d",
