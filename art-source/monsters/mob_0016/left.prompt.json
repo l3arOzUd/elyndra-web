@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "SANDCOIL LEFT-facing strict side reference from exact front/back. Thick short saffron granular sand-scaled serpent with brown speckles, ember-orange belly, two springlike stacked coils supporting raised head. Rotate camera 90 degrees only, same pose, one near amber eye, short forked tongue forward LEFT, rounded short snake muzzle, NO cobra hood horns limbs or extra head. Orange belly follows front LEFT neck surface; dorsal RIGHT neck saffron scales. Preserve continuous single body with TWO coils, no disconnected doughnut rings. Tail stays at character RIGHT side as front reference, visible on near side of base in this view, not arbitrarily moved behind neck. Eye-level orthographic profile not 3/4, same head height body thickness and coil diameter. Whole snake centered on square transparent canvas with clear margins, hand painted fantasy MMORPG, no ground cast shadow heat haze text scene.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "SANDCOIL RIGHT-facing reference, same thick short saffron snake as first LEFT view and second FRONT master. Strict orthographic side eye level, head faces RIGHT, one amber eye and short forked tongue, orange belly runs front RIGHT neck, back LEFT neck saffron with brown speckles. Exactly two stacked spring coils, same head height, thickness and pose. IMPORTANT tail remains on character RIGHT side, which is FAR SIDE in this right-facing camera; hide most tail behind lower coil, only tiny tip may peek behind base. Do not simply mirror visible near-side tail from first reference. Single continuous serpent, no hood horns arms legs. Match painted fantasy MMORPG style. Whole body and tongue inside square transparent canvas with clear margins, no floor shadow heat haze text or background.",
+  "references": [
+    "left.png",
+    "front.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

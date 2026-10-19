@@ -1,0 +1,19 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Saffron scaled short serpent, ember-orange underside and two stacked coils retained",
+    "Rear head has no duplicated face; rear neck uses dorsal scales",
+    "Profiles each show one eye and forward forked tongue",
+    "Tail moves from front viewer-left to rear viewer-right and is mostly hidden in right profile",
+    "All four images pass alpha and frame-edge checks"
+  ],
+  "limitations": [
+    "Coil connections remain hidden; continuous body path and winding direction require explicit construction before animation",
+    "Side head and neck proportions differ slightly and show some three-quarter surface",
+    "Individual scale markings and belly segment counts vary across views",
+    "Coil widths, head centers and tail attachment must be registered consistently",
+    "Heat shimmer is intentionally absent from reference art and remains a runtime VFX task"
+  ],
+  "next": "Resolve continuous coil-to-neck-to-tail path, refine landmarks, then author snake-specific uncoiling travel, spring bite and low settling death without limb-style rigging."
+}
