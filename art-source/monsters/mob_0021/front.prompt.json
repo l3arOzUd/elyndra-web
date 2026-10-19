@@ -1,0 +1,8 @@
+{
+  "id": "mob_0021",
+  "name": "Coral Claw",
+  "view": "front",
+  "prompt": "ELYNDRA CORAL CLAW mob_0021 monster front master. Exact bible: A crab the size of a dog, its shell overgrown with pink and orange coral branches, one claw much larger than the other; wet teal legs. One stocky true CRAB with broad teal carapace carrying a clustered pink-and-orange branching coral reef, two stalked dark eyes, eight walking legs in four pairs plus two claw arms. IMPORTANT asymmetry: creature's RIGHT claw (on VIEWER LEFT in front view) is enormous and heavy, creature's LEFT claw (VIEWER RIGHT) is small. Both claws held slightly open in relaxed stance. Wet sea-teal legs and shell with cream joint edges, natural varied coral branches attached to back. No extra claws, no lobster tail, no humanoid features. Premium hand-painted stylized fantasy MMORPG illustration, rich soft painted shading, readable silhouette at small size. FRONT view, camera orthographic eye-level looking straight at creature, whole crab and all coral/claws fully within canvas, wide margins especially around large claw. Square transparent PNG with alpha, no ground, shadow, water, bubbles, text, border or inset. One creature only.",
+  "designInvariant": "Right claw is large (viewer left in front view). Do not mirror asymmetry for turnaround.",
+  "review": "Created; visual and alpha audit pending."
+}

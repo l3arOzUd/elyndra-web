@@ -847,9 +847,13 @@
       "brief": "A thick, short serpent coiled like a spring, scales the colour and grain of saffron sand, ember-orange belly, heat shimmer above it.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0016/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -884,9 +888,13 @@
       "brief": "A dog-sized scarab whose shell is clear amber glass with a glowing ember core showing through, legs of dark chitin.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0017/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -921,9 +929,13 @@
       "brief": "A blocky humanoid of carved sandstone with brass bands at the joints, a slit visor glowing orange, sand pouring from its cracks.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0018/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -958,9 +970,13 @@
       "brief": "A tall bronze guardian with a halo-ring of sun mirrors on its back, a faceless polished face, a long spear-gnomon.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0019/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -995,9 +1011,13 @@
       "brief": "A frog-sized blue-grey hopper with oversized hind legs, a shell-plate back and bulbous wet eyes; barnacle specks; sea-glass blue.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0020/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1032,9 +1052,13 @@
       "brief": "A crab the size of a dog, its shell overgrown with pink and orange coral branches, one claw much larger than the other; wet teal legs.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0021/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1069,9 +1093,13 @@
       "brief": "A barrel-chested copper automaton with piston arms, brine-crusted gauges for eyes and a tank on its back hissing steam; verdigris green and brass.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0022/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1106,9 +1134,13 @@
       "brief": "A tall diving-suit construct with a dish-shaped sonar head, ribbed hoses and lead boots; dark bronze with pulsing cyan rings.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0023/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,

@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 8; existing front references needing review: 7; missing front references: 79.
+Monsters: 94; front masters created: 16; existing front references needing review: 7; missing front references: 71.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -24,14 +24,14 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0013 | Sapdrone | master-created | missing | missing | missing | placeholder |
 | mob_0014 | Vinecrawler | master-created | missing | missing | missing | placeholder |
 | mob_0015 | Root Sentinel | master-created | missing | missing | missing | placeholder |
-| mob_0016 | Sandcoil | missing | missing | missing | missing | placeholder |
-| mob_0017 | Glass Scarab | missing | missing | missing | missing | placeholder |
-| mob_0018 | Dune Sentry | missing | missing | missing | missing | placeholder |
-| mob_0019 | Sun Warden | missing | missing | missing | missing | placeholder |
-| mob_0020 | Tidehopper | missing | missing | missing | missing | placeholder |
-| mob_0021 | Coral Claw | missing | missing | missing | missing | placeholder |
-| mob_0022 | Brine Automaton | missing | missing | missing | missing | placeholder |
-| mob_0023 | Relay Guardian | missing | missing | missing | missing | placeholder |
+| mob_0016 | Sandcoil | master-created | missing | missing | missing | placeholder |
+| mob_0017 | Glass Scarab | master-created | missing | missing | missing | placeholder |
+| mob_0018 | Dune Sentry | master-created | missing | missing | missing | placeholder |
+| mob_0019 | Sun Warden | master-created | missing | missing | missing | placeholder |
+| mob_0020 | Tidehopper | master-created | missing | missing | missing | placeholder |
+| mob_0021 | Coral Claw | master-created | missing | missing | missing | placeholder |
+| mob_0022 | Brine Automaton | master-created | missing | missing | missing | placeholder |
+| mob_0023 | Relay Guardian | master-created | missing | missing | missing | placeholder |
 | mob_0024 | Frost Mite | missing | missing | missing | missing | placeholder |
 | mob_0025 | Prism Wisp | missing | missing | missing | missing | placeholder |
 | mob_0026 | Icegear | missing | missing | missing | missing | placeholder |
