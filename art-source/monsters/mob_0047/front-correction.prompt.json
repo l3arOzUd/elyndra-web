@@ -1,0 +1,4 @@
+{
+  "prompt": "Edit this Spore Matron master, preserve exact mushroom design, frilled cap, robe-like stalk, all six jade hanging lanterns and root base. Remove ALL background, brown haze, halo and atmospheric glow outside the creature. Truly transparent clean alpha background everywhere outside the solid creature, including gaps between hanging lantern cords. Reframe onto a SQUARE canvas with generous transparent margin of at least 8% on all four sides, entire tip of cap and roots intact. Reduce subject size to fit; do not crop. Keep front orthographic pose and painterly detail. No ground shadow. Jade light stays inside the lantern pods only.",
+  "reason": "Remove background haze and add unclipped transparent margins."
+}

@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 28; existing front references needing review: 7; missing front references: 59.
+Monsters: 94; front masters created: 38; existing front references needing review: 7; missing front references: 49.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -44,16 +44,16 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0033 | Shade Carrier | master-created | missing | missing | missing | placeholder |
 | mob_0034 | Lattice Drone | master-created | missing | missing | missing | placeholder |
 | mob_0035 | Meridian Executor | master-created | missing | missing | missing | placeholder |
-| mob_0036 | Hollowroot Warden | missing | missing | missing | missing | placeholder |
-| mob_0040 | Mossback Newt | missing | missing | missing | missing | placeholder |
-| mob_0041 | Jadewing Moth | missing | missing | missing | missing | placeholder |
-| mob_0042 | Barkhound | missing | missing | missing | missing | placeholder |
-| mob_0043 | Pruning Tender | missing | missing | missing | missing | placeholder |
-| mob_0044 | Thistlehare | missing | missing | missing | missing | placeholder |
-| mob_0045 | Antlered Engine | missing | missing | missing | missing | placeholder |
-| mob_0046 | Sporebloat | missing | missing | missing | missing | placeholder |
-| mob_0047 | Spore Matron | missing | missing | missing | missing | placeholder |
-| mob_0048 | Heartwood Pistonguard | missing | missing | missing | missing | placeholder |
+| mob_0036 | Hollowroot Warden | master-created | missing | missing | missing | placeholder |
+| mob_0040 | Mossback Newt | master-created | missing | missing | missing | placeholder |
+| mob_0041 | Jadewing Moth | master-created | missing | missing | missing | placeholder |
+| mob_0042 | Barkhound | master-created | missing | missing | missing | placeholder |
+| mob_0043 | Pruning Tender | master-created | missing | missing | missing | placeholder |
+| mob_0044 | Thistlehare | master-created | missing | missing | missing | placeholder |
+| mob_0045 | Antlered Engine | master-created | missing | missing | missing | placeholder |
+| mob_0046 | Sporebloat | master-created | missing | missing | missing | placeholder |
+| mob_0047 | Spore Matron | master-created | missing | missing | missing | placeholder |
+| mob_0048 | Heartwood Pistonguard | master-created | missing | missing | missing | placeholder |
 | mob_0049 | Heartwood Regent | missing | missing | missing | missing | placeholder |
 | mob_0050 | Ochre Jackal | missing | missing | missing | missing | placeholder |
 | mob_0051 | Brass Kite | missing | missing | missing | missing | placeholder |

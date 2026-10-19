@@ -1667,9 +1667,13 @@
       "brief": "A hulking root-and-copper colossus around a pulsing aetherite heart; pipes for arms, roots for legs.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0036/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1704,9 +1708,13 @@
       "brief": "A plump newt with a carpet of green moss on its back, a pale belly and round jade eyes; small water droplets glinting on the moss.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0040/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1741,9 +1749,13 @@
       "brief": "A moth the size of a hawk with translucent jade wings veined like circuitry, glowing eyespots and trailing luminous dust.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0041/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1778,9 +1790,13 @@
       "brief": "A lean wolf with overlapping bark plates on its back and shoulders, moss on its tail, jade-green eyes; heavy jaws with wooden fangs.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0042/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1815,9 +1831,13 @@
       "brief": "A barrel-bodied brass gardener on three spindly legs with shear-arms and a sap nozzle, a glass tank of jade sap on its back, moss on the lid.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0043/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1852,9 +1872,13 @@
       "brief": "A long-eared hare whose fur is a mass of purple-green thistle burrs, a white cotton tail, huge dark eyes; mid-leap pose.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0044/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1889,9 +1913,13 @@
       "brief": "A huge stag of brass ribs and living wood, antlers made of coiled copper and branches hung with moss, a furnace-glow of jade in its chest.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0045/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1926,9 +1954,13 @@
       "brief": "A floating puffball the size of a barrel, dark violet with glowing jade spore-vents, short root tendrils hanging below.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0046/front.png",
+            "width": 1312,
+            "height": 1199
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -1963,9 +1995,13 @@
       "brief": "A tall mushroom with a wide frilled cap, a stalk like a robed figure, jade spore-lanterns hanging under the cap.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0047/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -2000,9 +2036,13 @@
       "brief": "A squat brass guardian with pistons for arms, its body cased in polished heartwood, steam and spores venting from its back.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0048/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -3921,7 +3961,7 @@
       "id": "itm_1005",
       "name": "Worn Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -3929,7 +3969,7 @@
       "id": "itm_1006",
       "name": "Worn Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -3937,7 +3977,7 @@
       "id": "itm_1007",
       "name": "Worn Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -3945,7 +3985,7 @@
       "id": "itm_1008",
       "name": "Worn Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -3953,7 +3993,7 @@
       "id": "itm_1009",
       "name": "Worn Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -3961,7 +4001,7 @@
       "id": "itm_1010",
       "name": "Worn Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4105,7 +4145,7 @@
       "id": "itm_1028",
       "name": "Bronze Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4113,7 +4153,7 @@
       "id": "itm_1029",
       "name": "Bronze Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4121,7 +4161,7 @@
       "id": "itm_1030",
       "name": "Bronze Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4129,7 +4169,7 @@
       "id": "itm_1031",
       "name": "Bronze Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4137,7 +4177,7 @@
       "id": "itm_1032",
       "name": "Bronze Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4145,7 +4185,7 @@
       "id": "itm_1033",
       "name": "Bronze Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4289,7 +4329,7 @@
       "id": "itm_1051",
       "name": "Iron Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4297,7 +4337,7 @@
       "id": "itm_1052",
       "name": "Iron Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4305,7 +4345,7 @@
       "id": "itm_1053",
       "name": "Iron Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4313,7 +4353,7 @@
       "id": "itm_1054",
       "name": "Iron Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4321,7 +4361,7 @@
       "id": "itm_1055",
       "name": "Iron Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4329,7 +4369,7 @@
       "id": "itm_1056",
       "name": "Iron Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4473,7 +4513,7 @@
       "id": "itm_1074",
       "name": "Steel Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4481,7 +4521,7 @@
       "id": "itm_1075",
       "name": "Steel Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4489,7 +4529,7 @@
       "id": "itm_1076",
       "name": "Steel Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4497,7 +4537,7 @@
       "id": "itm_1077",
       "name": "Steel Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4505,7 +4545,7 @@
       "id": "itm_1078",
       "name": "Steel Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4513,7 +4553,7 @@
       "id": "itm_1079",
       "name": "Steel Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4657,7 +4697,7 @@
       "id": "itm_1097",
       "name": "Cobalt Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4665,7 +4705,7 @@
       "id": "itm_1098",
       "name": "Cobalt Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4673,7 +4713,7 @@
       "id": "itm_1099",
       "name": "Cobalt Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4681,7 +4721,7 @@
       "id": "itm_1100",
       "name": "Cobalt Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4689,7 +4729,7 @@
       "id": "itm_1101",
       "name": "Cobalt Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4697,7 +4737,7 @@
       "id": "itm_1102",
       "name": "Cobalt Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4841,7 +4881,7 @@
       "id": "itm_1120",
       "name": "Runic Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4849,7 +4889,7 @@
       "id": "itm_1121",
       "name": "Runic Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4857,7 +4897,7 @@
       "id": "itm_1122",
       "name": "Runic Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4865,7 +4905,7 @@
       "id": "itm_1123",
       "name": "Runic Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4873,7 +4913,7 @@
       "id": "itm_1124",
       "name": "Runic Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -4881,7 +4921,7 @@
       "id": "itm_1125",
       "name": "Runic Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5025,7 +5065,7 @@
       "id": "itm_1143",
       "name": "Mythril Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5033,7 +5073,7 @@
       "id": "itm_1144",
       "name": "Mythril Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5041,7 +5081,7 @@
       "id": "itm_1145",
       "name": "Mythril Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5049,7 +5089,7 @@
       "id": "itm_1146",
       "name": "Mythril Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5057,7 +5097,7 @@
       "id": "itm_1147",
       "name": "Mythril Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5065,7 +5105,7 @@
       "id": "itm_1148",
       "name": "Mythril Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5209,7 +5249,7 @@
       "id": "itm_1166",
       "name": "Ember Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5217,7 +5257,7 @@
       "id": "itm_1167",
       "name": "Ember Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5225,7 +5265,7 @@
       "id": "itm_1168",
       "name": "Ember Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5233,7 +5273,7 @@
       "id": "itm_1169",
       "name": "Ember Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5241,7 +5281,7 @@
       "id": "itm_1170",
       "name": "Ember Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5249,7 +5289,7 @@
       "id": "itm_1171",
       "name": "Ember Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5393,7 +5433,7 @@
       "id": "itm_1189",
       "name": "Star Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5401,7 +5441,7 @@
       "id": "itm_1190",
       "name": "Star Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5409,7 +5449,7 @@
       "id": "itm_1191",
       "name": "Star Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5417,7 +5457,7 @@
       "id": "itm_1192",
       "name": "Star Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5425,7 +5465,7 @@
       "id": "itm_1193",
       "name": "Star Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5433,7 +5473,7 @@
       "id": "itm_1194",
       "name": "Star Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5577,7 +5617,7 @@
       "id": "itm_1212",
       "name": "Sovereign Helm",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5585,7 +5625,7 @@
       "id": "itm_1213",
       "name": "Sovereign Hood",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5593,7 +5633,7 @@
       "id": "itm_1214",
       "name": "Sovereign Circlet",
       "slot": "head",
-      "visual": "none",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5601,7 +5641,7 @@
       "id": "itm_1215",
       "name": "Sovereign Sallet",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5609,7 +5649,7 @@
       "id": "itm_1216",
       "name": "Sovereign Warcrown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5617,7 +5657,7 @@
       "id": "itm_1217",
       "name": "Sovereign Mask",
       "slot": "head",
-      "visual": "none",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6449,7 +6489,7 @@
       "id": "itm_1321",
       "name": "Hollowroot Crown",
       "slot": "head",
-      "visual": "none",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },

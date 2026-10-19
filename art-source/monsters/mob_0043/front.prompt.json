@@ -1,0 +1,8 @@
+{
+  "id": "mob_0043",
+  "name": "Pruning Tender",
+  "view": "front",
+  "prompt": "ELYNDRA PRUNING TENDER mob_0043 front master. Exact bible: A barrel-bodied brass gardener on THREE spindly legs with SHEAR-ARMS and a SAP NOZZLE, a glass tank of jade sap on its back, moss on the lid. One charming ancient garden robot, small rounded vertical brass barrel torso, two tiny jade lens eyes in upper barrel, moss-covered round top lid. Exactly THREE thin jointed tripod legs, two spread left/right front and one visible centered behind. Two articulated tool arms each ending in distinct pruning shear blades, relaxed slightly open and held away from body. Small separate sap-spray nozzle mounted at center chest. Glass reservoir of glowing jade green sap strapped behind torso, top and sides visibly peeking out. Brass patina, rich green sap and moss, no human face, no handheld weapon, no fourth leg. Premium stylized hand-painted fantasy MMORPG art, friendly readable silhouette, soft painted material shading. Strict FRONT orthographic eye-level view facing camera, whole robot with all legs and shear tips inside central 75 percent of square canvas, generous transparent margins. No ground, cast shadow, garden scene, spraying liquid, text, border or inset. One creature only.",
+  "designInvariant": "Three tripod legs, two shear arms, separate chest sap nozzle and rear glass tank.",
+  "review": "Created; visual and alpha audit pending."
+}

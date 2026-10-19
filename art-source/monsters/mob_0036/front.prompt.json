@@ -1,0 +1,8 @@
+{
+  "id": "mob_0036",
+  "name": "Hollowroot Warden",
+  "view": "front",
+  "prompt": "ELYNDRA HOLLOWROOT WARDEN mob_0036 boss FRONT master. Exact bible: A hulking root-and-copper colossus around a pulsing aetherite heart; PIPES FOR ARMS, ROOTS FOR LEGS. One huge ancient irrigation guardian, broad hulking torso of tangled thick roots binding weathered copper boiler plates, a large exposed luminous teal Aetherite crystal HEART centered in chest. Two massive segmented COPPER PIPE ARMS with elbow pipe joints and broad open pipe-nozzle ends (not human fingers), two thick intertwined ROOT LEGS spreading into rooted feet. Small recessed face with two teal lens lights beneath bark brow, moss tufts along copper seams. Boss silhouette wider and heavier than normal wooden guards. Warm aged copper, deep brown roots, moss green and brilliant teal heart. Premium stylized hand-painted fantasy MMORPG art, rich softly painted shading and clean readable silhouette, no photoreal scene. Strict FRONT orthographic eye-level view, neutral grounded stance, arms slightly away from torso, entire body and all pipe ends/root feet inside central 75 percent of square canvas, generous empty margins. Transparent PNG with real alpha, no ground, cast shadow, scenery, detached leaves, text, labels or border. One creature only.",
+  "designInvariant": "Copper pipe arms, root legs and exposed Aetherite heart; preserve boss scale.",
+  "review": "Created; visual and alpha audit pending."
+}
