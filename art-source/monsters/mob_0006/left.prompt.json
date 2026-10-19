@@ -1,0 +1,9 @@
+{
+  "view": "left",
+  "prompt": "Exact same Thornback woodland boar, LEFT-facing true side profile. Reference1 front, reference2 rear. Orthographic eye-level, snout points LEFT, one dark eye visible. Stocky barrel body bark-like brown hide, irregular woody thorn ridge along back, small green moss patches. Exactly FOUR short cloven-hoof legs: near fore/hind clearly separate, far pair partly occluded. TWO curved ivory tusks rooted at lower jaw with moss on tusks, far tusk naturally mostly hidden. Small shaggy boar tail at rear on screen RIGHT, matches rear reference, no new appendages. Same body proportions and warm painted texture, neutral standing pose. Full animal including all thorn tips and tail within central 75% square transparent canvas, large safe margins. No ground shadow text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

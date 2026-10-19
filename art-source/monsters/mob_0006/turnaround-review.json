@@ -1,0 +1,17 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct inspection of each generated image and four-view browser comparison on a light background.",
+  "confirmed": [
+    "Stocky boar anatomy, four cloven-hoof legs, woody thorn back and bark hide retained",
+    "Mossy ivory tusks retained in front and lateral views",
+    "Rear contains a small shaggy tail and no duplicated face or tusks",
+    "Left profile reframed to preserve tail margin",
+    "Four-view alpha/framing checks pass"
+  ],
+  "limitations": [
+    "Front/rear occupy more frame height than lateral views; register body landmarks and ground baseline before sprite animation",
+    "Individual thorn counts and moss patches vary between views; exact surface continuity remains unapproved",
+    "Lateral snout still reveals some frontal surface, so strict orthographic projection needs refinement"
+  ],
+  "next": "Refine lateral camera and consistent landmark scale; author weight-bearing four-leg gait and boar-specific attack/death after roster references."
+}

@@ -1,0 +1,10 @@
+{
+  "view": "right",
+  "prompt": "RIGHT-facing opposite side profile of exact same Thornback boar. Reference1 front identity, reference2 left profile authoritative proportions and stance, reference3 rear. Snout points RIGHT, one dark eye, two curved ivory mossy tusks with far one mostly occluded, bark brown stocky barrel body and woody thorn ridge. FOUR short cloven hoof legs, near fore/hind and partly occluded far pair, same stance as opposite profile. Small shaggy tail at rear screen LEFT. Same colors, moss patches and painterly bark material. Orthographic eye-level. Match left profile size within square canvas, whole boar including snout tail thorn tips inside with at least 8% empty margin all sides. True transparent background no ground shadow text.",
+  "references": [
+    "front.png",
+    "left.png",
+    "back.png"
+  ],
+  "review": "Created; cross-view review pending."
+}
