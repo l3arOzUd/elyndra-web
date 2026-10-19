@@ -1,0 +1,19 @@
+{
+  "id": "mob_0050",
+  "name": "Ochre Jackal",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front master, rear coat reference and opposite profile; checked collar handedness and canine limbs.",
+  "confirmed": [
+    "Ochre fur, large ears, dark dorsal stripe and single brass collar tag preserve Bible identity.",
+    "Rear has no face or duplicated tag; tail hangs image-left consistent with front image-right.",
+    "Profiles show four canine legs and a single tail.",
+    "Right profile buckle visible and left profile omits matching buckle, preserving front-defined anatomical side."
+  ],
+  "limitations": [
+    "Rear collar buckle appears toward image-left, inconsistent with anatomical-right buckle; fix rear hardware placement.",
+    "Dorsal stripe broadens into saddle in profiles; match width and shoulder boundaries across views.",
+    "Profile stance staggered compared with front, and rear paws/heels need anatomical review.",
+    "Ear/nose margins very narrow; normalize framing. Tail depth and far-leg alignment remain unverified."
+  ],
+  "next": "Reconcile coat/collar/stance landmarks, then separate four fixed-length legs, head/ears/tail/tag and author walk/run/attack/hit/death."
+}
