@@ -1,0 +1,9 @@
+{
+  "view": "right",
+  "prompt": "GLASS SCARAB RIGHT-facing counterpart of corrected LEFT reference first image; front second image for identity. Exact broad low scarab with clear amber glass dome and one glowing ember core, black-brown chitin head and six legs, two short clubbed antennae. Face RIGHT, one near eye, three near leg chains front middle rear, far three mostly hidden. IMPORTANT one uninterrupted near-side glass elytron; elytra center seam runs longitudinally along UPPER DORSAL contour, never vertical split down flank. Match shell height, body length, joint levels, hooked feet and neutral stance of first image. Eye-level orthographic profile, entire body claws and antennae inside square transparent canvas with margins. Same painted fantasy MMORPG, no ground shadow sparks text extra panels.",
+  "references": [
+    "left.png",
+    "front.png"
+  ],
+  "review": "Created; cross-view review pending."
+}

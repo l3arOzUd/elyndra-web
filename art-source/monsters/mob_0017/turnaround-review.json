@@ -1,0 +1,19 @@
+{
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct generated-image and four-view browser inspection on a light background.",
+  "confirmed": [
+    "Amber glass shell with internal ember core and dark chitin legs retained",
+    "Rear abdomen replaces face without duplicated eyes or antennae",
+    "Corrected profiles remove erroneous vertical shell split from flank",
+    "Three near-side legs readable in each profile",
+    "All four final images pass alpha and frame-edge checks"
+  ],
+  "limitations": [
+    "Six complete leg attachment chains cannot be verified through overlap; far front leg remains hidden in profiles",
+    "Profile shell shape is smoother than front/rear faceted elytra; material geometry continuity needs refinement",
+    "Side camera exposes some top and frontal head surface rather than strict orthographic projection",
+    "Shell/body scale and foot contacts need landmark registration across views",
+    "Reflections and ember texture differ; separate static glass from animated core before runtime use"
+  ],
+  "next": "Resolve all six leg chains, harmonize shell geometry, then author beetle gait, mandible attack, folded-leg collapse and independent ember pulse."
+}
