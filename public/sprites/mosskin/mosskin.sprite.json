@@ -1,0 +1,15 @@
+{
+  "id": "mosskin",
+  "frame": { "w": 128, "h": 128 },
+  "pivot": { "x": 64, "y": 110 },
+  "pixelsPerCell": 92,
+  "bakedShadow": true,
+  "rows": ["N", "NE", "E", "SE", "S", "SW", "W", "NW"],
+  "animations": {
+    "idle":   { "file": "mosskin_idle.png",   "frames": 8, "fps": 7,  "loop": true },
+    "walk":   { "file": "mosskin_walk.png",   "frames": 8, "fps": 10, "loop": true, "refMsPerCell": 220 },
+    "attack": { "file": "mosskin_attack.png", "frames": 8, "fps": 12, "events": { "hit": 5 } },
+    "hit":    { "file": "mosskin_hit.png",    "frames": 5, "fps": 12 },
+    "death":  { "file": "mosskin_death.png",  "frames": 8, "fps": 9,  "hold": true }
+  }
+}

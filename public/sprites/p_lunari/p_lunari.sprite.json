@@ -1,0 +1,22 @@
+{
+ "id": "p_lunari",
+ "kind": "puppet",
+ "puppet": {
+  "front": "front.png",
+  "motion": "hop"
+ },
+ "frame": {
+  "w": 379,
+  "h": 384
+ },
+ "pivot": {
+  "x": 202,
+  "y": 379
+ },
+ "pixelsPerCell": 307.2,
+ "rows": [
+  "S"
+ ],
+ "animations": {},
+ "source": "sprite/tripo_ready/04_Lunari.png"
+}

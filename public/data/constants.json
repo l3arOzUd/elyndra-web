@@ -1,0 +1,20 @@
+{
+ "schema_version": 2,
+ "drop_rate_denominator": 10000,
+ "server_tick_ms": 50,
+ "snapshot_ms": 100,
+ "coordinates": "grid_cells",
+ "player_base_ms_per_cell": 150,
+ "pickup_radius_cells": 3,
+ "npc_interact_radius_cells": 4,
+ "loot_expire_sec": 90,
+ "respawn_town_by_region": {
+  "lum": "lum_town_01",
+  "ver": "ver_town_01",
+  "sol": "sol_town_01",
+  "tha": "tha_town_01",
+  "cry": "cry_town_01",
+  "emb": "emb_town_01",
+  "noc": "noc_town_01"
+ }
+}

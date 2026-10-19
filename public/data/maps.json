@@ -1,0 +1,1178 @@
+[
+ {
+  "id": "lum_town_01",
+  "region_id": "lum",
+  "name": "Avelorn",
+  "type": "town",
+  "role": "Region capital: services, quest hub, crafting, transit to Lumeris fields and Sylvara.",
+  "recommended_level_min": 1,
+  "recommended_level_max": 20,
+  "width_cells": 120,
+  "height_cells": 120,
+  "safe_zone": true,
+  "layout": "maps/lum_town_01.json",
+  "arrival": [
+   60,
+   66
+  ],
+  "horde": null
+ },
+ {
+  "id": "lum_fld_01",
+  "region_id": "lum",
+  "name": "Dawnmeadow",
+  "type": "field",
+  "role": "First field: two gentle swarms, passive and assisting, on open ground; learn to pull and AoE.",
+  "recommended_level_min": 1,
+  "recommended_level_max": 4,
+  "width_cells": 128,
+  "height_cells": 128,
+  "safe_zone": false,
+  "layout": "maps/lum_fld_01.json",
+  "arrival": [
+   9,
+   63
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "lum_fld_02",
+  "region_id": "lum",
+  "name": "Amber Trail",
+  "type": "field",
+  "role": "A long trail east then north: resin thickets, a glider hollow and a mite-infested rock outcrop.",
+  "recommended_level_min": 3,
+  "recommended_level_max": 7,
+  "width_cells": 160,
+  "height_cells": 96,
+  "safe_zone": false,
+  "layout": "maps/lum_fld_02.json",
+  "arrival": [
+   9,
+   48
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "lum_fld_03",
+  "region_id": "lum",
+  "name": "Whispergrass",
+  "type": "field",
+  "role": "North of Avelorn: tall-grass plains with a rune circle; the first bruiser field.",
+  "recommended_level_min": 5,
+  "recommended_level_max": 9,
+  "width_cells": 128,
+  "height_cells": 128,
+  "safe_zone": false,
+  "layout": "maps/lum_fld_03.json",
+  "arrival": [
+   63,
+   117
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "lum_fld_04",
+  "region_id": "lum",
+  "name": "Old Windmill",
+  "type": "field",
+  "role": "Mid-region hub field with a rest camp; the Dustwing swarm is Lumeris's signature horde.",
+  "recommended_level_min": 8,
+  "recommended_level_max": 12,
+  "width_cells": 144,
+  "height_cells": 112,
+  "safe_zone": false,
+  "layout": "maps/lum_fld_04.json",
+  "arrival": [
+   72,
+   66
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "lum_fld_05",
+  "region_id": "lum",
+  "name": "Moonbrook",
+  "type": "field",
+  "role": "A brook running north-south; amphibians on the banks, ranged hunters in the marsh.",
+  "recommended_level_min": 11,
+  "recommended_level_max": 15,
+  "width_cells": 112,
+  "height_cells": 144,
+  "safe_zone": false,
+  "layout": "maps/lum_fld_05.json",
+  "arrival": [
+   9,
+   33
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "lum_fld_06",
+  "region_id": "lum",
+  "name": "Broken Orchard",
+  "type": "field",
+  "role": "The region's last field: dense rot hordes, a rot-choked pump house, and the cave down to Hollowroot.",
+  "recommended_level_min": 14,
+  "recommended_level_max": 18,
+  "width_cells": 136,
+  "height_cells": 136,
+  "safe_zone": false,
+  "layout": "maps/lum_fld_06.json",
+  "arrival": [
+   63,
+   9
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "lum_dun_01",
+  "region_id": "lum",
+  "name": "Hollowroot Cavern",
+  "type": "dungeon",
+  "role": "Lumeris's dungeon: root tunnels and an Aethrion pump hall around the Warden's Heart Chamber.",
+  "recommended_level_min": 17,
+  "recommended_level_max": 20,
+  "width_cells": 120,
+  "height_cells": 120,
+  "safe_zone": false,
+  "layout": "maps/lum_dun_01.json",
+  "arrival": [
+   14,
+   60
+  ],
+  "horde": {
+   "min_alive": 60,
+   "max_alive": 120
+  }
+ },
+ {
+  "id": "ver_town_01",
+  "region_id": "ver",
+  "name": "Sylvara",
+  "type": "town",
+  "role": "Region capital among the roots of the Mother Bough: services, quest hub, crafting, transit to Verdantis fields, Avelorn and Duskhar.",
+  "recommended_level_min": 15,
+  "recommended_level_max": 40,
+  "width_cells": 136,
+  "height_cells": 124,
+  "safe_zone": true,
+  "layout": "maps/ver_town_01.json",
+  "arrival": [
+   68,
+   69
+  ],
+  "horde": null
+ },
+ {
+  "id": "ver_fld_01",
+  "region_id": "ver",
+  "name": "Fernreach",
+  "type": "field",
+  "role": "First Verdantis field: passive Graftling herds everywhere, in the hollow, the tapped groves, by the stream and in the grafting ruins.",
+  "recommended_level_min": 15,
+  "recommended_level_max": 19,
+  "width_cells": 140,
+  "height_cells": 112,
+  "safe_zone": false,
+  "layout": "maps/ver_fld_01.json",
+  "arrival": [
+   10,
+   55
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "ver_fld_02",
+  "region_id": "ver",
+  "name": "Mossbridge",
+  "type": "field",
+  "role": "A creek valley crossed by two moss-grown Aethrion bridges: newt banks south and by the obelisk, drone hives north and on the north-west slope.",
+  "recommended_level_min": 18,
+  "recommended_level_max": 22,
+  "width_cells": 120,
+  "height_cells": 136,
+  "safe_zone": false,
+  "layout": "maps/ver_fld_02.json",
+  "arrival": [
+   59,
+   125
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "ver_fld_03",
+  "region_id": "ver",
+  "name": "Canopy Steps",
+  "type": "field",
+  "role": "Three terraces cut into a giant trunk and joined by Aethrion lift-ramps: hounds below, moths mid-way, moths and hounds again on top.",
+  "recommended_level_min": 21,
+  "recommended_level_max": 25,
+  "width_cells": 152,
+  "height_cells": 104,
+  "safe_zone": false,
+  "layout": "maps/ver_fld_03.json",
+  "arrival": [
+   28,
+   93
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "ver_fld_04",
+  "region_id": "ver",
+  "name": "Graftwood",
+  "type": "field",
+  "role": "An Aethrion grafting orchard overrun by Vinecrawlers: trellis rows, the stalled grafting yard and wild graft-stock woods to the south.",
+  "recommended_level_min": 24,
+  "recommended_level_max": 28,
+  "width_cells": 128,
+  "height_cells": 140,
+  "safe_zone": false,
+  "layout": "maps/ver_fld_04.json",
+  "arrival": [
+   10,
+   63
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "ver_fld_05",
+  "region_id": "ver",
+  "name": "Vineworks",
+  "type": "field",
+  "role": "The Aethrion vine-press works: Tender terraces and conduits, hare-grazed vine slopes and Thistlehare warrens round the old water pump.",
+  "recommended_level_min": 27,
+  "recommended_level_max": 31,
+  "width_cells": 144,
+  "height_cells": 120,
+  "safe_zone": false,
+  "layout": "maps/ver_fld_05.json",
+  "arrival": [
+   67,
+   9
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "ver_fld_06",
+  "region_id": "ver",
+  "name": "Elderroot",
+  "type": "field",
+  "role": "The oldest trees in Verdantis, their roots fused with Aethrion conduits: Root Sentinels on the ridges, in the old warrens and on the Basin slope, and the Antlered Engines' glade.",
+  "recommended_level_min": 30,
+  "recommended_level_max": 34,
+  "width_cells": 132,
+  "height_cells": 132,
+  "safe_zone": false,
+  "layout": "maps/ver_fld_06.json",
+  "arrival": [
+   10,
+   43
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "ver_fld_07",
+  "region_id": "ver",
+  "name": "Spore Basin",
+  "type": "field",
+  "role": "A sunken basin under the Heartwood Engine's vents, given over to Sporebloats: dense hordes under the vents, round the obelisk, by the spore pool and at the Engine's mouth.",
+  "recommended_level_min": 33,
+  "recommended_level_max": 37,
+  "width_cells": 136,
+  "height_cells": 116,
+  "safe_zone": false,
+  "layout": "maps/ver_fld_07.json",
+  "arrival": [
+   43,
+   9
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "ver_dun_01",
+  "region_id": "ver",
+  "name": "Heartwood Engine",
+  "type": "dungeon",
+  "role": "Verdantis's dungeon: the sap conduits, piston hall and spore lung of the Aethrion engine that drives the forest, round the Regent's heart chamber.",
+  "recommended_level_min": 36,
+  "recommended_level_max": 40,
+  "width_cells": 112,
+  "height_cells": 120,
+  "safe_zone": false,
+  "layout": "maps/ver_dun_01.json",
+  "arrival": [
+   13,
+   60
+  ],
+  "horde": {
+   "min_alive": 60,
+   "max_alive": 120
+  }
+ },
+ {
+  "id": "sol_town_01",
+  "region_id": "sol",
+  "name": "Duskhar",
+  "type": "town",
+  "role": "Region capital on an Aethrion canal: services, quest hub, crafting, transit to Solenia's fields, Sylvara and Port Merrow.",
+  "recommended_level_min": 25,
+  "recommended_level_max": 55,
+  "width_cells": 128,
+  "height_cells": 140,
+  "safe_zone": true,
+  "layout": "maps/sol_town_01.json",
+  "arrival": [
+   64,
+   78
+  ],
+  "horde": null
+ },
+ {
+  "id": "sol_fld_01",
+  "region_id": "sol",
+  "name": "Saffron Dunes",
+  "type": "field",
+  "role": "First Solenia field: basking Sandcoils on the crests and the mesa glass, a jackal pack at the oasis and a buried pipeline where both meet.",
+  "recommended_level_min": 25,
+  "recommended_level_max": 30,
+  "width_cells": 148,
+  "height_cells": 116,
+  "safe_zone": false,
+  "layout": "maps/sol_fld_01.json",
+  "arrival": [
+   137,
+   53
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "sol_fld_02",
+  "region_id": "sol",
+  "name": "Caravan Verge",
+  "type": "field",
+  "role": "The caravan crossroads round a ruined caravanserai: kites over the heights and the old checkpoint, glass scarabs in the washes and west of the serai.",
+  "recommended_level_min": 29,
+  "recommended_level_max": 34,
+  "width_cells": 124,
+  "height_cells": 136,
+  "safe_zone": false,
+  "layout": "maps/sol_fld_02.json",
+  "arrival": [
+   73,
+   125
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "sol_fld_03",
+  "region_id": "sol",
+  "name": "Glass Flats",
+  "type": "field",
+  "role": "A plain of lightning-fused glass under heliograph mirrors: Sentry fields, basilisk packs, and sentries and basilisks round the mirrors and the glass scar.",
+  "recommended_level_min": 33,
+  "recommended_level_max": 38,
+  "width_cells": 160,
+  "height_cells": 100,
+  "safe_zone": false,
+  "layout": "maps/sol_fld_03.json",
+  "arrival": [
+   44,
+   89
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "sol_fld_04",
+  "region_id": "sol",
+  "name": "Sun Dial",
+  "type": "field",
+  "role": "A colossal Aethrion sundial: Wardens and Acolytes on its face, Acolyte sands, a Warden causeway and a graveyard of broken sentries the Acolytes tend.",
+  "recommended_level_min": 37,
+  "recommended_level_max": 42,
+  "width_cells": 136,
+  "height_cells": 136,
+  "safe_zone": false,
+  "layout": "maps/sol_fld_04.json",
+  "arrival": [
+   10,
+   98
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "sol_fld_05",
+  "region_id": "sol",
+  "name": "Dust Aqueduct",
+  "type": "field",
+  "role": "A ruined aqueduct over the last canal water: Canal Striders on the channel, round the piers, in the dry sluices and at the cistern.",
+  "recommended_level_min": 41,
+  "recommended_level_max": 46,
+  "width_cells": 116,
+  "height_cells": 148,
+  "safe_zone": false,
+  "layout": "maps/sol_fld_05.json",
+  "arrival": [
+   10,
+   34
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "sol_fld_06",
+  "region_id": "sol",
+  "name": "Buried Causeway",
+  "type": "field",
+  "role": "A raised Aethrion causeway half-swallowed by sand, leading to the Vault's sealed door: Revenants on the road, Lens-drones over the sinks, Colossi in the sand, a lens array at the door.",
+  "recommended_level_min": 45,
+  "recommended_level_max": 50,
+  "width_cells": 152,
+  "height_cells": 120,
+  "safe_zone": false,
+  "layout": "maps/sol_fld_06.json",
+  "arrival": [
+   113,
+   9
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "sol_dun_01",
+  "region_id": "sol",
+  "name": "Heliostat Vault",
+  "type": "dungeon",
+  "role": "Solenia's dungeon: a sealed vault of mirrors and lenses that focuses the desert sun, round the Sovereign's core chamber.",
+  "recommended_level_min": 50,
+  "recommended_level_max": 55,
+  "width_cells": 124,
+  "height_cells": 108,
+  "safe_zone": false,
+  "layout": "maps/sol_dun_01.json",
+  "arrival": [
+   61,
+   11
+  ],
+  "horde": {
+   "min_alive": 60,
+   "max_alive": 120
+  }
+ },
+ {
+  "id": "tha_town_01",
+  "region_id": "tha",
+  "name": "Port Merrow",
+  "type": "town",
+  "role": "Region capital: harbour services, quest hub, crafting, the ferry to Tidewheel Bay and transit to Solenia and Crystallis.",
+  "recommended_level_min": 35,
+  "recommended_level_max": 65,
+  "width_cells": 136,
+  "height_cells": 120,
+  "safe_zone": true,
+  "layout": "maps/tha_town_01.json",
+  "arrival": [
+   64,
+   60
+  ],
+  "horde": null
+ },
+ {
+  "id": "tha_fld_01",
+  "region_id": "tha",
+  "name": "Saltwind Shore",
+  "type": "field",
+  "role": "First field: a long beach under gull cliffs; a passive herd in the tidepools, the first aggressive flock and the first bruisers.",
+  "recommended_level_min": 35,
+  "recommended_level_max": 40,
+  "width_cells": 144,
+  "height_cells": 104,
+  "safe_zone": false,
+  "layout": "maps/tha_fld_01.json",
+  "arrival": [
+   10,
+   40
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "tha_fld_02",
+  "region_id": "tha",
+  "name": "Coral Reach",
+  "type": "field",
+  "role": "A reef left high by the tide, crossed on Aethrion boardwalks: Polyp Spitters rooted on every coral head, the region's ranged lesson.",
+  "recommended_level_min": 39,
+  "recommended_level_max": 44,
+  "width_cells": 120,
+  "height_cells": 136,
+  "safe_zone": false,
+  "layout": "maps/tha_fld_02.json",
+  "arrival": [
+   10,
+   104
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "tha_fld_03",
+  "region_id": "tha",
+  "name": "Tidewheel Bay",
+  "type": "field",
+  "role": "A horseshoe bay ringed by giant tidewheels: pump constructs on the pumps and pilings, Kelp Tenders in the beds and on the barnacled paddles; the ferry from Port Merrow lands here.",
+  "recommended_level_min": 43,
+  "recommended_level_max": 48,
+  "width_cells": 136,
+  "height_cells": 128,
+  "safe_zone": false,
+  "layout": "maps/tha_fld_03.json",
+  "arrival": [
+   10,
+   91
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "tha_fld_04",
+  "region_id": "tha",
+  "name": "Wreck Shoal",
+  "type": "field",
+  "role": "Sandbars strewn with wrecks and a sunken Aethrion freighter: the Hullborer horde in every hull, buoy and driftwood bar.",
+  "recommended_level_min": 47,
+  "recommended_level_max": 52,
+  "width_cells": 150,
+  "height_cells": 110,
+  "safe_zone": false,
+  "layout": "maps/tha_fld_04.json",
+  "arrival": [
+   10,
+   61
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "tha_fld_05",
+  "region_id": "tha",
+  "name": "Pearl Flats",
+  "type": "field",
+  "role": "Mudflats and pearl beds under a relay mast: fleeing skates in the beds and ruins, the relay's guardians on the mast and the strand.",
+  "recommended_level_min": 51,
+  "recommended_level_max": 56,
+  "width_cells": 128,
+  "height_cells": 120,
+  "safe_zone": false,
+  "layout": "maps/tha_fld_05.json",
+  "arrival": [
+   33,
+   9
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "tha_fld_06",
+  "region_id": "tha",
+  "name": "Stormbreak",
+  "type": "field",
+  "role": "The storm-lashed headland at the region's edge: Squall Rays on the lightning masts, turtles at the vents and the ruined breakwater, and the intake hatch down to the Drowned Relay.",
+  "recommended_level_min": 55,
+  "recommended_level_max": 60,
+  "width_cells": 116,
+  "height_cells": 148,
+  "safe_zone": false,
+  "layout": "maps/tha_fld_06.json",
+  "arrival": [
+   10,
+   123
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "tha_dun_01",
+  "region_id": "tha",
+  "name": "Drowned Relay",
+  "type": "dungeon",
+  "role": "Thalassia's dungeon: a flooded Aethrion signal station under the seabed, round the Signalmind's Sonar Chamber.",
+  "recommended_level_min": 59,
+  "recommended_level_max": 65,
+  "width_cells": 132,
+  "height_cells": 108,
+  "safe_zone": false,
+  "layout": "maps/tha_dun_01.json",
+  "arrival": [
+   13,
+   51
+  ],
+  "horde": {
+   "min_alive": 60,
+   "max_alive": 120
+  }
+ },
+ {
+  "id": "cry_town_01",
+  "region_id": "cry",
+  "name": "Vaelspire",
+  "type": "town",
+  "role": "Region capital: research city with services, quest hub, crafting, the cable lift to Snowcoil and transit to Port Merrow and Cindervale.",
+  "recommended_level_min": 45,
+  "recommended_level_max": 75,
+  "width_cells": 124,
+  "height_cells": 140,
+  "safe_zone": true,
+  "layout": "maps/cry_town_01.json",
+  "arrival": [
+   62,
+   85
+  ],
+  "horde": null
+ },
+ {
+  "id": "cry_fld_01",
+  "region_id": "cry",
+  "name": "Frostline",
+  "type": "field",
+  "role": "First field: the treeline where pines give way to snow; passive mites on the thaw strip, fleeing hares, wisps over the lake.",
+  "recommended_level_min": 45,
+  "recommended_level_max": 50,
+  "width_cells": 148,
+  "height_cells": 100,
+  "safe_zone": false,
+  "layout": "maps/cry_fld_01.json",
+  "arrival": [
+   137,
+   55
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "cry_fld_02",
+  "region_id": "cry",
+  "name": "Blueglass Ridge",
+  "type": "field",
+  "role": "A knife-edge ridge of blue volcanic glass held by Glassback Ram flocks: on the terraces, among the crystal spines, in the windscour drifts and round the obelisks.",
+  "recommended_level_min": 49,
+  "recommended_level_max": 54,
+  "width_cells": 108,
+  "height_cells": 142,
+  "safe_zone": false,
+  "layout": "maps/cry_fld_02.json",
+  "arrival": [
+   43,
+   132
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "cry_fld_03",
+  "region_id": "cry",
+  "name": "Snowcoil",
+  "type": "field",
+  "role": "A valley wound with frozen Aethrion coolant coils: the serpent horde in the trenches and gear walkers at the pump yard and on the lower slopes. The cable lift from Vaelspire arrives here.",
+  "recommended_level_min": 53,
+  "recommended_level_max": 58,
+  "width_cells": 138,
+  "height_cells": 130,
+  "safe_zone": false,
+  "layout": "maps/cry_fld_03.json",
+  "arrival": [
+   69,
+   120
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "cry_fld_04",
+  "region_id": "cry",
+  "name": "Prism Pass",
+  "type": "field",
+  "role": "A high pass through prism-crystal cliffs: Archive Keepers in the hollow, at the outer vault doors and along the plough road, and the Glacier Juggernaut elite.",
+  "recommended_level_min": 57,
+  "recommended_level_max": 62,
+  "width_cells": 164,
+  "height_cells": 88,
+  "safe_zone": false,
+  "layout": "maps/cry_fld_04.json",
+  "arrival": [
+   23,
+   78
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "cry_fld_05",
+  "region_id": "cry",
+  "name": "Mirror Ice",
+  "type": "field",
+  "role": "A frozen lake polished to a mirror: reflections that heal on the open ice and the lens islands, and great passive grazers on the shore.",
+  "recommended_level_min": 61,
+  "recommended_level_max": 66,
+  "width_cells": 132,
+  "height_cells": 124,
+  "safe_zone": false,
+  "layout": "maps/cry_fld_05.json",
+  "arrival": [
+   10,
+   93
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "cry_fld_06",
+  "region_id": "cry",
+  "name": "White Circuit",
+  "type": "field",
+  "role": "The region's last field: a ring conduit buried under a glacier, guarded by sentries, with specters leaking from the breach by the Archive door and haunting the snowdrifts.",
+  "recommended_level_min": 65,
+  "recommended_level_max": 70,
+  "width_cells": 140,
+  "height_cells": 128,
+  "safe_zone": false,
+  "layout": "maps/cry_fld_06.json",
+  "arrival": [
+   33,
+   118
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "cry_dun_01",
+  "region_id": "cry",
+  "name": "Cryocore Archive",
+  "type": "dungeon",
+  "role": "Crystallis's dungeon: the frozen Aethrion archive of data-cores and cryo wards round the Curator's Vault.",
+  "recommended_level_min": 69,
+  "recommended_level_max": 75,
+  "width_cells": 116,
+  "height_cells": 124,
+  "safe_zone": false,
+  "layout": "maps/cry_dun_01.json",
+  "arrival": [
+   12,
+   105
+  ],
+  "horde": {
+   "min_alive": 60,
+   "max_alive": 120
+  }
+ },
+ {
+  "id": "emb_town_01",
+  "region_id": "emb",
+  "name": "Cindervale",
+  "type": "town",
+  "role": "Region capital: services, quest hub, crafting, transit to Emberfall fields, Vaelspire and Umbracrest.",
+  "recommended_level_min": 60,
+  "recommended_level_max": 90,
+  "width_cells": 144,
+  "height_cells": 136,
+  "safe_zone": true,
+  "layout": "maps/emb_town_01.json",
+  "arrival": [
+   68,
+   77
+  ],
+  "horde": null
+ },
+ {
+  "id": "emb_fld_01",
+  "region_id": "emb",
+  "name": "Ashfield",
+  "type": "field",
+  "role": "First field: passive grazers on open ash and the crust ridge, assisting slag toads in the pools and round the heat-sink vents; the warm-up from Crystallis.",
+  "recommended_level_min": 60,
+  "recommended_level_max": 64,
+  "width_cells": 136,
+  "height_cells": 112,
+  "safe_zone": false,
+  "layout": "maps/emb_fld_01.json",
+  "arrival": [
+   10,
+   60
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "emb_fld_02",
+  "region_id": "emb",
+  "name": "Cinder Track",
+  "type": "field",
+  "role": "The old haul road climbing north over a lava stream: the first aggressive horde, Cinder Imps on the terraces, in the hollows, on the scree and along the rail trestles.",
+  "recommended_level_min": 64,
+  "recommended_level_max": 68,
+  "width_cells": 112,
+  "height_cells": 148,
+  "safe_zone": false,
+  "layout": "maps/emb_fld_02.json",
+  "arrival": [
+   56,
+   137
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "emb_fld_03",
+  "region_id": "emb",
+  "name": "Forge Approach",
+  "type": "field",
+  "role": "The industrial causeway north of Cindervale: iron bridges over lava channels, the hound kennels and the cold forges.",
+  "recommended_level_min": 68,
+  "recommended_level_max": 72,
+  "width_cells": 128,
+  "height_cells": 140,
+  "safe_zone": false,
+  "layout": "maps/emb_fld_03.json",
+  "arrival": [
+   64,
+   129
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "emb_fld_04",
+  "region_id": "emb",
+  "name": "Magma Vents",
+  "type": "field",
+  "role": "A broken plain of live vents: the skink horde round the vent pool, Spitters on the fissure, skinks and Spitters together on the heat-tap ridge.",
+  "recommended_level_min": 72,
+  "recommended_level_max": 77,
+  "width_cells": 152,
+  "height_cells": 116,
+  "safe_zone": false,
+  "layout": "maps/emb_fld_04.json",
+  "arrival": [
+   40,
+   104
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "emb_fld_05",
+  "region_id": "emb",
+  "name": "Ironfall",
+  "type": "field",
+  "role": "A canyon split by a lava river and crossed by two Aethrion iron spans; Knights hold the truss graveyard, Scraplings strip the girders.",
+  "recommended_level_min": 76,
+  "recommended_level_max": 81,
+  "width_cells": 144,
+  "height_cells": 104,
+  "safe_zone": false,
+  "layout": "maps/emb_fld_05.json",
+  "arrival": [
+   11,
+   52
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "emb_fld_06",
+  "region_id": "emb",
+  "name": "Red Crucible",
+  "type": "field",
+  "role": "The last field: a ring road round the Crucible's slag lake, wraiths in the pour channels, Brutes in the mould yard, the hatch to Furnace Zero.",
+  "recommended_level_min": 80,
+  "recommended_level_max": 85,
+  "width_cells": 124,
+  "height_cells": 128,
+  "safe_zone": false,
+  "layout": "maps/emb_fld_06.json",
+  "arrival": [
+   11,
+   36
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "emb_dun_01",
+  "region_id": "emb",
+  "name": "Furnace Zero",
+  "type": "dungeon",
+  "role": "Emberfall's dungeon: the first Aethrion furnace, its pour gallery, coal pens and stoker halls, all worked by Zero Stokers, round Kiln Prime's Zero Core.",
+  "recommended_level_min": 85,
+  "recommended_level_max": 90,
+  "width_cells": 132,
+  "height_cells": 112,
+  "safe_zone": false,
+  "layout": "maps/emb_dun_01.json",
+  "arrival": [
+   60,
+   11
+  ],
+  "horde": {
+   "min_alive": 60,
+   "max_alive": 120
+  }
+ },
+ {
+  "id": "noc_town_01",
+  "region_id": "noc",
+  "name": "Umbracrest",
+  "type": "town",
+  "role": "Region capital: services, quest hub, crafting, transit to Nocthaven fields and Cindervale.",
+  "recommended_level_min": 75,
+  "recommended_level_max": 99,
+  "width_cells": 150,
+  "height_cells": 128,
+  "safe_zone": true,
+  "layout": "maps/noc_town_01.json",
+  "arrival": [
+   72,
+   70
+  ],
+  "horde": null
+ },
+ {
+  "id": "noc_fld_01",
+  "region_id": "noc",
+  "name": "Dusk Verge",
+  "type": "field",
+  "role": "First field: the collapsed outskirts. Passive wisps on the boulevard and the fallen overpass, lurk packs in the underpass, both mixed in the conduit square.",
+  "recommended_level_min": 75,
+  "recommended_level_max": 79,
+  "width_cells": 132,
+  "height_cells": 120,
+  "safe_zone": false,
+  "layout": "maps/noc_fld_01.json",
+  "arrival": [
+   60,
+   11
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "noc_fld_02",
+  "region_id": "noc",
+  "name": "Nullgarden",
+  "type": "field",
+  "role": "A city park gone colourless: Nullbloom beds and black glasshouses, haulers on the promenade and round the dead pond.",
+  "recommended_level_min": 78,
+  "recommended_level_max": 82,
+  "width_cells": 120,
+  "height_cells": 136,
+  "safe_zone": false,
+  "layout": "maps/noc_fld_02.json",
+  "arrival": [
+   11,
+   96
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "noc_fld_03",
+  "region_id": "noc",
+  "name": "Silent Tracks",
+  "type": "field",
+  "role": "The elevated rail yards east of Umbracrest: mite crews in the sidings and on the stalled line, drones on the signal gantries.",
+  "recommended_level_min": 81,
+  "recommended_level_max": 86,
+  "width_cells": 156,
+  "height_cells": 100,
+  "safe_zone": false,
+  "layout": "maps/noc_fld_03.json",
+  "arrival": [
+   11,
+   50
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "noc_fld_04",
+  "region_id": "noc",
+  "name": "Veil Rift",
+  "type": "field",
+  "role": "A district torn by a rift in the Veil: Riftlings swarm both banks of the chasm, the tilted blocks and the spires above.",
+  "recommended_level_min": 85,
+  "recommended_level_max": 90,
+  "width_cells": 128,
+  "height_cells": 132,
+  "safe_zone": false,
+  "layout": "maps/noc_fld_04.json",
+  "arrival": [
+   96,
+   121
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "noc_fld_05",
+  "region_id": "noc",
+  "name": "Black Array",
+  "type": "field",
+  "role": "A receiver field of dishes and lattice masts still listening to the Meridian Lattice; sentinels ring the great dish and pace the control lines, Sparkwing flocks roost on the dishes and masts.",
+  "recommended_level_min": 89,
+  "recommended_level_max": 94,
+  "width_cells": 148,
+  "height_cells": 112,
+  "safe_zone": false,
+  "layout": "maps/noc_fld_05.json",
+  "arrival": [
+   137,
+   44
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "noc_fld_06",
+  "region_id": "noc",
+  "name": "Meridian Gate",
+  "type": "field",
+  "role": "The last field: the monumental gate where Nocthaven's lattice lines converge. Glyph swarms on the plaza, colonnade and verge, the Executor court, and the sealed descent to the Heart.",
+  "recommended_level_min": 93,
+  "recommended_level_max": 97,
+  "width_cells": 120,
+  "height_cells": 120,
+  "safe_zone": false,
+  "layout": "maps/noc_fld_06.json",
+  "arrival": [
+   109,
+   64
+  ],
+  "horde": {
+   "min_alive": 80,
+   "max_alive": 150
+  }
+ },
+ {
+  "id": "noc_dun_01",
+  "region_id": "noc",
+  "name": "Lattice Heart",
+  "type": "dungeon",
+  "role": "Nocthaven's dungeon and the game's last: hexagonal conduits round the Lattice Sovereign's chamber.",
+  "recommended_level_min": 96,
+  "recommended_level_max": 99,
+  "width_cells": 124,
+  "height_cells": 124,
+  "safe_zone": false,
+  "layout": "maps/noc_dun_01.json",
+  "arrival": [
+   56,
+   11
+  ],
+  "horde": {
+   "min_alive": 60,
+   "max_alive": 120
+  }
+ }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "number": "01",
+    "id": "mosskin",
+    "name": "Mosskin",
+    "label": "Mosskin",
+    "file": "01_Mosskin",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": "mob_0001"
+  },
+  {
+    "number": "02",
+    "id": "sporeling",
+    "name": "Sporeling",
+    "label": "Sporeling",
+    "file": "02_Sporeling",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": "mob_0002"
+  },
+  {
+    "number": "03",
+    "id": "ambermite",
+    "name": "Ambermite",
+    "label": "Ambermite",
+    "file": "03_Ambermite",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": "mob_0003"
+  },
+  {
+    "number": "04",
+    "id": "lunari",
+    "name": "Lunari",
+    "label": "Lunari",
+    "file": "04_Lunari",
+    "hovering": false,
+    "referenceFlip": true,
+    "gameMonster": "mob_0004"
+  },
+  {
+    "number": "05",
+    "id": "rootling",
+    "name": "Rootling",
+    "label": "Rootling",
+    "file": "05_Rootling",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "06",
+    "id": "petal_sprite",
+    "name": "Petal Sprite",
+    "label": "Petal Sprite",
+    "file": "06_Petal_Sprite",
+    "hovering": true,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "07",
+    "id": "leafshell",
+    "name": "Leafshell",
+    "label": "Leafshell",
+    "file": "07_Leafshell",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "08",
+    "id": "windpuff",
+    "name": "Windpuff",
+    "label": "Windpuff",
+    "file": "08_Windpuff",
+    "hovering": true,
+    "referenceFlip": true,
+    "gameMonster": null
+  },
+  {
+    "number": "09",
+    "id": "thornbound",
+    "name": "Thornbound",
+    "label": "Thornbound",
+    "file": "09_Thornbound",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "10",
+    "id": "aether_sprout",
+    "name": "Aether Sprout",
+    "label": "Aether Sprout",
+    "file": "10_Aether_Sprout",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "11",
+    "id": "croakling",
+    "name": "Croakling",
+    "label": "Croakling",
+    "file": "11_Croakling",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "12",
+    "id": "reedstalker",
+    "name": "Reedstalker",
+    "label": "Reedstalker",
+    "file": "12_Reedstalker",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": "mob_0009"
+  },
+  {
+    "number": "13",
+    "id": "gust_wisp",
+    "name": "Gust Wisp",
+    "label": "Gust Wisp",
+    "file": "13_Gust_Wisp",
+    "hovering": true,
+    "referenceFlip": true,
+    "gameMonster": null
+  },
+  {
+    "number": "14",
+    "id": "stonecap",
+    "name": "Stonecap",
+    "label": "Stonecap",
+    "file": "14_Stonecap",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "15",
+    "id": "crystal_mite",
+    "name": "Crystal Mite",
+    "label": "Crystal Mite",
+    "file": "15_Crystal_Mite",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "16",
+    "id": "rotroot",
+    "name": "Rotroot",
+    "label": "Rotroot",
+    "file": "16_Rotroot",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": "mob_0010"
+  },
+  {
+    "number": "17",
+    "id": "barkwarden",
+    "name": "Barkwarden",
+    "label": "Barkwarden",
+    "file": "17_Barkwarden",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": "mob_0011"
+  },
+  {
+    "number": "18",
+    "id": "gearling",
+    "name": "Gearling",
+    "label": "Gearling",
+    "file": "18_Gearling",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "19",
+    "id": "ruin_golem",
+    "name": "Ruin Golem",
+    "label": "Ruin Golem",
+    "file": "19_Ruin_Golem",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "20",
+    "id": "aether_wraith",
+    "name": "Aether Wraith",
+    "label": "Aether Wraith",
+    "file": "20_Aether_Wraith",
+    "hovering": true,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "21",
+    "id": "verdant_stag",
+    "name": "Verdant Stag",
+    "label": "Verdant Stag",
+    "file": "21_Verdant_Stag",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "22",
+    "id": "bloom_serpent",
+    "name": "Bloom Serpent",
+    "label": "Bloom Serpent",
+    "file": "22_Bloom_Serpent",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "23",
+    "id": "sky_manta",
+    "name": "Sky Manta",
+    "label": "Sky Manta",
+    "file": "23_Sky_Manta",
+    "hovering": true,
+    "referenceFlip": true,
+    "gameMonster": null
+  },
+  {
+    "number": "24",
+    "id": "terrabloom",
+    "name": "Terrabloom",
+    "label": "Terrabloom",
+    "file": "24_Terrabloom",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  },
+  {
+    "number": "25",
+    "id": "aether_treant",
+    "name": "Aether Treant",
+    "label": "Aether Treant",
+    "file": "25_Aether_Treant",
+    "hovering": false,
+    "referenceFlip": false,
+    "gameMonster": null
+  }
+]

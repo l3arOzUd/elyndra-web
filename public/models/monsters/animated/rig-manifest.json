@@ -1,0 +1,1096 @@
+{
+  "version": 1,
+  "characters": [
+    {
+      "id": "mosskin",
+      "label": "Mosskin",
+      "number": 1,
+      "url": "models/monsters/animated/mosskin.glb?v=87a0643105eb",
+      "bones": 14,
+      "vertices": 34981,
+      "sourceSha256": "935866df44b943e4cc58507e29c488f7c3af1cca089097a09ecd461227f9493a",
+      "outputSha256": "87a0643105ebbffdab79b73c20ea70c005d60af296d6ecaa32fbf4a75f1be3f4",
+      "bindPoseMaxError": 2.5297227423948243e-08,
+      "weightSumMaxError": 1.1920928955078125e-07,
+      "clips": [
+        {
+          "clip": "Idle",
+          "duration": 2.4,
+          "frames": 73,
+          "minimumGroundY": 0.0019999999999999996,
+          "maxVertexMotion": 0.027670501710041016
+        },
+        {
+          "clip": "Walk",
+          "duration": 0.8,
+          "frames": 25,
+          "minimumGroundY": 0.007754066690201893,
+          "maxVertexMotion": 0.171894998685517
+        },
+        {
+          "clip": "Attack",
+          "duration": 0.9,
+          "frames": 28,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.17562338559670415
+        },
+        {
+          "clip": "Hit",
+          "duration": 0.55,
+          "frames": 17,
+          "minimumGroundY": 0.001999999999999999,
+          "maxVertexMotion": 0.1550291270991791
+        },
+        {
+          "clip": "Die",
+          "duration": 1.8,
+          "frames": 55,
+          "minimumGroundY": 0.001999999999999999,
+          "maxVertexMotion": 0.5364255784295563
+        },
+        {
+          "clip": "Special",
+          "duration": 1.8,
+          "frames": 55,
+          "minimumGroundY": 0.002,
+          "maxVertexMotion": 0.19122956452322978
+        }
+      ],
+      "skeleton": [
+        {
+          "name": "Root",
+          "parent": null,
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Body",
+          "parent": "Root",
+          "position": [
+            0.0,
+            0.3,
+            0.0
+          ]
+        },
+        {
+          "name": "Leaf",
+          "parent": "Body",
+          "position": [
+            0.0,
+            0.64,
+            0.0
+          ]
+        },
+        {
+          "name": "LeafTip",
+          "parent": "Leaf",
+          "position": [
+            0.09,
+            0.79,
+            0.0
+          ]
+        },
+        {
+          "name": "Arm_R",
+          "parent": "Body",
+          "position": [
+            -0.31,
+            0.29,
+            0.03
+          ]
+        },
+        {
+          "name": "Arm_R_Tip",
+          "parent": "Arm_R",
+          "position": [
+            -0.41,
+            0.34,
+            0.03
+          ]
+        },
+        {
+          "name": "Leg_R_Upper",
+          "parent": "Body",
+          "position": [
+            -0.21,
+            0.13,
+            0.03
+          ]
+        },
+        {
+          "name": "Leg_R_Lower",
+          "parent": "Leg_R_Upper",
+          "position": [
+            -0.23,
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "Leg_R_Foot",
+          "parent": "Leg_R_Lower",
+          "position": [
+            -0.24,
+            0.026,
+            0.07
+          ]
+        },
+        {
+          "name": "Arm_L",
+          "parent": "Body",
+          "position": [
+            0.31,
+            0.29,
+            0.03
+          ]
+        },
+        {
+          "name": "Arm_L_Tip",
+          "parent": "Arm_L",
+          "position": [
+            0.41,
+            0.34,
+            0.03
+          ]
+        },
+        {
+          "name": "Leg_L_Upper",
+          "parent": "Body",
+          "position": [
+            0.21,
+            0.13,
+            0.03
+          ]
+        },
+        {
+          "name": "Leg_L_Lower",
+          "parent": "Leg_L_Upper",
+          "position": [
+            0.23,
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "name": "Leg_L_Foot",
+          "parent": "Leg_L_Lower",
+          "position": [
+            0.24,
+            0.026,
+            0.07
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sporeling",
+      "label": "Sporeling",
+      "number": 2,
+      "url": "models/monsters/animated/sporeling.glb?v=f6ef4e0f6a1b",
+      "bones": 14,
+      "vertices": 36540,
+      "sourceSha256": "aa845001f14d74281ae7b2c6d28e1d1e60ec35055da2717e6fd3ab7907ff2a70",
+      "outputSha256": "f6ef4e0f6a1b13bdf8b3320874dd4fafb949f6d59da2ae7d8c066b1ddf3016d5",
+      "bindPoseMaxError": 2.0160480840303308e-08,
+      "weightSumMaxError": 1.1920928955078125e-07,
+      "clips": [
+        {
+          "clip": "Idle",
+          "duration": 2.4,
+          "frames": 73,
+          "minimumGroundY": 0.0019999999999999996,
+          "maxVertexMotion": 0.02497115917278577
+        },
+        {
+          "clip": "Walk",
+          "duration": 1.0,
+          "frames": 31,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.06623497091069494
+        },
+        {
+          "clip": "Attack",
+          "duration": 0.9,
+          "frames": 28,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.22438455431593993
+        },
+        {
+          "clip": "Hit",
+          "duration": 0.55,
+          "frames": 17,
+          "minimumGroundY": 0.0019999999999999996,
+          "maxVertexMotion": 0.20350170070184254
+        },
+        {
+          "clip": "Die",
+          "duration": 2.0,
+          "frames": 61,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.5853801734544393
+        },
+        {
+          "clip": "Special",
+          "duration": 1.8,
+          "frames": 55,
+          "minimumGroundY": 0.002,
+          "maxVertexMotion": 0.20690938046636181
+        }
+      ],
+      "skeleton": [
+        {
+          "name": "Root",
+          "parent": null,
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Body",
+          "parent": "Root",
+          "position": [
+            0.0,
+            0.28,
+            0.0
+          ]
+        },
+        {
+          "name": "Head",
+          "parent": "Body",
+          "position": [
+            0.0,
+            0.47,
+            0.0
+          ]
+        },
+        {
+          "name": "Cap",
+          "parent": "Head",
+          "position": [
+            0.0,
+            0.6,
+            0.0
+          ]
+        },
+        {
+          "name": "Arm_R",
+          "parent": "Body",
+          "position": [
+            -0.13,
+            0.34,
+            0.0
+          ]
+        },
+        {
+          "name": "Arm_R_Tip",
+          "parent": "Arm_R",
+          "position": [
+            -0.22,
+            0.28,
+            0.01
+          ]
+        },
+        {
+          "name": "Leg_R_Upper",
+          "parent": "Body",
+          "position": [
+            -0.1,
+            0.19,
+            0.0
+          ]
+        },
+        {
+          "name": "Leg_R_Lower",
+          "parent": "Leg_R_Upper",
+          "position": [
+            -0.105,
+            0.1,
+            0.035
+          ]
+        },
+        {
+          "name": "Leg_R_Foot",
+          "parent": "Leg_R_Lower",
+          "position": [
+            -0.11,
+            0.035,
+            0.02
+          ]
+        },
+        {
+          "name": "Arm_L",
+          "parent": "Body",
+          "position": [
+            0.13,
+            0.34,
+            0.0
+          ]
+        },
+        {
+          "name": "Arm_L_Tip",
+          "parent": "Arm_L",
+          "position": [
+            0.22,
+            0.28,
+            0.01
+          ]
+        },
+        {
+          "name": "Leg_L_Upper",
+          "parent": "Body",
+          "position": [
+            0.1,
+            0.19,
+            0.0
+          ]
+        },
+        {
+          "name": "Leg_L_Lower",
+          "parent": "Leg_L_Upper",
+          "position": [
+            0.105,
+            0.1,
+            0.035
+          ]
+        },
+        {
+          "name": "Leg_L_Foot",
+          "parent": "Leg_L_Lower",
+          "position": [
+            0.11,
+            0.035,
+            0.02
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ambermite",
+      "label": "Ambermite",
+      "number": 3,
+      "url": "models/monsters/animated/ambermite.glb?v=174abb78e086",
+      "bones": 21,
+      "vertices": 45821,
+      "sourceSha256": "9b9ce83855c69358ecbee9604dc8ce4bd92678b66bc5a845fdb4d1dc3198cf93",
+      "outputSha256": "174abb78e086764b2791336cca604034ee746aa60869f5107b8c91b9c5f9611f",
+      "bindPoseMaxError": 2.1992172083429296e-08,
+      "weightSumMaxError": 1.1920928955078125e-07,
+      "clips": [
+        {
+          "clip": "Idle",
+          "duration": 2.4,
+          "frames": 73,
+          "minimumGroundY": 0.0019999999999999996,
+          "maxVertexMotion": 0.006000015846011754
+        },
+        {
+          "clip": "Walk",
+          "duration": 0.9,
+          "frames": 28,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.07472655121849364
+        },
+        {
+          "clip": "Attack",
+          "duration": 0.9,
+          "frames": 28,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.23959283673608311
+        },
+        {
+          "clip": "Hit",
+          "duration": 0.55,
+          "frames": 17,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.2205908695793166
+        },
+        {
+          "clip": "Die",
+          "duration": 1.65,
+          "frames": 51,
+          "minimumGroundY": 0.001999999999999995,
+          "maxVertexMotion": 0.377001498293911
+        },
+        {
+          "clip": "Special",
+          "duration": 1.8,
+          "frames": 55,
+          "minimumGroundY": 0.0024297577328980034,
+          "maxVertexMotion": 0.15242062317357555
+        }
+      ],
+      "skeleton": [
+        {
+          "name": "Root",
+          "parent": null,
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Body",
+          "parent": "Root",
+          "position": [
+            0.0,
+            0.34,
+            -0.05
+          ]
+        },
+        {
+          "name": "Head",
+          "parent": "Body",
+          "position": [
+            0.0,
+            0.3,
+            0.24
+          ]
+        },
+        {
+          "name": "Leg_R1_Upper",
+          "parent": "Body",
+          "position": [
+            -0.23,
+            0.26,
+            0.28
+          ]
+        },
+        {
+          "name": "Leg_R1_Lower",
+          "parent": "Leg_R1_Upper",
+          "position": [
+            -0.39,
+            0.17,
+            0.30500000000000005
+          ]
+        },
+        {
+          "name": "Leg_R1_Foot",
+          "parent": "Leg_R1_Lower",
+          "position": [
+            -0.45,
+            0.045,
+            0.34
+          ]
+        },
+        {
+          "name": "Leg_R2_Upper",
+          "parent": "Body",
+          "position": [
+            -0.23,
+            0.26,
+            0.02
+          ]
+        },
+        {
+          "name": "Leg_R2_Lower",
+          "parent": "Leg_R2_Upper",
+          "position": [
+            -0.39,
+            0.17,
+            0.045
+          ]
+        },
+        {
+          "name": "Leg_R2_Foot",
+          "parent": "Leg_R2_Lower",
+          "position": [
+            -0.45,
+            0.045,
+            0.08
+          ]
+        },
+        {
+          "name": "Leg_R3_Upper",
+          "parent": "Body",
+          "position": [
+            -0.23,
+            0.26,
+            -0.26
+          ]
+        },
+        {
+          "name": "Leg_R3_Lower",
+          "parent": "Leg_R3_Upper",
+          "position": [
+            -0.39,
+            0.17,
+            -0.23500000000000001
+          ]
+        },
+        {
+          "name": "Leg_R3_Foot",
+          "parent": "Leg_R3_Lower",
+          "position": [
+            -0.45,
+            0.045,
+            -0.2
+          ]
+        },
+        {
+          "name": "Leg_L1_Upper",
+          "parent": "Body",
+          "position": [
+            0.23,
+            0.26,
+            0.28
+          ]
+        },
+        {
+          "name": "Leg_L1_Lower",
+          "parent": "Leg_L1_Upper",
+          "position": [
+            0.39,
+            0.17,
+            0.30500000000000005
+          ]
+        },
+        {
+          "name": "Leg_L1_Foot",
+          "parent": "Leg_L1_Lower",
+          "position": [
+            0.45,
+            0.045,
+            0.34
+          ]
+        },
+        {
+          "name": "Leg_L2_Upper",
+          "parent": "Body",
+          "position": [
+            0.23,
+            0.26,
+            0.02
+          ]
+        },
+        {
+          "name": "Leg_L2_Lower",
+          "parent": "Leg_L2_Upper",
+          "position": [
+            0.39,
+            0.17,
+            0.045
+          ]
+        },
+        {
+          "name": "Leg_L2_Foot",
+          "parent": "Leg_L2_Lower",
+          "position": [
+            0.45,
+            0.045,
+            0.08
+          ]
+        },
+        {
+          "name": "Leg_L3_Upper",
+          "parent": "Body",
+          "position": [
+            0.23,
+            0.26,
+            -0.26
+          ]
+        },
+        {
+          "name": "Leg_L3_Lower",
+          "parent": "Leg_L3_Upper",
+          "position": [
+            0.39,
+            0.17,
+            -0.23500000000000001
+          ]
+        },
+        {
+          "name": "Leg_L3_Foot",
+          "parent": "Leg_L3_Lower",
+          "position": [
+            0.45,
+            0.045,
+            -0.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lunari",
+      "label": "Lunari",
+      "number": 4,
+      "url": "models/monsters/animated/lunari.glb?v=72632c99722a",
+      "bones": 21,
+      "vertices": 43142,
+      "sourceSha256": "534a6e5ea79d69ff38562384185f896011858fd1c920b79ec0a373c7ce34838d",
+      "outputSha256": "72632c99722a88ed7f4e941b69d4c3b9682583347e3e0c43744a1399024e48d8",
+      "bindPoseMaxError": 2.797179821101281e-08,
+      "weightSumMaxError": 1.1920928955078125e-07,
+      "clips": [
+        {
+          "clip": "Idle",
+          "duration": 2.4,
+          "frames": 73,
+          "minimumGroundY": 0.0019999999999999996,
+          "maxVertexMotion": 0.036613974751478005
+        },
+        {
+          "clip": "Walk",
+          "duration": 0.85,
+          "frames": 27,
+          "minimumGroundY": 0.002,
+          "maxVertexMotion": 0.09661968700084748
+        },
+        {
+          "clip": "Attack",
+          "duration": 0.9,
+          "frames": 28,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.3183103087133943
+        },
+        {
+          "clip": "Hit",
+          "duration": 0.55,
+          "frames": 17,
+          "minimumGroundY": 0.001999999999999999,
+          "maxVertexMotion": 0.20387137672781142
+        },
+        {
+          "clip": "Die",
+          "duration": 2.1,
+          "frames": 64,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.7063734646981462
+        },
+        {
+          "clip": "Special",
+          "duration": 1.8,
+          "frames": 55,
+          "minimumGroundY": 0.002,
+          "maxVertexMotion": 0.10832783081466704
+        }
+      ],
+      "skeleton": [
+        {
+          "name": "Root",
+          "parent": null,
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Body",
+          "parent": "Root",
+          "position": [
+            0.0,
+            0.29,
+            -0.04
+          ]
+        },
+        {
+          "name": "Head",
+          "parent": "Body",
+          "position": [
+            0.0,
+            0.48,
+            0.22
+          ]
+        },
+        {
+          "name": "Ear_R",
+          "parent": "Head",
+          "position": [
+            -0.1,
+            0.6,
+            0.21
+          ]
+        },
+        {
+          "name": "EarTip_R",
+          "parent": "Ear_R",
+          "position": [
+            -0.18,
+            0.81,
+            0.2
+          ]
+        },
+        {
+          "name": "Leg_R1_Upper",
+          "parent": "Body",
+          "position": [
+            -0.105,
+            0.29,
+            0.19
+          ]
+        },
+        {
+          "name": "Leg_R1_Lower",
+          "parent": "Leg_R1_Upper",
+          "position": [
+            -0.11,
+            0.16,
+            0.225
+          ]
+        },
+        {
+          "name": "Leg_R1_Foot",
+          "parent": "Leg_R1_Lower",
+          "position": [
+            -0.115,
+            0.036,
+            0.215
+          ]
+        },
+        {
+          "name": "Leg_R2_Upper",
+          "parent": "Body",
+          "position": [
+            -0.105,
+            0.29,
+            -0.19
+          ]
+        },
+        {
+          "name": "Leg_R2_Lower",
+          "parent": "Leg_R2_Upper",
+          "position": [
+            -0.11,
+            0.16,
+            -0.235
+          ]
+        },
+        {
+          "name": "Leg_R2_Foot",
+          "parent": "Leg_R2_Lower",
+          "position": [
+            -0.115,
+            0.036,
+            -0.165
+          ]
+        },
+        {
+          "name": "Ear_L",
+          "parent": "Head",
+          "position": [
+            0.1,
+            0.6,
+            0.21
+          ]
+        },
+        {
+          "name": "EarTip_L",
+          "parent": "Ear_L",
+          "position": [
+            0.18,
+            0.81,
+            0.2
+          ]
+        },
+        {
+          "name": "Leg_L1_Upper",
+          "parent": "Body",
+          "position": [
+            0.105,
+            0.29,
+            0.19
+          ]
+        },
+        {
+          "name": "Leg_L1_Lower",
+          "parent": "Leg_L1_Upper",
+          "position": [
+            0.11,
+            0.16,
+            0.225
+          ]
+        },
+        {
+          "name": "Leg_L1_Foot",
+          "parent": "Leg_L1_Lower",
+          "position": [
+            0.115,
+            0.036,
+            0.215
+          ]
+        },
+        {
+          "name": "Leg_L2_Upper",
+          "parent": "Body",
+          "position": [
+            0.105,
+            0.29,
+            -0.19
+          ]
+        },
+        {
+          "name": "Leg_L2_Lower",
+          "parent": "Leg_L2_Upper",
+          "position": [
+            0.11,
+            0.16,
+            -0.235
+          ]
+        },
+        {
+          "name": "Leg_L2_Foot",
+          "parent": "Leg_L2_Lower",
+          "position": [
+            0.115,
+            0.036,
+            -0.165
+          ]
+        },
+        {
+          "name": "Tail",
+          "parent": "Body",
+          "position": [
+            0.0,
+            0.32,
+            -0.2
+          ]
+        },
+        {
+          "name": "TailTip",
+          "parent": "Tail",
+          "position": [
+            0.0,
+            0.4,
+            -0.34
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rootling",
+      "label": "Rootling",
+      "number": 5,
+      "url": "models/monsters/animated/rootling.glb?v=da5edcc2393c",
+      "bones": 19,
+      "vertices": 43154,
+      "sourceSha256": "28ef9f81710b30b361671fd75e96f7853425116504a77af974cd38db2c8ea71f",
+      "outputSha256": "da5edcc2393cf9402e8bb03b7576889c2226a7f76b395c119b3fe405ae73b7fb",
+      "bindPoseMaxError": 2.9237050114261365e-08,
+      "weightSumMaxError": 1.1920928955078125e-07,
+      "clips": [
+        {
+          "clip": "Idle",
+          "duration": 2.4,
+          "frames": 73,
+          "minimumGroundY": 0.0019999999999999996,
+          "maxVertexMotion": 0.018427455215889923
+        },
+        {
+          "clip": "Walk",
+          "duration": 1.2,
+          "frames": 37,
+          "minimumGroundY": 0.002,
+          "maxVertexMotion": 0.07610274002297159
+        },
+        {
+          "clip": "Attack",
+          "duration": 0.9,
+          "frames": 28,
+          "minimumGroundY": 0.0019999999999999996,
+          "maxVertexMotion": 0.29191377539380736
+        },
+        {
+          "clip": "Hit",
+          "duration": 0.55,
+          "frames": 17,
+          "minimumGroundY": 0.0019999999999999983,
+          "maxVertexMotion": 0.1925436068035912
+        },
+        {
+          "clip": "Die",
+          "duration": 2.2,
+          "frames": 67,
+          "minimumGroundY": 0.001999999999999988,
+          "maxVertexMotion": 0.8878208231999684
+        },
+        {
+          "clip": "Special",
+          "duration": 1.8,
+          "frames": 55,
+          "minimumGroundY": 0.003912396293164664,
+          "maxVertexMotion": 0.1670154350307492
+        }
+      ],
+      "skeleton": [
+        {
+          "name": "Root",
+          "parent": null,
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Body",
+          "parent": "Root",
+          "position": [
+            0.0,
+            0.39,
+            0.0
+          ]
+        },
+        {
+          "name": "Head",
+          "parent": "Body",
+          "position": [
+            0.0,
+            0.57,
+            0.015
+          ]
+        },
+        {
+          "name": "Leaf_R",
+          "parent": "Head",
+          "position": [
+            -0.11,
+            0.84,
+            0.0
+          ]
+        },
+        {
+          "name": "Arm_R",
+          "parent": "Body",
+          "position": [
+            -0.16,
+            0.52,
+            0.0
+          ]
+        },
+        {
+          "name": "Arm_R_Tip",
+          "parent": "Arm_R",
+          "position": [
+            -0.3,
+            0.48,
+            0.01
+          ]
+        },
+        {
+          "name": "Tendril_R",
+          "parent": "Body",
+          "position": [
+            -0.16,
+            0.32,
+            0.0
+          ]
+        },
+        {
+          "name": "Tendril_R_Tip",
+          "parent": "Tendril_R",
+          "position": [
+            -0.29,
+            0.29,
+            0.0
+          ]
+        },
+        {
+          "name": "Leg_R_Upper",
+          "parent": "Body",
+          "position": [
+            -0.105,
+            0.35,
+            0.0
+          ]
+        },
+        {
+          "name": "Leg_R_Lower",
+          "parent": "Leg_R_Upper",
+          "position": [
+            -0.14,
+            0.19,
+            -0.035
+          ]
+        },
+        {
+          "name": "Leg_R_Foot",
+          "parent": "Leg_R_Lower",
+          "position": [
+            -0.17,
+            0.04,
+            0.02
+          ]
+        },
+        {
+          "name": "Leaf_L",
+          "parent": "Head",
+          "position": [
+            0.11,
+            0.84,
+            0.0
+          ]
+        },
+        {
+          "name": "Arm_L",
+          "parent": "Body",
+          "position": [
+            0.16,
+            0.52,
+            0.0
+          ]
+        },
+        {
+          "name": "Arm_L_Tip",
+          "parent": "Arm_L",
+          "position": [
+            0.3,
+            0.48,
+            0.01
+          ]
+        },
+        {
+          "name": "Tendril_L",
+          "parent": "Body",
+          "position": [
+            0.16,
+            0.32,
+            0.0
+          ]
+        },
+        {
+          "name": "Tendril_L_Tip",
+          "parent": "Tendril_L",
+          "position": [
+            0.29,
+            0.29,
+            0.0
+          ]
+        },
+        {
+          "name": "Leg_L_Upper",
+          "parent": "Body",
+          "position": [
+            0.105,
+            0.35,
+            0.0
+          ]
+        },
+        {
+          "name": "Leg_L_Lower",
+          "parent": "Leg_L_Upper",
+          "position": [
+            0.14,
+            0.19,
+            -0.035
+          ]
+        },
+        {
+          "name": "Leg_L_Foot",
+          "parent": "Leg_L_Lower",
+          "position": [
+            0.17,
+            0.04,
+            0.02
+          ]
+        }
+      ]
+    }
+  ]
+}

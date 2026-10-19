@@ -1,0 +1,22 @@
+{
+ "id": "p_barkwarden",
+ "kind": "puppet",
+ "puppet": {
+  "front": "front.png",
+  "motion": "heavy"
+ },
+ "frame": {
+  "w": 367,
+  "h": 384
+ },
+ "pivot": {
+  "x": 189,
+  "y": 379
+ },
+ "pixelsPerCell": 160.0,
+ "rows": [
+  "S"
+ ],
+ "animations": {},
+ "source": "sprite/tripo_ready/17_Barkwarden.png"
+}

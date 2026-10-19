@@ -1,0 +1,415 @@
+[
+ {
+  "id": "rcp_lum_traveler_boots",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0078",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0001",
+    "qty": 12
+   },
+   {
+    "item_id": "itm_0002",
+    "qty": 3
+   }
+  ],
+  "currency": 60
+ },
+ {
+  "id": "rcp_lum_leafweave_coat",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0079",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0007",
+    "qty": 10
+   },
+   {
+    "item_id": "itm_0008",
+    "qty": 4
+   },
+   {
+    "item_id": "itm_0004",
+    "qty": 6
+   }
+  ],
+  "currency": 250
+ },
+ {
+  "id": "rcp_lum_copper_saber",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0080",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0009",
+    "qty": 10
+   },
+   {
+    "item_id": "itm_0074",
+    "qty": 3
+   },
+   {
+    "item_id": "itm_0005",
+    "qty": 12
+   }
+  ],
+  "currency": 400
+ },
+ {
+  "id": "rcp_lum_surveyor_bow",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0081",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0011",
+    "qty": 10
+   },
+   {
+    "item_id": "itm_0013",
+    "qty": 8
+   },
+   {
+    "item_id": "itm_0010",
+    "qty": 4
+   }
+  ],
+  "currency": 600
+ },
+ {
+  "id": "rcp_lum_aether_rod",
+  "npc_id": "npc_lum_craftsman",
+  "output": {
+   "item_id": "itm_0082",
+   "qty": 1
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0015",
+    "qty": 10
+   },
+   {
+    "item_id": "itm_0018",
+    "qty": 4
+   },
+   {
+    "item_id": "itm_0073",
+    "qty": 2
+   }
+  ],
+  "currency": 900
+ },
+ {
+  "id": "rcp_ver_field_ration",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0075",
+   "qty": 6
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0023",
+    "qty": 2
+   }
+  ],
+  "currency": 10
+ },
+ {
+  "id": "rcp_ver_vital_tonic",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0076",
+   "qty": 4
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0100",
+    "qty": 4
+   }
+  ],
+  "currency": 20
+ },
+ {
+  "id": "rcp_ver_focus_tonic",
+  "npc_id": "npc_ver_craftsman",
+  "output": {
+   "item_id": "itm_0077",
+   "qty": 3
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0102",
+    "qty": 3
+   },
+   {
+    "item_id": "itm_0025",
+    "qty": 1
+   }
+  ],
+  "currency": 25
+ },
+ {
+  "id": "rcp_sol_field_ration",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0075",
+   "qty": 8
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0031",
+    "qty": 2
+   }
+  ],
+  "currency": 10
+ },
+ {
+  "id": "rcp_sol_vital_tonic",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0076",
+   "qty": 5
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0130",
+    "qty": 3
+   }
+  ],
+  "currency": 20
+ },
+ {
+  "id": "rcp_sol_focus_tonic",
+  "npc_id": "npc_sol_craftsman",
+  "output": {
+   "item_id": "itm_0077",
+   "qty": 4
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0033",
+    "qty": 3
+   }
+  ],
+  "currency": 25
+ },
+ {
+  "id": "rcp_tha_kelp_ration",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0075",
+   "qty": 10
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0164",
+    "qty": 4
+   }
+  ],
+  "currency": 20
+ },
+ {
+  "id": "rcp_tha_hopper_tonic",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0076",
+   "qty": 6
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0040",
+    "qty": 1
+   },
+   {
+    "item_id": "itm_0164",
+    "qty": 3
+   }
+  ],
+  "currency": 40
+ },
+ {
+  "id": "rcp_tha_medusa_focus",
+  "npc_id": "npc_tha_craftsman",
+  "output": {
+   "item_id": "itm_0077",
+   "qty": 6
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0176",
+    "qty": 2
+   },
+   {
+    "item_id": "itm_0162",
+    "qty": 3
+   }
+  ],
+  "currency": 40
+ },
+ {
+  "id": "rcp_cry_hare_ration",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0075",
+   "qty": 10
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0190",
+    "qty": 4
+   }
+  ],
+  "currency": 20
+ },
+ {
+  "id": "rcp_cry_thawgel_tonic",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0076",
+   "qty": 6
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0048",
+    "qty": 1
+   },
+   {
+    "item_id": "itm_0190",
+    "qty": 2
+   }
+  ],
+  "currency": 40
+ },
+ {
+  "id": "rcp_cry_wisp_focus",
+  "npc_id": "npc_cry_craftsman",
+  "output": {
+   "item_id": "itm_0077",
+   "qty": 6
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0049",
+    "qty": 3
+   }
+  ],
+  "currency": 40
+ },
+ {
+  "id": "rcp_emb_ash_ration",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0075",
+   "qty": 10
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0055",
+    "qty": 3
+   }
+  ],
+  "currency": 60
+ },
+ {
+  "id": "rcp_emb_gland_tonic",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0076",
+   "qty": 8
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0221",
+    "qty": 1
+   },
+   {
+    "item_id": "itm_0220",
+    "qty": 2
+   }
+  ],
+  "currency": 120
+ },
+ {
+  "id": "rcp_emb_bladder_focus",
+  "npc_id": "npc_emb_craftsman",
+  "output": {
+   "item_id": "itm_0077",
+   "qty": 8
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0225",
+    "qty": 1
+   },
+   {
+    "item_id": "itm_0222",
+    "qty": 2
+   }
+  ],
+  "currency": 150
+ },
+ {
+  "id": "rcp_noc_bristle_ration",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0075",
+   "qty": 10
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0250",
+    "qty": 3
+   }
+  ],
+  "currency": 80
+ },
+ {
+  "id": "rcp_noc_wisp_tonic",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0076",
+   "qty": 8
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0064",
+    "qty": 1
+   },
+   {
+    "item_id": "itm_0063",
+    "qty": 2
+   }
+  ],
+  "currency": 150
+ },
+ {
+  "id": "rcp_noc_bulb_focus",
+  "npc_id": "npc_noc_craftsman",
+  "output": {
+   "item_id": "itm_0077",
+   "qty": 8
+  },
+  "inputs": [
+   {
+    "item_id": "itm_0253",
+    "qty": 1
+   },
+   {
+    "item_id": "itm_0252",
+    "qty": 2
+   }
+  ],
+  "currency": 180
+ }
+]

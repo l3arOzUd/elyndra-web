@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ELYNDRA</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div id="view">
+      <div class="overlay"></div>
+      <div id="loading">Starting...</div>
+
+      <form id="login" class="win">
+        <h1>✦ ELYNDRA</h1>
+        <p class="muted">Chronicles of the Shattered Veil · Lumeris</p>
+        <label>Name <input id="login-name" maxlength="16" pattern="[A-Za-z0-9_]{3,16}" required autocomplete="off" placeholder="3-16 letters, digits or _" /></label>
+        <label>Server <input id="login-server" /></label>
+        <button type="submit">Enter Elyndra</button>
+        <div id="login-error" class="bad"></div>
+        <p class="muted small">Start elyndra-server first (see README). New characters begin in Avelorn.</p>
+        <p class="muted small"><a href="/sprite-viewer.html" style="color:#c7dda5">ทดลอง Mosskin แบบ 2D ↗</a></p>
+      </form>
+
+      <div id="disconnected" class="win" hidden><b>Disconnected</b><div id="disconnected-reason" class="muted"></div><button onclick="location.reload()">Reconnect</button></div>
+
+      <div id="hud" hidden>
+        <section class="win status-win">
+          <header><span id="job">VANGUARD</span><span class="muted">Lv.<b id="lv">1</b></span></header>
+          <div class="bar hp"><div id="hp-fill"></div><span id="hp-text">–</span></div>
+          <div class="bar sp"><div id="sp-fill"></div><span id="sp-text">–</span></div>
+          <div class="bar exp"><div id="exp-fill"></div><span id="exp-text">–</span></div>
+          <div class="stat-row"><span>ATK <b id="atk">–</b></span><span>DEF <b id="def">–</b></span><button id="toggle-inv">Bag (I)</button></div>
+        </section>
+
+        <section class="win map-win">
+          <div id="map-name">–</div>
+          <div id="map-region" class="muted">–</div>
+          <canvas id="minimap" width="170" height="170"></canvas>
+        </section>
+
+        <section class="win quest-win">
+          <header>Quests</header>
+          <div id="quest-list"></div>
+        </section>
+
+        <section id="inv-win" class="win" hidden>
+          <header><span>Inventory</span><span id="zeny" class="muted">0 z</span></header>
+          <div id="equip"></div>
+          <ul id="inventory"></ul>
+          <div id="inv-empty" class="muted">Empty.</div>
+        </section>
+
+        <section id="npc-win" class="win" hidden></section>
+
+        <section class="win log-win"><div id="log"></div></section>
+
+        <div id="hotbar"></div>
+
+        <div class="help muted">
+          Left click walk / attack / talk · right-drag turn · wheel zoom · 1-4 skills (aim with mouse) · 5-7 items · Z loot · F3 debug
+          <button id="toggle-inspector">Animation Inspector</button>
+        </div>
+
+        <section id="debug-win" class="win" hidden><pre id="debug-text"></pre></section>
+      </div>
+
+      <section id="inspector" class="win" hidden>
+        <header>ANIMATION INSPECTOR</header>
+        <div class="insp-sprites btns"></div>
+        <canvas width="300" height="300"></canvas>
+        <div class="insp-anims btns"></div>
+        <div class="insp-dirs btns"></div>
+        <div class="btns"><button class="insp-pause">⏯ Pause</button><button class="insp-step">⏭ Step</button></div>
+        <div class="insp-problems muted"></div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

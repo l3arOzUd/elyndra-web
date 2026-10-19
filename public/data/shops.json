@@ -1,0 +1,128 @@
+[
+ {
+  "id": "shop_lum_supply",
+  "npc_id": "npc_lum_merchant",
+  "items": [
+   {
+    "item_id": "itm_0075",
+    "price": 9
+   },
+   {
+    "item_id": "itm_0076",
+    "price": 27
+   },
+   {
+    "item_id": "itm_0077",
+    "price": 33
+   }
+  ]
+ },
+ {
+  "id": "shop_ver",
+  "npc_id": "npc_ver_merchant",
+  "items": [
+   {
+    "item_id": "itm_0075",
+    "price": 18
+   },
+   {
+    "item_id": "itm_0076",
+    "price": 56
+   },
+   {
+    "item_id": "itm_0077",
+    "price": 68
+   }
+  ]
+ },
+ {
+  "id": "shop_sol",
+  "npc_id": "npc_sol_merchant",
+  "items": [
+   {
+    "item_id": "itm_0075",
+    "price": 25
+   },
+   {
+    "item_id": "itm_0076",
+    "price": 77
+   },
+   {
+    "item_id": "itm_0077",
+    "price": 93
+   }
+  ]
+ },
+ {
+  "id": "shop_tha_supply",
+  "npc_id": "npc_tha_merchant",
+  "items": [
+   {
+    "item_id": "itm_0075",
+    "price": 31
+   },
+   {
+    "item_id": "itm_0076",
+    "price": 98
+   },
+   {
+    "item_id": "itm_0077",
+    "price": 118
+   }
+  ]
+ },
+ {
+  "id": "shop_cry_supply",
+  "npc_id": "npc_cry_merchant",
+  "items": [
+   {
+    "item_id": "itm_0075",
+    "price": 38
+   },
+   {
+    "item_id": "itm_0076",
+    "price": 119
+   },
+   {
+    "item_id": "itm_0077",
+    "price": 143
+   }
+  ]
+ },
+ {
+  "id": "shop_emb_supply",
+  "npc_id": "npc_emb_merchant",
+  "items": [
+   {
+    "item_id": "itm_0075",
+    "price": 48
+   },
+   {
+    "item_id": "itm_0076",
+    "price": 150
+   },
+   {
+    "item_id": "itm_0077",
+    "price": 180
+   }
+  ]
+ },
+ {
+  "id": "shop_noc_supply",
+  "npc_id": "npc_noc_merchant",
+  "items": [
+   {
+    "item_id": "itm_0075",
+    "price": 58
+   },
+   {
+    "item_id": "itm_0076",
+    "price": 181
+   },
+   {
+    "item_id": "itm_0077",
+    "price": 218
+   }
+  ]
+ }
+]

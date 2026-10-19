@@ -1,0 +1,22 @@
+{
+ "id": "p_sporeling",
+ "kind": "puppet",
+ "puppet": {
+  "front": "front.png",
+  "motion": "hop"
+ },
+ "frame": {
+  "w": 368,
+  "h": 384
+ },
+ "pivot": {
+  "x": 185,
+  "y": 379
+ },
+ "pixelsPerCell": 320.0,
+ "rows": [
+  "S"
+ ],
+ "animations": {},
+ "source": "sprite/tripo_ready/02_Sporeling.png"
+}

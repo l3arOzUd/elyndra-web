@@ -1,0 +1,1801 @@
+[
+ {
+  "id": "npc_lum_guild_registrar",
+  "name": "Avelorn Guild Registrar",
+  "position": [
+   77,
+   45
+  ],
+  "facing": "S",
+  "role": "guild_registrar",
+  "dialogue_id": "dlg_lum_guild_registrar",
+  "shop_id": null,
+  "map_id": "lum_town_01"
+ },
+ {
+  "id": "npc_lum_merchant",
+  "name": "Avelorn Supply Merchant",
+  "position": [
+   84,
+   64
+  ],
+  "facing": "N",
+  "role": "merchant",
+  "dialogue_id": "dlg_lum_merchant",
+  "shop_id": "shop_lum_supply",
+  "map_id": "lum_town_01"
+ },
+ {
+  "id": "npc_lum_healer",
+  "name": "Avelorn Field Medic",
+  "position": [
+   47,
+   56
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_lum_healer",
+  "shop_id": null,
+  "map_id": "lum_town_01"
+ },
+ {
+  "id": "npc_lum_teleporter",
+  "name": "Avelorn Transit Operator",
+  "position": [
+   43,
+   83
+  ],
+  "facing": "NE",
+  "role": "teleporter",
+  "dialogue_id": "dlg_lum_teleporter",
+  "shop_id": null,
+  "destinations": [
+   [
+    "lum_fld_01",
+    14
+   ],
+   [
+    "lum_fld_02",
+    22
+   ],
+   [
+    "lum_fld_03",
+    30
+   ],
+   [
+    "lum_fld_04",
+    42
+   ],
+   [
+    "lum_fld_05",
+    54
+   ],
+   [
+    "lum_fld_06",
+    66
+   ],
+   [
+    "ver_town_01",
+    525
+   ]
+  ],
+  "map_id": "lum_town_01"
+ },
+ {
+  "id": "npc_lum_craftsman",
+  "name": "Avelorn Artificer",
+  "position": [
+   73,
+   72
+  ],
+  "facing": "NW",
+  "role": "craftsman",
+  "dialogue_id": "dlg_lum_craftsman",
+  "shop_id": null,
+  "map_id": "lum_town_01"
+ },
+ {
+  "id": "npc_lum_east_gate_guard",
+  "name": "East Gate Warden",
+  "position": [
+   110,
+   55
+  ],
+  "facing": "W",
+  "role": "guard",
+  "dialogue_id": "dlg_lum_east_gate_guard",
+  "shop_id": null,
+  "map_id": "lum_town_01"
+ },
+ {
+  "id": "npc_lum_north_gate_guard",
+  "name": "North Gate Warden",
+  "position": [
+   55,
+   9
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_lum_north_gate_guard",
+  "shop_id": null,
+  "map_id": "lum_town_01"
+ },
+ {
+  "id": "npc_lum_dawnmeadow_scout",
+  "name": "Dawnmeadow Scout",
+  "position": [
+   13,
+   58
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_lum_dawnmeadow_scout",
+  "shop_id": null,
+  "map_id": "lum_fld_01"
+ },
+ {
+  "id": "npc_lum_amber_trail_scout",
+  "name": "Trail Scout Wren",
+  "position": [
+   13,
+   43
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_lum_amber_trail_scout",
+  "shop_id": null,
+  "map_id": "lum_fld_02"
+ },
+ {
+  "id": "npc_lum_whispergrass_scout",
+  "name": "Whispergrass Scout",
+  "position": [
+   58,
+   112
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_lum_whispergrass_scout",
+  "shop_id": null,
+  "map_id": "lum_fld_03"
+ },
+ {
+  "id": "npc_lum_windmill_medic",
+  "name": "Miller's Camp Medic",
+  "position": [
+   70,
+   65
+  ],
+  "facing": "S",
+  "role": "healer",
+  "dialogue_id": "dlg_lum_windmill_medic",
+  "shop_id": null,
+  "map_id": "lum_fld_04"
+ },
+ {
+  "id": "npc_lum_windmill_scout",
+  "name": "Windmill Scout Hale",
+  "position": [
+   76,
+   65
+  ],
+  "facing": "S",
+  "role": "scout",
+  "dialogue_id": "dlg_lum_windmill_scout",
+  "shop_id": null,
+  "map_id": "lum_fld_04"
+ },
+ {
+  "id": "npc_lum_moonbrook_scout",
+  "name": "Moonbrook Scout",
+  "position": [
+   12,
+   28
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_lum_moonbrook_scout",
+  "shop_id": null,
+  "map_id": "lum_fld_05"
+ },
+ {
+  "id": "npc_lum_orchard_scout",
+  "name": "Orchard Scout",
+  "position": [
+   59,
+   7
+  ],
+  "facing": "S",
+  "role": "scout",
+  "dialogue_id": "dlg_lum_orchard_scout",
+  "shop_id": null,
+  "map_id": "lum_fld_06"
+ },
+ {
+  "id": "npc_lum_orchard_medic",
+  "name": "Orchard Field Medic",
+  "position": [
+   114,
+   95
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_lum_orchard_medic",
+  "shop_id": null,
+  "map_id": "lum_fld_06"
+ },
+ {
+  "id": "npc_lum_hollowroot_gatekeeper",
+  "name": "Hollowroot Gatekeeper",
+  "position": [
+   121,
+   100
+  ],
+  "facing": "E",
+  "role": "guard",
+  "dialogue_id": "dlg_lum_hollowroot_gatekeeper",
+  "shop_id": null,
+  "map_id": "lum_fld_06"
+ },
+ {
+  "id": "npc_lum_hollowroot_lift",
+  "name": "Hollowroot Lift Keeper",
+  "position": [
+   18,
+   55
+  ],
+  "facing": "S",
+  "role": "teleporter",
+  "dialogue_id": "dlg_lum_hollowroot_lift",
+  "shop_id": null,
+  "destinations": [
+   [
+    "lum_town_01",
+    0
+   ],
+   [
+    "lum_fld_06",
+    0
+   ]
+  ],
+  "map_id": "lum_dun_01"
+ },
+ {
+  "id": "npc_ver_guild_registrar",
+  "name": "Sylvara Guild Registrar",
+  "position": [
+   102,
+   39
+  ],
+  "facing": "S",
+  "role": "guild_registrar",
+  "dialogue_id": "dlg_ver_guild_registrar",
+  "shop_id": null,
+  "map_id": "ver_town_01"
+ },
+ {
+  "id": "npc_ver_merchant",
+  "name": "Sylvara Supply Merchant",
+  "position": [
+   88,
+   69
+  ],
+  "facing": "N",
+  "role": "merchant",
+  "dialogue_id": "dlg_ver_merchant",
+  "shop_id": "shop_ver",
+  "map_id": "ver_town_01"
+ },
+ {
+  "id": "npc_ver_healer",
+  "name": "Sylvara Field Medic",
+  "position": [
+   53,
+   58
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_ver_healer",
+  "shop_id": null,
+  "map_id": "ver_town_01"
+ },
+ {
+  "id": "npc_ver_teleporter",
+  "name": "Sylvara Transit Operator",
+  "position": [
+   31,
+   73
+  ],
+  "facing": "W",
+  "role": "teleporter",
+  "dialogue_id": "dlg_ver_teleporter",
+  "shop_id": null,
+  "destinations": [
+   [
+    "ver_fld_01",
+    70
+   ],
+   [
+    "ver_fld_02",
+    82
+   ],
+   [
+    "ver_fld_03",
+    94
+   ],
+   [
+    "ver_fld_04",
+    106
+   ],
+   [
+    "ver_fld_05",
+    118
+   ],
+   [
+    "ver_fld_06",
+    130
+   ],
+   [
+    "ver_fld_07",
+    142
+   ],
+   [
+    "lum_town_01",
+    315
+   ],
+   [
+    "sol_town_01",
+    675
+   ]
+  ],
+  "map_id": "ver_town_01"
+ },
+ {
+  "id": "npc_ver_craftsman",
+  "name": "Sylvara Artificer",
+  "position": [
+   71,
+   85
+  ],
+  "facing": "N",
+  "role": "craftsman",
+  "dialogue_id": "dlg_ver_craftsman",
+  "shop_id": null,
+  "map_id": "ver_town_01"
+ },
+ {
+  "id": "npc_ver_east_gate_guard",
+  "name": "East Gate Warden",
+  "position": [
+   126,
+   60
+  ],
+  "facing": "W",
+  "role": "guard",
+  "dialogue_id": "dlg_ver_east_gate_guard",
+  "shop_id": null,
+  "map_id": "ver_town_01"
+ },
+ {
+  "id": "npc_ver_north_gate_guard",
+  "name": "North Gate Warden",
+  "position": [
+   68,
+   12
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_ver_north_gate_guard",
+  "shop_id": null,
+  "map_id": "ver_town_01"
+ },
+ {
+  "id": "npc_ver_fernreach_scout",
+  "name": "Fernreach Scout Ilka",
+  "position": [
+   14,
+   50
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_ver_fernreach_scout",
+  "shop_id": null,
+  "map_id": "ver_fld_01"
+ },
+ {
+  "id": "npc_ver_mossbridge_scout",
+  "name": "Mossbridge Scout Teodor",
+  "position": [
+   64,
+   120
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_ver_mossbridge_scout",
+  "shop_id": null,
+  "map_id": "ver_fld_02"
+ },
+ {
+  "id": "npc_ver_canopy_scout",
+  "name": "Canopy Scout Maren",
+  "position": [
+   32,
+   89
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_ver_canopy_scout",
+  "shop_id": null,
+  "map_id": "ver_fld_03"
+ },
+ {
+  "id": "npc_ver_graftwood_scout",
+  "name": "Graftwood Scout Oriel",
+  "position": [
+   14,
+   59
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_ver_graftwood_scout",
+  "shop_id": null,
+  "map_id": "ver_fld_04"
+ },
+ {
+  "id": "npc_ver_vineworks_scout",
+  "name": "Vineworks Scout Bramm",
+  "position": [
+   72,
+   10
+  ],
+  "facing": "S",
+  "role": "scout",
+  "dialogue_id": "dlg_ver_vineworks_scout",
+  "shop_id": null,
+  "map_id": "ver_fld_05"
+ },
+ {
+  "id": "npc_ver_vineworks_medic",
+  "name": "Press Gate Medic",
+  "position": [
+   62,
+   13
+  ],
+  "facing": "S",
+  "role": "healer",
+  "dialogue_id": "dlg_ver_vineworks_medic",
+  "shop_id": null,
+  "map_id": "ver_fld_05"
+ },
+ {
+  "id": "npc_ver_elderroot_scout",
+  "name": "Elderroot Scout Hesk",
+  "position": [
+   14,
+   39
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_ver_elderroot_scout",
+  "shop_id": null,
+  "map_id": "ver_fld_06"
+ },
+ {
+  "id": "npc_ver_spore_basin_scout",
+  "name": "Basin Scout Wylla",
+  "position": [
+   48,
+   8
+  ],
+  "facing": "S",
+  "role": "scout",
+  "dialogue_id": "dlg_ver_spore_basin_scout",
+  "shop_id": null,
+  "map_id": "ver_fld_07"
+ },
+ {
+  "id": "npc_ver_engine_watch",
+  "name": "Engine Mouth Watch",
+  "position": [
+   122,
+   69
+  ],
+  "facing": "E",
+  "role": "guard",
+  "dialogue_id": "dlg_ver_engine_watch",
+  "shop_id": null,
+  "map_id": "ver_fld_07"
+ },
+ {
+  "id": "npc_ver_heartwood_keeper",
+  "name": "Heartwood Root-Keeper",
+  "position": [
+   16,
+   56
+  ],
+  "facing": "S",
+  "role": "teleporter",
+  "dialogue_id": "dlg_ver_heartwood_keeper",
+  "shop_id": null,
+  "destinations": [
+   [
+    "ver_town_01",
+    0
+   ],
+   [
+    "ver_fld_07",
+    0
+   ]
+  ],
+  "map_id": "ver_dun_01"
+ },
+ {
+  "id": "npc_sol_guild_registrar",
+  "name": "Duskhar Guild Registrar",
+  "position": [
+   84,
+   40
+  ],
+  "facing": "S",
+  "role": "guild_registrar",
+  "dialogue_id": "dlg_sol_guild_registrar",
+  "shop_id": null,
+  "map_id": "sol_town_01"
+ },
+ {
+  "id": "npc_sol_merchant",
+  "name": "Duskhar Supply Merchant",
+  "position": [
+   46,
+   77
+  ],
+  "facing": "N",
+  "role": "merchant",
+  "dialogue_id": "dlg_sol_merchant",
+  "shop_id": "shop_sol",
+  "map_id": "sol_town_01"
+ },
+ {
+  "id": "npc_sol_healer",
+  "name": "Duskhar Field Medic",
+  "position": [
+   44,
+   59
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_sol_healer",
+  "shop_id": null,
+  "map_id": "sol_town_01"
+ },
+ {
+  "id": "npc_sol_teleporter",
+  "name": "Duskhar Transit Operator",
+  "position": [
+   112,
+   96
+  ],
+  "facing": "SE",
+  "role": "teleporter",
+  "dialogue_id": "dlg_sol_teleporter",
+  "shop_id": null,
+  "destinations": [
+   [
+    "sol_fld_01",
+    110
+   ],
+   [
+    "sol_fld_02",
+    126
+   ],
+   [
+    "sol_fld_03",
+    142
+   ],
+   [
+    "sol_fld_04",
+    158
+   ],
+   [
+    "sol_fld_05",
+    174
+   ],
+   [
+    "sol_fld_06",
+    190
+   ],
+   [
+    "ver_town_01",
+    525
+   ],
+   [
+    "tha_town_01",
+    825
+   ]
+  ],
+  "map_id": "sol_town_01"
+ },
+ {
+  "id": "npc_sol_craftsman",
+  "name": "Duskhar Artificer",
+  "position": [
+   73,
+   91
+  ],
+  "facing": "S",
+  "role": "craftsman",
+  "dialogue_id": "dlg_sol_craftsman",
+  "shop_id": null,
+  "map_id": "sol_town_01"
+ },
+ {
+  "id": "npc_sol_west_gate_guard",
+  "name": "West Gate Warden",
+  "position": [
+   10,
+   66
+  ],
+  "facing": "E",
+  "role": "guard",
+  "dialogue_id": "dlg_sol_west_gate_guard",
+  "shop_id": null,
+  "map_id": "sol_town_01"
+ },
+ {
+  "id": "npc_sol_north_gate_guard",
+  "name": "Caravan Gate Warden",
+  "position": [
+   52,
+   10
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_sol_north_gate_guard",
+  "shop_id": null,
+  "map_id": "sol_town_01"
+ },
+ {
+  "id": "npc_sol_dunes_scout",
+  "name": "Dunes Scout Rasha",
+  "position": [
+   134,
+   49
+  ],
+  "facing": "W",
+  "role": "scout",
+  "dialogue_id": "dlg_sol_dunes_scout",
+  "shop_id": null,
+  "map_id": "sol_fld_01"
+ },
+ {
+  "id": "npc_sol_verge_scout",
+  "name": "Verge Scout Haddo",
+  "position": [
+   78,
+   122
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_sol_verge_scout",
+  "shop_id": null,
+  "map_id": "sol_fld_02"
+ },
+ {
+  "id": "npc_sol_flats_scout",
+  "name": "Flats Scout Imre",
+  "position": [
+   49,
+   86
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_sol_flats_scout",
+  "shop_id": null,
+  "map_id": "sol_fld_03"
+ },
+ {
+  "id": "npc_sol_dial_scout",
+  "name": "Dial Scout Oren",
+  "position": [
+   14,
+   94
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_sol_dial_scout",
+  "shop_id": null,
+  "map_id": "sol_fld_04"
+ },
+ {
+  "id": "npc_sol_dial_medic",
+  "name": "Dial Camp Medic",
+  "position": [
+   6,
+   103
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_sol_dial_medic",
+  "shop_id": null,
+  "map_id": "sol_fld_04"
+ },
+ {
+  "id": "npc_sol_aqueduct_scout",
+  "name": "Aqueduct Scout Sefa",
+  "position": [
+   14,
+   29
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_sol_aqueduct_scout",
+  "shop_id": null,
+  "map_id": "sol_fld_05"
+ },
+ {
+  "id": "npc_sol_causeway_scout",
+  "name": "Causeway Scout Liane",
+  "position": [
+   108,
+   12
+  ],
+  "facing": "S",
+  "role": "scout",
+  "dialogue_id": "dlg_sol_causeway_scout",
+  "shop_id": null,
+  "map_id": "sol_fld_06"
+ },
+ {
+  "id": "npc_sol_vault_gatekeeper",
+  "name": "Vault Gatekeeper",
+  "position": [
+   38,
+   105
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_sol_vault_gatekeeper",
+  "shop_id": null,
+  "map_id": "sol_fld_06"
+ },
+ {
+  "id": "npc_sol_vault_keeper",
+  "name": "Heliostat Vault Keeper",
+  "position": [
+   65,
+   8
+  ],
+  "facing": "S",
+  "role": "teleporter",
+  "dialogue_id": "dlg_sol_vault_keeper",
+  "shop_id": null,
+  "destinations": [
+   [
+    "sol_town_01",
+    0
+   ],
+   [
+    "sol_fld_06",
+    0
+   ]
+  ],
+  "map_id": "sol_dun_01"
+ },
+ {
+  "id": "npc_tha_guild_registrar",
+  "name": "Port Merrow Guild Registrar",
+  "position": [
+   61,
+   25
+  ],
+  "facing": "S",
+  "role": "guild_registrar",
+  "dialogue_id": "dlg_tha_guild_registrar",
+  "shop_id": null,
+  "map_id": "tha_town_01"
+ },
+ {
+  "id": "npc_tha_merchant",
+  "name": "Port Merrow Supply Merchant",
+  "position": [
+   82,
+   48
+  ],
+  "facing": "S",
+  "role": "merchant",
+  "dialogue_id": "dlg_tha_merchant",
+  "shop_id": "shop_tha_supply",
+  "map_id": "tha_town_01"
+ },
+ {
+  "id": "npc_tha_healer",
+  "name": "Port Merrow Field Medic",
+  "position": [
+   42,
+   52
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_tha_healer",
+  "shop_id": null,
+  "map_id": "tha_town_01"
+ },
+ {
+  "id": "npc_tha_teleporter",
+  "name": "Port Merrow Transit Operator",
+  "position": [
+   50,
+   64
+  ],
+  "facing": "SW",
+  "role": "teleporter",
+  "dialogue_id": "dlg_tha_teleporter",
+  "shop_id": null,
+  "destinations": [
+   [
+    "tha_fld_01",
+    150
+   ],
+   [
+    "tha_fld_02",
+    166
+   ],
+   [
+    "tha_fld_03",
+    182
+   ],
+   [
+    "tha_fld_04",
+    198
+   ],
+   [
+    "tha_fld_05",
+    214
+   ],
+   [
+    "tha_fld_06",
+    230
+   ],
+   [
+    "sol_town_01",
+    675
+   ],
+   [
+    "cry_town_01",
+    975
+   ]
+  ],
+  "map_id": "tha_town_01"
+ },
+ {
+  "id": "npc_tha_craftsman",
+  "name": "Port Merrow Artificer",
+  "position": [
+   82,
+   64
+  ],
+  "facing": "E",
+  "role": "craftsman",
+  "dialogue_id": "dlg_tha_craftsman",
+  "shop_id": null,
+  "map_id": "tha_town_01"
+ },
+ {
+  "id": "npc_tha_east_gate_guard",
+  "name": "East Gate Warden",
+  "position": [
+   126,
+   46
+  ],
+  "facing": "W",
+  "role": "guard",
+  "dialogue_id": "dlg_tha_east_gate_guard",
+  "shop_id": null,
+  "map_id": "tha_town_01"
+ },
+ {
+  "id": "npc_tha_harbourmaster",
+  "name": "Harbourmaster Quill",
+  "position": [
+   58,
+   88
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_tha_harbourmaster",
+  "shop_id": null,
+  "map_id": "tha_town_01"
+ },
+ {
+  "id": "npc_tha_saltwind_scout",
+  "name": "Saltwind Scout Marro",
+  "position": [
+   14,
+   37
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_tha_saltwind_scout",
+  "shop_id": null,
+  "map_id": "tha_fld_01"
+ },
+ {
+  "id": "npc_tha_coral_reach_scout",
+  "name": "Reef Scout Ilsa",
+  "position": [
+   14,
+   100
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_tha_coral_reach_scout",
+  "shop_id": null,
+  "map_id": "tha_fld_02"
+ },
+ {
+  "id": "npc_tha_tidewheel_scout",
+  "name": "Tidewheel Scout Brannoc",
+  "position": [
+   13,
+   88
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_tha_tidewheel_scout",
+  "shop_id": null,
+  "map_id": "tha_fld_03"
+ },
+ {
+  "id": "npc_tha_tidewheel_medic",
+  "name": "Ferry Landing Medic",
+  "position": [
+   8,
+   93
+  ],
+  "facing": "N",
+  "role": "healer",
+  "dialogue_id": "dlg_tha_tidewheel_medic",
+  "shop_id": null,
+  "map_id": "tha_fld_03"
+ },
+ {
+  "id": "npc_tha_wreck_shoal_scout",
+  "name": "Salvage Scout Dunmore",
+  "position": [
+   14,
+   57
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_tha_wreck_shoal_scout",
+  "shop_id": null,
+  "map_id": "tha_fld_04"
+ },
+ {
+  "id": "npc_tha_pearl_flats_scout",
+  "name": "Pearl-Diver Scout Oona",
+  "position": [
+   29,
+   12
+  ],
+  "facing": "S",
+  "role": "scout",
+  "dialogue_id": "dlg_tha_pearl_flats_scout",
+  "shop_id": null,
+  "map_id": "tha_fld_05"
+ },
+ {
+  "id": "npc_tha_stormbreak_scout",
+  "name": "Stormbreak Scout Tallis",
+  "position": [
+   13,
+   118
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_tha_stormbreak_scout",
+  "shop_id": null,
+  "map_id": "tha_fld_06"
+ },
+ {
+  "id": "npc_tha_stormbreak_medic",
+  "name": "Headland Medic",
+  "position": [
+   16,
+   127
+  ],
+  "facing": "N",
+  "role": "healer",
+  "dialogue_id": "dlg_tha_stormbreak_medic",
+  "shop_id": null,
+  "map_id": "tha_fld_06"
+ },
+ {
+  "id": "npc_tha_relay_hatch_keeper",
+  "name": "Relay Hatch Keeper",
+  "position": [
+   52,
+   12
+  ],
+  "facing": "N",
+  "role": "guard",
+  "dialogue_id": "dlg_tha_relay_hatch_keeper",
+  "shop_id": null,
+  "map_id": "tha_fld_06"
+ },
+ {
+  "id": "npc_tha_relay_diver",
+  "name": "Relay Hatch Diver",
+  "position": [
+   17,
+   46
+  ],
+  "facing": "S",
+  "role": "teleporter",
+  "dialogue_id": "dlg_tha_relay_diver",
+  "shop_id": null,
+  "destinations": [
+   [
+    "tha_town_01",
+    0
+   ],
+   [
+    "tha_fld_06",
+    0
+   ]
+  ],
+  "map_id": "tha_dun_01"
+ },
+ {
+  "id": "npc_cry_guild_registrar",
+  "name": "Vaelspire Guild Registrar",
+  "position": [
+   79,
+   64
+  ],
+  "facing": "N",
+  "role": "guild_registrar",
+  "dialogue_id": "dlg_cry_guild_registrar",
+  "shop_id": null,
+  "map_id": "cry_town_01"
+ },
+ {
+  "id": "npc_cry_merchant",
+  "name": "Vaelspire Supply Merchant",
+  "position": [
+   51,
+   74
+  ],
+  "facing": "N",
+  "role": "merchant",
+  "dialogue_id": "dlg_cry_merchant",
+  "shop_id": "shop_cry_supply",
+  "map_id": "cry_town_01"
+ },
+ {
+  "id": "npc_cry_healer",
+  "name": "Vaelspire Field Medic",
+  "position": [
+   44,
+   64
+  ],
+  "facing": "W",
+  "role": "healer",
+  "dialogue_id": "dlg_cry_healer",
+  "shop_id": null,
+  "map_id": "cry_town_01"
+ },
+ {
+  "id": "npc_cry_teleporter",
+  "name": "Vaelspire Transit Operator",
+  "position": [
+   48,
+   92
+  ],
+  "facing": "SW",
+  "role": "teleporter",
+  "dialogue_id": "dlg_cry_teleporter",
+  "shop_id": null,
+  "destinations": [
+   [
+    "cry_fld_01",
+    190
+   ],
+   [
+    "cry_fld_02",
+    206
+   ],
+   [
+    "cry_fld_03",
+    222
+   ],
+   [
+    "cry_fld_04",
+    238
+   ],
+   [
+    "cry_fld_05",
+    254
+   ],
+   [
+    "cry_fld_06",
+    270
+   ],
+   [
+    "tha_town_01",
+    825
+   ],
+   [
+    "emb_town_01",
+    1200
+   ]
+  ],
+  "map_id": "cry_town_01"
+ },
+ {
+  "id": "npc_cry_craftsman",
+  "name": "Vaelspire Artificer",
+  "position": [
+   83,
+   85
+  ],
+  "facing": "NE",
+  "role": "craftsman",
+  "dialogue_id": "dlg_cry_craftsman",
+  "shop_id": null,
+  "map_id": "cry_town_01"
+ },
+ {
+  "id": "npc_cry_west_gate_guard",
+  "name": "West Gate Warden",
+  "position": [
+   9,
+   76
+  ],
+  "facing": "E",
+  "role": "guard",
+  "dialogue_id": "dlg_cry_west_gate_guard",
+  "shop_id": null,
+  "map_id": "cry_town_01"
+ },
+ {
+  "id": "npc_cry_lift_warden",
+  "name": "Cable Lift Warden",
+  "position": [
+   58,
+   8
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_cry_lift_warden",
+  "shop_id": null,
+  "map_id": "cry_town_01"
+ },
+ {
+  "id": "npc_cry_frostline_scout",
+  "name": "Frostline Scout Edda",
+  "position": [
+   134,
+   51
+  ],
+  "facing": "W",
+  "role": "scout",
+  "dialogue_id": "dlg_cry_frostline_scout",
+  "shop_id": null,
+  "map_id": "cry_fld_01"
+ },
+ {
+  "id": "npc_cry_blueglass_scout",
+  "name": "Ridge Scout Haldor",
+  "position": [
+   47,
+   128
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_cry_blueglass_scout",
+  "shop_id": null,
+  "map_id": "cry_fld_02"
+ },
+ {
+  "id": "npc_cry_snowcoil_scout",
+  "name": "Snowcoil Scout Varra",
+  "position": [
+   64,
+   116
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_cry_snowcoil_scout",
+  "shop_id": null,
+  "map_id": "cry_fld_03"
+ },
+ {
+  "id": "npc_cry_snowcoil_medic",
+  "name": "Lift Station Medic",
+  "position": [
+   74,
+   116
+  ],
+  "facing": "N",
+  "role": "healer",
+  "dialogue_id": "dlg_cry_snowcoil_medic",
+  "shop_id": null,
+  "map_id": "cry_fld_03"
+ },
+ {
+  "id": "npc_cry_prism_pass_scout",
+  "name": "Pass Scout Inge",
+  "position": [
+   28,
+   76
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_cry_prism_pass_scout",
+  "shop_id": null,
+  "map_id": "cry_fld_04"
+ },
+ {
+  "id": "npc_cry_mirror_ice_scout",
+  "name": "Lake Scout Sorrel",
+  "position": [
+   13,
+   89
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_cry_mirror_ice_scout",
+  "shop_id": null,
+  "map_id": "cry_fld_05"
+ },
+ {
+  "id": "npc_cry_white_circuit_scout",
+  "name": "Circuit Scout Brenn",
+  "position": [
+   36,
+   120
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_cry_white_circuit_scout",
+  "shop_id": null,
+  "map_id": "cry_fld_06"
+ },
+ {
+  "id": "npc_cry_archive_door_warden",
+  "name": "Archive Door Warden",
+  "position": [
+   127,
+   36
+  ],
+  "facing": "E",
+  "role": "guard",
+  "dialogue_id": "dlg_cry_archive_door_warden",
+  "shop_id": null,
+  "map_id": "cry_fld_06"
+ },
+ {
+  "id": "npc_cry_archive_lift_keeper",
+  "name": "Archive Lift Keeper",
+  "position": [
+   16,
+   100
+  ],
+  "facing": "S",
+  "role": "teleporter",
+  "dialogue_id": "dlg_cry_archive_lift_keeper",
+  "shop_id": null,
+  "destinations": [
+   [
+    "cry_town_01",
+    0
+   ],
+   [
+    "cry_fld_06",
+    0
+   ]
+  ],
+  "map_id": "cry_dun_01"
+ },
+ {
+  "id": "npc_emb_guild_registrar",
+  "name": "Cindervale Guild Registrar",
+  "position": [
+   86,
+   44
+  ],
+  "facing": "S",
+  "role": "guild_registrar",
+  "dialogue_id": "dlg_emb_guild_registrar",
+  "shop_id": null,
+  "map_id": "emb_town_01"
+ },
+ {
+  "id": "npc_emb_merchant",
+  "name": "Cindervale Supply Merchant",
+  "position": [
+   88,
+   66
+  ],
+  "facing": "N",
+  "role": "merchant",
+  "dialogue_id": "dlg_emb_merchant",
+  "shop_id": "shop_emb_supply",
+  "map_id": "emb_town_01"
+ },
+ {
+  "id": "npc_emb_healer",
+  "name": "Cindervale Field Medic",
+  "position": [
+   44,
+   62
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_emb_healer",
+  "shop_id": null,
+  "map_id": "emb_town_01"
+ },
+ {
+  "id": "npc_emb_teleporter",
+  "name": "Cindervale Transit Operator",
+  "position": [
+   30,
+   88
+  ],
+  "facing": "SW",
+  "role": "teleporter",
+  "dialogue_id": "dlg_emb_teleporter",
+  "shop_id": null,
+  "destinations": [
+   [
+    "emb_fld_01",
+    250
+   ],
+   [
+    "emb_fld_02",
+    266
+   ],
+   [
+    "emb_fld_03",
+    282
+   ],
+   [
+    "emb_fld_04",
+    298
+   ],
+   [
+    "emb_fld_05",
+    314
+   ],
+   [
+    "emb_fld_06",
+    330
+   ],
+   [
+    "cry_town_01",
+    975
+   ],
+   [
+    "noc_town_01",
+    1425
+   ]
+  ],
+  "map_id": "emb_town_01"
+ },
+ {
+  "id": "npc_emb_craftsman",
+  "name": "Cindervale Artificer",
+  "position": [
+   79,
+   94
+  ],
+  "facing": "NW",
+  "role": "craftsman",
+  "dialogue_id": "dlg_emb_craftsman",
+  "shop_id": null,
+  "map_id": "emb_town_01"
+ },
+ {
+  "id": "npc_emb_east_gate_guard",
+  "name": "East Bridge Warden",
+  "position": [
+   128,
+   66
+  ],
+  "facing": "W",
+  "role": "guard",
+  "dialogue_id": "dlg_emb_east_gate_guard",
+  "shop_id": null,
+  "map_id": "emb_town_01"
+ },
+ {
+  "id": "npc_emb_north_gate_guard",
+  "name": "North Bridge Warden",
+  "position": [
+   57,
+   12
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_emb_north_gate_guard",
+  "shop_id": null,
+  "map_id": "emb_town_01"
+ },
+ {
+  "id": "npc_emb_ashfield_scout",
+  "name": "Ashfield Scout Varro",
+  "position": [
+   13,
+   55
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_emb_ashfield_scout",
+  "shop_id": null,
+  "map_id": "emb_fld_01"
+ },
+ {
+  "id": "npc_emb_cinder_track_scout",
+  "name": "Track Scout Hesk",
+  "position": [
+   60,
+   134
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_emb_cinder_track_scout",
+  "shop_id": null,
+  "map_id": "emb_fld_02"
+ },
+ {
+  "id": "npc_emb_forge_scout",
+  "name": "Causeway Scout Imra",
+  "position": [
+   70,
+   126
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_emb_forge_scout",
+  "shop_id": null,
+  "map_id": "emb_fld_03"
+ },
+ {
+  "id": "npc_emb_magma_scout",
+  "name": "Vent Scout Tollan",
+  "position": [
+   45,
+   101
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_emb_magma_scout",
+  "shop_id": null,
+  "map_id": "emb_fld_04"
+ },
+ {
+  "id": "npc_emb_ironfall_scout",
+  "name": "Canyon Scout Dagny",
+  "position": [
+   14,
+   47
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_emb_ironfall_scout",
+  "shop_id": null,
+  "map_id": "emb_fld_05"
+ },
+ {
+  "id": "npc_emb_crucible_scout",
+  "name": "Rim Scout Oska",
+  "position": [
+   14,
+   31
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_emb_crucible_scout",
+  "shop_id": null,
+  "map_id": "emb_fld_06"
+ },
+ {
+  "id": "npc_emb_crucible_medic",
+  "name": "Crucible Field Medic",
+  "position": [
+   81,
+   112
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_emb_crucible_medic",
+  "shop_id": null,
+  "map_id": "emb_fld_06"
+ },
+ {
+  "id": "npc_emb_furnace_gatekeeper",
+  "name": "Furnace Hatch Keeper",
+  "position": [
+   91,
+   116
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_emb_furnace_gatekeeper",
+  "shop_id": null,
+  "map_id": "emb_fld_06"
+ },
+ {
+  "id": "npc_emb_furnace_lift",
+  "name": "Furnace Zero Lift Keeper",
+  "position": [
+   65,
+   9
+  ],
+  "facing": "S",
+  "role": "teleporter",
+  "dialogue_id": "dlg_emb_furnace_lift",
+  "shop_id": null,
+  "destinations": [
+   [
+    "emb_town_01",
+    0
+   ],
+   [
+    "emb_fld_06",
+    0
+   ]
+  ],
+  "map_id": "emb_dun_01"
+ },
+ {
+  "id": "npc_noc_guild_registrar",
+  "name": "Umbracrest Guild Registrar",
+  "position": [
+   36,
+   42
+  ],
+  "facing": "S",
+  "role": "guild_registrar",
+  "dialogue_id": "dlg_noc_guild_registrar",
+  "shop_id": null,
+  "map_id": "noc_town_01"
+ },
+ {
+  "id": "npc_noc_merchant",
+  "name": "Umbracrest Supply Merchant",
+  "position": [
+   88,
+   55
+  ],
+  "facing": "S",
+  "role": "merchant",
+  "dialogue_id": "dlg_noc_merchant",
+  "shop_id": "shop_noc_supply",
+  "map_id": "noc_town_01"
+ },
+ {
+  "id": "npc_noc_healer",
+  "name": "Umbracrest Field Medic",
+  "position": [
+   103,
+   82
+  ],
+  "facing": "NW",
+  "role": "healer",
+  "dialogue_id": "dlg_noc_healer",
+  "shop_id": null,
+  "map_id": "noc_town_01"
+ },
+ {
+  "id": "npc_noc_teleporter",
+  "name": "Umbracrest Transit Operator",
+  "position": [
+   58,
+   99
+  ],
+  "facing": "SW",
+  "role": "teleporter",
+  "dialogue_id": "dlg_noc_teleporter",
+  "shop_id": null,
+  "destinations": [
+   [
+    "noc_fld_01",
+    310
+   ],
+   [
+    "noc_fld_02",
+    322
+   ],
+   [
+    "noc_fld_03",
+    334
+   ],
+   [
+    "noc_fld_04",
+    350
+   ],
+   [
+    "noc_fld_05",
+    366
+   ],
+   [
+    "noc_fld_06",
+    382
+   ],
+   [
+    "emb_town_01",
+    1200
+   ]
+  ],
+  "map_id": "noc_town_01"
+ },
+ {
+  "id": "npc_noc_craftsman",
+  "name": "Umbracrest Artificer",
+  "position": [
+   44,
+   92
+  ],
+  "facing": "N",
+  "role": "craftsman",
+  "dialogue_id": "dlg_noc_craftsman",
+  "shop_id": null,
+  "map_id": "noc_town_01"
+ },
+ {
+  "id": "npc_noc_south_gate_guard",
+  "name": "South Gate Sentry",
+  "position": [
+   70,
+   114
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_noc_south_gate_guard",
+  "shop_id": null,
+  "map_id": "noc_town_01"
+ },
+ {
+  "id": "npc_noc_east_gate_guard",
+  "name": "Station Sentry",
+  "position": [
+   136,
+   52
+  ],
+  "facing": "W",
+  "role": "guard",
+  "dialogue_id": "dlg_noc_east_gate_guard",
+  "shop_id": null,
+  "map_id": "noc_town_01"
+ },
+ {
+  "id": "npc_noc_dusk_scout",
+  "name": "Verge Scout Ilse",
+  "position": [
+   64,
+   10
+  ],
+  "facing": "S",
+  "role": "scout",
+  "dialogue_id": "dlg_noc_dusk_scout",
+  "shop_id": null,
+  "map_id": "noc_fld_01"
+ },
+ {
+  "id": "npc_noc_nullgarden_scout",
+  "name": "Park Scout Merrin",
+  "position": [
+   14,
+   91
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_noc_nullgarden_scout",
+  "shop_id": null,
+  "map_id": "noc_fld_02"
+ },
+ {
+  "id": "npc_noc_tracks_scout",
+  "name": "Yard Scout Corvin",
+  "position": [
+   14,
+   45
+  ],
+  "facing": "E",
+  "role": "scout",
+  "dialogue_id": "dlg_noc_tracks_scout",
+  "shop_id": null,
+  "map_id": "noc_fld_03"
+ },
+ {
+  "id": "npc_noc_rift_scout",
+  "name": "Rift Scout Tamsin",
+  "position": [
+   101,
+   116
+  ],
+  "facing": "N",
+  "role": "scout",
+  "dialogue_id": "dlg_noc_rift_scout",
+  "shop_id": null,
+  "map_id": "noc_fld_04"
+ },
+ {
+  "id": "npc_noc_array_scout",
+  "name": "Array Scout Brannoc",
+  "position": [
+   133,
+   39
+  ],
+  "facing": "W",
+  "role": "scout",
+  "dialogue_id": "dlg_noc_array_scout",
+  "shop_id": null,
+  "map_id": "noc_fld_05"
+ },
+ {
+  "id": "npc_noc_gate_scout",
+  "name": "Gate Scout Halvard",
+  "position": [
+   106,
+   59
+  ],
+  "facing": "W",
+  "role": "scout",
+  "dialogue_id": "dlg_noc_gate_scout",
+  "shop_id": null,
+  "map_id": "noc_fld_06"
+ },
+ {
+  "id": "npc_noc_gate_medic",
+  "name": "Gate Field Medic",
+  "position": [
+   51,
+   104
+  ],
+  "facing": "E",
+  "role": "healer",
+  "dialogue_id": "dlg_noc_gate_medic",
+  "shop_id": null,
+  "map_id": "noc_fld_06"
+ },
+ {
+  "id": "npc_noc_heart_warden",
+  "name": "Heart Warden",
+  "position": [
+   61,
+   104
+  ],
+  "facing": "S",
+  "role": "guard",
+  "dialogue_id": "dlg_noc_heart_warden",
+  "shop_id": null,
+  "map_id": "noc_fld_06"
+ },
+ {
+  "id": "npc_noc_heart_lift",
+  "name": "Lattice Heart Lift Keeper",
+  "position": [
+   61,
+   8
+  ],
+  "facing": "S",
+  "role": "teleporter",
+  "dialogue_id": "dlg_noc_heart_lift",
+  "shop_id": null,
+  "destinations": [
+   [
+    "noc_town_01",
+    0
+   ],
+   [
+    "noc_fld_06",
+    0
+   ]
+  ],
+  "map_id": "noc_dun_01"
+ }
+]

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ELYNDRA Model Check</title>
+    <link rel="icon" href="data:," />
+    <style>
+      html, body { margin: 0; height: 100%; background: #20262b; color: #e8e2d0; font: 13px "Segoe UI", sans-serif; overflow: hidden; }
+      #ui { position: absolute; left: 12px; top: 12px; background: rgba(16, 24, 30, 0.85); border: 1px solid #a88c5d; border-radius: 6px; padding: 10px; width: 250px; }
+      #ui h1 { margin: 0 0 6px; font: 600 15px Georgia, serif; color: #e7c486; }
+      select, button { width: 100%; margin: 3px 0; background: #2c4552; color: #e8e2d0; border: 1px solid #a88c5d; border-radius: 4px; padding: 5px; font: inherit; }
+      label { display: flex; gap: 6px; align-items: center; margin: 3px 0; }
+      #info { margin-top: 6px; color: #a9bbb6; line-height: 1.5; }
+      canvas { display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="ui">
+      <h1>Model Check</h1>
+      <a href="/sprite-viewer.html" style="display:block;margin:8px 0;color:#d6e8ad">ทดสอบ Mosskin แบบ 2D ซ้าย–ขวา ↗</a>
+      <a href="/animation-viewer.html" style="display:block;margin:8px 0;color:#d6e8ad">เปิดหน้าทดสอบกระดูกและแอนิเมชัน 01–05 ↗</a>
+      <select id="pick"></select>
+      <label><input type="checkbox" id="spin" checked /> หมุนอัตโนมัติ</label>
+      <label><input type="checkbox" id="unlit" checked /> สีตรงตาม texture (ไม่ใส่แสง)</label>
+      <label><input type="checkbox" id="wire" /> แสดงเส้นโครง (wireframe)</label>
+      <label><input type="checkbox" id="game" /> มุมกล้องแบบในเกม (50°)</label>
+      <button id="front">มองหน้าตรง</button>
+      <div id="info"></div>
+      <div class="muted" style="margin-top:6px;color:#a9bbb6">ลากซ้าย = หมุน · ล้อเมาส์ = ซูม · ลูกศรแดง = ทิศหน้าในเกม (+Z)</div>
+    </div>
+    <script type="module" src="/src/tools/modelViewer.ts"></script>
+  </body>
+</html>

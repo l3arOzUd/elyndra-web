@@ -1,0 +1,794 @@
+[
+ {
+  "level": 1,
+  "max_hp": 120,
+  "max_sp": 60,
+  "attack": 18,
+  "defense": 5,
+  "exp_to_next": 262
+ },
+ {
+  "level": 2,
+  "max_hp": 147,
+  "max_sp": 65,
+  "attack": 22,
+  "defense": 7,
+  "exp_to_next": 536
+ },
+ {
+  "level": 3,
+  "max_hp": 176,
+  "max_sp": 70,
+  "attack": 27,
+  "defense": 8,
+  "exp_to_next": 1008
+ },
+ {
+  "level": 4,
+  "max_hp": 206,
+  "max_sp": 75,
+  "attack": 31,
+  "defense": 10,
+  "exp_to_next": 1661
+ },
+ {
+  "level": 5,
+  "max_hp": 238,
+  "max_sp": 80,
+  "attack": 36,
+  "defense": 11,
+  "exp_to_next": 2640
+ },
+ {
+  "level": 6,
+  "max_hp": 273,
+  "max_sp": 85,
+  "attack": 40,
+  "defense": 13,
+  "exp_to_next": 3901
+ },
+ {
+  "level": 7,
+  "max_hp": 308,
+  "max_sp": 90,
+  "attack": 45,
+  "defense": 15,
+  "exp_to_next": 5476
+ },
+ {
+  "level": 8,
+  "max_hp": 346,
+  "max_sp": 95,
+  "attack": 50,
+  "defense": 16,
+  "exp_to_next": 7397
+ },
+ {
+  "level": 9,
+  "max_hp": 386,
+  "max_sp": 100,
+  "attack": 54,
+  "defense": 18,
+  "exp_to_next": 9697
+ },
+ {
+  "level": 10,
+  "max_hp": 427,
+  "max_sp": 105,
+  "attack": 59,
+  "defense": 19,
+  "exp_to_next": 12672
+ },
+ {
+  "level": 11,
+  "max_hp": 470,
+  "max_sp": 110,
+  "attack": 65,
+  "defense": 21,
+  "exp_to_next": 16161
+ },
+ {
+  "level": 12,
+  "max_hp": 515,
+  "max_sp": 115,
+  "attack": 70,
+  "defense": 23,
+  "exp_to_next": 20203
+ },
+ {
+  "level": 13,
+  "max_hp": 562,
+  "max_sp": 120,
+  "attack": 75,
+  "defense": 24,
+  "exp_to_next": 24837
+ },
+ {
+  "level": 14,
+  "max_hp": 610,
+  "max_sp": 125,
+  "attack": 80,
+  "defense": 26,
+  "exp_to_next": 30102
+ },
+ {
+  "level": 15,
+  "max_hp": 660,
+  "max_sp": 130,
+  "attack": 86,
+  "defense": 27,
+  "exp_to_next": 36036
+ },
+ {
+  "level": 16,
+  "max_hp": 713,
+  "max_sp": 135,
+  "attack": 91,
+  "defense": 29,
+  "exp_to_next": 41412
+ },
+ {
+  "level": 17,
+  "max_hp": 766,
+  "max_sp": 140,
+  "attack": 97,
+  "defense": 31,
+  "exp_to_next": 46628
+ },
+ {
+  "level": 18,
+  "max_hp": 822,
+  "max_sp": 145,
+  "attack": 102,
+  "defense": 32,
+  "exp_to_next": 52685
+ },
+ {
+  "level": 19,
+  "max_hp": 880,
+  "max_sp": 150,
+  "attack": 108,
+  "defense": 34,
+  "exp_to_next": 59094
+ },
+ {
+  "level": 20,
+  "max_hp": 939,
+  "max_sp": 155,
+  "attack": 114,
+  "defense": 35,
+  "exp_to_next": 65856
+ },
+ {
+  "level": 21,
+  "max_hp": 1000,
+  "max_sp": 160,
+  "attack": 120,
+  "defense": 37,
+  "exp_to_next": 72971
+ },
+ {
+  "level": 22,
+  "max_hp": 1063,
+  "max_sp": 165,
+  "attack": 126,
+  "defense": 39,
+  "exp_to_next": 80438
+ },
+ {
+  "level": 23,
+  "max_hp": 1128,
+  "max_sp": 170,
+  "attack": 132,
+  "defense": 40,
+  "exp_to_next": 88922
+ },
+ {
+  "level": 24,
+  "max_hp": 1194,
+  "max_sp": 175,
+  "attack": 138,
+  "defense": 42,
+  "exp_to_next": 97121
+ },
+ {
+  "level": 25,
+  "max_hp": 1262,
+  "max_sp": 180,
+  "attack": 145,
+  "defense": 43,
+  "exp_to_next": 105672
+ },
+ {
+  "level": 26,
+  "max_hp": 1333,
+  "max_sp": 185,
+  "attack": 151,
+  "defense": 45,
+  "exp_to_next": 115315
+ },
+ {
+  "level": 27,
+  "max_hp": 1404,
+  "max_sp": 190,
+  "attack": 158,
+  "defense": 47,
+  "exp_to_next": 125362
+ },
+ {
+  "level": 28,
+  "max_hp": 1478,
+  "max_sp": 195,
+  "attack": 164,
+  "defense": 48,
+  "exp_to_next": 135022
+ },
+ {
+  "level": 29,
+  "max_hp": 1554,
+  "max_sp": 200,
+  "attack": 171,
+  "defense": 50,
+  "exp_to_next": 145849
+ },
+ {
+  "level": 30,
+  "max_hp": 1631,
+  "max_sp": 205,
+  "attack": 178,
+  "defense": 51,
+  "exp_to_next": 157080
+ },
+ {
+  "level": 31,
+  "max_hp": 1710,
+  "max_sp": 210,
+  "attack": 185,
+  "defense": 53,
+  "exp_to_next": 168714
+ },
+ {
+  "level": 32,
+  "max_hp": 1791,
+  "max_sp": 215,
+  "attack": 191,
+  "defense": 55,
+  "exp_to_next": 180751
+ },
+ {
+  "level": 33,
+  "max_hp": 1874,
+  "max_sp": 220,
+  "attack": 198,
+  "defense": 56,
+  "exp_to_next": 193192
+ },
+ {
+  "level": 34,
+  "max_hp": 1958,
+  "max_sp": 225,
+  "attack": 206,
+  "defense": 58,
+  "exp_to_next": 206035
+ },
+ {
+  "level": 35,
+  "max_hp": 2044,
+  "max_sp": 230,
+  "attack": 213,
+  "defense": 59,
+  "exp_to_next": 220248
+ },
+ {
+  "level": 36,
+  "max_hp": 2133,
+  "max_sp": 235,
+  "attack": 220,
+  "defense": 61,
+  "exp_to_next": 233923
+ },
+ {
+  "level": 37,
+  "max_hp": 2222,
+  "max_sp": 240,
+  "attack": 228,
+  "defense": 63,
+  "exp_to_next": 248002
+ },
+ {
+  "level": 38,
+  "max_hp": 2314,
+  "max_sp": 245,
+  "attack": 235,
+  "defense": 64,
+  "exp_to_next": 263525
+ },
+ {
+  "level": 39,
+  "max_hp": 2408,
+  "max_sp": 250,
+  "attack": 243,
+  "defense": 66,
+  "exp_to_next": 279502
+ },
+ {
+  "level": 40,
+  "max_hp": 2503,
+  "max_sp": 255,
+  "attack": 250,
+  "defense": 67,
+  "exp_to_next": 294840
+ },
+ {
+  "level": 41,
+  "max_hp": 2600,
+  "max_sp": 260,
+  "attack": 258,
+  "defense": 69,
+  "exp_to_next": 311699
+ },
+ {
+  "level": 42,
+  "max_hp": 2699,
+  "max_sp": 265,
+  "attack": 266,
+  "defense": 71,
+  "exp_to_next": 329011
+ },
+ {
+  "level": 43,
+  "max_hp": 2800,
+  "max_sp": 270,
+  "attack": 274,
+  "defense": 72,
+  "exp_to_next": 345610
+ },
+ {
+  "level": 44,
+  "max_hp": 2902,
+  "max_sp": 275,
+  "attack": 282,
+  "defense": 74,
+  "exp_to_next": 363804
+ },
+ {
+  "level": 45,
+  "max_hp": 3006,
+  "max_sp": 280,
+  "attack": 290,
+  "defense": 75,
+  "exp_to_next": 382452
+ },
+ {
+  "level": 46,
+  "max_hp": 3113,
+  "max_sp": 285,
+  "attack": 298,
+  "defense": 77,
+  "exp_to_next": 401554
+ },
+ {
+  "level": 47,
+  "max_hp": 3220,
+  "max_sp": 290,
+  "attack": 306,
+  "defense": 79,
+  "exp_to_next": 421109
+ },
+ {
+  "level": 48,
+  "max_hp": 3330,
+  "max_sp": 295,
+  "attack": 315,
+  "defense": 80,
+  "exp_to_next": 441118
+ },
+ {
+  "level": 49,
+  "max_hp": 3442,
+  "max_sp": 300,
+  "attack": 323,
+  "defense": 82,
+  "exp_to_next": 461580
+ },
+ {
+  "level": 50,
+  "max_hp": 3555,
+  "max_sp": 305,
+  "attack": 332,
+  "defense": 83,
+  "exp_to_next": 483840
+ },
+ {
+  "level": 51,
+  "max_hp": 3670,
+  "max_sp": 310,
+  "attack": 341,
+  "defense": 85,
+  "exp_to_next": 505235
+ },
+ {
+  "level": 52,
+  "max_hp": 3787,
+  "max_sp": 315,
+  "attack": 349,
+  "defense": 87,
+  "exp_to_next": 527083
+ },
+ {
+  "level": 53,
+  "max_hp": 3906,
+  "max_sp": 320,
+  "attack": 358,
+  "defense": 88,
+  "exp_to_next": 550805
+ },
+ {
+  "level": 54,
+  "max_hp": 4026,
+  "max_sp": 325,
+  "attack": 367,
+  "defense": 90,
+  "exp_to_next": 573586
+ },
+ {
+  "level": 55,
+  "max_hp": 4148,
+  "max_sp": 330,
+  "attack": 376,
+  "defense": 91,
+  "exp_to_next": 598290
+ },
+ {
+  "level": 56,
+  "max_hp": 4273,
+  "max_sp": 335,
+  "attack": 385,
+  "defense": 93,
+  "exp_to_next": 622003
+ },
+ {
+  "level": 57,
+  "max_hp": 4398,
+  "max_sp": 340,
+  "attack": 394,
+  "defense": 95,
+  "exp_to_next": 647690
+ },
+ {
+  "level": 58,
+  "max_hp": 4526,
+  "max_sp": 345,
+  "attack": 404,
+  "defense": 96,
+  "exp_to_next": 672336
+ },
+ {
+  "level": 59,
+  "max_hp": 4656,
+  "max_sp": 350,
+  "attack": 413,
+  "defense": 98,
+  "exp_to_next": 699006
+ },
+ {
+  "level": 60,
+  "max_hp": 4787,
+  "max_sp": 355,
+  "attack": 422,
+  "defense": 99,
+  "exp_to_next": 726180
+ },
+ {
+  "level": 61,
+  "max_hp": 4920,
+  "max_sp": 360,
+  "attack": 432,
+  "defense": 101,
+  "exp_to_next": 753858
+ },
+ {
+  "level": 62,
+  "max_hp": 5055,
+  "max_sp": 365,
+  "attack": 442,
+  "defense": 103,
+  "exp_to_next": 780394
+ },
+ {
+  "level": 63,
+  "max_hp": 5192,
+  "max_sp": 370,
+  "attack": 451,
+  "defense": 104,
+  "exp_to_next": 809054
+ },
+ {
+  "level": 64,
+  "max_hp": 5330,
+  "max_sp": 375,
+  "attack": 461,
+  "defense": 106,
+  "exp_to_next": 838219
+ },
+ {
+  "level": 65,
+  "max_hp": 5470,
+  "max_sp": 380,
+  "attack": 471,
+  "defense": 107,
+  "exp_to_next": 867888
+ },
+ {
+  "level": 66,
+  "max_hp": 5613,
+  "max_sp": 385,
+  "attack": 481,
+  "defense": 109,
+  "exp_to_next": 898061
+ },
+ {
+  "level": 67,
+  "max_hp": 5756,
+  "max_sp": 390,
+  "attack": 491,
+  "defense": 111,
+  "exp_to_next": 928738
+ },
+ {
+  "level": 68,
+  "max_hp": 5902,
+  "max_sp": 395,
+  "attack": 501,
+  "defense": 112,
+  "exp_to_next": 959918
+ },
+ {
+  "level": 69,
+  "max_hp": 6050,
+  "max_sp": 400,
+  "attack": 512,
+  "defense": 114,
+  "exp_to_next": 993426
+ },
+ {
+  "level": 70,
+  "max_hp": 6199,
+  "max_sp": 405,
+  "attack": 522,
+  "defense": 115,
+  "exp_to_next": 1025640
+ },
+ {
+  "level": 71,
+  "max_hp": 6350,
+  "max_sp": 410,
+  "attack": 533,
+  "defense": 117,
+  "exp_to_next": 1058358
+ },
+ {
+  "level": 72,
+  "max_hp": 6503,
+  "max_sp": 415,
+  "attack": 543,
+  "defense": 119,
+  "exp_to_next": 1091580
+ },
+ {
+  "level": 73,
+  "max_hp": 6658,
+  "max_sp": 420,
+  "attack": 554,
+  "defense": 120,
+  "exp_to_next": 1127230
+ },
+ {
+  "level": 74,
+  "max_hp": 6814,
+  "max_sp": 425,
+  "attack": 564,
+  "defense": 122,
+  "exp_to_next": 1161485
+ },
+ {
+  "level": 75,
+  "max_hp": 6972,
+  "max_sp": 430,
+  "attack": 575,
+  "defense": 123,
+  "exp_to_next": 1198218
+ },
+ {
+  "level": 76,
+  "max_hp": 7133,
+  "max_sp": 435,
+  "attack": 586,
+  "defense": 125,
+  "exp_to_next": 1233506
+ },
+ {
+  "level": 77,
+  "max_hp": 7294,
+  "max_sp": 440,
+  "attack": 597,
+  "defense": 127,
+  "exp_to_next": 1271323
+ },
+ {
+  "level": 78,
+  "max_hp": 7458,
+  "max_sp": 445,
+  "attack": 608,
+  "defense": 128,
+  "exp_to_next": 1307645
+ },
+ {
+  "level": 79,
+  "max_hp": 7624,
+  "max_sp": 450,
+  "attack": 619,
+  "defense": 130,
+  "exp_to_next": 1346545
+ },
+ {
+  "level": 80,
+  "max_hp": 7791,
+  "max_sp": 455,
+  "attack": 631,
+  "defense": 131,
+  "exp_to_next": 1383900
+ },
+ {
+  "level": 81,
+  "max_hp": 7960,
+  "max_sp": 460,
+  "attack": 642,
+  "defense": 133,
+  "exp_to_next": 1423884
+ },
+ {
+  "level": 82,
+  "max_hp": 8131,
+  "max_sp": 465,
+  "attack": 653,
+  "defense": 135,
+  "exp_to_next": 1464422
+ },
+ {
+  "level": 83,
+  "max_hp": 8304,
+  "max_sp": 470,
+  "attack": 665,
+  "defense": 136,
+  "exp_to_next": 1503340
+ },
+ {
+  "level": 84,
+  "max_hp": 8478,
+  "max_sp": 475,
+  "attack": 677,
+  "defense": 138,
+  "exp_to_next": 1544962
+ },
+ {
+  "level": 85,
+  "max_hp": 8654,
+  "max_sp": 480,
+  "attack": 688,
+  "defense": 139,
+  "exp_to_next": 1587138
+ },
+ {
+  "level": 86,
+  "max_hp": 8833,
+  "max_sp": 485,
+  "attack": 700,
+  "defense": 141,
+  "exp_to_next": 1629869
+ },
+ {
+  "level": 87,
+  "max_hp": 9012,
+  "max_sp": 490,
+  "attack": 712,
+  "defense": 143,
+  "exp_to_next": 1673154
+ },
+ {
+  "level": 88,
+  "max_hp": 9194,
+  "max_sp": 495,
+  "attack": 724,
+  "defense": 144,
+  "exp_to_next": 1716994
+ },
+ {
+  "level": 89,
+  "max_hp": 9378,
+  "max_sp": 500,
+  "attack": 736,
+  "defense": 146,
+  "exp_to_next": 1761388
+ },
+ {
+  "level": 90,
+  "max_hp": 9563,
+  "max_sp": 505,
+  "attack": 748,
+  "defense": 147,
+  "exp_to_next": 1806336
+ },
+ {
+  "level": 91,
+  "max_hp": 9750,
+  "max_sp": 510,
+  "attack": 761,
+  "defense": 149,
+  "exp_to_next": 1851839
+ },
+ {
+  "level": 92,
+  "max_hp": 9939,
+  "max_sp": 515,
+  "attack": 773,
+  "defense": 151,
+  "exp_to_next": 1897896
+ },
+ {
+  "level": 93,
+  "max_hp": 10130,
+  "max_sp": 520,
+  "attack": 785,
+  "defense": 152,
+  "exp_to_next": 1944508
+ },
+ {
+  "level": 94,
+  "max_hp": 10322,
+  "max_sp": 525,
+  "attack": 798,
+  "defense": 154,
+  "exp_to_next": 1991674
+ },
+ {
+  "level": 95,
+  "max_hp": 10516,
+  "max_sp": 530,
+  "attack": 810,
+  "defense": 155,
+  "exp_to_next": 2039394
+ },
+ {
+  "level": 96,
+  "max_hp": 10713,
+  "max_sp": 535,
+  "attack": 823,
+  "defense": 157,
+  "exp_to_next": 2090172
+ },
+ {
+  "level": 97,
+  "max_hp": 10910,
+  "max_sp": 540,
+  "attack": 836,
+  "defense": 159,
+  "exp_to_next": 2139026
+ },
+ {
+  "level": 98,
+  "max_hp": 11110,
+  "max_sp": 545,
+  "attack": 849,
+  "defense": 160,
+  "exp_to_next": 2188435
+ },
+ {
+  "level": 99,
+  "max_hp": 11312,
+  "max_sp": 550,
+  "attack": 862,
+  "defense": 162,
+  "exp_to_next": 0
+ }
+]

@@ -1,0 +1,135 @@
+[
+ {
+  "id": "lum",
+  "name": "Lumeris",
+  "capital": "Avelorn",
+  "town_map_id": "lum_town_01",
+  "dungeon_map_id": "lum_dun_01",
+  "level_range": [
+   1,
+   20
+  ],
+  "theme": "Meadows, windmills, energy pipes and cream-stone towns: the gentle edge of Aethrion's ruin.",
+  "ecology": "Seed and spore swarms on irrigated meadow, resin mites and gliders along the trail, reptiles and boars in the uplands, dust moths at the windmill, amphibians along Moonbrook, and rot spreading from a failing pump in the south.",
+  "palette": {
+   "grass": "#6a9a5c",
+   "dirt": "#b4a37c",
+   "accent": "#5ed8e6",
+   "fog": "#1d2f27"
+  }
+ },
+ {
+  "id": "ver",
+  "name": "Verdantis",
+  "capital": "Sylvara",
+  "town_map_id": "ver_town_01",
+  "dungeon_map_id": "ver_dun_01",
+  "level_range": [
+   15,
+   40
+  ],
+  "theme": "Giant-tree forest, bio-machines and jade light: where Aethrion grafted its machines into the living wood.",
+  "ecology": "Grafted bio-machines on the forest floor, amphibians and sap drones on Mossbridge's creek, moths and hounds on the canopy terraces, vine constructs in the orchards, gardeners and hares at the presses, root sentinels and antlered engines under the elder trees, and spores spreading from the failing Heartwood Engine in the east.",
+  "palette": {
+   "grass": "#3f7a4a",
+   "dirt": "#7a6648",
+   "accent": "#5cf0a8",
+   "fog": "#0f2a1f"
+  }
+ },
+ {
+  "id": "sol",
+  "name": "Solenia",
+  "capital": "Duskhar",
+  "town_map_id": "sol_town_01",
+  "dungeon_map_id": "sol_dun_01",
+  "level_range": [
+   25,
+   55
+  ],
+  "theme": "Desert, brass observatories and ancient canals: Aethrion's solar network, still aiming the sun.",
+  "ecology": "Reptiles and jackals on the dunes, glass insects and survey kites on the caravan roads, sandstone sentries and basilisks where lightning fused the sand, bronze constructs and their acolytes round the Sun Dial, water-striders on the last canal, and the dead surveyors and lens-drones of the Heliostat Vault on its causeway.",
+  "palette": {
+   "grass": "#c9a45c",
+   "dirt": "#d8b77a",
+   "accent": "#f0c050",
+   "fog": "#3a2a18"
+  }
+ },
+ {
+  "id": "tha",
+  "name": "Thalassia",
+  "capital": "Port Merrow",
+  "town_map_id": "tha_town_01",
+  "dungeon_map_id": "tha_dun_01",
+  "level_range": [
+   35,
+   65
+  ],
+  "theme": "Islands, harbours, tidewheels and drowned stations: Aethrion's sea-works, still turning under the waves.",
+  "ecology": "Shore animals, gull flocks and coral crabs on the beaches, spitting coral on the reef, kelp and pump constructs round the tidewheels, borers in the wrecks, skates and relay guardians on the flats, storm-riders and turtles on the headland, and the relay's drones and jellies below.",
+  "palette": {
+   "grass": "#7fb3a0",
+   "dirt": "#d8c79a",
+   "accent": "#3fd0e0",
+   "fog": "#16303a"
+  }
+ },
+ {
+  "id": "cry",
+  "name": "Crystallis",
+  "capital": "Vaelspire",
+  "town_map_id": "cry_town_01",
+  "dungeon_map_id": "cry_dun_01",
+  "level_range": [
+   45,
+   75
+  ],
+  "theme": "Snowy mountains, research labs and ice crystal: Aethrion's archive, frozen with its machines still running.",
+  "ecology": "Crystal insects, hares and light-wisps at the treeline, glass-horned rams on the ridge, coolant serpents and gear walkers in the coil valley, a plough mech and vault keepers on the pass, reflections and grazers on the mirror lake, and the Archive's sentries and data-ghosts round the White Circuit.",
+  "palette": {
+   "grass": "#cfe0ea",
+   "dirt": "#9fb4c4",
+   "accent": "#8fe8ff",
+   "fog": "#1b2636"
+  }
+ },
+ {
+  "id": "emb",
+  "name": "Emberfall",
+  "capital": "Cindervale",
+  "town_map_id": "emb_town_01",
+  "dungeon_map_id": "emb_dun_01",
+  "level_range": [
+   60,
+   90
+  ],
+  "theme": "Lava, foundries and iron bridges: Aethrion's industrial heart, still running without anyone at the controls.",
+  "ecology": "Ash grazers and slag toads on the cooled plains, imps and skinks wherever the lava is live, foundry constructs from the forges to the bridges, and a molten foundry intelligence at the bottom of Furnace Zero driving them all.",
+  "palette": {
+   "grass": "#5a4a42",
+   "dirt": "#7a5a46",
+   "accent": "#ff7a2e",
+   "fog": "#2a1410"
+  }
+ },
+ {
+  "id": "noc",
+  "name": "Nocthaven",
+  "capital": "Umbracrest",
+  "town_map_id": "noc_town_01",
+  "dungeon_map_id": "noc_dun_01",
+  "level_range": [
+   75,
+   99
+  ],
+  "theme": "An abandoned megacity under a violet energy grid, guarded by sentinel automatons: the seat of the Meridian Lattice and the end of the Wayfarer's road.",
+  "ecology": "Light-eaters and scavengers in the dark outskirts, possessed haulers on the old routes, maintenance constructs in the rail yards, shadow spilling from the Veil Rift, and the Lattice's own sentinels, executioners and glyphs thickening toward the Heart.",
+  "palette": {
+   "grass": "#3c3a52",
+   "dirt": "#55506a",
+   "accent": "#a86bff",
+   "fog": "#120e22"
+  }
+ }
+]

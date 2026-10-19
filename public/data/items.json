@@ -1,0 +1,1871 @@
+[
+ {
+  "id": "itm_0001",
+  "name": "Moss Fiber",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 3,
+  "stack_max": 999,
+  "description": "Springy moss stripped from a Mosskin shell. Weaving stock."
+ },
+ {
+  "id": "itm_0002",
+  "name": "Seed Husk",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 14,
+  "stack_max": 999,
+  "description": "The hard outer husk of a Mosskin seed."
+ },
+ {
+  "id": "itm_0003",
+  "name": "Spore Dust",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 4,
+  "stack_max": 999,
+  "description": "Fine luminous spores. Alchemists' filler."
+ },
+ {
+  "id": "itm_0004",
+  "name": "Soft Mycelium",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 18,
+  "stack_max": 999,
+  "description": "A felt of fungal threads; light padding."
+ },
+ {
+  "id": "itm_0005",
+  "name": "Amber Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 5,
+  "stack_max": 999,
+  "description": "A chip of Ambermite shell resin."
+ },
+ {
+  "id": "itm_0006",
+  "name": "Resin Shell",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 23,
+  "stack_max": 999,
+  "description": "An intact Ambermite carapace plate."
+ },
+ {
+  "id": "itm_0007",
+  "name": "Glider Fur",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 5,
+  "stack_max": 999,
+  "description": "Silky fur from a Lunari's glide membrane."
+ },
+ {
+  "id": "itm_0008",
+  "name": "Moonleaf",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 23,
+  "stack_max": 999,
+  "description": "A Lunari ear-leaf that shines faintly at night."
+ },
+ {
+  "id": "itm_0009",
+  "name": "Crag Scale",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 7,
+  "stack_max": 999,
+  "description": "A slate plate from a Craglet's back."
+ },
+ {
+  "id": "itm_0010",
+  "name": "Dry Claw",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 32,
+  "stack_max": 999,
+  "description": "A sun-dried Craglet claw; tough as flint."
+ },
+ {
+  "id": "itm_0011",
+  "name": "Briar Spine",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 9,
+  "stack_max": 999,
+  "description": "A woody thorn from a Thornback."
+ },
+ {
+  "id": "itm_0012",
+  "name": "Thick Hide",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 41,
+  "stack_max": 999,
+  "description": "Bark-tough Thornback hide."
+ },
+ {
+  "id": "itm_0013",
+  "name": "Wing Membrane",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 10,
+  "stack_max": 999,
+  "description": "A dusty Dustwing wing panel."
+ },
+ {
+  "id": "itm_0014",
+  "name": "Dust Powder",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 45,
+  "stack_max": 999,
+  "description": "Wing powder that drifts upward on its own."
+ },
+ {
+  "id": "itm_0015",
+  "name": "Brook Scale",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 13,
+  "stack_max": 999,
+  "description": "A clear, coin-sized Brookfin scale."
+ },
+ {
+  "id": "itm_0016",
+  "name": "Clear Gill",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 59,
+  "stack_max": 999,
+  "description": "A Brookfin gill veined with faint aether."
+ },
+ {
+  "id": "itm_0017",
+  "name": "Reed Fiber",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 15,
+  "stack_max": 999,
+  "description": "Tough fibre from a Reedstalker's body."
+ },
+ {
+  "id": "itm_0018",
+  "name": "Marsh Sap",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 68,
+  "stack_max": 999,
+  "description": "Sticky sap that hardens in air."
+ },
+ {
+  "id": "itm_0019",
+  "name": "Rotwood",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 17,
+  "stack_max": 999,
+  "description": "Spongy root wood, oddly warm."
+ },
+ {
+  "id": "itm_0020",
+  "name": "Sap Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 77,
+  "stack_max": 999,
+  "description": "The glowing knot at a Rotroot's heart."
+ },
+ {
+  "id": "itm_0021",
+  "name": "Bark Plate",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 20,
+  "stack_max": 999,
+  "description": "Bark grown over Aethrion armour plate."
+ },
+ {
+  "id": "itm_0022",
+  "name": "Copper Joint",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 90,
+  "stack_max": 999,
+  "description": "A working Aethrion copper joint."
+ },
+ {
+  "id": "itm_0023",
+  "name": "Graftling Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 16,
+  "stack_max": 999,
+  "description": "A hinged twig from a Graftling. Kindling, or a cheap splint."
+ },
+ {
+  "id": "itm_0024",
+  "name": "Graftling Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 72,
+  "stack_max": 999,
+  "description": "The brass hinge at a Graftling's heart, still oiled with sap."
+ },
+ {
+  "id": "itm_0025",
+  "name": "Sapdrone Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 20,
+  "stack_max": 999,
+  "description": "A glassy wing panel from a Sapdrone."
+ },
+ {
+  "id": "itm_0026",
+  "name": "Sapdrone Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 90,
+  "stack_max": 999,
+  "description": "A Sapdrone's sap tank, half full and still warm."
+ },
+ {
+  "id": "itm_0027",
+  "name": "Vinecrawler Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 25,
+  "stack_max": 999,
+  "description": "A length of vine wound round a brass gear."
+ },
+ {
+  "id": "itm_0028",
+  "name": "Vinecrawler Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 113,
+  "stack_max": 999,
+  "description": "The cracked jade lens that steered a Vinecrawler."
+ },
+ {
+  "id": "itm_0029",
+  "name": "Root Sentinel Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 31,
+  "stack_max": 999,
+  "description": "A root-laced stone plate from a Root Sentinel."
+ },
+ {
+  "id": "itm_0030",
+  "name": "Root Sentinel Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 140,
+  "stack_max": 999,
+  "description": "A Root Sentinel's lantern eye, jade light still flickering."
+ },
+ {
+  "id": "itm_0031",
+  "name": "Sandcoil Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 25,
+  "stack_max": 999,
+  "description": "A gritty scale from a Sandcoil, warm to the touch."
+ },
+ {
+  "id": "itm_0032",
+  "name": "Sandcoil Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 113,
+  "stack_max": 999,
+  "description": "The ember-bright gland that keeps a Sandcoil warm at night."
+ },
+ {
+  "id": "itm_0033",
+  "name": "Glass Scarab Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 29,
+  "stack_max": 999,
+  "description": "A chip of amber-glass shell."
+ },
+ {
+  "id": "itm_0034",
+  "name": "Glass Scarab Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 131,
+  "stack_max": 999,
+  "description": "The glowing ember a Glass Scarab rolls its glass around."
+ },
+ {
+  "id": "itm_0035",
+  "name": "Dune Sentry Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 34,
+  "stack_max": 999,
+  "description": "A carved sandstone block, brass band still attached."
+ },
+ {
+  "id": "itm_0036",
+  "name": "Dune Sentry Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 153,
+  "stack_max": 999,
+  "description": "A Sentry's visor-lamp, still glowing orange."
+ },
+ {
+  "id": "itm_0037",
+  "name": "Sun Warden Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 40,
+  "stack_max": 999,
+  "description": "A bronze plate from a Sun Warden, sun-hot."
+ },
+ {
+  "id": "itm_0038",
+  "name": "Sun Warden Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 180,
+  "stack_max": 999,
+  "description": "One mirror from a Warden's solar ring."
+ },
+ {
+  "id": "itm_0039",
+  "name": "Tidehopper Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 34,
+  "stack_max": 999,
+  "description": "A chip of a Tidehopper's back-plate, sea-smoothed."
+ },
+ {
+  "id": "itm_0040",
+  "name": "Tidehopper Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 153,
+  "stack_max": 999,
+  "description": "The springy tendon-knot from a Tidehopper's hind leg; it still twitches."
+ },
+ {
+  "id": "itm_0041",
+  "name": "Coral Claw Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 38,
+  "stack_max": 999,
+  "description": "A broken branch of the coral a Coral Claw wears."
+ },
+ {
+  "id": "itm_0042",
+  "name": "Coral Claw Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 171,
+  "stack_max": 999,
+  "description": "An intact crusher claw, coral and shell grown together."
+ },
+ {
+  "id": "itm_0043",
+  "name": "Brine Automaton Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 43,
+  "stack_max": 999,
+  "description": "A verdigrised copper panel from a Brine Automaton."
+ },
+ {
+  "id": "itm_0044",
+  "name": "Brine Automaton Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 194,
+  "stack_max": 999,
+  "description": "A working pressure valve, still holding brine."
+ },
+ {
+  "id": "itm_0045",
+  "name": "Relay Guardian Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 49,
+  "stack_max": 999,
+  "description": "A ribbed hose section from a Relay Guardian."
+ },
+ {
+  "id": "itm_0046",
+  "name": "Relay Guardian Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 221,
+  "stack_max": 999,
+  "description": "A sonar crystal that hums when held near water."
+ },
+ {
+  "id": "itm_0047",
+  "name": "Frost Mite Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 43,
+  "stack_max": 999,
+  "description": "A crystal splinter from a Frost Mite's shell."
+ },
+ {
+  "id": "itm_0048",
+  "name": "Frost Mite Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 194,
+  "stack_max": 999,
+  "description": "A mite's glowing core, full of a slow-thawing gel."
+ },
+ {
+  "id": "itm_0049",
+  "name": "Prism Wisp Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 47,
+  "stack_max": 999,
+  "description": "A shard of a wisp's crystal frame; it splits light."
+ },
+ {
+  "id": "itm_0050",
+  "name": "Prism Wisp Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 212,
+  "stack_max": 999,
+  "description": "A wisp's caught light, still warm in its frame."
+ },
+ {
+  "id": "itm_0051",
+  "name": "Icegear Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 52,
+  "stack_max": 999,
+  "description": "A frozen cog from an Icegear's body."
+ },
+ {
+  "id": "itm_0052",
+  "name": "Icegear Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 234,
+  "stack_max": 999,
+  "description": "An Icegear's drive gear-train, still meshing."
+ },
+ {
+  "id": "itm_0053",
+  "name": "Archive Keeper Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 58,
+  "stack_max": 999,
+  "description": "A facet of a keeper's crystal armour."
+ },
+ {
+  "id": "itm_0054",
+  "name": "Archive Keeper Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 261,
+  "stack_max": 999,
+  "description": "A keeper's data-slate; glyphs still scroll across it."
+ },
+ {
+  "id": "itm_0055",
+  "name": "Ashcrawler Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 57,
+  "stack_max": 999,
+  "description": "A plate of ash-crusted Ashcrawler shell, still warm."
+ },
+ {
+  "id": "itm_0056",
+  "name": "Ashcrawler Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 257,
+  "stack_max": 999,
+  "description": "The ember that glows between an Ashcrawler's plates; it never quite goes out."
+ },
+ {
+  "id": "itm_0057",
+  "name": "Cinder Imp Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 61,
+  "stack_max": 999,
+  "description": "A chunk of charcoal body from a Cinder Imp."
+ },
+ {
+  "id": "itm_0058",
+  "name": "Cinder Imp Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 275,
+  "stack_max": 999,
+  "description": "The hot coal at a Cinder Imp's heart. Wrap it before pocketing it."
+ },
+ {
+  "id": "itm_0059",
+  "name": "Smelt Hound Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 65,
+  "stack_max": 999,
+  "description": "A riveted iron plate from a Smelt Hound's flank."
+ },
+ {
+  "id": "itm_0060",
+  "name": "Smelt Hound Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 293,
+  "stack_max": 999,
+  "description": "A Smelt Hound's molten core in its ceramic housing."
+ },
+ {
+  "id": "itm_0061",
+  "name": "Furnace Knight Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 71,
+  "stack_max": 999,
+  "description": "A scorched plate of Furnace Knight armour."
+ },
+ {
+  "id": "itm_0062",
+  "name": "Furnace Knight Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 320,
+  "stack_max": 999,
+  "description": "The firebox regulator from a Furnace Knight's breastplate."
+ },
+ {
+  "id": "itm_0063",
+  "name": "Null Wisp Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 70,
+  "stack_max": 999,
+  "description": "A dim shard of condensed null light. Cold to the touch."
+ },
+ {
+  "id": "itm_0064",
+  "name": "Null Wisp Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 315,
+  "stack_max": 999,
+  "description": "The hollow white heart of a Null Wisp, still drinking the light around it."
+ },
+ {
+  "id": "itm_0065",
+  "name": "Shade Carrier Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 74,
+  "stack_max": 999,
+  "description": "A dented panel from a Shade Carrier's cargo hull."
+ },
+ {
+  "id": "itm_0066",
+  "name": "Shade Carrier Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 333,
+  "stack_max": 999,
+  "description": "A hauler's route computer, still murmuring stop names."
+ },
+ {
+  "id": "itm_0067",
+  "name": "Lattice Drone Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 79,
+  "stack_max": 999,
+  "description": "A hexagonal frame segment from a Lattice Drone."
+ },
+ {
+  "id": "itm_0068",
+  "name": "Lattice Drone Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 356,
+  "stack_max": 999,
+  "description": "A drone's lattice core, faintly humming."
+ },
+ {
+  "id": "itm_0069",
+  "name": "Meridian Executor Fragment",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 85,
+  "stack_max": 999,
+  "description": "A shard of an Executor's black ceramic shell."
+ },
+ {
+  "id": "itm_0070",
+  "name": "Meridian Executor Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 383,
+  "stack_max": 999,
+  "description": "The slit-mask lens of an Executor, its light gone out."
+ },
+ {
+  "id": "itm_0071",
+  "name": "Dew Pearl",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 120,
+  "stack_max": 999,
+  "description": "A pearl of condensed aether dew, found in one Mosskin in hundreds."
+ },
+ {
+  "id": "itm_0072",
+  "name": "Fungal Core",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 160,
+  "stack_max": 999,
+  "description": "The dense heart of an old Sporeling colony."
+ },
+ {
+  "id": "itm_0073",
+  "name": "Aetherite Shard",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 50,
+  "stack_max": 999,
+  "description": "A splinter of Aetherite, the crystal that ran Aethrion. Every artificer wants them."
+ },
+ {
+  "id": "itm_0074",
+  "name": "Copper Gear",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 32,
+  "stack_max": 999,
+  "description": "A small Aethrion gear, still true. Craglets swallow them; Barkwardens are made of them."
+ },
+ {
+  "id": "itm_0075",
+  "name": "Field Ration",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 3,
+  "stack_max": 99,
+  "description": "Hard bread and dried fruit. Restores 10% HP.",
+  "use": {
+   "heal_hp_pct": 10,
+   "cooldown_ms": 1000
+  }
+ },
+ {
+  "id": "itm_0076",
+  "name": "Minor Vital Tonic",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 8,
+  "stack_max": 99,
+  "description": "A bitter green draught. Restores 25% HP.",
+  "use": {
+   "heal_hp_pct": 25,
+   "cooldown_ms": 1500
+  }
+ },
+ {
+  "id": "itm_0077",
+  "name": "Minor Focus Tonic",
+  "category": "consumable",
+  "rarity": "common",
+  "sell_price": 10,
+  "stack_max": 99,
+  "description": "A cool blue draught. Restores 30% SP.",
+  "use": {
+   "heal_sp_pct": 30,
+   "cooldown_ms": 1500
+  }
+ },
+ {
+  "id": "itm_0078",
+  "name": "Traveler Boots",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 40,
+  "stack_max": 1,
+  "description": "Moss-lined boots. The first thing every Wayfarer crafts.",
+  "equip": {
+   "slot": "boots",
+   "defense": 3,
+   "max_hp": 20,
+   "min_level": 1
+  }
+ },
+ {
+  "id": "itm_0079",
+  "name": "Leafweave Coat",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 150,
+  "stack_max": 1,
+  "description": "Glider fur woven on mycelium felt.",
+  "equip": {
+   "slot": "armor",
+   "defense": 7,
+   "max_hp": 60,
+   "min_level": 5
+  }
+ },
+ {
+  "id": "itm_0080",
+  "name": "Copper Saber",
+  "category": "equipment",
+  "rarity": "uncommon",
+  "sell_price": 180,
+  "stack_max": 1,
+  "description": "Crag-scale blade on a copper-gear hilt. Vanguard.",
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "attack": 14,
+   "min_level": 7
+  }
+ },
+ {
+  "id": "itm_0081",
+  "name": "Surveyor Bow",
+  "category": "equipment",
+  "rarity": "uncommon",
+  "sell_price": 260,
+  "stack_max": 1,
+  "description": "Briar-spine bow strung with wing membrane. Strider.",
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "attack": 13,
+   "min_level": 9
+  }
+ },
+ {
+  "id": "itm_0082",
+  "name": "Aether Rod",
+  "category": "equipment",
+  "rarity": "uncommon",
+  "sell_price": 360,
+  "stack_max": 1,
+  "description": "A brook-scale rod tipped with Aetherite. Arcanist.",
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "attack": 12,
+   "min_level": 12
+  }
+ },
+ {
+  "id": "itm_0083",
+  "name": "Guild Pass",
+  "category": "quest",
+  "rarity": "uncommon",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "Wayfarer Guild warrant. Opens Hollowroot Cavern's lift."
+ },
+ {
+  "id": "itm_0084",
+  "name": "Resin Heart",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 200,
+  "stack_max": 999,
+  "description": "A perfect amber bead from the core of an Ambermite colony."
+ },
+ {
+  "id": "itm_0085",
+  "name": "Hollowroot Heartwood",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 800,
+  "stack_max": 999,
+  "description": "Wood from the Warden's core, still pulsing with aether."
+ },
+ {
+  "id": "itm_0100",
+  "name": "Newt Slick",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 999,
+  "description": "Slippery skin-oil from a Mossback Newt. Tonic makers' base."
+ },
+ {
+  "id": "itm_0101",
+  "name": "Moss Mantle",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 81,
+  "stack_max": 999,
+  "description": "An intact moss pelt from a Newt's back; it never dries out."
+ },
+ {
+  "id": "itm_0102",
+  "name": "Jadewing Scale",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 22,
+  "stack_max": 999,
+  "description": "A scale of jade wing-dust that glows for days."
+ },
+ {
+  "id": "itm_0103",
+  "name": "Glowdust Sac",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 99,
+  "stack_max": 999,
+  "description": "The gland a Jadewing Moth fires its bolts from."
+ },
+ {
+  "id": "itm_0104",
+  "name": "Barkhound Plate",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 23,
+  "stack_max": 999,
+  "description": "A bark plate shed from a Barkhound's shoulder."
+ },
+ {
+  "id": "itm_0105",
+  "name": "Ironbark Fang",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 104,
+  "stack_max": 999,
+  "description": "A wooden fang as hard as iron."
+ },
+ {
+  "id": "itm_0106",
+  "name": "Pruning Blade",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 26,
+  "stack_max": 999,
+  "description": "A worn shear-blade from a Pruning Tender."
+ },
+ {
+  "id": "itm_0107",
+  "name": "Graft Spindle",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 117,
+  "stack_max": 999,
+  "description": "The spindle that winds a Tender's grafting tape; precise Aethrion work."
+ },
+ {
+  "id": "itm_0108",
+  "name": "Thistle Fur",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 28,
+  "stack_max": 999,
+  "description": "A tuft of burr-studded Thistlehare fur."
+ },
+ {
+  "id": "itm_0109",
+  "name": "Cottontail Burr",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 126,
+  "stack_max": 999,
+  "description": "A Thistlehare's tail burr, packed with seeds."
+ },
+ {
+  "id": "itm_0110",
+  "name": "Antler Coil",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 33,
+  "stack_max": 999,
+  "description": "A copper coil grown through a branch of antler."
+ },
+ {
+  "id": "itm_0111",
+  "name": "Engine Antler",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 149,
+  "stack_max": 999,
+  "description": "A whole antler tine, coils intact; it hums when held."
+ },
+ {
+  "id": "itm_0112",
+  "name": "Bloat Membrane",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 34,
+  "stack_max": 999,
+  "description": "Violet skin from a burst Sporebloat."
+ },
+ {
+  "id": "itm_0113",
+  "name": "Spore Bladder",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 153,
+  "stack_max": 999,
+  "description": "A sealed Sporebloat bladder. Handle gently."
+ },
+ {
+  "id": "itm_0114",
+  "name": "Matron Mycelium",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 34,
+  "stack_max": 999,
+  "description": "A felt of threads from a Spore Matron's stalk."
+ },
+ {
+  "id": "itm_0115",
+  "name": "Spore Lantern",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 153,
+  "stack_max": 999,
+  "description": "One of the jade lanterns that hang under a Matron's cap."
+ },
+ {
+  "id": "itm_0116",
+  "name": "Piston Bark",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 36,
+  "stack_max": 999,
+  "description": "Polished heartwood plate from a Pistonguard."
+ },
+ {
+  "id": "itm_0117",
+  "name": "Heartwood Piston",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 162,
+  "stack_max": 999,
+  "description": "A working piston, sleeved in heartwood."
+ },
+ {
+  "id": "itm_0118",
+  "name": "Living Jade",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 1040,
+  "stack_max": 999,
+  "description": "Sap that has set into glowing jade around a thread of aether. Verdantis's prize; Sapdrones, Tenders and Sentinels carry it."
+ },
+ {
+  "id": "itm_0119",
+  "name": "Regent's Heartspring",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 1520,
+  "stack_max": 999,
+  "description": "The mainspring of the Heartwood Engine's pump, grown through with living wood."
+ },
+ {
+  "id": "itm_0130",
+  "name": "Ochre Pelt",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 27,
+  "stack_max": 999,
+  "description": "A dusty jackal pelt. Tonic makers render it for oil."
+ },
+ {
+  "id": "itm_0131",
+  "name": "Caravan Tag",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 122,
+  "stack_max": 999,
+  "description": "A brass tag from a long-lost caravan, worn by a jackal. Collectors pay for them."
+ },
+ {
+  "id": "itm_0132",
+  "name": "Kite Foil",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 31,
+  "stack_max": 999,
+  "description": "A sheet of brass foil from a Brass Kite's wing."
+ },
+ {
+  "id": "itm_0133",
+  "name": "Survey Lens",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 140,
+  "stack_max": 999,
+  "description": "A Brass Kite's nose lens, still focused."
+ },
+ {
+  "id": "itm_0134",
+  "name": "Basilisk Scale",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 35,
+  "stack_max": 999,
+  "description": "A ridged, sun-baked basilisk scale."
+ },
+ {
+  "id": "itm_0135",
+  "name": "Glasstail Club",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 158,
+  "stack_max": 999,
+  "description": "The glowing glass club from a basilisk's tail."
+ },
+ {
+  "id": "itm_0136",
+  "name": "Gnomon Wire",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 37,
+  "stack_max": 999,
+  "description": "Fine brass wire from an Acolyte's calibrating arms."
+ },
+ {
+  "id": "itm_0137",
+  "name": "Mirror Palm",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 167,
+  "stack_max": 999,
+  "description": "An Acolyte's mirror-plate hand."
+ },
+ {
+  "id": "itm_0138",
+  "name": "Strider Leg",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 42,
+  "stack_max": 999,
+  "description": "A long, hollow Canal Strider leg."
+ },
+ {
+  "id": "itm_0139",
+  "name": "Silt Pearl",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 189,
+  "stack_max": 999,
+  "description": "A pearl a Strider grows from canal silt."
+ },
+ {
+  "id": "itm_0140",
+  "name": "Grave Wrap",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 44,
+  "stack_max": 999,
+  "description": "A strip of a Revenant's burial wrapping."
+ },
+ {
+  "id": "itm_0141",
+  "name": "Surveyor's Lamp",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 198,
+  "stack_max": 999,
+  "description": "The dim lamp a Dust Revenant carries. It never goes out."
+ },
+ {
+  "id": "itm_0142",
+  "name": "Colossus Sandstone",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 46,
+  "stack_max": 999,
+  "description": "A slab of the Colossus's body, carved with causeway marks."
+ },
+ {
+  "id": "itm_0143",
+  "name": "Colossus Gear-Heart",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 207,
+  "stack_max": 999,
+  "description": "The gear that drives a Colossus, big as a shield."
+ },
+ {
+  "id": "itm_0144",
+  "name": "Prism Shard",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 47,
+  "stack_max": 999,
+  "description": "A splinter of a Lens-drone's prism."
+ },
+ {
+  "id": "itm_0145",
+  "name": "Focusing Lens",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 212,
+  "stack_max": 999,
+  "description": "A whole Lens-drone prism, focused to a pinpoint."
+ },
+ {
+  "id": "itm_0146",
+  "name": "Mirror Plate",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 50,
+  "stack_max": 999,
+  "description": "A polished mirror-bronze plate from a Mirrorguard."
+ },
+ {
+  "id": "itm_0147",
+  "name": "Mirrorguard Gimbal",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 225,
+  "stack_max": 999,
+  "description": "The gimbal that aims a Mirrorguard's shield-mirror."
+ },
+ {
+  "id": "itm_0148",
+  "name": "Sunfire Glass",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 1480,
+  "stack_max": 999,
+  "description": "Desert glass that trapped a bolt of focused sunlight; it glows by itself. Solenia's prize: Glass Scarabs, Basilisks and Lens-drones carry it."
+ },
+ {
+  "id": "itm_0149",
+  "name": "Sovereign's Crown Lens",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 2080,
+  "stack_max": 999,
+  "description": "The master lens from the Heliostat Sovereign's crown."
+ },
+ {
+  "id": "itm_0150",
+  "name": "Heliostat Key Prism",
+  "category": "quest",
+  "rarity": "uncommon",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "A prism cut to the Heliostat Vault's lock. The Guild gives it to Wayfarers who clear the Causeway."
+ },
+ {
+  "id": "itm_0160",
+  "name": "Skimmer Plume",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 36,
+  "stack_max": 999,
+  "description": "A brass-tinted flight feather from a Gullwing Skimmer."
+ },
+ {
+  "id": "itm_0161",
+  "name": "Storm Quill",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 162,
+  "stack_max": 999,
+  "description": "A crest feather that stiffens before a storm."
+ },
+ {
+  "id": "itm_0162",
+  "name": "Polyp Barb",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 40,
+  "stack_max": 999,
+  "description": "A spent stinging barb; handle by the base."
+ },
+ {
+  "id": "itm_0163",
+  "name": "Stinging Polyp Sac",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 180,
+  "stack_max": 999,
+  "description": "A full venom sac from a Polyp Spitter's crown."
+ },
+ {
+  "id": "itm_0164",
+  "name": "Kelp Frond",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 42,
+  "stack_max": 999,
+  "description": "A broad frond from a Kelp Tender. Edible, if you're hungry."
+ },
+ {
+  "id": "itm_0165",
+  "name": "Tender Bulb",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 189,
+  "stack_max": 999,
+  "description": "The glowing float bulb of a Kelp Tender's head."
+ },
+ {
+  "id": "itm_0166",
+  "name": "Borer Shell",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 46,
+  "stack_max": 999,
+  "description": "The drill-shell from a Hullborer's head."
+ },
+ {
+  "id": "itm_0167",
+  "name": "Borer Rasp",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 207,
+  "stack_max": 999,
+  "description": "A Hullborer's rasping tooth-ribbon; it files copper."
+ },
+ {
+  "id": "itm_0168",
+  "name": "Skate Leather",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 50,
+  "stack_max": 999,
+  "description": "Pearlescent skin from a Pearl Skate's back."
+ },
+ {
+  "id": "itm_0169",
+  "name": "Skate Barb",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 225,
+  "stack_max": 999,
+  "description": "The serrated tail barb of a Pearl Skate."
+ },
+ {
+  "id": "itm_0170",
+  "name": "Hull Scute",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 52,
+  "stack_max": 999,
+  "description": "A shell scute with a rivet grown into it."
+ },
+ {
+  "id": "itm_0171",
+  "name": "Stormshell Plate",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 234,
+  "stack_max": 999,
+  "description": "A whole shell plate fused with Aethrion hull copper."
+ },
+ {
+  "id": "itm_0172",
+  "name": "Ray Wing Hide",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 54,
+  "stack_max": 999,
+  "description": "A strip of Squall Ray wing that holds a static charge."
+ },
+ {
+  "id": "itm_0173",
+  "name": "Charged Stinger",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 243,
+  "stack_max": 999,
+  "description": "A copper-tipped stinger that sparks when tapped."
+ },
+ {
+  "id": "itm_0174",
+  "name": "Drone Valve",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 57,
+  "stack_max": 999,
+  "description": "A brass vent valve from a Pressure Drone."
+ },
+ {
+  "id": "itm_0175",
+  "name": "Pressure Gauge Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 257,
+  "stack_max": 999,
+  "description": "A drone's sealed gauge, its needle still twitching with the relay's pressure."
+ },
+ {
+  "id": "itm_0176",
+  "name": "Gloom Jelly",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 59,
+  "stack_max": 999,
+  "description": "A lump of Gloom Medusa bell that glows faintly in the dark."
+ },
+ {
+  "id": "itm_0177",
+  "name": "Medusa Bell",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 266,
+  "stack_max": 999,
+  "description": "An unbroken medusa bell, aether still pulsing in its nucleus."
+ },
+ {
+  "id": "itm_0178",
+  "name": "Abyssal Pearl",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 1880,
+  "stack_max": 999,
+  "description": "A black pearl with a blue fire inside. Thalassia's prize: crabs, kelp, skates and medusae all carry them, one in hundreds."
+ },
+ {
+  "id": "itm_0179",
+  "name": "Signalmind Lens",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 2440,
+  "stack_max": 999,
+  "description": "The Drowned Signalmind's eye-lens, still focusing a signal no one sends any more."
+ },
+ {
+  "id": "itm_0190",
+  "name": "Rimehare Haunch",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 45,
+  "stack_max": 999,
+  "description": "Lean frozen meat. The hunters' staple on the treeline."
+ },
+ {
+  "id": "itm_0191",
+  "name": "Frost Whisker",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 203,
+  "stack_max": 999,
+  "description": "A Rimehare whisker rimed with ice that never melts."
+ },
+ {
+  "id": "itm_0192",
+  "name": "Glassback Fleece",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 49,
+  "stack_max": 999,
+  "description": "Coarse ram wool, glass chips caught in it."
+ },
+ {
+  "id": "itm_0193",
+  "name": "Blueglass Horn",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 221,
+  "stack_max": 999,
+  "description": "A ram's horn grown of clear blue volcanic glass."
+ },
+ {
+  "id": "itm_0194",
+  "name": "Coilscale",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 53,
+  "stack_max": 999,
+  "description": "A frost-ridged serpent scale, cold to the touch."
+ },
+ {
+  "id": "itm_0195",
+  "name": "Coolant Gland",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 239,
+  "stack_max": 999,
+  "description": "A serpent gland full of Aethrion coolant."
+ },
+ {
+  "id": "itm_0196",
+  "name": "Plough Plate",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 56,
+  "stack_max": 999,
+  "description": "A dented armour plate from a Glacier Juggernaut."
+ },
+ {
+  "id": "itm_0197",
+  "name": "Juggernaut Drive Coil",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 252,
+  "stack_max": 999,
+  "description": "The furnace coil that drives a plough mech's tracks."
+ },
+ {
+  "id": "itm_0198",
+  "name": "Silvered Shard",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 60,
+  "stack_max": 999,
+  "description": "A splinter of a Mirrorshade; it reflects things that are not there."
+ },
+ {
+  "id": "itm_0199",
+  "name": "Shade Mirror",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 270,
+  "stack_max": 999,
+  "description": "An unbroken palm of mirror-glass from a Mirrorshade's heart."
+ },
+ {
+  "id": "itm_0200",
+  "name": "Hoarfrost Wool",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 61,
+  "stack_max": 999,
+  "description": "Frost-matted wool from a Behemoth's hump."
+ },
+ {
+  "id": "itm_0201",
+  "name": "Behemoth Tusk",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 275,
+  "stack_max": 999,
+  "description": "A curling tusk, ivory veined with ice."
+ },
+ {
+  "id": "itm_0202",
+  "name": "Sentry Casing",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 63,
+  "stack_max": 999,
+  "description": "White enamel casing from a Cryo Sentry."
+ },
+ {
+  "id": "itm_0203",
+  "name": "Cryo Cell",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 284,
+  "stack_max": 999,
+  "description": "A sentry's power cell, frost forming on it in warm air."
+ },
+ {
+  "id": "itm_0204",
+  "name": "Data Strand",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 999,
+  "description": "A thread of glyph-light that an Archive Specter left behind."
+ },
+ {
+  "id": "itm_0205",
+  "name": "Specter Memory Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 297,
+  "stack_max": 999,
+  "description": "A tiny crystal holding someone's recorded memory."
+ },
+ {
+  "id": "itm_0206",
+  "name": "Lancer Icetip",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 68,
+  "stack_max": 999,
+  "description": "A spent ice lance, sharp as glass."
+ },
+ {
+  "id": "itm_0207",
+  "name": "Focus Prism",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 306,
+  "stack_max": 999,
+  "description": "A Cryo Lancer's aiming prism."
+ },
+ {
+  "id": "itm_0208",
+  "name": "Everfrost Prism",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 2080,
+  "stack_max": 999,
+  "description": "A prism of ice that never melts. Crystallis's prize: wisps, rams and mirrorshades carry them, one in hundreds."
+ },
+ {
+  "id": "itm_0209",
+  "name": "Cryocore Heart",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 2800,
+  "stack_max": 999,
+  "description": "A shard of the Archive's cryocore, holding a cold no furnace can touch."
+ },
+ {
+  "id": "itm_0220",
+  "name": "Slagback Wart",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 59,
+  "stack_max": 999,
+  "description": "A knob of slag broken off a Slagback Toad's back."
+ },
+ {
+  "id": "itm_0221",
+  "name": "Slagback Furnace-Gland",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 266,
+  "stack_max": 999,
+  "description": "The heat gland in a Slagback's throat; herbalists brew it into tonics."
+ },
+ {
+  "id": "itm_0222",
+  "name": "Tender Weld-Bead",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 999,
+  "description": "A bead of weld metal from a Crucible Tender's arc arm."
+ },
+ {
+  "id": "itm_0223",
+  "name": "Tender Arc Nozzle",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 297,
+  "stack_max": 999,
+  "description": "A working Aethrion welding nozzle."
+ },
+ {
+  "id": "itm_0224",
+  "name": "Skink Basalt Scale",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 69,
+  "stack_max": 999,
+  "description": "A glossy black scale from a Vent Skink."
+ },
+ {
+  "id": "itm_0225",
+  "name": "Skink Vent Bladder",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 311,
+  "stack_max": 999,
+  "description": "The gas bladder a Vent Skink uses to dive into lava. Cool and blue inside."
+ },
+ {
+  "id": "itm_0226",
+  "name": "Spitter Pumice",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 70,
+  "stack_max": 999,
+  "description": "Light frothy stone a Magma Spitter coughs up."
+ },
+ {
+  "id": "itm_0227",
+  "name": "Spitter Magma Crop",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 315,
+  "stack_max": 999,
+  "description": "The heat-proof crop where a Spitter stores its magma."
+ },
+ {
+  "id": "itm_0228",
+  "name": "Scrapling Rivet",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 73,
+  "stack_max": 999,
+  "description": "An Aethrion bridge rivet, carried off by a Rivet Scrapling."
+ },
+ {
+  "id": "itm_0229",
+  "name": "Scrapling Gear-Eye",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 329,
+  "stack_max": 999,
+  "description": "The single glowing gear that serves a Scrapling as an eye."
+ },
+ {
+  "id": "itm_0230",
+  "name": "Brute Slag Plate",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 77,
+  "stack_max": 999,
+  "description": "A slab of set slag from a Slagforged Brute."
+ },
+ {
+  "id": "itm_0231",
+  "name": "Brute Mould Seam",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 347,
+  "stack_max": 999,
+  "description": "The seam line where a Brute left its mould, dense as iron."
+ },
+ {
+  "id": "itm_0232",
+  "name": "Wraith Cooled Pour",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 79,
+  "stack_max": 999,
+  "description": "Metal that cooled the moment a Pour Wraith died."
+ },
+ {
+  "id": "itm_0233",
+  "name": "Wraith Mould-Core",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 356,
+  "stack_max": 999,
+  "description": "The still-liquid centre of a Pour Wraith, sealed in its own skin."
+ },
+ {
+  "id": "itm_0234",
+  "name": "Stoker Coal",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 81,
+  "stack_max": 999,
+  "description": "Dense Aethrion coke from a Zero Stoker's hopper."
+ },
+ {
+  "id": "itm_0235",
+  "name": "Stoker Firebox",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 365,
+  "stack_max": 999,
+  "description": "A Zero Stoker's grille-faced firebox."
+ },
+ {
+  "id": "itm_0236",
+  "name": "Living Ember",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 2840,
+  "stack_max": 999,
+  "description": "An ember that keeps itself alight, born where Furnace Zero's fire runs through Emberfall. Imps carry them; knights and stokers burn on them."
+ },
+ {
+  "id": "itm_0237",
+  "name": "Zero Heartcore",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 3320,
+  "stack_max": 999,
+  "description": "A shard of Kiln Prime's Aetherite heart, still white-hot."
+ },
+ {
+  "id": "itm_0250",
+  "name": "Lurk Bristle",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 71,
+  "stack_max": 999,
+  "description": "A violet-lit spine bristle from a Gutter Lurk."
+ },
+ {
+  "id": "itm_0251",
+  "name": "Lurk Eye-Lens",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 320,
+  "stack_max": 999,
+  "description": "The reflective lens from a Gutter Lurk's eye; it sees in the dark."
+ },
+ {
+  "id": "itm_0252",
+  "name": "Nullbloom Petal",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 74,
+  "stack_max": 999,
+  "description": "A black glass petal that dims anything held behind it."
+ },
+ {
+  "id": "itm_0253",
+  "name": "Nullbloom Bulb",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 333,
+  "stack_max": 999,
+  "description": "The light-drinking bulb of a Nullbloom. Alchemists use it to draw out fatigue."
+ },
+ {
+  "id": "itm_0254",
+  "name": "Mite Coupler Pin",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 77,
+  "stack_max": 999,
+  "description": "A rail-steel pin from a Coupler Mite's jaw."
+ },
+ {
+  "id": "itm_0255",
+  "name": "Mite Signal Chip",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 347,
+  "stack_max": 999,
+  "description": "The status-light chip from a Coupler Mite's back."
+ },
+ {
+  "id": "itm_0256",
+  "name": "Riftling Shadowhide",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 80,
+  "stack_max": 999,
+  "description": "A scrap of Riftling outline. It folds smaller than it should."
+ },
+ {
+  "id": "itm_0257",
+  "name": "Riftling Veil-Eye",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 360,
+  "stack_max": 999,
+  "description": "A Riftling's pinpoint eye; looking through it shows the Veil."
+ },
+ {
+  "id": "itm_0258",
+  "name": "Sparkwing Quill",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 83,
+  "stack_max": 999,
+  "description": "A copper-foil feather that crackles with static."
+ },
+ {
+  "id": "itm_0259",
+  "name": "Sparkwing Arc Gland",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 374,
+  "stack_max": 999,
+  "description": "The organ that stores a Sparkwing's charge. Handle by the edges."
+ },
+ {
+  "id": "itm_0260",
+  "name": "Sentinel Lattice Plate",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 84,
+  "stack_max": 999,
+  "description": "A layered plate of sentinel armour."
+ },
+ {
+  "id": "itm_0261",
+  "name": "Sentinel Halo Relay",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 378,
+  "stack_max": 999,
+  "description": "The rotating ring from behind a sentinel's head."
+ },
+ {
+  "id": "itm_0262",
+  "name": "Glyph Shard",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 88,
+  "stack_max": 999,
+  "description": "One glyph of the Lattice's language, fixed in crystal when its swarm broke."
+ },
+ {
+  "id": "itm_0263",
+  "name": "Glyph Seal",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 396,
+  "stack_max": 999,
+  "description": "A whole sigil, intact. Scholars in Umbracrest pay well to read them."
+ },
+ {
+  "id": "itm_0264",
+  "name": "Weaver Filament",
+  "category": "material",
+  "rarity": "common",
+  "sell_price": 89,
+  "stack_max": 999,
+  "description": "A thread of solid lattice light from a Weaver's spinneret."
+ },
+ {
+  "id": "itm_0265",
+  "name": "Weaver Spinneret",
+  "category": "material",
+  "rarity": "uncommon",
+  "sell_price": 401,
+  "stack_max": 999,
+  "description": "A Lattice Weaver's spinneret, still warm with violet light."
+ },
+ {
+  "id": "itm_0266",
+  "name": "Violet Lattice Node",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 3320,
+  "stack_max": 999,
+  "description": "A junction of the Meridian Lattice, cut free and still carrying current. Drones, sentinels, executors and weavers are built round them."
+ },
+ {
+  "id": "itm_0267",
+  "name": "Sovereign Heart",
+  "category": "rare_material",
+  "rarity": "rare",
+  "sell_price": 3640,
+  "stack_max": 999,
+  "description": "A shard of the Lattice Sovereign's crystalline core, the rarest thing a Wayfarer can carry out of Nocthaven."
+ },
+ {
+  "id": "itm_0268",
+  "name": "Meridian Keysigil",
+  "category": "quest",
+  "rarity": "rare",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "A glyph-key cut from an Executor's mask. The Heart Warden lets its bearer descend into the Lattice Heart."
+ }
+]

@@ -1,0 +1,3834 @@
+[
+ {
+  "id": "mob_0001",
+  "name": "Mosskin",
+  "region_id": "lum",
+  "level": 1,
+  "archetype": "swarm",
+  "family": "plant",
+  "element": "earth",
+  "behavior": "passive",
+  "hp": 51,
+  "attack": 6,
+  "defense": 2,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 6,
+  "job_exp": 4,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0001",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0002",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0071",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Seed-pods that grew legs where the old Aethrion irrigation still seeps; they graze the open meadow and ignore travellers until struck.",
+  "art_brief": "A round four-legged seed with a mossy shell and two twig antennae; friendly face; earth-green palette.",
+  "sprite": "mosskin_2d"
+ },
+ {
+  "id": "mob_0002",
+  "name": "Sporeling",
+  "region_id": "lum",
+  "level": 2,
+  "archetype": "swarm",
+  "family": "fungus",
+  "element": "nature",
+  "behavior": "assist",
+  "hp": 58,
+  "attack": 9,
+  "defense": 2,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 9,
+  "job_exp": 6,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0003",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0004",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0072",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Walking mushrooms that crowd the damp grove by the meadow pond; they share one spore cloud, so they answer each other's distress.",
+  "art_brief": "A waddling mushroom with a speckled cream-and-rust cap, stubby root feet, puffs of glowing spores.",
+  "sprite": "sporeling_2d"
+ },
+ {
+  "id": "mob_0003",
+  "name": "Ambermite",
+  "region_id": "lum",
+  "level": 3,
+  "archetype": "swarm",
+  "family": "insect",
+  "element": "earth",
+  "behavior": "aggressive",
+  "hp": 70,
+  "attack": 10,
+  "defense": 4,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 234,
+  "base_exp": 13,
+  "job_exp": 8,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0005",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0006",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0084",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Six-legged mites that farm amber resin from the trail-side trees and swarm anything that comes near the sap.",
+  "art_brief": "A beetle-sized six-legged mite under a translucent amber shell with a glowing core; honey-orange.",
+  "sprite": "p_ambermite"
+ },
+ {
+  "id": "mob_0004",
+  "name": "Lunari",
+  "region_id": "lum",
+  "level": 3,
+  "archetype": "swarm",
+  "family": "beast",
+  "element": "wind",
+  "behavior": "flee",
+  "hp": 61,
+  "attack": 10,
+  "defense": 3,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 195,
+  "base_exp": 10,
+  "job_exp": 6,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0007",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0008",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Leaf-eared gliders nesting in the hollows of Amber Trail; they scatter from anything that hurts them.",
+  "art_brief": "A sugar-glider-like beast with leaf-shaped ears and a banded tail, membrane glide flaps; moonlit silver-green.",
+  "sprite": "p_lunari"
+ },
+ {
+  "id": "mob_0005",
+  "name": "Craglet",
+  "region_id": "lum",
+  "level": 5,
+  "archetype": "bruiser",
+  "family": "reptile",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 196,
+  "attack": 18,
+  "defense": 8,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 360,
+  "base_exp": 48,
+  "job_exp": 30,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0009",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0010",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0074",
+    "rate_bp": 250,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 60,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Rock lizards on the scree outcrops; they swallow Aethrion gears and shards as gizzard stones, which is where old copper gears turn up.",
+  "art_brief": "A squat lizard covered in slate plates, quartz flecks along the spine, a gear glinting in its belly seam.",
+  "sprite": "mob_0005"
+ },
+ {
+  "id": "mob_0006",
+  "name": "Thornback",
+  "region_id": "lum",
+  "level": 8,
+  "archetype": "bruiser",
+  "family": "beast",
+  "element": "nature",
+  "behavior": "assist",
+  "hp": 294,
+  "attack": 29,
+  "defense": 8,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 300,
+  "base_exp": 89,
+  "job_exp": 55,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0011",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0012",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Hedgehog-boars that root in the brambles of Whispergrass, north of Avelorn.",
+  "art_brief": "A stocky boar with a back of woody thorns and bark-like hide; mossy tusks.",
+  "sprite": "mob_0006"
+ },
+ {
+  "id": "mob_0007",
+  "name": "Dustwing",
+  "region_id": "lum",
+  "level": 9,
+  "archetype": "swarm",
+  "family": "insect",
+  "element": "wind",
+  "behavior": "aggressive",
+  "hp": 133,
+  "attack": 23,
+  "defense": 5,
+  "attack_range": 1,
+  "attack_ms": 1360,
+  "move_speed_ms": 182,
+  "base_exp": 39,
+  "job_exp": 24,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0013",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0014",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Dust moths that ride the updraft of the old windmill's sails and dive on anything moving below.",
+  "art_brief": "A large moth with sandy, powder-dusted wings and brass-coloured eyespots; trailing dust motes.",
+  "sprite": "mob_0007"
+ },
+ {
+  "id": "mob_0008",
+  "name": "Brookfin",
+  "region_id": "lum",
+  "level": 12,
+  "archetype": "swarm",
+  "family": "aquatic",
+  "element": "water",
+  "behavior": "passive",
+  "hp": 222,
+  "attack": 29,
+  "defense": 7,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 63,
+  "job_exp": 39,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0015",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0016",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Amphibious fish that crawl up Moonbrook's banks and out onto its dry flats to sun their clear fins.",
+  "art_brief": "A fat fish on stubby fin-legs, glass-clear fins showing faint aether veins; blue-green.",
+  "sprite": "mob_0008"
+ },
+ {
+  "id": "mob_0009",
+  "name": "Reedstalker",
+  "region_id": "lum",
+  "level": 14,
+  "archetype": "ranged",
+  "family": "plant",
+  "element": "water",
+  "behavior": "aggressive",
+  "hp": 192,
+  "attack": 38,
+  "defense": 6,
+  "attack_range": 4,
+  "attack_ms": 1800,
+  "move_speed_ms": 280,
+  "base_exp": 72,
+  "job_exp": 45,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0017",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0018",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Reed-camouflaged hunters of the Moonbrook marsh and its moonlit banks.",
+  "art_brief": "A lanky stalk-creature woven from reeds, a seed-pod head that opens to spit darts; marsh green and brown.",
+  "sprite": "p_reedstalker"
+ },
+ {
+  "id": "mob_0010",
+  "name": "Rotroot",
+  "region_id": "lum",
+  "level": 17,
+  "archetype": "swarm",
+  "family": "plant",
+  "element": "nature",
+  "behavior": "aggressive",
+  "hp": 334,
+  "attack": 40,
+  "defense": 10,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 299,
+  "base_exp": 100,
+  "job_exp": 62,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0019",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0020",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Roots of the dying orchard, animated by aether leaking from the pump house; they grow thickest round its broken machine.",
+  "art_brief": "A knot of rotting roots with a glowing sap core, crawling on root-legs; dark wood, sickly teal glow.",
+  "sprite": "p_rotroot"
+ },
+ {
+  "id": "mob_0011",
+  "name": "Barkwarden",
+  "region_id": "lum",
+  "level": 20,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 553,
+  "attack": 61,
+  "defense": 29,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 340,
+  "base_exp": 246,
+  "job_exp": 153,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0021",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0022",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0074",
+    "rate_bp": 800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 400,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Aethrion maintenance frames that grew bark over their copper joints; they still patrol Hollowroot's tunnels and buried pump hall.",
+  "art_brief": "A man-high wooden guardian with copper-jointed limbs, a cracked lens eye and moss in the seams.",
+  "sprite": "p_barkwarden"
+ },
+ {
+  "id": "mob_0012",
+  "name": "Graftling",
+  "region_id": "ver",
+  "level": 16,
+  "archetype": "swarm",
+  "family": "bio-machine",
+  "element": "nature",
+  "behavior": "passive",
+  "hp": 289,
+  "attack": 38,
+  "defense": 9,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 286,
+  "base_exp": 89,
+  "job_exp": 55,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0023",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0024",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Fallen branches that the old Aethrion grafting frames bolted hinges onto; they wander the fern floor near Sylvara, rooting for a few hours at a time, and ignore anyone who leaves them be.",
+  "art_brief": "A knee-high bundle of living twigs on three folding brass hinge-legs, a jade sap bead glowing at the joint; leaf tufts for a head; bark brown, brass, jade.",
+  "sprite": "mob_0012"
+ },
+ {
+  "id": "mob_0013",
+  "name": "Sapdrone",
+  "region_id": "ver",
+  "level": 20,
+  "archetype": "swarm",
+  "family": "bio-machine",
+  "element": "nature",
+  "behavior": "aggressive",
+  "hp": 280,
+  "attack": 48,
+  "defense": 11,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 195,
+  "base_exp": 111,
+  "job_exp": 69,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0025",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0026",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0118",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Aethrion harvesting drones that still tap the giant trunks for sap; they hang in clouds round the tapped trunks of Mossbridge, north of the creek and on the north-west slope, and dive on anything that comes near the taps. A drone that drank too long sometimes carries a bead of Living Jade.",
+  "art_brief": "A fist-sized brass beetle-drone with four glassy wings and a long needle proboscis, its belly tank sloshing with glowing jade sap.",
+  "sprite": "mob_0013"
+ },
+ {
+  "id": "mob_0014",
+  "name": "Vinecrawler",
+  "region_id": "ver",
+  "level": 25,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "nature",
+  "behavior": "aggressive",
+  "hp": 754,
+  "attack": 78,
+  "defense": 29,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 289,
+  "base_exp": 326,
+  "job_exp": 202,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0027",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0028",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Vines that strangled a crawling Aethrion maintenance frame and now drive it; they tend the trellises, grafting yard and wild woods of Graftwood and attack anything that cuts a vine.",
+  "art_brief": "A spider-shaped brass gear-frame wrapped and pulled by thick green vines, leaves sprouting from the gear teeth, a cracked jade lens at the core.",
+  "sprite": "mob_0014"
+ },
+ {
+  "id": "mob_0015",
+  "name": "Root Sentinel",
+  "region_id": "ver",
+  "level": 32,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "nature",
+  "behavior": "aggressive",
+  "hp": 1069,
+  "attack": 105,
+  "defense": 48,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 408,
+  "base_exp": 479,
+  "job_exp": 297,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0029",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0030",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0118",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Aethrion guard frames that the elder trees' roots grew through; they walk the root ridges, old warrens and Basin slope of Elderroot. Their core is jade-stained, sometimes solid Living Jade.",
+  "art_brief": "A three-metre humanoid guard of brass and stone, completely laced with thick roots, a lantern-like jade eye under a hood of bark.",
+  "sprite": "mob_0015"
+ },
+ {
+  "id": "mob_0016",
+  "name": "Sandcoil",
+  "region_id": "sol",
+  "level": 26,
+  "archetype": "swarm",
+  "family": "reptile",
+  "element": "fire",
+  "behavior": "passive",
+  "hp": 419,
+  "attack": 61,
+  "defense": 20,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 286,
+  "base_exp": 156,
+  "job_exp": 97,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0031",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0032",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Sand serpents that bask coiled on the warm dune crests of the Saffron Dunes and burrow along the buried Aethrion pipes for their heat; they only bite if dug up.",
+  "art_brief": "A thick, short serpent coiled like a spring, scales the colour and grain of saffron sand, ember-orange belly, heat shimmer above it.",
+  "sprite": "mob_0016"
+ },
+ {
+  "id": "mob_0017",
+  "name": "Glass Scarab",
+  "region_id": "sol",
+  "level": 30,
+  "archetype": "swarm",
+  "family": "insect",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 490,
+  "attack": 71,
+  "defense": 25,
+  "attack_range": 1,
+  "attack_ms": 1440,
+  "move_speed_ms": 260,
+  "base_exp": 187,
+  "job_exp": 116,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0033",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0034",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0148",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Beetles that roll lightning-glass into their shells; they swarm the dry washes of Caravan Verge and the broken walls of its caravanserai. Old shells sometimes set into Sunfire Glass.",
+  "art_brief": "A dog-sized scarab whose shell is clear amber glass with a glowing ember core showing through, legs of dark chitin.",
+  "sprite": "mob_0017"
+ },
+ {
+  "id": "mob_0018",
+  "name": "Dune Sentry",
+  "region_id": "sol",
+  "level": 35,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 1065,
+  "attack": 116,
+  "defense": 64,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 391,
+  "base_exp": 526,
+  "job_exp": 326,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0035",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0036",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Sandstone sentries that guarded the glass works and the heliograph towers; they still walk their old lines across the Glass Flats, from the glass works to the fused scar.",
+  "art_brief": "A blocky humanoid of carved sandstone with brass bands at the joints, a slit visor glowing orange, sand pouring from its cracks.",
+  "sprite": "mob_0018"
+ },
+ {
+  "id": "mob_0019",
+  "name": "Sun Warden",
+  "region_id": "sol",
+  "level": 42,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 1235,
+  "attack": 158,
+  "defense": 76,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 374,
+  "base_exp": 679,
+  "job_exp": 421,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0037",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0038",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Guardians of the solar ring network; they patrol the face of the Sun Dial and the causeway on its eastern approach.",
+  "art_brief": "A tall bronze guardian with a halo-ring of sun mirrors on its back, a faceless polished face, a long spear-gnomon.",
+  "sprite": "mob_0019"
+ },
+ {
+  "id": "mob_0020",
+  "name": "Tidehopper",
+  "region_id": "tha",
+  "level": 36,
+  "archetype": "swarm",
+  "family": "amphibian",
+  "element": "water",
+  "behavior": "passive",
+  "hp": 634,
+  "attack": 87,
+  "defense": 22,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 236,
+  "job_exp": 146,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0039",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0040",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Spring-legged shore amphibians that feed in Saltwind's tidepools at low water. Passive: they hop out of the way of anything bigger, which makes them the region's warm-up herd.",
+  "art_brief": "A frog-sized blue-grey hopper with oversized hind legs, a shell-plate back and bulbous wet eyes; barnacle specks; sea-glass blue.",
+  "sprite": "mob_0020"
+ },
+ {
+  "id": "mob_0021",
+  "name": "Coral Claw",
+  "region_id": "tha",
+  "level": 40,
+  "archetype": "bruiser",
+  "family": "crustacean",
+  "element": "water",
+  "behavior": "aggressive",
+  "hp": 1407,
+  "attack": 155,
+  "defense": 49,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 345,
+  "base_exp": 621,
+  "job_exp": 385,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0041",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0042",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0178",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Crabs that wear living coral as armour; they patrol Saltwind's wrack line and pinch anything near their burrows. Their coral sometimes grows round a pearl.",
+  "art_brief": "A crab the size of a dog, its shell overgrown with pink and orange coral branches, one claw much larger than the other; wet teal legs.",
+  "sprite": "mob_0021"
+ },
+ {
+  "id": "mob_0022",
+  "name": "Brine Automaton",
+  "region_id": "tha",
+  "level": 45,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "water",
+  "behavior": "aggressive",
+  "hp": 1411,
+  "attack": 168,
+  "defense": 73,
+  "attack_range": 1,
+  "attack_ms": 2185,
+  "move_speed_ms": 340,
+  "base_exp": 725,
+  "job_exp": 450,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0043",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0044",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 400,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Copper pressure-maintenance frames that still service the tidewheel pumps and patch the old quay pilings of Tidewheel Bay; they treat every visitor as a fault to clear.",
+  "art_brief": "A barrel-chested copper automaton with piston arms, brine-crusted gauges for eyes and a tank on its back hissing steam; verdigris green and brass.",
+  "sprite": "mob_0022"
+ },
+ {
+  "id": "mob_0023",
+  "name": "Relay Guardian",
+  "region_id": "tha",
+  "level": 52,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "water",
+  "behavior": "assist",
+  "hp": 1645,
+  "attack": 193,
+  "defense": 96,
+  "attack_range": 2,
+  "attack_ms": 1900,
+  "move_speed_ms": 340,
+  "base_exp": 832,
+  "job_exp": 516,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0045",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0046",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 600,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Sonar sentries bolted to the Drowned Relay's surface buoys; they walk the relay mast and the buoy cables on the south strand of Pearl Flats.",
+  "art_brief": "A tall diving-suit construct with a dish-shaped sonar head, ribbed hoses and lead boots; dark bronze with pulsing cyan rings.",
+  "sprite": "mob_0023"
+ },
+ {
+  "id": "mob_0024",
+  "name": "Frost Mite",
+  "region_id": "cry",
+  "level": 46,
+  "archetype": "swarm",
+  "family": "insect",
+  "element": "ice",
+  "behavior": "passive",
+  "hp": 746,
+  "attack": 114,
+  "defense": 39,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 306,
+  "job_exp": 190,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0047",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0048",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Crystal-shelled mites that cluster on Frostline's thawed strip where the Aethrion heat pipes keep moss alive; they feed and ignore everything else.",
+  "art_brief": "A palm-sized mite whose shell is a cluster of clear ice crystals, six thin blue legs, a faint glow inside; frost-white and pale cyan.",
+  "sprite": "mob_0024"
+ },
+ {
+  "id": "mob_0025",
+  "name": "Prism Wisp",
+  "region_id": "cry",
+  "level": 50,
+  "archetype": "ranged",
+  "family": "elemental",
+  "element": "ice",
+  "behavior": "aggressive",
+  "hp": 809,
+  "attack": 154,
+  "defense": 21,
+  "attack_range": 6,
+  "attack_ms": 1800,
+  "move_speed_ms": 280,
+  "base_exp": 360,
+  "job_exp": 223,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0049",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0050",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0208",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Floating lights that gather where ice refracts the most sun: over Frostline's frozen lake. Their frames sometimes set into a flawless prism.",
+  "art_brief": "A glowing orb inside an open lattice of hexagonal crystal, casting rainbow beams; white core, prismatic edges.",
+  "sprite": "mob_0025"
+ },
+ {
+  "id": "mob_0026",
+  "name": "Icegear",
+  "region_id": "cry",
+  "level": 55,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "ice",
+  "behavior": "aggressive",
+  "hp": 1833,
+  "attack": 207,
+  "defense": 94,
+  "attack_range": 1,
+  "attack_ms": 1615,
+  "move_speed_ms": 408,
+  "base_exp": 895,
+  "job_exp": 555,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0051",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0052",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 400,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Many-legged gear walkers that maintained Snowcoil's pumps and coolant huts; frozen joints made them hostile, and they cluster round the pump yard and wander the valley's lower slopes.",
+  "art_brief": "A spider-like walker with a body of stacked frozen gears and eight jointed brass legs, icicles hanging from the cogs; steel blue and brass.",
+  "sprite": "mob_0026"
+ },
+ {
+  "id": "mob_0027",
+  "name": "Archive Keeper",
+  "region_id": "cry",
+  "level": 62,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "ice",
+  "behavior": "assist",
+  "hp": 1743,
+  "attack": 245,
+  "defense": 144,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 340,
+  "base_exp": 989,
+  "job_exp": 613,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0053",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0054",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 600,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Data-keeping automatons that tend the Archive's outlying vaults on Prism Pass: the sealed doors, the hollow below the road and the plough route itself.",
+  "art_brief": "A tall slender construct in faceted crystal armour, a glowing data-slate for a face, long fingers made for handling cores; ice-blue and silver.",
+  "sprite": "mob_0027"
+ },
+ {
+  "id": "mob_0028",
+  "name": "Ashcrawler",
+  "region_id": "emb",
+  "level": 61,
+  "archetype": "swarm",
+  "family": "insect",
+  "element": "fire",
+  "behavior": "passive",
+  "hp": 1307,
+  "attack": 160,
+  "defense": 43,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 286,
+  "base_exp": 476,
+  "job_exp": 295,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0055",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0056",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Woodlouse-like grazers that eat the warm ash blown off Emberfall's vents; herds cover the Ashfield flats and ignore anything that leaves them alone.",
+  "art_brief": "A dog-sized segmented crawler with a grey ash shell, ember light glowing between the plates, soot-black legs; slow and placid.",
+  "sprite": "mob_0028"
+ },
+ {
+  "id": "mob_0029",
+  "name": "Cinder Imp",
+  "region_id": "emb",
+  "level": 65,
+  "archetype": "swarm",
+  "family": "elemental",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 1289,
+  "attack": 182,
+  "defense": 47,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 221,
+  "base_exp": 527,
+  "job_exp": 327,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0057",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0058",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0236",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Sparks that took shape in the Aethrion vents and never cooled; they nest in hot hollows along the haul road and swarm anything that brings fresh air near the coals.",
+  "art_brief": "A knee-high charcoal imp with a cracked ember belly, flame wisps for horns, long ash-grey fingers; leaves glowing footprints.",
+  "sprite": "mob_0029"
+ },
+ {
+  "id": "mob_0030",
+  "name": "Smelt Hound",
+  "region_id": "emb",
+  "level": 70,
+  "archetype": "swarm",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 1525,
+  "attack": 189,
+  "defense": 68,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 208,
+  "base_exp": 569,
+  "job_exp": 353,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0059",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0060",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Aethrion foundry hounds still loose from their kennels on the Forge Approach; packs range from the kennel yard along the causeway's lava channels hunting heat.",
+  "art_brief": "A lean hound of riveted iron plates over a molten core, glowing slag dripping from the jaw, bellows-ribs that pump sparks when it runs.",
+  "sprite": "mob_0030"
+ },
+ {
+  "id": "mob_0031",
+  "name": "Furnace Knight",
+  "region_id": "emb",
+  "level": 77,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 2815,
+  "attack": 352,
+  "defense": 164,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 340,
+  "base_exp": 1449,
+  "job_exp": 898,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0061",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0062",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0236",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 600,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The foundry guard of Aethrion, still marching patrols across Ironfall's fallen trusses and its eastern lava banks. A live furnace burns in each breastplate.",
+  "art_brief": "A tall armoured automaton whose chest is an open furnace door, riveted iron plate, a long blade glowing at the edge, smoke from the helm vents.",
+  "sprite": "mob_0031"
+ },
+ {
+  "id": "mob_0032",
+  "name": "Null Wisp",
+  "region_id": "noc",
+  "level": 76,
+  "archetype": "swarm",
+  "family": "spirit",
+  "element": "shadow",
+  "behavior": "passive",
+  "hp": 1855,
+  "attack": 211,
+  "defense": 59,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 312,
+  "base_exp": 647,
+  "job_exp": 401,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0063",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0064",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Knots of violet energy that bled out of the city's cracked conduits; they drift where any light is left (streetlamps, conduit glow) and drink it until it goes dark.",
+  "art_brief": "A floating smudge of violet-black light with a hollow white core, trailing wisps that dim everything they pass; no face.",
+  "sprite": "mob_0032"
+ },
+ {
+  "id": "mob_0033",
+  "name": "Shade Carrier",
+  "region_id": "noc",
+  "level": 80,
+  "archetype": "bruiser",
+  "family": "construct",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 4127,
+  "attack": 404,
+  "defense": 95,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 270,
+  "base_exp": 1590,
+  "job_exp": 986,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0065",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0066",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "City haulers whose drivers are long gone; a shadow took the cabs and drives the old delivery loop round the park promenade and the dead pond.",
+  "art_brief": "A boxy six-wheeled freight hauler with a smashed cab full of moving shadow, violet headlamps, cargo doors that open like a jaw.",
+  "sprite": "mob_0033"
+ },
+ {
+  "id": "mob_0034",
+  "name": "Lattice Drone",
+  "region_id": "noc",
+  "level": 85,
+  "archetype": "ranged",
+  "family": "construct",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 1481,
+  "attack": 312,
+  "defense": 55,
+  "attack_range": 6,
+  "attack_ms": 1800,
+  "move_speed_ms": 238,
+  "base_exp": 676,
+  "job_exp": 419,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0067",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0068",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0266",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Lattice survey drones that patrol the signal gantries and the junction pit over the rail yards, firing on anything that breaks the grid.",
+  "art_brief": "A floating hexagonal frame of dark metal around a violet lattice core, six thin vanes, a lens that tracks before it fires.",
+  "sprite": "mob_0034"
+ },
+ {
+  "id": "mob_0035",
+  "name": "Meridian Executor",
+  "region_id": "noc",
+  "level": 92,
+  "archetype": "elite",
+  "family": "construct",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 11124,
+  "attack": 688,
+  "defense": 155,
+  "attack_range": 1,
+  "attack_ms": 1200,
+  "move_speed_ms": 240,
+  "base_exp": 4871,
+  "job_exp": 3020,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0069",
+    "rate_bp": 10000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0070",
+    "rate_bp": 3600,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0266",
+    "rate_bp": 200,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The lattice's executioners, built to remove anything that tampers with the Meridian network. A single court of them guards the Meridian Gate.",
+  "art_brief": "A gaunt four-armed automaton in black ceramic, each arm ending in a long violet blade, a mask with a single vertical slit of light.",
+  "sprite": "mob_0035"
+ },
+ {
+  "id": "mob_0036",
+  "name": "Hollowroot Warden",
+  "region_id": "lum",
+  "level": 20,
+  "archetype": "boss",
+  "family": "construct",
+  "element": "earth",
+  "behavior": "aggressive",
+  "hp": 10200,
+  "attack": 129,
+  "defense": 29,
+  "attack_range": 2,
+  "attack_ms": 1400,
+  "move_speed_ms": 260,
+  "base_exp": 5040,
+  "job_exp": 3125,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0021",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 6
+   },
+   {
+    "item_id": "itm_0020",
+    "rate_bp": 6000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0085",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 10000,
+    "min_qty": 2,
+    "max_qty": 4
+   }
+  ],
+  "ecology": "The pump-house core, fused with the root mass it was built to water. It sits in the Heart Chamber and is why the orchard rots.",
+  "art_brief": "A hulking root-and-copper colossus around a pulsing aetherite heart; pipes for arms, roots for legs.",
+  "sprite": "mob_0036"
+ },
+ {
+  "id": "mob_0040",
+  "name": "Mossback Newt",
+  "region_id": "ver",
+  "level": 18,
+  "archetype": "swarm",
+  "family": "amphibian",
+  "element": "water",
+  "behavior": "assist",
+  "hp": 285,
+  "attack": 40,
+  "defense": 13,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 90,
+  "job_exp": 56,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0100",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0101",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Cat-sized newts that live under the moss of Mossbridge's creek, on the south shallows and round the obelisk; they bask in rows on the banks and croak for help when one is hurt.",
+  "art_brief": "A plump newt with a carpet of green moss on its back, a pale belly and round jade eyes; small water droplets glinting on the moss.",
+  "sprite": "mob_0040"
+ },
+ {
+  "id": "mob_0041",
+  "name": "Jadewing Moth",
+  "region_id": "ver",
+  "level": 22,
+  "archetype": "ranged",
+  "family": "insect",
+  "element": "wind",
+  "behavior": "aggressive",
+  "hp": 271,
+  "attack": 60,
+  "defense": 10,
+  "attack_range": 6,
+  "attack_ms": 1800,
+  "move_speed_ms": 280,
+  "base_exp": 120,
+  "job_exp": 74,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0102",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0103",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Large moths that live in the canopy galleries where the jade light is strongest; they drift down to the middle and upper terraces of Canopy Steps to hunt.",
+  "art_brief": "A moth the size of a hawk with translucent jade wings veined like circuitry, glowing eyespots and trailing luminous dust.",
+  "sprite": "mob_0041"
+ },
+ {
+  "id": "mob_0042",
+  "name": "Barkhound",
+  "region_id": "ver",
+  "level": 23,
+  "archetype": "bruiser",
+  "family": "beast",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 756,
+  "attack": 79,
+  "defense": 24,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 255,
+  "base_exp": 308,
+  "job_exp": 191,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0104",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0105",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Wolf-like beasts whose hides grow bark plates; they den on the lower terrace of Canopy Steps and range up to the top terrace by the Graftwood road.",
+  "art_brief": "A lean wolf with overlapping bark plates on its back and shoulders, moss on its tail, jade-green eyes; heavy jaws with wooden fangs.",
+  "sprite": "mob_0042"
+ },
+ {
+  "id": "mob_0043",
+  "name": "Pruning Tender",
+  "region_id": "ver",
+  "level": 27,
+  "archetype": "support",
+  "family": "bio-machine",
+  "element": "nature",
+  "behavior": "assist",
+  "hp": 500,
+  "attack": 60,
+  "defense": 19,
+  "attack_range": 5,
+  "attack_ms": 2200,
+  "move_speed_ms": 280,
+  "base_exp": 189,
+  "job_exp": 117,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0106",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0107",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0118",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The Aethrion gardener machines that grafted Verdantis; they still prune and seal cuts on the Vineworks terraces and conduits, and rush to any machine in trouble. Their sap tanks sometimes set into Living Jade.",
+  "art_brief": "A barrel-bodied brass gardener on three spindly legs with shear-arms and a sap nozzle, a glass tank of jade sap on its back, moss on the lid.",
+  "sprite": "mob_0043"
+ },
+ {
+  "id": "mob_0044",
+  "name": "Thistlehare",
+  "region_id": "ver",
+  "level": 29,
+  "archetype": "swarm",
+  "family": "beast",
+  "element": "wind",
+  "behavior": "flee",
+  "hp": 394,
+  "attack": 64,
+  "defense": 17,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 182,
+  "base_exp": 139,
+  "job_exp": 86,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0108",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0109",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Hares that graze the vine terraces of Vineworks and burrow round its old water pump; their thistle coats spread seed wherever they run.",
+  "art_brief": "A long-eared hare whose fur is a mass of purple-green thistle burrs, a white cotton tail, huge dark eyes; mid-leap pose.",
+  "sprite": "mob_0044"
+ },
+ {
+  "id": "mob_0045",
+  "name": "Antlered Engine",
+  "region_id": "ver",
+  "level": 34,
+  "archetype": "elite",
+  "family": "bio-machine",
+  "element": "earth",
+  "behavior": "aggressive",
+  "hp": 2970,
+  "attack": 187,
+  "defense": 41,
+  "attack_range": 1,
+  "attack_ms": 1500,
+  "move_speed_ms": 216,
+  "base_exp": 1493,
+  "job_exp": 926,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0110",
+    "rate_bp": 10000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0111",
+    "rate_bp": 3600,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Aethrion survey engines built in the shape of the forest's great stags; four still graze the Engine Glade beneath the Eldest and charge any intruder. Their antler coils hold Aetherite.",
+  "art_brief": "A huge stag of brass ribs and living wood, antlers made of coiled copper and branches hung with moss, a furnace-glow of jade in its chest.",
+  "sprite": "mob_0045"
+ },
+ {
+  "id": "mob_0046",
+  "name": "Sporebloat",
+  "region_id": "ver",
+  "level": 35,
+  "archetype": "swarm",
+  "family": "fungus",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 768,
+  "attack": 84,
+  "defense": 21,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 325,
+  "base_exp": 255,
+  "job_exp": 158,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0112",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0113",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Fungal sacs that grow in the Heartwood Engine's exhaust; they drift out of the vents and fill the Spore Basin from rim to pool.",
+  "art_brief": "A floating puffball the size of a barrel, dark violet with glowing jade spore-vents, short root tendrils hanging below.",
+  "sprite": "mob_0046"
+ },
+ {
+  "id": "mob_0047",
+  "name": "Spore Matron",
+  "region_id": "ver",
+  "level": 36,
+  "archetype": "support",
+  "family": "fungus",
+  "element": "nature",
+  "behavior": "assist",
+  "hp": 855,
+  "attack": 80,
+  "defense": 22,
+  "attack_range": 5,
+  "attack_ms": 2200,
+  "move_speed_ms": 280,
+  "base_exp": 297,
+  "job_exp": 184,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0114",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0115",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The mother fungi that seed the Sporebloats; they stand in rings in the Engine's sap conduits and line its spore lung, and their spores drift out to the Basin.",
+  "art_brief": "A tall mushroom with a wide frilled cap, a stalk like a robed figure, jade spore-lanterns hanging under the cap.",
+  "sprite": "mob_0047"
+ },
+ {
+  "id": "mob_0048",
+  "name": "Heartwood Pistonguard",
+  "region_id": "ver",
+  "level": 38,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 1066,
+  "attack": 139,
+  "defense": 71,
+  "attack_range": 1,
+  "attack_ms": 2185,
+  "move_speed_ms": 340,
+  "base_exp": 597,
+  "job_exp": 370,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0116",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0117",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The guard engines of the Heartwood Engine; they hold the Piston Hall round the main piston and never leave it.",
+  "art_brief": "A squat brass guardian with pistons for arms, its body cased in polished heartwood, steam and spores venting from its back.",
+  "sprite": "mob_0048"
+ },
+ {
+  "id": "mob_0049",
+  "name": "Heartwood Regent",
+  "region_id": "ver",
+  "level": 40,
+  "archetype": "boss",
+  "family": "bio-machine",
+  "element": "nature",
+  "behavior": "aggressive",
+  "hp": 22440,
+  "attack": 317,
+  "defense": 63,
+  "attack_range": 3,
+  "attack_ms": 1400,
+  "move_speed_ms": 260,
+  "base_exp": 12150,
+  "job_exp": 7533,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0116",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 6
+   },
+   {
+    "item_id": "itm_0117",
+    "rate_bp": 6000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0119",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 5
+   },
+   {
+    "item_id": "itm_0118",
+    "rate_bp": 2500,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The Engine's heart: an Aethrion pump fused with the oldest tree in Verdantis. It drives the sap that lights the forest and the spores that are now choking it.",
+  "art_brief": "A towering figure of living wood grown round a brass pump-heart, a crown of branches, roots for legs, jade light pulsing through its veins with each pump stroke.",
+  "sprite": "mob_0049"
+ },
+ {
+  "id": "mob_0050",
+  "name": "Ochre Jackal",
+  "region_id": "sol",
+  "level": 28,
+  "archetype": "swarm",
+  "family": "beast",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 426,
+  "attack": 66,
+  "defense": 16,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 208,
+  "base_exp": 162,
+  "job_exp": 100,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0130",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0131",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Pack hunters that den by the Saffron oasis and along the buried pipeline, living off caravan scraps and Sandcoil eggs.",
+  "art_brief": "A rangy jackal with ochre fur, huge ears, a dark stripe down the spine and a brass tag from a long-gone caravan on its collar.",
+  "sprite": "mob_0050"
+ },
+ {
+  "id": "mob_0051",
+  "name": "Brass Kite",
+  "region_id": "sol",
+  "level": 32,
+  "archetype": "ranged",
+  "family": "construct",
+  "element": "wind",
+  "behavior": "aggressive",
+  "hp": 389,
+  "attack": 91,
+  "defense": 15,
+  "attack_range": 6,
+  "attack_ms": 1800,
+  "move_speed_ms": 224,
+  "base_exp": 187,
+  "job_exp": 116,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0132",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0133",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Survey kites that still map the caravan routes; they circle the heights and the old checkpoint of Caravan Verge, firing on anything that crosses their survey lines.",
+  "art_brief": "A diamond-shaped kite of brass foil and cloth on a gear-driven frame, a single focusing lens in its nose, ribbon tails streaming.",
+  "sprite": "mob_0051"
+ },
+ {
+  "id": "mob_0052",
+  "name": "Glasstail Basilisk",
+  "region_id": "sol",
+  "level": 37,
+  "archetype": "bruiser",
+  "family": "reptile",
+  "element": "fire",
+  "behavior": "assist",
+  "hp": 1358,
+  "attack": 152,
+  "defense": 34,
+  "attack_range": 1,
+  "attack_ms": 2200,
+  "move_speed_ms": 300,
+  "base_exp": 602,
+  "job_exp": 373,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0134",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0135",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0148",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Lizards that lick lightning-glass and grow it along their tails; they bask in packs on the open glass of the Glass Flats, round its mirrors and in its fused scar. The tail tip sometimes hardens into Sunfire Glass.",
+  "art_brief": "A low, heavy basilisk with a tail ending in a club of glowing glass, ridged sandy scales, a frilled crest that flares orange.",
+  "sprite": "mob_0052"
+ },
+ {
+  "id": "mob_0053",
+  "name": "Gnomon Acolyte",
+  "region_id": "sol",
+  "level": 39,
+  "archetype": "support",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "assist",
+  "hp": 710,
+  "attack": 88,
+  "defense": 24,
+  "attack_range": 5,
+  "attack_ms": 2200,
+  "move_speed_ms": 280,
+  "base_exp": 286,
+  "job_exp": 177,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0136",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0137",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Robed brass automata that recalibrate the Sun Dial and tend the broken sentries in its graveyard; they move with the machines they tend and rush to any that are attacked.",
+  "art_brief": "A slim brass automaton in sun-bleached robes, a gnomon-shaped crest on its head, mirror-plate hands that catch the light.",
+  "sprite": "mob_0053"
+ },
+ {
+  "id": "mob_0054",
+  "name": "Canal Strider",
+  "region_id": "sol",
+  "level": 44,
+  "archetype": "swarm",
+  "family": "insect",
+  "element": "water",
+  "behavior": "flee",
+  "hp": 650,
+  "attack": 102,
+  "defense": 28,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 182,
+  "base_exp": 244,
+  "job_exp": 151,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0138",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0139",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Skaters that live on the last water in the Dust Aqueduct: its channel, its sluices and its cistern; they scatter at any threat.",
+  "art_brief": "A water-strider the size of a pony, stilt legs tipped with silver pads, a slim teal body and silt-pearl eyes.",
+  "sprite": "mob_0054"
+ },
+ {
+  "id": "mob_0055",
+  "name": "Dust Revenant",
+  "region_id": "sol",
+  "level": 47,
+  "archetype": "swarm",
+  "family": "spirit",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 792,
+  "attack": 125,
+  "defense": 31,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 234,
+  "base_exp": 345,
+  "job_exp": 214,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0140",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0141",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The wrapped shades of Aethrion surveyors who died sealing the Vault; they walk the causeway they built and escort the lens array before the Vault door.",
+  "art_brief": "A floating figure in sand-coloured burial wraps trailing dust, an empty hood lit by a dim surveyor's lamp held in a bony hand.",
+  "sprite": "mob_0055"
+ },
+ {
+  "id": "mob_0056",
+  "name": "Sand-buried Colossus",
+  "region_id": "sol",
+  "level": 49,
+  "archetype": "elite",
+  "family": "construct",
+  "element": "earth",
+  "behavior": "aggressive",
+  "hp": 5573,
+  "attack": 268,
+  "defense": 65,
+  "attack_range": 1,
+  "attack_ms": 1500,
+  "move_speed_ms": 312,
+  "base_exp": 2364,
+  "job_exp": 1466,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0142",
+    "rate_bp": 10000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0143",
+    "rate_bp": 3600,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Causeway builders, buried to the chest when the dunes moved; three still dig themselves free in the Colossus Bed beside the Buried Causeway. Their gear-hearts run on Aetherite.",
+  "art_brief": "A giant sandstone-and-brass figure buried to the waist, one arm free and dragging, a cracked sun-disc face glowing orange.",
+  "sprite": "mob_0056"
+ },
+ {
+  "id": "mob_0057",
+  "name": "Prism Lens-drone",
+  "region_id": "sol",
+  "level": 50,
+  "archetype": "ranged",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 674,
+  "attack": 161,
+  "defense": 27,
+  "attack_range": 7,
+  "attack_ms": 1800,
+  "move_speed_ms": 280,
+  "base_exp": 348,
+  "job_exp": 216,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0144",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0145",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0148",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Focusing drones from the Heliostat Vault; they guard the lens array outside its door and hover over the Buried Causeway's seep sinks. Their lenses can fuse sand into Sunfire Glass.",
+  "art_brief": "A floating ring of brass holding a large prism, three small fins, a beam of orange light idling from its centre.",
+  "sprite": "mob_0057"
+ },
+ {
+  "id": "mob_0058",
+  "name": "Vault Mirrorguard",
+  "region_id": "sol",
+  "level": 53,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 1494,
+  "attack": 197,
+  "defense": 116,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 340,
+  "base_exp": 832,
+  "job_exp": 516,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0146",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0147",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The Vault's guards, built to keep its mirrors aligned; they hold the Mirror Gallery, the Lens Foundry and the Shaft of Noon.",
+  "art_brief": "A knight-shaped construct plated in polished mirror bronze, a round shield that is a heliostat mirror, a visor like a lens.",
+  "sprite": "mob_0058"
+ },
+ {
+  "id": "mob_0059",
+  "name": "Heliostat Sovereign",
+  "region_id": "sol",
+  "level": 55,
+  "archetype": "boss",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 33840,
+  "attack": 506,
+  "defense": 94,
+  "attack_range": 4,
+  "attack_ms": 1540,
+  "move_speed_ms": 260,
+  "base_exp": 18315,
+  "job_exp": 11355,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0146",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 6
+   },
+   {
+    "item_id": "itm_0147",
+    "rate_bp": 6000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0149",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 10000,
+    "min_qty": 4,
+    "max_qty": 6
+   },
+   {
+    "item_id": "itm_0148",
+    "rate_bp": 2500,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The Vault's controller: an Aethrion mind built to aim every mirror in Solenia at one point. It still focuses the desert's sun into the Heliostat Core, which is why Solenia is burning.",
+  "art_brief": "A colossal throne-machine of brass rings and mirrors around a burning sun-core, arms of articulated mirror panels, a crown of lenses.",
+  "sprite": "mob_0059"
+ },
+ {
+  "id": "mob_0060",
+  "name": "Gullwing Skimmer",
+  "region_id": "tha",
+  "level": 38,
+  "archetype": "swarm",
+  "family": "avian",
+  "element": "wind",
+  "behavior": "aggressive",
+  "hp": 608,
+  "attack": 95,
+  "defense": 24,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 195,
+  "base_exp": 252,
+  "job_exp": 156,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0160",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0161",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Gulls that nest on the Saltwind cliffs and perch on the beached pump-buoy; they dive on anything that walks under the colony.",
+  "art_brief": "A long-winged gull with brass-tinted primaries, a hooked orange beak and a crest of storm-grey feathers; mid-dive pose.",
+  "sprite": "mob_0060"
+ },
+ {
+  "id": "mob_0061",
+  "name": "Polyp Spitter",
+  "region_id": "tha",
+  "level": 42,
+  "archetype": "ranged",
+  "family": "coral",
+  "element": "water",
+  "behavior": "aggressive",
+  "hp": 573,
+  "attack": 125,
+  "defense": 21,
+  "attack_range": 6,
+  "attack_ms": 1800,
+  "move_speed_ms": 280,
+  "base_exp": 273,
+  "job_exp": 169,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0162",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0163",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Walking coral colonies that root on Coral Reach's reef heads, kelp shallows and dead coral, spitting barbs at anything that disturbs the water.",
+  "art_brief": "A squat lump of polyps on stubby root-legs, a ring of open tube mouths on top glowing magenta; pink-violet with white tips.",
+  "sprite": "mob_0061"
+ },
+ {
+  "id": "mob_0062",
+  "name": "Kelp Tender",
+  "region_id": "tha",
+  "level": 44,
+  "archetype": "support",
+  "family": "plant",
+  "element": "nature",
+  "behavior": "assist",
+  "hp": 1006,
+  "attack": 100,
+  "defense": 28,
+  "attack_range": 4,
+  "attack_ms": 2200,
+  "move_speed_ms": 336,
+  "base_exp": 368,
+  "job_exp": 228,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0164",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0165",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0178",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Kelp creatures that tend the kelp beds of Tidewheel Bay and the weed on its tidewheels' barnacled paddles; they answer any of their bed's distress and pearl oysters grow on their fronds.",
+  "art_brief": "A tall swaying figure of braided kelp with a bulb head glowing soft green, frond arms trailing; small oysters clinging to its stalk.",
+  "sprite": "mob_0062"
+ },
+ {
+  "id": "mob_0063",
+  "name": "Hullborer",
+  "region_id": "tha",
+  "level": 49,
+  "archetype": "swarm",
+  "family": "mollusc",
+  "element": "water",
+  "behavior": "assist",
+  "hp": 1045,
+  "attack": 123,
+  "defense": 26,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 286,
+  "base_exp": 367,
+  "job_exp": 228,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0166",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0167",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Ship-worms grown huge on Aethrion hull-timber; they infest the wrecks, the sunken freighter, the buoy floats and the driftwood bars of Wreck Shoal.",
+  "art_brief": "A pale segmented worm with a drill-bit shell at its head, wood shavings stuck to its slime; bone-white with rust-red rasp.",
+  "sprite": "mob_0063"
+ },
+ {
+  "id": "mob_0064",
+  "name": "Pearl Skate",
+  "region_id": "tha",
+  "level": 53,
+  "archetype": "swarm",
+  "family": "fish",
+  "element": "water",
+  "behavior": "flee",
+  "hp": 979,
+  "attack": 128,
+  "defense": 36,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 195,
+  "base_exp": 349,
+  "job_exp": 216,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0168",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0169",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0178",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Skates that bury in the warm mud of Pearl Flats' pearl beds and stilt ruins, cracking oysters; startled, they skim away across the shallows.",
+  "art_brief": "A wide diamond-shaped skate with a pearlescent back and a whip tail, skimming on its wing tips; sand-cream with nacre sheen.",
+  "sprite": "mob_0064"
+ },
+ {
+  "id": "mob_0065",
+  "name": "Thunderhull Turtle",
+  "region_id": "tha",
+  "level": 56,
+  "archetype": "bruiser",
+  "family": "reptile",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 2495,
+  "attack": 243,
+  "defense": 75,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 390,
+  "base_exp": 1026,
+  "job_exp": 636,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0170",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0171",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Great turtles that bask in the warm outflow of Stormbreak's intake vents and shelter behind its ruined breakwater; they wear salvaged hull plating grown into their shells and defend the herd.",
+  "art_brief": "A huge turtle whose shell is fused with riveted copper hull plates and a broken porthole; storm-grey skin, barnacles, glowing amber eyes.",
+  "sprite": "mob_0065"
+ },
+ {
+  "id": "mob_0066",
+  "name": "Squall Ray",
+  "region_id": "tha",
+  "level": 58,
+  "archetype": "ranged",
+  "family": "fish",
+  "element": "wind",
+  "behavior": "aggressive",
+  "hp": 870,
+  "attack": 200,
+  "defense": 32,
+  "attack_range": 5,
+  "attack_ms": 1800,
+  "move_speed_ms": 224,
+  "base_exp": 443,
+  "job_exp": 275,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0172",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0173",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Manta rays that leave the sea in a gale and ride the updraft round Stormbreak's lightning masts, charging their wings on the Aethrion conductors.",
+  "art_brief": "A manta ray with wing edges crackling blue, a long stinger tail with a copper tip; indigo back, white belly, floating above the ground.",
+  "sprite": "mob_0066"
+ },
+ {
+  "id": "mob_0067",
+  "name": "Pressure Drone",
+  "region_id": "tha",
+  "level": 61,
+  "archetype": "swarm",
+  "family": "construct",
+  "element": "water",
+  "behavior": "aggressive",
+  "hp": 1250,
+  "attack": 160,
+  "defense": 60,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 476,
+  "job_exp": 295,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0174",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0175",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 300,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Maintenance drones of the Drowned Relay; they keep the pressure halls sealed and crowd round the pump ring when the pumps surge.",
+  "art_brief": "A football-sized brass sphere with three propeller fins and a single red lamp eye, valves venting bubbles; pitted copper and red.",
+  "sprite": "mob_0067"
+ },
+ {
+  "id": "mob_0068",
+  "name": "Gloom Medusa",
+  "region_id": "tha",
+  "level": 63,
+  "archetype": "support",
+  "family": "cnidarian",
+  "element": "shadow",
+  "behavior": "assist",
+  "hp": 1315,
+  "attack": 151,
+  "defense": 45,
+  "attack_range": 5,
+  "attack_ms": 2200,
+  "move_speed_ms": 280,
+  "base_exp": 528,
+  "job_exp": 327,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0176",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0177",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0178",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Deep-water jellyfish that bloomed in the relay's flooded gallery, feeding on the leaking aether; they float in the dark and defend the drones that keep their water warm.",
+  "art_brief": "A translucent violet bell trailing long glowing tendrils, an aether-blue nucleus pulsing inside; dark halo.",
+  "sprite": "mob_0068"
+ },
+ {
+  "id": "mob_0069",
+  "name": "Drowned Signalmind",
+  "region_id": "tha",
+  "level": 65,
+  "archetype": "boss",
+  "family": "construct",
+  "element": "water",
+  "behavior": "aggressive",
+  "hp": 42360,
+  "attack": 599,
+  "defense": 118,
+  "attack_range": 4,
+  "attack_ms": 1400,
+  "move_speed_ms": 260,
+  "base_exp": 21516,
+  "job_exp": 13340,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0174",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 6
+   },
+   {
+    "item_id": "itm_0175",
+    "rate_bp": 6000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0179",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 10000,
+    "min_qty": 2,
+    "max_qty": 4
+   },
+   {
+    "item_id": "itm_0178",
+    "rate_bp": 2500,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The relay's control mind, which drowned with the station and kept broadcasting; it has grown a body of drone hulls and cable round its sonar array in the Sonar Chamber, and its pulses are what keep Thalassia's constructs hostile.",
+  "art_brief": "A colossal brass-and-coral head on cable tentacles, a ring of sonar dishes for a crown, one great cracked lens eye glowing cyan; bubbles and sparks.",
+  "sprite": "mob_0069"
+ },
+ {
+  "id": "mob_0070",
+  "name": "Rimehare",
+  "region_id": "cry",
+  "level": 48,
+  "archetype": "swarm",
+  "family": "beast",
+  "element": "wind",
+  "behavior": "flee",
+  "hp": 770,
+  "attack": 112,
+  "defense": 32,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 182,
+  "base_exp": 281,
+  "job_exp": 174,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0190",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0191",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Hares of Frostline's open snowfields above the treeline; they burrow in drifts and bolt from anything that hurts them.",
+  "art_brief": "A big white hare with frost-tipped ears and long whiskers rimed with ice, hind legs built for bounding; snow-white, silver-blue shadows.",
+  "sprite": "mob_0070"
+ },
+ {
+  "id": "mob_0071",
+  "name": "Glassback Ram",
+  "region_id": "cry",
+  "level": 52,
+  "archetype": "bruiser",
+  "family": "beast",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 2079,
+  "attack": 239,
+  "defense": 52,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 270,
+  "base_exp": 932,
+  "job_exp": 578,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0192",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0193",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0208",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Mountain rams that graze lichen on Blueglass Ridge's terraces, spines and drifts; their horns grow volcanic glass, and old rams carry prisms in their horn cores.",
+  "art_brief": "A shaggy grey ram with curled horns of translucent blue glass and a back of glassy plates; breath steaming.",
+  "sprite": "mob_0071"
+ },
+ {
+  "id": "mob_0072",
+  "name": "Frostcoil Serpent",
+  "region_id": "cry",
+  "level": 57,
+  "archetype": "swarm",
+  "family": "reptile",
+  "element": "ice",
+  "behavior": "aggressive",
+  "hp": 1306,
+  "attack": 148,
+  "defense": 39,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 221,
+  "base_exp": 457,
+  "job_exp": 283,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0194",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0195",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Serpents that drank leaking coolant from Snowcoil's frozen coils and grew cold-blooded beyond nature; they nest in Snowcoil's coil trenches and its abandoned research huts.",
+  "art_brief": "A long pale-blue serpent with frost-ridged scales and a hood of thin ice fins, glowing coolant-cyan veins along its belly.",
+  "sprite": "mob_0072"
+ },
+ {
+  "id": "mob_0073",
+  "name": "Glacier Juggernaut",
+  "region_id": "cry",
+  "level": 60,
+  "archetype": "elite",
+  "family": "construct",
+  "element": "earth",
+  "behavior": "aggressive",
+  "hp": 5778,
+  "attack": 415,
+  "defense": 101,
+  "attack_range": 1,
+  "attack_ms": 1500,
+  "move_speed_ms": 312,
+  "base_exp": 3102,
+  "job_exp": 1923,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0196",
+    "rate_bp": 10000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0197",
+    "rate_bp": 3600,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 5000,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Aethrion plough mechs that still clear Prism Pass on their old schedule, crushing anything on the road; they rest in the plough shed at the pass's east end.",
+  "art_brief": "A tracked mech twice a man's height with a huge wedge plough blade, a furnace glowing in its chest and frost-crusted armour; rust-red and steel.",
+  "sprite": "mob_0073"
+ },
+ {
+  "id": "mob_0074",
+  "name": "Mirrorshade",
+  "region_id": "cry",
+  "level": 64,
+  "archetype": "support",
+  "family": "spirit",
+  "element": "shadow",
+  "behavior": "assist",
+  "hp": 1270,
+  "attack": 154,
+  "defense": 46,
+  "attack_range": 5,
+  "attack_ms": 2200,
+  "move_speed_ms": 280,
+  "base_exp": 524,
+  "job_exp": 325,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0198",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0199",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0208",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Reflections that stepped out of Mirror Ice's polished surface where the lens array focused aether; they drift over the lake and its lens islands and defend whatever stands near them.",
+  "art_brief": "A humanoid silhouette of dark mirror glass, reflecting its surroundings warped, edges smoking into shadow; one bright eye-glint.",
+  "sprite": "mob_0074"
+ },
+ {
+  "id": "mob_0075",
+  "name": "Hoarfrost Behemoth",
+  "region_id": "cry",
+  "level": 66,
+  "archetype": "bruiser",
+  "family": "beast",
+  "element": "ice",
+  "behavior": "passive",
+  "hp": 3722,
+  "attack": 325,
+  "defense": 72,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 375,
+  "base_exp": 1414,
+  "job_exp": 877,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0200",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0201",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Woolly grazers that dig lichen from the shores of Mirror Ice and the edges of its open leads, where the moving water keeps the snow soft.",
+  "art_brief": "A mammoth-sized beast with a hump of frost-matted wool, four curling tusks and icicles in its fur; white and slate grey.",
+  "sprite": "mob_0075"
+ },
+ {
+  "id": "mob_0076",
+  "name": "Cryo Sentry",
+  "region_id": "cry",
+  "level": 68,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "ice",
+  "behavior": "aggressive",
+  "hp": 2444,
+  "attack": 261,
+  "defense": 125,
+  "attack_range": 3,
+  "attack_ms": 1900,
+  "move_speed_ms": 340,
+  "base_exp": 1115,
+  "job_exp": 691,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0202",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0203",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 500,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Security frames of the White Circuit, the ring conduit that powers the Archive; they patrol its pylons and arcs and chase whatever leaks from the vent breach.",
+  "art_brief": "A tripod construct with a long frost lance for a head, a cryo cell glowing in its chest, frost venting from its joints; white enamel and cyan.",
+  "sprite": "mob_0076"
+ },
+ {
+  "id": "mob_0077",
+  "name": "Archive Specter",
+  "region_id": "cry",
+  "level": 71,
+  "archetype": "swarm",
+  "family": "spirit",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 1382,
+  "attack": 193,
+  "defense": 53,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 208,
+  "base_exp": 536,
+  "job_exp": 332,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0204",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0205",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Fragments of recorded minds that leaked out of the Archive's cracked data-cores; they seep out through the White Circuit's vent breach and swarm the warm snowdrifts over the conduit.",
+  "art_brief": "A flickering translucent figure made of scrolling glyph-light, trailing like smoke, face a blank of static; violet and cold white.",
+  "sprite": "mob_0077"
+ },
+ {
+  "id": "mob_0078",
+  "name": "Cryo Lancer",
+  "region_id": "cry",
+  "level": 73,
+  "archetype": "ranged",
+  "family": "construct",
+  "element": "ice",
+  "behavior": "aggressive",
+  "hp": 1326,
+  "attack": 253,
+  "defense": 44,
+  "attack_range": 7,
+  "attack_ms": 2160,
+  "move_speed_ms": 280,
+  "base_exp": 586,
+  "job_exp": 363,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0206",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0207",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Guardian frames of the Archive; they hold the cryo wards, the cold stacks and the index gallery against anything that moves.",
+  "art_brief": "A slim armoured construct with a long rifle-like lance arm, a prism focus at its tip, frosted visor; white and pale blue.",
+  "sprite": "mob_0078"
+ },
+ {
+  "id": "mob_0079",
+  "name": "Cryocore Curator",
+  "region_id": "cry",
+  "level": 75,
+  "archetype": "boss",
+  "family": "construct",
+  "element": "ice",
+  "behavior": "aggressive",
+  "hp": 53064,
+  "attack": 820,
+  "defense": 173,
+  "attack_range": 2,
+  "attack_ms": 1400,
+  "move_speed_ms": 260,
+  "base_exp": 28648,
+  "job_exp": 17762,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0204",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 6
+   },
+   {
+    "item_id": "itm_0054",
+    "rate_bp": 6000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0209",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 5
+   },
+   {
+    "item_id": "itm_0208",
+    "rate_bp": 2500,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The Archive's curator intelligence, wound round the cryocore in the Curator's Vault; it freezes anything that might disturb its records, which is why Crystallis's machines turned hostile.",
+  "art_brief": "A towering construct of crystal shelving and brass arms around a glowing blue cryocore, data-slates orbiting it like moons, a frost crown.",
+  "sprite": "mob_0079"
+ },
+ {
+  "id": "mob_0080",
+  "name": "Slagback Toad",
+  "region_id": "emb",
+  "level": 63,
+  "archetype": "bruiser",
+  "family": "amphibian",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 2541,
+  "attack": 268,
+  "defense": 88,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 345,
+  "base_exp": 1056,
+  "job_exp": 655,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0220",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0221",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Toads that soak in cooling slag pools; the slag sets on their backs as armour. They crowd the pools of Ashfield and the warm vents round its toppled heat-sink.",
+  "art_brief": "A boulder-sized toad with a cracked black slag shell on its back, orange heat in the cracks, wide throat sac glowing like a bellows.",
+  "sprite": "mob_0080"
+ },
+ {
+  "id": "mob_0081",
+  "name": "Crucible Tender",
+  "region_id": "emb",
+  "level": 71,
+  "archetype": "support",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "flee",
+  "hp": 1555,
+  "attack": 174,
+  "defense": 53,
+  "attack_range": 4,
+  "attack_ms": 2200,
+  "move_speed_ms": 252,
+  "base_exp": 616,
+  "job_exp": 382,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0222",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0223",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Repair automata that once tended the forges; they still patch every hound they find, and pick over the slag heaps for scrap to do it with.",
+  "art_brief": "A four-legged brass spider-frame with a welding arc on one arm and a slag scoop on the other; blue-white arc light, soot-stained lens.",
+  "sprite": "mob_0081"
+ },
+ {
+  "id": "mob_0082",
+  "name": "Vent Skink",
+  "region_id": "emb",
+  "level": 74,
+  "archetype": "swarm",
+  "family": "reptile",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 1788,
+  "attack": 196,
+  "defense": 56,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 593,
+  "job_exp": 368,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0224",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0225",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Lizards that bask on vent rims and dive into the lava to cool off; colonies ring the Vents' magma pool and spill into the ash wash and round the heat-tap drill.",
+  "art_brief": "A slim lizard with glossy black basalt scales, a glowing orange throat and tail tip, heat shimmer over its back.",
+  "sprite": "mob_0082"
+ },
+ {
+  "id": "mob_0083",
+  "name": "Magma Spitter",
+  "region_id": "emb",
+  "level": 75,
+  "archetype": "ranged",
+  "family": "annelid",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 1375,
+  "attack": 262,
+  "defense": 46,
+  "attack_range": 6,
+  "attack_ms": 1800,
+  "move_speed_ms": 336,
+  "base_exp": 607,
+  "job_exp": 376,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0226",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0227",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Armoured worms that root in lava fissures and spit what they swallow; they line the Vents' southern fissure and the heat-tap ridge.",
+  "art_brief": "A thick segmented worm half out of a fissure, a crusted shell collar and a tube mouth dripping magma; dull red with yellow-hot gullet.",
+  "sprite": "mob_0083"
+ },
+ {
+  "id": "mob_0084",
+  "name": "Rivet Scrapling",
+  "region_id": "emb",
+  "level": 79,
+  "archetype": "swarm",
+  "family": "construct",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 1693,
+  "attack": 221,
+  "defense": 62,
+  "attack_range": 1,
+  "attack_ms": 1440,
+  "move_speed_ms": 234,
+  "base_exp": 633,
+  "job_exp": 392,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0228",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0229",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Scrap-built drones that strip the collapsed bridges of Ironfall for rivets and hoard them in heaps; they swarm the girder fields and the Lower Span approach.",
+  "art_brief": "A fist-sized rattling bundle of rivets, bolts and a single glowing gear-eye on wire legs; moves in jittering hops.",
+  "sprite": "mob_0084"
+ },
+ {
+  "id": "mob_0085",
+  "name": "Slagforged Brute",
+  "region_id": "emb",
+  "level": 83,
+  "archetype": "bruiser",
+  "family": "elemental",
+  "element": "earth",
+  "behavior": "aggressive",
+  "hp": 4548,
+  "attack": 427,
+  "defense": 100,
+  "attack_range": 1,
+  "attack_ms": 2000,
+  "move_speed_ms": 345,
+  "base_exp": 1704,
+  "job_exp": 1056,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0230",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0231",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Slag that set in the Red Crucible's moulds and walked off; brutes stand in the mould yard where they were first cast and roam the scrap moraine and the Crucible rim.",
+  "art_brief": "A hulking ogre-shape of rough black slag with mould seams down its sides, a molten core showing through cracks, iron bands still on its fists.",
+  "sprite": "mob_0085"
+ },
+ {
+  "id": "mob_0086",
+  "name": "Pour Wraith",
+  "region_id": "emb",
+  "level": 85,
+  "archetype": "swarm",
+  "family": "elemental",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 2026,
+  "attack": 253,
+  "defense": 55,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 748,
+  "job_exp": 464,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0232",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0233",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Molten metal that kept its shape after the last pour; wraiths drift along the pour channels of the Red Crucible and spill over its rim.",
+  "art_brief": "A dripping humanoid of white-hot liquid metal with no face, trailing a cooling grey skin that cracks and re-melts; a mould seam down its middle.",
+  "sprite": "mob_0086"
+ },
+ {
+  "id": "mob_0087",
+  "name": "Zero Stoker",
+  "region_id": "emb",
+  "level": 88,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "assist",
+  "hp": 3882,
+  "attack": 401,
+  "defense": 181,
+  "attack_range": 1,
+  "attack_ms": 2090,
+  "move_speed_ms": 340,
+  "base_exp": 1721,
+  "job_exp": 1067,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0234",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0235",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0236",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 800,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The stokers of the first Aethrion furnace, still shovelling into a fire that no longer needs feeding. They work Furnace Zero's stoker halls, coal pens and pour gallery.",
+  "art_brief": "A broad-shouldered iron automaton with a shovel for one arm and a coal hopper on its back, firebox glow behind a grille face.",
+  "sprite": "mob_0087"
+ },
+ {
+  "id": "mob_0088",
+  "name": "Kiln Prime",
+  "region_id": "emb",
+  "level": 90,
+  "archetype": "boss",
+  "family": "construct",
+  "element": "fire",
+  "behavior": "aggressive",
+  "hp": 67320,
+  "attack": 1103,
+  "defense": 187,
+  "attack_range": 2,
+  "attack_ms": 1400,
+  "move_speed_ms": 260,
+  "base_exp": 34560,
+  "job_exp": 21427,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0234",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 6
+   },
+   {
+    "item_id": "itm_0233",
+    "rate_bp": 6000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0237",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0236",
+    "rate_bp": 10000,
+    "min_qty": 1,
+    "max_qty": 2
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 5
+   }
+  ],
+  "ecology": "The governing intelligence of Furnace Zero, the first furnace of Aethrion. Since the Sundering it has run the whole of Emberfall's foundry as one body: every hound, knight and stoker answers to it from the Zero Core.",
+  "art_brief": "A colossal kiln-shaped automaton rising from the core floor, crucible arms that pour molten metal, a white-hot Aetherite heart behind a lattice grille.",
+  "sprite": "mob_0088"
+ },
+ {
+  "id": "mob_0090",
+  "name": "Gutter Lurk",
+  "region_id": "noc",
+  "level": 77,
+  "archetype": "swarm",
+  "family": "beast",
+  "element": "shadow",
+  "behavior": "assist",
+  "hp": 1718,
+  "attack": 223,
+  "defense": 60,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 221,
+  "base_exp": 659,
+  "job_exp": 409,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0250",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0251",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Pale, long-limbed scavengers that live under the fallen overpasses and in the drowned gutters of the outskirts, picking over what the wisps leave behind.",
+  "art_brief": "A hairless grey cat-sized scavenger with long fingers, huge reflective eyes and a ridge of violet-lit bristles along the spine.",
+  "sprite": "mob_0090"
+ },
+ {
+  "id": "mob_0091",
+  "name": "Nullbloom",
+  "region_id": "noc",
+  "level": 80,
+  "archetype": "support",
+  "family": "plant",
+  "element": "nature",
+  "behavior": "assist",
+  "hp": 2249,
+  "attack": 201,
+  "defense": 63,
+  "attack_range": 4,
+  "attack_ms": 2200,
+  "move_speed_ms": 448,
+  "base_exp": 795,
+  "job_exp": 493,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0252",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0253",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Flowers that grew under Aethrion grow-lamps after the lamps turned to null light; they drink colour itself and spread through the park beds and black glasshouses.",
+  "art_brief": "A waist-high flower with petals of matte black glass, a violet light-drinking eye at the centre, roots that leave grey patches where they walk.",
+  "sprite": "mob_0091"
+ },
+ {
+  "id": "mob_0092",
+  "name": "Coupler Mite",
+  "region_id": "noc",
+  "level": 83,
+  "archetype": "swarm",
+  "family": "construct",
+  "element": "earth",
+  "behavior": "assist",
+  "hp": 1647,
+  "attack": 236,
+  "defense": 93,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 656,
+  "job_exp": 407,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0254",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0255",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Track-maintenance mites that still couple and uncouple dead carriages in the rail yards; crews strip loose rail off the stalled line and the junction pit.",
+  "art_brief": "A beetle-sized steel mite shaped like a rail coupler, pincer jaws, a single violet status light blinking on its back.",
+  "sprite": "mob_0092"
+ },
+ {
+  "id": "mob_0093",
+  "name": "Riftling",
+  "region_id": "noc",
+  "level": 87,
+  "archetype": "swarm",
+  "family": "spirit",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 2051,
+  "attack": 267,
+  "defense": 71,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 260,
+  "base_exp": 788,
+  "job_exp": 489,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0256",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0257",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Shadow that spilled from the tear in the Veil and took the shapes of the city's lost pets; they swarm the rift's edges and have overrun the whole district, from the tilted blocks to the leaning spires.",
+  "art_brief": "A dog-shaped hole in the world: a black silhouette with violet edges and white pinpoint eyes, flickering at the outline.",
+  "sprite": "mob_0093"
+ },
+ {
+  "id": "mob_0094",
+  "name": "Sparkwing",
+  "region_id": "noc",
+  "level": 90,
+  "archetype": "swarm",
+  "family": "bird",
+  "element": "wind",
+  "behavior": "flee",
+  "hp": 1938,
+  "attack": 262,
+  "defense": 75,
+  "attack_range": 1,
+  "attack_ms": 1600,
+  "move_speed_ms": 182,
+  "base_exp": 729,
+  "job_exp": 452,
+  "aggro_radius": 0,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0258",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0259",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Birds that roost on the Black Array's receiver dishes and feed on the static arcing between the masts; a flock lifts when anything strikes it.",
+  "art_brief": "A crow-sized bird with feathers like copper foil, sparks crackling between the wingtips, violet arcs jumping when it lands.",
+  "sprite": "mob_0094"
+ },
+ {
+  "id": "mob_0095",
+  "name": "Array Sentinel",
+  "region_id": "noc",
+  "level": 91,
+  "archetype": "construct",
+  "family": "construct",
+  "element": "shadow",
+  "behavior": "assist",
+  "hp": 3465,
+  "attack": 422,
+  "defense": 228,
+  "attack_range": 1,
+  "attack_ms": 1900,
+  "move_speed_ms": 374,
+  "base_exp": 1714,
+  "job_exp": 1063,
+  "aggro_radius": 6,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0260",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0261",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0266",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 800,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "The city's guard automatons; the ones still powered stand in rings round the Black Array's great dish and pace the control lines north of it.",
+  "art_brief": "A tall, faceless sentinel in layered dark plate, a halberd of lattice light, a violet ring rotating behind its head.",
+  "sprite": "mob_0095"
+ },
+ {
+  "id": "mob_0096",
+  "name": "Glyph Swarm",
+  "region_id": "noc",
+  "level": 95,
+  "archetype": "swarm",
+  "family": "construct",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 2216,
+  "attack": 281,
+  "defense": 81,
+  "attack_range": 1,
+  "attack_ms": 1360,
+  "move_speed_ms": 221,
+  "base_exp": 802,
+  "job_exp": 497,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0262",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0263",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Floating glyphs of the Meridian Lattice's own language, policing the plazas where its lines converge; they thicken round the Gate, where the lines meet above the Heart.",
+  "art_brief": "A cloud of glowing violet glyphs that hangs together in the shape of a sigil, spinning when it attacks.",
+  "sprite": "mob_0096"
+ },
+ {
+  "id": "mob_0097",
+  "name": "Lattice Weaver",
+  "region_id": "noc",
+  "level": 97,
+  "archetype": "ranged",
+  "family": "construct",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 2199,
+  "attack": 377,
+  "defense": 67,
+  "attack_range": 6,
+  "attack_ms": 1980,
+  "move_speed_ms": 280,
+  "base_exp": 887,
+  "job_exp": 550,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0264",
+    "rate_bp": 1800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0265",
+    "rate_bp": 450,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0266",
+    "rate_bp": 25,
+    "min_qty": 1,
+    "max_qty": 1
+   }
+  ],
+  "ecology": "Spider-frames that repair the Meridian Lattice itself; they work the loom chamber inside the Heart and string new lines through its conduits and halls.",
+  "art_brief": "A long-legged spider of dark brass with a violet spinneret, drawing lines of light between its legs as it moves.",
+  "sprite": "mob_0097"
+ },
+ {
+  "id": "mob_0098",
+  "name": "Lattice Sovereign",
+  "region_id": "noc",
+  "level": 99,
+  "archetype": "boss",
+  "family": "construct",
+  "element": "shadow",
+  "behavior": "aggressive",
+  "hp": 77520,
+  "attack": 1293,
+  "defense": 216,
+  "attack_range": 2,
+  "attack_ms": 1400,
+  "move_speed_ms": 260,
+  "base_exp": 39060,
+  "job_exp": 24217,
+  "aggro_radius": 7,
+  "leash_radius": 35,
+  "drops": [
+   {
+    "item_id": "itm_0262",
+    "rate_bp": 10000,
+    "min_qty": 3,
+    "max_qty": 6
+   },
+   {
+    "item_id": "itm_0265",
+    "rate_bp": 6000,
+    "min_qty": 1,
+    "max_qty": 3
+   },
+   {
+    "item_id": "itm_0267",
+    "rate_bp": 1500,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_0266",
+    "rate_bp": 10000,
+    "min_qty": 1,
+    "max_qty": 2
+   },
+   {
+    "item_id": "itm_0073",
+    "rate_bp": 10000,
+    "min_qty": 4,
+    "max_qty": 6
+   }
+  ],
+  "ecology": "The Meridian Lattice's own mind, woken by the Sundering. From the Heart it runs every drone, sentinel and glyph in Nocthaven; the violet grid across the city is its nervous system.",
+  "art_brief": "A vast crowned lattice of violet light suspended over the chamber floor, a dark crystalline core inside, sentinel-like arms unfolding from the grid.",
+  "sprite": "mob_0098"
+ }
+]

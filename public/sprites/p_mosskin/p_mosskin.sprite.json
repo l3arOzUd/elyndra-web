@@ -1,0 +1,22 @@
+{
+ "id": "p_mosskin",
+ "kind": "puppet",
+ "puppet": {
+  "front": "front.png",
+  "motion": "hop"
+ },
+ "frame": {
+  "w": 414,
+  "h": 384
+ },
+ "pivot": {
+  "x": 204,
+  "y": 379
+ },
+ "pixelsPerCell": 365.7,
+ "rows": [
+  "S"
+ ],
+ "animations": {},
+ "source": "sprite/tripo_ready/01_Mosskin.png"
+}

@@ -1,0 +1,1785 @@
+[
+ {
+  "id": "q_lum_intro",
+  "title": "Lumeris: First Survey",
+  "region_id": "lum",
+  "giver_npc_id": "npc_lum_guild_registrar",
+  "turn_in_npc_id": "npc_lum_guild_registrar",
+  "min_level": 1,
+  "prerequisite": null,
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0001",
+    "count": 30
+   }
+  ],
+  "rewards": {
+   "base_exp": 157,
+   "currency": 60,
+   "items": [
+    {
+     "item_id": "itm_0075",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Thin the Mosskin herds in Dawnmeadow. Teaches movement and basic attacks."
+ },
+ {
+  "id": "q_lum_registration",
+  "title": "Wayfarer Registration",
+  "region_id": "lum",
+  "giver_npc_id": "npc_lum_guild_registrar",
+  "turn_in_npc_id": "npc_lum_guild_registrar",
+  "min_level": 2,
+  "prerequisite": "q_lum_intro",
+  "objectives": [
+   {
+    "type": "collect",
+    "item_id": "itm_0001",
+    "count": 10
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0003",
+    "count": 10
+   }
+  ],
+  "rewards": {
+   "base_exp": 268,
+   "currency": 120,
+   "items": [
+    {
+     "item_id": "itm_0083",
+     "qty": 1
+    },
+    {
+     "item_id": "itm_0076",
+     "qty": 5
+    }
+   ]
+  },
+  "summary": "Bring field samples to earn the Guild Pass (needed for Hollowroot). Teaches looting and inventory."
+ },
+ {
+  "id": "q_lum_amber_trail",
+  "title": "Resin on the Trail",
+  "region_id": "lum",
+  "giver_npc_id": "npc_lum_amber_trail_scout",
+  "turn_in_npc_id": "npc_lum_amber_trail_scout",
+  "min_level": 4,
+  "prerequisite": "q_lum_registration",
+  "objectives": [
+   {
+    "type": "visit",
+    "map_id": "lum_fld_02",
+    "count": 1
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0003",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 747,
+   "currency": 200,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 8
+    }
+   ]
+  },
+  "summary": "Clear the aggressive Ambermite swarms. First quest that expects a train of 20+."
+ },
+ {
+  "id": "q_lum_scree",
+  "title": "Stones That Bite",
+  "region_id": "lum",
+  "giver_npc_id": "npc_lum_whispergrass_scout",
+  "turn_in_npc_id": "npc_lum_whispergrass_scout",
+  "min_level": 6,
+  "prerequisite": "q_lum_amber_trail",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0005",
+    "count": 40
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0074",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "base_exp": 1755,
+   "currency": 320,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "Craglets swallow Aethrion gears; recover three. Points the player at the Copper Saber recipe."
+ },
+ {
+  "id": "q_lum_windmill",
+  "title": "Sails in the Dust",
+  "region_id": "lum",
+  "giver_npc_id": "npc_lum_windmill_scout",
+  "turn_in_npc_id": "npc_lum_windmill_scout",
+  "min_level": 9,
+  "prerequisite": "q_lum_scree",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0007",
+    "count": 120
+   }
+  ],
+  "rewards": {
+   "base_exp": 3879,
+   "currency": 450,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 8
+    }
+   ]
+  },
+  "summary": "The Dustwing swarm is the region's first real horde: 120 kills is two or three full trains."
+ },
+ {
+  "id": "q_lum_moonbrook",
+  "title": "Reeds at Moonrise",
+  "region_id": "lum",
+  "giver_npc_id": "npc_lum_moonbrook_scout",
+  "turn_in_npc_id": "npc_lum_moonbrook_scout",
+  "min_level": 12,
+  "prerequisite": "q_lum_windmill",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0009",
+    "count": 60
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0008",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 8081,
+   "currency": 600,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Mixed packs: ranged Reedstalkers among passive Brookfin. Teaches pulling ranged mobs into the pack."
+ },
+ {
+  "id": "q_lum_orchard",
+  "title": "The Rotting Rows",
+  "region_id": "lum",
+  "giver_npc_id": "npc_lum_orchard_medic",
+  "turn_in_npc_id": "npc_lum_orchard_medic",
+  "min_level": 15,
+  "prerequisite": "q_lum_moonbrook",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0010",
+    "count": 150
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0019",
+    "count": 20
+   }
+  ],
+  "rewards": {
+   "base_exp": 14414,
+   "currency": 800,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 2
+    }
+   ]
+  },
+  "summary": "Find where the rot comes from. Leads to the pump-house cave."
+ },
+ {
+  "id": "q_lum_hollowroot",
+  "title": "Heart of Hollowroot",
+  "region_id": "lum",
+  "giver_npc_id": "npc_lum_orchard_medic",
+  "turn_in_npc_id": "npc_lum_guild_registrar",
+  "min_level": 18,
+  "prerequisite": "q_lum_orchard",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0036",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "base_exp": 42148,
+   "currency": 2000,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 3
+    },
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Destroy the Hollowroot Warden and report to Avelorn. Opens the road to Verdantis."
+ },
+ {
+  "id": "q_ver_intro",
+  "title": "Verdantis: First Survey",
+  "region_id": "ver",
+  "giver_npc_id": "npc_ver_guild_registrar",
+  "turn_in_npc_id": "npc_ver_guild_registrar",
+  "min_level": 15,
+  "prerequisite": null,
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0012",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 21622,
+   "currency": 800,
+   "items": [
+    {
+     "item_id": "itm_0075",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Herd and clear the Graftlings of Fernreach through the East Gate. A gentle first horde after Hollowroot."
+ },
+ {
+  "id": "q_ver_mossbridge",
+  "title": "Croaks Under the Bridges",
+  "region_id": "ver",
+  "giver_npc_id": "npc_ver_mossbridge_scout",
+  "turn_in_npc_id": "npc_ver_mossbridge_scout",
+  "min_level": 18,
+  "prerequisite": "q_ver_intro",
+  "objectives": [
+   {
+    "type": "visit",
+    "map_id": "ver_fld_02",
+    "count": 1
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0040",
+    "count": 60
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0100",
+    "count": 10
+   }
+  ],
+  "rewards": {
+   "base_exp": 23708,
+   "currency": 1200,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 8
+    }
+   ]
+  },
+  "summary": "Mossback Newts call their whole bank: learn to pull a pack. Newt Slick is the Artificer's tonic base."
+ },
+ {
+  "id": "q_ver_canopy",
+  "title": "Lights in the Canopy",
+  "region_id": "ver",
+  "giver_npc_id": "npc_ver_canopy_scout",
+  "turn_in_npc_id": "npc_ver_canopy_scout",
+  "min_level": 21,
+  "prerequisite": "q_ver_mossbridge",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0041",
+    "count": 80
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0042",
+    "count": 30
+   }
+  ],
+  "rewards": {
+   "base_exp": 29188,
+   "currency": 1400,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 8
+    }
+   ]
+  },
+  "summary": "Ranged moths over bruiser hound packs: pull the moths into the melee, then cleave the den."
+ },
+ {
+  "id": "q_ver_graftwood",
+  "title": "Trellis Trouble",
+  "region_id": "ver",
+  "giver_npc_id": "npc_ver_graftwood_scout",
+  "turn_in_npc_id": "npc_ver_graftwood_scout",
+  "min_level": 24,
+  "prerequisite": "q_ver_canopy",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0014",
+    "count": 100
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0027",
+    "count": 15
+   }
+  ],
+  "rewards": {
+   "base_exp": 38848,
+   "currency": 1600,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "The first construct horde: trains of Vinecrawlers down the trellis rows."
+ },
+ {
+  "id": "q_ver_vineworks",
+  "title": "The Press Still Turns",
+  "region_id": "ver",
+  "giver_npc_id": "npc_ver_vineworks_scout",
+  "turn_in_npc_id": "npc_ver_vineworks_scout",
+  "min_level": 27,
+  "prerequisite": "q_ver_graftwood",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0043",
+    "count": 60
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0044",
+    "count": 80
+   }
+  ],
+  "rewards": {
+   "base_exp": 50145,
+   "currency": 1750,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Pruning Tenders work the presses in packs: pull them together and clear them. Then corner the fleeing Thistlehares on the terraces."
+ },
+ {
+  "id": "q_ver_elderroot",
+  "title": "Antlers Under the Eldest",
+  "region_id": "ver",
+  "giver_npc_id": "npc_ver_elderroot_scout",
+  "turn_in_npc_id": "npc_ver_elderroot_scout",
+  "min_level": 30,
+  "prerequisite": "q_ver_vineworks",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0015",
+    "count": 100
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0045",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "base_exp": 62832,
+   "currency": 1950,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 2
+    }
+   ]
+  },
+  "summary": "Root Sentinel trains on the ridges, then two Antlered Engines in the glade: the region's first elite fight."
+ },
+ {
+  "id": "q_ver_spore_basin",
+  "title": "Breath of the Engine",
+  "region_id": "ver",
+  "giver_npc_id": "npc_ver_spore_basin_scout",
+  "turn_in_npc_id": "npc_ver_spore_basin_scout",
+  "min_level": 33,
+  "prerequisite": "q_ver_elderroot",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0046",
+    "count": 150
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0112",
+    "count": 12
+   }
+  ],
+  "rewards": {
+   "base_exp": 77277,
+   "currency": 2150,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 2
+    },
+    {
+     "item_id": "itm_0077",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "The Basin's spores come from the Engine's vents. Thin the Sporebloats and bring back their membranes to prove it."
+ },
+ {
+  "id": "q_ver_heartwood",
+  "title": "Heart of the Engine",
+  "region_id": "ver",
+  "giver_npc_id": "npc_ver_engine_watch",
+  "turn_in_npc_id": "npc_ver_guild_registrar",
+  "min_level": 37,
+  "prerequisite": "q_ver_spore_basin",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0049",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "base_exp": 198402,
+   "currency": 4750,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 3
+    },
+    {
+     "item_id": "itm_0118",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "Stop the Heartwood Regent and report to Sylvara. Opens the transit to Solenia's Duskhar."
+ },
+ {
+  "id": "q_sol_intro",
+  "title": "Solenia: First Survey",
+  "region_id": "sol",
+  "giver_npc_id": "npc_sol_guild_registrar",
+  "turn_in_npc_id": "npc_sol_guild_registrar",
+  "min_level": 25,
+  "prerequisite": null,
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0016",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 63403,
+   "currency": 1250,
+   "items": [
+    {
+     "item_id": "itm_0075",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Clear the Sandcoils basking on the Saffron Dunes beyond the West Gate. A gentle first horde in the heat."
+ },
+ {
+  "id": "q_sol_caravan",
+  "title": "Kites over the Verge",
+  "region_id": "sol",
+  "giver_npc_id": "npc_sol_verge_scout",
+  "turn_in_npc_id": "npc_sol_verge_scout",
+  "min_level": 29,
+  "prerequisite": "q_sol_intro",
+  "objectives": [
+   {
+    "type": "visit",
+    "map_id": "sol_fld_02",
+    "count": 1
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0051",
+    "count": 60
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0017",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 65632,
+   "currency": 1900,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 8
+    }
+   ]
+  },
+  "summary": "Brass Kites shoot from range over the caravan road. Pull them into the scarab packs."
+ },
+ {
+  "id": "q_sol_glass_flats",
+  "title": "Sentries on the Glass",
+  "region_id": "sol",
+  "giver_npc_id": "npc_sol_flats_scout",
+  "turn_in_npc_id": "npc_sol_flats_scout",
+  "min_level": 33,
+  "prerequisite": "q_sol_caravan",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0018",
+    "count": 100
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0052",
+    "count": 30
+   }
+  ],
+  "rewards": {
+   "base_exp": 77277,
+   "currency": 2150,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "The first construct horde, then the basilisk packs: big slow trains and bruisers that answer each other."
+ },
+ {
+  "id": "q_sol_sun_dial",
+  "title": "Recalibrating the Dial",
+  "region_id": "sol",
+  "giver_npc_id": "npc_sol_dial_scout",
+  "turn_in_npc_id": "npc_sol_dial_scout",
+  "min_level": 37,
+  "prerequisite": "q_sol_glass_flats",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0053",
+    "count": 60
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0019",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 99201,
+   "currency": 2350,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Acolytes keep the Wardens running. Kill the supports first, then the Wardens on the Dial's face."
+ },
+ {
+  "id": "q_sol_aqueduct",
+  "title": "Striders in the Channel",
+  "region_id": "sol",
+  "giver_npc_id": "npc_sol_aqueduct_scout",
+  "turn_in_npc_id": "npc_sol_aqueduct_scout",
+  "min_level": 41,
+  "prerequisite": "q_sol_sun_dial",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0054",
+    "count": 120
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0138",
+    "count": 15
+   }
+  ],
+  "rewards": {
+   "base_exp": 124680,
+   "currency": 2650,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    },
+    {
+     "item_id": "itm_0073",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "A fleeing swarm along the canal: herd the Striders against the channel walls before they scatter."
+ },
+ {
+  "id": "q_sol_causeway",
+  "title": "The Sealed Door",
+  "region_id": "sol",
+  "giver_npc_id": "npc_sol_causeway_scout",
+  "turn_in_npc_id": "npc_sol_causeway_scout",
+  "min_level": 45,
+  "prerequisite": "q_sol_aqueduct",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0055",
+    "count": 150
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0056",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "base_exp": 152981,
+   "currency": 2900,
+   "items": [
+    {
+     "item_id": "itm_0150",
+     "qty": 1
+    },
+    {
+     "item_id": "itm_0073",
+     "qty": 2
+    }
+   ]
+  },
+  "summary": "Clear the Revenants off the causeway and bring down two Colossi. The Guild hands over the Key Prism that opens the Vault."
+ },
+ {
+  "id": "q_sol_heliostat",
+  "title": "Noon in the Vault",
+  "region_id": "sol",
+  "giver_npc_id": "npc_sol_vault_gatekeeper",
+  "turn_in_npc_id": "npc_sol_guild_registrar",
+  "min_level": 50,
+  "prerequisite": "q_sol_causeway",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0059",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "base_exp": 387072,
+   "currency": 6350,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 3
+    },
+    {
+     "item_id": "itm_0148",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "Shut down the Heliostat Sovereign and report to Duskhar. Opens the transit to Thalassia's Port Merrow."
+ },
+ {
+  "id": "q_tha_intro",
+  "title": "Thalassia: First Survey",
+  "region_id": "tha",
+  "giver_npc_id": "npc_tha_guild_registrar",
+  "turn_in_npc_id": "npc_tha_guild_registrar",
+  "min_level": 35,
+  "prerequisite": null,
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0020",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 110124,
+   "currency": 1200,
+   "items": [
+    {
+     "item_id": "itm_0075",
+     "qty": 20
+    },
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Clear the Tidehopper herd in Saltwind's tidepools: a passive warm-up that shows a Wayfarer arriving from Solenia how dense Thalassian packs are."
+ },
+ {
+  "id": "q_tha_saltwind",
+  "title": "Gulls Over the Wrack",
+  "region_id": "tha",
+  "giver_npc_id": "npc_tha_saltwind_scout",
+  "turn_in_npc_id": "npc_tha_saltwind_scout",
+  "min_level": 37,
+  "prerequisite": "q_tha_intro",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0060",
+    "count": 100
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0021",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 111601,
+   "currency": 1500,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Aggressive gull flocks on the cliffs and coral-armoured crabs on the wrack line: the region's first swarm-plus-bruiser lesson."
+ },
+ {
+  "id": "q_tha_coral_reach",
+  "title": "Reef Survey",
+  "region_id": "tha",
+  "giver_npc_id": "npc_tha_coral_reach_scout",
+  "turn_in_npc_id": "npc_tha_coral_reach_scout",
+  "min_level": 40,
+  "prerequisite": "q_tha_saltwind",
+  "objectives": [
+   {
+    "type": "visit",
+    "map_id": "tha_fld_02",
+    "count": 1
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0061",
+    "count": 80
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0162",
+    "count": 15
+   }
+  ],
+  "rewards": {
+   "base_exp": 117936,
+   "currency": 1800,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Cross the reef boardwalks, silence the Polyp Spitters and bring back their barbs as proof of the survey."
+ },
+ {
+  "id": "q_tha_tidewheel",
+  "title": "Faults in the Pumps",
+  "region_id": "tha",
+  "giver_npc_id": "npc_tha_tidewheel_scout",
+  "turn_in_npc_id": "npc_tha_tidewheel_scout",
+  "min_level": 43,
+  "prerequisite": "q_tha_coral_reach",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0022",
+    "count": 60
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0062",
+    "count": 60
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0044",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "base_exp": 138244,
+   "currency": 2200,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 2
+    }
+   ]
+  },
+  "summary": "Brine Automatons at the pumpworks and pilings, and the Kelp Tenders that mend each other in the kelp beds and on the paddles. Teaches focusing the support monster first."
+ },
+ {
+  "id": "q_tha_wreck_shoal",
+  "title": "Borers in the Hulks",
+  "region_id": "tha",
+  "giver_npc_id": "npc_tha_wreck_shoal_scout",
+  "turn_in_npc_id": "npc_tha_wreck_shoal_scout",
+  "min_level": 47,
+  "prerequisite": "q_tha_tidewheel",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0063",
+    "count": 150
+   }
+  ],
+  "rewards": {
+   "base_exp": 168444,
+   "currency": 2600,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 15
+    }
+   ]
+  },
+  "summary": "The Hullborer horde is the region's signature pull: assist behaviour empties a whole wreck at once. 150 kills is three or four full trains."
+ },
+ {
+  "id": "q_tha_pearl_flats",
+  "title": "Buoys and Pearls",
+  "region_id": "tha",
+  "giver_npc_id": "npc_tha_pearl_flats_scout",
+  "turn_in_npc_id": "npc_tha_pearl_flats_scout",
+  "min_level": 51,
+  "prerequisite": "q_tha_wreck_shoal",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0023",
+    "count": 50
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0064",
+    "count": 80
+   }
+  ],
+  "rewards": {
+   "base_exp": 202094,
+   "currency": 3000,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 3
+    },
+    {
+     "item_id": "itm_0077",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Break the Relay Guardians' sonar line at the mast and herd the fleeing skates on the pearl beds. The guardians' pings point toward the drowned relay."
+ },
+ {
+  "id": "q_tha_stormbreak",
+  "title": "Riders of the Gale",
+  "region_id": "tha",
+  "giver_npc_id": "npc_tha_stormbreak_scout",
+  "turn_in_npc_id": "npc_tha_stormbreak_scout",
+  "min_level": 55,
+  "prerequisite": "q_tha_pearl_flats",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0066",
+    "count": 100
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0065",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 239316,
+   "currency": 3500,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 15
+    }
+   ]
+  },
+  "summary": "Clear the Squall Rays from the lightning masts and the turtles from the breakwater so the hatch crew can reach the intake shaft."
+ },
+ {
+  "id": "q_tha_drowned_relay",
+  "title": "The Drowned Signal",
+  "region_id": "tha",
+  "giver_npc_id": "npc_tha_relay_hatch_keeper",
+  "turn_in_npc_id": "npc_tha_guild_registrar",
+  "min_level": 59,
+  "prerequisite": "q_tha_stormbreak",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0069",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "base_exp": 559205,
+   "currency": 7000,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 4
+    },
+    {
+     "item_id": "itm_0178",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "Silence the Drowned Signalmind in the Sonar Chamber and report to Port Merrow. Its pulses kept Thalassia's constructs hostile; the road to Crystallis opens."
+ },
+ {
+  "id": "q_cry_intro",
+  "title": "Crystallis: First Survey",
+  "region_id": "cry",
+  "giver_npc_id": "npc_cry_guild_registrar",
+  "turn_in_npc_id": "npc_cry_guild_registrar",
+  "min_level": 45,
+  "prerequisite": null,
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0024",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 191226,
+   "currency": 1600,
+   "items": [
+    {
+     "item_id": "itm_0075",
+     "qty": 20
+    },
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Thin the Frost Mites on Frostline's thaw strip: a passive warm-up that shows a newcomer from Thalassia how the cold changes a fight."
+ },
+ {
+  "id": "q_cry_frostline",
+  "title": "Lights on the Lake",
+  "region_id": "cry",
+  "giver_npc_id": "npc_cry_frostline_scout",
+  "turn_in_npc_id": "npc_cry_frostline_scout",
+  "min_level": 47,
+  "prerequisite": "q_cry_intro",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0070",
+    "count": 80
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0025",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 189499,
+   "currency": 1900,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Herd the fleeing Rimehares on the snowfield and break the Prism Wisps' beams over the frozen lake: flee and ranged in one field."
+ },
+ {
+  "id": "q_cry_blueglass",
+  "title": "Glass Horns",
+  "region_id": "cry",
+  "giver_npc_id": "npc_cry_blueglass_scout",
+  "turn_in_npc_id": "npc_cry_blueglass_scout",
+  "min_level": 50,
+  "prerequisite": "q_cry_frostline",
+  "objectives": [
+   {
+    "type": "visit",
+    "map_id": "cry_fld_02",
+    "count": 1
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0071",
+    "count": 60
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0192",
+    "count": 15
+   }
+  ],
+  "rewards": {
+   "base_exp": 193536,
+   "currency": 2300,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 12
+    }
+   ]
+  },
+  "summary": "Climb the ridge and take on the assisting ram flocks; the fleece is the researchers' insulation."
+ },
+ {
+  "id": "q_cry_snowcoil",
+  "title": "Coolant in the Trenches",
+  "region_id": "cry",
+  "giver_npc_id": "npc_cry_snowcoil_scout",
+  "turn_in_npc_id": "npc_cry_snowcoil_scout",
+  "min_level": 54,
+  "prerequisite": "q_cry_blueglass",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0072",
+    "count": 150
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0026",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 229434,
+   "currency": 2800,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 2
+    },
+    {
+     "item_id": "itm_0077",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "The Frostcoil Serpent horde is the region's signature train: 150 kills is three or four full pulls through the coil trenches."
+ },
+ {
+  "id": "q_cry_prism_pass",
+  "title": "Keep the Pass Open",
+  "region_id": "cry",
+  "giver_npc_id": "npc_cry_prism_pass_scout",
+  "turn_in_npc_id": "npc_cry_prism_pass_scout",
+  "min_level": 58,
+  "prerequisite": "q_cry_snowcoil",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0027",
+    "count": 50
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0073",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "base_exp": 302551,
+   "currency": 3300,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 3
+    }
+   ]
+  },
+  "summary": "Break the keepers' alarm at the vault doors and stop the plough mechs that crush caravans: the region's elite fight."
+ },
+ {
+  "id": "q_cry_mirror_ice",
+  "title": "What the Lake Reflects",
+  "region_id": "cry",
+  "giver_npc_id": "npc_cry_mirror_ice_scout",
+  "turn_in_npc_id": "npc_cry_mirror_ice_scout",
+  "min_level": 62,
+  "prerequisite": "q_cry_prism_pass",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0074",
+    "count": 80
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0075",
+    "count": 40
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0198",
+    "count": 10
+   }
+  ],
+  "rewards": {
+   "base_exp": 312158,
+   "currency": 3800,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 15
+    }
+   ]
+  },
+  "summary": "Kill the Mirrorshades that heal everything around them, then the passive Behemoths they protect. Silvered shards go to the lens researchers."
+ },
+ {
+  "id": "q_cry_white_circuit",
+  "title": "Breach in the Circuit",
+  "region_id": "cry",
+  "giver_npc_id": "npc_cry_white_circuit_scout",
+  "turn_in_npc_id": "npc_cry_white_circuit_scout",
+  "min_level": 66,
+  "prerequisite": "q_cry_mirror_ice",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0076",
+    "count": 80
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0077",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 359224,
+   "currency": 4400,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 3
+    },
+    {
+     "item_id": "itm_0077",
+     "qty": 15
+    }
+   ]
+  },
+  "summary": "Clear the conduit sentries and the specters seeping from the vent breach. The breach leads to the Archive door."
+ },
+ {
+  "id": "q_cry_cryocore",
+  "title": "The Curator's Vault",
+  "region_id": "cry",
+  "giver_npc_id": "npc_cry_archive_door_warden",
+  "turn_in_npc_id": "npc_cry_guild_registrar",
+  "min_level": 70,
+  "prerequisite": "q_cry_white_circuit",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0079",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "base_exp": 820512,
+   "currency": 9000,
+   "items": [
+    {
+     "item_id": "itm_0073",
+     "qty": 5
+    },
+    {
+     "item_id": "itm_0208",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "Shut down the Cryocore Curator and report to Vaelspire. The thaw it brings opens the passes down to Emberfall."
+ },
+ {
+  "id": "q_emb_intro",
+  "title": "Emberfall: First Survey",
+  "region_id": "emb",
+  "giver_npc_id": "npc_emb_guild_registrar",
+  "turn_in_npc_id": "npc_emb_guild_registrar",
+  "min_level": 60,
+  "prerequisite": null,
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0028",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 435708,
+   "currency": 1800,
+   "items": [
+    {
+     "item_id": "itm_0075",
+     "qty": 15
+    }
+   ]
+  },
+  "summary": "Thin the Ashcrawler herds on the Ashfield flats. A gentle first train for Wayfarers fresh from Crystallis."
+ },
+ {
+  "id": "q_emb_slag_pools",
+  "title": "Croaks in the Slag",
+  "region_id": "emb",
+  "giver_npc_id": "npc_emb_ashfield_scout",
+  "turn_in_npc_id": "npc_emb_ashfield_scout",
+  "min_level": 62,
+  "prerequisite": "q_emb_intro",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0080",
+    "count": 50
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0220",
+    "count": 10
+   }
+  ],
+  "rewards": {
+   "base_exp": 390197,
+   "currency": 2400,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 8
+    }
+   ]
+  },
+  "summary": "Break the assisting Slagback pools; the warts point the player at the Artificer's tonic recipe."
+ },
+ {
+  "id": "q_emb_cinder_track",
+  "title": "Imps on the Haul Road",
+  "region_id": "emb",
+  "giver_npc_id": "npc_emb_cinder_track_scout",
+  "turn_in_npc_id": "npc_emb_cinder_track_scout",
+  "min_level": 64,
+  "prerequisite": "q_emb_slag_pools",
+  "objectives": [
+   {
+    "type": "visit",
+    "map_id": "emb_fld_02",
+    "count": 1
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0029",
+    "count": 150
+   }
+  ],
+  "rewards": {
+   "base_exp": 377199,
+   "currency": 3000,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 8
+    }
+   ]
+  },
+  "summary": "The first aggressive horde of the region: 150 imps is three full trains through the hollows."
+ },
+ {
+  "id": "q_emb_forge_approach",
+  "title": "Kennels of the Cold Forges",
+  "region_id": "emb",
+  "giver_npc_id": "npc_emb_forge_scout",
+  "turn_in_npc_id": "npc_emb_forge_scout",
+  "min_level": 68,
+  "prerequisite": "q_emb_cinder_track",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0030",
+    "count": 150
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0081",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 431963,
+   "currency": 3600,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Hounds are fast and Tenders flee to keep welding them: teaches killing the support first."
+ },
+ {
+  "id": "q_emb_magma_vents",
+  "title": "Vent Census",
+  "region_id": "emb",
+  "giver_npc_id": "npc_emb_magma_scout",
+  "turn_in_npc_id": "npc_emb_magma_scout",
+  "min_level": 72,
+  "prerequisite": "q_emb_forge_approach",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0082",
+    "count": 150
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0083",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 436632,
+   "currency": 4200,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Skink trains round the vent pool, then pull the ranged Spitters off the fissure edge."
+ },
+ {
+  "id": "q_emb_ironfall",
+  "title": "The Fallen Span",
+  "region_id": "emb",
+  "giver_npc_id": "npc_emb_ironfall_scout",
+  "turn_in_npc_id": "npc_emb_ironfall_scout",
+  "min_level": 76,
+  "prerequisite": "q_emb_magma_vents",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0031",
+    "count": 60
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0228",
+    "count": 20
+   }
+  ],
+  "rewards": {
+   "base_exp": 493402,
+   "currency": 5000,
+   "items": [
+    {
+     "item_id": "itm_0236",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "Break the Furnace Knight patrols and recover the rivets the Scraplings stole from the bridges."
+ },
+ {
+  "id": "q_emb_red_crucible",
+  "title": "The Red Pour",
+  "region_id": "emb",
+  "giver_npc_id": "npc_emb_crucible_medic",
+  "turn_in_npc_id": "npc_emb_crucible_medic",
+  "min_level": 80,
+  "prerequisite": "q_emb_ironfall",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0086",
+    "count": 150
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0085",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 553560,
+   "currency": 6000,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 12
+    }
+   ]
+  },
+  "summary": "Clear the pour channels and the mould yard. Leads to the hatch down to Furnace Zero."
+ },
+ {
+  "id": "q_emb_furnace_zero",
+  "title": "Furnace Zero",
+  "region_id": "emb",
+  "giver_npc_id": "npc_emb_crucible_medic",
+  "turn_in_npc_id": "npc_emb_guild_registrar",
+  "min_level": 85,
+  "prerequisite": "q_emb_red_crucible",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0088",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "base_exp": 1269710,
+   "currency": 12000,
+   "items": [
+    {
+     "item_id": "itm_0236",
+     "qty": 2
+    },
+    {
+     "item_id": "itm_0076",
+     "qty": 12
+    }
+   ]
+  },
+  "summary": "Shut down Kiln Prime in the Zero Core and report to Cindervale. Opens the road to Nocthaven."
+ },
+ {
+  "id": "q_noc_intro",
+  "title": "Nocthaven: First Survey",
+  "region_id": "noc",
+  "giver_npc_id": "npc_noc_guild_registrar",
+  "turn_in_npc_id": "npc_noc_guild_registrar",
+  "min_level": 75,
+  "prerequisite": null,
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0032",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 718931,
+   "currency": 2600,
+   "items": [
+    {
+     "item_id": "itm_0075",
+     "qty": 15
+    }
+   ]
+  },
+  "summary": "Put out the Null Wisps drinking the last streetlamps of the Dusk Verge."
+ },
+ {
+  "id": "q_noc_dusk_verge",
+  "title": "Under the Overpass",
+  "region_id": "noc",
+  "giver_npc_id": "npc_noc_dusk_scout",
+  "turn_in_npc_id": "npc_noc_dusk_scout",
+  "min_level": 76,
+  "prerequisite": "q_noc_intro",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0090",
+    "count": 120
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0063",
+    "count": 15
+   }
+  ],
+  "rewards": {
+   "base_exp": 616753,
+   "currency": 3200,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 8
+    }
+   ]
+  },
+  "summary": "Assisting lurk packs pull the whole underpass; the wisp fragments point at the Artificer's tonic recipe."
+ },
+ {
+  "id": "q_noc_nullgarden",
+  "title": "The Garden That Drinks Light",
+  "region_id": "noc",
+  "giver_npc_id": "npc_noc_nullgarden_scout",
+  "turn_in_npc_id": "npc_noc_nullgarden_scout",
+  "min_level": 78,
+  "prerequisite": "q_noc_dusk_verge",
+  "objectives": [
+   {
+    "type": "visit",
+    "map_id": "noc_fld_02",
+    "count": 1
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0091",
+    "count": 80
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0033",
+    "count": 40
+   }
+  ],
+  "rewards": {
+   "base_exp": 588440,
+   "currency": 3800,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Burn the Nullbloom beds and stop the haulers on the promenade."
+ },
+ {
+  "id": "q_noc_silent_tracks",
+  "title": "Dead Line, Live Signal",
+  "region_id": "noc",
+  "giver_npc_id": "npc_noc_tracks_scout",
+  "turn_in_npc_id": "npc_noc_tracks_scout",
+  "min_level": 81,
+  "prerequisite": "q_noc_nullgarden",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0092",
+    "count": 150
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0034",
+    "count": 60
+   }
+  ],
+  "rewards": {
+   "base_exp": 640748,
+   "currency": 4500,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 10
+    }
+   ]
+  },
+  "summary": "Mite crews in the sidings, drones on the gantries: pull the ranged drones into the mite packs."
+ },
+ {
+  "id": "q_noc_veil_rift",
+  "title": "Mind the Rift",
+  "region_id": "noc",
+  "giver_npc_id": "npc_noc_rift_scout",
+  "turn_in_npc_id": "npc_noc_rift_scout",
+  "min_level": 85,
+  "prerequisite": "q_noc_silent_tracks",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0093",
+    "count": 150
+   },
+   {
+    "type": "collect",
+    "item_id": "itm_0257",
+    "count": 5
+   }
+  ],
+  "rewards": {
+   "base_exp": 634855,
+   "currency": 5400,
+   "items": [
+    {
+     "item_id": "itm_0077",
+     "qty": 12
+    }
+   ]
+  },
+  "summary": "Riftling trains on both sides of the chasm; the Veil-Eyes go to the Guild's scholars."
+ },
+ {
+  "id": "q_noc_black_array",
+  "title": "Listening Post",
+  "region_id": "noc",
+  "giver_npc_id": "npc_noc_array_scout",
+  "turn_in_npc_id": "npc_noc_array_scout",
+  "min_level": 89,
+  "prerequisite": "q_noc_veil_rift",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0095",
+    "count": 60
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0094",
+    "count": 120
+   }
+  ],
+  "rewards": {
+   "base_exp": 704555,
+   "currency": 6400,
+   "items": [
+    {
+     "item_id": "itm_0076",
+     "qty": 12
+    }
+   ]
+  },
+  "summary": "Break the sentinel ring round the great dish and scatter the Sparkwing flocks."
+ },
+ {
+  "id": "q_noc_meridian_gate",
+  "title": "Executioners at the Gate",
+  "region_id": "noc",
+  "giver_npc_id": "npc_noc_gate_scout",
+  "turn_in_npc_id": "npc_noc_gate_medic",
+  "min_level": 93,
+  "prerequisite": "q_noc_black_array",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0035",
+    "count": 12
+   },
+   {
+    "type": "kill",
+    "monster_id": "mob_0096",
+    "count": 150
+   }
+  ],
+  "rewards": {
+   "base_exp": 777803,
+   "currency": 7600,
+   "items": [
+    {
+     "item_id": "itm_0268",
+     "qty": 1
+    },
+    {
+     "item_id": "itm_0266",
+     "qty": 1
+    }
+   ]
+  },
+  "summary": "Clear the Executor court and the glyph plaza; the Keysigil cut from their masks opens the Lattice Heart."
+ },
+ {
+  "id": "q_noc_lattice_heart",
+  "title": "The Lattice Heart",
+  "region_id": "noc",
+  "giver_npc_id": "npc_noc_gate_medic",
+  "turn_in_npc_id": "npc_noc_guild_registrar",
+  "min_level": 96,
+  "prerequisite": "q_noc_meridian_gate",
+  "objectives": [
+   {
+    "type": "kill",
+    "monster_id": "mob_0098",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "base_exp": 1672138,
+   "currency": 15000,
+   "items": [
+    {
+     "item_id": "itm_0266",
+     "qty": 2
+    },
+    {
+     "item_id": "itm_0076",
+     "qty": 15
+    }
+   ]
+  },
+  "summary": "Silence the Lattice Sovereign and report to Umbracrest. The end of the Wayfarer's road through Elyndra."
+ }
+]

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elyndra · Animation Studio</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div class="studio">
+      <aside class="library">
+        <a class="brand" href="/">E<span>LYNDRA</span><i>✧</i></a>
+        <div class="eyebrow">CREATURE WORKSHOP</div>
+        <h1>Animation Studio</h1>
+        <p class="intro">ลองขยับตัวละคร<br />ดูทุกท่าได้จากทุกมุม</p>
+        <div class="library-heading">ตัวละคร <span>01 — 05</span></div>
+        <nav id="characters" aria-label="เลือกตัวละคร"></nav>
+        <div class="library-footer">
+          <span class="status-dot"></span> โมเดลพร้อมทดสอบ 5 ตัว
+          <a href="/model-viewer.html">ดูโมเดลต้นฉบับ ↗</a>
+        </div>
+      </aside>
+      <main class="stage">
+        <header class="stage-header">
+          <div><div class="eyebrow">LIVE PREVIEW</div><h2 id="character-name">กำลังโหลด…</h2><p id="character-description"></p></div>
+          <a id="download" class="download" download>ดาวน์โหลด .glb <span>↓</span></a>
+        </header>
+        <div id="viewport" aria-label="โมเดลสามมิติ ลากเพื่อหมุนและเลื่อนล้อเมาส์เพื่อซูม"></div>
+        <div id="loading" role="status" aria-live="polite">กำลังเตรียมตัวละคร…</div>
+        <div class="view-tools" aria-label="มุมกล้อง">
+          <button data-view="perspective" class="selected">3/4</button>
+          <button data-view="front">หน้า</button><button data-view="left">ซ้าย</button>
+          <button data-view="back">หลัง</button><button data-view="right">ขวา</button>
+          <button data-view="game">มุมเกม</button>
+        </div>
+        <div class="stage-hint">ลากเพื่อหมุน · เลื่อนเพื่อซูม</div>
+        <section class="transport" aria-label="ควบคุมแอนิเมชัน">
+          <div class="transport-heading"><span>ท่าทาง</span><span id="clip-description">หายใจและขยับตัวเบา ๆ</span></div>
+          <div id="actions" role="group" aria-label="เลือกท่าทาง"></div>
+          <div class="playback">
+            <button id="play" class="play-button" aria-label="หยุดชั่วคราว">Ⅱ</button>
+            <button id="restart" class="restart-button" aria-label="เริ่มท่าใหม่">↺</button>
+            <label class="timeline-label"><span class="sr-only">เวลาแอนิเมชัน</span><input id="timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="เวลาแอนิเมชัน" /></label>
+            <output id="time">0.00 / 0.00 s</output>
+          </div>
+        </section>
+      </main>
+      <aside class="settings">
+        <div class="eyebrow">PREVIEW SETTINGS</div><h3>ตั้งค่าการแสดงผล</h3>
+        <label class="setting"><span>แสดงกระดูก</span><input id="bones" type="checkbox" /></label>
+        <label class="setting"><span>เส้นโครงผิว</span><input id="wire" type="checkbox" /></label>
+        <label class="setting"><span>สี texture ต้นฉบับ</span><input id="unlit" type="checkbox" checked /></label>
+        <label class="setting"><span>หมุนรอบตัว</span><input id="spin" type="checkbox" /></label>
+        <label class="setting"><span>เล่นท่าโจมตี / สกิลซ้ำ</span><input id="repeat" type="checkbox" /></label>
+        <div class="speed-control"><label for="speed">ความเร็ว <output id="speed-value">1×</output></label><input id="speed" type="range" min="0.25" max="2" step="0.25" value="1" /></div>
+        <div class="ground-control"><label for="background">ฉากหลัง</label><select id="background"><option value="sage">สวนสีอ่อน</option><option value="night">กลางคืน</option><option value="clay">ดินอุ่น</option></select></div>
+        <div class="rig-card"><span class="eyebrow">MODEL DETAILS</span><dl><div><dt>กระดูก</dt><dd id="bone-count">—</dd></div><div><dt>ท่าทาง</dt><dd id="clip-count">—</dd></div><div><dt>สามเหลี่ยม</dt><dd id="triangle-count">—</dd></div></dl><p>ขยับจากกระดูกที่ผูกกับผิวโมเดล<br />ท่าเดินแสดงแบบอยู่กับที่</p></div>
+        <p class="pass-note">Animation pass 01<br />ชุดทดสอบการเคลื่อนไหวของตัวละคร ก่อนนำไปเรนเดอร์เป็น sprite</p>
+      </aside>
+    </div>
+    <script type="module" src="/src/tools/animationViewer.ts"></script>
+  </body>
+</html>

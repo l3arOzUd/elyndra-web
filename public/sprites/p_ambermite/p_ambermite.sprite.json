@@ -1,0 +1,22 @@
+{
+ "id": "p_ambermite",
+ "kind": "puppet",
+ "puppet": {
+  "front": "front.png",
+  "motion": "walk"
+ },
+ "frame": {
+  "w": 456,
+  "h": 384
+ },
+ "pivot": {
+  "x": 225,
+  "y": 379
+ },
+ "pixelsPerCell": 384.0,
+ "rows": [
+  "S"
+ ],
+ "animations": {},
+ "source": "sprite/tripo_ready/03_Ambermite.png"
+}
