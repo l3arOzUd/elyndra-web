@@ -1,0 +1,21 @@
+{
+  "id": "mob_0027",
+  "name": "Archive Keeper",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Direct visual inspection of all four views; alpha/framing pass does not imply anatomical consistency.",
+  "confirmed": [
+    "Tall slender ice-blue crystal and silver articulated construct preserved.",
+    "Rear slate backing and segmented spine differentiated from luminous front display.",
+    "Profiles face opposite directions with cyan display on forward edge and toes forward."
+  ],
+  "limitations": [
+    "Profile head backing is deeper than front suggests; establish fixed slate thickness.",
+    "Side chest/hip armor retains oblique exposure; camera alignment needs refinement.",
+    "Five fingers per hand not individually traceable due overlapping digits.",
+    "Rear hands and knee plates need explicit joint-axis and palm/back construction.",
+    "Front/back/left crest margins very tight despite no alpha edge failure.",
+    "Far limbs missing behind near limbs need complete hidden-part drawings for animation.",
+    "Crystal plate boundaries and highlights vary between views."
+  ],
+  "next": "Resolve head cross-section, hands and joints, normalize framing, draw hidden limb parts, then animate precise core-handling and combat motions."
+}
