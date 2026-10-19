@@ -1,0 +1,28 @@
+# Release gate: runs only for main (pull requests into main and pushes to main).
+# Work on staging is saved and pushed freely; the full suite runs once, before
+# it is deployed.
+name: release-check
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Content builds and matches what is committed
+        run: |
+          npm run build:content
+          git diff --exit-code -- public/data public/sprites/index.json public/sprites/wayfarer/equipment.json
+      - run: npm run validate:data
+      - run: npx tsc --noEmit -p .
+      - run: npx vitest run
