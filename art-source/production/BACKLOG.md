@@ -1,6 +1,6 @@
 # Art production backlog
 
-Monsters: 94; front masters created: 87; existing front references needing review: 7; missing front references: 0.
+Monsters: 94; front masters created: 94; existing front references needing review: 0; missing front references: 0.
 Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
@@ -9,17 +9,17 @@ No species renames or proposed cross-species substitutions are treated as comple
 
 | ID | Monster | Front | Back | Left | Right | Game sprite |
 |---|---|---|---|---|---|---|
-| mob_0001 | Mosskin | existing-needs-review | existing-needs-review | existing-needs-review | existing-needs-review | mosskin_2d |
-| mob_0002 | Sporeling | existing-needs-review | existing-needs-review | existing-needs-review | existing-needs-review | sporeling_2d |
-| mob_0003 | Ambermite | existing-needs-review | existing-needs-review | existing-needs-review | existing-needs-review | ambermite_2d |
-| mob_0004 | Lunari | existing-needs-review | existing-needs-review | existing-needs-review | existing-needs-review | lunari_2d |
+| mob_0001 | Mosskin | master-created | existing-needs-review | existing-needs-review | existing-needs-review | mosskin_2d |
+| mob_0002 | Sporeling | master-created | existing-needs-review | existing-needs-review | existing-needs-review | sporeling_2d |
+| mob_0003 | Ambermite | master-created | existing-needs-review | existing-needs-review | existing-needs-review | ambermite_2d |
+| mob_0004 | Lunari | master-created | existing-needs-review | existing-needs-review | existing-needs-review | lunari_2d |
 | mob_0005 | Craglet | master-created | missing | missing | missing | placeholder |
 | mob_0006 | Thornback | master-created | missing | missing | missing | placeholder |
 | mob_0007 | Dustwing | master-created | missing | missing | missing | placeholder |
 | mob_0008 | Brookfin | master-created | missing | missing | missing | placeholder |
-| mob_0009 | Reedstalker | existing-needs-review | existing-needs-review | existing-needs-review | existing-needs-review | reedstalker_2d |
-| mob_0010 | Rotroot | existing-needs-review | existing-needs-review | existing-needs-review | existing-needs-review | rotroot_2d |
-| mob_0011 | Barkwarden | existing-needs-review | existing-needs-review | existing-needs-review | existing-needs-review | barkwarden_2d |
+| mob_0009 | Reedstalker | master-created | existing-needs-review | existing-needs-review | existing-needs-review | reedstalker_2d |
+| mob_0010 | Rotroot | master-created | existing-needs-review | existing-needs-review | existing-needs-review | rotroot_2d |
+| mob_0011 | Barkwarden | master-created | existing-needs-review | existing-needs-review | existing-needs-review | barkwarden_2d |
 | mob_0012 | Graftling | master-created | missing | missing | missing | placeholder |
 | mob_0013 | Sapdrone | master-created | missing | missing | missing | placeholder |
 | mob_0014 | Vinecrawler | master-created | missing | missing | missing | placeholder |

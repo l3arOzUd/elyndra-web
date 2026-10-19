@@ -1,0 +1,54 @@
+{
+  "method": "Direct visual inspection of all seven front PNGs against public/data/monsters.json art_brief. Names alone are not design agreement.",
+  "records": [
+    {
+      "id": "mob_0001",
+      "name": "Mosskin",
+      "source": "../sprite/tripo_ready/01_Mosskin_front.png",
+      "result": "replacement-required",
+      "findings": "One leafy stalk rather than two twig antennae; only two feet clearly visible. Four-legged seed anatomy needs a new reference."
+    },
+    {
+      "id": "mob_0002",
+      "name": "Sporeling",
+      "source": "../sprite/tripo_ready/02_Sporeling_front.png",
+      "result": "replacement-required",
+      "findings": "Bright red cap and boot-like feet rather than cream/rust cap and stubby root feet. Revise palette and foot anatomy."
+    },
+    {
+      "id": "mob_0003",
+      "name": "Ambermite",
+      "source": "../sprite/tripo_ready/03_Ambermite_front.png",
+      "result": "replacement-required",
+      "findings": "Opaque crystal-armored shell, no visible glowing internal core; six legs not clearly readable. Needs translucent amber shell."
+    },
+    {
+      "id": "mob_0004",
+      "name": "Lunari",
+      "source": "../sprite/tripo_ready/04_Lunari_front.png",
+      "result": "replacement-required",
+      "findings": "Blue/pink fox-like silhouette with oversized ears; no readable gliding membrane or banded tail, wrong silver-green palette."
+    },
+    {
+      "id": "mob_0009",
+      "name": "Reedstalker",
+      "source": "../sprite/tripo_ready/12_Reedstalker_front.png",
+      "result": "replacement-required",
+      "findings": "Bird anatomy contradicts woven reed stalk-creature with opening seed-pod head."
+    },
+    {
+      "id": "mob_0010",
+      "name": "Rotroot",
+      "source": "../sprite/tripo_ready/16_Rotroot_front.png",
+      "result": "replacement-required",
+      "findings": "Upright red-accented tree creature lacks sickly teal sap core and low crawling root-knot anatomy."
+    },
+    {
+      "id": "mob_0011",
+      "name": "Barkwarden",
+      "source": "../sprite/tripo_ready/17_Barkwarden_front.png",
+      "result": "replacement-required",
+      "findings": "Organic tree guardian lacks copper joints and single cracked lens eye; leafy seams instead of moss."
+    }
+  ]
+}

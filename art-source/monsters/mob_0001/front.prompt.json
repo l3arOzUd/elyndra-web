@@ -1,0 +1,8 @@
+{
+  "id": "mob_0001",
+  "name": "Mosskin",
+  "view": "front",
+  "prompt": "Elyndra starter monster Mosskin, single front orthographic eye-level reference. Exact Bible: A round four-legged seed with a mossy shell and two twig antennae; friendly face; earth-green palette. Cute squat round SEED body covered in soft moss patches over green-brown seed shell, simple friendly eyes and small smile on front. Exactly FOUR short root-like walking legs visibly separated: two front feet below face and two rear feet peeking to outer sides. Exactly TWO slender brown twig antennae on top, no giant leaf stalk. Painted fantasy MMORPG art, hand-painted stylized warm soft light, earthy green and moss texture, appealing readable shape. Entire creature small centered in square image occupying middle 70 percent including both antenna tips, wide empty margins. True transparent background no ground or shadow no lettering no extra creatures.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Four short walking legs, two twig antennae, mossy round seed shell, friendly face."
+}

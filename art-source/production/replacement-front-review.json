@@ -1,0 +1,13 @@
+{
+  "scope": "Direct visual review of seven replacement front masters. Does not approve cross-view consistency or animation.",
+  "observations": {
+    "mob_0001": "Four feet and two twig antennae visible; mossy seed shell and friendly face match brief.",
+    "mob_0002": "Cream/rust speckled cap, stubby fibrous root feet and glowing spore motes visible.",
+    "mob_0003": "Six leg tips visible, rear pair partially occluded; translucent amber dome reveals luminous core.",
+    "mob_0004": "Leaf ears, both glide membranes, four limbs and one silver-green banded tail visible. Browser light-background preview checked.",
+    "mob_0009": "Lanky woven reed body and opening seed-pod head visible; framing corrected.",
+    "mob_0010": "Low root knot with four root legs and teal sap core visible.",
+    "mob_0011": "Copper joints and moss seams visible; single lens has diagonal crack."
+  },
+  "next": "Generate back, left and right from these masters; preserve anatomy, materials, asymmetry and markings. Existing legacy turnarounds are not compatible with the replacement designs."
+}

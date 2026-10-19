@@ -8,13 +8,24 @@
       "brief": "A round four-legged seed with a mossy shell and two twig antennae; friendly face; earth-green palette.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0001/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/01_Mosskin_front.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "legacyReview": {
+            "id": "mob_0001",
+            "name": "Mosskin",
+            "source": "../sprite/tripo_ready/01_Mosskin_front.png",
+            "result": "replacement-required",
+            "findings": "One leafy stalk rather than two twig antennae; only two feet clearly visible. Four-legged seed anatomy needs a new reference."
+          },
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -81,13 +92,24 @@
       "brief": "A waddling mushroom with a speckled cream-and-rust cap, stubby root feet, puffs of glowing spores.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0002/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/02_Sporeling_front.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "legacyReview": {
+            "id": "mob_0002",
+            "name": "Sporeling",
+            "source": "../sprite/tripo_ready/02_Sporeling_front.png",
+            "result": "replacement-required",
+            "findings": "Bright red cap and boot-like feet rather than cream/rust cap and stubby root feet. Revise palette and foot anatomy."
+          },
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -154,13 +176,24 @@
       "brief": "A beetle-sized six-legged mite under a translucent amber shell with a glowing core; honey-orange.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0003/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/03_Ambermite_front.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "legacyReview": {
+            "id": "mob_0003",
+            "name": "Ambermite",
+            "source": "../sprite/tripo_ready/03_Ambermite_front.png",
+            "result": "replacement-required",
+            "findings": "Opaque crystal-armored shell, no visible glowing internal core; six legs not clearly readable. Needs translucent amber shell."
+          },
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -227,13 +260,24 @@
       "brief": "A sugar-glider-like beast with leaf-shaped ears and a banded tail, membrane glide flaps; moonlit silver-green.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0004/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/04_Lunari_front.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "legacyReview": {
+            "id": "mob_0004",
+            "name": "Lunari",
+            "source": "../sprite/tripo_ready/04_Lunari_front.png",
+            "result": "replacement-required",
+            "findings": "Blue/pink fox-like silhouette with oversized ears; no readable gliding membrane or banded tail, wrong silver-green palette."
+          },
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -464,13 +508,24 @@
       "brief": "A lanky stalk-creature woven from reeds, a seed-pod head that opens to spit darts; marsh green and brown.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0009/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/12_Reedstalker_front.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "legacyReview": {
+            "id": "mob_0009",
+            "name": "Reedstalker",
+            "source": "../sprite/tripo_ready/12_Reedstalker_front.png",
+            "result": "replacement-required",
+            "findings": "Bird anatomy contradicts woven reed stalk-creature with opening seed-pod head."
+          },
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -537,13 +592,24 @@
       "brief": "A knot of rotting roots with a glowing sap core, crawling on root-legs; dark wood, sickly teal glow.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0010/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/16_Rotroot_front.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "legacyReview": {
+            "id": "mob_0010",
+            "name": "Rotroot",
+            "source": "../sprite/tripo_ready/16_Rotroot_front.png",
+            "result": "replacement-required",
+            "findings": "Upright red-accented tree creature lacks sickly teal sap core and low crawling root-knot anatomy."
+          },
+          "status": "master-created"
         },
         "back": {
           "master": null,
@@ -610,13 +676,24 @@
       "brief": "A man-high wooden guardian with copper-jointed limbs, a cracked lens eye and moss in the seams.",
       "views": {
         "front": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0011/front.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": {
             "path": "../sprite/tripo_ready/17_Barkwarden_front.png",
             "width": 1254,
             "height": 1254
           },
-          "status": "existing-needs-review"
+          "legacyReview": {
+            "id": "mob_0011",
+            "name": "Barkwarden",
+            "source": "../sprite/tripo_ready/17_Barkwarden_front.png",
+            "result": "replacement-required",
+            "findings": "Organic tree guardian lacks copper joints and single cracked lens eye; leafy seams instead of moss."
+          },
+          "status": "master-created"
         },
         "back": {
           "master": null,

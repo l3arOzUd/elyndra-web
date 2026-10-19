@@ -1,0 +1,8 @@
+{
+  "id": "mob_0009",
+  "name": "Reedstalker",
+  "view": "front",
+  "prompt": "Elyndra Reedstalker monster front master. Exact Bible: A lanky stalk-creature woven from reeds, a seed-pod head that opens to spit darts; marsh green and brown. Single thin tall plant creature made of bundled woven marsh reeds, two long reed legs with splayed root toes, two slender hanging reed arms, narrow reed torso. Head is an oval segmented brown-green seed pod with visible opening seams and small central dart-spitting aperture, NOT bird head, no beak no feathers no wings, no clothing or weapon. Subtle marsh green fresh reeds mixed with dry brown reed fibers. Neutral standing pose, arms slightly away, full body squared directly toward camera, front orthographic eye-level. Hand-painted stylized fantasy MMORPG, warm soft light and painted organic texture. Entire character inside central 70 percent square image, wide empty transparent margin above pod and below feet. True transparent background no floor no cast shadow no text.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Lanky woven reed body, two arms and legs, segmented opening seed-pod head. Dart-spitting requires authored action."
+}

@@ -7,13 +7,16 @@ const monsters=read('public/data/monsters.json'),items=read('public/data/items.j
 const catalog=read('public/sprites/painted-catalog.json'),index=read('public/sprites/index.json');
 const looks=read('public/sprites/wayfarer/equipment.json').items;
 const out=resolve(root,'art-source/production');mkdirSync(out,{recursive:true});
+const legacyPath=resolve(out,'legacy-front-review.json');
+const legacyReviews=existsSync(legacyPath)?JSON.parse(readFileSync(legacyPath,'utf8')).records:[];
 const asset=p=>{if(!existsSync(p))return null;const b=readFileSync(p);return {path:relative(root,p).replaceAll('\\','/'),width:b.readUInt32BE(16),height:b.readUInt32BE(20)};};
 const records=monsters.map(m=>{
  const original=catalog.find(c=>c.name===m.name);
  const views=Object.fromEntries(['front','back','left','right'].map(view=>{
   const master=asset(resolve(root,`art-source/monsters/${m.id}/${view}.png`));
   const old=original?asset(resolve(workspace,`sprite/tripo_ready/${original.file}_${view}.png`)):null;
-  return [view,{master,existingReference:old,status:master?'master-created':old?'existing-needs-review':'missing'}];
+  const review=view==='front'?legacyReviews.find(r=>r.id===m.id):null;
+  return [view,{master,existingReference:old,...(review?{legacyReview:review}:{}),status:master?'master-created':review?.result==='replacement-required'?'replacement-required':old?'existing-needs-review':'missing'}];
  }));
  const binding=index.monsters[m.id];
  const sprite=binding&&!binding.placeholder?binding.sprite:null;

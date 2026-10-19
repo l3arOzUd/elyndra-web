@@ -1,0 +1,8 @@
+{
+  "id": "mob_0002",
+  "name": "Sporeling",
+  "view": "front",
+  "prompt": "Single Sporeling monster front master for Elyndra. Exact Bible: A waddling mushroom with a speckled cream-and-rust cap, stubby root feet, puffs of glowing spores. Small stout mushroom creature, broad gently domed cap in muted rusty burnt sienna and cream irregular speckles, pale thick stalk body with friendly simple face, two short branching root feet made of mushroom fibers, NOT shoes. Two tiny floppy fungal arms. Few small warm glowing spore motes near cap only, not a cloud covering body. Hand-painted stylized fantasy MMORPG, warm soft light, painterly organic fungal texture, appealing rounded shape. Strict front orthographic eye-level neutral standing pose. Whole mushroom and feet inside central 70 percent of square canvas with wide empty transparent margins. True transparent background no ground no cast shadow no text no labels.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Cream/rust speckled cap and stubby root feet. Spore puffs need runtime VFX."
+}

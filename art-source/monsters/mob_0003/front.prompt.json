@@ -1,0 +1,8 @@
+{
+  "id": "mob_0003",
+  "name": "Ambermite",
+  "view": "front",
+  "prompt": "Single Ambermite monster reference for Elyndra, hand-painted stylized fantasy MMORPG, warm soft painterly lighting. Bible: A beetle-sized six-legged mite under a translucent amber shell with a glowing core; honey-orange. Compact low bug with smooth rounded translucent golden amber dome, visible warm luminous nucleus INSIDE shell, subtle trapped tiny bubbles, no large opaque crystal spikes. Small orange face below dome with two dark eyes and small mandibles. EXACTLY SIX short articulated insect legs, three clearly separated visible feet each side, not eight. Front orthographic at bug eye level, body squared directly forward, neutral stance, preserve readable domed shell and glowing interior. Entire bug within middle 70 percent square frame, generous empty margins all sides. True transparent background, no floor no ground shadow no labels.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Six articulated legs, translucent smooth amber shell with visible glowing core."
+}

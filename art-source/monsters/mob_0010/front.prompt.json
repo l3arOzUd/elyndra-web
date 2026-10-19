@@ -1,0 +1,8 @@
+{
+  "id": "mob_0010",
+  "name": "Rotroot",
+  "view": "front",
+  "prompt": "Single Rotroot monster front master for Elyndra hand-painted stylized fantasy MMORPG, detailed decayed wood painting. Bible: A knot of rotting roots with a glowing sap core, crawling on root-legs; dark wood, sickly teal glow. Low squat tangled knot of rotten dark roots forming a compact irregular rounded body, sickly teal luminous sap core clearly visible through a central opening in tangled roots. Four thick crooked root walking legs splayed low around body, each with branching root tips, all four visible. NOT upright treant, no humanoid torso, no separate head, no arms, no orange or red leaves. Damp dark wood, cracked peeling bark, faint teal sap veins. Neutral low crawling stance front orthographic eye-level facing directly forward. Whole creature within middle 70 percent of square canvas including roots, wide empty transparent margins. True transparent background, no ground no cast shadow, no text.",
+  "review": "Created; visual and alpha audit pending.",
+  "designInvariant": "Low root knot, four crawling root legs, sickly teal sap core, no humanoid torso."
+}
