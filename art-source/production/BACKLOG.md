@@ -72,7 +72,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0064 | Pearl Skate | master-created | master-created | master-created | master-created | placeholder |
 | mob_0065 | Thunderhull Turtle | master-created | master-created | master-created | master-created | placeholder |
 | mob_0066 | Squall Ray | master-created | master-created | master-created | master-created | placeholder |
-| mob_0067 | Pressure Drone | master-created | missing | missing | missing | placeholder |
+| mob_0067 | Pressure Drone | master-created | master-created | master-created | master-created | placeholder |
 | mob_0068 | Gloom Medusa | master-created | missing | missing | missing | placeholder |
 | mob_0069 | Drowned Signalmind | master-created | missing | missing | missing | placeholder |
 | mob_0070 | Rimehare | master-created | missing | missing | missing | placeholder |

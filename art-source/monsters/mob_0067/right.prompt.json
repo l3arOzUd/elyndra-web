@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Pressure Drone RIGHT SIDE orthographic facing RIGHT. Rotate same copper sphere to opposite side, do not redesign. Single red glass lamp at imageRIGHT edge, opaque rear hatch at imageLEFT edge. Exactly three propeller assemblies top, near lower and far lower hidden behind sphere/near lower. Rotors point imageRIGHT and are edge-on narrow vertical blades, three blades per rotor foreshortened. Match reference left profile proportions and top elbow motor housing. Preserve red bands, one side circular copper plate, original upper valves and one low frontal nozzle; do not add extra lower valves. Full machine transparent square with clear margins no shadow bubbles text. Painterly fantasy MMORPG.",
+  "references": [
+    "front.png",
+    "left.png"
+  ]
+}

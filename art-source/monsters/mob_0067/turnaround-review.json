@@ -1,0 +1,21 @@
+{
+  "id": "mob_0067",
+  "name": "Pressure Drone",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front master, rear and opposite profile.",
+  "confirmed": [
+    "Copper pressure sphere, red enamel bands and single frontal red lamp retained.",
+    "Rear has opaque maintenance hatch and three rotor assemblies with different rear hub details.",
+    "Profiles show front lamp and rear hatch at opposite edges with narrow rotor silhouettes.",
+    "Four files pass alpha, nonempty and edge checks."
+  ],
+  "limitations": [
+    "Rear hatch hinge appears on visible side in both profiles; hinge must belong to one anatomical side only.",
+    "Left profile adds a lower rear nozzle absent from right; valve map is inconsistent.",
+    "Side views retain oblique lamp and hatch faces rather than strict edge-on projection.",
+    "Far lower rotor is completely occluded; its exact mounting and three-blade count cannot be verified from side art.",
+    "Rear repeats lower front nozzle; decide whether rear nozzle exists and map it consistently.",
+    "No separated body/rotor parts or runtime animation clips yet."
+  ],
+  "next": "Lock hatch hinge and nozzle topology, correct profile projection, separate three rotors from body for hover/travel/pressure attack/hit/power-down; add bubble emission as separate VFX."
+}

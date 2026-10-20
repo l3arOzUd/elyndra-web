@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Pressure Drone BACK orthographic eye-level. Rotate reference brass spherical drone exactly180 degrees. Exactly THREE propeller assemblies top and lower left/right, same fixed locations and three red blades each; show REAR of their motors and back sides of blades, not front hub caps. Rear sphere has opaque copper maintenance hatch, NO red glass lamp on back. Preserve red riveted vertical bands and small valve nozzles. No arms legs extra rotors. Same neutral hover. Entire machine centered with 8 percent clear margins transparent background, no bubbles shadow text. Painterly fantasy MMORPG asset matching reference.",
+  "references": [
+    "front.png"
+  ]
+}

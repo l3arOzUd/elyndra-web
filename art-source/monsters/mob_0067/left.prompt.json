@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Pressure Drone LEFT SIDE exact orthographic facing LEFT. Same copper sphere with SINGLE red glass lamp on front hemisphere at imageLEFT, seen narrow edge-on not facing viewer. Opaque rear hatch imageRIGHT. Exactly three fixed propeller assemblies: top, near lower and far lower occluded behind near lower. Their axes point forward along imageLEFT, so rotor disks are narrow edge-on vertical silhouettes, NOT broad fans facing camera. Same red enamel bands valve nozzles and pitted copper. No legs arms extra rotors. Neutral hover transparent square generous margins full machine no bubbles shadow text. Hand-painted fantasy MMORPG.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}
