@@ -1,0 +1,49 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Craglet — game renderer review</title>
+<style>body{margin:24px;background:#202a30;color:#eee;font:16px system-ui}button,select{padding:8px;margin:6px}canvas{display:block;max-width:100%}p{max-width:900px}</style>
+<h1>Craglet — game renderer draft</h1>
+<p>Uses the game's SpriteActor and Animator with exported PNG sheets. Not an active monster binding. Color consistency, gait registration, belly gear and directional artwork remain unfinished.</p>
+<label>Clip <select id="clip"><option>idle</option><option>walk</option><option>attack</option><option>hit</option><option>death</option></select></label>
+<label>Facing <select id="facing"><option value="-1">Left</option><option value="1">Right (mirrored)</option></select></label>
+<button id="replay">Replay</button><button id="pause">Pause</button>
+<p id="status">Loading…</p><div id="stage"></div>
+<script type="module">
+import * as THREE from 'three';
+import {SpriteActor} from '/src/render/spriteActor.ts';
+import {spriteFromImages,validateSprite} from '/src/render/spriteDef.ts';
+const base='./runtime-draft/';
+const json=await (await fetch(base+'craglet_2d.sprite.json',{cache:'no-store'})).json();
+const entries=await Promise.all(Object.entries(json.animations).map(async([name,def])=>{
+ const img=new Image();img.src=base+def.file;await img.decode();return [name,img];
+}));
+const images=Object.fromEntries(entries),problems=validateSprite(json,images);
+if(problems.length)throw Error(problems.join('; '));
+const sprite=spriteFromImages(json,images),actor=new SpriteActor(sprite);
+const scene=new THREE.Scene();scene.background=new THREE.Color('#334639');scene.add(actor.root);
+const grid=new THREE.GridHelper(8,8,0x83917c,0x4c6051);scene.add(grid);
+const camera=new THREE.OrthographicCamera(-1.6,1.6,1.1,-1.1,.01,100);
+camera.position.set(0,2.5,4);camera.lookAt(0,.4,0);
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setSize(960,660);renderer.setPixelRatio(1);
+document.querySelector('#stage').append(renderer.domElement);
+let paused=false,last=performance.now(),events=[];
+function replay(){
+ actor.revive();actor.setBase('idle');events=[];
+ const clip=document.querySelector('#clip').value;
+ if(clip==='idle'||clip==='walk')actor.setBase(clip);
+ else actor.play(clip,{onEvent:name=>events.push(name)});
+}
+document.querySelector('#clip').onchange=replay;
+document.querySelector('#replay').onclick=replay;
+document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelector('#pause').textContent=paused?'Play':'Pause';};
+function render(dt){
+ actor.heading=Number(document.querySelector('#facing').value)*Math.PI/2;
+ actor.update(dt,camera,0);renderer.render(scene,camera);
+ document.querySelector('#status').textContent=`Animation: ${actor.animator.current}; facing: ${actor.shownDir}; events: ${events.join(', ')||'none'}`;
+}
+function tick(now){const dt=Math.min(100,now-last);last=now;render(paused?0:dt);requestAnimationFrame(tick);}
+replay();render(0);
+window.__cragletGame={ready:true,actor,problems,step:dt=>{paused=true;render(dt);},replay,get events(){return [...events];}};
+requestAnimationFrame(tick);
+</script>

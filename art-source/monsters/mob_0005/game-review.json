@@ -1,0 +1,18 @@
+{
+  "status": "runtime-draft-reviewed-not-production-approved",
+  "page": "game-review.html",
+  "implementation": ["src/render/spriteActor.ts", "src/render/animator.ts", "src/render/spriteDef.ts"],
+  "checks": {
+    "browserErrors": [],
+    "attackAt375ms": ["hit"],
+    "deathHeldAfter1000ms": true,
+    "rightFacing": "E"
+  },
+  "visualReview": "Inspected actual WebGL death render on ground grid: domed body remains visible, legs fold and silhouette rests near ground pivot without backward plank rotation.",
+  "limitations": [
+    "This isolated page uses real renderer classes but is not the live map or authoritative combat flow.",
+    "No monster binding changed.",
+    "Walk color drift and foot registration, Bible belly gear, exact anatomy continuity and remaining directions are unresolved.",
+    "East is a mirror of west, not separately authored directional artwork."
+  ]
+}
