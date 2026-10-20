@@ -1,0 +1,18 @@
+{
+  "id": "mob_0096",
+  "name": "Glyph Swarm",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from inspected front; opposite profile also references left.",
+  "confirmed": [
+    "Four view files exist with violet luminous glyphs as the entire creature, without a humanoid or physical frame.",
+    "Back reverses the broad outer glyph arrangement. Profiles have a narrow vertical silhouette."
+  ],
+  "limitations": [
+    "Profiles still show frontal readable glyphs rather than fully rotated edge-on strokes; they are not reliable geometric side references.",
+    "Broad purple aura connects glyphs into an almost solid slab in profiles. Transparent inter-glyph separation needs refinement.",
+    "Exact stroke identities, depth order, spacing and profile widths drift across views.",
+    "Front depicts one outer ring and three inner glyphs rather than the three rings requested by the initial prompt; reconcile the final design with the actual Bible art brief.",
+    "No separated glyph layers or runtime animation clips have been produced for this character."
+  ],
+  "next": "Establish a canonical glyph layout from the Bible and isolate glyph artwork. Derive consistent view projection and spinning attack from that layout, then implement and visually review idle, movement, attack, hit and dispersal death in runtime."
+}

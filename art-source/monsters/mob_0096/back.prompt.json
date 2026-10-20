@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Glyph Swarm BACK orthographic eye-level reference. Same floating violet glyph cloud from provided front rotated180degrees around vertical axis. Preserve EXACT twelve outer glyph positions and THREE inner glyphs: outer top diamond, bottom spiral and remaining curved symbols reflected as seen from behind, do not invent new glyphs or rings. Light glyphs are thin translucent luminous strokes with soft violet aura; backs show reversed glyph shapes. No physical frame body face limbs. Same circular arrangement size depth neutral still pose, transparent gaps and exterior. Full all glow inside square with generous margins. Painterly fantasy violet lavender highlights darkpurple depth, no readable text ground shadow motionblur.",
+  "references": [
+    "front.png"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "RIGHT SIDE orthographic turnaround reference of Glyph Swarm, same violet magical glyph cloud from image1 front and image2 left profile. Camera exactly opposite image2, front of formation points screen-right. Entire ring rotates as ONE rigid spatial arrangement, glyph planes rotate with ring; do NOT billboard symbols to camera. Thin edge-on cloud with subtle depth offsets, tall narrow silhouette about quarter height in width. Twelve outer and three inner glyphs stay at same heights and locations; opposite overlapping order compared with left. Glyphs seen nearly edge-on are thin light strokes, NOT fully readable frontal glyphs. Transparent empty gaps, no solid purple slab, no frame/body/face/limbs. Same painted violet/lavender luminous style, full cloud centered with wide transparent margins no text ground shadow.",
+  "references": [
+    "front.png",
+    "left.png"
+  ]
+}
