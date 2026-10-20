@@ -49,8 +49,17 @@
     "remaining": [
       "Hop anatomy and shell continuity",
       "Landing recovery in front/back/right",
-      "Idle, attack, hit and death in all views",
+      "Rear/right action poses",
+      "Idle motion in all views",
+      "Action shell consistency and connecting poses",
       "Runtime export and gameplay verification"
-    ]
+    ],
+    "actionDrawings": {
+      "front": 6,
+      "left": 6,
+      "back": 0,
+      "right": 0
+    },
+    "actionReview": "actions-review.html"
   }
 }

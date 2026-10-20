@@ -1,0 +1,38 @@
+{
+  "status": "front-left-action-studies-unapproved",
+  "preview": "actions-review.html",
+  "sources": ["actions-left.png", "actions-front.png"],
+  "authoredKeysPerView": ["neutral", "preparation", "impact", "recoil", "collapse", "dead"],
+  "clips": {
+    "attack": [0, 1, 1, 2, 2, 0],
+    "hit": [0, 3, 3, 0, 0, 0],
+    "death": [0, 4, 4, 5, 5, 5]
+  },
+  "technicalCheck": {
+    "renderedSourceKeys": 12,
+    "emptyKeys": [],
+    "canvasEdgeIntersections": [],
+    "browserErrors": [],
+    "groundY": 430,
+    "opaqueBottomY": {
+      "left": [430, 430, 430, 430, 430, 430],
+      "front": [430, 430, 430, 430, 429, 430]
+    },
+    "frontDeathPlayback": "Reached frame 5 after 1250 ms and remained at frame 5 after another 300 ms."
+  },
+  "visualFindings": [
+    "Collapse folds forearms and hind knees while lowering the chest; shell remains on top rather than tipping backward.",
+    "Final eyelids close and palms relax beside the lowered head.",
+    "Two disconnected neighbor fragments were excluded from preview crops without removing pixels from the main frog silhouette.",
+    "Both contact sheets inspected on opaque backgrounds after crop and ground registration corrections."
+  ],
+  "limitations": [
+    "Shell becomes flatter between neutral and collapse, contradicting rigid-volume continuity.",
+    "Side impact resembles a hop more than a distinct body bump; front impact raises the chest rather than clearly projecting forward.",
+    "Far limb attachments are occluded in profile; anatomical consistency remains unverified.",
+    "Head size, shell boundaries, barnacle placement and highlights drift between poses.",
+    "Two collapse drawings and repeated holds do not provide smooth death animation.",
+    "Rear/right action views, authored idle motion, combined runtime assets and gameplay verification remain unfinished."
+  ],
+  "publicBinding": false
+}
