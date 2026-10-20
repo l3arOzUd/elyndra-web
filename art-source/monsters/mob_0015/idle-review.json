@@ -1,5 +1,5 @@
 {
-  "status": "left-idle-two-drawing-study",
+  "status": "three-view-two-drawing-idle-study",
   "base": "actions-left.png",
   "alternate": "idle-left-leaves.png",
   "selectedCell": 0,
@@ -7,11 +7,18 @@
   "verified": [
     "Alternate top-left drawing changes leaf tips while keeping planted feet and main body pose.",
     "Actual browser composite has transparent exterior.",
-    "Only neutral cell is selected; changes to other generated cells are unused."
+    "Only neutral cell is selected; changes to other generated cells are unused.",
+    "Front and rear alternate neutral cells load in actual browser with clean transparent exterior.",
+    "Viewer uses alternate drawing at timeline frames 2 and 3 only, at four frames per second."
   ],
   "limitations": [
-    "Small stone/root detail and color changes remain.",
-    "Two unique drawings, not six authored idle frames.",
-    "Front/rear idle movement still missing."
-  ]
+    "Stone/root detail and color changes remain between alternate drawings.",
+    "Two unique drawings per view, not six authored idle frames.",
+    "Cross-clip registration and runtime export still pending."
+  ],
+  "alternates": {
+    "left": "idle-left-leaves.png",
+    "front": "idle-front-leaves.png",
+    "back": "idle-back-leaves.png"
+  }
 }
