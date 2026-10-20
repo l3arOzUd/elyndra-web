@@ -16,11 +16,11 @@ button,input{margin:12px;padding:8px}p{max-width:900px}
 <script type="module">
 const image=new Image();image.src='./walk-left.png';await image.decode();
 const actions=new Image();actions.src='./actions-left.png';await actions.decode();
-const deathImages=await Promise.all(['left','death-collapse','death-final'].map(async name=>{const img=new Image();img.src=`./${name}.png`;await img.decode();return img;}));
-const deathBoxes=[[34,339,1201,642],[36,408,1206,543],[17,409,1226,527]];
+const deathImages=await Promise.all(['left','death-buckle','death-collapse','death-final'].map(async name=>{const img=new Image();img.src=`./${name}.png`;await img.decode();return img;}));
+const deathBoxes=[[34,339,1201,642],[40,347,1200,631],[36,408,1206,543],[17,409,1226,527]];
 const boxes=[[15,178,491,272],[521,174,485,283],[1027,177,499,280],[10,614,497,278],[525,612,485,279],[1026,620,504,276]];
 const actionBoxes=[[26,181,481,279],[546,181,441,283],[1026,181,492,281],[28,628,448,282],[523,698,488,216],[1060,746,462,173]];
-const sequences={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,0,1,1,2,2]};
+const sequences={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,1,2,2,3,3]};
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 let paused=false,frame=0,last=0,light=true,clip='walk';
