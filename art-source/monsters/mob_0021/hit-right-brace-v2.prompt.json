@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "hit-right-brace.png",
+  "prompt": "Use case: background-extraction. Remove ONLY the brown/red glow, haze and background rectangle from this crab image. Preserve the crab itself exactly, including all delicate coral branches, four large near walking legs, every partly hidden far leg, grey foot tips, both claws and the retracted eye. Keep all interior creature colours, tiny coral edges and original 1536x1024 framing, size and pose. Output a clean RGBA cutout with fully transparent empty space outside the creature and between its legs. No feathered coloured halo, no drop shadow, no painted checkerboard, no replacement background. Do not redraw or resize the animal."
+}

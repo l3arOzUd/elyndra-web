@@ -5,6 +5,9 @@
   "source": "actions-right-study.png",
   "attackSources": ["right-profile-study-v2.png", "attack-right-windup.png", "attack-right-pinch.png"],
   "attackRegistration": {"scale": 0.25, "anchor": [616, 1005], "destination": [256, 430], "perKeyFitting": false},
+  "hitSource": "hit-right-brace-v2.png",
+  "hitRegistration": "Same fixed scale and anchor as attack and idle.",
+  "rejectedHitSource": {"file": "hit-right-brace.png", "reason": "Visible brown glow and rectangular background in browser; replaced by cleaned v2."},
   "preview": "actions-right-review.html",
   "sequences": {
     "attack": [0, 1, 1, 2, 2, 0],
@@ -13,7 +16,8 @@
   },
   "observed": ["Far giant claw drives attack; near small claw stays low.", "Final eye closes.", "Death holds final key."],
   "remaining": [
-    "Older hit and death poses still show only three clear near walking chains; new attack retains four.",
+    "Older death poses still show only three clear near walking chains; new attack and hit retain four.",
+    "Hit foot positions shift slightly and far roots remain concealed.",
     "Shell and coral flatten in death.",
     "New attack preserves body registration better, but the closed large claw appears slimmer and its palm volume needs matching.",
     "Cross-view registration and fixed leg lengths are unverified."
@@ -30,6 +34,14 @@
   },
   "artApproved": false,
   "publicBinding": false,
+  "hitRevisionCheck": {
+    "timingFrames": 6,
+    "emptyFrames": 0,
+    "edgeFrames": 0,
+    "pageErrors": [],
+    "individualVersusCombinedPixelDifferences": [0, 0, 0, 0, 0, 0],
+    "visual": "Clean transparency verified against solid browser background; four near chains and folded eyestalk remain visible."
+  },
   "attackRevisionCheck": {
     "timingFrames": 6,
     "emptyFrames": 0,

@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-profile-study-v2.png",
+  "prompt": "Use case: precise-object-edit. Make ONE subtle hit-reaction key of the exact right-facing Coral Claw in this reference. Same 1536x1024 frame, camera, scale and body centre. The crab flinches: fold the visible rigid eyestalk down toward its protective shell socket, draw both claw arms a little inward without changing the size of either claw, bend existing walking knees slightly to brace. All FOUR near walking legs must stay continuously attached, with all four grey tips at their ORIGINAL ground-contact locations; retain every far-leg fragment as well. Keep hard shell volume and every coral branch intact and rigid; no shrinking, flattening, body enlargement, leg stretching or extra joints. Only a small recoil pose, not a death/collapse. Huge claw remains far, small claw near. Full animal, genuine transparency, no shadow, no motion effects or text, one image."
+}
