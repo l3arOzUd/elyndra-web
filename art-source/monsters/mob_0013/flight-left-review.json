@@ -1,0 +1,17 @@
+{
+  "status": "source-draft-repair-required",
+  "source": "flight-left.png",
+  "verified": [
+    "Brass shell jade tank needle and left-facing identity retained.",
+    "Wing angles change across poses."
+  ],
+  "limitations": [
+    "Needle and wing extremities cross nominal512px cell boundaries.",
+    "Bottom-left wing overlaps neighboring cell; bottom-right wings cross row boundary.",
+    "Four wing roots and six leg chains not consistently readable.",
+    "Downstroke stays mostly above shell and needs fuller travel.",
+    "Shell position shifts between rows; registration pending.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Regenerate with smaller fixed shell scale and larger margins; resolve four distinct wing roots and six leg chains."
+}
