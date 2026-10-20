@@ -1,0 +1,17 @@
+{
+  "status": "idle-draft-refinement-pending",
+  "selectedSource": "idle-left-leaves.png",
+  "selectedPose": 0,
+  "verified": [
+    "Browser comparison confirms crown leaves bend while feet retain approximately the same placement.",
+    "Exterior alpha clean on grey preview.",
+    "Idle uses six timeline frames but only two unique painted poses."
+  ],
+  "limitations": [
+    "Minor gear shading and vine-detail drift remains.",
+    "Front and rear idle currently hold neutral pose; leaf alternates not authored yet.",
+    "Two-pose leaf switch needs intermediate drawings.",
+    "Other poses in edited sheet are unused; edit changed death lens brightness."
+  ],
+  "next": "Create front and rear leaf alternates, then combine draft clips for engine review."
+}
