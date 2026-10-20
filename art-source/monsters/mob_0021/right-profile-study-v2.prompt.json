@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-profile-study.png",
+  "prompt": "Correct this RIGHT-FACING crab by adding ONE missing near-side walking leg. Current near side shows only THREE large walking legs behind the small claw. Add a FOURTH near-side walking leg immediately behind the small claw arm, ahead of current first walking leg, attached under near flank around x=760 y=590 in the1536x1024 image. Give it a continuous thick armored upper segment, distinct bent knee, lower segment and pointed foot reaching around x=930 y=980, separate from adjacent feet and small claw. Preserve existing three near walking legs and far-side legs. Exactly four near walking legs, four far (some far roots occluded), plus two separate claw arms. SMALL claw stays NEAR camera, GIANT claw stays FAR side, both forward screen RIGHT. Do not mirror or swap claws. Keep shell and coral, eye, colors and all other anatomy unchanged as far as possible. Full body with transparent margin, no cropping. Genuine transparent background, no brown haze, floor, shadow, text, labels. One crab only."
+}

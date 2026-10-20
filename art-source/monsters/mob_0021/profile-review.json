@@ -1,26 +1,47 @@
 {
   "id": "mob_0021",
   "status": "profile-construction-drafts",
-  "sources": ["left-profile-study.png", "right-profile-study.png"],
+  "sources": [
+    "left-profile-study-v2.png",
+    "right-profile-study-v2.png"
+  ],
   "review": "profile-review.html",
   "confirmed": [
     "Large claw near in left-facing view.",
     "Small claw near and large claw far in right-facing view.",
     "Both render with clean transparency against a solid browser background.",
-    "Source image bounds do not touch canvas edges."
+    "Source image bounds do not touch canvas edges.",
+    "V2 revisions expose four near-side walking chains in each view."
   ],
   "remaining": [
-    "Only three near-side walking chains are clearly traceable in each view; fourth must be constructed.",
+    "New near front leg proportions and fixed segment lengths need matching to the other three legs.",
     "Eight total leg chains cannot be established from current overlaps.",
     "Cameras remain oblique rather than strict flank profiles.",
     "Coral landmarks and small-claw decoration differ between directions.",
     "Right coral has only eight pixels of top margin."
   ],
   "sourceAlphaBoundsAbove16": {
-    "left": [20, 37, 1522, 1002],
-    "right": [30, 8, 1510, 997]
+    "left": [
+      22,
+      38,
+      1523,
+      1005
+    ],
+    "right": [
+      30,
+      8,
+      1511,
+      1010
+    ]
   },
-  "sourceSize": [1536, 1024],
+  "sourceSize": [
+    1536,
+    1024
+  ],
   "artApproved": false,
-  "publicBinding": false
+  "publicBinding": false,
+  "nearWalkingChains": {
+    "left": 4,
+    "right": 4
+  }
 }
