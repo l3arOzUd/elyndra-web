@@ -2,7 +2,7 @@
   "id": "mob_0021",
   "name": "Coral Claw",
   "bibleSource": "content/regions/tha.ts",
-  "status": "anatomy-reference-refinement",
+  "status": "neutral-and-frontal-scuttle-studies",
   "bible": {
     "level": 40,
     "family": "crustacean",
@@ -30,6 +30,6 @@
     "Profile cameras retain oblique exposure.",
     "Coral branch topology and small-claw decoration differ between views."
   ],
-  "next": "Use front-anatomy-study-v2.png as construction reference: resolve tucked inner legs and hidden attachment order, then settle claws and reconcile back/profiles before motion support groups.",
+  "next": "Review front-rest-study.png and walk-front-study.png for planted-foot continuity and hidden attachment order. Reconcile back/profiles and preserve rigid coral before final animation.",
   "publicBinding": false
 }

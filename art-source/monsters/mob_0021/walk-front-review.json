@@ -1,0 +1,32 @@
+{
+  "id": "mob_0021",
+  "status": "authored-four-key-scuttle-draft",
+  "reference": "front-rest-study.png",
+  "source": "walk-front-study.png",
+  "views": ["front"],
+  "uniqueKeys": 4,
+  "previewFps": 4,
+  "preview": "walk-front-review.html",
+  "rendering": "Fixed 2x2 cells, one constant uniform scale; no mirroring or per-limb deformation.",
+  "observed": [
+    "Rest candidate lowers claws and shows eight walking tips in a common ground band.",
+    "Walk keys contain distinct lifted and lowered feet.",
+    "Large claw stays on viewer-left."
+  ],
+  "limitations": [
+    "Concealed leg roots prevent reliable assignment of every support-group leg.",
+    "Coral branches and shell details drift between generated keys.",
+    "Leg segment proportions vary, so rigid bone length is not established.",
+    "Planted-foot sliding has not been measured against world displacement.",
+    "Only the front-facing scuttle draft exists; other views and actions remain pending."
+  ],
+  "browserCheck": {
+    "framesVisible": 4,
+    "canvasEdgePixels": [0, 0, 0, 0],
+    "visiblePixels": [74865, 74502, 74903, 75981],
+    "pageErrors": [],
+    "scope": "Preview canvas display only; does not prove anatomy, source crop completeness or gameplay integration."
+  },
+  "artApproved": false,
+  "publicBinding": false
+}
