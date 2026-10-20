@@ -1,0 +1,28 @@
+{
+  "status": "action-study-unapproved",
+  "source": "actions-left.png",
+  "preview": "actions-review.html",
+  "poses": [
+    "idle",
+    "anticipation",
+    "bite",
+    "hit",
+    "dying",
+    "dead"
+  ],
+  "verified": [
+    "Browser composite shows transparent background without source-preview halo.",
+    "Death lowers intact shell and folds legs beneath it; no backwards whole-body rotation.",
+    "Core dims across dying and dead poses."
+  ],
+  "limitations": [
+    "Six legs are not independently readable in every pose.",
+    "Idle copied lifted-leg contact rather than all feet planted.",
+    "Bite head thrust is weak and pose differs little from anticipation.",
+    "Cell margins too tight; neighboring pixels intrude at 512-column boundaries. Dead preview excludes leftmost 16px to remove neighbor tip. Other crop boundaries need repair.",
+    "Ground baseline and shell registration drift; shell volume changes.",
+    "Eye stays bright in dead pose.",
+    "Only side action study, not runtime exported or public bound."
+  ],
+  "next": "Repair isolated cells, preserve six-leg topology, strengthen bite and align support baseline."
+}
