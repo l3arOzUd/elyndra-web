@@ -1,0 +1,23 @@
+{
+  "status": "walk-study-unapproved",
+  "selected": "walk-left-v2.png",
+  "rejected": {
+    "source": "walk-left.png",
+    "reason": "Three arms/fists appear in C/D/E."
+  },
+  "verified": [
+    "V2 shows two arms and two legs per pose.",
+    "Sandstone blocks, brass hinges and orange visor remain readable.",
+    "Browser alpha clean; six-frame preview runs without page errors."
+  ],
+  "limitations": [
+    "Bottom row still repeats same leading leg; no complete alternating walk.",
+    "Arm swing does not alternate adequately.",
+    "Head and torso scale/framing vary slightly.",
+    "Carved symbols and stone segment shapes change across poses.",
+    "Margins tight at top/bottom.",
+    "Sand emission absent; runtime VFX outstanding.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Author isolated opposite contact and passing poses with near/far legs clearly identified."
+}
