@@ -1,0 +1,22 @@
+{
+  "status":"authored-right-action-study-unapproved",
+  "source":"actions-right.png",
+  "preview":"actions-right-review.html",
+  "selection":{"idle":"right.png","actionCells":[1,2,3,4,5],"rejectedCells":[0]},
+  "observations":[
+    "Generated idle has an extra dangling hand; preview substitutes original right-facing reference.",
+    "Original neutral and hit pose keep far arm gripping and near arm relaxed/open.",
+    "Attack has two hands on shaft and points right.",
+    "Death folds forward onto knees and forearms rather than tipping backward.",
+    "Custom crops preserve spear tips and trailing boot without neighboring-pose contamination.",
+    "Browser preview reaches settled death and holds without page errors; selected poses visually inspected."
+  ],
+  "limitations":[
+    "Anticipation shows near elbow drawn backward; main driving-hand identity does not yet clearly match far-right-hand target.",
+    "Attack stance is much wider than left-facing action and body proportions differ from neutral.",
+    "Dead halo remains bright and visible panel projection differs from other views.",
+    "Spear length and release trajectory vary.",
+    "Right walking, idle motion, in-between poses and combined runtime integration remain missing."
+  ],
+  "next":"Refine far-arm driving grip and shorten attack stance; author right walk before adding fourth view to combined player."
+}

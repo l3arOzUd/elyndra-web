@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8">
+<title>Sun Warden right actions</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
+<h1>Sun Warden: authored right-facing actions</h1>
+<p>Draft only. Neutral uses the original right reference because generated idle has an extra hand. Inspect far-arm weapon grip, attack proportions and halo continuity.</p>
+<select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All selected poses</option></select>
+<button id="play">Replay</button><input id="frame" type="range" min="0" max="5" value="0"><span id="label"></span><br>
+<canvas width="640" height="640"></canvas>
+<script type="module">
+const im=new Image();im.src='actions-right.png';await im.decode();
+const neutral=new Image();neutral.src='right.png';await neutral.decode();
+const g=document.querySelector('canvas').getContext('2d'),slider=document.querySelector('#frame'),clip=document.querySelector('#clip');
+const names=['neutral reference','anticipation','thrust','hit','kneeling collapse','settled death'];
+const crops=[null,[500,0,450,510],[1050,0,486,510],[70,510,410,514],[520,600,470,424],[980,700,556,324]];
+const hips=[0,660,1160,240,735,1160],ground=[0,502,502,970,955,952];
+const seq={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5],all:[0,1,2,3,4,5]};
+let playing=false,last=0;
+function draw(){
+ const cell=seq[clip.value][Number(slider.value)];g.clearRect(0,0,640,640);
+ if(cell===0){const s=.35;g.drawImage(neutral,230-630*s,590-1180*s,neutral.width*s,neutral.height*s)}
+ else{
+  const s=.8,part=([x,y,w,h])=>g.drawImage(im,x,y,w,h,230+(x-hips[cell])*s,590+(y-ground[cell])*s,w*s,h*s);
+  part(crops[cell]);
+  if(cell===1)part([950,180,40,60]);
+  if(cell===2)part([950,340,100,170]);
+  if(cell===3)part([400,470,80,40]);
+ }
+ document.querySelector('#label').textContent=names[cell];
+}
+slider.oninput=()=>{playing=false;draw()};
+clip.onchange=()=>{playing=false;slider.value='0';draw()};
+document.querySelector('#play').onclick=()=>{slider.value='0';playing=true;last=performance.now();draw()};
+function tick(t){if(playing&&t-last>180){const f=Number(slider.value);if(f===5)playing=false;else slider.value=String(f+1);last=t;draw()}requestAnimationFrame(tick)}
+draw();requestAnimationFrame(tick);window.__wardenRightActions={ready:true};
+</script>
