@@ -1,0 +1,35 @@
+{
+  "status": "combined-motion-study-unapproved",
+  "preview": "combined-review.html",
+  "views": ["left", "front", "back", "right"],
+  "clips": ["static-idle", "hop-as-walk", "attack", "hit", "death"],
+  "sharedRenderers": ["actions-art.js", "hop-art.js"],
+  "technicalCheck": {
+    "unchangedSourceRenderHashesAfterExtraction": 41,
+    "checkedCombinedTimingCells": 93,
+    "emptyOrCanvasEdgeViolations": [],
+    "browserErrors": [],
+    "deathHolds": "All four views reached frame 5 after 1100 ms and remained there after another 200 ms.",
+    "method": "Opaque alpha >32 checks on 512-square canvas; readback hash comparison uses CPU Canvas2D. Counts do not prove visual approval."
+  },
+  "registration": {
+    "ground": [256, 430],
+    "hopUniformScale": {"left": 1, "front": 0.85, "back": 0.92, "right": 1},
+    "note": "Front/rear scale reduces cross-clip width jumps. Whole drawings scale uniformly around ground pivot; individual limbs are never stretched."
+  },
+  "visualFindings": [
+    "Compared neutral, hop crouch, airborne and dead across all four directions on an opaque contact sheet.",
+    "Front hop body still looks smaller than action neutral despite similar overall width; source proportions differ.",
+    "Left/right shell silhouettes and body heights differ across idle, movement and death.",
+    "Rear attack rises and repaired right impact reads as crouch; neither is visually approved.",
+    "128-square preview available beside the larger canvas for checking small-size readability."
+  ],
+  "remaining": [
+    "Author idle motion in all four views.",
+    "Correct rigid shell volume, anatomy and cross-clip proportions.",
+    "Repair right impact and rear forward bump projection.",
+    "Add landing recovery and connecting poses.",
+    "Export directional runtime assets and verify gameplay integration after art refinement."
+  ],
+  "publicBinding": false
+}

@@ -9,12 +9,10 @@
 <p>Crouch / push-off / airborne tuck / forefoot contact. The line marks the intended ground.</p>
 <canvas id="comparison" width="2048" height="512"></canvas>
 <script type="module">
-const im=new Image();im.src='hop-right.png';await im.decode();
-const crops=[[0,0,768,512],[768,0,768,512],[0,512,768,512],[768,512,768,512]];
-const anchors=[[390,502],[1200,508],[390,956],[1200,994]],bodyY=[430,430,375,430];
-const names=['crouch','push-off','airborne tuck','forefoot contact'];
+import {drawHop,hopSpecs} from './hop-art.js';
+const {crops,anchors,bodyY,names}=hopSpecs.right;
 const g=document.querySelector('#motion').getContext('2d'),slider=document.querySelector('#frame');
-function draw(ctx,f){const [x,y,w,h]=crops[f],[ax,ay]=anchors[f],s=.45;ctx.drawImage(im,x,y,w,h,256+(x-ax)*s,bodyY[f]+(y-ay)*s,w*s,h*s)}
+function draw(ctx,f){drawHop(ctx,'right',f)}
 function ground(ctx){ctx.strokeStyle='#c0d0d1';ctx.beginPath();ctx.moveTo(0,430);ctx.lineTo(512,430);ctx.stroke()}
 function render(){g.clearRect(0,0,512,512);ground(g);draw(g,Number(slider.value));document.querySelector('#label').textContent=names[Number(slider.value)]}
 let playing=true,start=performance.now();
