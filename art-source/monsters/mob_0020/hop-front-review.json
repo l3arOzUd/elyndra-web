@@ -1,0 +1,28 @@
+{
+  "status": "front-hop-study-unapproved",
+  "source": "hop-front.png",
+  "preview": "hop-front-review.html",
+  "authoredKeys": ["crouch", "push-off", "airborne tuck", "forefoot contact"],
+  "technicalCheck": {
+    "nonemptyKeys": 4,
+    "canvasEdgeIntersections": 0,
+    "browserErrors": [],
+    "groundY": 430,
+    "opaqueBottomY": [430, 422, 378, 430]
+  },
+  "visualFindings": [
+    "Two forelimbs and two hind limbs visible in all four drawings.",
+    "Front face and main barnacle clusters retained through the four keys.",
+    "Forefoot contact plants the small front palms while hind feet remain raised.",
+    "Opaque browser comparison has no obvious background matte."
+  ],
+  "limitations": [
+    "Push-off hind feet spread sideways rather than driving backward in depth; not accepted as a correct push pose.",
+    "Airborne forehands project toward the viewer and change apparent size.",
+    "Shell outline, plate boundaries and body volume drift.",
+    "No separate hind-foot settling or recovery key; loop transition remains abrupt.",
+    "Uniform registration is provisional and does not establish joint anatomy or contact correctness.",
+    "Not bound to gameplay."
+  ],
+  "next": "Correct push-off using a frontal hind-knee/ankle guide and add hind-foot settling."
+}

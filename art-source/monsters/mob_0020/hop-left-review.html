@@ -2,26 +2,31 @@
 <title>Tidehopper left hop study</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}a{color:#a9e2e3}</style>
 <h1>Tidehopper: left-facing hop</h1>
-<p>Four drawn keys. Draft support contacts, limb lengths and shell continuity require review; not gameplay approved.</p>
+<p>Five drawn keys including forefoot-first contact. Draft support contacts, limb lengths and shell continuity require review; not gameplay approved.</p>
 <a href="index.html">Art overview</a>
-<button id="play">Play / pause</button><input id="frame" type="range" min="0" max="3" value="0"><span id="label"></span><br>
+<button id="play">Play / pause</button><input id="frame" type="range" min="0" max="4" value="0"><span id="label"></span><br>
 <canvas id="motion" width="512" height="512"></canvas>
-<p>Crouch / push / airborne tuck / landing. The line marks the intended ground.</p>
-<canvas id="comparison" width="2048" height="512"></canvas>
+<p>Crouch / push / airborne tuck / forefoot contact / settled landing. The line marks the intended ground.</p>
+<canvas id="comparison" width="2560" height="512"></canvas>
 <script type="module">
 const im=new Image();im.src='hop-left.png';await im.decode();
+const forefoot=new Image();forefoot.src='hop-left-forefoot.png';await forefoot.decode();
 const crops=[[50,40,600,470],[670,0,866,525],[0,515,750,410],[800,550,736,474]];
 const anchors=[[350,280],[1010,260],[350,720],[1180,770]],bodyY=[333,312,285,330];
-const names=['crouch','push','airborne tuck','landing'];
+const names=['crouch','push','airborne tuck','forefoot contact','settled landing'];
 const g=document.querySelector('#motion').getContext('2d'),slider=document.querySelector('#frame');
-function draw(ctx,f){const [x,y,w,h]=crops[f],[ax,ay]=anchors[f],s=.45;ctx.drawImage(im,x,y,w,h,256+(x-ax)*s,bodyY[f]+(y-ay)*s,w*s,h*s)}
+function draw(ctx,f){
+ if(f===3){ctx.drawImage(forefoot,0,515,760,509,256-350*.45,333+(515-770)*.45,760*.45,509*.45);return}
+ const cell=f===4?3:f,[x,y,w,h]=crops[cell],[ax,ay]=anchors[cell],s=.45;
+ ctx.drawImage(im,x,y,w,h,256+(x-ax)*s,bodyY[cell]+(y-ay)*s,w*s,h*s)
+}
 function ground(ctx){ctx.strokeStyle='#c0d0d1';ctx.beginPath();ctx.moveTo(0,430);ctx.lineTo(512,430);ctx.stroke()}
 function render(){g.clearRect(0,0,512,512);ground(g);draw(g,Number(slider.value));document.querySelector('#label').textContent=names[Number(slider.value)]}
 let playing=true,start=performance.now();
 slider.oninput=()=>{playing=false;render()};
 document.querySelector('#play').onclick=()=>{playing=!playing;start=performance.now()-Number(slider.value)*200};
-function tick(t){if(playing){slider.value=String(Math.floor((t-start)/200)%4);render()}requestAnimationFrame(tick)}
+function tick(t){if(playing){slider.value=String(Math.floor((t-start)/200)%5);render()}requestAnimationFrame(tick)}
 const comp=document.querySelector('#comparison').getContext('2d');
-for(let f=0;f<4;f++){comp.save();comp.translate(f*512,0);ground(comp);draw(comp,f);comp.fillStyle='white';comp.fillText(names[f],12,24);comp.restore()}
+for(let f=0;f<5;f++){comp.save();comp.translate(f*512,0);ground(comp);draw(comp,f);comp.fillStyle='white';comp.fillText(names[f],12,24);comp.restore()}
 render();requestAnimationFrame(tick);window.__tideHop={ready:true,draw,crops,anchors,bodyY};
 </script>
