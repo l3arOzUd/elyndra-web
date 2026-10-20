@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8">
+<title>Sun Warden rear actions</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}img{max-width:100%}</style>
+<h1>Sun Warden: rear action studies</h1>
+<p>Inspect spear grip, arm count, rigid halo and grounded collapse. Timing preview only; not gameplay approved.</p>
+<select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All source poses</option></select>
+<button id="play">Replay</button>
+<label><input id="variant" type="checkbox">Compare rejected thrust revision</label>
+<input id="frame" type="range" min="0" max="5" value="0"><span id="label"></span><br>
+<canvas width="640" height="640"></canvas><br>
+<p>Rear-view study: check forward thrust projection, back plates and grounded collapse. No runtime binding.</p>
+<script type="module">
+const im=new Image();im.src='actions-back.png';await im.decode();
+const variant=new Image();variant.src='actions-back-v2.png';await variant.decode();
+
+const g=document.querySelector('canvas').getContext('2d'),slider=document.querySelector('#frame'),clip=document.querySelector('#clip');
+const names=['idle','anticipation','thrust','hit','kneeling collapse','settled death'];
+// Generated poses spill across nominal grid boundaries. Crop complete silhouettes.
+const crops=[[150,0,280,550],[630,0,375,550],[1100,0,380,560],[90,555,385,469],[600,550,340,474],[1020,650,516,374]];
+const hips=[280,765,1245,260,760,1175],ground=[540,540,550,1009,985,980];
+const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5],all:[0,1,2,3,4,5]};
+let playing=false,last=0;
+function draw(){
+ const cell=sequences[clip.value][Number(slider.value)],[x,y,w,h]=crops[cell],s=.85;
+ g.clearRect(0,0,640,640);g.drawImage(cell===2&&document.querySelector('#variant').checked?variant:im,x,y,w,h,320+(x-hips[cell])*s,590+(y-ground[cell])*s,w*s,h*s);
+ if(cell===3)g.drawImage(im,430,530,50,25,320+(430-hips[cell])*s,590+(530-ground[cell])*s,50*s,25*s);
+ document.querySelector('#label').textContent=names[cell];
+}
+slider.oninput=()=>{playing=false;draw()};
+document.querySelector('#variant').onchange=draw;
+clip.onchange=()=>{playing=false;slider.value='0';draw()};
+document.querySelector('#play').onclick=()=>{slider.value='0';playing=true;last=performance.now();draw()};
+function tick(t){if(playing&&t-last>180){const f=Number(slider.value);if(f===5)playing=false;else slider.value=String(f+1);last=t;draw()}requestAnimationFrame(tick)}
+draw();requestAnimationFrame(tick);window.__wardenActions={ready:true,sequences};
+</script>

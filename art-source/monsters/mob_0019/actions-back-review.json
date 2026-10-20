@@ -1,0 +1,26 @@
+{
+  "status":"six-key-rear-action-study-unapproved",
+  "source":"actions-back.png",
+  "preview":"actions-back-review.html",
+  "observations":[
+    "Rear spine armor, back of helmet and bronze mirror backs retained.",
+    "Idle weapon remains on character right, image right.",
+    "Kneeling and prone death fold legs beneath pelvis and lower torso away from camera.",
+    "Browser preview reaches settled death and holds without page errors.",
+    "Six poses inspected on opaque browser contact sheet with complete spear and foot crops."
+  ],
+  "limitations":[
+    "Original rear thrust projects sideways rather than away from camera.",
+    "Anticipation resembles raised spear guard and needs directional refinement.",
+    "Kneeling retains upright spear; release-to-ground transition missing.",
+    "Death halo appears reduced to four visible disks; projection or missing-panel issue unresolved.",
+    "Cross-view scale, rigid weapon dimensions, in-betweens and runtime integration unfinished."
+  ],
+  "rejectedRevision":{
+    "source":"actions-back-v2.png",
+    "cell":2,
+    "result":"Sideways blade removed but arms mostly disappear and stance resets to standing, losing readable thrust.",
+    "selected":false
+  },
+  "next":"Use an explicit rear thrust shoulder/elbow guide; retain forward weight transfer and visible right elbow before revising weapon projection."
+}
