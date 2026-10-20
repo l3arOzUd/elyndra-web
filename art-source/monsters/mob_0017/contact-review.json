@@ -1,5 +1,5 @@
 {
-  "status": "single-support-pose-draft",
+  "status": "two-support-poses-draft",
   "source": "walk-left-contact-a-v2.png",
   "guide": "tripod-a-guide.svg",
   "preview": "contact-review.html",
@@ -14,11 +14,28 @@
     "reason": "Shows six feet but near middle remained planted and far middle lifted."
   },
   "limitations": [
-    "Only one contact pose, not an alternating walk cycle.",
+    "Two contact poses, still no valid passing poses or complete walk cycle.",
     "Far middle segment appears longer and heavier than reference.",
     "Far-side hip attachments remain partly occluded.",
     "Core/reflection pattern differs from source.",
     "No runtime export or gameplay binding."
   ],
-  "next": "Create opposite tripod with matched shell registration and segment lengths, then passing poses."
+  "next": "Author passing pose with an explicit guide retaining A support tripod.",
+  "oppositeContact": {
+    "source": "walk-left-contact-b.png",
+    "verified": [
+      "Near middle extends down while near front/rear lift.",
+      "Far front/rear extend toward support baseline and far middle lifts.",
+      "Six distinct foot tips visible with clean browser alpha.",
+      "A/B preview alternates without page errors."
+    ],
+    "limitations": [
+      "Far front support tip sits higher than other two; contact plane still needs refinement.",
+      "Core reflections and leg segment shapes drift."
+    ]
+  },
+  "rejectedPassing": {
+    "source": "walk-left-pass-a.png",
+    "reason": "Near front lifts instead of retaining A support; near middle plants rather than swings, and one far foot is obscured. Does not preserve intended support tripod."
+  }
 }
