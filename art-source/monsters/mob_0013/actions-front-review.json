@@ -1,0 +1,17 @@
+{
+  "status": "action-draft-refinement-pending",
+  "source": "actions-front.png",
+  "verified": [
+    "Browser death sequence shows limp wings and final low shell with folded legs.",
+    "Eyes and sap dim through collapse.",
+    "Final needle lies diagonally along ground."
+  ],
+  "limitations": [
+    "Top-row wing poses extend beyond nominal512px cells; custom crop masks require further attack inspection.",
+    "Attack foreshortening enlarges needle and shell; cross-clip scale continuity needs refinement.",
+    "Six-leg and four-wing attachments remain partly occluded.",
+    "Death needs intermediate landing drawings.",
+    "Rear actions and runtime export still pending."
+  ],
+  "cropNote": "Final death starts y540 to exclude top-row claw fragments."
+}
