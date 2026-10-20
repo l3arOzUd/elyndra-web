@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><title>Vinecrawler action study</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{display:block;background:#697a80;max-width:100%;margin:16px 0}</style>
+<h1>Vinecrawler — left action study</h1><p>Authored attack, recoil and folded collapse. Eight-leg continuity and transitions remain unfinished; not bound to gameplay.</p>
+<select id="clip"><option>attack</option><option>hit</option><option>death</option></select><button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" value="0">
+<canvas id="motion" width="640" height="560"></canvas><canvas id="contact" width="1200" height="800"></canvas>
+<script type="module">
+const im=new Image();im.src='./actions-left.png';await im.decode();
+const seq={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
+let clip='attack',f=0,paused=false,last=0;
+function draw(ctx,f,x,y,s){
+ const p=seq[clip][f],sx=[0,544,960,0,544,1080][p],sy=p<3?0:590,w=[544,474,576,544,536,456][p],h=p<3?590:434;
+ const ax=[278,236,325,278,250,225][p],bottom=[565,565,584,400,388,378][p];
+ ctx.save();if(p===1){ctx.beginPath();ctx.rect(x-ax*s,y-bottom*s,416*s,400*s);ctx.rect(x-ax*s,y-(bottom-400)*s,w*s,(h-400)*s);ctx.clip();}if(p===2){ctx.beginPath();ctx.rect(x-ax*s,y-bottom*s,w*s,400*s);ctx.rect(x-(ax-60)*s,y-(bottom-400)*s,(w-60)*s,(h-400)*s);ctx.clip();}ctx.drawImage(im,sx,sy,w,h,x-ax*s,y-bottom*s,w*s,h*s);ctx.restore();
+}
+const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
+function contact(){cg.clearRect(0,0,1200,800);for(let i=0;i<6;i++)draw(cg,i,i%3*400+200,Math.floor(i/3)*400+380,.62);}
+contact();document.querySelector('#clip').onchange=e=>{clip=e.target.value;f=0;paused=false;contact();};document.querySelector('#replay').onclick=()=>{f=0;paused=false;};document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
+function tick(t){if(!paused&&t-last>140){f=Math.min(5,f+1);last=t;}ctx.clearRect(0,0,640,560);draw(ctx,f,320,510,.8);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+window.__vinecrawlerActions={ready:true};requestAnimationFrame(tick);
+</script>

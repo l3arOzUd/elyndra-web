@@ -1,0 +1,16 @@
+{
+  "status": "action-study-refinement-pending",
+  "source": "actions-left.png",
+  "verified": [
+    "Browser death preview shows folding legs and lowered chassis without flipping onto back.",
+    "Terminal jade lens darkens and leaf crown droops.",
+    "Exterior alpha clean on browser grey background."
+  ],
+  "limitations": [
+    "Attack source poses overlap: custom crop masks remove neighboring claw tips; further edge inspection required.",
+    "Attack raised forelegs may add limbs rather than move existing chains; eight-leg continuity unresolved.",
+    "Shell scale changes across poses and transition drawings are missing.",
+    "Not exported or bound to gameplay."
+  ],
+  "next": "Inspect cropped attack edges, create front and rear combat poses, refine anatomical continuity."
+}
