@@ -1,0 +1,20 @@
+{
+  "id": "mob_0097",
+  "name": "Lattice Weaver",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from inspected front and rear; one left anatomy refinement, failed draft retained.",
+  "confirmed": [
+    "Four view files retain dark brass plates, gold ribs, violet joints and a rear violet spinneret.",
+    "Back hides the facial eyes and pincers behind the abdomen. Left and right face their named screen directions.",
+    "Profiles omit baked silk threads to support later runtime effects."
+  ],
+  "limitations": [
+    "Eight-leg anatomy is NOT approved. Initial left draft shows excess feet; refined left has only seven clearly visible tips and right only six clearly visible tips. Occlusion alone does not establish the missing leg chains.",
+    "Profile rear leg roots appear distributed along or under the abdomen rather than all attached to the compact cephalothorax. A canonical socket map and separated leg chains are required.",
+    "Profiles remain oblique with frontal eye and pincer surfaces, not strict orthographic side elevations.",
+    "Abdomen proportions, gold rib patterns, spinneret dimensions and stance differ across views.",
+    "Front/back contain baked silk threads; these must be removed from body layers and implemented as effects between moving leg anchors.",
+    "No runtime animation clips or isolated articulated parts exist for this set."
+  ],
+  "next": "Resolve eight-leg socket topology before rigging. Create four near and four far leg chains with fixed segment lengths, a shared body design and independent silk VFX; visually verify idle, alternating gait, ranged attack, hit and joint-folding death."
+}

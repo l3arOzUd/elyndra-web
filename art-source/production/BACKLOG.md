@@ -101,5 +101,5 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0094 | Sparkwing | master-created | master-created | master-created | master-created | placeholder |
 | mob_0095 | Array Sentinel | master-created | master-created | master-created | master-created | placeholder |
 | mob_0096 | Glyph Swarm | master-created | master-created | master-created | master-created | placeholder |
-| mob_0097 | Lattice Weaver | master-created | missing | missing | missing | placeholder |
+| mob_0097 | Lattice Weaver | master-created | master-created | master-created | master-created | placeholder |
 | mob_0098 | Lattice Sovereign | master-created | missing | missing | missing | placeholder |
