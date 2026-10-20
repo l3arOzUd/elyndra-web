@@ -187,9 +187,11 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
       const kneeSupport=92-72*Math.cos(thigh);
       const contact=ease(Math.max(0,Math.min(1,(k-.25)/.3)));
       p.dy=lerp(soleSupport,kneeSupport,contact);
-      p.dx=side?60*slump:0;
-      p.angle.torso=(side?-68:40*out)*slump;
-      p.angle.head=(side?-16:18*out)*slump;
+      p.dx=side?35*slump:0;
+      // Fold over the planted knees. A large screen-plane rotation in
+      // front/back reads as a sideways seated lean rather than a collapse.
+      p.angle.torso=(side?-92:12*out)*slump;
+      p.angle.head=(side?-22:18*out)*slump;
       p.angle.arm_near=(side?58:-12*out)*slump;
       p.angle.arm_far=(side?50:10*out)*slump;
       p.hurt=.35*(1-Math.min(1,k*3));
