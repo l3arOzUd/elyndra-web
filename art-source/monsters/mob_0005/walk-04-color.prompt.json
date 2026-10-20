@@ -1,0 +1,7 @@
+{
+  "prompt": "Color correction ONLY image1. Preserve exact frame4 lifted near forefoot and planted hindfoot, all four connected legs, entire silhouette, scale and framing. Image2 COLOR reference only: soft neutral slate-grey plates, cream belly, pale quartz with subtle warm honey glow. Remove excessive red orange rims and harsh saturated shadows. No anatomy/pose changes, no background ground shadow text, preserve transparent alpha.",
+  "references": [
+    "walk-04.png",
+    "walk-01.png"
+  ]
+}

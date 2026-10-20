@@ -1,0 +1,7 @@
+{
+  "prompt": "Color correction ONLY on image1 Craglet frame3. Preserve exact pose lifted near hindfoot, four feet, outlines, dimensions framing. Match image2 palette: neutral soft grey stone, cream belly, pale warm quartz, restrained honey light. Reduce orange/red saturation and harsh black contrast, especially crystal rims. Do not copy pose from image2, do not add/remove legs or repaint geometry. True transparent alpha preserved, no background shadow text.",
+  "references": [
+    "walk-03.png",
+    "walk-01.png"
+  ]
+}

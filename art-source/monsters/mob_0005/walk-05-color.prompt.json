@@ -1,0 +1,7 @@
+{
+  "prompt": "COLOR MATCH ONLY edit image1. Keep exact image1 pose: lifted near foreleg reaching left, all four feet, every contour, plate, scale, dimensions and placement. Match palette and lighting to image2: soft neutral slate grey armor, pale creamy quartz with restrained honey glow, warm cream belly, softer shadow contrast. Remove saturated red/orange rims and orange cast from image1. Do not change anatomy or leg positions; image2 is COLOR reference only. Preserve original alpha transparency and framing, no added background or shadow or text.",
+  "references": [
+    "walk-05.png",
+    "walk-01.png"
+  ]
+}
