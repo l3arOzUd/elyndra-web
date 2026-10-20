@@ -1,0 +1,17 @@
+{
+  "status": "authored-action-draft-refinement-pending",
+  "source": "actions-left.png",
+  "verified": [
+    "Browser final death pose inspected: eyes closed, cheek and belly lowered, fins folded.",
+    "Attack opens mouth and leans forward.",
+    "Fixed scale maintained across action poses."
+  ],
+  "limitations": [
+    "Attack rear leg extends too far and needs length consistency review.",
+    "Four limb attachments remain partly hidden.",
+    "Action body scale differs from walk sheet; registration not calibrated.",
+    "Dorsal fin and scale patterns drift.",
+    "Only three death poses; transition drawings needed.",
+    "Other directions and idle missing; no runtime binding."
+  ]
+}
