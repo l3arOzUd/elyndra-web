@@ -5,10 +5,12 @@ export class SandPreview {
   this.THREE=THREE;this.particles=[];this.seed=18;this.accumulator=0;this.deathTime=0;
   this.capacity=160;
   this.positions=new Float32Array(this.capacity*3);
+  this.colors=new Float32Array(this.capacity*3);
   this.geometry=new THREE.BufferGeometry();
   this.geometry.setAttribute('position',new THREE.BufferAttribute(this.positions,3));
+  this.geometry.setAttribute('color',new THREE.BufferAttribute(this.colors,3));
   this.geometry.setDrawRange(0,0);
-  this.material=new THREE.PointsMaterial({color:0xd6ac68,size:2,sizeAttenuation:false,transparent:true,opacity:.7,depthWrite:false,depthTest:false});
+  this.material=new THREE.PointsMaterial({vertexColors:true,size:3,sizeAttenuation:false,transparent:true,opacity:.85,depthWrite:false,depthTest:false});
   this.points=new THREE.Points(this.geometry,this.material);this.points.frustumCulled=false;this.points.renderOrder=2;
   scene.add(this.points);
  }
@@ -20,7 +22,7 @@ export class SandPreview {
   while(remaining>0){
    const dt=Math.min(remaining,1/60);remaining-=dt;
    if(clip==='death')this.deathTime+=dt;else this.deathTime=0;
-   const rate=!enabled?0:clip==='death'?Math.max(0,1-this.deathTime/.45)*22:clip==='walk'?32:clip==='attack'||clip==='hit'?38:16;
+   const rate=!enabled?0:clip==='death'?Math.max(0,1-this.deathTime/.45)*40:clip==='walk'?65:clip==='attack'||clip==='hit'?75:45;
    this.accumulator+=dt*rate;
    while(this.accumulator>=1){
     this.accumulator--;
@@ -28,14 +30,15 @@ export class SandPreview {
     const side=dir==='W'||dir==='E'||dir==='SW'||dir==='NW'||dir==='SE'||dir==='NE';
     const seams=side?[[-.06,.72],[.09,.50],[.04,.24]]:[[-.24,.70],[.24,.70],[-.12,.25],[.12,.25]];
     const seam=seams[Math.floor(this.random()*seams.length)],mirror=dir==='E'||dir==='SE'||dir==='NE'?-1:1;
-    this.particles.push({x:seam[0]*mirror+(this.random()-.5)*.02,y:seam[1],vx:(this.random()-.5)*.045,vy:-.03,age:0,life:.7+this.random()*.3});
+    const color=new this.THREE.Color(this.random()<.45?0x775129:0xf3cf86);
+    this.particles.push({x:seam[0]*mirror+(this.random()-.5)*.03,y:seam[1],vx:(this.random()-.5)*.09,vy:-.06,age:0,life:1+this.random()*.3,color});
    }
    for(const p of this.particles){p.age+=dt;p.vy-=.8*dt;p.x+=p.vx*dt;p.y+=p.vy*dt}
    this.particles=this.particles.filter(p=>p.age<p.life&&p.y>.015);
   }
   this.points.visible=enabled;
-  this.particles.forEach((p,i)=>{this.positions[i*3]=p.x;this.positions[i*3+1]=p.y;this.positions[i*3+2]=.015});
-  this.geometry.attributes.position.needsUpdate=true;this.geometry.setDrawRange(0,this.particles.length);
+  this.particles.forEach((p,i)=>{this.positions[i*3]=p.x;this.positions[i*3+1]=p.y;this.positions[i*3+2]=.015;p.color.toArray(this.colors,i*3)});
+  this.geometry.attributes.position.needsUpdate=true;this.geometry.attributes.color.needsUpdate=true;this.geometry.setDrawRange(0,this.particles.length);
  }
  dispose(){this.points.removeFromParent();this.geometry.dispose();this.material.dispose()}
 }

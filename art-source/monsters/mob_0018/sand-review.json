@@ -2,7 +2,7 @@
   "status": "preview-only",
   "errors": [],
   "checks": {
-    "aliveParticles": 12,
+    "aliveParticles": 38,
     "toggleHides": true,
     "deathAfter2000ms": {
       "particles": 0,
@@ -14,5 +14,27 @@
     "Particle visibility and color need review at game camera zoom.",
     "Not wired to gameplay monster spawning."
   ],
-  "visualReview": "At current camera scale the sparse sand is difficult to distinguish against sandstone; density, contrast and frame-specific emission placement need refinement."
+  "visualReview": "Dark/light 3px grains visible around arms and legs in front idle. Same-frame on/off screenshot differs at 496 pixels within bbox [394,251,563,436]. Sparse sand remains a draft, with approximate seam positions.",
+  "fourFacingChecks": [
+    {
+      "facing": "W",
+      "live": 38,
+      "death": 0
+    },
+    {
+      "facing": "E",
+      "live": 38,
+      "death": 0
+    },
+    {
+      "facing": "S",
+      "live": 38,
+      "death": 0
+    },
+    {
+      "facing": "N",
+      "live": 38,
+      "death": 0
+    }
+  ]
 }
