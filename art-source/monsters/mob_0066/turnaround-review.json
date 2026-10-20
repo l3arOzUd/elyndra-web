@@ -1,0 +1,20 @@
+{
+  "id": "mob_0066",
+  "name": "Squall Ray",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front identity and opposite profile.",
+  "confirmed": [
+    "Indigo dorsal surface, white underside, blue fin edging and copper tail tip retained.",
+    "Single tail and paired cephalic lobes; rear contains no duplicate face.",
+    "Four images pass alpha, nonempty and edge checks."
+  ],
+  "limitations": [
+    "Side views remain three-quarter rather than orthographic; raised fin tips spread fore/aft instead of overlapping.",
+    "Rear camera pitch reveals broad dorsal surface inconsistent with front camera elevation.",
+    "Rear adds branching blue markings; dorsal landmark map must be reconciled.",
+    "Tail bend is mirrored in side images rather than preserving a fixed anatomical curvature.",
+    "Margins are tight despite passing pixel edge check.",
+    "No separated parts or runtime animation clips yet."
+  ],
+  "next": "Correct camera pitch and overlapping fin topology, lock dorsal markings and tail curvature; separate disc, fins, cephalic lobes and segmented tail for hover, travel, sting, hit and collapse. Add electrical VFX separately."
+}
