@@ -1,0 +1,22 @@
+{
+  "status": "front-walk-four-key-pose-draft",
+  "source": "walk-front.png",
+  "preview": "walk-front-review.html",
+  "playbackCellOrder": [0, 3, 2, 1],
+  "observations": [
+    "Every pose has two fists and two boots connected to limb chains.",
+    "Cell 0 leads with screen-right boot; cell 2 leads with screen-left boot, opposite the requested contact order.",
+    "Cell 3 lifts screen-left boot while screen-right supports; cell 1 lifts screen-right boot while screen-left supports.",
+    "Reordered playback matches contact and passing support sides.",
+    "Contact poses swing opposite fists forward.",
+    "Browser composite has clean transparency; playback advances without page errors."
+  ],
+  "limitations": [
+    "Four poses only; weight transfer and landing are abrupt.",
+    "Boot size, knee silhouette, carved motifs and body proportions vary.",
+    "Passing knees lift high for a slow grinding construct gait.",
+    "Body anchors and ground contacts approximate; support foot sliding not solved.",
+    "No rear walk or runtime export yet; visual approval remains pending."
+  ],
+  "publicBinding": false
+}
