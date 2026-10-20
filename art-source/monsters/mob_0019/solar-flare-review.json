@@ -1,0 +1,25 @@
+{
+  "status":"procedural-preview-behavior-tested-art-unapproved",
+  "module":"solar-flare.js",
+  "preview":"combined-review.html",
+  "bible":"content/regions/sol.ts mob_0019: solar ring flares on each blow",
+  "timing":{"attackHitSeconds":0.375,"durationSeconds":0.22,"decay":"quadratic","rearIntensity":"reduced rim illumination"},
+  "verification":{
+    "method":"CPU Canvas2D with willReadFrequently to avoid GPU/readback raster differences; compare identical impact sprite with and without overlay.",
+    "views":[
+      {"view":"left","pixelsBefore":0,"pixelsAtPeak":2745,"pixelsAfter":0},
+      {"view":"front","pixelsBefore":0,"pixelsAtPeak":3498,"pixelsAfter":0},
+      {"view":"back","pixelsBefore":0,"pixelsAtPeak":738,"pixelsAfter":0},
+      {"view":"right","pixelsBefore":0,"pixelsAtPeak":2705,"pixelsAfter":0}
+    ],
+    "canvasStateRestored":true,
+    "browserErrors":[],
+    "visual":"Inspected off/on impact contact sheet in all four directions."
+  },
+  "limitations":[
+    "Original impact artwork already contains glow; toggling overlay does not remove painted illumination.",
+    "Anchors are manually registered to current impact art and must be updated if poses change.",
+    "Rear thrust pose itself remains incorrect.",
+    "Preview-only integration; gameplay event integration and final VFX art approval remain outstanding."
+  ]
+}

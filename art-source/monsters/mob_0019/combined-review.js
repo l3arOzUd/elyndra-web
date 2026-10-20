@@ -1,4 +1,5 @@
 const files=['walk-left-contacts-v2.png','walk-left-pass-a-v2.png','walk-left-pass-b.png','walk-front.png','walk-back.png','actions-left.png','actions-left-v2.png','actions-front.png','actions-back.png','right.png','actions-right.png','walk-right.png','walk-right-contact-b-v2.png','walk-right-pass-b.png'];
+import {drawSolarFlare,HIT_TIME} from './solar-flare.js';
 const images=Object.fromEntries(await Promise.all(files.map(async file=>{const im=new Image();im.src=file;await im.decode();return [file,im]})));
 const defs={idle:{frames:1,fps:1,loop:true},walk:{frames:4,fps:4,loop:true},attack:{frames:6,fps:8},hit:{frames:6,fps:10},death:{frames:6,fps:6}};
 const sequences={idle:[0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
@@ -8,7 +9,7 @@ const specs={
  back:{crops:[[150,0,280,550],[630,0,375,550],[1100,0,380,560],[90,555,385,469],[600,550,340,474],[1020,650,516,374]],hips:[280,765,1245,260,760,1175],ground:[540,540,550,1009,985,980],scale:.50},
  right:{crops:[null,[500,0,450,510],[1050,0,486,510],[70,510,410,514],[520,600,470,424],[980,700,556,324]],hips:[630,660,1160,240,735,1160],ground:[1180,502,502,970,955,952],scale:.5}
 };
-function draw(g,clip,f,view){
+function draw(g,clip,f,view,elapsed){
  g.save();g.translate(view==='right'?192:212,346);
  const part=(file,crop,hip,ground,s)=>{const [x,y,w,h]=crop;g.drawImage(images[file],x,y,w,h,(x-hip)*s,(y-ground)*s,w*s,h*s)};
  if(clip==='walk'){
@@ -34,16 +35,21 @@ function draw(g,clip,f,view){
    if(cell===3)part(file,[400,470,80,40],spec.hips[cell],spec.ground[cell],spec.scale);
   }
  }
+ if(clip==='attack'&&Number.isFinite(elapsed)){
+  const spec=specs[view];
+  drawSolarFlare(g,view,elapsed-HIT_TIME,{hip:spec.hips[2],ground:spec.ground[2],scale:spec.scale});
+ }
  g.restore();
 }
 const g=document.querySelector('#motion').getContext('2d'),view=document.querySelector('#view'),clip=document.querySelector('#clip'),slider=document.querySelector('#frame');
 let start=performance.now(),playing=true;
-function render(){g.clearRect(0,0,384,384);draw(g,clip.value,Number(slider.value),view.value)}
+function render(elapsed=Number(slider.value)/defs[clip.value].fps){g.clearRect(0,0,384,384);draw(g,clip.value,Number(slider.value),view.value,document.querySelector('#flare').checked?elapsed:undefined)}
 function reset(){start=performance.now();slider.max=String(defs[clip.value].frames-1);slider.value='0';playing=true;render()}
 view.onchange=reset;clip.onchange=reset;document.querySelector('#replay').onclick=reset;
 slider.oninput=()=>{playing=false;render()};
 document.querySelector('#pause').onclick=()=>{playing=!playing;start=performance.now()-Number(slider.value)*1000/defs[clip.value].fps};
-function tick(t){if(playing){const d=defs[clip.value],f=Math.floor((t-start)*d.fps/1000);slider.value=String(d.loop?f%d.frames:Math.min(d.frames-1,f));render()}requestAnimationFrame(tick)}
+document.querySelector('#flare').onchange=()=>render();
+function tick(t){if(playing){const d=defs[clip.value],elapsed=(t-start)/1000,f=Math.floor(elapsed*d.fps);slider.value=String(d.loop?f%d.frames:Math.min(d.frames-1,f));render(elapsed)}requestAnimationFrame(tick)}
 const comp=document.querySelector('#comparison').getContext('2d');
 for(const [row,v]of ['left','front','back','right'].entries())for(const [col,[c,f]]of [['idle',0],['walk',0],['walk',2],['death',5]].entries()){
  comp.save();comp.translate(col*384,row*384);comp.strokeStyle='#b1babe';comp.beginPath();comp.moveTo(0,346);comp.lineTo(384,346);comp.stroke();draw(comp,c,f,v);comp.fillStyle='white';comp.fillText(`${v} ${c} ${f}`,12,20);comp.restore();
