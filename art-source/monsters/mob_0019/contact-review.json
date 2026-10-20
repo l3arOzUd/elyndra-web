@@ -1,7 +1,7 @@
 {
   "status": "opposite-leading-leg-studies-unapproved",
   "sources": [
-    "walk-front-contact-a.png",
+    "walk-front-contact-a-v4.png",
     "walk-front-contact-b.png"
   ],
   "preview": "contact-review.html",
@@ -38,6 +38,16 @@
       "result": "Trailing foot moves outward and lower, ankle/heel angle now visible. Toe still above requested y1135 and boot rotates too far outward.",
       "selection": "Comparison candidate only, original contact remains default.",
       "next": "Reduce outward boot rotation while retaining heel/toe articulation; validate both contacts in motion."
+    },
+    {
+      "source": "walk-front-contact-a-v4.png",
+      "result": "Trailing boot faces camera and lowers near front sole; less floating appearance. Selected provisionally for contact A.",
+      "limitations": [
+        "Step is shorter, close to standing.",
+        "Trailing ankle and calf changed beyond requested boot-only edit.",
+        "Heel lift subtle; weight transfer still needs moving-cycle review.",
+        "Contact B remains older proportion set and needs matching."
+      ]
     }
   ]
 }

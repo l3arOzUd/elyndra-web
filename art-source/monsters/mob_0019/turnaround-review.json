@@ -10,12 +10,12 @@
   ],
   "limitations": [
     "Halo profiles are still partly oblique; visible panel positions do not prove one consistent rigid ring",
-    "Original front prompt requests six panels but front and rear show only five clearly visible; resolve hidden panel/mount design before animation",
+    "Five-panel layout chosen from front/rear references; profile panel projection and back mounting still need consistency refinement",
     "Front figure is smaller in frame; register head, grip, hips and feet rather than whole weapon bounding box",
     "Rear spear blade is longer than front relative to head; weapon dimensions need harmonization",
     "Profile head and heel geometry differ from front and require refinement"
   ],
-  "next": "Resolve rigid halo panel layout and standard spear dimensions, refine landmarks, then separate right-hand weapon chain, legs and halo for thrust, guard and collapse animation.",
+  "next": "Refine front contact and passing poses; preserve five-panel rigid halo and standard spear dimensions across side/rear motion.",
   "designDecision": {
     "halo": "Five visible mirror panels: top, upper-left, lower-left, upper-right, lower-right. No sixth hidden panel assumed.",
     "basis": "Bible requires halo-ring of sun mirrors but no count; existing front and rear both show five. Original generated prompt six was not a Bible requirement.",
