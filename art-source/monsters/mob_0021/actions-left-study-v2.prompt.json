@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "actions-left-study.png",
+  "prompt": "Re-layout this SAME six-pose crab sprite sheet with MUCH WIDER transparent gutters and margins. Keep 3 columns x2 rows, equal cells. Each crab must occupy only 70% of its own cell width and height, uniformly scale entire crab down without changing proportions. Center each in its cell on same ground baseline. Preserve all six poses and details, facing left, no mirroring: neutral, open-claw windup, closed-claw contact; recoil, collapse, dead. All feet/claws/coral fully contained within own cell, at least 15%cell margin on every side. No overlap across cell boundaries. Preserve eight walking-leg anatomy where visible and large near claw, no added limbs. Genuine transparent background with alpha zero in gutters and holes, remove colored haze, no labels numbers grids floor shadows or text. Same painted fantasy crab, exact sheet content only reframed."
+}

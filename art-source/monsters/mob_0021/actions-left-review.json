@@ -1,0 +1,35 @@
+{
+  "id": "mob_0021",
+  "status": "left-combat-death-drafts",
+  "reference": "left-profile-study-v2.png",
+  "source": "actions-left-study-v2.png",
+  "preview": "actions-left-review.html",
+  "sequences": {
+    "attack": [0, 1, 1, 2, 2, 0],
+    "hit": [0, 3, 3, 0, 0, 0],
+    "death": [0, 4, 4, 5, 5, 5]
+  },
+  "observed": [
+    "Near giant claw opens in windup and closes on forward contact.",
+    "Reframed source separates neighboring poses for clean crops.",
+    "Death lowers body and holds final key."
+  ],
+  "remaining": [
+    "Four near walking chains from reference are not consistently retained.",
+    "Claw size and coral details change between poses.",
+    "Death flattens shell instead of preserving rigid volume.",
+    "Final eye is not fully closed.",
+    "Far legs and claw-arm attachments remain partly concealed."
+  ],
+  "validation": {
+    "visiblePixelsPerPose": [65902, 61479, 61490, 62242, 59224, 51637],
+    "canvasEdgePixels": [0, 0, 0, 0, 0, 0],
+    "deathFrameAfter1300ms": 5,
+    "deathFrameAfter1900ms": 5,
+    "playingAfterDeath": false,
+    "pageErrors": [],
+    "scope": "Preview timing, alpha display and canvas bounds only."
+  },
+  "artApproved": false,
+  "publicBinding": false
+}
