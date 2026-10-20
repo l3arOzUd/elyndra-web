@@ -30,5 +30,18 @@
       "Several near legs do not alternate support as requested.",
       "Foot baseline and rigid segment lengths vary; passing poses still missing."
     ]
+  },
+  "passingStudy": {
+    "sources": [
+      "walk-left-pass-a.png",
+      "walk-left-pass-b.png"
+    ],
+    "status": "anatomy-correction-required-not-runtime-approved",
+    "findings": [
+      "Passing A bends a foreleg and third near leg, with shell approximately registered.",
+      "Passing B bends second and fourth near legs but duplicates the left-front pointed foot into a stacked extra segment.",
+      "Visible leg chains change across poses; reliable eight-leg topology has not been established."
+    ],
+    "next": "Repair passing B stacked foot and reconcile all eight leg roots before selecting a production cycle."
   }
 }
