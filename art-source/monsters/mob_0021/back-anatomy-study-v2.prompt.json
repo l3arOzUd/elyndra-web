@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-anatomy-study.png",
+  "prompt": "Surgical anatomy correction to this rear-view crab. There are currently FIVE walking feet on EACH side: too many. REMOVE ONLY the two INNERMOST short dangling legs immediately beneath the central abdomen: the left inner short leg whose pointed tip is nearest image center and the matching right inner short leg. Fill those two removed leg silhouettes with transparent background, preserve belly rim. KEEP the remaining FOUR complete walking legs on image LEFT and FOUR on image RIGHT unchanged in design and articulation. After correction exactly EIGHT walking legs total, plus TWO claw-bearing arms. Do not remove the claws: large claw stays at image RIGHT, small at image LEFT, forward beyond shell. Do not add or duplicate any feet. Keep rigid teal shell and all pink orange coral exactly the same. Strict rear view, no eyes or face. Preserve all remaining foot tips. Whole animal within clear transparent margins, no ground, shadows, text or labels. One crab, transparent background."
+}

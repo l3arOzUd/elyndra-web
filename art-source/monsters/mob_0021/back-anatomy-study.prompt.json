@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "back.png",
+    "front-rest-study.png"
+  ],
+  "prompt": "Create a corrected BACK VIEW neutral reference of this exact Coral Claw crab. Reference1 is old rear; reference2 is updated front neutral to match proportions and limb count. Viewed directly from behind at same slightly elevated sprite camera, no face or eyes visible, not front mirrored. Large anatomical RIGHT claw appears image RIGHT in rear view, small claw image LEFT; claw arms project FORWARD away from viewer around far side of shell, with rear surfaces of claw hands visible beyond shell sides, NOT claws attached to crab's back. Exactly EIGHT walking legs four per side, keep four separate rigid bent segment chains and pointed feet visible on each side with all feet reaching one shallow perspective ground plane. No tucked dangling central feet. Squat teal cream gold rigid carapace matching front shell width, no tall spider posture. Match coral crown main landmarks from front reference as a physical rotation: its tall central orange branches now slightly image LEFT, tall pink cluster slightly image RIGHT, same branch count as far as visible and stable attachment bases. Pink orange coral on dorsal shell, no new coral on walking legs. Keep all eight walking tips inside clear transparent margins. Whole animal occupying no more than 80 percent width, relaxed neutral pose, loose closed claw jaws. Same hand-painted wet teal armor aesthetic. Transparent background, no ground or shadow, labels, text, grids. One back view crab only."
+}

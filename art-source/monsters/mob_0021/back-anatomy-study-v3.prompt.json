@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-anatomy-study-v2.png",
+  "prompt": "Fix ONE missing walking leg in this rear-view crab. Currently image LEFT has only THREE visible walking feet, while image RIGHT has FOUR. Add exactly ONE small inner walking leg on image LEFT beneath the left lower edge of the abdomen, in the empty transparent gap between the central belly and existing left legs. It should correspond anatomically to the existing inner right-side leg (the short bent leg ending near x=900 y=950), reflected to the left side with its own shell attachment and same rigid armored thickness. Its foot should end near x=550 y=950, visibly separated from adjacent foot. Do not add any other feet. Leave all existing right-side FOUR legs unchanged and all existing left THREE legs unchanged. Final total exactly EIGHT walking feet (4 left,4 right), plus the two claw arms high at the far side. Preserve all shell, coral, claws, pose, framing, colors and transparent background. No text, floor, shadows or labels. Single rear-view crab. Only add the missing inner-left leg."
+}
