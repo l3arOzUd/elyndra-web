@@ -1,0 +1,4 @@
+{
+  "prompt": "Remove background from this exact six-pose character sheet. Keep all six Graftling drawings intact at same positions and1536x1024 canvas. Absolutely ZERO alpha outside character silhouettes and in leg gaps. Remove all rectangular cell backgrounds, green/brown haze, shadows and grid seams. Only wood brass jade leaves remain. Preserve antialiased edges without any glow. Do not alter pose, scale, limbs, eyes or leaf shapes. Transparent PNG sprite sheet, no visible backing color.",
+  "reference": "actions-front.png"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "action-draft-refinement-pending",
+  "source": "actions-front-v2.png",
+  "rejectedDraft": "actions-front.png retains rectangular alpha haze",
+  "verified": [
+    "V2 has clean exterior in browser death sequence.",
+    "Death progresses from upright through folded knees to low twig body supported on ground.",
+    "Three legs retained with no fourth dangling limb.",
+    "Preview adds attack-front, hit-front, death-front."
+  ],
+  "limitations": [
+    "Attack enlarges head and feet through perspective; scale and camera continuity need refinement.",
+    "Rear leg becomes foreshortened in windup; hinge articulation not fully clear.",
+    "Death rear-leg attachment is occluded by torso and folded legs.",
+    "Six action key poses reused; intermediate drawings and rear actions still required.",
+    "Not bound to gameplay."
+  ]
+}
