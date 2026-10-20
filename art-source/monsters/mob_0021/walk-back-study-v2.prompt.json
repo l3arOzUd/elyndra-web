@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "walk-back-study.png",
+    "back-anatomy-study-v4.png"
+  ],
+  "prompt": "Correct ONLY missing walking legs in the supplied 2x2 rear-view crab animation sheet; second reference shows correct neutral eight-leg anatomy. Preserve the exact four poses, shell centers, coral, claws, colors and scale. Each cell currently has only SEVEN walking foot tips. Add ONE missing walking leg per cell to reach EIGHT, four per side, separate from the two claw arms. TOP LEFT: add a fourth walking leg on image RIGHT between the innermost raised foot and the large middle planted leg, bent knee and separate pointed tip. TOP RIGHT: add a fourth walking leg on image LEFT in the gap between the inner extended leg and middle raised leg. BOTTOM LEFT: add fourth walking leg on image LEFT between middle planted and innermost extended leg. BOTTOM RIGHT: add fourth walking leg on image RIGHT between inner raised foot and middle planted leg. Each new leg must connect naturally beneath the lateral shell and have rigid upper/lower armored segments, not a floating spare tip. Keep all existing legs. Count FOUR walking tips each side in every cell, no more. Preserve alternating scuttle pose, no mirroring, large claw on image RIGHT. Fully transparent background (remove any visible brown backdrop), generous transparent gutters and no cropping. No text, numbers, labels or floor. Four complete rear crab frames."
+}

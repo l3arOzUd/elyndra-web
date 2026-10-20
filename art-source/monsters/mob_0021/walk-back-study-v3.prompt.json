@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "walk-back-study-v2.png",
+  "prompt": "Edit ONLY the TOP LEFT crab in this 2x2 sheet. All other three panels must remain unchanged. Top left currently has four walking feet on its left and only THREE on its right. Add ONE additional walking leg on the RIGHT side of TOP LEFT crab, making four right walking feet. Add a slim bent armored chain below the right belly rim, with its separate pointed foot ending around pixel (490,475) in this 1536x1024 sheet, below and left of the existing innermost right foot ending near (470,445). Connect it to the right lateral shell at about (560,350), routed behind the current inner leg but with visibly distinct knee and pointed tip. Do not erase any existing legs. Count top-left exactly EIGHT walking feet: 4 left,4 right, plus two claw arms. Keep all crab shell/coral/claw pixels and all other panels as closely unchanged as possible. Transparent background preserved, no text, labels or extra limbs. Surgical addition of this single missing leg only."
+}

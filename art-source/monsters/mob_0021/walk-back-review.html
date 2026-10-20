@@ -6,10 +6,11 @@
 <button id="toggle">Pause</button><input id="frame" type="range" min="0" max="3" step="1" value="0"><span id="label"></span><br>
 <canvas id="preview" width="512" height="512"></canvas>
 <canvas id="small" width="128" height="128"></canvas>
-<p>Fixed uniform scale; no limb deformation or mirroring. Rear view preserves the large claw on image-right. Some inner feet disappear behind other legs, so eight-leg continuity and alternating support groups remain unverified. Coral and leg proportions drift between keys.</p>
-<p><a href="anatomy-review.html">Neutral anatomy comparisons</a> · <a href="walk-back-study.png">Source sheet</a></p>
+<p>Fixed uniform scale; no limb deformation or mirroring. Four walking tips per side are now visible in every selected key. Hidden root order, fixed segment lengths and alternating support groups still need verification. Coral and leg proportions drift between keys.</p>
+<p><a href="anatomy-review.html">Neutral anatomy comparisons</a> Â· <a href="walk-back-study-v2.png">Keys 2?4 source</a> ? <a href="walk-back-study-v4.png">Key 1 source</a></p>
 <script type="module">
-const image=new Image();image.src='./walk-back-study.png';await image.decode();
+const image=new Image();image.src='./walk-back-study-v2.png';await image.decode();
+const repaired=new Image();repaired.src='./walk-back-study-v4.png';await repaired.decode();
 const canvas=document.querySelector('#preview'),g=canvas.getContext('2d'),small=document.querySelector('#small'),sg=small.getContext('2d');
 const slider=document.querySelector('#frame'),label=document.querySelector('#label'),button=document.querySelector('#toggle');
 const w=image.naturalWidth/2,h=image.naturalHeight/2;
@@ -18,7 +19,7 @@ function draw(f){
   frame=f;g.clearRect(0,0,512,512);
   // Fixed cell placement avoids masking leg-length changes with per-frame fitting.
   const scale=460/w;
-  g.drawImage(image,(f%2)*w,Math.floor(f/2)*h,w,h,26,430-h*scale,w*scale,h*scale);
+  g.drawImage(f===0?repaired:image,(f%2)*w,Math.floor(f/2)*h,w,h,26,430-h*scale,w*scale,h*scale);
   sg.clearRect(0,0,128,128);sg.drawImage(canvas,0,0,128,128);
   slider.value=String(f);label.textContent=`Key ${f+1}/4`;
 }

@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "walk-back-study-v3.png",
+  "prompt": "Remove ALL brown/orange background and halo from this sprite sheet. Keep every crab pixel and all four poses unchanged, including all EIGHT walking feet in each cell. The output must be a precise transparent cutout: alpha ZERO in every space around animals, in holes between coral branches, between legs and underneath bellies. No colored matte, no haze, no shadow, no rectangular patches around sprites. Preserve fine coral tips and gold armor edges with clean antialiasing. Do not redraw, resize, move, mirror, add or remove any crab body parts. Same 2x2 arrangement and same canvas. Transparent background only."
+}
