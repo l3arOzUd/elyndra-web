@@ -2,13 +2,13 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
 <h1>Sandcoil - uncoil transition study</h1>
 <p>Registered by approximate head scale and ground baseline, without deforming artwork. Draft key poses; continuity is not approved.</p>
-<select id="pose"><option value="0">Rest</option><option value="1">Early release</option><option value="2">Open loop</option><option value="3">Crawl</option></select><button id="replay">Replay</button><br>
-<canvas id="motion" width="1000" height="650"></canvas><canvas id="contact" width="2000" height="1300"></canvas>
+<select id="pose"><option value="0">Rest</option><option value="1">Upper coil descent</option><option value="2">Early release</option><option value="3">Open loop</option><option value="4">Crawl</option></select><button id="replay">Replay</button><br>
+<canvas id="motion" width="1000" height="650"></canvas><canvas id="contact" width="3000" height="1300"></canvas>
 <script type="module">
-const sources=[{file:'left.png',scale:.384,eye:365,bottom:1150},{file:'uncoil-left-early.png',scale:.5,eye:230,bottom:880},{file:'uncoil-left-guided.png',scale:.5,eye:230,bottom:880},{file:'crawl-left-b-v3.png',scale:.52,eye:200,bottom:820}];
+const sources=[{file:'left.png',scale:.384,eye:365,bottom:1150},{file:'uncoil-left-descent-v2.png',scale:.384,eye:250,bottom:1090},{file:'uncoil-left-early.png',scale:.5,eye:230,bottom:880},{file:'uncoil-left-guided.png',scale:.5,eye:230,bottom:880},{file:'crawl-left-b-v3.png',scale:.52,eye:200,bottom:820}];
 for(const s of sources){s.image=new Image();s.image.src=s.file;await s.image.decode();}
 function render(g,f){const s=sources[f];g.clearRect(0,0,1000,650);g.strokeStyle='#d1dfda';g.beginPath();g.moveTo(0,600);g.lineTo(1000,600);g.stroke();g.drawImage(s.image,270-s.eye*s.scale,600-s.bottom*s.scale,s.image.width*s.scale,s.image.height*s.scale);}
-const g=document.querySelector('#motion').getContext('2d'),c=document.querySelector('#contact').getContext('2d');for(let f=0;f<4;f++){c.save();c.translate(f%2*1000,Math.floor(f/2)*650);render(c,f);c.restore();}
+const g=document.querySelector('#motion').getContext('2d'),c=document.querySelector('#contact').getContext('2d');for(let f=0;f<sources.length;f++){c.save();c.translate(f%3*1000,Math.floor(f/3)*650);render(c,f);c.restore();}
 let start=0,playing=false;document.querySelector('#replay').onclick=()=>{playing=true;start=performance.now();};document.querySelector('#pose').onchange=()=>{playing=false;render(g,Number(document.querySelector('#pose').value));};
-function tick(t){if(playing){const f=Math.max(0,Math.min(3,Math.floor((t-start)/350)));document.querySelector('#pose').value=f;render(g,f);if(f===3)playing=false;}requestAnimationFrame(tick);}render(g,0);requestAnimationFrame(tick);window.__sandcoilUncoil={ready:true};
+function tick(t){if(playing){const f=Math.max(0,Math.min(sources.length-1,Math.floor((t-start)/350)));document.querySelector('#pose').value=f;render(g,f);if(f===sources.length-1)playing=false;}requestAnimationFrame(tick);}render(g,0);requestAnimationFrame(tick);window.__sandcoilUncoil={ready:true};
 </script>

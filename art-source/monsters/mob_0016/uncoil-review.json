@@ -19,7 +19,7 @@
     ]
   },
   "runtimeBound": false,
-  "next": "Create upper-loop descent pose between rest and early, then reconcile body thickness with crawl.",
+  "next": "Resolve descending-body connection and body thickness across registered five-pose transition.",
   "guidedStudy": {
     "source": "uncoil-left-guided.png",
     "guide": "uncoil-guide.svg",
@@ -38,6 +38,7 @@
   "registeredSequence": {
     "frames": [
       "left.png",
+      "uncoil-left-descent-v2.png",
       "uncoil-left-early.png",
       "uncoil-left-guided.png",
       "crawl-left-b-v3.png"
@@ -48,10 +49,24 @@
       "Browser playback reaches crawl endpoint without errors."
     ],
     "limitations": [
-      "Rest-to-early still skips upper-loop descent.",
       "Early loop appears wider than middle; body volume continuity unproven.",
       "Crawl body appears thinner and neck lifted relative to middle.",
-      "Only key poses, no smooth or gameplay-ready transition."
+      "Only key poses, no smooth or gameplay-ready transition.",
+      "New descent stage reduces the jump but does not resolve body topology or scale drift."
+    ]
+  },
+  "descentStudy": {
+    "selected": "uncoil-left-descent-v2.png",
+    "rejected": "uncoil-left-descent.png",
+    "verified": [
+      "Revision reduces floating right bulge and brings it against lower coil.",
+      "Keeps two stacked tiers and compact footprint.",
+      "Clean browser alpha and five-pose review reaches final pose without errors."
+    ],
+    "limitations": [
+      "Right descending body connection remains visually ambiguous.",
+      "Head and neck proportions differ from resting source.",
+      "Still a draft key pose, not proof of continuous uncoiling."
     ]
   }
 }
