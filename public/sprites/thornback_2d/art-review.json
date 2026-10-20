@@ -1,0 +1,19 @@
+{
+  "monster": "mob_0006",
+  "status": "playable-draft-refinement-pending",
+  "source": "art-source/monsters/mob_0006/runtime-draft",
+  "productionApproved": false,
+  "authoredViews": [
+    "front",
+    "left",
+    "back"
+  ],
+  "limitations": [
+    "Right mirrors left; diagonal directions reuse side art.",
+    "Rear idle uses two poses and needs intermediate drawings.",
+    "Hoof contact and torso registration drift between walking poses.",
+    "Bark, thorn and moss details change between poses.",
+    "Death and attack need transition drawings; rear death hips remain high.",
+    "Blink changes fine fur shading slightly."
+  ]
+}

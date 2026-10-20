@@ -628,16 +628,54 @@
         ],
         "next": "Refine lateral camera and consistent landmark scale; author weight-bearing four-leg gait and boar-specific attack/death after roster references."
       },
-      "sprite": null,
-      "runtimeReview": null,
-      "animationFiles": {
-        "idle": null,
-        "walk": null,
-        "attack": null,
-        "hit": null,
-        "death": null
+      "sprite": "thornback_2d",
+      "runtimeReview": {
+        "monster": "mob_0006",
+        "status": "playable-draft-refinement-pending",
+        "source": "art-source/monsters/mob_0006/runtime-draft",
+        "productionApproved": false,
+        "authoredViews": [
+          "front",
+          "left",
+          "back"
+        ],
+        "limitations": [
+          "Right mirrors left; diagonal directions reuse side art.",
+          "Rear idle uses two poses and needs intermediate drawings.",
+          "Hoof contact and torso registration drift between walking poses.",
+          "Bark, thorn and moss details change between poses.",
+          "Death and attack need transition drawings; rear death hips remain high.",
+          "Blink changes fine fur shading slightly."
+        ]
       },
-      "animationReview": "pending-all-required-views"
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/thornback_2d/idle.png",
+          "width": 6144,
+          "height": 1920
+        },
+        "walk": {
+          "path": "public/sprites/thornback_2d/walk.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "attack": {
+          "path": "public/sprites/thornback_2d/attack.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "hit": {
+          "path": "public/sprites/thornback_2d/hit.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "death": {
+          "path": "public/sprites/thornback_2d/death.png",
+          "width": 2304,
+          "height": 1920
+        }
+      },
+      "animationReview": "playable-draft-refinement-pending"
     },
     {
       "id": "mob_0007",

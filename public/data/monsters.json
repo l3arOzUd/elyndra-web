@@ -249,7 +249,7 @@
   ],
   "ecology": "Hedgehog-boars that root in the brambles of Whispergrass, north of Avelorn.",
   "art_brief": "A stocky boar with a back of woody thorns and bark-like hide; mossy tusks.",
-  "sprite": "mob_0006"
+  "sprite": "thornback_2d"
  },
  {
   "id": "mob_0007",

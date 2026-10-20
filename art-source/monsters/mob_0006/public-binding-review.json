@@ -1,0 +1,17 @@
+{
+  "status": "playable-draft-refinement-pending",
+  "monster": "mob_0006",
+  "sprite": "thornback_2d",
+  "verified": [
+    "Public index selects thornback_2d without placeholder tint or scale.",
+    "Source content and generated monster data agree.",
+    "Actual SpriteActor loads public sprite and five clips without schema errors.",
+    "W E S N attack emits hit at 375ms.",
+    "Production build passes."
+  ],
+  "notVerified": [
+    "Live server map combat",
+    "Production visual approval"
+  ],
+  "limitationsFile": "public/sprites/thornback_2d/art-review.json"
+}

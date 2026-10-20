@@ -19,14 +19,7 @@
    "sprite": "craglet_2d"
   },
   "mob_0006": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1.25,
-   "placeholder": true
+   "sprite": "thornback_2d"
   },
   "mob_0007": {
    "sprite": "mosskin",

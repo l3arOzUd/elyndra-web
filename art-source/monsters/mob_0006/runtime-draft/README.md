@@ -4,6 +4,6 @@ Five clips: idle blink, walk, tusk attack, hit recoil and death. The draft now i
 
 Regenerate with `node scripts/export-craglet-draft.mjs mob_0006` while Vite runs on port 5173. Supply `PLAYWRIGHT_MODULE` and `CHROMIUM_PATH` if needed. The shared exporter checks every cell for visible alpha and edge clipping using the real sprite schema.
 
-`../game-review.html` uses SpriteActor and Animator. Browser review confirmed the attack hit event at 375ms and death held at 1000ms without page errors. The final pose rests cheek and chest on the ground.
+`../game-review.html` uses SpriteActor and Animator with the public binding. Browser review confirmed the attack hit event at 375ms and death held at 1000ms without page errors. The final pose rests cheek and chest on the ground.
 
-Not bound to gameplay. Rear idle transitions, hoof trajectories, leg angles, surface continuity and transition drawings remain unfinished. The idle blink introduces small image-detail drift. Technical validation is not art approval.
+The public mob_0006 binding now uses a copied thornback_2d playable draft. Regenerating this source folder does not automatically update public assets. Rear idle transitions, hoof trajectories, leg angles, surface continuity and transition drawings remain unfinished. The idle blink introduces small image-detail drift. Technical validation is not art approval.

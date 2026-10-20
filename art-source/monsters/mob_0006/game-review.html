@@ -3,7 +3,7 @@
 <title>Thornback — game renderer review</title>
 <style>body{margin:24px;background:#202a30;color:#eee;font:16px system-ui}button,select{padding:8px;margin:6px}canvas{display:block;max-width:100%}p{max-width:900px}</style>
 <h1>Thornback — game renderer draft</h1>
-<p>Uses the game's SpriteActor and Animator with draft sheets. Not bound to gameplay. Front, left and rear drafts; rear idle, hoof contact and animation continuity remain unfinished.</p>
+<p>Uses the game's SpriteActor and Animator with the public mob_0006 sprite binding. Playable draft, not production approved. Surface consistency, gait registration, idle transitions and directional artwork remain unfinished.</p>
 <label>Clip <select id="clip"><option>idle</option><option>walk</option><option>attack</option><option>hit</option><option>death</option></select></label>
 <label>Facing <select id="facing"><option value="-1">Left</option><option value="1">Right (mirrored)</option><option value="2">Front</option><option value="0">Back</option></select></label>
 <button id="replay">Replay</button><button id="pause">Pause</button>
@@ -12,7 +12,8 @@
 import * as THREE from 'three';
 import {SpriteActor} from '/src/render/spriteActor.ts';
 import {spriteFromImages,validateSprite} from '/src/render/spriteDef.ts';
-const base='./runtime-draft/';
+const binding=(await(await fetch('/sprites/index.json',{cache:'no-store'})).json()).monsters.mob_0006;
+const base=`/sprites/${binding.sprite}/`;
 const json=await (await fetch(base+'thornback_2d.sprite.json',{cache:'no-store'})).json();
 const entries=await Promise.all(Object.entries(json.animations).map(async([name,def])=>{
  const img=new Image();img.src=base+def.file;await img.decode();return [name,img];

@@ -68,7 +68,7 @@ const monsters: RegionDesign["monsters"] = [
     mods: { atk: 1.1 }, why: "Spined back (+10% ATK). Packs defend each other on the bramble ridge.",
     drops: { common: "itm_0011", uncommon: "itm_0012" },
     ecology: "Hedgehog-boars that root in the brambles of Whispergrass, north of Avelorn.",
-    art_brief: "A stocky boar with a back of woody thorns and bark-like hide; mossy tusks.",
+    art_brief: "A stocky boar with a back of woody thorns and bark-like hide; mossy tusks.", sprite: "thornback_2d",
   },
   {
     id: "mob_0007", name: "Dustwing", level: 9, archetype: "swarm", family: "insect", element: "wind", behavior: "aggressive",
