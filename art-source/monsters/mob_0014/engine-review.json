@@ -13,6 +13,6 @@
     "Idle color popping and cross-clip position/scale need refinement.",
     "Not tested in live server combat.",
     "Technical playback does not establish production visual acceptance.",
-    "Rear walk body sits about40 display pixels above idle at equal foot baseline; source leg proportions differ and require repaint, not root translation."
+    "Rear walk body sits roughly25-30 display pixels above idle at equal foot baseline; source leg proportions differ and require repaint, not root translation."
   ]
 }

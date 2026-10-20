@@ -1,17 +1,19 @@
 {
   "status": "walking-draft-refinement-pending",
-  "source": "walk-back.png",
+  "source": "walk-back-v2.png",
   "verified": [
     "Four rear walking keyframes generated from rear reference.",
     "Browser inspection confirms rear intermeshed gears with no duplicate jade lens.",
     "No neighboring sprite fragments visible with split x635 y650.",
-    "Nearest left and right legs alternate flexion."
+    "Nearest left and right legs alternate flexion.",
+    "V2 browser registration comparison: rear shell lowered modestly while per-pose foot anchors remain on guide baseline."
   ],
   "limitations": [
     "Far-leg chains overlap and remain difficult to trace; eight-leg topology is not approved.",
     "Side outer vines touch source edges; margin repair remains.",
     "Ground-contact timing, rigid segment consistency and surface drift remain.",
-    "Not exported or bound to gameplay."
+    "Not exported or bound to gameplay.",
+    "Rear shell still sits roughly25-30 display pixels higher than idle; proportional repair only partial."
   ],
-  "next": "Author combat and collapse poses, then refine registration and contacts across clips."
+  "next": "Reconcile chassis height and rigid leg topology against neutral pose; no public binding yet."
 }

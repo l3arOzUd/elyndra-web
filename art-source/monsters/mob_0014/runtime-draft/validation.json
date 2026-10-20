@@ -330,28 +330,28 @@
       "clip": "walk",
       "facing": "N",
       "frame": 0,
-      "visible": 26778,
+      "visible": 27285,
       "edge": 0
     },
     {
       "clip": "walk",
       "facing": "N",
       "frame": 1,
-      "visible": 26707,
+      "visible": 25780,
       "edge": 0
     },
     {
       "clip": "walk",
       "facing": "N",
       "frame": 2,
-      "visible": 27203,
+      "visible": 26852,
       "edge": 0
     },
     {
       "clip": "walk",
       "facing": "N",
       "frame": 3,
-      "visible": 26964,
+      "visible": 27219,
       "edge": 0
     },
     {
