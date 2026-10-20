@@ -1,6 +1,6 @@
 {
   "status": "technical-draft-only",
-  "runtimeBound": false,
+  "runtimeBound": true,
   "errors": [],
   "formatProblems": [],
   "frames": [

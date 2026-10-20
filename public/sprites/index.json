@@ -47,14 +47,7 @@
    "placeholder": true
   },
   "mob_0012": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1,
-   "placeholder": true
+   "sprite": "graftling_2d"
   },
   "mob_0040": {
    "sprite": "mosskin",

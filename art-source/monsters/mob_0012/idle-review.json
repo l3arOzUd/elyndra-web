@@ -12,7 +12,7 @@
     "Two authored poses only; transition needs intermediate leaf positions.",
     "Brass saturation and twig details shift slightly.",
     "Front alternate changes leaf arrangement and brightens brass slightly; needs consistent in-between leaves.",
-    "Exported runtime draft, not yet bound to gameplay."
+    "Bound as gameplay draft, not production approved."
   ],
   "frontSource": "idle-front-leaves.png top-left only; neutral actions-front-v2.png",
   "rearSource": "idle-back-leaves.png top-left only"

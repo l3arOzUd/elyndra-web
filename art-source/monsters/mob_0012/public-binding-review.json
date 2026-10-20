@@ -1,0 +1,18 @@
+{
+  "status": "playable-draft-refinement-pending",
+  "monster": "mob_0012",
+  "sprite": "graftling_2d",
+  "verified": [
+    "Content source and generated monster data select graftling_2d.",
+    "Public binding removes Mosskin placeholder and tint.",
+    "Public SpriteActor assets load without page or format errors.",
+    "W E S N attack emits hit at375ms.",
+    "Production build passes.",
+    "All150 exported cells have visible alpha without edge clipping."
+  ],
+  "notVerified": [
+    "Live server map combat",
+    "Production visual approval"
+  ],
+  "limitationsFile": "public/sprites/graftling_2d/art-review.json"
+}

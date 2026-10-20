@@ -38,7 +38,7 @@ const monsters: RegionDesign["monsters"] = [
     mods: { hp: 1.1, speed: 1.1 }, why: "A twig body on folding brass hinges: the hinges make it sturdier than a plain sapling (+10% HP) and stiff-legged (10% slower). Passive: the region's welcome mat, a herd to gather after the Lumeris dungeon.",
     drops: { common: "itm_0023", uncommon: "itm_0024" },
     ecology: "Fallen branches that the old Aethrion grafting frames bolted hinges onto; they wander the fern floor near Sylvara, rooting for a few hours at a time, and ignore anyone who leaves them be.",
-    art_brief: "A knee-high bundle of living twigs on three folding brass hinge-legs, a jade sap bead glowing at the joint; leaf tufts for a head; bark brown, brass, jade.",
+    art_brief: "A knee-high bundle of living twigs on three folding brass hinge-legs, a jade sap bead glowing at the joint; leaf tufts for a head; bark brown, brass, jade.", sprite: "graftling_2d",
   },
   {
     id: "mob_0040", name: "Mossback Newt", level: 18, archetype: "swarm", family: "amphibian", element: "water", behavior: "assist",

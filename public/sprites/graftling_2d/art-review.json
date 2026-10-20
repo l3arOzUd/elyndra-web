@@ -1,0 +1,17 @@
+{
+  "monster": "mob_0012",
+  "status": "playable-draft-refinement-pending",
+  "productionApproved": false,
+  "authoredViews": [
+    "front",
+    "left",
+    "back"
+  ],
+  "limitations": [
+    "Idle uses two leaf poses with color drift; needs intermediate drawings.",
+    "Right mirrors left; diagonals alias side views.",
+    "Tripod contacts, rigid leg lengths, cross-clip size and body registration need refinement.",
+    "Folded legs overlap; death needs intermediate collapse drawings.",
+    "Technical validation does not approve visual quality."
+  ]
+}
