@@ -1,0 +1,20 @@
+{
+  "status": "front-walk-study-unapproved",
+  "source": "walk-front.png",
+  "preview": "walk-front-review.html",
+  "observations": [
+    "Five mirror panels retained in each pose.",
+    "Spear remains in character right hand, viewer left, beside torso.",
+    "Face remains featureless; two arms and two leg chains visible.",
+    "Leading leg changes between top and bottom rows.",
+    "Browser transparency clean; four-frame playback advances without page errors."
+  ],
+  "limitations": [
+    "Contact and passing drawings are too similar; trailing feet often look suspended rather than planted.",
+    "Free-arm counter swing is minimal.",
+    "Spear tips nearly touch source top edge; generous source margins were not followed.",
+    "Mirror highlights and chest details vary; rigid halo continuity not approved.",
+    "Front-only study; side/rear locomotion, action clips and runtime export missing."
+  ],
+  "publicBinding": false
+}

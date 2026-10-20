@@ -1,0 +1,31 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Sun Warden front walk draft</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}img{max-width:100%}</style>
+<h1>Sun Warden front walk — draft</h1>
+<p>Review alternating foot support, passing clearance, rigid blocks and carving continuity. Not bound to gameplay.</p>
+<button id="play">Play / pause</button>
+<input id="frame" type="range" min="0" max="3" value="0">
+<span id="label"></span><br>
+<canvas width="640" height="640"></canvas><br>
+<img src="walk-front.png" width="1200">
+<script type="module">
+const image=new Image();image.src='walk-front.png';await image.decode();
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),slider=document.querySelector('#frame');
+const names=['contact A','passing A','contact B','passing B'];
+// Register character body rather than spear bounding box.
+// Match each passing pose to its planted support foot.
+const order=[0,1,2,3],anchors=[486,1110,484,1110],ground=[506,506,1010,1010];
+let playing=false,last=0;
+function draw(){
+ const f=Number(slider.value),cell=order[f],x=(cell%2)*768,y=Math.floor(cell/2)*512;
+ ctx.clearRect(0,0,640,640);
+ ctx.drawImage(image,x,y,768,512,320+(x-anchors[cell])*.9,590+(y-ground[cell])*.9,768*.9,512*.9);
+ ctx.strokeStyle='#b1babe';ctx.beginPath();ctx.moveTo(10,590);ctx.lineTo(630,590);ctx.stroke();
+ document.querySelector('#label').textContent=names[f];
+}
+slider.oninput=()=>{playing=false;draw()};
+document.querySelector('#play').onclick=()=>{playing=!playing;last=performance.now()};
+function tick(t){if(playing&&t-last>260){slider.value=(Number(slider.value)+1)%4;last=t;draw()}requestAnimationFrame(tick)}
+draw();requestAnimationFrame(tick);window.__wardenFrontWalk={ready:true};
+</script>

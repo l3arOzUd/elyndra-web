@@ -15,5 +15,10 @@
     "Rear spear blade is longer than front relative to head; weapon dimensions need harmonization",
     "Profile head and heel geometry differ from front and require refinement"
   ],
-  "next": "Resolve rigid halo panel layout and standard spear dimensions, refine landmarks, then separate right-hand weapon chain, legs and halo for thrust, guard and collapse animation."
+  "next": "Resolve rigid halo panel layout and standard spear dimensions, refine landmarks, then separate right-hand weapon chain, legs and halo for thrust, guard and collapse animation.",
+  "designDecision": {
+    "halo": "Five visible mirror panels: top, upper-left, lower-left, upper-right, lower-right. No sixth hidden panel assumed.",
+    "basis": "Bible requires halo-ring of sun mirrors but no count; existing front and rear both show five. Original generated prompt six was not a Bible requirement.",
+    "status": "Animation design target; profiles still need continuity validation."
+  }
 }
