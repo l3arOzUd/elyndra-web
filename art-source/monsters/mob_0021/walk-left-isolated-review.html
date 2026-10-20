@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8">
+<title>Coral Claw - isolated leg cycle</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;height:auto}button,input{margin:8px}a{color:#a9e2e3}</style>
+<h1>Coral Claw: alternating leg study</h1>
+<p>Unapproved anatomy study. Three drawings, four timing keys. Four near walking legs remain visible; far roots and actual sideways propulsion are unresolved.</p>
+<button id="toggle">Pause</button><input id="frame" type="range" min="0" max="3" value="0"><span id="label"></span><br>
+<canvas id="preview" width="512" height="512"></canvas>
+<canvas id="small" width="128" height="128"></canvas>
+<p>One fixed scale and origin across all drawings. No fitting, mirroring, stretching or interpolating limbs. Inspect shell stability and the shorter-looking lifted segments before runtime use.</p>
+<p><a href="walk-left-review.html">Previous sheet with missing legs</a> | <a href="index.html">All views</a></p>
+<script type="module">
+const files=['left-profile-study-v2.png','walk-left-lift-24.png','walk-left-lift-13.png'];
+const images=await Promise.all(files.map(async file=>{const image=new Image();image.src='./'+file;await image.decode();return image}));
+const sequence=[0,1,0,2],names=['Neutral','Near legs 2 and 4 lifted','Neutral','Near legs 1 and 3 lifted'];
+const canvas=document.querySelector('#preview'),g=canvas.getContext('2d'),small=document.querySelector('#small'),sg=small.getContext('2d');
+const slider=document.querySelector('#frame'),label=document.querySelector('#label'),button=document.querySelector('#toggle');
+let playing=true,frame=0,last=0;
+function draw(f){frame=f;g.clearRect(0,0,512,512);const im=images[sequence[f]],scale=.3;g.drawImage(im,26,115,im.naturalWidth*scale,im.naturalHeight*scale);sg.clearRect(0,0,128,128);sg.drawImage(canvas,0,0,128,128);slider.value=String(f);label.textContent=names[f]}
+button.onclick=()=>{playing=!playing;button.textContent=playing?'Pause':'Play'};
+slider.oninput=()=>{playing=false;button.textContent='Play';draw(Number(slider.value))};
+function tick(now){if(playing&&now-last>=250){draw((frame+1)%4);last=now}requestAnimationFrame(tick)}
+draw(0);requestAnimationFrame(tick);
+window.__coralWalk={ready:true,draw,pause(){playing=false},images};
+</script>

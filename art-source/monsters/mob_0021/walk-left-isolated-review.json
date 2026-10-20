@@ -1,0 +1,29 @@
+{
+  "id": "mob_0021",
+  "status": "alternating-leg-anatomy-study",
+  "reference": "left-profile-study-v2.png",
+  "sources": ["left-profile-study-v2.png", "walk-left-lift-24.png", "walk-left-lift-13.png"],
+  "sequence": [0, 1, 0, 2],
+  "uniqueDrawings": 3,
+  "fps": 4,
+  "preview": "walk-left-isolated-review.html",
+  "transform": {"scale": 0.3, "origin": [26, 115], "perFrameFitting": false},
+  "visualReview": {
+    "clearNearWalkingChainsByDrawing": [4, 4, 4],
+    "improvement": "Both isolated lift drawings retain four readable near chains, unlike keys 2 and 3 of the old sheet.",
+    "remaining": [
+      "Raised segments appear shorter; invariant bone lengths are not established.",
+      "Far walking roots remain concealed.",
+      "Neutral-return timing is a leg-lift study, not a complete sideways propulsion cycle.",
+      "Planted contact stability and shell/coral pixel continuity remain unverified."
+    ]
+  },
+  "browserCheck": {
+    "visiblePixelsByTimingKey": [72673, 70108, 72674, 69005],
+    "edgePixels": [0, 0, 0, 0],
+    "pageErrors": [],
+    "scope": "Rendering, transparency and canvas containment only; not anatomical approval."
+  },
+  "artApproved": false,
+  "publicBinding": false
+}
