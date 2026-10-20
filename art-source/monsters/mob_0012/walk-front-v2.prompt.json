@@ -1,0 +1,4 @@
+{
+  "prompt": "Edit ONLY bottom-middle pose (frame5) of this exact Graftling 1536x1024 sixframe front walk sheet. Its center rear leg currently looks telescoped shorter. Replace ONLY that lifted rear leg with a visibly bent articulated chain: hip attached behind jade hub, original-length upper wooden segment angles down-right to a round brass knee, original-length lower wooden segment folds back left and foot lifts toward center. Clearly readable bent zigzag with two full rigid wood segments, brass hinge between, exactly one rear foot. Keep lifted chain within gap between the two planted front legs, no overlaps with front legs, no extra leg. Preserve front feet ground contact, trunk, eyes, leaves and jade hub position exactly. Other five poses completely unchanged. Same sheet dimensions, same transparent alpha, no shadows halos text scenery.",
+  "reference": "walk-front.png"
+}

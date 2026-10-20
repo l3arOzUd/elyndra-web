@@ -4,13 +4,19 @@
   "verified": [
     "Browser shows three legs and alternating left/right front foot lifts.",
     "All six cell silhouettes fit their 512px source cells.",
-    "Transparent exterior verified in browser contact sheet."
+    "Transparent exterior verified in browser contact sheet.",
+    "Repaired rear leg visibly bends at brass knee instead of telescoping.",
+    "V3 removes broad alpha haze seen in V2 browser rendering."
   ],
   "limitations": [
-    "Rear lift pose5 shortens the visible center chain rather than clearly showing knee flexion; repair before approval.",
     "Rear planted foot projects well above front soles, matching reference but ground-plane consistency remains unproven.",
     "Hub and eye registration shift slightly; leaf and brass details drift.",
-    "No gameplay binding; rear walk and front/rear actions still missing."
+    "No gameplay binding; rear walk and front/rear actions still missing.",
+    "V3 brightens brass and bark and raises leaf crown; color and silhouette continuity need refinement."
   ],
-  "next": "Repair pose5 rear leg folding then author rear walk and remaining action views."
+  "next": "Author rear walk and remaining action views; refine frame5 color continuity.",
+  "selectedFrames": {
+    "4": "walk-front-v3.png bottom-middle; split top crop excludes preceding row feet",
+    "others": "walk-front.png"
+  }
 }

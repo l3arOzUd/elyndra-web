@@ -1,0 +1,4 @@
+{
+  "prompt": "Clean transparency on this exact sprite sheet without redrawing any character. Remove ALL semitransparent exterior brown/green rectangular haze and glow around silhouettes, especially bottom-middle pose. Outside actual wood leaves brass and eyes must be alpha ZERO, including gaps between legs. Preserve sharp antialiased silhouette edge only 1px, no fringe shadow aura. Keep exact pixels/design of bottom-middle bent rear leg, full six poses layout1536x1024. No floor background texture. Actual clean transparent PNG.",
+  "reference": "walk-front-v2.png"
+}
