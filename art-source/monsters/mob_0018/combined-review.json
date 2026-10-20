@@ -1,8 +1,19 @@
 {
-  "status": "combined-study-unapproved",
+  "status": "runtime-draft-unapproved",
   "preview": "combined-review.html",
-  "views": ["left", "front", "back", "right-mirrored-left"],
-  "clips": ["front-side-two-pose-idle-rear-static", "walk", "attack", "hit", "death"],
+  "views": [
+    "left",
+    "front",
+    "back",
+    "right-mirrored-left"
+  ],
+  "clips": [
+    "two-pose-idle",
+    "walk",
+    "attack",
+    "hit",
+    "death"
+  ],
   "technicalCheck": {
     "browserErrors": [],
     "checkedTimingCells": 112,
@@ -18,12 +29,19 @@
     "Rear strike still reads as raised guard despite corrected horizontal reach."
   ],
   "remaining": [
-    "Refine front/side idle carving continuity; author rear idle variation and sand emission required by Bible.",
+    "Refine front/side idle carving continuity; refine rear idle details and author sand emission required by Bible.",
     "Correct rigid segment and carving continuity.",
     "Refine foot support and weight transfer, add missing in-between poses.",
     "Refine rear punch projection and shoulder drive.",
-    "Export runtime sheets and check actual SpriteAnimator events and death hold after art refinements.",
+    "Check exported sheets with actual SpriteAnimator events and death hold; export format checks alone do not verify gameplay.",
     "Right and diagonal original animation art remains missing; preview mirroring is provisional."
   ],
-  "publicBinding": false
+  "publicBinding": false,
+  "runtimeExport": {
+    "directory": "runtime-draft",
+    "timingCells": 140,
+    "formatAndEdgeChecks": "passed",
+    "actualEngineCheck": "pending",
+    "publicBinding": false
+  }
 }

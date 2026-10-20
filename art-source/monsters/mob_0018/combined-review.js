@@ -1,5 +1,5 @@
 const sideFiles=['walk-left-contact-a-v5.png','walk-left-pass-a.png','walk-left-contact-b.png','walk-left-pass-b.png'];
-const files=[...sideFiles,'walk-front.png','walk-back.png','actions-left.png','actions-front.png','actions-back.png','actions-back-v2.png','idle-front-settle.png','idle-left-settle.png'];
+const files=[...sideFiles,'walk-front.png','walk-back.png','actions-left.png','actions-front.png','actions-back.png','actions-back-v2.png','idle-front-settle.png','idle-left-settle.png','idle-back-settle.png'];
 const images=Object.fromEntries(await Promise.all(files.map(async file=>{const im=new Image();im.src=file;await im.decode();return [file,im]})));
 const defs={idle:{frames:6,fps:4,loop:true},walk:{frames:4,fps:4,loop:true},attack:{frames:6,fps:8},hit:{frames:6,fps:12},death:{frames:6,fps:7}};
 const seq={idle:[0,0,0,0,0,0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
@@ -22,7 +22,7 @@ function draw(g,clip,f,view){
   }
  }else{
   const cell=seq[clip][f],spec=specs[view],[sx,sy,w,h]=spec.crops[cell],s=spec.scale;
-  const file=clip==='idle'&&(view==='front'||view==='left')&&(f===2||f===3)?`idle-${view}-settle.png`:view==='back'&&cell===2?'actions-back-v2.png':`actions-${view}.png`;
+  const file=clip==='idle'&&(f===2||f===3)?`idle-${view}-settle.png`:view==='back'&&cell===2?'actions-back-v2.png':`actions-${view}.png`;
   g.drawImage(images[file],sx,sy,w,h,(sx-spec.anchors[cell])*s,(sy-spec.ground[cell])*s,w*s,h*s);
  }
  g.restore();
@@ -40,3 +40,18 @@ for(const [row,v]of ['left','front','back'].entries())for(const [col,[c,f]]of [[
  comp.save();comp.translate(col*384,row*384);comp.strokeStyle='#b1babe';comp.beginPath();comp.moveTo(0,346);comp.lineTo(384,346);comp.stroke();draw(comp,c,f,v);comp.fillStyle='white';comp.fillText(`${v} ${c} ${f}`,12,20);comp.restore();
 }
 reset();requestAnimationFrame(tick);window.__duneCombined={ready:true,draw,defs};
+
+// Draft export uses the same draw path as the review. No public sprite binding.
+const json={id:'dune_sentry_2d',kind:'sheet',facingMode:'directional',frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W','S','SW','NW','N'],mirror:{E:'W',SE:'W',NE:'W'},animations:Object.fromEntries(Object.entries(defs).map(([name,def])=>[name,{file:name+'.png',...def,...(name==='walk'?{refMsPerCell:280}:name==='attack'?{events:{hit:3}}:name==='death'?{hold:true}:{})}]))};
+function exportDraft(){
+ const sheets={},sizes={};
+ for(const [clip,def]of Object.entries(json.animations)){
+  const c=document.createElement('canvas');c.width=384*def.frames;c.height=384*json.rows.length;const g=c.getContext('2d');
+  for(let row=0;row<json.rows.length;row++)for(let f=0;f<def.frames;f++){
+   g.save();g.translate(f*384,row*384);draw(g,clip,f,row===1?'front':row===4?'back':'left');g.restore();
+  }
+  sheets[clip]=c.toDataURL();sizes[clip]={width:c.width,height:c.height};
+ }
+ return {json,images:sheets,sizes};
+}
+window.__monsterDraft={ready:true,exportDraft};
