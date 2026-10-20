@@ -1,7 +1,8 @@
 {
   "status": "opposite-contact-study-unapproved",
   "sources": [
-    "walk-left-contact-a-v4.png",
+    "walk-left-contact-a-v5.png",
+    "walk-left-pass-a.png",
     "walk-left-contact-b.png"
   ],
   "rejected": {
@@ -12,18 +13,20 @@
     "Two fists and two feet in selected A/B.",
     "Near thigh appears forward in A and trailing in B.",
     "Head remains left-facing.",
-    "A v4 places decorated fist behind torso and far knuckle fist forward; visible elbow/wrist chain."
+    "A v4 places decorated fist behind torso and far knuckle fist forward; visible elbow/wrist chain.",
+    "A v5 replaces orphan-looking U-shaped shoulder underside with flat flank armor.",
+    "Passing A brings trailing boot inward and slightly above planted sole while retaining near support foot."
   ],
   "limitations": [
-    "Near shoulder connection remains behind plate; U-shaped lower plate still ambiguous and needs cleanup.",
+    "Near shoulder connection remains occluded behind armor; flank now reads as torso.",
     "Near/far leg attachment and identity need confirmation.",
     "Carved motifs and block proportions drift.",
     "Source head/feet margins too tight.",
-    "Only contact poses; passing poses absent.",
+    "Passing B absent; passing A lift is small and does not fully reach beneath hips.",
     "No runtime export or gameplay binding.",
     "A arm and torso block proportions differ from contact B; rigid segment continuity not approved."
   ],
-  "next": "Clarify near shoulder underside and match arm segment proportions to contact B before passing poses.",
+  "next": "Author opposite passing pose, align body proportions and assess full stride.",
   "rejectedFurther": [
     {
       "source": "walk-left-contact-a-v3.png",
