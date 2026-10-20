@@ -75,7 +75,7 @@ const monsters: RegionDesign["monsters"] = [
     mods: { hp: 0.85, speed: 0.7, attack_speed: 0.85 }, why: "A flyer: light (-15% HP), fast (30% faster), quick stings. The aggressive swarm that makes the windmill fields a natural 30-60 mob train.",
     drops: { common: "itm_0013", uncommon: "itm_0014" },
     ecology: "Dust moths that ride the updraft of the old windmill's sails and dive on anything moving below.",
-    art_brief: "A large moth with sandy, powder-dusted wings and brass-coloured eyespots; trailing dust motes.",
+    art_brief: "A large moth with sandy, powder-dusted wings and brass-coloured eyespots; trailing dust motes.", sprite: "dustwing_2d",
   },
   {
     id: "mob_0008", name: "Brookfin", level: 12, archetype: "swarm", family: "aquatic", element: "water", behavior: "passive",

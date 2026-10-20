@@ -1,0 +1,19 @@
+{
+  "monster": "mob_0007",
+  "status": "playable-draft-refinement-pending",
+  "source": "art-source/monsters/mob_0007/runtime-draft",
+  "productionApproved": false,
+  "authoredViews": [
+    "front",
+    "left",
+    "back"
+  ],
+  "limitations": [
+    "Right mirrors left; diagonals reuse side art.",
+    "Idle and locomotion use the same wingbeat poses at different rates.",
+    "Cross-clip body registration and wingbeat phase continuity need refinement.",
+    "Wing markings, abdomen segments and six-leg anatomy drift.",
+    "Death needs intermediate landing poses.",
+    "Bible dust motes not yet implemented."
+  ]
+}

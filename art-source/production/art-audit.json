@@ -737,16 +737,54 @@
         ],
         "next": "Refine same-pose wing projection, register body landmarks and separate four wing layers and six leg chains before authored flight animation."
       },
-      "sprite": null,
-      "runtimeReview": null,
-      "animationFiles": {
-        "idle": null,
-        "walk": null,
-        "attack": null,
-        "hit": null,
-        "death": null
+      "sprite": "dustwing_2d",
+      "runtimeReview": {
+        "monster": "mob_0007",
+        "status": "playable-draft-refinement-pending",
+        "source": "art-source/monsters/mob_0007/runtime-draft",
+        "productionApproved": false,
+        "authoredViews": [
+          "front",
+          "left",
+          "back"
+        ],
+        "limitations": [
+          "Right mirrors left; diagonals reuse side art.",
+          "Idle and locomotion use the same wingbeat poses at different rates.",
+          "Cross-clip body registration and wingbeat phase continuity need refinement.",
+          "Wing markings, abdomen segments and six-leg anatomy drift.",
+          "Death needs intermediate landing poses.",
+          "Bible dust motes not yet implemented."
+        ]
       },
-      "animationReview": "pending-all-required-views"
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/dustwing_2d/idle.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "walk": {
+          "path": "public/sprites/dustwing_2d/walk.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "attack": {
+          "path": "public/sprites/dustwing_2d/attack.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "hit": {
+          "path": "public/sprites/dustwing_2d/hit.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "death": {
+          "path": "public/sprites/dustwing_2d/death.png",
+          "width": 2304,
+          "height": 1920
+        }
+      },
+      "animationReview": "playable-draft-refinement-pending"
     },
     {
       "id": "mob_0008",

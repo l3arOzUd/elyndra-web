@@ -1,0 +1,17 @@
+{
+  "status": "playable-draft-refinement-pending",
+  "monster": "mob_0007",
+  "sprite": "dustwing_2d",
+  "verified": [
+    "Content source and generated monster data select dustwing_2d.",
+    "Public binding removes Mosskin placeholder tint and scale.",
+    "Browser SpriteActor loads public assets without schema or page errors.",
+    "W E S N attack emits hit at375ms.",
+    "Production build passes."
+  ],
+  "notVerified": [
+    "Live server map combat",
+    "Production visual approval"
+  ],
+  "limitationsFile": "public/sprites/dustwing_2d/art-review.json"
+}

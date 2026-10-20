@@ -22,14 +22,7 @@
    "sprite": "thornback_2d"
   },
   "mob_0007": {
-   "sprite": "mosskin",
-   "tint": [
-    0.9,
-    1.05,
-    1.15
-   ],
-   "scale": 1,
-   "placeholder": true
+   "sprite": "dustwing_2d"
   },
   "mob_0008": {
    "sprite": "mosskin",
