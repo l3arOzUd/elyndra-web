@@ -1,0 +1,4 @@
+{
+  "prompt": "Remove ALL exterior background alpha haze and shadows from exact sheet. Especially bottom-right low dead Sapdrone has rectangular brown translucent blocks around it: eliminate completely to alpha0. Preserve low dead pose dark jade tank brass shell wings and legs unchanged. Only character materials remain; no floor no exterior glow. All six poses same1536x1024 coordinates, clean transparent PNG antialiased silhouette edges only.",
+  "reference": "actions-back-v2.png"
+}

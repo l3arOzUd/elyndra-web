@@ -1,0 +1,4 @@
+{
+  "prompt": "Edit ONLY bottom-right dead Sapdrone pose in this exact1536x1024 sheet. It currently looks sitting upright. Make it truly collapsed: rigid brass shell pitches forward AWAY from rear camera about60degrees, showing foreshortened curved back/top resting close to ground. Overall dead silhouette height about160px instead of280px, same width and physical shell size (foreshortening not squash). Dark jade glass tank tucked beneath shell partially visible intact, six legs loosely folded to sides at their joints, four glass wings resting flat along ground behind/sides. No face no eyes no needle on rear. Keep ground contact at same y960, centered same x1280. Preserve otherfiveposes exactly, warm brass material and plain rear shell seam. Actual transparent alpha no exterior haze shadows floor text.",
+  "reference": "actions-back.png"
+}
