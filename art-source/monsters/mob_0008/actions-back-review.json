@@ -1,0 +1,16 @@
+{
+  "status": "draft-refinement-pending",
+  "source": "actions-back.png",
+  "verified": [
+    "All six silhouettes contained within source cells.",
+    "Rear death lowers belly and folds feet; browser inspected.",
+    "Tail and dorsal fin retain narrow vertical planes."
+  ],
+  "limitations": [
+    "Attack contact extends screen-left hind leg too far; shorten before acceptance.",
+    "Attack asymmetry and body rotation exceed requested straight rear lunge.",
+    "Tail tip hangs below resting belly and needs ground contact adjustment.",
+    "Scale pattern and finshape drift across poses.",
+    "Idle missing and runtime export pending."
+  ]
+}
