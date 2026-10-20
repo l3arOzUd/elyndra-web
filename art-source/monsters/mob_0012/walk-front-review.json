@@ -1,0 +1,16 @@
+{
+  "status": "walk-draft-refinement-pending",
+  "source": "walk-front.png",
+  "verified": [
+    "Browser shows three legs and alternating left/right front foot lifts.",
+    "All six cell silhouettes fit their 512px source cells.",
+    "Transparent exterior verified in browser contact sheet."
+  ],
+  "limitations": [
+    "Rear lift pose5 shortens the visible center chain rather than clearly showing knee flexion; repair before approval.",
+    "Rear planted foot projects well above front soles, matching reference but ground-plane consistency remains unproven.",
+    "Hub and eye registration shift slightly; leaf and brass details drift.",
+    "No gameplay binding; rear walk and front/rear actions still missing."
+  ],
+  "next": "Repair pose5 rear leg folding then author rear walk and remaining action views."
+}

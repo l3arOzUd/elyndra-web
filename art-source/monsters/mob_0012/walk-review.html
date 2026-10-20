@@ -4,7 +4,7 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{display:block;background:#697a80;margin:16px 0;max-width:100%}</style>
 <h1>Graftling — tripod walk draft</h1>
 <p>Six authored stepping poses. Inspect three continuous leg chains and two planted supports. Brass hinge positions, body registration and foot trajectories need refinement. Not bound to gameplay.</p>
-<select id="clip"><option>walk</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
+<select id="clip"><option>walk</option><option>walk-front</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
 <canvas id="motion" width="600" height="540"></canvas>
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
@@ -12,8 +12,10 @@ const im=new Image();im.src='./walk-left.png';await im.decode();
 const corrected=new Image();corrected.src='./walk-left-v2.png';await corrected.decode();
 const actions=new Image();actions.src='./actions-left.png';await actions.decode();
 const actionFix=new Image();actionFix.src='./actions-left-v2.png';await actionFix.decode();
+const frontWalk=new Image();frontWalk.src='./walk-front.png';await frontWalk.decode();
 let clip='walk';const seq={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 function draw(ctx,f,x,y,s){
+ if(clip==='walk-front'){ctx.drawImage(frontWalk,f%3*512,Math.floor(f/3)*512,512,512,x-256*s,y-[504,506,504,499,499,499][f]*s,512*s,512*s);return;}
  if(clip!=='walk'){const pose=seq[clip][f],cuts=[0,530,990,1536],col=pose%3,sx=cuts[col],w=cuts[col+1]-sx,sy=pose<3?0:512,h=pose===0?511:pose===1?516:512;const bottom=[511,514,510,468,451,455][pose],anchor=[256,238,290,256,238,290][pose];ctx.drawImage(pose<2?actionFix:actions,sx,sy,w,h,x-anchor*s,y-bottom*s,w*s,h*s);return;}
  const cuts=f<3?[0,512,1024,1536]:[0,530,996,1536],col=f%3,sx=cuts[col],w=cuts[col+1]-sx;
  const anchor=[256,256,256,256,238,284][f],bottom=[506,506,506,498,498,498][f];
@@ -27,6 +29,6 @@ let f=0,paused=false,last=0;
 document.querySelector('#clip').onchange=e=>{clip=e.target.value;f=0;paused=false;contact();};
 document.querySelector('#pause').onclick=()=>paused=!paused;
 document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
-function tick(t){if(!paused&&t-last>170){f=clip==='walk'?(f+1)%6:Math.min(5,f+1);last=t;}ctx.clearRect(0,0,600,540);draw(ctx,f,300,510,.9);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+function tick(t){if(!paused&&t-last>170){f=clip.startsWith('walk')?(f+1)%6:Math.min(5,f+1);last=t;}ctx.clearRect(0,0,600,540);draw(ctx,f,300,510,.9);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
 window.__graftlingWalk={ready:true};requestAnimationFrame(tick);
 </script>
