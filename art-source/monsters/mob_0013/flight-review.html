@@ -20,5 +20,5 @@ const cg=document.querySelector('#contact').getContext('2d');function contact(){
 contact();document.querySelector('#view').onchange=e=>{view=e.target.value;f=0;contact();};
 document.querySelector('#pause').onclick=()=>paused=!paused;document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
 function tick(t){if(!paused&&t-last>140){f=(f+1)%4;last=t;}ctx.clearRect(0,0,640,640);draw(ctx,f,320,440,.8);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
-window.__sapdroneFlight={ready:true};requestAnimationFrame(tick);
+window.__sapdroneFlight={ready:true,draw(ctx,frame,x,y,scale,facing){const old=view;view=facing;draw(ctx,frame,x,y,scale);view=old;}};requestAnimationFrame(tick);
 </script>

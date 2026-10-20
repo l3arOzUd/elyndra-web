@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8"><title>Sapdrone combined animation draft</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}iframe{display:none}</style>
+<h1>Sapdrone animation draft</h1>
+<p>Authored front, left and rear; right mirrors left. Wing/leg anatomy, cross-clip registration and landing in-betweens remain unfinished. Not production approved.</p>
+<select id="view"><option>left</option><option>front</option><option>back</option></select>
+<select id="clip"><option>idle</option><option>walk</option><option>attack</option><option>hit</option><option>death</option></select>
+<button id="replay">Replay</button><br><canvas id="motion" width="384" height="384"></canvas>
+<iframe id="flight" src="./flight-review.html"></iframe><iframe id="actions" src="./actions-review.html"></iframe>
+<script type="module">
+const flight=document.querySelector('#flight'),actions=document.querySelector('#actions');
+await new Promise(resolve=>{const timer=setInterval(()=>{if(flight.contentWindow.__sapdroneFlight?.ready&&actions.contentWindow.__sapdroneActions?.ready){clearInterval(timer);resolve();}},50);});
+const json={id:'sapdrone_2d',kind:'sheet',facingMode:'directional',frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W','S','SW','NW','N'],mirror:{E:'W',SE:'W',NE:'W'},animations:{idle:{file:'idle.png',frames:4,fps:7,loop:true},walk:{file:'walk.png',frames:4,fps:10,loop:true,refMsPerCell:180},attack:{file:'attack.png',frames:6,fps:8,events:{hit:3}},hit:{file:'hit.png',frames:6,fps:12},death:{file:'death.png',frames:6,fps:8,hold:true}}};
+function draw(ctx,clip,f,view){
+ if(clip==='idle'||clip==='walk')flight.contentWindow.__sapdroneFlight.draw(ctx,f,192,270,.5,view);
+ else actions.contentWindow.__sapdroneActions.draw(ctx,f,192,346,.5,view,clip);
+}
+function exportDraft(){
+ const images={},sizes={};
+ for(const [clip,def]of Object.entries(json.animations)){
+  const canvas=document.createElement('canvas');canvas.width=384*def.frames;canvas.height=384*json.rows.length;const ctx=canvas.getContext('2d');
+  for(let row=0;row<json.rows.length;row++)for(let f=0;f<def.frames;f++){
+   ctx.save();ctx.translate(f*384,row*384);draw(ctx,clip,f,row===1?'front':row===4?'back':'left');ctx.restore();
+  }
+  images[clip]=canvas.toDataURL();sizes[clip]={width:canvas.width,height:canvas.height};
+ }
+ return {json,images,sizes};
+}
+const ctx=document.querySelector('canvas').getContext('2d');let start=performance.now();
+for(const id of ['view','clip'])document.querySelector('#'+id).onchange=()=>start=performance.now();
+document.querySelector('#replay').onclick=()=>start=performance.now();
+function tick(now){const clip=document.querySelector('#clip').value,view=document.querySelector('#view').value,def=json.animations[clip];let f=Math.floor((now-start)*def.fps/1000);f=def.loop?f%def.frames:Math.min(def.frames-1,f);ctx.clearRect(0,0,384,384);draw(ctx,clip,f,view);requestAnimationFrame(tick);}
+window.__monsterDraft={ready:true,exportDraft};requestAnimationFrame(tick);
+</script>
