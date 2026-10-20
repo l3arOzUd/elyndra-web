@@ -1,0 +1,26 @@
+{
+  "status": "six-key-side-action-study-unapproved",
+  "preview": "actions-left-review.html",
+  "sources": {
+    "actions-left.png": [0,2,4,5],
+    "actions-left-v2.png": [1,3]
+  },
+  "poses": ["idle","anticipation","spear thrust","hit recoil","kneeling collapse","settled death"],
+  "verified": [
+    "Extra dangling third hands removed from anticipation and hit poses in selected revision.",
+    "Spear thrust extends toward facing direction; mirror surfaces brighten on impact.",
+    "Death folds through knees and spine, ending with forearms and head low rather than rotating standing silhouette.",
+    "Custom source crops preserve feet and spear tips crossing nominal grid boundaries.",
+    "Browser playback reaches settled death and holds with no page errors.",
+    "Selected six poses inspected together on opaque preview background."
+  ],
+  "limitations": [
+    "Weapon length changes between upright idle and horizontal action poses.",
+    "Only key drawings; repeated timing cells are not additional authored motion.",
+    "Torso, arm grip and halo details drift across poses.",
+    "Death halo projection and panel count need consistency review.",
+    "Mirror brightening is baked into impact art; separate flare VFX and timing not implemented.",
+    "Front and rear actions and runtime export remain missing."
+  ],
+  "next": "Author matching front/rear action studies, harmonize spear dimensions and add connecting motion before runtime approval."
+}
