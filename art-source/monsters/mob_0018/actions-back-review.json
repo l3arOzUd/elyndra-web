@@ -1,0 +1,20 @@
+{
+  "status": "rear-action-draft-unapproved",
+  "source": "actions-back.png",
+  "preview": "actions-back-review.html",
+  "poses": ["idle", "windup", "punch", "hit", "kneeling-collapse", "dead"],
+  "observed": [
+    "Rear helmet has no visor; paired rear plates and riveted brass spine remain visible.",
+    "Standing poses show two connected arms and two legs.",
+    "Death lowers onto folded knees and bows forward away from camera.",
+    "Browser alpha composite clean; playback holds final frame 5 without page errors."
+  ],
+  "limitations": [
+    "Punch extends too far screen-right rather than away from camera; needs foreshortening correction.",
+    "Fists and rear plate motifs drift between frames.",
+    "Kneeling lower-leg chains are partly occluded and ground registration remains approximate.",
+    "Only two collapse drawings; transition needs intermediate art.",
+    "Front/back walks, animated idle, sand emission and runtime export remain outstanding."
+  ],
+  "publicBinding": false
+}

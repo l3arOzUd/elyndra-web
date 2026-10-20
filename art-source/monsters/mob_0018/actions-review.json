@@ -23,7 +23,7 @@
     "Only two collapse drawings; transition still abrupt.",
     "Ground contacts approximate after registration.",
     "Sand emission VFX absent.",
-    "Front/back actions and runtime export missing; no gameplay binding."
+    "Front/back action drafts now exist separately; continuity corrections and runtime export remain missing; no gameplay binding."
   ],
-  "next": "Author front/back actions and preserve rigid limb continuity; add intermediate collapse if needed."
+  "next": "Correct rear punch projection and preserve rigid limb continuity across views; add intermediate collapse."
 }
