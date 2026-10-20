@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8">
+<title>Sun Warden isolated passing study</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
+<h1>Sun Warden: isolated side passing study</h1>
+<p>Draft only. Compare support boot, knee height, limb length and halo registration. No gameplay binding.</p>
+<select id="pose"><option value="0">Neutral reference</option><option value="1">Far leg passing candidate</option></select>
+<button id="play">Alternate / pause</button><br>
+<canvas width="640" height="640"></canvas>
+<script type="module">
+const images=await Promise.all(['left.png','walk-left-pass-a.png'].map(async file=>{
+ const image=new Image();image.src=file;await image.decode();return image;
+}));
+const canvas=document.querySelector('canvas'),g=canvas.getContext('2d'),pose=document.querySelector('#pose');
+let playing=false,last=0;
+function draw(){
+ const image=images[Number(pose.value)],s=.46;
+ g.clearRect(0,0,640,640);
+ g.drawImage(image,320-640*s,590-1180*s,image.width*s,image.height*s);
+ g.strokeStyle='#c8d5db';g.beginPath();g.moveTo(0,590);g.lineTo(640,590);g.stroke();
+}
+pose.onchange=()=>{playing=false;draw()};
+document.querySelector('#play').onclick=()=>{playing=!playing;last=performance.now()};
+function tick(t){if(playing&&t-last>500){pose.value=String(1-Number(pose.value));last=t;draw()}requestAnimationFrame(tick)}
+draw();requestAnimationFrame(tick);window.__wardenPassing={ready:true};
+</script>

@@ -1,0 +1,19 @@
+{
+  "status": "isolated-pose-study-unapproved",
+  "source": "walk-left-pass-a.png",
+  "reference": "left.png",
+  "preview": "passing-review.html",
+  "observations": [
+    "Supporting near boot stays near the source position.",
+    "Far boot is lower than the sheet passing poses, with two separate legs visible.",
+    "Browser rendering confirms transparent background and readable boot separation.",
+    "Preview alternate control advances without page errors."
+  ],
+  "limitations": [
+    "Far knee and ankle remain behind pelvis: this reads as low trailing recovery, not the requested passing pose.",
+    "Relaxed far arm visible in reference is obscured or omitted in generated result.",
+    "Hip armor and upper-body details drift; not approved for replacement.",
+    "No complete walk cycle or gameplay binding."
+  ],
+  "next": "Use a drawn pose guide for forward far knee and ankle under pelvis, preserving the relaxed arm explicitly."
+}
