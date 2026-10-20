@@ -2,13 +2,15 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}button,select{font:inherit;margin:8px}</style>
 <h1>Sandcoil — action key poses</h1>
 <p>Draft artwork. Check coil continuity, head size and floor contact. Not bound to gameplay.</p>
+<select id="view"><option value="left">Side</option><option value="front">Front</option><option value="back">Back</option></select>
 <select id="clip"><option>attack</option><option>hit</option><option>death</option></select>
 <button id="replay">Replay</button><label><input id="paused" type="checkbox"> Pause</label>
 <input id="frame" type="range" min="0" max="5" value="0"><span id="number"></span><br>
 <canvas id="motion" width="600" height="600"></canvas>
 <canvas id="contact" width="1536" height="1024"></canvas>
 <script type="module">
-const im=new Image();im.src='actions-left.png';await im.decode();
+const images={};for(const view of ['left','front','back']){const image=new Image();image.src=`actions-${view}.png`;await image.decode();images[view]=image;}
+let im=images.left;
 const motion=document.querySelector('#motion'),g=motion.getContext('2d'),contact=document.querySelector('#contact');
 contact.getContext('2d').drawImage(im,0,0,1536,1024);
 const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
@@ -27,9 +29,21 @@ function draw(f){
  const pose=sequences[document.querySelector('#clip').value][f];
  g.clearRect(0,0,600,600);
  g.strokeStyle='#d7e0db';g.beginPath();g.moveTo(0,550);g.lineTo(600,550);g.stroke();
- g.save();g.translate(310-anchors[pose]*.9,550-bottoms[pose]*.9);g.scale(.9,.9);
- g.beginPath();regions[pose].forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y));g.closePath();g.clip();
- g.drawImage(im,0,0,1536,1024);g.restore();
+ if(document.querySelector('#view').value==='left'){
+  g.save();g.translate(310-anchors[pose]*.9,550-bottoms[pose]*.9);g.scale(.9,.9);
+  g.beginPath();regions[pose].forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y));g.closePath();g.clip();
+  g.drawImage(im,0,0,1536,1024);g.restore();
+ }else if(document.querySelector('#view').value==='front'){
+  const sx=[0,530,1024,0,532,1024][pose],sy=pose<3?0:530;
+  const sw=[530,494,512,532,492,512][pose],sh=pose<3?530:494;
+  const ax=[310,800,1300,310,800,1300][pose],bottom=[488,489,491,927,927,928][pose];
+  g.drawImage(im,sx,sy,sw,sh,310+(sx-ax)*.9,550+(sy-bottom)*.9,sw*.9,sh*.9);
+ }else{
+  const sx=[0,540,1040,0,540,1040][pose],sy=pose<3?0:540;
+  const sw=[540,500,496,540,500,496][pose],sh=pose<3?540:484;
+  const ax=[265,770,1255,265,770,1255][pose],bottom=[505,503,503,954,954,955][pose];
+  g.drawImage(im,sx,sy,sw,sh,310+(sx-ax)*.9,550+(sy-bottom)*.9,sw*.9,sh*.9);
+ }
  document.querySelector('#number').textContent=`${f+1} / 6`;
 }
 function tick(t){
@@ -41,5 +55,6 @@ function tick(t){
 document.querySelector('#frame').oninput=()=>document.querySelector('#paused').checked=true;
 document.querySelector('#replay').onclick=()=>{start=performance.now();document.querySelector('#paused').checked=false;};
 document.querySelector('#clip').onchange=()=>{start=performance.now();document.querySelector('#frame').value=0;};
+document.querySelector('#view').onchange=()=>{im=images[document.querySelector('#view').value];contact.getContext('2d').clearRect(0,0,1536,1024);contact.getContext('2d').drawImage(im,0,0,1536,1024);start=performance.now();};
 requestAnimationFrame(tick);window.__sandcoilActions={ready:true};
 </script>

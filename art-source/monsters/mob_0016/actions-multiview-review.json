@@ -1,0 +1,24 @@
+{
+  "status": "draft-key-poses-not-production-approved",
+  "sources": ["actions-left.png", "actions-front.png", "actions-back.png"],
+  "prompts": ["actions-left.prompt.json", "actions-front.prompt.json", "actions-back.prompt.json"],
+  "preview": "actions-review.html",
+  "verified": [
+    "Front and rear browser composites have transparent exterior.",
+    "Rear view keeps face occluded; no invented facial features on back of head.",
+    "Front death closes eyes and retracts tongue; rear death lowers head behind relaxed coil.",
+    "Tail stays screen-left in front view and screen-right in rear view.",
+    "Nine view/action combinations play to final timeline frame without page errors.",
+    "Source regions and floor registration avoid uniform-grid clipping."
+  ],
+  "limitations": [
+    "Key poses only; intermediate movement still repeats artwork.",
+    "Front anticipation bends sideways more than side-view anticipation.",
+    "Rear strike neck is too upright relative to low side strike.",
+    "Scale pattern, coil width and head proportions vary between frames.",
+    "Death coil continuity and apparent total body length remain unapproved.",
+    "Front/rear locomotion and transition from elongated crawl to coil are missing.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Correct rear strike height and front anticipation, then author front/rear locomotion with consistent body length."
+}
