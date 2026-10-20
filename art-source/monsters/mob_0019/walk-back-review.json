@@ -1,0 +1,21 @@
+{
+  "status":"four-key-rear-walk-study-unapproved",
+  "source":"walk-back.png",
+  "preview":"walk-back-review.html",
+  "playOrder":[0,3,2,1],
+  "observations":[
+    "Source top-right lifts right boot; bottom-right lifts left boot, opposite requested source ordering.",
+    "Playback reordered so right-forward contact leads into left-foot passing, then left-forward contact into right-foot passing.",
+    "Five mirror backs and right-hand upright spear retained.",
+    "Two separate boots and alternating support remain readable in browser contact sheet.",
+    "Loop advances without browser errors."
+  ],
+  "limitations":[
+    "Contact poses do not clearly establish both toe contacts; forward boot can read as floating.",
+    "Passing boot soles show backward heel lift rather than a fully controlled low passing trajectory.",
+    "Pelvis width, calf shape and halo spacing drift between poses.",
+    "Spear tips have insufficient source padding near cell boundaries.",
+    "Four key drawings only; no final animation or gameplay binding."
+  ],
+  "next":"Register all three authored views in combined preview, inspect scale changes and refine support contacts before runtime approval."
+}
