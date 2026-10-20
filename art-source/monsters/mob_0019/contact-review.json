@@ -1,6 +1,9 @@
 {
   "status": "opposite-leading-leg-studies-unapproved",
-  "sources": ["walk-front-contact-a.png", "walk-front-contact-b.png"],
+  "sources": [
+    "walk-front-contact-a.png",
+    "walk-front-contact-b.png"
+  ],
   "preview": "contact-review.html",
   "observations": [
     "A advances screen-left thigh and boot; B advances screen-right thigh and boot.",
@@ -16,5 +19,18 @@
     "Source spear top margin remains smaller than requested."
   ],
   "next": "Refine trailing toe support and add passing poses with explicit grounded-foot registration.",
-  "publicBinding": false
+  "publicBinding": false,
+  "variants": [
+    {
+      "source": "walk-front-contact-a-v2.png",
+      "intended": "Lower trailing toe to establish contact A",
+      "result": "Trailing boot moved upward and inward, not downward. Rejected as contact correction.",
+      "possibleRole": "Passing A candidate only: viewer-left support leg and raised viewer-right boot. Not integrated as a finished walk.",
+      "limitations": [
+        "Lower-leg length and knee orientation differ from original.",
+        "Upper-body shading changes.",
+        "Grounded double support still unresolved."
+      ]
+    }
+  ]
 }

@@ -2,15 +2,15 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
 <h1>Sun Warden opposite contacts — draft</h1>
 <p>Two contact studies, not a completed walk. Inspect leading thigh, toe support, hand grip and rigid halo continuity.</p>
-<select id="pose"><option value="0">A: right leg forward</option><option value="1">B: left leg forward</option></select>
+<select id="pose"><option value="0">A: right leg forward</option><option value="1">B: left leg forward</option><option value="2">Passing A candidate (contact edit rejected)</option></select>
 <button id="play">Alternate / pause</button><br>
 <canvas width="640" height="640"></canvas>
 <script type="module">
-const images=[];for(const file of ['walk-front-contact-a.png','walk-front-contact-b.png']){const im=new Image();im.src=file;await im.decode();images.push(im)}
+const images=[];for(const file of ['walk-front-contact-a.png','walk-front-contact-b.png','walk-front-contact-a-v2.png']){const im=new Image();im.src=file;await im.decode();images.push(im)}
 const g=document.querySelector('canvas').getContext('2d'),pose=document.querySelector('#pose');
 let play=false,last=0;
 function draw(){const im=images[Number(pose.value)],s=.46;g.clearRect(0,0,640,640);g.drawImage(im,320-640*s,590-1178*s,im.width*s,im.height*s)}
 pose.onchange=draw;document.querySelector('#play').onclick=()=>play=!play;
-function tick(t){if(play&&t-last>450){pose.value=1-Number(pose.value);last=t;draw()}requestAnimationFrame(tick)}
+function tick(t){if(play&&t-last>450){pose.value=(Number(pose.value)+1)%2;last=t;draw()}requestAnimationFrame(tick)}
 draw();requestAnimationFrame(tick);window.__wardenContacts={ready:true};
 </script>
