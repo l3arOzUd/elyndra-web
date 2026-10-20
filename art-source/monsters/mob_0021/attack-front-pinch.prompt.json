@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "attack-front-windup.png",
+    "front-rest-study.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Image1 is front-view Coral Claw windup, image2 canonical neutral anatomy. Create ONE pinch-impact key. Move ONLY the huge IMAGE-LEFT claw arm: thrust it a short distance TOWARD THE CAMERA (foreshortened arm, claw in front of left chest) and close its thick fingers into a forceful pinch. Do not just point the claw sideways. Retain large rounded palm volume, cream teeth, coral marks and anatomical-right attachment. Keep the small image-right claw still. Keep exactly the same shell, coral branch topology, mouth plates, two eyes, body position/scale and all EIGHT walking legs from image1, with four foot tips on each side clearly readable below and around the attacking claw. No missing legs, no oversized body or rubber joints. Full crab within1448x1086 framing, all claws and feet inside margins. Genuine transparent background, no glow, effects, floor, shadow or text. One image."
+}

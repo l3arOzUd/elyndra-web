@@ -2,6 +2,7 @@
 <title>Coral Claw frontal action studies</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;height:auto}button,select,input{margin:8px}a{color:#a9e2e3}</style>
 <h1>Coral Claw: frontal action studies</h1>
+<p>Attack and hit use isolated drawings at the canonical idle scale. Four foot tips remain visible per side. Claw perspective and coral continuity are still unapproved.</p>
 <p>Draft poses. Death lowers the shell onto folded legs and holds the final frame. Rigid shell and claw volume still need correction.</p>
 <select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All source poses</option></select>
 <button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" step="1" value="0"><span id="label"></span><br>
@@ -11,6 +12,9 @@
 <p><a href="anatomy-review.html">Reference comparison</a> · <a href="walk-front-review.html">Scuttle study</a> · <a href="actions-front-study.png">Source sheet</a></p>
 <details><summary>Separate death-volume candidate — not selected</summary><img src="death-front-volume-study.png" alt="Death pose retaining a large claw and fuller shell" style="width:600px;max-width:100%;background:#697a80"><p>Fuller shell and large claw, but the outer left foot reaches the source boundary, hidden legs remain ambiguous and closed eyes gain a new shape. Needs repair before replacing the sequence endpoint.</p></details>
 <script type="module">
+import {frontAttackSources,frontHitSource} from './motion-art.js';
+const attackImages=await Promise.all(frontAttackSources.map(async file=>{const im=new Image();im.src='./'+file;await im.decode();return im}));
+const hitImage=new Image();hitImage.src='./'+frontHitSource;await hitImage.decode();
 const image=new Image();image.src='./actions-front-study.png';await image.decode();
 const dead=new Image();dead.src='./death-front-volume-v2.png';await dead.decode();
 const collapse=new Image();collapse.src='./collapse-front-volume.png';await collapse.decode();
@@ -27,7 +31,8 @@ function draw(f){
   frame=f;const original=document.querySelector('#originalDeath').checked;
   const cell=original&&clip.value==='death'?[0,4,4,5,5,5][f]:sequences[clip.value][f],r=crops[cell],a=anchors[cell];
   g.clearRect(0,0,512,512);
-  if(!original&&(cell===4||cell===5||cell===6||(clip.value==='death'&&cell===0))){
+  if(clip.value==='attack'||clip.value==='hit'){const im=clip.value==='attack'?attackImages[cell]:cell===3?hitImage:attackImages[0];g.drawImage(im,256-740*.28,430-978*.28,im.naturalWidth*.28,im.naturalHeight*.28)}
+  else if(!original&&(cell===4||cell===5||cell===6||(clip.value==='death'&&cell===0))){
     // One uniform scale for the complete painting; ground aligns with other keys.
     const source=cell===5?dead:cell===4?collapse:cell===6?buckle:neutral;
     const ground=cell===5?927:cell===4?951:cell===6?970:978;

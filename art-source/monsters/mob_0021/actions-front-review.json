@@ -7,7 +7,10 @@
     1774,
     887
   ],
-  "uniqueSourcePoses": 8,
+  "uniqueSourcePoses": 7,
+  "attackSources": ["front-rest-study.png", "attack-front-windup.png", "attack-front-pinch.png"],
+  "hitSource": "hit-front-brace.png",
+  "combatRegistration": {"scale": 0.28, "anchor": [740, 978], "destination": [256, 430], "perKeyFitting": false},
   "sequences": {
     "attack": [
       0,
@@ -45,7 +48,7 @@
     "Claw perspective and apparent size change during collapse; coral landmarks still drift.",
     "Coral and walking-leg details vary across poses.",
     "Concealed legs do not establish consistent attachment order.",
-    "Only front view exists for these actions; no live runtime binding."
+    "Four-view drafts exist in the combined viewer; no live runtime binding."
   ],
   "alternateDeath": {
     "file": "death-front-volume-study.png",
@@ -151,5 +154,15 @@
     ],
     "uniformScale": 0.28
   },
-  "sourceNote": "Six original sheet poses plus separate neutral, buckle, collapse and dead images; two original sheet death poses are superseded in default preview. Eight selected distinct drawings across all previews."
+  "sourceNote": "Seven distinct drawings selected for default clips: canonical neutral, new windup, pinch, hit, buckle, collapse and dead. All source poses retains the old sheet for comparison.",
+  "combatRevisionCheck": {
+    "attackTimingFrames": 6,
+    "hitTimingFrames": 6,
+    "emptyFrames": 0,
+    "edgeFrames": 0,
+    "pageErrors": [],
+    "individualVersusCombinedPixelDifferences": 0,
+    "visibleFootTipsPerSide": [4, 4],
+    "visual": "Canonical body scale and clean transparency. Pinch is more foreshortened, but claw orientation and coral continuity are not yet approved. Visible tips do not prove hidden joint anatomy."
+  }
 }
