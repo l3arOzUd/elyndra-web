@@ -6,8 +6,8 @@
   "replacementWork": {
     "rejectedSheet": "walk-left-v2.png",
     "reason": "Near/far foreleg swing order is still inconsistent; alpha bounds touch cell seams in columns 2 and 3. Not selected for preview or runtime.",
-    "individualFrames": ["walk-01.png"],
-    "review": "First contact pose shows four feet, near foreleg reaching forward and near hindleg trailing, in the original master's larger-plate style. Remaining gait phases and leg-length consistency still need review."
+    "individualFrames": ["walk-01.png", "walk-02.png", "walk-03.png"],
+    "review": "First contact pose shows four feet, near foreleg reaching forward and near hindleg trailing. Frame2 lifts near hindfoot; an initial fifth belly foot was removed via image edit and the failed draft retained. Frame3 swings near hindfoot forward. All three retain four visible feet in direct inspection. Remaining gait phases, far-leg motion, fixed bone lengths and contact registration still need review."
   },
   "preview": "walk-review.html",
   "layout": {"columns": 3, "rows": 2, "cell": [512, 512]},

@@ -1,0 +1,6 @@
+{
+  "prompt": "Precise anatomy correction of this image. There are FIVE visible feet; must be FOUR. REMOVE ONLY the extra tan foot sticking down below CENTER of belly at approximately x630 y900 in1280square. Replace it with transparent empty gap beneath belly. KEEP the far forefoot at x220 y900, prominent near forefoot x300 y950, lifted near hindfoot x790 y880, far hindfoot x950 y915. Thus exactly four feet and four connected legs. Preserve all other creature pixels/design/pose including lifted near hindleg and planted near foreleg. No added foot or limb. True transparent background, no shadow no text.",
+  "references": [
+    "walk-02-extra-foot-draft.png"
+  ]
+}
