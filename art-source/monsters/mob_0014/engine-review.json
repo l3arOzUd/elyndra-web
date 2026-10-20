@@ -4,13 +4,15 @@
     "All five sheets load through SpriteActor and Animator.",
     "W E S N attack emits hit at 375ms without sprite format problems.",
     "Rear final death inspected in engine: low folded body with transparent exterior.",
-    "140 exported cells nonempty and no alpha touching canvas edges."
+    "140 exported cells nonempty and no alpha touching canvas edges.",
+    "Three-view idle/walk comparison added with ground guides. Front walk uses uniform 0.57 scale; side walk offset +10x +14y reduces floating support tips."
   ],
   "limitations": [
     "Only three authored views; right mirrored, diagonals aliases.",
     "Eight-leg anatomy and attack leg identity unresolved.",
     "Idle color popping and cross-clip position/scale need refinement.",
     "Not tested in live server combat.",
-    "Technical playback does not establish production visual acceptance."
+    "Technical playback does not establish production visual acceptance.",
+    "Rear walk body sits about40 display pixels above idle at equal foot baseline; source leg proportions differ and require repaint, not root translation."
   ]
 }

@@ -5,13 +5,14 @@
 <select id="view"><option>left</option><option>front</option><option>back</option></select>
 <select id="clip"><option>idle</option><option>walk</option><option>attack</option><option>hit</option><option>death</option></select>
 <button id="replay">Replay</button><br><canvas id="motion" width="384" height="384"></canvas>
+<h2>Clip registration: idle / walk contact A / walk contact B</h2><canvas id="registration" width="1152" height="1152"></canvas>
 <iframe id="flight" src="./walk-review.html"></iframe><iframe id="actions" src="./actions-review.html"></iframe>
 <script type="module">
 const flight=document.querySelector('#flight'),actions=document.querySelector('#actions');
 await new Promise(resolve=>{const timer=setInterval(()=>{if(flight.contentWindow.__vinecrawlerWalk?.ready&&actions.contentWindow.__vinecrawlerActions?.ready){clearInterval(timer);resolve();}},50);});
 const json={id:'vinecrawler_2d',kind:'sheet',facingMode:'directional',frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W','S','SW','NW','N'],mirror:{E:'W',SE:'W',NE:'W'},animations:{idle:{file:'idle.png',frames:6,fps:4,loop:true},walk:{file:'walk.png',frames:4,fps:7,loop:true,refMsPerCell:240},attack:{file:'attack.png',frames:6,fps:8,events:{hit:3}},hit:{file:'hit.png',frames:6,fps:12},death:{file:'death.png',frames:6,fps:8,hold:true}}};
 function draw(ctx,clip,f,view){
- if(clip==='walk')flight.contentWindow.__vinecrawlerWalk.draw(ctx,f,192,346,.5,view);
+ if(clip==='walk')flight.contentWindow.__vinecrawlerWalk.draw(ctx,f,view==='left'?202:192,view==='left'?360:346,view==='front'?.57:.5,view);
  else actions.contentWindow.__vinecrawlerActions.draw(ctx,f,192,346,.5,view,clip);
 }
 function exportDraft(){
@@ -29,5 +30,5 @@ const ctx=document.querySelector('canvas').getContext('2d');let start=performanc
 for(const id of ['view','clip'])document.querySelector('#'+id).onchange=()=>start=performance.now();
 document.querySelector('#replay').onclick=()=>start=performance.now();
 function tick(now){const clip=document.querySelector('#clip').value,view=document.querySelector('#view').value,def=json.animations[clip];let f=Math.floor((now-start)*def.fps/1000);f=def.loop?f%def.frames:Math.min(def.frames-1,f);ctx.clearRect(0,0,384,384);draw(ctx,clip,f,view);requestAnimationFrame(tick);}
-window.__monsterDraft={ready:true,exportDraft};requestAnimationFrame(tick);
+const comparison=document.querySelector('#registration').getContext('2d');for(const [row,view]of ['left','front','back'].entries())for(const [col,sample]of [['idle',0],['walk',0],['walk',2]].entries()){comparison.save();comparison.translate(col*384,row*384);comparison.strokeStyle='#b4c3b6';comparison.beginPath();comparison.moveTo(0,346);comparison.lineTo(384,346);comparison.stroke();draw(comparison,sample[0],sample[1],view);comparison.fillStyle='#fff';comparison.fillText(view+' '+sample[0]+' '+sample[1],12,18);comparison.restore();}window.__monsterDraft={ready:true,exportDraft};requestAnimationFrame(tick);
 </script>
