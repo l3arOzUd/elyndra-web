@@ -1,0 +1,32 @@
+<!doctype html><meta charset="utf-8">
+<title>Sun Warden front actions</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}img{max-width:100%}</style>
+<h1>Sun Warden: front action studies</h1>
+<p>Inspect spear grip, arm count, rigid halo and grounded collapse. Timing preview only; not gameplay approved.</p>
+<select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All source poses</option></select>
+<button id="play">Replay</button>
+<input id="frame" type="range" min="0" max="5" value="0"><span id="label"></span><br>
+<canvas width="640" height="640"></canvas><br>
+<p>Front-view study: foreshortened spear thrust and five-panel halo. No runtime binding.</p>
+<script type="module">
+const im=new Image();im.src='actions-front.png';await im.decode();
+
+const g=document.querySelector('canvas').getContext('2d'),slider=document.querySelector('#frame'),clip=document.querySelector('#clip');
+const names=['idle','anticipation','thrust','hit','kneeling collapse','settled death'];
+// Generated poses spill across nominal grid boundaries. Crop complete silhouettes.
+const crops=[[160,0,300,570],[620,0,310,570],[1020,0,410,570],[80,570,410,454],[600,570,330,454],[980,650,480,374]];
+const hips=[322,778,1210,300,775,1260],ground=[562,562,562,995,985,970];
+const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5],all:[0,1,2,3,4,5]};
+let playing=false,last=0;
+function draw(){
+ const cell=sequences[clip.value][Number(slider.value)],[x,y,w,h]=crops[cell],s=.85;
+ g.clearRect(0,0,640,640);g.drawImage(im,x,y,w,h,320+(x-hips[cell])*s,590+(y-ground[cell])*s,w*s,h*s);
+ if(cell===3)g.drawImage(im,80,515,80,55,320+(80-hips[cell])*s,590+(515-ground[cell])*s,80*s,55*s);
+ document.querySelector('#label').textContent=names[cell];
+}
+slider.oninput=()=>{playing=false;draw()};
+clip.onchange=()=>{playing=false;slider.value='0';draw()};
+document.querySelector('#play').onclick=()=>{slider.value='0';playing=true;last=performance.now();draw()};
+function tick(t){if(playing&&t-last>180){const f=Number(slider.value);if(f===5)playing=false;else slider.value=String(f+1);last=t;draw()}requestAnimationFrame(tick)}
+draw();requestAnimationFrame(tick);window.__wardenActions={ready:true,sequences};
+</script>

@@ -1,0 +1,24 @@
+{
+  "status": "six-key-front-action-study-unapproved",
+  "source": "actions-front.png",
+  "preview": "actions-front-review.html",
+  "poses": ["idle","anticipation","foreshortened thrust","hit recoil","kneeling collapse","settled death"],
+  "verified": [
+    "Five-panel halo retained; one lower panel partly occluded during anticipation.",
+    "Spear remains associated with character right hand, viewer left.",
+    "Thrust points toward camera with foreshortened spearhead rather than sideways sweep.",
+    "No extra dangling third hand visible in selected poses.",
+    "Death progresses from kneeling to chest and forearms down; no standing-body backward rotation.",
+    "Browser death preview reaches final pose and holds without page errors.",
+    "Full source poses inspected together on opaque background; hit spear tip drawn in separate source fragment to exclude adjacent idle feet."
+  ],
+  "limitations": [
+    "Kneeling pose still holds spear upright; needs an intermediate lowering and releasing pose.",
+    "Spear dimensions and grip projection vary across poses.",
+    "Halo projection and torso proportions require cross-view consistency review.",
+    "Mirror flare baked into impact image; separate skill/monster VFX not implemented.",
+    "Only six authored key poses, not smooth final clips.",
+    "Rear actions, rear walking and complete runtime integration remain missing."
+  ],
+  "next": "Create matching rear action study; refine weapon release and cross-view scale before assembling runtime draft."
+}
