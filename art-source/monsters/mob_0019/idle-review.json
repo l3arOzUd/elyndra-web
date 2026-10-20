@@ -1,0 +1,21 @@
+{
+  "status":"front-rear-two-drawing-idle-study-unapproved",
+  "preview":"combined-review.html",
+  "selected":{"front":"idle-front-settle-v2.png cell 0","back":"idle-back-settle-v2.png cell 0"},
+  "timing":{"frames":6,"fps":4,"alternateFrames":[2,3],"authoredDrawingsPerAnimatedView":2},
+  "observations":[
+    "Initial alternate sheets contained translucent brown blocks; rejected for playback.",
+    "Background-extraction revisions removed obvious brown blocks in opaque browser comparison.",
+    "Feet stay broadly registered while free wrists settle slightly.",
+    "Only cell 0 from revisions is used; action cells remain original selected sources.",
+    "All 112 timing cells remain nonempty and avoid canvas boundary."
+  ],
+  "limitations":[
+    "Gold saturation and highlights changed in cleanup revisions, creating potential material flicker.",
+    "Minor knee, torso and halo detail drift remains.",
+    "Two drawings with repeated timing are not six distinct poses.",
+    "Left/right idle still use one static drawing.",
+    "No public binding or production approval."
+  ],
+  "next":"Match idle lighting and armor details, then author side idle motion without extra hands."
+}
