@@ -7,7 +7,7 @@
     1774,
     887
   ],
-  "uniqueSourcePoses": 9,
+  "uniqueSourcePoses": 8,
   "sequences": {
     "attack": [
       0,
@@ -151,5 +151,5 @@
     ],
     "uniformScale": 0.28
   },
-  "sourceNote": "Six original sheet poses plus separate neutral, buckle, collapse and dead images; two original sheet death poses are superseded in default preview. Nine selected distinct drawings across all previews."
+  "sourceNote": "Six original sheet poses plus separate neutral, buckle, collapse and dead images; two original sheet death poses are superseded in default preview. Eight selected distinct drawings across all previews."
 }
