@@ -17,5 +17,14 @@
     "Only four key drawings, not smooth final animation.",
     "Frontal contact corrections remain unresolved; no gameplay binding."
   ],
-  "next": "Normalize both passing heights and preserve rigid limb identity before deriving frontal gait."
+  "comparisonVariants": [{
+    "source": "walk-left-v2.png",
+    "selected": false,
+    "observations": [
+      "Swing boots are lower, but top-right remains behind pelvis and bottom-right knee remains raised.",
+      "Upper body, spear placement and contact drawings also drift despite preservation request.",
+      "Original registration is used for comparison, not a calibrated animation export."
+    ]
+  }],
+  "next": "Author isolated low passing poses with explicit knee and ankle guides; avoid regenerating both valid contact cells."
 }
