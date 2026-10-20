@@ -2,7 +2,7 @@
   "id": "mob_0021",
   "name": "Coral Claw",
   "bibleSource": "content/regions/tha.ts",
-  "status": "neutral-and-frontal-scuttle-studies",
+  "status": "frontal-walk-attack-hit-death-studies",
   "bible": {
     "level": 40,
     "family": "crustacean",
@@ -30,6 +30,6 @@
     "Profile cameras retain oblique exposure.",
     "Coral branch topology and small-claw decoration differ between views."
   ],
-  "next": "Review front-rest-study.png and walk-front-study.png for planted-foot continuity and hidden attachment order. Reconcile back/profiles and preserve rigid coral before final animation.",
+  "next": "Correct shell and large-claw volume in frontal death, improve forward pinch reach, then reconcile back/profiles and planted-foot continuity. Idle animation and remaining directional actions are still missing.",
   "publicBinding": false
 }
