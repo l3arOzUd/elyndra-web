@@ -65,7 +65,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0057 | Prism Lens-drone | master-created | master-created | master-created | master-created | placeholder |
 | mob_0058 | Vault Mirrorguard | master-created | master-created | master-created | master-created | placeholder |
 | mob_0059 | Heliostat Sovereign | master-created | master-created | master-created | master-created | placeholder |
-| mob_0060 | Gullwing Skimmer | master-created | missing | missing | missing | placeholder |
+| mob_0060 | Gullwing Skimmer | master-created | master-created | master-created | master-created | placeholder |
 | mob_0061 | Polyp Spitter | master-created | missing | missing | missing | placeholder |
 | mob_0062 | Kelp Tender | master-created | missing | missing | missing | placeholder |
 | mob_0063 | Hullborer | master-created | missing | missing | missing | placeholder |

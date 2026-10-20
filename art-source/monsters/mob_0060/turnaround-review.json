@@ -1,0 +1,20 @@
+{
+  "id": "mob_0060",
+  "name": "Gullwing Skimmer",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from frontal dive reference and opposite profile.",
+  "confirmed": [
+    "White/grey bird with brass primaries, orange hooked beak and two tucked feet retained.",
+    "Side head directions correct; no standing pose introduced.",
+    "Four images pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Wing elevation and foreshortening differ from front; profiles resemble raised flap rather than same dive pose.",
+    "Rear body has ambiguous upper tuft and lower fan; distinguish crest versus single tail and reconcile dive axis.",
+    "Primary feather lengths/counts and tail gold coverage vary.",
+    "Side camera remains oblique; far wing size and root position require correction.",
+    "Master looks more raptor-like than gull; confirm gull anatomy against Bible before animation.",
+    "No separated wing chains or runtime animations yet."
+  ],
+  "next": "Reconcile gull silhouette, dive pitch, wing roots and single tail; separate wings/primaries/body/head/feet for glide, flap, dive attack, hit and fall."
+}
