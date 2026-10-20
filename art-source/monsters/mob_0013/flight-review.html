@@ -4,7 +4,7 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}img{background:#697a80;max-width:100%;display:block;margin:16px 0}.ref{width:400px}</style>
 <h1>Sapdrone — flight source draft</h1>
 <p>V3 four-pose wingbeat draft. Four wing roots and six leg chains remain unresolved; shell registration and surface continuity need refinement. Not bound to gameplay.</p>
-<select id="view"><option value="left">Left</option><option value="front">Front draft</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="3" value="0">
+<select id="view"><option value="left">Left</option><option value="front">Front draft</option><option value="back">Back draft</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="3" value="0">
 <canvas id="motion" width="640" height="640" style="background:#697a80"></canvas>
 <canvas id="contact" width="1200" height="1200" style="background:#697a80;max-width:100%"></canvas>
 <h2>Left reference</h2>
@@ -12,9 +12,9 @@
 
 <script type="module">
 const im=new Image();im.src='./flight-left-v3.png';await im.decode();const ctx=document.querySelector('#motion').getContext('2d');let f=0,last=0,paused=false;
-const front=new Image();front.src='./flight-front.png';await front.decode();let view='left';
+const front=new Image();front.src='./flight-front.png';await front.decode();const back=new Image();back.src='./flight-back.png';await back.decode();let view='left';
 const anchors=[[325,472],[910,472],[308,1053],[910,1053]];
-function draw(ctx,f,x,y,s){if(view==='front'){const sx=f%2?615:0,w=f%2?639:615,sy=f<2?0:650,h=f<2?650:604,ax=f%2?940:317,ay=f<2?476:1046;ctx.drawImage(front,sx,sy,w,h,x-(ax-sx)*s,y-(ay-sy)*s,w*s,h*s);return;}const sx=f%2?625:0,sy=f<2?0:620,w=f%2?629:625,h=f<2?620:634;const [ax,ay]=anchors[f];ctx.drawImage(im,sx,sy,w,h,x-(ax-sx)*s,y-(ay-sy)*s,w*s,h*s);}
+function draw(ctx,f,x,y,s){if(view==='back'){const sx=f%2?620:0,w=f%2?634:620,sy=f<2?0:620,h=f<2?620:634,ax=f%2?932:318,ay=f<2?475:1044;ctx.drawImage(back,sx,sy,w,h,x-(ax-sx)*s,y-(ay-sy)*s,w*s,h*s);return;}if(view==='front'){const sx=f%2?615:0,w=f%2?639:615,sy=f<2?0:650,h=f<2?650:604,ax=f%2?940:317,ay=f<2?476:1046;ctx.drawImage(front,sx,sy,w,h,x-(ax-sx)*s,y-(ay-sy)*s,w*s,h*s);return;}const sx=f%2?625:0,sy=f<2?0:620,w=f%2?629:625,h=f<2?620:634;const [ax,ay]=anchors[f];ctx.drawImage(im,sx,sy,w,h,x-(ax-sx)*s,y-(ay-sy)*s,w*s,h*s);}
 const cg=document.querySelector('#contact').getContext('2d');function contact(){cg.clearRect(0,0,1200,1200);for(let i=0;i<4;i++){draw(cg,i,i%2*600+300,Math.floor(i/2)*600+440,.8);cg.fillStyle='#fff';cg.fillText(`Pose ${i+1}`,i%2*600+12,Math.floor(i/2)*600+20);}
 }
 contact();document.querySelector('#view').onchange=e=>{view=e.target.value;f=0;contact();};

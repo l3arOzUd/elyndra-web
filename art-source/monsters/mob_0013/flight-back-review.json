@@ -1,0 +1,21 @@
+{
+  "status": "flight-draft-refinement-pending",
+  "source": "flight-back.png",
+  "verified": [
+    "Browser contact sheet displays rear shell without eyes or needle.",
+    "Raised horizontal lowered and rising wing poses available.",
+    "No neighboring pose fragments visible in browser crops."
+  ],
+  "limitations": [
+    "Downstroke overlaps wing pairs; four independent roots are not proven.",
+    "Only four legs clearly readable; remaining pair occluded.",
+    "Rightmost horizontal wing has tight source margin.",
+    "Sap highlights wing ribs and shell proportions drift.",
+    "No runtime export or gameplay binding; combat clips still missing."
+  ],
+  "crop": {
+    "column": 620,
+    "row": 620
+  },
+  "next": "Resolve wing/leg anatomy and author needle attack hit and grounded death."
+}
