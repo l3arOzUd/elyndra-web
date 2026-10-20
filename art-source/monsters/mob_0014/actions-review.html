@@ -8,7 +8,7 @@ const im=new Image();im.src='./actions-left.png';await im.decode();
 const front=new Image();front.src='./actions-front.png';await front.decode();
 const back=new Image();back.src='./actions-back.png';await back.decode();
 const idleLeaves=new Image();idleLeaves.src='./idle-left-leaves.png';await idleLeaves.decode();
-const frontIdle=new Image();frontIdle.src='./idle-front-leaves.png';await frontIdle.decode();const backIdle=new Image();backIdle.src='./idle-back-leaves.png';await backIdle.decode();
+const frontIdle=new Image();frontIdle.src='./idle-front-leaves-v2.png';await frontIdle.decode();const backIdle=new Image();backIdle.src='./idle-back-leaves.png';await backIdle.decode();
 const seq={idle:[0,0,0,0,0,0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 let clip='idle',f=0,paused=false,last=0;
 function draw(ctx,f,x,y,s){
