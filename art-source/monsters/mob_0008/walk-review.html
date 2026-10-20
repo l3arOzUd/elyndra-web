@@ -4,17 +4,23 @@
 <style>body{margin:24px;background:#263037;color:#eee;font:16px system-ui}canvas{background:#697a80;max-width:100%;display:block;margin:12px 0}button,input{margin:8px}</style>
 <h1>Brookfin - fin-foot walk draft</h1>
 <p>Inspect four limb attachments and near/far foot order. Frame 2 now lifts the near front foot; far rear support and attachment continuity still need review. Not approved or bound to gameplay.</p>
-<select id="clip"><option>walk</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label>
+<select id="clip"><option>walk</option><option>walk-front</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label>
 <canvas id="motion" width="600" height="520"></canvas>
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
 const image=new Image();image.src='./walk-left.png';await image.decode();
 const corrected=new Image();corrected.src='./walk-left-v2.png';await corrected.decode();
 const actions=new Image();actions.src='./actions-left.png';await actions.decode();
+const frontWalk=new Image();frontWalk.src='./walk-front.png';await frontWalk.decode();
 let clip='walk';
 const seq={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 const bottoms=[487,487,495,480,480,483];
 function draw(ctx,f,x,y,s){
+ if(clip==='walk-front'){
+  const cuts=[0,520,1024,1536],col=f%3,sx=cuts[col],w=cuts[col+1]-sx;
+  const ax=[256,248,246,256,252,252][f],bottom=[502,502,510,482,483,488][f];
+  ctx.drawImage(frontWalk,sx,Math.floor(f/3)*512,w,512,x-ax*s,y-bottom*s,w*s,512*s);return;
+ }
  if(clip!=='walk'){
   const pose=seq[clip][f],col=pose%3,cuts=pose<3?[0,526,996,1536]:[0,518,1014,1536];
   const sx=cuts[col],w=cuts[col+1]-sx,sy=pose<3?0:550,h=pose<3?550:474;
@@ -32,7 +38,7 @@ document.querySelector('#clip').onchange=e=>{clip=e.target.value;f=0;paused=fals
 document.querySelector('#pause').onclick=()=>{paused=!paused;};
 document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
 function tick(now){
- if(!paused&&now-last>150){f=clip==='walk'?(f+1)%6:Math.min(5,f+1);last=now;}
+ if(!paused&&now-last>150){f=clip.startsWith('walk')?(f+1)%6:Math.min(5,f+1);last=now;}
  ctx.clearRect(0,0,600,520);draw(ctx,f,300,490,.9);
  document.querySelector('#frame').value=f;requestAnimationFrame(tick);
 }

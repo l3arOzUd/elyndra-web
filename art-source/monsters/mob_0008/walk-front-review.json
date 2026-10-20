@@ -1,0 +1,17 @@
+{
+  "status": "authored-walk-draft-refinement-pending",
+  "source": "walk-front.png",
+  "verified": [
+    "Frame2 lifts screen-left front foot; frame5 lifts screen-right front foot.",
+    "Four foot silhouettes remain visible.",
+    "Browser contact sheet inspected after custom column crop."
+  ],
+  "limitations": [
+    "Tail and side fin extend beyond requested grid; custom cuts used.",
+    "Body width and belly position drift, especially lower row.",
+    "Far rear foot ground contacts need review.",
+    "Dorsal and tail fin planes inherit inconsistent reference perspective.",
+    "Intermediate footfall poses and runtime export missing.",
+    "Not bound to gameplay."
+  ]
+}
