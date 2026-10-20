@@ -1,0 +1,16 @@
+{
+  "status": "runtime-draft-refinement-pending",
+  "source": "actions-front.png",
+  "verified": [
+    "Front attack selects S and emits hit at375ms.",
+    "Final death pose rests chin on ground with eyes closed.",
+    "Per-pose source bounds exclude previous-row hoof fragments."
+  ],
+  "limitations": [
+    "Front idle remains static.",
+    "Rear animation still missing.",
+    "Head/tusk dimensions and thorn details drift across poses.",
+    "Death has onlythreeauthoredposes and needs in-betweens.",
+    "Not bound to gameplay."
+  ]
+}

@@ -10,17 +10,28 @@
 <script type="module">
 const image=new Image();image.src='./walk-left-v3.png';await image.decode();
 const frontWalk=new Image();frontWalk.src='./walk-front-v2.png';await frontWalk.decode();
+const frontActions=new Image();frontActions.src='./actions-front.png';await frontActions.decode();
+for(const name of ['attack-front','hit-front','death-front'])document.querySelector('#clip').add(new Option(name,name));
 document.querySelector('#clip').add(new Option('walk-front','walk-front'));
 const actions=new Image();actions.src='./actions-left.png';await actions.decode();
 const blink=new Image();blink.src='./idle-blink.png';await blink.decode();
 const sequences={idle:[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 sequences['walk-front']=[0,1,2,3,4,5];
+sequences['attack-front']=[0,1,1,2,2,0];
+sequences['hit-front']=[0,3,3,0,0,0];
+sequences['death-front']=[0,4,4,5,5,5];
 let clip='walk';
 const bottoms=[475,475,475,442,442,444];
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 function draw(ctx,i,x,y,scale){
  const pose=sequences[clip][i];
+ if(clip.endsWith('-front')&&clip!=='walk-front'){
+  const sy=[0,0,0,520,530,560][pose],h=pose<3?519:1024-sy;
+  const bottom=[519,519,519,997,991,986][pose]-sy,anchor=[280,260,256,280,258,256][pose],s=scale*.82;
+  ctx.drawImage(frontActions,pose%3*512,sy,512,h,x-anchor*s,y-bottom*s,512*s,h*s);
+  return;
+ }
  if(clip==='walk-front'){
   const sy=i<3?0:517,h=i<3?517:507;
   const bottom=[514,514,514,496,494,494][i],anchor=[280,262,236,280,264,235][i],s=scale*.82;
@@ -62,8 +73,9 @@ function tick(now){
 }
 function exportDraft(){
  const previous=clip,images={},sizes={};
- const json={id:'thornback_2d',kind:'sheet',facingMode:'left-right',
-  frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W'],
+ const json={id:'thornback_2d',kind:'sheet',facingMode:'directional',
+  frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W','S','SW','NW'],
+  mirror:{E:'W',SE:'W',NE:'W',N:'W'},
   animations:{
    idle:{file:'idle.png',frames:16,fps:8,loop:true},
    walk:{file:'walk.png',frames:6,fps:8,loop:true,refMsPerCell:240},
@@ -72,9 +84,13 @@ function exportDraft(){
    death:{file:'death.png',frames:6,fps:8,hold:true}
   }};
  for(const [name,def]of Object.entries(json.animations)){
-  const c=document.createElement('canvas');c.width=384*def.frames;c.height=384;
+  const c=document.createElement('canvas');c.width=384*def.frames;c.height=384*json.rows.length;
   const ctx=c.getContext('2d');clip=name;
-  for(let f=0;f<def.frames;f++){ctx.save();ctx.translate(f*384,0);draw(ctx,f,192,346,.66);ctx.restore();}
+  for(let row=0;row<json.rows.length;row++)for(let f=0;f<def.frames;f++){
+   ctx.save();ctx.translate(f*384,row*384);
+   clip=row===1?(name==='idle'?'attack-front':`${name}-front`):name;
+   draw(ctx,row===1&&name==='idle'?0:f,192,346,.66);ctx.restore();
+  }
   images[name]=c.toDataURL('image/png');sizes[name]={width:c.width,height:c.height};
  }
  clip=previous;return {json,images,sizes};

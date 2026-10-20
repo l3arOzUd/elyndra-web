@@ -1,7 +1,7 @@
 {
   "id": "thornback_2d",
   "kind": "sheet",
-  "facingMode": "left-right",
+  "facingMode": "directional",
   "frame": {
     "w": 384,
     "h": 384
@@ -12,8 +12,17 @@
   },
   "pixelsPerCell": 300,
   "rows": [
-    "W"
+    "W",
+    "S",
+    "SW",
+    "NW"
   ],
+  "mirror": {
+    "E": "W",
+    "SE": "W",
+    "NE": "W",
+    "N": "W"
+  },
   "animations": {
     "idle": {
       "file": "idle.png",
