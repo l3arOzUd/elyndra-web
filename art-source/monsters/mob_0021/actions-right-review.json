@@ -6,6 +6,9 @@
   "attackSources": ["right-profile-study-v2.png", "attack-right-windup.png", "attack-right-pinch.png"],
   "attackRegistration": {"scale": 0.25, "anchor": [616, 1005], "destination": [256, 430], "perKeyFitting": false},
   "hitSource": "hit-right-brace-v2.png",
+  "deathSources": ["right-profile-study-v2.png", "collapse-right-volume.png", "death-right-volume-v2.png"],
+  "deathRegistration": {"scale": 0.25, "anchorX": 616, "groundByDrawing": [1005, 966, 985], "destination": [256, 430]},
+  "unselectedDeath": {"file": "death-right-volume.png", "reason": "Only three near walking chains clearly readable; v2 exposes the foremost near leg."},
   "hitRegistration": "Same fixed scale and anchor as attack and idle.",
   "rejectedHitSource": {"file": "hit-right-brace.png", "reason": "Visible brown glow and rectangular background in browser; replaced by cleaned v2."},
   "preview": "actions-right-review.html",
@@ -16,9 +19,9 @@
   },
   "observed": ["Far giant claw drives attack; near small claw stays low.", "Final eye closes.", "Death holds final key."],
   "remaining": [
-    "Older death poses still show only three clear near walking chains; new attack and hit retain four.",
+    "Selected attack, hit and death expose four near walking chains; far roots remain concealed.",
     "Hit foot positions shift slightly and far roots remain concealed.",
-    "Shell and coral flatten in death.",
+    "Selected death retains a fuller shell, but reads as a crouch; belly support and rigid coral continuity remain unresolved.",
     "New attack preserves body registration better, but the closed large claw appears slimmer and its palm volume needs matching.",
     "Cross-view registration and fixed leg lengths are unverified."
   ],
@@ -30,10 +33,20 @@
     "deathFrameAfter1900ms": 5,
     "playingAfterDeath": false,
     "pageErrors": [],
-    "scope": "Preview display and final hold, not anatomical approval."
+    "scope": "Pixel counts refer to the old sheet under All source poses. Final-hold observations also rechecked after isolated death replacement; not anatomical approval."
   },
   "artApproved": false,
   "publicBinding": false,
+  "deathRevisionCheck": {
+    "timingFrames": 6,
+    "uniqueDrawings": 3,
+    "emptyFrames": 0,
+    "edgeFrames": 0,
+    "pageErrors": [],
+    "individualVersusCombinedPixelDifferences": [0, 0, 0, 0, 0, 0],
+    "finalHold": "Frame 5, stopped, at both 1300ms and 1900ms.",
+    "visual": "Transparent, fuller shell and four clear near chains. Hidden eye and relaxed claws; belly contact still not convincing."
+  },
   "hitRevisionCheck": {
     "timingFrames": 6,
     "emptyFrames": 0,

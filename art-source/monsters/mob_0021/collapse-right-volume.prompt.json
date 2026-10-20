@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "right-profile-study-v2.png",
+    "death-right-volume-v2.png"
+  ],
+  "prompt": "Use case: precise-object-edit. One intermediate collapse key for this right-facing Coral Claw. Image1 is the neutral standing design; image2 is the folded dead endpoint. Draw a pose HALFWAY between them, using exactly the same camera, original1536x1024 canvas, scale, body width, shell thickness, coral arrangement and claw sizes. Four NEAR walking legs bend at their rigid knees partway down, roots continuously attached and every grey tip visible; far legs remain behind. Shell lowers slightly without flattening. Foremost near walking leg must remain visible immediately behind the small near claw. Both claws lower halfway toward resting on ground, huge claw FAR and small claw NEAR. Eyestalk folds inward toward socket. This is losing support, not jumping, rolling or rotating backwards. Feet stay near original y1005 ground band. No text or effects. Genuine transparent background, no glow or shadow. One complete crab only."
+}

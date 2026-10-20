@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "death-right-volume.png",
+    "right-profile-study-v2.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Image1 is the right-facing dead crab edit target. Image2 is neutral reference for exactly FOUR near walking legs. Make ONE anatomical repair: the foremost NEAR walking leg, rooted immediately behind the small foreground claw, is lost/hidden in image1. Reveal this ONE folded foreleg running from its existing root under the front shell, bending down and toward the foreground, with a distinct grey pointed tip visible in the clear bottom gap just LEFT of the small claw, near x930,y960. It has the same thick teal/cream rigid armour segments as the other three near legs. Keep the three already visible near legs completely unchanged and retain existing far-leg fragments. Do NOT add a fifth near leg. Preserve the thick shell, coral, closed/retracted eye, both relaxed claws, entire canvas framing and body scale of image1. Genuine fully transparent background outside the animal and between limbs, no glow, floor or shadows. One whole crab only."
+}

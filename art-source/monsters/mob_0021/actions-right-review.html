@@ -1,17 +1,18 @@
 <!doctype html><meta charset="utf-8"><title>Coral Claw right actions</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;height:auto}select,button,input{margin:8px}a{color:#a9e2e3}</style>
 <h1>Coral Claw: right action drafts</h1>
-<p>Attack and hit now use isolated drawings registered to the idle reference, with four near walking chains retained. Death still uses the older sheet with changing proportions; not approved for gameplay.</p>
+<p>Attack, hit and death now use isolated drawings at the idle reference scale, with four near walking chains retained. Death keeps a fuller shell; coral and joint continuity still need work. Not approved for gameplay.</p>
 <select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All source poses</option></select>
 <button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" step="1"><span id="label"></span><br>
 <canvas id="preview" width="512" height="512"></canvas><canvas id="small" width="128" height="128"></canvas>
-<p>Hit retracts the eye and braces four near legs; foot positions still shift slightly. Death holds with a closed eye, but shell and coral compress and only three near walking chains remain clear in some old sheet poses. Far joints remain concealed.</p>
+<p>Hit retracts the eye and braces four near legs; foot positions still shift slightly. Death folds the legs and hides the eye, then holds. Belly contact and rigid coral continuity remain unresolved. “All source poses” retains the old sheet for comparison.</p>
 
 <p><a href="profile-review.html">Profile references</a> · <a href="actions-front-review.html">Front actions</a> · <a href="actions-back-review.html">Rear actions</a> · <a href="actions-right-study.png">Source sheet</a></p>
 <script type="module">
-import {rightAttackSources,rightHitSource} from './motion-art.js';
+import {rightAttackSources,rightHitSource,rightDeathSources,rightDeathGround} from './motion-art.js';
 const attackImages=await Promise.all(rightAttackSources.map(async file=>{const im=new Image();im.src='./'+file;await im.decode();return im}));
 const hitImage=new Image();hitImage.src='./'+rightHitSource;await hitImage.decode();
+const deathImages=await Promise.all(rightDeathSources.map(async file=>{const im=new Image();im.src='./'+file;await im.decode();return im}));
 const image=new Image();image.src='./actions-right-study.png';await image.decode();
 
 const crops=[[0,70,530,460],[530,0,520,530],[1000,155,536,375],[0,540,520,450],[520,600,500,380],[1020,640,516,320]];
@@ -24,6 +25,7 @@ let playing=true,frame=0,last=0;
 function draw(f){
  frame=f;const cell=sequences[clip.value][f],r=crops[cell],a=anchors[cell];g.clearRect(0,0,512,512);
  if(clip.value==='attack'||clip.value==='hit'){const im=clip.value==='attack'?attackImages[cell]:cell===3?hitImage:attackImages[0];g.drawImage(im,256-616*.25,430-1005*.25,im.naturalWidth*.25,im.naturalHeight*.25)}
+ else if(clip.value==='death'){const key=cell===0?0:cell===4?1:2,im=deathImages[key];g.drawImage(im,256-616*.25,430-rightDeathGround[key]*.25,im.naturalWidth*.25,im.naturalHeight*.25)}
  else {g.save();
  if(cell===1||cell===2){const n=cell===1?[1000,200,50,330]:[1000,155,50,45];const path=new Path2D();path.rect(0,0,512,512);path.rect(256+(n[0]-a[0])*.8,430+(n[1]-a[1])*.8,n[2]*.8,n[3]*.8);g.clip(path,'evenodd')}
  g.drawImage(image,...r,256+(r[0]-a[0])*.8,430+(r[1]-a[1])*.8,r[2]*.8,r[3]*.8);g.restore();}
