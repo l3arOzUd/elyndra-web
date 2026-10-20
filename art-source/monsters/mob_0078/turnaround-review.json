@@ -1,0 +1,21 @@
+{
+  "id": "mob_0078",
+  "name": "Cryo Lancer",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation preserving anatomical right integrated lance across views.",
+  "confirmed": [
+    "Right lance appears image-left front, image-right rear, far-side left profile and near-side right profile.",
+    "Normal left hand retained, no extra weapon hand introduced.",
+    "Rear helmet opaque and rear torso mechanical rather than duplicate frosted visor.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Profile lance points forward/down instead of preserving lateral-down front pose in depth; shoulder/elbow transforms differ.",
+    "Left/right lance apparent length and prism shape differ beyond reliable projection matching.",
+    "Normal hand position shifts, torso posture and foot spacing vary.",
+    "Armor seams, brass joint fittings and crystal inserts drift across views.",
+    "Rear knee/calf armor remains similar to front; hinge orientation needs rig-level validation.",
+    "No separated armor/limb/lance parts or runtime animation clips yet."
+  ],
+  "next": "Align shoulder/elbow pose and lance length, lock armor/joint landmarks, separate biped chains and integrated weapon for idle/walk/thrust/shot/hit/collapse with prism beam and frost VFX."
+}
