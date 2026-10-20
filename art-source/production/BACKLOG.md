@@ -87,7 +87,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0079 | Cryocore Curator | master-created | master-created | master-created | master-created | placeholder |
 | mob_0080 | Slagback Toad | master-created | master-created | master-created | master-created | placeholder |
 | mob_0081 | Crucible Tender | master-created | master-created | master-created | master-created | placeholder |
-| mob_0082 | Vent Skink | master-created | missing | missing | missing | placeholder |
+| mob_0082 | Vent Skink | master-created | master-created | master-created | master-created | placeholder |
 | mob_0083 | Magma Spitter | master-created | missing | missing | missing | placeholder |
 | mob_0084 | Rivet Scrapling | master-created | missing | missing | missing | placeholder |
 | mob_0085 | Slagforged Brute | master-created | missing | missing | missing | placeholder |

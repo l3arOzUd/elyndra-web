@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Edit this BACK VIEW lizard only to correct foot anatomy. Preserve rear head black scales, body silhouette, tail curling left and orange tailtip exactly. It faces AWAY from camera. Current nearest hind feet incorrectly display front-facing fan toes. Replace those two feet with anatomical rear view: rounded heel/ankle nearest camera and toes extend FORWARD AWAY into image, largely hidden behind heels, slight lateral outer claws only. No full fan of five claws pointing down toward viewer. Fold hind knees naturally outward, hind heels planted. Far forefeet also point away. Exactly four legs total. No other changes, no eyes/mouth on back, no orange throat on dorsal neck. Full character transparent square no shadows text ground.",
+  "references": [
+    "back-draft-forward-toes.png"
+  ]
+}

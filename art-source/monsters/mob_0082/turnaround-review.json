@@ -1,0 +1,21 @@
+{
+  "id": "mob_0082",
+  "name": "Vent Skink",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation with targeted rear heel correction; original rear retained.",
+  "confirmed": [
+    "Black basalt scales, amber eyes, orange throat and tail tip retained.",
+    "Rear head has no duplicated face or throat; tail extends opposite screen side to front.",
+    "Rear refinement removes forward-facing hind toe fans and shows rounded heels.",
+    "Four visible limb groups in profiles; four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Rear heels now overly cylindrical; ankle length and lateral claw placement need reconciliation with front/profile feet.",
+    "Profile views are mildly three-quarter and neck heights differ; front itself has raised stance rather than low skink brief.",
+    "Tail curvature looks mirrored between profiles rather than maintaining one anatomical bend in depth.",
+    "Orange light extends along ventral belly/tail more broadly than throat-and-tip brief.",
+    "Toe counts and far-limb attachments partly occluded, not anatomically verified.",
+    "Scale landmarks and head/body proportions drift; no separated parts or runtime animations yet."
+  ],
+  "next": "Align stance, four limb joints, natural heels and five-digit feet; lock tail bend and glow boundaries. Separate head/throat/body/legs/tail for breathing, grounded crawl, bite/heat attack, hit and articulated collapse; add heat shimmer separately."
+}

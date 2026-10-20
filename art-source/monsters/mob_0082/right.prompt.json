@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Vent Skink RIGHT SIDE profile facing imageRIGHT. Reference1 front master, reference2 left for matched proportions. Rotate SAME four-legged black basalt glossy scaled skink to opposite side, orthographic eye-level no three-quarter. Same raised neck/chest stance, four feet stationary, slim long body and tapering tail. One visible amber slit pupil eye. Orange glow on ventral throat and distal tail tip only. Tail bends anatomicalLEFT, therefore away from viewer in this right view, not mirrored toward viewer. Near right foreleg and hindleg, far left pair partially occluded, exactly four legs, five fine clawed toes per foot where visible, no extra limbs. Maintain head size neck height leg lengths and scale pattern. Full body and whole tail in square transparent frame with generous margins. Handpainted fantasy MMORPG matching references. No ground shadow smoke haze text.",
+  "references": [
+    "front.png",
+    "left.png"
+  ]
+}

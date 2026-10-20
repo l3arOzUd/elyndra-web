@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Vent Skink LEFT SIDE profile facing imageLEFT, strict orthographic eye-level. Front reference identity: glossy black basalt scaled slender lizard, four short legs, amber slit pupil eye, orange glowing throat and tapered tail tip. SAME raised neck/chest neutral stance as front, belly low, head horizontal; no upright biped. One visible near eye, far eye occluded. Exactly four legs, near pair clear far pair partially visible behind, natural elbows knees ankles and five clawed toes where visible. Long tail extends behind toward right and bends toward camera (anatomicalleft as front); same taper orange distal tip only. All parts including tail fit square transparent canvas generous margins. Same detailed handpainted fantasy style, no ground shadows text smoke haze extra limbs spikes. Do not turn face toward viewer.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}
