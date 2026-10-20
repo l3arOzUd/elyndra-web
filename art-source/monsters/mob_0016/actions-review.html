@@ -1,0 +1,45 @@
+<!doctype html><meta charset="utf-8"><title>Sandcoil action review</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}button,select{font:inherit;margin:8px}</style>
+<h1>Sandcoil — action key poses</h1>
+<p>Draft artwork. Check coil continuity, head size and floor contact. Not bound to gameplay.</p>
+<select id="clip"><option>attack</option><option>hit</option><option>death</option></select>
+<button id="replay">Replay</button><label><input id="paused" type="checkbox"> Pause</label>
+<input id="frame" type="range" min="0" max="5" value="0"><span id="number"></span><br>
+<canvas id="motion" width="600" height="600"></canvas>
+<canvas id="contact" width="1536" height="1024"></canvas>
+<script type="module">
+const im=new Image();im.src='actions-left.png';await im.decode();
+const motion=document.querySelector('#motion'),g=motion.getContext('2d'),contact=document.querySelector('#contact');
+contact.getContext('2d').drawImage(im,0,0,1536,1024);
+const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
+let start=performance.now();
+// Sheet layout is irregular: preserve the strike tongue and the adjacent coil.
+const regions=[
+ [[0,0],[520,0],[520,530],[0,530]],
+ [[520,0],[990,0],[990,350],[1018,350],[1018,530],[520,530]],
+ [[990,0],[1536,0],[1536,530],[1018,530],[1018,350],[990,350]],
+ [[0,530],[505,530],[505,1024],[0,1024]],
+ [[505,530],[1009,530],[1009,1024],[505,1024]],
+ [[1009,530],[1536,530],[1536,1024],[1009,1024]]
+];
+const anchors=[305,790,1325,270,790,1300],bottoms=[508,508,508,931,937,920];
+function draw(f){
+ const pose=sequences[document.querySelector('#clip').value][f];
+ g.clearRect(0,0,600,600);
+ g.strokeStyle='#d7e0db';g.beginPath();g.moveTo(0,550);g.lineTo(600,550);g.stroke();
+ g.save();g.translate(310-anchors[pose]*.9,550-bottoms[pose]*.9);g.scale(.9,.9);
+ g.beginPath();regions[pose].forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y));g.closePath();g.clip();
+ g.drawImage(im,0,0,1536,1024);g.restore();
+ document.querySelector('#number').textContent=`${f+1} / 6`;
+}
+function tick(t){
+ const paused=document.querySelector('#paused').checked;
+ const f=paused?Number(document.querySelector('#frame').value):Math.max(0,Math.min(5,Math.floor((t-start)/180)));
+ if(!paused)document.querySelector('#frame').value=f;
+ draw(f);requestAnimationFrame(tick);
+}
+document.querySelector('#frame').oninput=()=>document.querySelector('#paused').checked=true;
+document.querySelector('#replay').onclick=()=>{start=performance.now();document.querySelector('#paused').checked=false;};
+document.querySelector('#clip').onchange=()=>{start=performance.now();document.querySelector('#frame').value=0;};
+requestAnimationFrame(tick);window.__sandcoilActions={ready:true};
+</script>

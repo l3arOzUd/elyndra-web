@@ -71,5 +71,13 @@
       "Ground contact and traveling wave continuity remain unapproved.",
       "No runtime export or binding."
     ]
+  },
+  "phaseARepair": {
+    "selected": "crawl-left-a.png",
+    "rejected": [
+      "crawl-left-a-v2.png",
+      "crawl-left-a-v3.png"
+    ],
+    "reason": "Both edits raise head above target and lengthen the apparent upright neck. V3 visible eye near y200 rather than requested y245. Keep original A pending a coherent movement cycle."
   }
 }

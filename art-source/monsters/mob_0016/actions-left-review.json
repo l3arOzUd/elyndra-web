@@ -1,0 +1,22 @@
+{
+  "status": "draft-key-poses-not-production-approved",
+  "source": "actions-left.png",
+  "prompt": "actions-left.prompt.json",
+  "preview": "actions-review.html",
+  "verified": [
+    "Browser composite confirms transparent exterior without baked glow.",
+    "Six poses retain one head, a continuous coiled body and one visible tail.",
+    "Death lowers the neck and relaxes the coil; final eye closed and tongue retracted.",
+    "Irregular source regions preserve strike tongue and neighboring coil in preview.",
+    "Attack, hit and death playback reach frame 6 and hold without browser errors."
+  ],
+  "limitations": [
+    "Only side action key poses; front and back still missing.",
+    "Repeated key poses are not authored in-between animation.",
+    "Coil width, head scale and scale markings drift between poses.",
+    "Final coil topology and apparent body length require continuity review.",
+    "Coiled idle/action shape differs substantially from elongated crawl study.",
+    "Not exported or bound to gameplay."
+  ],
+  "next": "Create consistent front/back action poses and resolve locomotion-to-coil transition before runtime export."
+}
