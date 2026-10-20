@@ -67,6 +67,23 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-animation-pending",
+        "method": "Direct inspection of generated images and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Four root legs and two twig antennae retained",
+          "Back has no face",
+          "Side views have one visible eye and no protruding snout",
+          "Opposite antenna lean corrected",
+          "All four PNG alpha/framing diagnostics pass"
+        ],
+        "limitations": [
+          "Moss patches and shell seams are not pixel-identical across views",
+          "Right profile is slightly broader than left; normalize scale during sprite preparation without stretching anatomy",
+          "This is a painted reference set, not proof of a reconstructable 3D model or completed animation"
+        ],
+        "next": "Create articulated 2D assets and inspect turning, walk contact and death motion in game after roster turnarounds."
+      },
       "sprite": "mosskin_2d",
       "animationFiles": {
         "idle": {
@@ -162,6 +179,23 @@
           },
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "status": "reference-set-created-animation-pending",
+        "method": "Direct image inspection and browser four-view comparison on light background.",
+        "confirmed": [
+          "Cream/rust mushroom cap and gills retained",
+          "Two root feet retained, far foot partly occluded in profiles",
+          "Rear has no face; side profiles show one eye",
+          "Tiny fungal arms and squat stalk proportions retained",
+          "Four RGBA masters pass alpha/framing checks"
+        ],
+        "limitations": [
+          "Cap speckle positions vary between views; exact surface marking continuity is not approved",
+          "Spore motes vary in size and position; separate them into runtime VFX for animated assets",
+          "Side-view framing is slightly taller than front and needs uniform scale/baseline normalization during sprite preparation"
+        ],
+        "next": "Complete roster turnarounds, then author articulated waddling and action clips; do not substitute whole-body rotation for walking or death."
       },
       "sprite": "sporeling_2d",
       "animationFiles": {
@@ -259,6 +293,23 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image inspection and four-view browser comparison on light background.",
+        "confirmed": [
+          "Honey-orange translucent dome with visible internal luminous core retained",
+          "Front and rear show six leg tips; rear has no eyes or mandibles",
+          "Side images retain three near articulated legs, one visible eye and small mandibles",
+          "No introduced crystal spikes or tail",
+          "Four PNGs pass alpha/framing diagnostics"
+        ],
+        "limitations": [
+          "Opposite profile corrected: three near feet now visible on both sides; far legs occluded consistently",
+          "Side framing is slightly larger than front/rear; normalize uniform scale and ground baseline without stretching anatomy",
+          "Bubbles and internal shell highlights vary by view; this does not establish exact 3D surface correspondence"
+        ],
+        "next": "Normalize framing, then prepare separate limb assets and a six-leg gait after roster turnarounds."
+      },
       "sprite": "ambermite_2d",
       "animationFiles": {
         "idle": {
@@ -355,6 +406,23 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct image inspection plus browser comparison of all four views on light background.",
+        "confirmed": [
+          "Leaf-shaped ears, silver-green fur and four limbs retained",
+          "Rear stripe continues forehead stripe, no rear face",
+          "Single banded tail changes screen side correctly between front/rear and left/right",
+          "Wrist-to-ankle glide membranes retained",
+          "All four images pass alpha/framing checks"
+        ],
+        "limitations": [
+          "Side torso/arms retain a partial three-quarter presentation rather than strict orthographic lateral foreshortening; refine before pose rigging",
+          "Tail bands and fur stripe boundaries vary slightly across views",
+          "Uniform scale and foot baseline need normalization for sprite use"
+        ],
+        "next": "Refine lateral torso/arm projection, then author separate tail and membrane-aware limb animation after roster references."
+      },
       "sprite": "lunari_2d",
       "animationFiles": {
         "idle": {
@@ -428,6 +496,23 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct image inspection and four-view browser comparison on light background.",
+        "confirmed": [
+          "Slate armored squat lizard, quartz spine and single stout tail retained",
+          "Front tail tip clarified by reframing",
+          "Small belly gear visible front and character-left side only, not duplicated on opposite flank or rear",
+          "Rear has no face; lateral views show one amber eye",
+          "Four-view PNG alpha and framing diagnostics pass"
+        ],
+        "limitations": [
+          "Rear view shows unequal hind-foot exposure and slight oblique presentation; refine camera/stance before animation",
+          "Side images are smaller in body height because full tail occupies frame width; normalize using body landmarks, not whole alpha bounds",
+          "Individual stone plates and quartz counts vary by view; exact marking continuity not approved"
+        ],
+        "next": "Refine rear stance, register body scale and separate four leg chains plus tail for animation after roster references."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -480,6 +565,23 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct inspection of each generated image and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Stocky boar anatomy, four cloven-hoof legs, woody thorn back and bark hide retained",
+          "Mossy ivory tusks retained in front and lateral views",
+          "Rear contains a small shaggy tail and no duplicated face or tusks",
+          "Left profile reframed to preserve tail margin",
+          "Four-view alpha/framing checks pass"
+        ],
+        "limitations": [
+          "Front/rear occupy more frame height than lateral views; register body landmarks and ground baseline before sprite animation",
+          "Individual thorn counts and moss patches vary between views; exact surface continuity remains unapproved",
+          "Lateral snout still reveals some frontal surface, so strict orthographic projection needs refinement"
+        ],
+        "next": "Refine lateral camera and consistent landmark scale; author weight-bearing four-leg gait and boar-specific attack/death after roster references."
       },
       "sprite": null,
       "animationFiles": {
@@ -534,6 +636,23 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct four-view browser comparison on a light background.",
+        "confirmed": [
+          "Sandy moth identity, cream furry body, feathery antennae and brass eyespots retained",
+          "Rear view omits facial eyes",
+          "Opposing profiles broadly match body and wing silhouettes",
+          "All four files pass transparent-background and edge checks"
+        ],
+        "limitations": [
+          "Side wings change plane relative to spread front wings; these are not strict same-pose orthographic projections",
+          "Six-leg anatomy cannot be verified from overlapping profile limbs; establish explicit limb attachments before animation",
+          "Body scale varies across views and wing tips have tight margins",
+          "Wing veins and markings vary; exact surface continuity is unapproved"
+        ],
+        "next": "Refine same-pose wing projection, register body landmarks and separate four wing layers and six leg chains before authored flight animation."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -586,6 +705,24 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Round blue-green scaled fish, cream belly and translucent veined fins retained",
+          "Rear has no duplicated face; lateral views each show one eye",
+          "Short fin-feet retained without frog toes or mammal paws",
+          "All four images pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Lateral views still expose some frontal mouth and chest surface rather than strict orthographic profile",
+          "Tail is presented broadside in the rear view; its plane is inconsistent with the lateral fan tail",
+          "Dorsal fin bends and fin-ray patterns differ across views",
+          "Four leg attachments need explicit layer design; rear far legs and profile far rear leg are obscured",
+          "Register body landmarks and foot baseline before animation; file framing alone is insufficient"
+        ],
+        "next": "Correct rear tail plane and lateral camera, then define four fin-leg attachment points and separate fin layers for a waddling gait."
       },
       "sprite": null,
       "animationFiles": {
@@ -662,6 +799,24 @@
           },
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Lanky woven reed anatomy and segmented seed-pod head retained; no bird anatomy",
+          "Rear pod has no dart aperture; side openings stay on forward rim",
+          "Revised left opening removes projecting tube",
+          "Revised rear feet show heel bases rather than forward-facing root fans",
+          "Removed unwanted background from rear revision; all four final files pass alpha and edge checks"
+        ],
+        "limitations": [
+          "Rear and side figures occupy more canvas height than front; register neck, hips and ground baseline before animation",
+          "Rear shoulders and hands are broader than front; body proportions still require refinement",
+          "Exact reed weave, pod seam placement and root finger counts vary between views",
+          "Side far limbs are occluded and require separate authored layers for a complete walk cycle"
+        ],
+        "next": "Refine cross-view shoulder and hand proportions and normalize landmark framing, then author reed-leg gait and seed-pod opening/dart attack with separate overlapping limb layers."
       },
       "sprite": "reedstalker_2d",
       "animationFiles": {
@@ -759,6 +914,24 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct four-view browser comparison on a light background, plus alpha and edge checks.",
+        "confirmed": [
+          "Compact rotten root knot and four main walking root limbs retained without humanoid anatomy",
+          "Rear conceals the exposed sap core under woven roots",
+          "Lateral core glimmer stays at the forward rim instead of forming a new flank aperture",
+          "Dark peeling bark, faint teal cracks and moss remain consistent in material",
+          "All four reference files pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Side camera remains oblique rather than strict orthographic; far-leg exposure differs between profiles",
+          "Individual root routes, branching toes and bark cavities differ across views; exact structural continuity remains unapproved",
+          "Right profile extends lower and wider than left; register central mass and grounded feet before animation",
+          "Dense overlapping roots obscure limb attachments; separate four leg chains and restore hidden joints before rigging"
+        ],
+        "next": "Refine lateral projection and landmark registration, then author a low four-leg crawl with independent planted feet, core pulse and collapsing root death."
+      },
       "sprite": "rotroot_2d",
       "animationFiles": {
         "idle": {
@@ -855,6 +1028,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Wooden biped guardian with copper joints and moss seams retained",
+          "Single cracked lens retained in front; no duplicated lens on back",
+          "Side lens stays at forward head plane rather than becoming a side-mounted eye",
+          "Rear heel blocks are shorter than forward toes",
+          "All four images pass transparent-background and frame-edge checks"
+        ],
+        "limitations": [
+          "Side head still exposes more lens surface than a strict 90-degree projection",
+          "Left and right chest thickness and head angle differ slightly",
+          "Rear plate arrangement remains similar to front; confirm intended back construction before layer separation",
+          "Individual wood plates, moss seams and hand articulation differ across views; structural continuity unapproved",
+          "Far side limbs are hidden and need authored complete layers for animation"
+        ],
+        "next": "Refine profile head projection and joint registration, then separate rigid wooden segments at copper pivots for weight-bearing gait, attack and joint-collapse death."
+      },
       "sprite": "barkwarden_2d",
       "animationFiles": {
         "idle": {
@@ -928,6 +1120,24 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct four-view browser comparison on a light background and alpha/frame-edge checks.",
+        "confirmed": [
+          "Three brass-hinged wooden legs, twig bundle, leaf tuft and jade hub retained",
+          "Rear has no duplicated eyes or jade hub bead",
+          "Side views show one near eye and forward-edge hub bead",
+          "Revised left removes short dangling foot; both profiles now show paired forward supports and single rear support",
+          "All four files pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Side front-leg pair remains spread visibly rather than fully occluded in strict orthographic projection",
+          "Rear leg in front master appears shorter due to camera perspective; ground-plane and camera consistency require refinement",
+          "Leaf arrangement, twig weave and brass hinge details vary between views",
+          "Left paired feet spread farther than right; register hub, hinge axes and foot contacts before animation"
+        ],
+        "next": "Refine same-camera tripod support geometry; separate three complete leg chains and author sequential three-leg stepping with stable body support, hub glow and folding collapse."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -980,6 +1190,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Brass beetle shell, glass wings, jade sap reservoir and forward needle identity retained",
+          "Rear has no duplicated eyes or needle",
+          "Side needle points forward and downward; tank remains beneath shell",
+          "Revised left has narrower wings and improved clear margin",
+          "All four final images pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Side wings still change pose relative to spread front wings; same-pose orthographic projection is unapproved",
+          "Six-leg attachment anatomy remains unresolved: front/rear overlap hides legs and profiles do not prove all six distinct chains",
+          "Right profile body and wings are larger than left; register shell center, tank and wing roots before animation",
+          "Front and rear wing tips have tight margins despite no opaque edge pixels",
+          "Wing ribs, rivets and sap liquid details vary between views"
+        ],
+        "next": "Resolve six leg roots and four wing roots explicitly, refine wing projection and scale, then author independent wingbeats, folded leg motion, needle attack and sap slosh."
       },
       "sprite": null,
       "animationFiles": {
@@ -1034,6 +1263,24 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image and four-view browser inspection on a light background.",
+        "confirmed": [
+          "Brass spider gear-frame, thick living vines and leaf sprouts retained",
+          "Cracked jade lens remains on forward face; rear has gears instead of duplicate lens",
+          "Four near-side leg silhouettes distinguishable in each profile",
+          "All four files pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Profiles are visibly oblique, exposing too much front lens and top surface for strict orthographic side references",
+          "All eight complete leg chains cannot be traced through overlap in front/rear; hidden attachment anatomy is unresolved",
+          "Gear tooth patterns, vine routing and leaf positions vary across views",
+          "Far legs appear translucent in profiles; solid limb layers must replace that rendering before animation",
+          "Foot contacts and central body volume require consistent registration across views"
+        ],
+        "next": "Resolve eight explicit leg attachments and opaque far limbs, refine side camera, then separate gear-body and eight articulated legs for spider gait and collapse."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1086,6 +1333,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct image inspection and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Massive rooted stone-and-brass humanoid with bark hood and single jade lantern eye retained",
+          "Revised rear replaces duplicated chest emblem and front groin plate with scapula plates and brass spine",
+          "Revised rear knees show hinge recesses and feet show heel blocks",
+          "Side eye stays inside forward hood opening",
+          "All four images pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Profiles still expose frontal chest surface; strict side projection remains unapproved",
+          "Root routes, stone cracks and small vegetation differ between views",
+          "Clear margin above hood is very narrow despite no opaque edge pixels",
+          "Near fist and knee overlap hides limb joints; complete separated layers are needed for animation",
+          "Shoulder, hip and foot landmarks need consistent registration before rigging"
+        ],
+        "next": "Refine camera and hood framing, separate heavy rigid segments at brass joints, then author weighted steps, fist strike and staged knee/torso collapse."
       },
       "sprite": null,
       "animationFiles": {
@@ -1140,6 +1406,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image inspection and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Saffron scaled short serpent, ember-orange underside and two stacked coils retained",
+          "Rear head has no duplicated face; rear neck uses dorsal scales",
+          "Profiles each show one eye and forward forked tongue",
+          "Tail moves from front viewer-left to rear viewer-right and is mostly hidden in right profile",
+          "All four images pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Coil connections remain hidden; continuous body path and winding direction require explicit construction before animation",
+          "Side head and neck proportions differ slightly and show some three-quarter surface",
+          "Individual scale markings and belly segment counts vary across views",
+          "Coil widths, head centers and tail attachment must be registered consistently",
+          "Heat shimmer is intentionally absent from reference art and remains a runtime VFX task"
+        ],
+        "next": "Resolve continuous coil-to-neck-to-tail path, refine landmarks, then author snake-specific uncoiling travel, spring bite and low settling death without limb-style rigging."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1192,6 +1477,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image and four-view browser inspection on a light background.",
+        "confirmed": [
+          "Amber glass shell with internal ember core and dark chitin legs retained",
+          "Rear abdomen replaces face without duplicated eyes or antennae",
+          "Corrected profiles remove erroneous vertical shell split from flank",
+          "Three near-side legs readable in each profile",
+          "All four final images pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Six complete leg attachment chains cannot be verified through overlap; far front leg remains hidden in profiles",
+          "Profile shell shape is smoother than front/rear faceted elytra; material geometry continuity needs refinement",
+          "Side camera exposes some top and frontal head surface rather than strict orthographic projection",
+          "Shell/body scale and foot contacts need landmark registration across views",
+          "Reflections and ember texture differ; separate static glass from animated core before runtime use"
+        ],
+        "next": "Resolve all six leg chains, harmonize shell geometry, then author beetle gait, mandible attack, folded-leg collapse and independent ember pulse."
       },
       "sprite": null,
       "animationFiles": {
@@ -1246,6 +1550,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct image inspection and four-view browser comparison on a light background.",
+        "confirmed": [
+          "Blocky carved sandstone biped, brass hinge bands and orange visor retained",
+          "Rear helmet has no visor; back plates and brass spine differ from front chest",
+          "Rear hips omit long front groin plate and feet use short heel blocks",
+          "Opposing profiles broadly preserve torso thickness and joint heights",
+          "All four images pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Profiles still expose frontal chest and visor surfaces rather than strict orthographic side",
+          "Carved motifs and stone cracks vary between views; exact pattern continuity remains unapproved",
+          "Far limbs are occluded and require authored full layers before rigging",
+          "Hand orientation and joint axes need explicit registration for articulated motion",
+          "Falling sand is intentionally absent from references and remains runtime VFX work"
+        ],
+        "next": "Refine lateral projection and joint registration, separate rigid sandstone segments, then author heavy steps, fist attack, joint collapse and sand emission."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1298,6 +1621,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct generated-image and four-view browser inspection on a light background.",
+        "confirmed": [
+          "Tall bronze guardian, faceless polished head, back-mounted mirror halo and long spear retained",
+          "Spear stays in character right hand: near gripping arm in left view, far gripping arm with relaxed near arm in right view",
+          "Weapon remains ahead of torso in profiles; full spear endpoints visible",
+          "Rear halo panels show bronze backs and back torso has spine detailing",
+          "All four images pass alpha and frame-edge checks"
+        ],
+        "limitations": [
+          "Halo profiles are still partly oblique; visible panel positions do not prove one consistent rigid ring",
+          "Original front prompt requests six panels but front and rear show only five clearly visible; resolve hidden panel/mount design before animation",
+          "Front figure is smaller in frame; register head, grip, hips and feet rather than whole weapon bounding box",
+          "Rear spear blade is longer than front relative to head; weapon dimensions need harmonization",
+          "Profile head and heel geometry differ from front and require refinement"
+        ],
+        "next": "Resolve rigid halo panel layout and standard spear dimensions, refine landmarks, then separate right-hand weapon chain, legs and halo for thrust, guard and collapse animation."
       },
       "sprite": null,
       "animationFiles": {
@@ -1352,6 +1694,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0020",
+        "name": "Tidehopper",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual review of front, back and both generated profiles. File validation is separate from design approval.",
+        "confirmed": [
+          "Blue-grey frog with cream underside, large folded hind limbs and small forelimbs preserved.",
+          "Pearly overlapping shell dome and barnacles present in all views.",
+          "Profiles face opposite directions with one eye visible; no added tail or fins."
+        ],
+        "limitations": [
+          "Rear webbed toes spread toward viewer; verify rear foot orientation against side stance.",
+          "Shell tile arrangement and barnacle placement vary across views; establish fixed landmark map.",
+          "Side eyes and chest retain some oblique volume; strict orthographic alignment not proven.",
+          "Hidden far hind limb attachments require anatomical construction before animation.",
+          "Image scale differs between front/rear and side references."
+        ],
+        "next": "Resolve landmarks, foot direction and hidden joints, normalize framing, then separate articulated parts and author animation. Not an animation-ready approval."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1404,6 +1765,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0021",
+        "name": "Coral Claw",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual inspection of all four views; alpha validation is not anatomy approval.",
+        "confirmed": [
+          "Large anatomical right claw preserved: viewer-left front, viewer-right rear, near on left-facing view and far on right-facing view.",
+          "Teal cream shell and pink orange branching coral preserved.",
+          "Rear has no face or eyestalks."
+        ],
+        "limitations": [
+          "Side views retain three-quarter body exposure rather than strict orthographic profile.",
+          "Eight walking-leg chains are not individually traceable in all views; near/far overlap needs construction review.",
+          "Coral branch topology and attachment landmarks vary across views.",
+          "Small claw gains coral compared with front; match surface detailing.",
+          "Rear claw orientation and arm attachment are partially hidden and not proven coherent."
+        ],
+        "next": "Resolve strict profile cameras, eight walking-leg attachments and fixed coral landmarks before part separation and animation."
       },
       "sprite": null,
       "animationFiles": {
@@ -1458,6 +1838,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0022",
+        "name": "Brine Automaton",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual inspection of four references; framing validation is not mechanical consistency approval.",
+        "confirmed": [
+          "Copper barrel, verdigris, brass, salt, piston limbs and gauge eyes preserved.",
+          "Rear replaces eyes and belly wheel with tank straps and maintenance hatch.",
+          "Profiles point opposite directions with tank behind torso and toes facing forward."
+        ],
+        "limitations": [
+          "Side valve stems appear at different heights despite front paired level layout; must align fixed mount positions.",
+          "Side knee plates retain frontal appearance; define hinge axes and distinguish near/far legs.",
+          "Rear clamp hands resemble front-facing fingers; finger curvature needs construction review.",
+          "Tank depth and gauge face exposure in profiles need strict orthographic alignment.",
+          "Top valve margins are tight; normalize framing before animation.",
+          "Salt and rivet patterns vary; fixed surface landmark map pending."
+        ],
+        "next": "Correct mechanical axes, tank and valve mounts and hand orientation, then normalize, separate rigid parts and animate. Steam should be runtime VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1510,6 +1910,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0023",
+        "name": "Relay Guardian",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual review of four images; file/alpha validation separate from structural approval.",
+        "confirmed": [
+          "Single sonar dish with cyan concave front, bronze ribbed rear and narrow bowl profiles.",
+          "Dark bronze diving-suit armor, ribbed hoses, lead boots and cyan joint accents preserved.",
+          "Rear knee flexion gaps and heel blocks differentiated from front."
+        ],
+        "limitations": [
+          "Profiles show cyan face as a broad luminous strip rather than thin ring intersections; reconcile dish depth and ring projection.",
+          "Hose endpoints and neck bracket geometry need common construction map across all views.",
+          "Far limbs fully occluded in profiles; separate hidden parts needed for rigging.",
+          "Finger counts and joint axes not established by references.",
+          "Top dish attachment has tight margin; normalize scale and baseline before sprite production.",
+          "Patina, rivets and backing rib placement vary between images."
+        ],
+        "next": "Align dish cross-section and hose mounts, define hidden limbs and fixed joints, then separate parts and animate sonar emission as runtime VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -1564,6 +1984,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0024",
+        "name": "Frost Mite",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual inspection of four references; file validation not anatomy approval.",
+        "confirmed": [
+          "Frost-white cyan crystal dome, central tall prism and blue jointed legs preserved.",
+          "Rear has no face; profiles show one eye and forward mandibles.",
+          "Three near-side leg attachments readable in profiles."
+        ],
+        "limitations": [
+          "Far-side legs overlap and cannot all be traced; six complete joint chains need construction review.",
+          "Front and rear use similar leg silhouettes; verify opposite-view stance and support-foot locations.",
+          "Crystal counts, facet boundaries and orientation differ across views; establish fixed shell landmarks.",
+          "Profile body length and eye size need scale alignment with front.",
+          "Ice glow and edge opacity vary; inspect against game terrain during sprite production."
+        ],
+        "next": "Resolve six-leg topology and shell landmarks, normalize frame and ground line, separate limbs and author alternating tripod movement without stretching."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1616,6 +2055,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0025",
+        "name": "Prism Wisp",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual inspection of four references, not a proof of common 3D lattice topology.",
+        "confirmed": [
+          "White luminous spherical core remains filled, surrounded by open prismatic crystal lattice.",
+          "Side references introduce central foreground struts rather than copying frontal open hexagon.",
+          "Top and bottom nodes remain upright; no added face or limbs."
+        ],
+        "limitations": [
+          "Exact lattice node/edge correspondence across views is unproven; construct a fixed cage graph before rotation animation.",
+          "Left and right are visually near identical; symmetry is plausible but not a verified physical rotation.",
+          "Core glow, facet colors and opening widths vary.",
+          "Some windows are irregular rather than clearly hexagonal; refine against Bible.",
+          "Edge opacity and white fringes require compositing review against actual terrain."
+        ],
+        "next": "Resolve a shared hexagonal cage structure, separate core and near/far lattice layers, normalize framing, author hover/pulse/attack/death motion and separate rainbow-beam VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -1670,6 +2128,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0026",
+        "name": "Icegear",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual review of four references; file validation does not prove articulated leg topology.",
+        "confirmed": [
+          "Three frozen gear discs with brass mechanism, spindle and hanging icicles preserved.",
+          "Rear lens replaced by plain cap; side lens placed toward facing edge.",
+          "Rigid brass joints and ice-covered leg segments retained."
+        ],
+        "limitations": [
+          "Eight complete leg chains cannot be traced in front/rear due overlap; source master itself needs construction clarification.",
+          "Side views remain oblique and show lens face instead of strict edge-on projection.",
+          "Near/far leg roots and stance differ between lateral views.",
+          "Gear tooth counts and icicle positions vary; fixed rotating part geometry needed.",
+          "Rear largely repeats front stance; verify opposite-view attachment ordering."
+        ],
+        "next": "Construct eight fixed-length leg chains and coherent gear stack, align cameras and landmarks, then separate rigid parts and author walking/attack/death with no limb stretching."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1722,6 +2199,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0027",
+        "name": "Archive Keeper",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual inspection of all four views; alpha/framing pass does not imply anatomical consistency.",
+        "confirmed": [
+          "Tall slender ice-blue crystal and silver articulated construct preserved.",
+          "Rear slate backing and segmented spine differentiated from luminous front display.",
+          "Profiles face opposite directions with cyan display on forward edge and toes forward."
+        ],
+        "limitations": [
+          "Profile head backing is deeper than front suggests; establish fixed slate thickness.",
+          "Side chest/hip armor retains oblique exposure; camera alignment needs refinement.",
+          "Five fingers per hand not individually traceable due overlapping digits.",
+          "Rear hands and knee plates need explicit joint-axis and palm/back construction.",
+          "Front/back/left crest margins very tight despite no alpha edge failure.",
+          "Far limbs missing behind near limbs need complete hidden-part drawings for animation.",
+          "Crystal plate boundaries and highlights vary between views."
+        ],
+        "next": "Resolve head cross-section, hands and joints, normalize framing, draw hidden limb parts, then animate precise core-handling and combat motions."
       },
       "sprite": null,
       "animationFiles": {
@@ -1776,6 +2274,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0028",
+        "name": "Ashcrawler",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual review of all four views; file validation separate from cross-view construction approval.",
+        "confirmed": [
+          "Rounded ash-grey overlapping plates, restrained ember seams and soot-black legs preserved.",
+          "Rear has no eyes; profiles show one gentle amber eye and six near-side legs.",
+          "No added spikes wings or machinery."
+        ],
+        "limitations": [
+          "Front/rear leg roots hidden; twelve complete leg chains not yet proven.",
+          "Rear repeats front-like plate overlap; verify actual plate direction from common body construction.",
+          "Side shell length and height need projection alignment to frontal dome.",
+          "Plate counts and seam routes vary between views; fix landmarks before articulation.",
+          "Side extremities have tight horizontal margins despite passing edge check.",
+          "Far legs require complete drawings for crawl cycle."
+        ],
+        "next": "Align shell segmentation and twelve leg sockets, normalize frame and ground line, separate overlapping rigid plates and author slow sequential crawl without limb stretching."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1828,6 +2346,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0029",
+        "name": "Cinder Imp",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual inspection; file alpha/framing validation separate from design approval.",
+        "confirmed": [
+          "Charcoal body, amber eyes, round glowing cracked belly, ash-grey hands and two flame horns preserved.",
+          "Rear face removed and belly glow reduced.",
+          "Opposite side profiles show short snout, forward belly and feet."
+        ],
+        "limitations": [
+          "Finger counts differ: front master shows fewer separated digits than profile; resolve canonical hand anatomy.",
+          "Right profile mirrors tall near horn appearance rather than reliably preserving asymmetric horn roots.",
+          "Profile far hand reads as tail-like silhouette; draw clear limb connection or occlude fully.",
+          "Crack landmarks vary across views; fixed surface map needed.",
+          "Rear ears show inner surfaces and knee shapes need anatomical correction.",
+          "Flame and head framing tight; normalize body scale independently of animated flame tips."
+        ],
+        "next": "Correct hands, horn roots and far arm, align crack map and joints; separate horn flame layers and author grounded footsteps plus separate glowing footprint VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -1882,6 +2420,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0030",
+        "name": "Smelt Hound",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual inspection; alpha/framing pass does not validate canine gait construction.",
+        "confirmed": [
+          "Lean iron canine with molten bellows ribs pointed ears narrow muzzle and four legs preserved.",
+          "Rear shows spine and tail attachment without face.",
+          "Profiles expose articulated hind legs and attached jaw slag bead."
+        ],
+        "limitations": [
+          "Profiles have staggered/lifted-looking far paws and differ from front neutral stance; align support plane before rigging.",
+          "Side views retain three-quarter chest and muzzle exposure.",
+          "Tail curve projects as mirrored broadside arc; shared rightward curl path unverified.",
+          "Rear ears show inner surfaces and rear paws retain toe-like fronts; correct orientation.",
+          "Rib counts rivet layout and armor boundaries vary.",
+          "Digitigrade knee/hock axis correspondence and segment lengths require construction review.",
+          "Horizontal margins tight in side views."
+        ],
+        "next": "Resolve four fixed-length canine leg chains and support feet, tail path and rib landmarks; separate armor/bellows layers and author grounded gait, jaw attack, collapse and separate spark/slag VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -1934,6 +2493,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0031",
+        "name": "Furnace Knight",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual review of four views; file checks do not prove mechanical consistency.",
+        "confirmed": [
+          "Right-hand sword retained: front viewer-left, rear viewer-right, left-facing near hand, right-facing far hand with near hand empty.",
+          "Rear has closed vent housing and rear helmet instead of open front furnace and visor.",
+          "Dark riveted armor twin exhausts heated blade and furnace identity preserved."
+        ],
+        "limitations": [
+          "Side furnace door hinge/open angle does not reconcile reliably with front; establish fixed hinge construction.",
+          "Sides remain three-quarter and show too much front furnace.",
+          "Sword angle shifts forward and blade proportions/glow vary; align grip and fixed weapon dimensions.",
+          "Chimney heights/mount offsets vary with viewpoint.",
+          "Rear shin plates and side knee axes require mechanical construction review.",
+          "Armor rivet/panel landmarks and frame scale need normalization."
+        ],
+        "next": "Resolve furnace door hinge, right-hand grip, rigid blade and armor joint axes, then separate parts and author heavy walk/slash/collapse plus separate smoke and heat VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -1988,6 +2567,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0032",
+        "name": "Null Wisp",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual inspection of four reference images; no proof of a shared volumetric vapor shape.",
+        "confirmed": [
+          "Faceless violet-black spectral knot and hollow luminous white core retained.",
+          "Side core narrows and moves toward facing contour; front/back core circular.",
+          "No introduced limbs eyes mouth skull or props."
+        ],
+        "limitations": [
+          "Side core remains an oblique ellipse rather than exact edge-on torus; settle physical core shape before rotations.",
+          "Rear largely mirrors front; connected tendril depth and landmarks unverified.",
+          "Side silhouette widths and curls differ; normalize underlying mass.",
+          "Dark core-center opacity differs by view; inspect compositing on actual terrain.",
+          "Top/bottom tendrils have tight margins, require safe animation padding."
+        ],
+        "next": "Define consistent core cross-section and vapor layers, normalize frame, author flowing hover/attack/dissipation animation and separate dimming trail VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2040,6 +2638,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0033",
+        "name": "Shade Carrier",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual review of four references; file validation separate from vehicle construction approval.",
+        "confirmed": [
+          "Six-wheel design: three near-side wheels visible in each profile, front/back show three per side.",
+          "Rear closed cargo doors differ from smashed cab/front jaw.",
+          "Dark iron freight body violet shadow windows and energy seams retained."
+        ],
+        "limitations": [
+          "Front headlights are painted facing camera in side views, inconsistent with forward-facing mounts.",
+          "Side exhaust placement includes rear stack unlike front pair near cab; establish fixed locations.",
+          "Front/rear views retain perspective with visible sidewalls; not strict orthographic.",
+          "Jaw-door hinges and open angles require common construction map.",
+          "Wheel size, axle spacing and body length need normalized scale comparison.",
+          "Cargo panel seam patterns vary; preserve landmarks for animation.",
+          "Side bumpers have tight frame margins."
+        ],
+        "next": "Resolve fixed six-wheel chassis dimensions, lamp/exhaust mounts and jaw hinges; separate wheels, body, doors and shadow layers for roll/attack/collapse animation."
       },
       "sprite": null,
       "animationFiles": {
@@ -2094,6 +2713,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0034",
+        "name": "Lattice Drone",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Direct visual review of all four references; file checks do not verify shared mechanical topology.",
+        "confirmed": [
+          "Six radial vanes and hexagonal dark frame retained in front/rear.",
+          "Single front tracking lens, opaque rear cap, spherical violet lattice core.",
+          "Profiles point lens in opposite directions and narrow the frame."
+        ],
+        "limitations": [
+          "Right profile adds visible diagonal fin tips absent on left; inconsistent edge-on projection must be corrected.",
+          "Six vane roots cannot all be traced in profiles; define fixed coplanar frame and vane geometry.",
+          "Lens remains oblique rather than exactly edge-on.",
+          "Lattice band routes change across views; establish shared core structure.",
+          "Frame/core thickness and top/bottom vane dimensions need normalization.",
+          "Tips close to canvas edge require animation padding."
+        ],
+        "next": "Correct lateral vane projection and fixed frame geometry, separate lens/core/frame/vanes, then author tracking aim, hover, firing and breakup with separate beam VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2146,6 +2785,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0035",
+        "name": "Meridian Executor",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front master; opposite profile referenced; targeted removal of fifth blade in both profiles; visual inspection plus separate alpha/framing checks.",
+        "confirmed": [
+          "Front and back show four blade arms and two legs.",
+          "Corrected profiles each show exactly four blade tips; discarded five-blade versions retained as drafts.",
+          "Rear helmet has no frontal luminous slit; rear torso uses segmented spine plating.",
+          "Right profile faces right and left profile faces left."
+        ],
+        "limitations": [
+          "Far upper arm roots overlap near upper arms in profiles; independent shoulder connections cannot be fully traced. Must resolve before rigging.",
+          "Profile blade fan is rotated relative to front/back neutral pose. Match elbow angles and blade depth across views before multiview reconstruction.",
+          "Profile feet largely overlap; two-leg depth and rear knee articulation require consistency review.",
+          "Armor seams and blade lengths vary across views; file completeness does not establish animation-ready anatomy."
+        ],
+        "next": "Refine arm-root topology and pose consistency, then separate articulated parts with fixed-length bones; validate motion and equipment/VFX later."
       },
       "sprite": null,
       "animationFiles": {
@@ -2200,6 +2858,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0036",
+        "name": "Hollowroot Warden",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation with front master and opposite profile references; left camera correction; visual anatomy inspection separate from file checks.",
+        "confirmed": [
+          "Copper pipe arms, thick root legs, moss and weathered copper preserve Bible identity.",
+          "Front has exposed teal Aetherite heart; back has opaque boiler/root plating without frontal face or exposed heart.",
+          "Corrected side views face opposite directions with one eye visible and heart restricted to front edge.",
+          "No added hands or separate weapons."
+        ],
+        "limitations": [
+          "Back pipe ends look capped and point toward viewer; must correct nozzle orientation and open-pipe construction before approval.",
+          "Side rear boiler depth and protruding fittings need reconciliation with rear master.",
+          "Side root-foot routes differ and far limbs are occluded; joint anchors cannot yet be traced reliably across all views.",
+          "Side pipe angle and elbow height differ slightly; neutral-pose correspondence and consistent scale remain pending."
+        ],
+        "next": "Correct rear nozzle geometry and cross-view joint landmarks, then separate parts and author fixed-length articulated animation; not runtime-ready."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2252,6 +2929,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0040",
+        "name": "Mossback Newt",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front master; rear tail corrected in two targeted edits; opposite profile reference used.",
+        "confirmed": [
+          "Olive amphibian skin, pale belly, jade eyes and moss/dew preserve Bible identity.",
+          "Rear no longer has two free tail lobes or closed tail loop; one central root leads to a tapered leftward tip.",
+          "Side images face opposite directions with one visible eye and four limb positions, far hind foot partly occluded.",
+          "All generated files saved with prompts and discarded rear variants."
+        ],
+        "limitations": [
+          "Right profile tail curl appears on near side as in left profile, rather than preserving anatomical-left curl depth; must reconcile before rigging.",
+          "Rear feet point partly toward viewer and require anatomical heel/toe review.",
+          "Side views remain slightly oblique in face/forefeet; strict projection and body-height alignment pending.",
+          "Moss/dew landmarks and toe counts differ; root-to-tip tail shape across all four views not yet consistent."
+        ],
+        "next": "Correct tail depth and joint landmarks, then author separated fixed-length limb animation and verify in game. Reference availability is not animation readiness."
       },
       "sprite": null,
       "animationFiles": {
@@ -2306,6 +3002,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0041",
+        "name": "Jadewing Moth",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front master; corrected folded-wing left draft into edge-on wing projection before creating right.",
+        "confirmed": [
+          "Four jade wings with golden circuit-like veins, large upper eyespots, sage furry thorax, emerald abdomen and two feathered antennae preserve identity.",
+          "Back has no face eyes/mouth; dorsal fur replaces ventral facial details.",
+          "Side views face opposite directions with one visible eye and thin wing-edge projection rather than broad folded membranes.",
+          "Particle dust omitted from body reference intentionally for later separate VFX."
+        ],
+        "limitations": [
+          "Side wing extremities extend higher/lower relative to body than front/back; fixed-pose projection not yet geometrically consistent.",
+          "Six legs overlap; individual far-side roots and full limb count cannot be traced confidently in side images.",
+          "Front/back wing tips have very narrow canvas margins; normalize framing before animation exports.",
+          "Wing vein landmarks and abdominal segment contours differ slightly; four-view consistency approval pending."
+        ],
+        "next": "Align wing hinge/extremity landmarks and six-leg topology, separate wings/body/legs for articulated flap animation and author luminous dust VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2358,6 +3073,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0042",
+        "name": "Barkhound",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation using front identity and opposite side reference; visual inspection of canine limbs, tail and bark landmarks.",
+        "confirmed": [
+          "Brown quadrupedal wolf with jade eyes, wooden fangs, layered bark and mossy tail preserves Bible design.",
+          "Four planted paws visible in both profiles, no added limbs or weapons.",
+          "Rear face is hidden; tail appears image-left behind versus image-right in front.",
+          "Right profile near hind leg overlaps tail rather than tail painted over leg."
+        ],
+        "limitations": [
+          "Profile hind-leg stance is staggered relative to front/back; fix neutral pose and hock landmarks before rigging.",
+          "Rear paws still show dark claw-like shapes facing viewer; heel/toe orientation needs correction.",
+          "Bark plates and moss routes differ across views; establish stable shoulder/spine landmarks.",
+          "Profile head and forepaws slightly oblique; nose/tail margins narrow. Normalize projection and framing before exports."
+        ],
+        "next": "Reconcile hind-leg pose and rear paw orientation, then separate body/head/four articulated legs/tail and author walk/attack/hit/death animations."
       },
       "sprite": null,
       "animationFiles": {
@@ -2412,6 +3146,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0043",
+        "name": "Pruning Tender",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front master, rear tank definition and opposite profile reference; visual review distinct from alpha/framing checks.",
+        "confirmed": [
+          "Three tripod feet, two shear arms and separate chest nozzle visible in each view.",
+          "Single broad jade sap reservoir on rear explains glass side bulges of front image.",
+          "Rear has no eye lenses or frontal nozzle; side tank lies behind barrel and nozzle projects forward.",
+          "Moss lid, brass material and tool identity preserved."
+        ],
+        "limitations": [
+          "Side views retain some three-quarter front-panel exposure; eye/nozzle projection needs stricter lateral alignment.",
+          "Shear opening angles and arm pitch differ between profiles and front; reconcile neutral joint pose.",
+          "Far leg roots overlap near front legs; exact tripod attachment correspondence not fully verified.",
+          "Rear reservoir straps/pipe and moss placement vary; normalize landmarks and framing before part extraction."
+        ],
+        "next": "Correct arm pose and tripod root correspondence, then separate articulated legs/shears and author walking, pruning attack and sap-spray animation/VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2464,6 +3217,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0044",
+        "name": "Thistlehare",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front master and opposite profile references; checked leap-pose identity, limb visibility and rear orientation.",
+        "confirmed": [
+          "Very long ears, purple-green thistle burr coat, dark eyes and white cotton tail preserve Bible design.",
+          "All views retain tucked airborne leap rather than switching to standing pose.",
+          "Profiles show two forepaws and two hind feet; one face eye visible in each.",
+          "Rear shows burr-covered ear backs and no face."
+        ],
+        "limitations": [
+          "Ear spread/tilt and hind-foot overlap vary between profiles; pose correspondence requires refinement.",
+          "Rear hind paws still show forward-looking claw tips; heel/sole orientation needs review.",
+          "Cotton-tail position in front is off-center projection while rear centered; depth consistency unverified.",
+          "Ear-tip margins are extremely narrow despite alpha-edge checks passing; normalize framing and burr landmarks before animation."
+        ],
+        "next": "Align ears/hips/hocks and tail attachment across views, then separate articulated parts and create hop cycle, attack, hit and death without stretching limbs."
       },
       "sprite": null,
       "animationFiles": {
@@ -2518,6 +3290,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0045",
+        "name": "Antlered Engine",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front master and opposite side reference; targeted removal of unintended hip furnace in left profile.",
+        "confirmed": [
+          "Four-legged stag, living wood, brass ribs, copper/wood antlers and moss preserve Bible identity.",
+          "Both profiles now restrict large jade furnace to chest; hip glow removed from left.",
+          "Rear has no face/eyes and shows wood spine/rump with small tail.",
+          "Four hooves visible in profiles."
+        ],
+        "limitations": [
+          "Antler branch paths and copper coil overlaps vary; individual tines not yet mapped across views.",
+          "Rear view anatomy is overly flattened with front-like hooves and rib placement; correct rump/hock depth and ear backs.",
+          "Profile hind-leg stance differs from frontal neutral stance; joint landmarks need alignment.",
+          "Rear faint green side insets may conflict with opaque profile hips; reconcile material placement before rigging."
+        ],
+        "next": "Resolve rear anatomy, antler correspondence and neutral leg pose; separate fixed-length limb parts and author locomotion/attack/death plus chest glow VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2570,6 +3361,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0046",
+        "name": "Sporebloat",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front/rear masters and opposite profile; visual review of vent orientation and hanging-root identity.",
+        "confirmed": [
+          "Violet floating fungus sack, jade vent openings, layered speckled lobes and root tendrils preserve Bible identity.",
+          "Rear central lobe is closed and distinct from large frontal vent.",
+          "Side front vent lies at left edge in left view and right edge in right view.",
+          "No humanoid limbs or accessories; detached spore VFX excluded from body art."
+        ],
+        "limitations": [
+          "Root count, branching and attachment routes differ across views; define stable root rig topology before animation.",
+          "Side vent size/position and pore patterns differ from corresponding frontal flank openings.",
+          "Rear vent arrangement has not been mapped to side lobe boundaries; continuous surface layout unverified.",
+          "Cap overlap and body volume vary slightly; normalize silhouette and landmarks before part extraction."
+        ],
+        "next": "Resolve vent/root correspondence, separate articulated roots and vent masks, then author float, pulse, attack/spore release, hit and death with separate particle VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -2624,6 +3434,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0047",
+        "name": "Spore Matron",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front master, rear ridge and opposite profile; visual review of fungal structure and lantern attachments.",
+        "confirmed": [
+          "Tall cream fibrous stalk, layered plum/ochre frilled cap and attached jade lanterns preserve Bible identity.",
+          "Rear central ridge lacks frontal slit; side silhouettes show cap depth.",
+          "No humanoid limbs, weapons or clothing added.",
+          "Front/back eight-lantern design retained as target for rig."
+        ],
+        "limitations": [
+          "Side lantern overlap prevents verifying all eight independent attachments; visible cord routes differ and require explicit mapping.",
+          "Side cap projection remains somewhat oblique; front ridge/slit position and gill folds not exactly consistent.",
+          "Root branches and layered stalk shelves change across views; establish stable deformation landmarks.",
+          "Top cap margin narrow; normalize framing before sprite extraction. File checks do not prove consistent topology."
+        ],
+        "next": "Map eight lantern anchors and consistent cap/stalk/root surfaces, then separate hanging pods for sway and author movement/attack/hit/death with spore VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2676,6 +3505,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0048",
+        "name": "Heartwood Pistonguard",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation using front identity, rear casing and opposite profile references; visual review of piston/stack/foot orientation.",
+        "confirmed": [
+          "Polished red heartwood casing, brass piston arms/fists and short legs preserve Bible identity.",
+          "Two exhaust stacks retained, with mushroom/moss attachments and no baked smoke cloud.",
+          "Rear head has no eyes and rear torso replaces front leaf crest with service frame.",
+          "Right view closer to lateral elevation with foot and chest facing right."
+        ],
+        "limitations": [
+          "Left remains three-quarter and shows both feet spread; right has near-complete far-leg occlusion, so projections do not match.",
+          "Rear feet resemble frontal toe plates; heel design needs explicit correction.",
+          "Piston extension, fist/thumb orientation and elbow landmarks need cross-view mechanical consistency.",
+          "Stack heights, mushrooms and panel seams vary; establish stable VFX emitter anchors and frame alignment."
+        ],
+        "next": "Correct left camera and rear heels, reconcile piston joints, then separate articulated limbs and author walk/punch/hit/death plus exhaust steam/spore VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -2730,6 +3578,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0049",
+        "name": "Heartwood Regent",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front identity, rear spine and opposite profile; visual review of pump placement and root-limb topology.",
+        "confirmed": [
+          "Tall living wood king with branch crown, jade veins, brass pump chest and root limbs preserves Bible identity.",
+          "Rear has no face and uses central brass spine/pipe structure rather than frontal pump display.",
+          "Profiles place pump toward front and rear pipes behind torso.",
+          "No separate weapons or detached effects added."
+        ],
+        "limitations": [
+          "Root fingers, crown branches and leaf landmarks differ across views; exact branch/finger topology needs reconciliation.",
+          "Far arm and leg strongly occluded in profiles, so independent joints cannot be fully verified.",
+          "Rear feet and knee ornaments remain front-like; heel roots and articulation need correction.",
+          "Torso depth, pump protrusion and vein paths vary; normalize mechanical landmarks before animation."
+        ],
+        "next": "Align pump cylinders, limb joints and crown/root topology, then separate parts and author walk/attack/hit/death with pump-stroke and jade-vein VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2782,6 +3649,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0050",
+        "name": "Ochre Jackal",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front master, rear coat reference and opposite profile; checked collar handedness and canine limbs.",
+        "confirmed": [
+          "Ochre fur, large ears, dark dorsal stripe and single brass collar tag preserve Bible identity.",
+          "Rear has no face or duplicated tag; tail hangs image-left consistent with front image-right.",
+          "Profiles show four canine legs and a single tail.",
+          "Right profile buckle visible and left profile omits matching buckle, preserving front-defined anatomical side."
+        ],
+        "limitations": [
+          "Rear collar buckle appears toward image-left, inconsistent with anatomical-right buckle; fix rear hardware placement.",
+          "Dorsal stripe broadens into saddle in profiles; match width and shoulder boundaries across views.",
+          "Profile stance staggered compared with front, and rear paws/heels need anatomical review.",
+          "Ear/nose margins very narrow; normalize framing. Tail depth and far-leg alignment remain unverified."
+        ],
+        "next": "Reconcile coat/collar/stance landmarks, then separate four fixed-length legs, head/ears/tail/tag and author walk/run/attack/hit/death."
       },
       "sprite": null,
       "animationFiles": {
@@ -2836,6 +3722,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0051",
+        "name": "Brass Kite",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front identity, rear housing and opposite profile; checked lens direction, sail thickness and ribbon anchors.",
+        "confirmed": [
+          "Diamond brass/cream cloth kite, central gear drive and one focusing lens preserve Bible identity.",
+          "Rear lens housing opaque; profile lens points left/right correctly.",
+          "Side sail is narrow rather than broad frontal diamond.",
+          "Three ribbon attachment groups remain target topology; no bird anatomy added."
+        ],
+        "limitations": [
+          "Side corner spars project fore/aft rather than fully overlapping depth; strict lateral frame geometry needs correction.",
+          "Far side ribbon group hidden or omitted; cannot prove all strip attachments from side images.",
+          "Ribbon curves/counts and gear details vary across views; define stable anchors and strip topology.",
+          "Sail thickness and lens housing depth unverified against front/back; validate on light background before export."
+        ],
+        "next": "Reconcile spars and ribbon topology, separate rigid kite frame/lens/gears from deformable ribbons, then author hover/attack/hit/death and lens VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2888,6 +3793,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0052",
+        "name": "Glasstail Basilisk",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation using front identity and corrected rear reference; preserved drafts of branched tail and clipped left profile.",
+        "confirmed": [
+          "Four-legged sandy scaled basilisk with orange frill and a single amber glass tail club preserves Bible identity.",
+          "Rear extra tail stub removed; one continuous tail remains.",
+          "Left outer tail contour now fully inside canvas; all four files pass alpha/nonempty/edge validation."
+        ],
+        "limitations": [
+          "Side images remain three-quarter rather than strict lateral; frill and chest show too much width.",
+          "Rear feet retain front-facing claws; heel and toe orientation requires repainting.",
+          "Tail near/far routing and scale landmarks differ across views; not a consistent reconstruction reference yet.",
+          "Canvas margins and subject scale vary; normalize after anatomical corrections.",
+          "No animation-ready separated parts or completed runtime animation supplied by this reference set."
+        ],
+        "next": "Correct camera, rear feet and tail topology, then separate four leg chains, torso/head/frill and tail club for idle/walk/attack/hit/death animation."
       },
       "sprite": null,
       "animationFiles": {
@@ -2942,6 +3866,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0053",
+        "name": "Gnomon Acolyte",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from Bible front identity, rear construction and opposite profile.",
+        "confirmed": [
+          "Slim brass automaton, sun-bleached robes, triangular sundial crest and mirror palms retained.",
+          "Rear helmet has no face; rear hand plates opaque rather than mirrored.",
+          "Right hip pendant visible on right profile and rear image right; not duplicated on left profile.",
+          "Four RGBA images pass nonempty/transparent/framing checks."
+        ],
+        "limitations": [
+          "Profile palms still turn toward camera rather than preserving exact front pose; wrist orientation needs reconciliation.",
+          "Far arm and leg overlap or disappear in profiles; hidden limb continuity not proven.",
+          "Robe tears, folds and pendant segment shapes differ across views; stable garment seam and ornament map required.",
+          "Crest nearly touches upper edge; passes technical edge check but lacks requested generous margin.",
+          "Not separated into animation parts or approved for runtime."
+        ],
+        "next": "Reconcile wrist orientation, crest geometry, robe seams and pendant segments; build articulated limb parts and cloth layers for idle/walk/mirror-cast/hit/death."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -2994,6 +3938,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0054",
+        "name": "Canal Strider",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front identity, rear reference and corrected left profile. Original seven-leg left draft preserved.",
+        "confirmed": [
+          "Teal insect with silt-pearl eyes, two antennae and silver foot pads retains front identity.",
+          "Left extra central seventh leg removed; final views show two short forelegs and four long legs.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Antennae sweep backward in left profile but forward in right; reconcile 3D direction and joint locations.",
+          "Side leg roots and spread differ; trace each of six chains consistently before rigging.",
+          "Front master is upright and mantis-like rather than a natural low water-strider; this posture must be reconciled with Bible and locomotion.",
+          "Rear silhouette largely repeats front stance; front/back depth remains unproven.",
+          "Segment seams and pad perspective vary; no animation-ready separated assets yet."
+        ],
+        "next": "Reconcile posture, antenna direction and six leg attachment chains, then author skitter locomotion, attack, hit and death with fixed-length articulated legs."
       },
       "sprite": null,
       "animationFiles": {
@@ -3048,6 +4011,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0055",
+        "name": "Dust Revenant",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation using front identity and opposite-view references.",
+        "confirmed": [
+          "Hollow hood without skull or eyes; rear hood closed cloth.",
+          "Lantern remains in anatomical right hand: image left front, image right rear, far arm left profile and near arm right profile.",
+          "Two skeletal hands, floating wraps without feet; dust kept separate.",
+          "Four files pass transparent/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Profiles remain oblique; left shows too much chest and right too much back.",
+          "Raised arm extends farther forward in profiles than front; reconcile wrist/lantern anchor before rigging.",
+          "Cloth strips, tear locations and winding directions differ across views; need stable strip count and attachment map.",
+          "Lantern glass/cage proportions and hood depth vary; margins at top/bottom tight.",
+          "No separated cloth layers, dust VFX or runtime animations delivered yet."
+        ],
+        "next": "Reconcile hood depth, lantern grip and cloth strip topology; separate rigid lantern/skeletal arms from cloth for hover, move, attack, hit and dissolve death plus dust VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3100,6 +4083,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0056",
+        "name": "Sand-buried Colossus",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front identity; corrected rear front-like chest and fingers before side references.",
+        "confirmed": [
+          "Waist burial without visible legs, free anatomical right arm and trapped left arm maintained.",
+          "Rear corrected to shoulder blades and structural back bands; original failed draft retained.",
+          "Sun-disc rear opaque, orange front remains forward in profiles.",
+          "All four images pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Left profile remains oblique; disc face too broad and chest too visible.",
+          "Corrected rear right forearm appears suspended rather than visibly dragging; ground-contact and occlusion need reconciliation.",
+          "Disc thickness, radial braces and body depth differ between profiles.",
+          "Sand crust footprint and brass band routes vary; define fixed cut-off and attachment map before animation.",
+          "Front master foreshortens free hand strongly; size must remain constant through action poses.",
+          "No separated stone segments or runtime animation yet."
+        ],
+        "next": "Resolve arm contact, disc thickness and burial footprint; separate rigid shoulder/elbow/wrist/disc parts and sand layer for idle, drag, slam, hit and collapse animation."
       },
       "sprite": null,
       "animationFiles": {
@@ -3154,6 +4158,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0057",
+        "name": "Prism Lens-drone",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front identity, rear service cap and opposite profile.",
+        "confirmed": [
+          "Brass ring, faceted prism and three fins preserved.",
+          "Orange front aperture points left/right appropriately; rear cap opaque.",
+          "Side ring rendered narrow rather than full frontal circle.",
+          "Four images pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Lower fins shifted fore/aft and vertically to expose both; fixed coplanar anchors require correction.",
+          "Top fin stays too broad in profile; edge thickness inconsistent with front.",
+          "Optical aperture and rear cap show too much circular face in strict lateral projection.",
+          "Prism depth and bracket routes need reconciliation; highlights do not prove consistent geometry.",
+          "No separated rigid parts, beam VFX or runtime animation yet."
+        ],
+        "next": "Lock ring/prism depth and three fin anchors, separate optical aperture from rigid body, then author hover/aim/fire/hit/shatter and orange beam VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3206,6 +4230,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0058",
+        "name": "Vault Mirrorguard",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front identity, rear shield mount and opposite profile.",
+        "confirmed": [
+          "Bronze knight construct with single lens visor, round heliostat shield and empty right hand.",
+          "Shield anatomical left maintained: front image right, rear image left, near left profile and far right profile.",
+          "Rear helmet opaque and rear shield has straps and mounting.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Profiles still oblique with too much chest and visor face visible.",
+          "Shield angle changes between views; lock forearm grip and gimbal rotation before animation.",
+          "Armor seam positions and joint caps vary, including rear knee construction.",
+          "Feet stagger and silhouette scale vary; normalize stance after anatomical corrections.",
+          "No separated armor/limb/shield layers or runtime animation yet."
+        ],
+        "next": "Reconcile shield mount, visor depth, joint pivots and stance; separate rigid armor parts and author idle/walk/shield-bash/reflect/hit/death."
       },
       "sprite": null,
       "animationFiles": {
@@ -3260,6 +4304,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0059",
+        "name": "Heliostat Sovereign",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation with front/rear references; corrected first left draft that spread arms fore/aft.",
+        "confirmed": [
+          "Machine itself remains creature, no seated humanoid added.",
+          "Sun sphere, brass nested rings, two mirror-panel arms and lens crown retained.",
+          "Rear crown and arm panels have opaque backing; rear base maintenance details distinct.",
+          "Corrected side rings narrow and core round rather than disc.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Side arm panel count/layout simplified from front paired panels; exact hinge topology unresolved.",
+          "Mirror faces still turn toward side camera; should follow fixed panel orientation.",
+          "Right arm chain leans fore/aft unlike corrected left vertical chain; pose inconsistent.",
+          "Nine crown lenses not individually traceable in side overlap; anchor map needed.",
+          "Side base machinery and ring depths vary; no consistent reconstruction or separated animation parts yet."
+        ],
+        "next": "Define nine lens anchors and paired-panel arm topology, reconcile side projection, then separate rigid rings/core/arm panels/base for idle, aim, solar attack, hit and collapse with authored solar VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3312,6 +4377,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0060",
+        "name": "Gullwing Skimmer",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from frontal dive reference and opposite profile.",
+        "confirmed": [
+          "White/grey bird with brass primaries, orange hooked beak and two tucked feet retained.",
+          "Side head directions correct; no standing pose introduced.",
+          "Four images pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Wing elevation and foreshortening differ from front; profiles resemble raised flap rather than same dive pose.",
+          "Rear body has ambiguous upper tuft and lower fan; distinguish crest versus single tail and reconcile dive axis.",
+          "Primary feather lengths/counts and tail gold coverage vary.",
+          "Side camera remains oblique; far wing size and root position require correction.",
+          "Master looks more raptor-like than gull; confirm gull anatomy against Bible before animation.",
+          "No separated wing chains or runtime animations yet."
+        ],
+        "next": "Reconcile gull silhouette, dive pitch, wing roots and single tail; separate wings/primaries/body/head/feet for glide, flap, dive attack, hit and fall."
       },
       "sprite": null,
       "animationFiles": {
@@ -3366,6 +4451,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0061",
+        "name": "Polyp Spitter",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from six-tube four-leg front reference and opposite profile.",
+        "confirmed": [
+          "Pink/violet coral mound, white tube rims and magenta interiors retained without face.",
+          "Four root legs visible in each view.",
+          "Front and rear show six mouths; side height gradient points shorter tubes toward front.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Only five mouths distinguishable in each side view; sixth hidden or omitted, attachment continuity unproven.",
+          "Rear far tube tops remain above near tall tubes; height/occlusion inconsistent with front.",
+          "Rear feet retain toe fans instead of heels.",
+          "Side cameras oblique and body length/stance vary; tube positions need a stable anchor map.",
+          "Polyp clusters and porous leg details drift; no separated parts or runtime animation yet."
+        ],
+        "next": "Map all six tube roots and four legs consistently, reconcile rear height and feet, then separate body/legs/tubes for idle/walk/spit/hit/deflate death and magenta projectile VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3418,6 +4523,25 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0062",
+        "name": "Kelp Tender",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front shell landmarks, rear braid and opposite profile.",
+        "confirmed": [
+          "Olive/teal braided stalk, soft glowing bulb, two frond arms and split holdfast roots retained.",
+          "Six oysters remain along front in profiles; no full shell row duplicated on rear.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Side arms trail rearward rather than retaining lateral spread of front stance.",
+          "Shell heights shapes and side offsets differ across views despite count matching.",
+          "Braid winding, frond count and root routes vary; stable attachment map needed.",
+          "Bulb top margins extremely tight; frame normalization needed after anatomical corrections.",
+          "No separated fronds, root locomotion or runtime animation yet."
+        ],
+        "next": "Lock six oyster anchors, braid/arm/root topology and bulb scale; separate frond chains for idle sway, movement, lash, hit and wilt death."
       },
       "sprite": null,
       "animationFiles": {
@@ -3472,6 +4596,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0063",
+        "name": "Hullborer",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front shell identity, rear continuous body and opposite profile.",
+        "confirmed": [
+          "Bone-white segmented limbless worm, rust-red rasp shell and attached wood shavings retained.",
+          "Rear shell has no duplicated mouth; single continuous body/tail.",
+          "Side mouth faces left/right correctly.",
+          "Four images pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Front master already oblique; exact frontal head axis remains unresolved.",
+          "Side mouth openings too broad for strict lateral camera.",
+          "Spiral ridge slope reverses between profiles; physical handedness must be reconciled rather than mirrored.",
+          "Body curl, segment count and attached wood landmarks vary across views.",
+          "Shell remains upright like cone hood; clarify drill motion axis before animation.",
+          "No separated body segments, drill animation or runtime clips yet."
+        ],
+        "next": "Lock shell handedness, mouth axis and segmented centerline, then build fixed-volume body bend controls and author idle/crawl/bore/hit/collapse plus wood-chip VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3524,6 +4669,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0064",
+        "name": "Pearl Skate",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front ray identity; corrected rear tail root and retained failed draft.",
+        "confirmed": [
+          "Cream nacre diamond ray with two downcurled fins and single whip tail.",
+          "Rear tail corrected to near posterior edge; no rear-facing eyes.",
+          "Profiles face left/right with one visible eye and no added limbs.",
+          "Four images pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Side cameras still elevated/oblique, showing broad dorsal disc rather than thin profile.",
+          "Tail near/far curve appears mirrored rather than one fixed anatomical path.",
+          "Rear disc head silhouette and pelvic lobes not anatomically resolved.",
+          "Dorsal ridge bumps, nacre patterns and fin curvature vary.",
+          "Margins tight despite passing edge check; no separated fin/tail layers or runtime clips yet."
+        ],
+        "next": "Lock disc thickness, tail centerline and fin anchors, then separate deformable fins/body/tail for skim, glide, tail attack, hit and settle death."
       },
       "sprite": null,
       "animationFiles": {
@@ -3578,6 +4743,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0065",
+        "name": "Thunderhull Turtle",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front porthole identity, rear shell and opposite profile.",
+        "confirmed": [
+          "Copper riveted hull shell, grey skin, amber eyes and barnacles retained.",
+          "One porthole remains on anatomical right-front shell, absent from left and rear.",
+          "Four legs and short rear tail; no duplicate rear face.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Rear feet retain front-facing claws; heel and leg orientation incorrect.",
+          "Side cameras oblique, feet stance and head extension differ.",
+          "Porthole size and broken-glass pattern vary from front.",
+          "Shell plate seams/rivets and barnacle clusters differ; stable shell landmark map needed.",
+          "Tail and feet near frame edges; no separated limbs/shell or runtime clips yet."
+        ],
+        "next": "Correct rear feet and profile pose, lock shell seams and porthole anchor, then articulate four leg chains/head/tail for idle/walk/bite/hit/collapse with storm discharge VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3630,6 +4815,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0066",
+        "name": "Squall Ray",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front identity and opposite profile.",
+        "confirmed": [
+          "Indigo dorsal surface, white underside, blue fin edging and copper tail tip retained.",
+          "Single tail and paired cephalic lobes; rear contains no duplicate face.",
+          "Four images pass alpha, nonempty and edge checks."
+        ],
+        "limitations": [
+          "Side views remain three-quarter rather than orthographic; raised fin tips spread fore/aft instead of overlapping.",
+          "Rear camera pitch reveals broad dorsal surface inconsistent with front camera elevation.",
+          "Rear adds branching blue markings; dorsal landmark map must be reconciled.",
+          "Tail bend is mirrored in side images rather than preserving a fixed anatomical curvature.",
+          "Margins are tight despite passing pixel edge check.",
+          "No separated parts or runtime animation clips yet."
+        ],
+        "next": "Correct camera pitch and overlapping fin topology, lock dorsal markings and tail curvature; separate disc, fins, cephalic lobes and segmented tail for hover, travel, sting, hit and collapse. Add electrical VFX separately."
       },
       "sprite": null,
       "animationFiles": {
@@ -3684,6 +4889,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0067",
+        "name": "Pressure Drone",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front master, rear and opposite profile.",
+        "confirmed": [
+          "Copper pressure sphere, red enamel bands and single frontal red lamp retained.",
+          "Rear has opaque maintenance hatch and three rotor assemblies with different rear hub details.",
+          "Profiles show front lamp and rear hatch at opposite edges with narrow rotor silhouettes.",
+          "Four files pass alpha, nonempty and edge checks."
+        ],
+        "limitations": [
+          "Rear hatch hinge appears on visible side in both profiles; hinge must belong to one anatomical side only.",
+          "Left profile adds a lower rear nozzle absent from right; valve map is inconsistent.",
+          "Side views retain oblique lamp and hatch faces rather than strict edge-on projection.",
+          "Far lower rotor is completely occluded; its exact mounting and three-blade count cannot be verified from side art.",
+          "Rear repeats lower front nozzle; decide whether rear nozzle exists and map it consistently.",
+          "No separated body/rotor parts or runtime animation clips yet."
+        ],
+        "next": "Lock hatch hinge and nozzle topology, correct profile projection, separate three rotors from body for hover/travel/pressure attack/hit/power-down; add bubble emission as separate VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3736,6 +4962,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0068",
+        "name": "Gloom Medusa",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front jellyfish master and opposite references.",
+        "confirmed": [
+          "Violet translucent dome, dark scalloped rim and single blue internal nucleus retained.",
+          "No humanoid face or limbs introduced.",
+          "Right reference upright; all four files pass alpha, nonempty and edge checks."
+        ],
+        "limitations": [
+          "Left bell is rolled/tilted relative to upright front/back/right; pose correction needed.",
+          "Tentacle counts, attachment roots, crossings and lengths drift; individual strands cannot yet be matched across views.",
+          "Ruffled oral arms change overlap and width; a stable appendage map is required.",
+          "Radial symmetry makes nominal view direction unprovable without fixed internal/rim landmarks; these are visual references, not verified rotations.",
+          "Faint colored edge haze needs light-background review before separating strands.",
+          "No separated parts, runtime clips or external dark halo VFX yet."
+        ],
+        "next": "Establish numbered rim anchors and oral-arm topology, correct left pose, separate dome/nucleus/arms/tentacle chains; animate bell pulse, drift, sting, recoil and deflation with separate dark-halo VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -3790,6 +5036,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0069",
+        "name": "Drowned Signalmind",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from frontal boss master, opaque rear shell and opposite profile.",
+        "confirmed": [
+          "Brass/coral head, single large cracked cyan frontal lens and cable tentacles retained.",
+          "Rear central eye replaced by opaque maintenance hatch.",
+          "Seven crown dishes distinguishable in front/rear; profiles show overlapping dishes.",
+          "Four files pass alpha, nonempty and edge checks."
+        ],
+        "limitations": [
+          "Brief requests six cable tentacles but only five tips clearly distinguishable in front and generated views; sixth root/tip unverified or omitted.",
+          "Side images remain oblique with excessively broad lens/hatch faces.",
+          "Tentacle spread remains front-like in profiles instead of rotating in depth.",
+          "Rear outermost dishes still expose concave fronts while central five show rear shells; orientation inconsistent.",
+          "Coral/barnacle clusters, lens cracks, cable collars and small ports drift between views.",
+          "Front crown nearly touches top edge; no separated parts or runtime animation yet."
+        ],
+        "next": "Correct master to six explicit numbered cable roots/tips, fix crown axes and profile projection, lock coral/lens landmarks; separate shell, dishes and six cable chains for hover/travel/sonar strike/hit/power-down with bubble and spark VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3842,6 +5109,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0070",
+        "name": "Rimehare",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from frontal hare master, rear and opposite profile.",
+        "confirmed": [
+          "White fur, silver-blue shadows, frost-tipped long ears and icy whiskers retained.",
+          "Rear has white tail and no duplicated face; four limbs identifiable in profiles.",
+          "Four files pass alpha, nonempty and edge checks."
+        ],
+        "limitations": [
+          "Rear hind feet still show toe lobes toward viewer rather than heels with toes pointing away.",
+          "Profile ears expose broad inner surfaces instead of matching fixed front ear orientation.",
+          "Ear spread, haunch proportions, tail size and forepaw spacing differ across views.",
+          "Whisker ice and fur landmarks vary; stable whisker roots needed.",
+          "Ear tips extremely close to top despite passing edge check; framing must be normalized before animation.",
+          "No separated body parts or runtime animation clips yet."
+        ],
+        "next": "Correct rear hindfoot anatomy and fixed ear pose, align body proportions and margins; separate limbs/ears/head/tail for idle, bound, strike, recoil and collapse, with frost particles separate."
       },
       "sprite": null,
       "animationFiles": {
@@ -3896,6 +5183,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0071",
+        "name": "Glassback Ram",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation plus targeted rear anatomy correction; original failed rear retained.",
+        "confirmed": [
+          "Grey wool, two curled blue-glass horns and overlapping dorsal glass plates retained.",
+          "Rear refinement removes two extra hoof fragments, changes inner ear bowls to furry outer backs and toe clefts to rounded heels.",
+          "Four accepted files pass alpha, nonempty and edge checks."
+        ],
+        "limitations": [
+          "Side camera angles and stance differ: left more oblique than right, foreleg overlap changes.",
+          "Horn curl planes and near/far overlap differ from front; fixed anatomical horn axes need reconciliation.",
+          "Glass plate count, rows and coverage vary; stable plate landmark map needed.",
+          "Rear limb perspective remains simplified; hock articulation should be checked against quadruped rig.",
+          "Margins tight at horn tops and right muzzle despite edge check passing.",
+          "No separated parts or runtime animation clips yet."
+        ],
+        "next": "Align profile pose and horn axes, lock plate rows, then separate four limb chains/head/horns/tail for idle, walk, charge, hit and collapse. Author breath steam separately."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -3948,6 +5255,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0072",
+        "name": "Frostcoil Serpent",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front snake master, rear and opposite profile.",
+        "confirmed": [
+          "Pale-blue frost-ridged scales, ice hood and ventral cyan veins retained.",
+          "Rear neck has dorsal scales without duplicate face or ventral cyan pattern.",
+          "No legs introduced; four images pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Side hood remains broad and camera-facing instead of thin overlapping lateral fins.",
+          "Small terminal coil lacks clearly distinguishable tapering tip in all views, including front; body continuity cannot be verified.",
+          "Coil placement and winding differ between side views rather than representing fixed pose rotation.",
+          "Head/neck pitch and width vary; ventral plates remain too broadly exposed in profile.",
+          "Hood rib counts and dorsal ridge landmarks vary; tight top/bottom margins.",
+          "No separated parts or runtime animation clips yet."
+        ],
+        "next": "Draw a continuous numbered body path with explicit tail tip, fix hood plane and coil projections, then segment head/neck/body/hood for coil idle, slither, bite, recoil and collapse; frost effects separate."
       },
       "sprite": null,
       "animationFiles": {
@@ -4002,6 +5329,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0073",
+        "name": "Glacier Juggernaut",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from frontal tracked mech master, rear and opposite profile.",
+        "confirmed": [
+          "Rust-red frosted armor, front furnace and wedge plough retained; no walking legs introduced.",
+          "Rear engine panels opaque without duplicate front furnace/face.",
+          "Profiles show corresponding track mechanism with two large wheels and two lower rollers.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Side views remain oblique; blade shows broad front surface instead of narrow side projection.",
+          "Rear piston arms look downward/back toward tracks rather than clearly extending forward to blade.",
+          "Front blade width exceeds tracks but rear hides blade entirely; outer-tip visibility needs geometric reconciliation.",
+          "Rear exhaust height and torso depth differ; snow/icicle maps and plate fasteners drift.",
+          "Far track and arm fully/partly occluded; mounts not verified.",
+          "No separated track/roller/piston parts or runtime animation clips yet."
+        ],
+        "next": "Lock chassis and plough geometry, arm attachment points and armor map; separate tracks/rollers/pistons/blade/torso for idle, drive, plough strike, recoil and shutdown, plus furnace/steam VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4054,6 +5402,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0074",
+        "name": "Mirrorshade",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front mirror humanoid and opposite views.",
+        "confirmed": [
+          "Single eye glint visible in front and anatomical left profile, absent from back and right.",
+          "Rear shows back anatomy and heels without duplicate face.",
+          "Dark reflective charcoal material with silver-blue/violet highlights retained.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Profiles move arms backward against torso instead of preserving front lateral arm spacing.",
+          "Profile heels look elevated/block-like despite barefoot brief; ankle/sole anatomy needs correction.",
+          "Near/far limbs almost completely overlap; far limb placement and finger count cannot be verified.",
+          "Shoulder, torso and hip proportions vary; attached shadow wisps move between anatomical sides.",
+          "Reflections change across views, expected partly for reflective material but stable surface landmarks and lighting needed for animation.",
+          "No separated parts or runtime animation clips; external shadow smoke not authored yet."
+        ],
+        "next": "Correct flat planted feet and profile arm pose, align joint landmarks and edge wisps, separate torso/head/limb chains and eye overlay for idle/walk/slash/cast/hit/collapse with shadow smoke VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -4108,6 +5477,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0075",
+        "name": "Hoarfrost Behemoth",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from frontal four-tusk mammoth, rear and opposite profile.",
+        "confirmed": [
+          "White/slate frost wool, shoulder hump, trunk and four legs retained.",
+          "Rear has no duplicate face; outer tusk arcs remain at silhouette edges.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Profile tusks overlap heavily; only three tips clearly read, fourth tusk root/tip not verified.",
+          "Both profiles remain three-quarter with frontal trunk/tusk arrangement.",
+          "Rear feet retain segmented front-like nail forms instead of clean heel pads.",
+          "Rear tail is longer/thicker than profile tail and resembles hanging trunk; tail shape needs alignment.",
+          "Wool/icicle map, hump shape and stance differ; side image scale differs from front.",
+          "Very tight lateral margins on left; no separated parts or runtime clips yet."
+        ],
+        "next": "Lock all four numbered tusk roots and tips in true profiles, correct rear heels/tail and body proportions; separate four legs/head/trunk/tusks/tail for idle, heavy walk, gore, hit and collapse with frost VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4160,6 +5549,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0076",
+        "name": "Cryo Sentry",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front tripod, rear service shell and opposite profile.",
+        "confirmed": [
+          "Three legs, no arms, tall lance head and white/cyan/gold material retained.",
+          "Rear lacks duplicated front chest cylinder; profiles place cylinder on forward side.",
+          "Right removes most left-style detached joint haze.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Profiles remain oblique; lateral leg roots move forward and stance changes instead of fixed tripod rotation.",
+          "Rear central leg appears much longer than front projection; ground-plane consistency unverified.",
+          "Lance profile width and facets differ; cyan cell/panel trim and icicles drift.",
+          "Left has baked translucent haze around joints and feet that must be removed for separate VFX.",
+          "Lance tip and feet nearly touch frame boundaries despite edge check passing.",
+          "No separated leg chains or runtime animation clips yet."
+        ],
+        "next": "Lock three hip roots and ground contacts, correct profile camera and lance geometry, remove left haze and normalize framing; separate three articulated legs/torso/lance/cell for idle, tripod walk, thrust, recoil and shutdown with joint frost VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -4214,6 +5624,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0077",
+        "name": "Archive Specter",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from frontal glyph-light spirit, rear and opposite profile.",
+        "confirmed": [
+          "Blank white static face limited to forward head; rear has glyph surface.",
+          "Violet/cold-white body, spectral arms and tapering ribbon lower body retained without legs.",
+          "Right profile face narrower than left; four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Left arms spread fore/aft; right near arm trails behind torso rather than preserving frontal lateral stance.",
+          "Glyph placements and flowing ribbon paths change across views; fixed surface/anchor map needed before scrolling animation.",
+          "Shoulder plumes, face width, torso proportions and tail curl drift.",
+          "Right far arm largely hidden; finger count and elbow landmarks unclear.",
+          "Side framing taller than front; transparency/glow must be reviewed on light/dark game backgrounds.",
+          "No separated body/glyph/static layers or runtime animation clips yet."
+        ],
+        "next": "Align shoulder/elbow/hand poses, separate stable body silhouette from glyph-scroll and face-static overlays, rig ribbon chains for hover/travel/cast/hit/dissolve and animate flicker."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4266,6 +5696,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0078",
+        "name": "Cryo Lancer",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation preserving anatomical right integrated lance across views.",
+        "confirmed": [
+          "Right lance appears image-left front, image-right rear, far-side left profile and near-side right profile.",
+          "Normal left hand retained, no extra weapon hand introduced.",
+          "Rear helmet opaque and rear torso mechanical rather than duplicate frosted visor.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Profile lance points forward/down instead of preserving lateral-down front pose in depth; shoulder/elbow transforms differ.",
+          "Left/right lance apparent length and prism shape differ beyond reliable projection matching.",
+          "Normal hand position shifts, torso posture and foot spacing vary.",
+          "Armor seams, brass joint fittings and crystal inserts drift across views.",
+          "Rear knee/calf armor remains similar to front; hinge orientation needs rig-level validation.",
+          "No separated armor/limb/lance parts or runtime animation clips yet."
+        ],
+        "next": "Align shoulder/elbow pose and lance length, lock armor/joint landmarks, separate biped chains and integrated weapon for idle/walk/thrust/shot/hit/collapse with prism beam and frost VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -4320,6 +5771,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0079",
+        "name": "Cryocore Curator",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front archive construct, rear supports and opposite profile.",
+        "confirmed": [
+          "Crystal shelving, cyan core, brass arms, frost crown and pedestal retained.",
+          "Rear columns closed with support plumbing rather than duplicated open shelves.",
+          "Four floating slates visible front/back/left; right has three distinguishable with fourth hidden or omitted.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Profiles remain oblique, shelf openings and crown ornaments face viewer too broadly.",
+          "Right fourth slate unverified; fixed orbit positions and orientation not preserved.",
+          "Rear hands still front-like and arm rotation inconsistent; profiles change arm spacing.",
+          "Shelf contents/count, crown crystals, pipe routes and pedestal details drift.",
+          "Core visibility inconsistent with column occlusion; architectural depth needs fixed plan.",
+          "No separate orbiting slate layers, articulated arms or runtime animation clips yet."
+        ],
+        "next": "Fix shelf/core depth and arm poses, establish four numbered slate orbit anchors, separate pedestal/columns/core/crown/arms/slates for hover/travel/archive cast/hit/shutdown plus cryocore VFX."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4372,6 +5844,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0080",
+        "name": "Slagback Toad",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation with targeted rear hind-leg correction; failed rear retained.",
+        "confirmed": [
+          "Black slag shell with orange fissures, amber eyes and glowing throat sac retained.",
+          "Rear has no face/throat duplication; refinement removes long backward-reaching forearm-like limbs and substitutes folded hind hocks.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Rear folded-leg topology still simplified, hidden forelimbs and toe directions need reconciliation with front stance.",
+          "Profiles remain three-quarter; throat sac projection and head height differ.",
+          "Shell rock plates/fissure network change between views; stable landmark map required.",
+          "Toe counts and near/far foot overlap vary, far hind foot unverified in profiles.",
+          "Brown skin lighter than charcoal brief; preserve approved palette consistently during refinement.",
+          "No separated limbs/throat/shell or runtime animation clips yet."
+        ],
+        "next": "Align four limb joints and toe anatomy, lock shell fissures and throat inflation volume; separate shell/body/head/throat/legs for idle bellows, hop, spit, hit and collapse with heat VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -4426,6 +5918,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0081",
+        "name": "Crucible Tender",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation; left flank hatch corrected in a second pass, failed draft retained.",
+        "confirmed": [
+          "Four walking feet and two distinct upper tools visible in each view.",
+          "Right welding torch and left slag scoop retained; near tool switches between profiles.",
+          "Rear has opaque service hatch rather than duplicate glowing lens; corrected profiles place lens and hatch at opposing ends.",
+          "Four files pass alpha, nonempty and edge checks."
+        ],
+        "limitations": [
+          "Tool arms still swing fore/aft in profiles instead of maintaining the front stance rotated in depth; joint anchors need reconciliation.",
+          "Profiles show top surfaces and are not strict eye-level orthographic elevations.",
+          "Rear leg plating and toes repeat front-oriented construction; heel direction needs correction.",
+          "Side vent housing, pipe paths, leg plate widths and chassis proportions drift across views.",
+          "Welding glow is baked into reference; needs a separate animated layer.",
+          "No separated parts or runtime animation clips yet."
+        ],
+        "next": "Lock six limb roots and rigid link lengths across views, align tool poses and foot directions, then separate chassis/four legs/two tool arms/cable/torch effect for idle, walk, welding attack, scoop attack, hit and mechanical collapse."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4478,6 +5991,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0082",
+        "name": "Vent Skink",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation with targeted rear heel correction; original rear retained.",
+        "confirmed": [
+          "Black basalt scales, amber eyes, orange throat and tail tip retained.",
+          "Rear head has no duplicated face or throat; tail extends opposite screen side to front.",
+          "Rear refinement removes forward-facing hind toe fans and shows rounded heels.",
+          "Four visible limb groups in profiles; four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Rear heels now overly cylindrical; ankle length and lateral claw placement need reconciliation with front/profile feet.",
+          "Profile views are mildly three-quarter and neck heights differ; front itself has raised stance rather than low skink brief.",
+          "Tail curvature looks mirrored between profiles rather than maintaining one anatomical bend in depth.",
+          "Orange light extends along ventral belly/tail more broadly than throat-and-tip brief.",
+          "Toe counts and far-limb attachments partly occluded, not anatomically verified.",
+          "Scale landmarks and head/body proportions drift; no separated parts or runtime animations yet."
+        ],
+        "next": "Align stance, four limb joints, natural heels and five-digit feet; lock tail bend and glow boundaries. Separate head/throat/body/legs/tail for breathing, grounded crawl, bite/heat attack, hit and articulated collapse; add heat shimmer separately."
       },
       "sprite": null,
       "animationFiles": {
@@ -4532,6 +6066,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0083",
+        "name": "Magma Spitter",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation using front master and opposite-view references.",
+        "confirmed": [
+          "Eyeless limbless brick-red segmented worm, volcanic collar and attached crust base preserved.",
+          "Rear has closed red nape without duplicate mouth or gullet.",
+          "Profiles show short forward tube mouth and attached molten drips.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Left aperture remains too broad/oblique; right narrower but still exposes inner gullet, not a strict matching side elevation.",
+          "Body segment counts, ring heights and neck bend differ across views; requires numbered segment landmarks.",
+          "Collar spikes and fissure paths change; collar is bulkier in side views.",
+          "Rear closed nape is an inferred construction requiring reconciliation with mouth tunnel depth.",
+          "Front top spike has very tight margin; normalized scale/margins required before slicing.",
+          "Attached drips and lava glow baked into references; no separated layers or runtime clips yet."
+        ],
+        "next": "Lock segment count, collar landmarks, mouth axis/depth and base anchors across views. Separate body rings, collar, lip/gullet, drips and stationary crust for breathing, emergence/burrow travel, spit windup/recoil, hit and segment-by-segment collapse; author separate magma projectile/splash."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4584,6 +6139,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0084",
+        "name": "Rivet Scrapling",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from front identity master with rear and opposite-side references.",
+        "confirmed": [
+          "Single amber gear-eye remains frontal; rear has no duplicated eye.",
+          "Exactly two spring-wire legs with loop feet and no arms in each image.",
+          "Right profile emphasizes slotted screw and washer; left profile emphasizes large upper hex bolt.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Both profiles remain oblique with too much iris visible; strict side eye projection needs refinement.",
+          "Large slotted screw appears on left and rear too; hardware map is inconsistent rather than a rigid rotated assembly.",
+          "Upper hex bolt, rear triangular plate, washers and small nuts migrate in size/location across views.",
+          "Wire roots, spring winding, loop orientation and leg spacing differ; profiles imply staggered foot placement.",
+          "Back body is taller/broader relative to legs than front; normalize proportions before separation.",
+          "No separated scrap/eye/springs or runtime animation clips yet."
+        ],
+        "next": "Define immutable hardware landmarks and two wire paths, align views/stance, then separate rigid body, lens/gear, spring legs and selected loose rivets for jittering idle, compressed takeoff/hop/landing, impact attack, hit and spring-collapse death with separate debris."
       },
       "sprite": null,
       "animationFiles": {
@@ -4638,6 +6214,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0085",
+        "name": "Slagforged Brute",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation using front master and opposite-view references.",
+        "confirmed": [
+          "Porous charcoal slag, orange molten fissures, blunt head and two iron-banded fists retained.",
+          "Rear head has no duplicate face; rear torso has different scapular rock arrangement.",
+          "Profiles face opposing directions with toes forward and heels behind.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Rear fist planes remain front-like and heels retain toe-like rock blocks; anatomy must be reconciled.",
+          "Far leg/foot not distinctly visible in profiles; right far arm also fully occluded, so limb topology unverified.",
+          "Side arm hangs slightly behind torso; elbow/wrist orientation and thumb placement need matched landmarks.",
+          "Rock plate counts, crack paths and rivet positions drift across all views.",
+          "Casting seams are interpreted as riveted metal strips in original front; reconcile with Bible's mould ridges before final approval.",
+          "Profile depth and neck/head projection differ; no separated parts or runtime clips yet."
+        ],
+        "next": "Lock plate/crack/seam landmarks, verify two arms/two legs and rear hand/heel anatomy. Separate head/torso/upper arms/forearms/fists/thighs/shins/feet with band overlays for weighted walk, punch/slam, hit and knees-first collapse; core pulse and impact debris separate."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4690,6 +6287,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0086",
+        "name": "Pour Wraith",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front master with rear/opposite profile references.",
+        "confirmed": [
+          "Faceless smooth head without eyes/nose/mouth maintained in all views.",
+          "White-hot ivory metal, cooling cracked grey skin and attached trailing drops preserved.",
+          "Rear has scapular back planes and central spine casting seam; profiles move front seam to leading edge.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Far arms extend backward in profiles instead of preserving front coronal neutral stance.",
+          "Grey skin islands and drip roots/counts/lengths change; right hip patch not reliably continuous around body.",
+          "Back hand planes still resemble front hand shapes; digit topology needs checking.",
+          "Side chest and hips more gendered than genderless brief; normalize body volumes.",
+          "Head/neck profile and torso thickness vary; tight upper/lower margins need normalized framing.",
+          "No separated cooling-skin/drop layers or runtime animation clips yet."
+        ],
+        "next": "Lock shoulder/elbow/wrist pose, neutral body volumes, grey-skin islands and numbered drip roots across views; separate core/skin/arms/hands/drip chains for molten idle, flowing travel, pour attack, hit and melt-collapse plus cooling/remelting VFX."
       },
       "sprite": null,
       "animationFiles": {
@@ -4744,6 +6362,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0087",
+        "name": "Zero Stoker",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation using front identity and rear/opposite-side construction references.",
+        "confirmed": [
+          "Anatomical right shovel arm and left normal hand retained; near tool switches correctly between profiles.",
+          "Rear shovel shows convex back, rear head opaque, hopper mounted on back.",
+          "Right profile shows both toes forward and compact rear heel.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Rear head rises above coal while front/profile coal rises above head; vertical hopper/head alignment inconsistent.",
+          "Left far shovel arm displaced backward and far foot appears reversed; neutral pose must be reconciled.",
+          "Right shovel blade profile shorter/narrower than front and left; grip shaft geometry changes.",
+          "Grille remains oblique in profiles; chest depth, armor panels and rivet count drift.",
+          "Rear normal hand planes resemble front; digit topology needs verification.",
+          "No separated tool/coal/body layers or runtime clips yet."
+        ],
+        "next": "Fix left far foot and shoulder pose, lock hopper/head heights and shovel dimensions, align armor landmarks. Separate articulated limbs/tool/hand/hopper/coal/grille for heavy walk, shovel strike/scoop, stoke cycle, hit and knees-first mechanical collapse; ember/firebox effects separate."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4796,6 +6435,27 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0088",
+        "name": "Kiln Prime",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front master with rear construction reference.",
+        "confirmed": [
+          "Cylindrical brick/iron kiln, integrated base without legs and two molten crucible arms retained.",
+          "Rear has closed brick/service hatch instead of duplicate crystal grille.",
+          "Right profile places hatch near rear edge and both spouts toward front.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Left view incorrectly places rear hatch on broad visible flank; both arms spread fore/aft instead of maintaining neutral pose.",
+          "Right arms project forward and overlap differently from left/front; shoulder roots and elbow angles need fixed landmarks.",
+          "Crucible spouts/size and rim tilt vary; rear spouts hidden rather than proven continuous.",
+          "Crown/base rib count, brick courses, gold fittings and vent positions drift across views.",
+          "Profiles remain oblique; crystal visibility and wall thickness unverified.",
+          "No separated kiln/arm/cup/core layers or runtime animation clips yet."
+        ],
+        "next": "Lock cylinder cross-section, front grille/rear hatch, rib landmarks and arm poses. Separate fixed base/torso/crown/core/grille/upperarms/forearms/crucibles for furnace idle, swivel, pour windup/tilt/recovery, hit and structural collapse; author molten streams/splash and core heat separately."
       },
       "sprite": null,
       "animationFiles": {
@@ -4850,6 +6510,27 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0090",
+        "name": "Gutter Lurk",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation with rear ear/heel correction; failed rear retained.",
+        "confirmed": [
+          "Hairless slate-grey skin, large reflective violet eyes, long forefingers and dorsal violet bristles retained.",
+          "Four limbs and no added tail in all views.",
+          "Rear correction replaces inner ear bowls with outer backs and front-facing hind claw fans with heels.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Rear forehands still splay outward/backward, not matched to front forward reach; hind heels overly rounded.",
+          "Profiles remain oblique with front fingers fanned toward camera; joint and digit topology needs alignment.",
+          "Profile muzzle longer than front impression; head/body scale and shoulder hump differ.",
+          "Bristle ridge taller/denser than short-bristle Bible brief and changes shape between views.",
+          "Rear view more overhead than profiles, crouch/hip height inconsistent.",
+          "No separated limbs/face/bristles or runtime animation clips yet."
+        ],
+        "next": "Align crouch, forehand reach, hind ankles, four-digit hands and head proportions; lock bristle landmarks. Separate head/ears/eyes/body/upper and lower limbs/hands/feet/bristles for alert idle, grounded scuttle, swipe/lunge, hit and articulated crouch-collapse; bristle glow separate."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -4902,6 +6583,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0091",
+        "name": "Nullbloom",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front master and opposite-view references.",
+        "confirmed": [
+          "Matte black glass flower, single violet eye, twisted stem and walking roots retained.",
+          "Rear blossom opaque with no duplicate eye; profiles show narrow eye at forward edge.",
+          "No ground trail baked into master; four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Petal count/order/curvature changes across views; rear largely resembles closed frontal petals rather than verified convex backs.",
+          "Profiles remain oblique and blossom axis tilts upward; bowl depth needs consistent construction.",
+          "Left only three root feet clearly separable; fourth root attachment occluded/unverified.",
+          "Stem spiral handedness and thorn placement not demonstrably consistent; root stance resembles front in all views.",
+          "Root toe directions/counts drift and top petal margin is tight.",
+          "No separated petals/eye/stem/roots or runtime clips yet."
+        ],
+        "next": "Number petals and four root anchors, reconcile bowl depth/stem twist/stance, normalize framing. Separate eye/lids/petal layers/stem/root joints for idle sway, four-root walking, gaze/drain attack, hit and wilt-collapse; grey walking trail and drain VFX separate."
       },
       "sprite": null,
       "animationFiles": {
@@ -4956,6 +6657,25 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0092",
+        "name": "Coupler Mite",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front master and rear/opposite-side references.",
+        "confirmed": [
+          "Rail-coupler steel body, paired pincer jaws and one violet caged dorsal lamp retained.",
+          "Rear is closed service panel without duplicate jaws.",
+          "Four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Six-leg topology NOT verified: profiles show only two clearly traceable near hip sockets, plus occluded legs/foot fragments; requires explicit three-per-side map.",
+          "Pincer opening faces camera in profiles instead of edge-on; jaw orientation/hinge axes inconsistent.",
+          "Body elongates in profiles and rear stance repeats front leg projection.",
+          "Plate seams/rivet positions/service panel shape and lamp cage orientation drift.",
+          "No separated six-leg rig, jaws/lamp or runtime clips yet."
+        ],
+        "next": "Number six hip sockets and trace each three-link leg to one foot; rebuild ambiguous profile legs and rotate jaws correctly. Lock chassis dimensions, separate six legs/two jaws/body/lamp for tripod gait, snap attack, hit and joint collapse; status blink separate."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -5008,6 +6728,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0093",
+        "name": "Riftling",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation from front master with rear/opposite-profile references.",
+        "confirmed": [
+          "Black canine body, violet edges, four visible paws and pointed ears retained.",
+          "Two white eyes front, one per profile, none rear.",
+          "Center body samples retain alpha252-253 rather than transparent holes; four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Interior alpha samples are near-opaque not255; full opaque-body mask still requires validation/refinement.",
+          "Violet edging and interior fur strokes too bright/thick versus Bible's thin-edged black silhouette, including original front.",
+          "Profiles remain slightly oblique; hind paw/hock placement and front leg overlaps differ.",
+          "Tail curvature effectively mirrors between profiles instead of consistent anatomical-left curl in depth.",
+          "Rear feet retain front-like toe contours; ear backs and stance need anatomy alignment.",
+          "Edge wisps and fur landmarks change; no separated body/limbs/outline layers or runtime clips yet."
+        ],
+        "next": "Lock canine proportions, four limb joints and tail curve; enforce opaque body and thin edge style. Separate head/ears/legs/tail/white eyes/edge effect for alert idle, grounded gait, lunge/bite, hit and jointed collapse with controlled outline flicker/dissolve."
       },
       "sprite": null,
       "animationFiles": {
@@ -5062,6 +6802,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0094",
+        "name": "Sparkwing",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation with left whole-body rotation retry; failed front-torso draft retained.",
+        "confirmed": [
+          "Copper foil feather material, violet eye and two feet retained.",
+          "Rear head has no duplicated face; revised left rotates torso rather than head only.",
+          "Right tail shortened relative to left draft; four files pass alpha/nonempty/edge checks."
+        ],
+        "limitations": [
+          "Wing pose not consistent across views: profiles extend near wing backward with broad face visible rather than preserving lateral spread in depth.",
+          "Rear feet still show front-like three-toe fans instead of correct hallux/heel projection.",
+          "Left tail much longer than front/right; tail volume and number of feathers need locking.",
+          "Feather counts/order and crown/neck proportions drift; far wing partially hidden and anatomy unverified.",
+          "Baked violet arcs/haze too broad for restrained wingtip effect and must be separated.",
+          "No separated feather/wing skeleton or runtime animation clips yet."
+        ],
+        "next": "Define shoulder/elbow/wrist wing skeleton and numbered primaries, match tail and toe anatomy. Separate body/head/beak/two wings/tail/legs for perched idle, hop/takeoff, flap/glide, peck/dive attack, hit and wing-fold collapse; landing arcs and wingtip sparks separate."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -5114,6 +6874,26 @@
           "existingReference": null,
           "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0095",
+        "name": "Array Sentinel",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in generation; right-facing retry replaces wrong-direction draft retained for review.",
+        "confirmed": [
+          "Faceless charcoal/brass plate, right-hand lattice halberd and single violet halo retained.",
+          "Revised right faces right with near right gripping arm; left has near relaxed left arm.",
+          "Rear armor has spine plates and flexible rear knees."
+        ],
+        "limitations": [
+          "Halberd blade remains broad face-on in profiles rather than edge-on; weapon plane/hand rotation inconsistent.",
+          "Halo appears broad ellipse in profiles and rear depth ordering relative helmet unverified.",
+          "Right gripping arm extends farther forward than left/front neutral stance.",
+          "Armor layering, helmet fins, boot heel height, weapon ornament counts and proportions drift.",
+          "Far leg mostly occluded in left; full anatomy unverified.",
+          "No separated rig/weapon/halo or runtime clips yet."
+        ],
+        "next": "Align grip/arm pose, weapon and halo planes, armor landmarks and grounded boot anatomy. Separate body joint plates/halberd/halo/light layers for idle, weighted walk, thrust/sweep, cast, hit and knees-first collapse; ring rotation and lattice trails separate."
       },
       "sprite": null,
       "animationFiles": {
@@ -5168,6 +6948,24 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0096",
+        "name": "Glyph Swarm",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from inspected front; opposite profile also references left.",
+        "confirmed": [
+          "Four view files exist with violet luminous glyphs as the entire creature, without a humanoid or physical frame.",
+          "Back reverses the broad outer glyph arrangement. Profiles have a narrow vertical silhouette."
+        ],
+        "limitations": [
+          "Profiles still show frontal readable glyphs rather than fully rotated edge-on strokes; they are not reliable geometric side references.",
+          "Broad purple aura connects glyphs into an almost solid slab in profiles. Transparent inter-glyph separation needs refinement.",
+          "Exact stroke identities, depth order, spacing and profile widths drift across views.",
+          "Front depicts one outer ring and three inner glyphs rather than the three rings requested by the initial prompt; reconcile the final design with the actual Bible art brief.",
+          "No separated glyph layers or runtime animation clips have been produced for this character."
+        ],
+        "next": "Establish a canonical glyph layout from the Bible and isolate glyph artwork. Derive consistent view projection and spinning attack from that layout, then implement and visually review idle, movement, attack, hit and dispersal death in runtime."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -5221,6 +7019,26 @@
           "status": "master-created"
         }
       },
+      "turnaroundReview": {
+        "id": "mob_0097",
+        "name": "Lattice Weaver",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from inspected front and rear; one left anatomy refinement, failed draft retained.",
+        "confirmed": [
+          "Four view files retain dark brass plates, gold ribs, violet joints and a rear violet spinneret.",
+          "Back hides the facial eyes and pincers behind the abdomen. Left and right face their named screen directions.",
+          "Profiles omit baked silk threads to support later runtime effects."
+        ],
+        "limitations": [
+          "Eight-leg anatomy is NOT approved. Initial left draft shows excess feet; refined left has only seven clearly visible tips and right only six clearly visible tips. Occlusion alone does not establish the missing leg chains.",
+          "Profile rear leg roots appear distributed along or under the abdomen rather than all attached to the compact cephalothorax. A canonical socket map and separated leg chains are required.",
+          "Profiles remain oblique with frontal eye and pincer surfaces, not strict orthographic side elevations.",
+          "Abdomen proportions, gold rib patterns, spinneret dimensions and stance differ across views.",
+          "Front/back contain baked silk threads; these must be removed from body layers and implemented as effects between moving leg anchors.",
+          "No runtime animation clips or isolated articulated parts exist for this set."
+        ],
+        "next": "Resolve eight-leg socket topology before rigging. Create four near and four far leg chains with fixed segment lengths, a shared body design and independent silk VFX; visually verify idle, alternating gait, ranged attack, hit and joint-folding death."
+      },
       "sprite": null,
       "animationFiles": {
         "idle": null,
@@ -5247,20 +7065,52 @@
           "status": "master-created"
         },
         "back": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0098/back.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "left": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0098/left.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "right": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0098/right.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         }
+      },
+      "turnaroundReview": {
+        "id": "mob_0098",
+        "name": "Lattice Sovereign",
+        "status": "reference-set-created-consistency-refinement-pending",
+        "method": "Built-in image generation from inspected front and generated opposite views.",
+        "confirmed": [
+          "Four files depict a floating crowned violet lattice enclosing a dark faceted core with sentinel arms, without legs or a humanoid head.",
+          "Rear hands have dorsal armor instead of the circular glowing palm centers.",
+          "Profiles narrow the body and occlude most of the far arm."
+        ],
+        "limitations": [
+          "Both profile palms remain fully facing the camera instead of turning edge-on; arm pose is not a consistent rotation of the front.",
+          "Crown still spreads its tines in a near-frontal arrangement in profiles; cage depth and far-arm topology remain unverified.",
+          "Rear repeats much of the front lattice ornament. Crystal facets, dangling crystal counts and armor ribs drift.",
+          "Reference scales and vertical placements differ; frames must be registered before animation.",
+          "The generated design has substantial gold framing and luminous filled panels; reconcile with the Bible's lattice of violet light and transparent gaps before final approval.",
+          "No separated body/arm/crown layers or runtime clips have been produced for this boss."
+        ],
+        "next": "Define canonical cage depth, crown layout and arm sockets, correct hand projection, then separate layers and animate hovering, arm-unfolding attack, hit response and lattice/core collapse. Verify at game display size."
       },
       "sprite": null,
       "animationFiles": {
@@ -8097,91 +9947,91 @@
       "name": "Cleaving Arc",
       "vfx": "fx_cleaving_arc",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "iron_cyclone",
       "name": "Iron Cyclone",
       "vfx": "fx_iron_cyclone",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "anchor_shout",
       "name": "Anchor Shout",
       "vfx": "fx_anchor_shout",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "sundering_pulse",
       "name": "Sundering Pulse",
       "vfx": "fx_sundering_pulse",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "prism_field",
       "name": "Prism Field",
       "vfx": "fx_prism_field",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "aether_nova",
       "name": "Aether Nova",
       "vfx": "fx_aether_nova",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "gravity_coil",
       "name": "Gravity Coil",
       "vfx": "fx_gravity_coil",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "meridian_lance",
       "name": "Meridian Lance",
       "vfx": "fx_meridian_lance",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "splitshot_array",
       "name": "Splitshot Array",
       "vfx": "fx_splitshot",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "dash_circuit",
       "name": "Dash Circuit",
       "vfx": "fx_dash",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "coil_mine",
       "name": "Coil Mine",
       "vfx": "fx_coil_mine",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "gearstorm",
       "name": "Gearstorm",
       "vfx": "fx_gearstorm",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     },
     {
       "id": "pulse_beacon",
       "name": "Pulse Beacon",
       "vfx": "fx_pulse_beacon",
       "implemented": true,
-      "status": "generic-shape-effect-needs-authored-skill-vfx"
+      "status": "runtime-and-visual-review-required"
     }
   ]
 }

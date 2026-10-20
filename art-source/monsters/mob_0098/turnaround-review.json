@@ -1,0 +1,20 @@
+{
+  "id": "mob_0098",
+  "name": "Lattice Sovereign",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from inspected front and generated opposite views.",
+  "confirmed": [
+    "Four files depict a floating crowned violet lattice enclosing a dark faceted core with sentinel arms, without legs or a humanoid head.",
+    "Rear hands have dorsal armor instead of the circular glowing palm centers.",
+    "Profiles narrow the body and occlude most of the far arm."
+  ],
+  "limitations": [
+    "Both profile palms remain fully facing the camera instead of turning edge-on; arm pose is not a consistent rotation of the front.",
+    "Crown still spreads its tines in a near-frontal arrangement in profiles; cage depth and far-arm topology remain unverified.",
+    "Rear repeats much of the front lattice ornament. Crystal facets, dangling crystal counts and armor ribs drift.",
+    "Reference scales and vertical placements differ; frames must be registered before animation.",
+    "The generated design has substantial gold framing and luminous filled panels; reconcile with the Bible's lattice of violet light and transparent gaps before final approval.",
+    "No separated body/arm/crown layers or runtime clips have been produced for this boss."
+  ],
+  "next": "Define canonical cage depth, crown layout and arm sockets, correct hand projection, then separate layers and animate hovering, arm-unfolding attack, hit response and lattice/core collapse. Verify at game display size."
+}

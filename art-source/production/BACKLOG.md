@@ -102,4 +102,12 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0095 | Array Sentinel | master-created | master-created | master-created | master-created | placeholder |
 | mob_0096 | Glyph Swarm | master-created | master-created | master-created | master-created | placeholder |
 | mob_0097 | Lattice Weaver | master-created | master-created | master-created | master-created | placeholder |
-| mob_0098 | Lattice Sovereign | master-created | missing | missing | missing | placeholder |
+| mob_0098 | Lattice Sovereign | master-created | master-created | master-created | master-created | placeholder |
+
+## Completion evidence
+
+Four-view files present: 94/94. This count does not establish consistent anatomy or visual approval.
+Recorded turnaround review states: reference-set-created-animation-pending: 2; reference-set-created-consistency-refinement-pending: 92.
+Non-placeholder runtime bindings: 7/94; placeholder or missing bindings: 87. Existing bindings still require animation and Bible fidelity review.
+Animation PNG existence does not verify frame count, distinct motion, leg articulation, death quality, direction coverage or in-game behavior.
+Skill VFX implementation and appearance must be inspected in current runtime code; this data-only audit does not classify current effects as generic or finished.
