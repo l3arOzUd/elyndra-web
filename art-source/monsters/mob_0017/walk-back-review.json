@@ -1,0 +1,21 @@
+{
+  "status": "rear-gait-study-unapproved",
+  "selected": "walk-back.png",
+  "rejectedCorrection": {
+    "source": "walk-back-v2.png",
+    "reason": "Raises outer limbs excessively rather than requested large foreground limbs. Original support problem persists."
+  },
+  "verified": [
+    "Six distinct foot tips in four rear-facing poses.",
+    "No face or antennae appears at rear.",
+    "Browser alpha clean; preview cycles without page errors."
+  ],
+  "limitations": [
+    "Both large foreground limbs stay low; inner pair remain raised. Not a valid alternating tripod cycle.",
+    "C/D very similar; weak stride progression.",
+    "Shell/core texture drift and changing limb lengths.",
+    "Top/bottom margins tighter than requested.",
+    "No runtime export or public binding."
+  ],
+  "next": "Use isolated rear contact poses with explicit foot landmarks to correct support groups."
+}
