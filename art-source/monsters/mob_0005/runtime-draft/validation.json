@@ -456,112 +456,112 @@
       "clip": "idle",
       "facing": "N",
       "frame": 0,
-      "visible": 34597,
+      "visible": 33053,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 1,
-      "visible": 34597,
+      "visible": 33053,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 2,
-      "visible": 34597,
+      "visible": 33053,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 3,
-      "visible": 34597,
+      "visible": 33053,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 4,
-      "visible": 34597,
+      "visible": 32577,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 5,
-      "visible": 34597,
+      "visible": 32577,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 6,
-      "visible": 34597,
+      "visible": 32577,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 7,
-      "visible": 34597,
+      "visible": 32577,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 8,
-      "visible": 34597,
+      "visible": 32577,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 9,
-      "visible": 34597,
+      "visible": 32577,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 10,
-      "visible": 34597,
+      "visible": 32577,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 11,
-      "visible": 34597,
+      "visible": 32577,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 12,
-      "visible": 34597,
+      "visible": 33053,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 13,
-      "visible": 34597,
+      "visible": 33053,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 14,
-      "visible": 34597,
+      "visible": 33053,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 15,
-      "visible": 34597,
+      "visible": 33053,
       "edge": 0
     },
     {
@@ -1406,7 +1406,7 @@
     }
   ],
   "limitations": [
-    "Left and front idle use authored blinks; rear idle is a static neutral pose pending authored animation.",
+    "Left and front idle use authored blinks; rear idle uses two breathing poses and needs smoother transitions.",
     "Front, rear and left drafts are authored. Diagonals alias side rows and right mirrors left; accurate directional coverage remains unfinished.",
     "Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved. Rear left-leg anatomy is largely hidden by tail.",
     "Passing format and edge checks does not approve visual quality."

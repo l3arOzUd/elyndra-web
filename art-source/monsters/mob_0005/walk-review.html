@@ -18,6 +18,8 @@ const image=new Image();image.src='./walk-left.png';await image.decode();
 const frontWalk=new Image();frontWalk.src='./walk-front.png';await frontWalk.decode();
 const backWalk=new Image();backWalk.src='./walk-back-v3.png';await backWalk.decode();
 const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
+const backIdle=new Image();backIdle.src='./idle-back.png';await backIdle.decode();
+document.querySelector('#clip').add(new Option('idle-back','idle-back'));
 for(const name of ['attack-back','hit-back','death-back'])document.querySelector('#clip').add(new Option(name,name));
 const frontActions=new Image();frontActions.src='./actions-front-v2.png';await frontActions.decode();
 const frontBlink=new Image();frontBlink.src='./idle-front-blink.png';await frontBlink.decode();
@@ -36,6 +38,9 @@ const boxes=[[15,178,491,272],[521,174,485,283],[1027,177,499,280],[10,614,497,2
 const actionBoxes=[[26,181,481,279],[546,181,441,283],[1026,181,492,281],[28,628,448,282],[523,698,488,216],[1060,746,462,173]];
 const sequences={idle:[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,1,2,2,3,3]};
 sequences['idle-front']=[...sequences.idle];
+// Bottom-row edits drift in scale and include a neighbour's tail fragment.
+// Use only the two clean top-row poses until those frames are repainted.
+sequences['idle-back']=[0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0];
 sequences['walk-front']=[0,1,2,3,4,5];
 sequences['walk-back']=[0,1,2,3,4,5];
 sequences['attack-front']=[0,1,1,2,2,0];
@@ -48,6 +53,12 @@ const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 let paused=false,frame=0,last=0,light=true,clip='walk';
 function draw(ctx,i,cx,baseline,scale){
+ if(clip==='idle-back'){
+  const box=[[0,0,620,630],[620,0,634,630],[0,630,627,624],[627,630,627,624]][i];
+  const anchor=[350,330,350,328][i],bottom=[599,598,542,558][i],s=scale*.7*.8;
+  ctx.drawImage(backIdle,...box,cx+52*scale*.7-anchor*s,baseline-bottom*s,box[2]*s,box[3]*s);
+  return;
+ }
  if(clip==='idle-front'){
   const s=scale*.7;
   ctx.drawImage(i?frontBlink:frontActions,0,0,512,512,cx-256*s,baseline-frontActionBottom[0]*s,512*s,512*s);
@@ -155,8 +166,8 @@ function exportDraft(){
     ctx.restore();
    }
    ctx.save();ctx.translate(f*384,4*384);
-   clip=name==='idle'?'attack-back':`${name}-back`;
-   draw(ctx,name==='idle'?0:sequences[clip][f],192,346,.75);
+   clip=`${name}-back`;
+   draw(ctx,sequences[clip][f],192,346,.75);
    ctx.restore();
   }
   images[name]=canvas.toDataURL('image/png');sizes[name]={width:canvas.width,height:canvas.height};

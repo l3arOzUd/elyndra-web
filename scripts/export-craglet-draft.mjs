@@ -35,7 +35,7 @@ try{
  for(const [name,data]of Object.entries(result.images))await writeFile(resolve(out,`${name}.png`),Buffer.from(data.split(',')[1],'base64'));
  await writeFile(resolve(out,'craglet_2d.sprite.json'),JSON.stringify(result.json,null,2)+'\n');
  const report={status:'technical-draft-only',runtimeBound:false,errors,formatProblems:result.problems,frames:result.frames,
-  limitations:['Left and front idle use authored blinks; rear idle is a static neutral pose pending authored animation.','Front, rear and left drafts are authored. Diagonals alias side rows and right mirrors left; accurate directional coverage remains unfinished.','Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved. Rear left-leg anatomy is largely hidden by tail.','Passing format and edge checks does not approve visual quality.']};
+  limitations:['Left and front idle use authored blinks; rear idle uses two breathing poses and needs smoother transitions.','Front, rear and left drafts are authored. Diagonals alias side rows and right mirrors left; accurate directional coverage remains unfinished.','Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved. Rear left-leg anatomy is largely hidden by tail.','Passing format and edge checks does not approve visual quality.']};
  await writeFile(resolve(out,'validation.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({output:out,clips:Object.keys(result.images),frames:result.frames.length,errors}));
 }finally{await browser.close();}

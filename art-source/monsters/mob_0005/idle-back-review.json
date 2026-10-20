@@ -1,0 +1,23 @@
+{
+  "status": "runtime-draft-refinement-pending",
+  "source": "idle-back.png",
+  "selectedCells": [
+    0,
+    1
+  ],
+  "rejectedCells": {
+    "2": "Neighbour tail fragment in crop and body drift.",
+    "3": "Body proportions and registration drift."
+  },
+  "registration": "Fixed 0.8 source scale, measured spine x and foot baseline; no per-frame stretching.",
+  "timing": {
+    "frames": 16,
+    "fps": 8
+  },
+  "limitations": [
+    "Only two selected painted poses; transition still needs in-betweens.",
+    "Plate and tail shape drift slightly.",
+    "Left leg remains obscured by tail.",
+    "Source is1254square with irregular gutters, not requested1024 grid."
+  ]
+}
