@@ -4,12 +4,13 @@
 <style>body{background:#253039;color:#eee;font:16px system-ui;margin:24px}canvas{background:#56656b;max-width:100%}button,input{margin:8px}</style>
 <h1>Dustwing — front flight draft</h1>
 <p>Authored wing poses, fixed body scale. Review leg count, wing-root anatomy, pattern drift and loop continuity. Not bound to gameplay.</p>
-<select id="clip"><option>flight</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label>
+<select id="clip"><option>flight</option><option>flight-left</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label>
 <canvas id="motion" width="600" height="520"></canvas>
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
 const image=new Image();image.src='./flight-front-v2.png';await image.decode();
 const actions=new Image();actions.src='./actions-front.png';await actions.decode();
+const leftFlight=new Image();leftFlight.src='./flight-left.png';await leftFlight.decode();
 let clip='flight';
 const sequences={flight:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 const actionCells=[[0,0,610,510,300,540],[610,0,440,512,215,540],[1050,0,486,550,240,540],[0,510,520,514,330,490],[520,550,510,474,255,450],[1030,600,506,424,175,325]];
@@ -20,13 +21,19 @@ const cells=[
  [0,512,548,512,285,250],[548,512,512,512,257,250],[1060,512,476,512,230,250]
 ];
 function draw(ctx,f,x,y,s){
+ if(clip==='flight-left'){
+  const col=f%3,cuts=[0,512,1060,1536],sx=cuts[col],w=cuts[col+1]-sx;
+  const sy=f<3?0:520,h=f<3?520:504;
+  const ax=[220,190,200,210,190,190][f],ay=f<3?300:250;
+  ctx.drawImage(leftFlight,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);return;
+ }
  const pose=sequences[clip][f];
  const [sx,sy,w,h,ax,ay]=(clip==='flight'?cells:actionCells)[pose];
  ctx.drawImage(clip==='flight'?image:actions,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);
 }
 const canvas=document.querySelector('#motion'),ctx=canvas.getContext('2d');
 const sheet=document.querySelector('#contact'),cg=sheet.getContext('2d');
-function contacts(){cg.clearRect(0,0,1200,800);for(let f=0;f<6;f++){draw(cg,f,f%3*400+200,Math.floor(f/3)*400+(clip==='flight'?220:370),.65);cg.fillStyle='#fff';cg.fillText(`Frame ${f+1}`,f%3*400+12,Math.floor(f/3)*400+20);}
+function contacts(){cg.clearRect(0,0,1200,800);for(let f=0;f<6;f++){draw(cg,f,f%3*400+200,Math.floor(f/3)*400+(clip.startsWith('flight')?220:370),.65);cg.fillStyle='#fff';cg.fillText(`Frame ${f+1}`,f%3*400+12,Math.floor(f/3)*400+20);}
 }
 contacts();
 let frame=0,paused=false,last=0;
@@ -34,8 +41,8 @@ document.querySelector('#clip').onchange=e=>{clip=e.target.value;frame=0;paused=
 document.querySelector('#pause').onclick=()=>{paused=!paused;};
 document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;};
 function tick(now){
- if(!paused&&now-last>100){frame=clip==='flight'?(frame+1)%6:Math.min(5,frame+1);last=now;}
- ctx.clearRect(0,0,600,520);draw(ctx,frame,300,clip==='flight'?280:490,.9);
+ if(!paused&&now-last>100){frame=clip.startsWith('flight')?(frame+1)%6:Math.min(5,frame+1);last=now;}
+ ctx.clearRect(0,0,600,520);draw(ctx,frame,300,clip.startsWith('flight')?280:490,.9);
  document.querySelector('#frame').value=frame;requestAnimationFrame(tick);
 }
 window.__dustwingFlight={ready:true,cells};requestAnimationFrame(tick);

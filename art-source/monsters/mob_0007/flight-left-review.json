@@ -1,0 +1,18 @@
+{
+  "status": "authored-flight-draft-refinement-pending",
+  "source": "flight-left.png",
+  "verified": [
+    "Browser contact sheet inspected for all six poses.",
+    "Raised and lowered wing angles differ while body remains upright.",
+    "Three near legs remain visible and attached.",
+    "Custom crop uses y520 row split to preserve upper abdomen tips."
+  ],
+  "limitations": [
+    "Far three legs occluded; six-leg anatomy not fully verified.",
+    "Wing-root perspective differs from frontal animation.",
+    "Eyespot and vein patterns drift across poses.",
+    "Antennae angle and thorax registration need refinement.",
+    "Rear flight and side action clips remain missing.",
+    "Not bound to gameplay."
+  ]
+}
