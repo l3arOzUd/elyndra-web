@@ -2,12 +2,36 @@
   "id": "mob_0021",
   "status": "rear-combat-and-death-drafts",
   "source": "actions-back-study.png",
-  "override": {"pose2": "pinch-back-depth-study.png"},
+  "override": {
+    "pose2": "pinch-back-depth-study.png",
+    "pose5": "death-back-volume-v2.png"
+  },
   "preview": "actions-back-review.html",
   "sequences": {
-    "attack": [0, 1, 1, 2, 2, 0],
-    "hit": [0, 3, 3, 0, 0, 0],
-    "death": [0, 4, 4, 5, 5, 5]
+    "attack": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      0
+    ],
+    "hit": [
+      0,
+      3,
+      3,
+      0,
+      0,
+      0
+    ],
+    "death": [
+      0,
+      4,
+      4,
+      5,
+      5,
+      5
+    ]
   },
   "observed": [
     "Rear remains faceless and large claw stays image-right.",
@@ -16,13 +40,27 @@
   ],
   "remaining": [
     "Attack endpoint still reads upward; forward foreshortening remains weak.",
-    "Death compresses shell height and changes coral silhouette.",
-    "Some folded walking legs are concealed; identity and segment continuity not established.",
+    "Intermediate collapse still compresses shell; final endpoint is fuller but coral landmarks differ.",
+    "Final endpoint has eight visible tips, but added inner legs appear shortened and their hidden joints are unverified.",
     "Cross-view neutral scale and attack/death timing need reconciliation."
   ],
   "validation": {
-    "visiblePixelsPerPose": [69316, 74958, 61050, 66506, 59813, 49716],
-    "canvasEdgePixels": [0, 0, 0, 0, 0, 0],
+    "visiblePixelsPerPose": [
+      69316,
+      74958,
+      61050,
+      66506,
+      59813,
+      52510
+    ],
+    "canvasEdgePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
     "deathFrameAfter1300ms": 5,
     "deathFrameAfter1900ms": 5,
     "playingAfterDeath": false,
@@ -30,5 +68,33 @@
     "scope": "Draft preview display and final hold only, not anatomy or gameplay approval."
   },
   "artApproved": false,
-  "publicBinding": false
+  "publicBinding": false,
+  "selectedDeath": {
+    "file": "death-back-volume-v2.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "alphaBoundsAbove16": [
+      27,
+      158,
+      1439,
+      914
+    ],
+    "uniformScale": 0.28,
+    "sourceAnchor": [
+      740,
+      914
+    ],
+    "previewAnchor": [
+      256,
+      430
+    ],
+    "visibleWalkingTips": [
+      4,
+      4
+    ],
+    "selectedForDraftPreview": true,
+    "artApproved": false
+  }
 }

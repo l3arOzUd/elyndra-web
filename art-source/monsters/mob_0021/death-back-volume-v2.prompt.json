@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "death-back-volume-study.png",
+  "prompt": "Fix missing legs in this exact rear-view dead crab, without changing the shell/coral/claws. Currently only THREE walking foot tips are visible per side. Add ONE extra folded inner walking leg on each side (two total), yielding FOUR distinct walking feet per side, eight total. Put added pair low underneath the abdomen, one tip left of center and one right of center, visibly separated from the existing long inward-folded legs. Both new legs must have a continuous thick armored segment chain from beneath lateral carapace through a bent knee to pointed toe, not loose disconnected tips. Preserve all existing six legs. Keep full-volume shell and coral upright exactly as reference and large claw image RIGHT. All eight legs folded low on ground in lifeless posture, no face or eyes. Also slightly zoom out to ensure the right claw edge and all toes fit inside generous transparent margins. Single rear crab corpse, exact same colors and hand-painted detail. Transparent background, no floor/shadow/text/labels."
+}
