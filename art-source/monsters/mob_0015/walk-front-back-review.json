@@ -1,0 +1,35 @@
+{
+  "status": "authored-walking-studies-not-production-approved",
+  "preview": "isolated-walk-review.html",
+  "front": {
+    "file": "walk-front.png",
+    "playbackCellOrder": [2, 1, 0, 3],
+    "verified": [
+      "Two arms and two legs in each cell, single jade eye and chest medallion retained.",
+      "Both knees take turns lifting, airborne feet separate visibly from ground.",
+      "Reordered generated cells so contact on one side precedes opposite foot lift."
+    ]
+  },
+  "back": {
+    "file": "walk-back.png",
+    "playbackCellOrder": [0, 1, 2, 3],
+    "verified": [
+      "Closed rear hood, scapula plates and brass spine remain visible without front eye/emblem.",
+      "Both heels lift in alternating passing poses, sole surfaces visible.",
+      "Rear knees retain hinge recesses instead of front kneecap plates."
+    ]
+  },
+  "checks": [
+    "Both views load and switch in browser without page errors.",
+    "Actual canvas composite shows transparent exterior.",
+    "Contact-sheet display scale reduced to keep broad fists inside preview columns."
+  ],
+  "limitations": [
+    "Four-keyframe gait needs weight-transfer inbetweens.",
+    "Front feet lift high; it reads as marching more than a slow heavy walk.",
+    "Rear torso and root details vary between poses.",
+    "Rear contact has weak heel-to-toe movement.",
+    "Cross-view scale is provisional; no runtime export or public binding.",
+    "Attack, hit, death and idle animation still pending."
+  ]
+}

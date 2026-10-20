@@ -2,19 +2,24 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;display:block;margin:16px 0}</style>
 <h1>Root Sentinel — six walk key poses</h1>
 <p>Draft contact / passing alternation. Inspect limb identity, support and design continuity; not bound to gameplay.</p>
+<label>View <select id="view"><option value="side">Left</option><option value="front">Front</option><option value="back">Back</option></select></label>
 <button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
 <canvas id="motion" width="600" height="560"></canvas><canvas id="contact" width="2400" height="560"></canvas>
 <script type="module">
 const names=['walk-left-contact-a.png','walk-left-down-a.png','walk-left-pass-a.png','walk-left-contact-b-v3.png','walk-left-down-b.png','walk-left-pass-b.png'];
 const ims=await Promise.all(names.map(async name=>{const im=new Image();im.src=name;await im.decode();return im;}));
+const sheets={};for(const view of ['front','back']){const im=new Image();im.src=`./walk-${view}.png`;await im.decode();sheets[view]=im;}
+function count(){return document.querySelector('#view').value==='side'?6:4;}
 // Uniform scaling only; each full drawing keeps its original limb proportions.
 const base=[1193,1192,1223,1226,1232,1236],anchor=[660,660,660,660,660,660];
-function draw(g,f,x,y,s){const im=ims[f],k=s*1254/im.height;g.drawImage(im,x-anchor[f]*k,y-base[f]*k,im.width*k,im.height*k);}
+function draw(g,f,x,y,s){const view=document.querySelector('#view').value;if(view!=='side'){const im=sheets[view],p=view==='front'?[2,1,0,3][f]:f;const ax=view==='front'?[433,340,422,340][p]:[487,300,475,294][p];const bottom=view==='front'?[509,504,503,499][p]:[509,509,508,506][p];const k=s*2.4;g.drawImage(im,p%2*768,Math.floor(p/2)*512,768,512,x-ax*k,y-bottom*k,768*k,512*k);return;}const im=ims[f],k=s*1254/im.height;g.drawImage(im,x-anchor[f]*k,y-base[f]*k,im.width*k,im.height*k);}
 const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
-for(let f=0;f<6;f++){draw(cg,f,f*400+200,520,.38);cg.fillStyle='#fff';cg.fillText(['Contact A','Transfer A','Passing A','Contact B','Transfer B','Passing B'][f],f*400+20,30);cg.strokeStyle='#b3c4b9';cg.beginPath();cg.moveTo(f*400,520);cg.lineTo(f*400+400,520);cg.stroke();}
+function contact(){cg.clearRect(0,0,2400,560);for(let f=0;f<count();f++){draw(cg,f,f*400+200,520,count()===6?.38:.32);cg.fillStyle='#fff';cg.fillText((count()===6?['Contact A','Transfer A','Passing A','Contact B','Transfer B','Passing B']:['Contact A','Passing A','Contact B','Passing B'])[f],f*400+20,30);cg.strokeStyle='#b3c4b9';cg.beginPath();cg.moveTo(f*400,520);cg.lineTo(f*400+400,520);cg.stroke();}}
+contact();
 let f=0,paused=false,last=0;
 document.querySelector('#pause').onclick=()=>paused=!paused;
 document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
-function tick(t){if(!paused&&t-last>160){f=(f+1)%6;last=t;}ctx.clearRect(0,0,600,560);draw(ctx,f,300,520,.4);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+function tick(t){if(!paused&&t-last>160){f=(f+1)%count();last=t;}ctx.clearRect(0,0,600,560);draw(ctx,f,300,520,.4);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+document.querySelector('#view').onchange=()=>{f=0;document.querySelector('#frame').max=count()-1;contact();};
 window.__rootSentinelIsolated={ready:true};requestAnimationFrame(tick);
 </script>
