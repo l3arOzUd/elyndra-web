@@ -2,11 +2,11 @@
   "id": "mob_0005",
   "animation": "walk",
   "status": "draft-motion-created-refinement-pending",
-  "source": "walk-left.png",
+  "source": "walk-01.png through walk-06.png",
   "replacementWork": {
     "rejectedSheet": "walk-left-v2.png",
     "reason": "Near/far foreleg swing order is still inconsistent; alpha bounds touch cell seams in columns 2 and 3. Not selected for preview or runtime.",
-    "individualFrames": ["walk-01.png", "walk-02.png", "walk-03.png"],
+    "individualFrames": ["walk-01.png", "walk-02.png", "walk-03.png", "walk-04.png", "walk-05.png", "walk-06.png"],
     "review": "First contact pose shows four feet, near foreleg reaching forward and near hindleg trailing. Frame2 lifts near hindfoot; an initial fifth belly foot was removed via image edit and the failed draft retained. Frame3 swings near hindfoot forward. All three retain four visible feet in direct inspection. Remaining gait phases, far-leg motion, fixed bone lengths and contact registration still need review."
   },
   "preview": "walk-review.html",
@@ -17,7 +17,9 @@
     "Preview uses constant scale and ground-registered alpha bounds without stretching limbs."
   ],
   "limitations": [
-    "Near/far foreleg ownership changes ambiguously around frames 3-4; refine diagonal support order before runtime acceptance.",
+    "Individual-frame replacement now keeps near foreleg lift in frames4-5 and near hindleg lift in frames2-3. Far-leg support timing and fixed segment lengths remain unverified.",
+    "Frames3-5 gain orange saturation and dark contrast through chained generation; color consistency needs refinement.",
+    "Foot-bound registration causes visible torso height changes; register planted contacts and body landmarks before runtime acceptance.",
     "Stone plates, quartz arrangement and limb thickness drift slightly between painted frames.",
     "The small brass belly gear from the Bible is not visible in this side master or cycle; resolve visibility rather than declaring it complete.",
     "Ground registration follows lowest visible pixel, not measured planted-foot trajectories; foot sliding remains unverified.",

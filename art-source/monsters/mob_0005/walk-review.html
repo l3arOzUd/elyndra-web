@@ -15,6 +15,8 @@ button,input{margin:12px;padding:8px}p{max-width:900px}
 <canvas id="contact" width="1200" height="640"></canvas>
 <script type="module">
 const image=new Image();image.src='./walk-left.png';await image.decode();
+const walkImages=await Promise.all([1,2,3,4,5,6].map(async n=>{const img=new Image();img.src=`./walk-0${n}.png`;await img.decode();return img;}));
+const walkBoxes=[[34,338,1204,632],[33,337,1208,663],[34,334,1210,671],[33,333,1213,670],[33,330,1212,679],[33,336,1211,633]];
 const actions=new Image();actions.src='./actions-left.png';await actions.decode();
 const deathImages=await Promise.all(['left','death-buckle','death-collapse','death-final'].map(async name=>{const img=new Image();img.src=`./${name}.png`;await img.decode();return img;}));
 const deathBoxes=[[34,339,1201,642],[40,347,1200,631],[36,408,1206,543],[17,409,1226,527]];
@@ -28,6 +30,11 @@ const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 let paused=false,frame=0,last=0,light=true,clip='walk';
 function draw(ctx,i,cx,baseline,scale){
+ if(clip==='walk'){
+  const b=walkBoxes[i],s=scale*.4;
+  ctx.drawImage(walkImages[i],...b,cx-b[2]*s/2,baseline-b[3]*s,b[2]*s,b[3]*s);
+  return;
+ }
  if(clip==='hit'){
   const b=i===3?[59,330,1178,649]:deathBoxes[0],s=scale*.4;
   ctx.drawImage(i===3?hitImage:deathImages[0],...b,cx-b[2]*s/2,baseline-b[3]*s,b[2]*s,b[3]*s);

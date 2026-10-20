@@ -1,0 +1,6 @@
+{
+  "prompt": "Craglet walk frame4, next pose from exact reference. LEFT facing unchanged head torso scale large slate plates warm quartz tail. Near hindleg now PLANTS foot forward under belly at x650 ground baseline. Near FORELEG with quartz shoulder at x420 lifts foot OFF ground and bends elbow so foot hangs at x380 y850, while FAR foreleg stays planted at x200 y940. Far hindfoot remains visible behind near hindleg. Exactly FOUR connected legs and four feet, no extra belly foot. Preserve fixed bone lengths and domed torso. Full body single pose transparent square, no ground shadow text, keep all claws tail inside margins.",
+  "references": [
+    "walk-03.png"
+  ]
+}
