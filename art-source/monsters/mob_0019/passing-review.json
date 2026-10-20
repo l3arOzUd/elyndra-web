@@ -31,5 +31,15 @@
       "No approval or runtime binding."
     ]
   },
-  "next": "Register near-leg passing candidate to contact B, then derive complementary far-leg passing with explicit occlusion guide."
+  "oppositePassingCandidate": {
+    "source": "walk-left-pass-a-v2.png",
+    "observations": [
+      "Straight near thigh now overlaps bent far thigh, providing opposite passing depth order.",
+      "Relaxed far arm remains present.",
+      "Lifted boot remains pointed down and behind supporting shin."
+    ],
+    "assembly": "side-cycle-review.html",
+    "approved": false
+  },
+  "next": "Refine assembled side cycle proportions, stride spacing and lifted boot articulation."
 }

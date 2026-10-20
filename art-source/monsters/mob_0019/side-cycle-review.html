@@ -1,0 +1,34 @@
+<!doctype html><meta charset="utf-8">
+<title>Sun Warden side cycle review</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}label{margin-right:16px}</style>
+<h1>Sun Warden: side walk assembly study</h1>
+<p>Four key drawings registered by hips and ground. Inspect near/far legs, foot sliding and rigid upper-body continuity. Not approved for gameplay.</p>
+<button id="play">Play / pause</button>
+<input id="frame" type="range" min="0" max="3" value="0">
+<span id="label"></span><br>
+<label><input id="small" type="checkbox">Gameplay-size preview</label>
+<canvas width="640" height="640"></canvas>
+<script type="module">
+const files=['walk-left.png','walk-left-pass-a-v2.png','walk-left-pass-b.png'];
+const images=await Promise.all(files.map(async file=>{const im=new Image();im.src=file;await im.decode();return im}));
+const poses=[
+ {image:0,crop:[0,0,768,512],hip:470,ground:507,scale:.9,name:'Contact A: near leg forward'},
+ {image:1,crop:[0,0,1254,1254],hip:650,ground:1218,scale:.37,name:'Passing A candidate: far leg'},
+ {image:0,crop:[0,512,768,512],hip:458,ground:1009,scale:.9,name:'Contact B: far leg forward'},
+ {image:2,crop:[0,0,1254,1254],hip:650,ground:1218,scale:.37,name:'Passing B candidate: near leg'}
+];
+const canvas=document.querySelector('canvas'),g=canvas.getContext('2d'),slider=document.querySelector('#frame');
+let playing=false,last=0;
+function draw(){
+ const pose=poses[Number(slider.value)], [x,y,w,h]=pose.crop,small=document.querySelector('#small').checked,s=pose.scale*(small?.3:1);
+ g.clearRect(0,0,640,640);
+ g.drawImage(images[pose.image],x,y,w,h,320+(x-pose.hip)*s,590+(y-pose.ground)*s,w*s,h*s);
+ g.strokeStyle='#b1babe';g.beginPath();g.moveTo(10,590);g.lineTo(630,590);g.stroke();
+ document.querySelector('#label').textContent=pose.name;
+}
+slider.oninput=()=>{playing=false;draw()};
+document.querySelector('#small').onchange=draw;
+document.querySelector('#play').onclick=()=>{playing=!playing;last=performance.now()};
+function tick(t){if(playing&&t-last>300){slider.value=String((Number(slider.value)+1)%4);last=t;draw()}requestAnimationFrame(tick)}
+draw();requestAnimationFrame(tick);window.__wardenSideCycle={ready:true,poses};
+</script>

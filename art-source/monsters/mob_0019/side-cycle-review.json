@@ -1,0 +1,30 @@
+{
+  "status": "assembled-four-key-side-walk-unapproved",
+  "preview": "side-cycle-review.html",
+  "frames": [
+    {"source":"walk-left.png","cell":0,"pose":"near-leg forward contact"},
+    {"source":"walk-left-pass-a-v2.png","pose":"far-leg passing candidate"},
+    {"source":"walk-left.png","cell":2,"pose":"far-leg forward contact"},
+    {"source":"walk-left-pass-b.png","pose":"near-leg passing candidate"}
+  ],
+  "registration": {
+    "method":"Uniform scale and translation by hip horizontal position and supporting sole baseline; no limb warping",
+    "sheetScale":0.9,
+    "isolatedScale":0.37,
+    "groundY":590
+  },
+  "verified": [
+    "Four-frame browser playback advances without page errors.",
+    "Near straight supporting thigh overlaps bent far thigh in passing A; passing B reverses this overlap.",
+    "Both passing poses retain relaxed arm, spear grip and two visible boots.",
+    "Ground alignment and full silhouette inspected in four-cell browser contact sheet."
+  ],
+  "limitations": [
+    "Passing torsos are slimmer than contact torsos; uniform scaling cannot fix local proportion drift.",
+    "Contact stride is substantially wider than passing poses; four drawings produce abrupt transitions.",
+    "Lifted toes point down and cross near supporting shin, requiring further articulation review.",
+    "Halo, weapon and armor detailing differ across source batches.",
+    "Side study only; frontal gait, rear gait, actions, effects and runtime integration remain unfinished."
+  ],
+  "next": "Harmonize contact torso proportions and shorten contact stride to match passing pair; then add intermediate poses."
+}
