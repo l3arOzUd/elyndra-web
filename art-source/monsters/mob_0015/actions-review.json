@@ -1,0 +1,27 @@
+{
+  "status": "left-action-studies-not-production-approved",
+  "preview": "actions-review.html",
+  "sources": {
+    "neutralWindupHitBuckleDead": "actions-left.png",
+    "strike": "attack-left-strike.png"
+  },
+  "verified": [
+    "Death knees fold underneath, torso slumps forward onto forearms and hood lowers.",
+    "Final death eye is dark; preview holds final drawing without looping.",
+    "Corrected punch now follows the same near shoulder/arm as windup.",
+    "Browser composite of isolated punch and final death has clean transparent exterior."
+  ],
+  "rejected": [
+    "Original sheet strike uses far arm after near-arm windup.",
+    "actions-left-v2.png corrects arm but introduces visible alpha haze; not used."
+  ],
+  "limitations": [
+    "Only three distinct death poses; extra timing frames repeat drawings.",
+    "Attack needs transition and recovery drawings.",
+    "Strike is brighter and more saturated than original sheet.",
+    "Isolated strike rear foot has very narrow right margin.",
+    "Root/plate details and body proportions drift.",
+    "Front/rear action views and actual idle movement remain missing.",
+    "No runtime export or gameplay binding."
+  ]
+}

@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8"><title>Root Sentinel actions</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;display:block;margin:16px 0}</style>
+<h1>Root Sentinel — action studies</h1>
+<p>Left view draft. Death folds through knees and torso. Revised punch uses the near arm throughout. Timing and proportions still need refinement. Not bound to gameplay.</p>
+<select id="clip"><option value="idle">Idle pose</option><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option></select>
+<button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" value="0">
+<canvas id="motion" width="640" height="560"></canvas><canvas id="contact" width="1800" height="1100"></canvas>
+<script type="module">
+const im=new Image();im.src='./actions-left.png';await im.decode();
+const corrected=new Image();corrected.src='./attack-left-strike.png';await corrected.decode();
+const crops=[[0,0,512,534],[512,0,444,534],[950,0,586,534],[0,534,512,490],[512,534,488,490],[1000,534,536,490]];
+const ax=[285,240,355,260,220,260],bottom=[528,532,532,475,458,455];
+const seq={idle:[0,0,0,0,0,0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
+function pose(g,p,x,y,s){if(p===2){const k=s*.42;g.drawImage(corrected,x-750*k,y-1225*k,corrected.width*k,corrected.height*k);return;}const [sx,sy,w,h]=crops[p];g.drawImage(im,sx,sy,w,h,x-ax[p]*s,y-bottom[p]*s,w*s,h*s);}
+const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
+for(let p=0;p<6;p++){pose(cg,p,p%3*600+300,Math.floor(p/3)*550+520,.9);}
+let f=0,last=0,paused=false;
+document.querySelector('#frame').oninput=e=>{f=+e.target.value;paused=true;};
+function replay(){f=0;last=performance.now();paused=false;}
+document.querySelector('#replay').onclick=replay;document.querySelector('#clip').onchange=replay;
+function tick(t){const clip=document.querySelector('#clip').value;if(!paused&&t-last>150){f=clip==='idle'?(f+1)%6:Math.min(5,f+1);last=t;}ctx.clearRect(0,0,640,560);pose(ctx,seq[clip][f],320,520,.9);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+window.__rootSentinelActions={ready:true};requestAnimationFrame(tick);
+</script>
