@@ -2,10 +2,10 @@
   "status": "combined-study-unapproved",
   "preview": "combined-review.html",
   "views": ["left", "front", "back", "right-mirrored-left"],
-  "clips": ["static-idle", "walk", "attack", "hit", "death"],
+  "clips": ["front-two-pose-idle-side-rear-static", "walk", "attack", "hit", "death"],
   "technicalCheck": {
     "browserErrors": [],
-    "checkedTimingCells": 92,
+    "checkedTimingCells": 112,
     "emptyOrCanvasEdgeViolations": [],
     "method": "Draw all frames for four preview facings into 384-square canvases; alpha greater than 32 must not touch boundary."
   },
@@ -18,7 +18,7 @@
     "Rear strike still reads as raised guard despite corrected horizontal reach."
   ],
   "remaining": [
-    "Author idle variation and sand emission required by Bible.",
+    "Refine front idle chest/shoulder continuity; author side/rear idle variation and sand emission required by Bible.",
     "Correct rigid segment and carving continuity.",
     "Refine foot support and weight transfer, add missing in-between poses.",
     "Refine rear punch projection and shoulder drive.",

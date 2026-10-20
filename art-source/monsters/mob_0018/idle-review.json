@@ -1,0 +1,18 @@
+{
+  "status": "front-idle-two-pose-draft",
+  "sources": ["actions-front.png", "idle-front-settle.png"],
+  "selectedCell": 0,
+  "timing": "Six timing frames at 4fps; alternate drawing only frames 2 and 3.",
+  "observations": [
+    "Helmet tilts downward, fists settle lower, both feet remain aligned.",
+    "Two arms and legs retained; browser alpha clean.",
+    "Only top-left cell is consumed; other regenerated action cells are unused."
+  ],
+  "limitations": [
+    "Chest carving and shoulder widths change between drawings.",
+    "Two drawings with holds do not provide a smooth settling motion.",
+    "Side/rear idle still static.",
+    "Bible sand emission remains missing."
+  ],
+  "publicBinding": false
+}

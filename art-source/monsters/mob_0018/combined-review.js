@@ -1,8 +1,8 @@
 const sideFiles=['walk-left-contact-a-v5.png','walk-left-pass-a.png','walk-left-contact-b.png','walk-left-pass-b.png'];
-const files=[...sideFiles,'walk-front.png','walk-back.png','actions-left.png','actions-front.png','actions-back.png','actions-back-v2.png'];
+const files=[...sideFiles,'walk-front.png','walk-back.png','actions-left.png','actions-front.png','actions-back.png','actions-back-v2.png','idle-front-settle.png'];
 const images=Object.fromEntries(await Promise.all(files.map(async file=>{const im=new Image();im.src=file;await im.decode();return [file,im]})));
-const defs={idle:{frames:1,fps:1,loop:true},walk:{frames:4,fps:4,loop:true},attack:{frames:6,fps:8},hit:{frames:6,fps:12},death:{frames:6,fps:7}};
-const seq={idle:[0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
+const defs={idle:{frames:6,fps:4,loop:true},walk:{frames:4,fps:4,loop:true},attack:{frames:6,fps:8},hit:{frames:6,fps:12},death:{frames:6,fps:7}};
+const seq={idle:[0,0,0,0,0,0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 const specs={
  left:{crops:[[0,0,512,550],[512,0,468,550],[980,0,556,550],[0,550,512,474],[512,550,512,474],[1024,550,512,474]],anchors:[260,750,1280,280,780,1280],ground:[542,542,542,1000,1000,985],scale:.55},
  front:{crops:[[0,0,512,525],[512,0,512,525],[1024,0,512,525],[0,525,530,499],[530,525,494,499],[1024,525,512,499]],anchors:[285,785,1290,270,790,1290],ground:[510,516,519,981,985,997],scale:.60},
@@ -22,7 +22,7 @@ function draw(g,clip,f,view){
   }
  }else{
   const cell=seq[clip][f],spec=specs[view],[sx,sy,w,h]=spec.crops[cell],s=spec.scale;
-  const file=view==='back'&&cell===2?'actions-back-v2.png':`actions-${view}.png`;
+  const file=clip==='idle'&&view==='front'&&(f===2||f===3)?'idle-front-settle.png':view==='back'&&cell===2?'actions-back-v2.png':`actions-${view}.png`;
   g.drawImage(images[file],sx,sy,w,h,(sx-spec.anchors[cell])*s,(sy-spec.ground[cell])*s,w*s,h*s);
  }
  g.restore();
