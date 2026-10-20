@@ -1,0 +1,5 @@
+{
+  "prompt": "A single game VFX texture: luminous golden ivory sword slash, hand-painted fantasy MMORPG style. Transparent background. Square canvas. Orthographic top down. A precise crescent arc centered on the canvas center, opening toward LEFT, brightest curved edge on RIGHT. Arc spans only 100 degrees around the rightward direction (from -50 to +50 degrees); outer radius 42 percent canvas width; no paint in left half. Painterly tapered brush ribbons, warm pale gold core with amber edge wisps, restrained tiny sparks hugging arc. Clear readable at small size. No sword, no character, no ground, no shadow, no text, no border. Everything fully inside canvas with margins. This will be mapped to ground plane, its center is the caster and its rightmost curve is the impact boundary.",
+  "asset": "public/vfx/cleaving-arc.png",
+  "review": "Source crescent exceeds requested 100 degrees. Runtime sector geometry clips to skill angle and radius. Browser review required; this asset does not complete all skill VFX."
+}

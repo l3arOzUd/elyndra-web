@@ -21,11 +21,24 @@ export const RARITY_COLORS: Record<string, number> = { normal: 0xd9b46a, magic: 
 
 interface Live { obj: THREE.Mesh; age: number; life: number; grow: number; kind: "tele" | "burst" | "aura" | "shrink" | "field" | "flash" }
 
+// Shared across maps. Each effect owns its material, not this reusable texture.
+let cleavingTexture: THREE.Texture | undefined;
+let loadingCleavingTexture = false;
+
 export class Fx {
   private live: Live[] = [];
   readonly enabled = { flash: true };
 
-  constructor(private readonly scene: THREE.Scene) {}
+  constructor(private readonly scene: THREE.Scene) {
+    if (typeof document !== "undefined" && !cleavingTexture && !loadingCleavingTexture) {
+      loadingCleavingTexture = true;
+      new THREE.TextureLoader().load("/vfx/cleaving-arc.png", texture => {
+        texture.colorSpace = THREE.SRGBColorSpace;
+        cleavingTexture = texture;
+        loadingCleavingTexture = false;
+      }, undefined, () => { loadingCleavingTexture = false; });
+    }
+  }
 
   private shapeGeometry(s: SkillDef, scale = 1): THREE.BufferGeometry {
     const r = (s.radius ?? 1) * scale;
@@ -72,6 +85,27 @@ export class Fx {
         const radius = s.radius ?? 6;
         const spread = (s.angle_deg ?? 90) * Math.PI / 180;
         const heading = Math.atan2(aimZ - z, aimX - x);
+        if (s.id === "cleaving_arc" && cleavingTexture) {
+          // Planar UVs preserve the painted crescent; geometry clips the
+          // wider source artwork to the authoritative attack sector.
+          const geometry = new THREE.RingGeometry(radius * 0.28, radius, 48, 1, -spread / 2, spread);
+          const vertices = geometry.getAttribute("position");
+          const colors = new Float32Array(vertices.count * 4);
+          for (let i = 0; i < vertices.count; i++) {
+            const angle = Math.abs(Math.atan2(vertices.getY(i), vertices.getX(i)));
+            const edge = Math.max(0, Math.min(1, (spread / 2 - angle) / (spread * 0.18)));
+            colors.set([1, 1, 1, edge * edge * (3 - 2 * edge)], i * 4);
+          }
+          geometry.setAttribute("color", new THREE.BufferAttribute(colors, 4));
+          const arc = new THREE.Mesh(
+            geometry.rotateX(-Math.PI / 2),
+            new THREE.MeshBasicMaterial({ map: cleavingTexture, color: 0xffffff, vertexColors: true, transparent: true, opacity: 0.95, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending }),
+          );
+          arc.position.set(x, 0.18, z);
+          arc.rotation.y = -heading;
+          this.add(arc, "flash", 360);
+          return true;
+        }
         if (s.id === "splitshot_array") {
           // A fan of five arrow streaks, bounded by the server's cone.
           for (let i = 0; i < 5; i++) {
