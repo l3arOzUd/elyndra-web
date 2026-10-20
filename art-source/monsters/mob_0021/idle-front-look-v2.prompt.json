@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "front-rest-study.png",
+  "prompt": "Use case: precise-object-edit. Make the smallest possible edit to this exact transparent front-view crab image. ONLY swivel the two eyestalks outward around their existing base joints by 6 degrees. Keep stalk lengths and eye sizes. Freeze EVERY other pixel area: all eight legs and foot tips, both closed claws, entire shell, mouth plates and coral. Do not change body pose, size, framing, outline or colours. This is an idle sprite key that must register precisely over the original 1448x1086 neutral frame. Do NOT reopen claws or redraw anatomy. Preserve transparency, no background, no shadows, no text, one crab."
+}

@@ -1,0 +1,23 @@
+{
+  "method": "Read-only comparison of source alpha masks >16, same native dimensions and coordinates, no fitting or warping.",
+  "regions": {"feet": "y > 800", "coral": "y < 400"},
+  "units": "Count of pixels whose foreground/background classification differs from neutral.",
+  "front": {
+    "neutral": "front-rest-study.png",
+    "old": {"file": "idle-front-look.png", "all": 150333, "feet": 80553, "coral": 27866},
+    "v2": {"file": "idle-front-look-v2.png", "all": 30683, "feet": 7246, "coral": 16306},
+    "decision": "Select v2 as improved draft. Foot silhouette drift reduced; it is not zero. Coral changes and eye motion still require visual approval."
+  },
+  "back": {
+    "neutral": "back-anatomy-study-v4.png",
+    "old": {"file": "idle-back-claw.png", "all": 103977, "feet": 38137, "coral": 20613},
+    "v2": {"file": "idle-back-claw-v2.png", "all": 99706, "feet": 36572, "coral": 20927},
+    "decision": "Do not select v2: foot drift remains, coral discrepancy worsens, small claw gains an odd projecting finger. Previous back remains draft only."
+  },
+  "limitations": [
+    "Alpha disagreement does not assess internal textures, joints, correct anatomy, colours or motion quality.",
+    "These region counts are diagnostic comparisons, not pass scores.",
+    "No idle animation is approved for runtime binding."
+  ],
+  "artApproved": false
+}

@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-anatomy-study-v4.png",
+  "prompt": "Use case: precise-object-edit. Minimal edit of this exact rear-view crab sprite. Change ONLY the movable finger tip of the SMALL claw at image LEFT: rotate it outward slightly at its hinge, opening a tiny gap. Keep claw palm and arm/elbow stationary. Every walking leg and foot tip, huge image-right claw, shell, coral branches and body position must remain identical to the reference. No body bounce or swelling. Do not move the entire claw. Exact same 1448x1086 canvas/framing and scale. Preserve transparent background. No shadows, no text, no additional objects. One whole crab."
+}

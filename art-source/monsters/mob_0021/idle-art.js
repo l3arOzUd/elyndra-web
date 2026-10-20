@@ -1,6 +1,6 @@
 // Authored idle studies only. No limb warping or per-key alignment.
 export const idleSources = {
-  front: ['front-rest-study.png', 'idle-front-look.png'],
+  front: ['front-rest-study.png', 'idle-front-look-v2.png'],
   back: ['back-anatomy-study-v4.png', 'idle-back-claw.png'],
   left: ['left-profile-study-v2.png', 'idle-left-look.png'],
   right: ['right-profile-study-v2.png', 'idle-right-look.png'],

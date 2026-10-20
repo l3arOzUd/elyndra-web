@@ -10,14 +10,14 @@
   "activeKeys": [12, 13, 14],
   "transform": {"uniformScale": 0.3, "origin": [26, 100], "perKeyFitting": false},
   "visualReview": {
-    "front": "Eyestalks turn outward and small claw opens. Shell, feet and coral also shift; unsuitable as a planted idle without repair.",
+    "front": "Selected idle-front-look-v2.png: eyestalk-only edit substantially reduces foot drift. Coral silhouette and internal detail still change. See idle-registration-review.json; not approved.",
     "back": "Small claw flexes. Rear shell and foot positions drift, large claw approaches source edge. Eight visible tips retained; roots concealed.",
     "left": "Visible eyestalk turns forward. Four near walking chains retained. Stalk length and detail continuity still require review.",
     "right": "Visible eyestalk turns forward. Four near chains and large far claw retained. No full cross-view identity approval."
   },
   "browserCheck": {
     "visiblePixelsByView": {
-      "front": [59977, 64186],
+      "front": [59977, 61842],
       "back": [59871, 62439],
       "left": [72673, 73172],
       "right": [72322, 72332]
