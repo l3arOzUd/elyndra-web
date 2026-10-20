@@ -1,0 +1,20 @@
+{
+  "id": "mob_0095",
+  "name": "Array Sentinel",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation; right-facing retry replaces wrong-direction draft retained for review.",
+  "confirmed": [
+    "Faceless charcoal/brass plate, right-hand lattice halberd and single violet halo retained.",
+    "Revised right faces right with near right gripping arm; left has near relaxed left arm.",
+    "Rear armor has spine plates and flexible rear knees."
+  ],
+  "limitations": [
+    "Halberd blade remains broad face-on in profiles rather than edge-on; weapon plane/hand rotation inconsistent.",
+    "Halo appears broad ellipse in profiles and rear depth ordering relative helmet unverified.",
+    "Right gripping arm extends farther forward than left/front neutral stance.",
+    "Armor layering, helmet fins, boot heel height, weapon ornament counts and proportions drift.",
+    "Far leg mostly occluded in left; full anatomy unverified.",
+    "No separated rig/weapon/halo or runtime clips yet."
+  ],
+  "next": "Align grip/arm pose, weapon and halo planes, armor landmarks and grounded boot anatomy. Separate body joint plates/halberd/halo/light layers for idle, weighted walk, thrust/sweep, cast, hit and knees-first collapse; ring rotation and lattice trails separate."
+}
