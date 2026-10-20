@@ -1,0 +1,21 @@
+{
+  "id": "mob_0085",
+  "name": "Slagforged Brute",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation using front master and opposite-view references.",
+  "confirmed": [
+    "Porous charcoal slag, orange molten fissures, blunt head and two iron-banded fists retained.",
+    "Rear head has no duplicate face; rear torso has different scapular rock arrangement.",
+    "Profiles face opposing directions with toes forward and heels behind.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Rear fist planes remain front-like and heels retain toe-like rock blocks; anatomy must be reconciled.",
+    "Far leg/foot not distinctly visible in profiles; right far arm also fully occluded, so limb topology unverified.",
+    "Side arm hangs slightly behind torso; elbow/wrist orientation and thumb placement need matched landmarks.",
+    "Rock plate counts, crack paths and rivet positions drift across all views.",
+    "Casting seams are interpreted as riveted metal strips in original front; reconcile with Bible's mould ridges before final approval.",
+    "Profile depth and neck/head projection differ; no separated parts or runtime clips yet."
+  ],
+  "next": "Lock plate/crack/seam landmarks, verify two arms/two legs and rear hand/heel anatomy. Separate head/torso/upper arms/forearms/fists/thighs/shins/feet with band overlays for weighted walk, punch/slam, hit and knees-first collapse; core pulse and impact debris separate."
+}

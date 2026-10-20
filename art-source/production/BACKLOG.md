@@ -90,7 +90,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0082 | Vent Skink | master-created | master-created | master-created | master-created | placeholder |
 | mob_0083 | Magma Spitter | master-created | master-created | master-created | master-created | placeholder |
 | mob_0084 | Rivet Scrapling | master-created | master-created | master-created | master-created | placeholder |
-| mob_0085 | Slagforged Brute | master-created | missing | missing | missing | placeholder |
+| mob_0085 | Slagforged Brute | master-created | master-created | master-created | master-created | placeholder |
 | mob_0086 | Pour Wraith | master-created | missing | missing | missing | placeholder |
 | mob_0087 | Zero Stoker | master-created | missing | missing | missing | placeholder |
 | mob_0088 | Kiln Prime | master-created | missing | missing | missing | placeholder |

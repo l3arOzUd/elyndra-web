@@ -4611,19 +4611,31 @@
           "status": "master-created"
         },
         "back": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0085/back.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "left": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0085/left.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "right": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0085/right.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         }
       },
       "sprite": null,
@@ -5174,7 +5186,7 @@
       "id": "itm_1001",
       "name": "Worn Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5182,7 +5194,7 @@
       "id": "itm_1002",
       "name": "Worn Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5190,7 +5202,7 @@
       "id": "itm_1003",
       "name": "Worn Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5198,7 +5210,7 @@
       "id": "itm_1004",
       "name": "Worn Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5206,7 +5218,7 @@
       "id": "itm_1005",
       "name": "Worn Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5214,7 +5226,7 @@
       "id": "itm_1006",
       "name": "Worn Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5222,7 +5234,7 @@
       "id": "itm_1007",
       "name": "Worn Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5230,7 +5242,7 @@
       "id": "itm_1008",
       "name": "Worn Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5238,7 +5250,7 @@
       "id": "itm_1009",
       "name": "Worn Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5246,7 +5258,7 @@
       "id": "itm_1010",
       "name": "Worn Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5254,7 +5266,7 @@
       "id": "itm_1011",
       "name": "Worn Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5262,7 +5274,7 @@
       "id": "itm_1012",
       "name": "Worn Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5270,7 +5282,7 @@
       "id": "itm_1013",
       "name": "Worn Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5278,7 +5290,7 @@
       "id": "itm_1014",
       "name": "Worn Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5286,7 +5298,7 @@
       "id": "itm_1015",
       "name": "Worn Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5294,7 +5306,7 @@
       "id": "itm_1016",
       "name": "Worn Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5302,7 +5314,7 @@
       "id": "itm_1017",
       "name": "Worn Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5310,7 +5322,7 @@
       "id": "itm_1018",
       "name": "Worn Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5318,7 +5330,7 @@
       "id": "itm_1019",
       "name": "Worn Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5326,7 +5338,7 @@
       "id": "itm_1020",
       "name": "Worn Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5334,7 +5346,7 @@
       "id": "itm_1021",
       "name": "Worn Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5342,7 +5354,7 @@
       "id": "itm_1022",
       "name": "Worn Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5358,7 +5370,7 @@
       "id": "itm_1024",
       "name": "Bronze Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5366,7 +5378,7 @@
       "id": "itm_1025",
       "name": "Bronze Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5374,7 +5386,7 @@
       "id": "itm_1026",
       "name": "Bronze Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5382,7 +5394,7 @@
       "id": "itm_1027",
       "name": "Bronze Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5390,7 +5402,7 @@
       "id": "itm_1028",
       "name": "Bronze Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5398,7 +5410,7 @@
       "id": "itm_1029",
       "name": "Bronze Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5406,7 +5418,7 @@
       "id": "itm_1030",
       "name": "Bronze Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5414,7 +5426,7 @@
       "id": "itm_1031",
       "name": "Bronze Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5422,7 +5434,7 @@
       "id": "itm_1032",
       "name": "Bronze Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5430,7 +5442,7 @@
       "id": "itm_1033",
       "name": "Bronze Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5438,7 +5450,7 @@
       "id": "itm_1034",
       "name": "Bronze Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5446,7 +5458,7 @@
       "id": "itm_1035",
       "name": "Bronze Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5454,7 +5466,7 @@
       "id": "itm_1036",
       "name": "Bronze Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5462,7 +5474,7 @@
       "id": "itm_1037",
       "name": "Bronze Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5470,7 +5482,7 @@
       "id": "itm_1038",
       "name": "Bronze Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5478,7 +5490,7 @@
       "id": "itm_1039",
       "name": "Bronze Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5486,7 +5498,7 @@
       "id": "itm_1040",
       "name": "Bronze Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5494,7 +5506,7 @@
       "id": "itm_1041",
       "name": "Bronze Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5502,7 +5514,7 @@
       "id": "itm_1042",
       "name": "Bronze Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5510,7 +5522,7 @@
       "id": "itm_1043",
       "name": "Bronze Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5518,7 +5530,7 @@
       "id": "itm_1044",
       "name": "Bronze Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5526,7 +5538,7 @@
       "id": "itm_1045",
       "name": "Bronze Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5542,7 +5554,7 @@
       "id": "itm_1047",
       "name": "Iron Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5550,7 +5562,7 @@
       "id": "itm_1048",
       "name": "Iron Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5558,7 +5570,7 @@
       "id": "itm_1049",
       "name": "Iron Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5566,7 +5578,7 @@
       "id": "itm_1050",
       "name": "Iron Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5574,7 +5586,7 @@
       "id": "itm_1051",
       "name": "Iron Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5582,7 +5594,7 @@
       "id": "itm_1052",
       "name": "Iron Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5590,7 +5602,7 @@
       "id": "itm_1053",
       "name": "Iron Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5598,7 +5610,7 @@
       "id": "itm_1054",
       "name": "Iron Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5606,7 +5618,7 @@
       "id": "itm_1055",
       "name": "Iron Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5614,7 +5626,7 @@
       "id": "itm_1056",
       "name": "Iron Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5622,7 +5634,7 @@
       "id": "itm_1057",
       "name": "Iron Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5630,7 +5642,7 @@
       "id": "itm_1058",
       "name": "Iron Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5638,7 +5650,7 @@
       "id": "itm_1059",
       "name": "Iron Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5646,7 +5658,7 @@
       "id": "itm_1060",
       "name": "Iron Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5654,7 +5666,7 @@
       "id": "itm_1061",
       "name": "Iron Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5662,7 +5674,7 @@
       "id": "itm_1062",
       "name": "Iron Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5670,7 +5682,7 @@
       "id": "itm_1063",
       "name": "Iron Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5678,7 +5690,7 @@
       "id": "itm_1064",
       "name": "Iron Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5686,7 +5698,7 @@
       "id": "itm_1065",
       "name": "Iron Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5694,7 +5706,7 @@
       "id": "itm_1066",
       "name": "Iron Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5702,7 +5714,7 @@
       "id": "itm_1067",
       "name": "Iron Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5710,7 +5722,7 @@
       "id": "itm_1068",
       "name": "Iron Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5726,7 +5738,7 @@
       "id": "itm_1070",
       "name": "Steel Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5734,7 +5746,7 @@
       "id": "itm_1071",
       "name": "Steel Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5742,7 +5754,7 @@
       "id": "itm_1072",
       "name": "Steel Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5750,7 +5762,7 @@
       "id": "itm_1073",
       "name": "Steel Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5758,7 +5770,7 @@
       "id": "itm_1074",
       "name": "Steel Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5766,7 +5778,7 @@
       "id": "itm_1075",
       "name": "Steel Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5774,7 +5786,7 @@
       "id": "itm_1076",
       "name": "Steel Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5782,7 +5794,7 @@
       "id": "itm_1077",
       "name": "Steel Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5790,7 +5802,7 @@
       "id": "itm_1078",
       "name": "Steel Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5798,7 +5810,7 @@
       "id": "itm_1079",
       "name": "Steel Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5806,7 +5818,7 @@
       "id": "itm_1080",
       "name": "Steel Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5814,7 +5826,7 @@
       "id": "itm_1081",
       "name": "Steel Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5822,7 +5834,7 @@
       "id": "itm_1082",
       "name": "Steel Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5830,7 +5842,7 @@
       "id": "itm_1083",
       "name": "Steel Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5838,7 +5850,7 @@
       "id": "itm_1084",
       "name": "Steel Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5846,7 +5858,7 @@
       "id": "itm_1085",
       "name": "Steel Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5854,7 +5866,7 @@
       "id": "itm_1086",
       "name": "Steel Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5862,7 +5874,7 @@
       "id": "itm_1087",
       "name": "Steel Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5870,7 +5882,7 @@
       "id": "itm_1088",
       "name": "Steel Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5878,7 +5890,7 @@
       "id": "itm_1089",
       "name": "Steel Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5886,7 +5898,7 @@
       "id": "itm_1090",
       "name": "Steel Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5894,7 +5906,7 @@
       "id": "itm_1091",
       "name": "Steel Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5910,7 +5922,7 @@
       "id": "itm_1093",
       "name": "Cobalt Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5918,7 +5930,7 @@
       "id": "itm_1094",
       "name": "Cobalt Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5926,7 +5938,7 @@
       "id": "itm_1095",
       "name": "Cobalt Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5934,7 +5946,7 @@
       "id": "itm_1096",
       "name": "Cobalt Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5942,7 +5954,7 @@
       "id": "itm_1097",
       "name": "Cobalt Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5950,7 +5962,7 @@
       "id": "itm_1098",
       "name": "Cobalt Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5958,7 +5970,7 @@
       "id": "itm_1099",
       "name": "Cobalt Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5966,7 +5978,7 @@
       "id": "itm_1100",
       "name": "Cobalt Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5974,7 +5986,7 @@
       "id": "itm_1101",
       "name": "Cobalt Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5982,7 +5994,7 @@
       "id": "itm_1102",
       "name": "Cobalt Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5990,7 +6002,7 @@
       "id": "itm_1103",
       "name": "Cobalt Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -5998,7 +6010,7 @@
       "id": "itm_1104",
       "name": "Cobalt Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6006,7 +6018,7 @@
       "id": "itm_1105",
       "name": "Cobalt Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6014,7 +6026,7 @@
       "id": "itm_1106",
       "name": "Cobalt Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6022,7 +6034,7 @@
       "id": "itm_1107",
       "name": "Cobalt Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6030,7 +6042,7 @@
       "id": "itm_1108",
       "name": "Cobalt Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6038,7 +6050,7 @@
       "id": "itm_1109",
       "name": "Cobalt Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6046,7 +6058,7 @@
       "id": "itm_1110",
       "name": "Cobalt Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6054,7 +6066,7 @@
       "id": "itm_1111",
       "name": "Cobalt Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6062,7 +6074,7 @@
       "id": "itm_1112",
       "name": "Cobalt Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6070,7 +6082,7 @@
       "id": "itm_1113",
       "name": "Cobalt Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6078,7 +6090,7 @@
       "id": "itm_1114",
       "name": "Cobalt Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6094,7 +6106,7 @@
       "id": "itm_1116",
       "name": "Runic Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6102,7 +6114,7 @@
       "id": "itm_1117",
       "name": "Runic Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6110,7 +6122,7 @@
       "id": "itm_1118",
       "name": "Runic Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6118,7 +6130,7 @@
       "id": "itm_1119",
       "name": "Runic Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6126,7 +6138,7 @@
       "id": "itm_1120",
       "name": "Runic Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6134,7 +6146,7 @@
       "id": "itm_1121",
       "name": "Runic Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6142,7 +6154,7 @@
       "id": "itm_1122",
       "name": "Runic Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6150,7 +6162,7 @@
       "id": "itm_1123",
       "name": "Runic Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6158,7 +6170,7 @@
       "id": "itm_1124",
       "name": "Runic Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6166,7 +6178,7 @@
       "id": "itm_1125",
       "name": "Runic Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6174,7 +6186,7 @@
       "id": "itm_1126",
       "name": "Runic Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6182,7 +6194,7 @@
       "id": "itm_1127",
       "name": "Runic Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6190,7 +6202,7 @@
       "id": "itm_1128",
       "name": "Runic Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6198,7 +6210,7 @@
       "id": "itm_1129",
       "name": "Runic Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6206,7 +6218,7 @@
       "id": "itm_1130",
       "name": "Runic Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6214,7 +6226,7 @@
       "id": "itm_1131",
       "name": "Runic Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6222,7 +6234,7 @@
       "id": "itm_1132",
       "name": "Runic Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6230,7 +6242,7 @@
       "id": "itm_1133",
       "name": "Runic Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6238,7 +6250,7 @@
       "id": "itm_1134",
       "name": "Runic Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6246,7 +6258,7 @@
       "id": "itm_1135",
       "name": "Runic Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6254,7 +6266,7 @@
       "id": "itm_1136",
       "name": "Runic Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6262,7 +6274,7 @@
       "id": "itm_1137",
       "name": "Runic Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6278,7 +6290,7 @@
       "id": "itm_1139",
       "name": "Mythril Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6286,7 +6298,7 @@
       "id": "itm_1140",
       "name": "Mythril Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6294,7 +6306,7 @@
       "id": "itm_1141",
       "name": "Mythril Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6302,7 +6314,7 @@
       "id": "itm_1142",
       "name": "Mythril Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6310,7 +6322,7 @@
       "id": "itm_1143",
       "name": "Mythril Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6318,7 +6330,7 @@
       "id": "itm_1144",
       "name": "Mythril Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6326,7 +6338,7 @@
       "id": "itm_1145",
       "name": "Mythril Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6334,7 +6346,7 @@
       "id": "itm_1146",
       "name": "Mythril Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6342,7 +6354,7 @@
       "id": "itm_1147",
       "name": "Mythril Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6350,7 +6362,7 @@
       "id": "itm_1148",
       "name": "Mythril Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6358,7 +6370,7 @@
       "id": "itm_1149",
       "name": "Mythril Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6366,7 +6378,7 @@
       "id": "itm_1150",
       "name": "Mythril Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6374,7 +6386,7 @@
       "id": "itm_1151",
       "name": "Mythril Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6382,7 +6394,7 @@
       "id": "itm_1152",
       "name": "Mythril Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6390,7 +6402,7 @@
       "id": "itm_1153",
       "name": "Mythril Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6398,7 +6410,7 @@
       "id": "itm_1154",
       "name": "Mythril Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6406,7 +6418,7 @@
       "id": "itm_1155",
       "name": "Mythril Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6414,7 +6426,7 @@
       "id": "itm_1156",
       "name": "Mythril Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6422,7 +6434,7 @@
       "id": "itm_1157",
       "name": "Mythril Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6430,7 +6442,7 @@
       "id": "itm_1158",
       "name": "Mythril Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6438,7 +6450,7 @@
       "id": "itm_1159",
       "name": "Mythril Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6446,7 +6458,7 @@
       "id": "itm_1160",
       "name": "Mythril Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6462,7 +6474,7 @@
       "id": "itm_1162",
       "name": "Ember Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6470,7 +6482,7 @@
       "id": "itm_1163",
       "name": "Ember Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6478,7 +6490,7 @@
       "id": "itm_1164",
       "name": "Ember Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6486,7 +6498,7 @@
       "id": "itm_1165",
       "name": "Ember Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6494,7 +6506,7 @@
       "id": "itm_1166",
       "name": "Ember Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6502,7 +6514,7 @@
       "id": "itm_1167",
       "name": "Ember Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6510,7 +6522,7 @@
       "id": "itm_1168",
       "name": "Ember Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6518,7 +6530,7 @@
       "id": "itm_1169",
       "name": "Ember Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6526,7 +6538,7 @@
       "id": "itm_1170",
       "name": "Ember Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6534,7 +6546,7 @@
       "id": "itm_1171",
       "name": "Ember Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6542,7 +6554,7 @@
       "id": "itm_1172",
       "name": "Ember Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6550,7 +6562,7 @@
       "id": "itm_1173",
       "name": "Ember Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6558,7 +6570,7 @@
       "id": "itm_1174",
       "name": "Ember Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6566,7 +6578,7 @@
       "id": "itm_1175",
       "name": "Ember Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6574,7 +6586,7 @@
       "id": "itm_1176",
       "name": "Ember Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6582,7 +6594,7 @@
       "id": "itm_1177",
       "name": "Ember Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6590,7 +6602,7 @@
       "id": "itm_1178",
       "name": "Ember Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6598,7 +6610,7 @@
       "id": "itm_1179",
       "name": "Ember Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6606,7 +6618,7 @@
       "id": "itm_1180",
       "name": "Ember Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6614,7 +6626,7 @@
       "id": "itm_1181",
       "name": "Ember Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6622,7 +6634,7 @@
       "id": "itm_1182",
       "name": "Ember Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6630,7 +6642,7 @@
       "id": "itm_1183",
       "name": "Ember Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6646,7 +6658,7 @@
       "id": "itm_1185",
       "name": "Star Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6654,7 +6666,7 @@
       "id": "itm_1186",
       "name": "Star Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6662,7 +6674,7 @@
       "id": "itm_1187",
       "name": "Star Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6670,7 +6682,7 @@
       "id": "itm_1188",
       "name": "Star Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6678,7 +6690,7 @@
       "id": "itm_1189",
       "name": "Star Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6686,7 +6698,7 @@
       "id": "itm_1190",
       "name": "Star Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6694,7 +6706,7 @@
       "id": "itm_1191",
       "name": "Star Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6702,7 +6714,7 @@
       "id": "itm_1192",
       "name": "Star Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6710,7 +6722,7 @@
       "id": "itm_1193",
       "name": "Star Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6718,7 +6730,7 @@
       "id": "itm_1194",
       "name": "Star Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6726,7 +6738,7 @@
       "id": "itm_1195",
       "name": "Star Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6734,7 +6746,7 @@
       "id": "itm_1196",
       "name": "Star Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6742,7 +6754,7 @@
       "id": "itm_1197",
       "name": "Star Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6750,7 +6762,7 @@
       "id": "itm_1198",
       "name": "Star Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6758,7 +6770,7 @@
       "id": "itm_1199",
       "name": "Star Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6766,7 +6778,7 @@
       "id": "itm_1200",
       "name": "Star Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6774,7 +6786,7 @@
       "id": "itm_1201",
       "name": "Star Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6782,7 +6794,7 @@
       "id": "itm_1202",
       "name": "Star Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6790,7 +6802,7 @@
       "id": "itm_1203",
       "name": "Star Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6798,7 +6810,7 @@
       "id": "itm_1204",
       "name": "Star Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6806,7 +6818,7 @@
       "id": "itm_1205",
       "name": "Star Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6814,7 +6826,7 @@
       "id": "itm_1206",
       "name": "Star Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6830,7 +6842,7 @@
       "id": "itm_1208",
       "name": "Sovereign Saber",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6838,7 +6850,7 @@
       "id": "itm_1209",
       "name": "Sovereign Bow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6846,7 +6858,7 @@
       "id": "itm_1210",
       "name": "Sovereign Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6854,7 +6866,7 @@
       "id": "itm_1211",
       "name": "Sovereign Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6862,7 +6874,7 @@
       "id": "itm_1212",
       "name": "Sovereign Helm",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6870,7 +6882,7 @@
       "id": "itm_1213",
       "name": "Sovereign Hood",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6878,7 +6890,7 @@
       "id": "itm_1214",
       "name": "Sovereign Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6886,7 +6898,7 @@
       "id": "itm_1215",
       "name": "Sovereign Sallet",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6894,7 +6906,7 @@
       "id": "itm_1216",
       "name": "Sovereign Warcrown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6902,7 +6914,7 @@
       "id": "itm_1217",
       "name": "Sovereign Mask",
       "slot": "head",
-      "visual": "leather_hood",
+      "visual": "gen_head_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6910,7 +6922,7 @@
       "id": "itm_1218",
       "name": "Sovereign Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6918,7 +6930,7 @@
       "id": "itm_1219",
       "name": "Sovereign Leathers",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6926,7 +6938,7 @@
       "id": "itm_1220",
       "name": "Sovereign Robe",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6934,7 +6946,7 @@
       "id": "itm_1221",
       "name": "Sovereign Brigandine",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6942,7 +6954,7 @@
       "id": "itm_1222",
       "name": "Sovereign Runeplate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6950,7 +6962,7 @@
       "id": "itm_1223",
       "name": "Sovereign Duskcloak",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6958,7 +6970,7 @@
       "id": "itm_1224",
       "name": "Sovereign Sabatons",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6966,7 +6978,7 @@
       "id": "itm_1225",
       "name": "Sovereign Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6974,7 +6986,7 @@
       "id": "itm_1226",
       "name": "Sovereign Slippers",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6982,7 +6994,7 @@
       "id": "itm_1227",
       "name": "Sovereign Greaves",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6990,7 +7002,7 @@
       "id": "itm_1228",
       "name": "Sovereign Warboots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_armour_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -6998,7 +7010,7 @@
       "id": "itm_1229",
       "name": "Sovereign Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7734,7 +7746,7 @@
       "id": "itm_1321",
       "name": "Hollowroot Crown",
       "slot": "head",
-      "visual": "iron_helm",
+      "visual": "gen_head_armour_e1",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7742,7 +7754,7 @@
       "id": "itm_1322",
       "name": "Emberwake Treads",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7878,7 +7890,7 @@
       "id": "itm_1339",
       "name": "Stormcaller Rod",
       "slot": "weapon",
-      "visual": "aether_rod",
+      "visual": "gen_weapon_arcanist_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7886,7 +7898,7 @@
       "id": "itm_1340",
       "name": "Wildwood Longbow",
       "slot": "weapon",
-      "visual": "surveyor_bow",
+      "visual": "gen_weapon_strider_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7894,7 +7906,7 @@
       "id": "itm_1341",
       "name": "Gearheart Gauntlet",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_machinist_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7902,7 +7914,7 @@
       "id": "itm_1342",
       "name": "Executioner's Edge",
       "slot": "weapon",
-      "visual": "copper_saber",
+      "visual": "gen_weapon_vanguard_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7910,7 +7922,7 @@
       "id": "itm_1343",
       "name": "Bastion Plate",
       "slot": "armor",
-      "visual": "leafweave_coat",
+      "visual": "gen_armor_armour_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7918,7 +7930,7 @@
       "id": "itm_1344",
       "name": "Windrunner Boots",
       "slot": "boots",
-      "visual": "traveler_boots",
+      "visual": "gen_boots_evasion_e2",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7926,7 +7938,7 @@
       "id": "itm_1345",
       "name": "Frostwake Circlet",
       "slot": "head",
-      "visual": "aether_circlet",
+      "visual": "gen_head_shield_e3",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
