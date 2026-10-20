@@ -1,4 +1,4 @@
-import {createRequire} from 'node:module';
+﻿import {createRequire} from 'node:module';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import assert from 'node:assert/strict';
@@ -35,7 +35,8 @@ try{
  for(const [name,data]of Object.entries(result.images))await writeFile(resolve(out,`${name}.png`),Buffer.from(data.split(',')[1],'base64'));
  await writeFile(resolve(out,'craglet_2d.sprite.json'),JSON.stringify(result.json,null,2)+'\n');
  const report={status:'technical-draft-only',runtimeBound:false,errors,formatProblems:result.problems,frames:result.frames,
-  limitations:['Idle is a static reference, not an authored idle animation.','Left-facing only; engine mirroring does not supply back/front artwork.','Walk color, body registration, foot trajectories and Bible belly gear remain unresolved.','Passing format and edge checks does not approve visual quality.']};
+  limitations:['Idle uses a single authored blink; subtle body/plate drift still needs visual review.','Left-facing only; engine mirroring does not supply back/front artwork.','Walk color, body registration, foot trajectories and Bible belly gear remain unresolved.','Passing format and edge checks does not approve visual quality.']};
  await writeFile(resolve(out,'validation.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({output:out,clips:Object.keys(result.images),frames:result.frames.length,errors}));
 }finally{await browser.close();}
+

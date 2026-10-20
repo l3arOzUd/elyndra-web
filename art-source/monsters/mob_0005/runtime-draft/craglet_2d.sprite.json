@@ -17,8 +17,8 @@
   "animations": {
     "idle": {
       "file": "idle.png",
-      "frames": 1,
-      "fps": 1,
+      "frames": 16,
+      "fps": 8,
       "loop": true
     },
     "walk": {

@@ -11,6 +11,96 @@
       "edge": 0
     },
     {
+      "clip": "idle",
+      "frame": 1,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 2,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 3,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 4,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 5,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 6,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 7,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 8,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 9,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 10,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 11,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 12,
+      "visible": 37751,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 13,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 14,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "frame": 15,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
       "clip": "walk",
       "frame": 0,
       "visible": 37204,
@@ -156,7 +246,7 @@
     }
   ],
   "limitations": [
-    "Idle is a static reference, not an authored idle animation.",
+    "Idle uses a single authored blink; subtle body/plate drift still needs visual review.",
     "Left-facing only; engine mirroring does not supply back/front artwork.",
     "Walk color, body registration, foot trajectories and Bible belly gear remain unresolved.",
     "Passing format and edge checks does not approve visual quality."
