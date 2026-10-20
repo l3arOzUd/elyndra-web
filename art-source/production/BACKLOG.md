@@ -13,7 +13,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0002 | Sporeling | master-created | master-created | master-created | master-created | sporeling_2d |
 | mob_0003 | Ambermite | master-created | master-created | master-created | master-created | ambermite_2d |
 | mob_0004 | Lunari | master-created | master-created | master-created | master-created | lunari_2d |
-| mob_0005 | Craglet | master-created | master-created | master-created | master-created | placeholder |
+| mob_0005 | Craglet | master-created | master-created | master-created | master-created | craglet_2d |
 | mob_0006 | Thornback | master-created | master-created | master-created | master-created | placeholder |
 | mob_0007 | Dustwing | master-created | master-created | master-created | master-created | placeholder |
 | mob_0008 | Brookfin | master-created | master-created | master-created | master-created | placeholder |
@@ -108,6 +108,6 @@ No species renames or proposed cross-species substitutions are treated as comple
 
 Four-view files present: 94/94. This count does not establish consistent anatomy or visual approval.
 Recorded turnaround review states: reference-set-created-animation-pending: 2; reference-set-created-consistency-refinement-pending: 92.
-Non-placeholder runtime bindings: 7/94; placeholder or missing bindings: 87. Existing bindings still require animation and Bible fidelity review.
+Non-placeholder runtime bindings: 8/94; placeholder or missing bindings: 86. Existing bindings still require animation and Bible fidelity review.
 Animation PNG existence does not verify frame count, distinct motion, leg articulation, death quality, direction coverage or in-game behavior.
 Skill VFX implementation and appearance must be inspected in current runtime code; this data-only audit does not classify current effects as generic or finished.

@@ -1,0 +1,16 @@
+{
+  "monster": "mob_0005",
+  "status": "playable-draft-refinement-pending",
+  "source": "art-source/monsters/mob_0005/runtime-draft",
+  "productionApproved": false,
+  "authoredViews": ["front", "left", "back"],
+  "limitations": [
+    "Right facing mirrors left; diagonals reuse side art.",
+    "Rear walk is more orange than the other clips.",
+    "Body registration and planted-foot trajectories still drift.",
+    "Plate and crystal details change between painted poses.",
+    "Belly gear is visible front but missing in side art.",
+    "Tail obscures left rear leg; joint continuity not fully reviewed.",
+    "Rear idle has two poses; action transitions need in-betweens."
+  ]
+}

@@ -22,8 +22,10 @@ const records=monsters.map(m=>{
  }));
  const binding=index.monsters[m.id];
  const sprite=binding&&!binding.placeholder?binding.sprite:null;
+ const runtimeReviewPath=sprite?resolve(root,`public/sprites/${sprite}/art-review.json`):null;
+ const runtimeReview=runtimeReviewPath&&existsSync(runtimeReviewPath)?JSON.parse(readFileSync(runtimeReviewPath,'utf8')):null;
  const animationFiles=Object.fromEntries(['idle','walk','attack','hit','death'].map(a=>[a,sprite?asset(resolve(root,`public/sprites/${sprite}/${a}.png`)):null]));
- return {id:m.id,name:m.name,region:m.region_id,brief:m.art_brief,views,turnaroundReview,sprite,animationFiles,animationReview:'pending-all-required-views'};
+ return {id:m.id,name:m.name,region:m.region_id,brief:m.art_brief,views,turnaroundReview,sprite,runtimeReview,animationFiles,animationReview:runtimeReview?.status??'pending-all-required-views'};
 });
 const equipment=items.filter(i=>i.equip).map(i=>({id:i.id,name:i.name,slot:i.equip.slot,visual:looks[i.id]?.visual??null,generatedAlias:looks[i.id]?.generated??false,status:looks[i.id]?.generated?'shared-look-needs-distinct-design':looks[i.id]?'painted-look-existing':'needs-visual-scope-review'}));
 const effects=skills.map(s=>({id:s.id,name:s.name,vfx:s.vfx,implemented:s.implemented,status:'runtime-and-visual-review-required'}));

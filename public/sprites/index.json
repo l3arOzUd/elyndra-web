@@ -16,14 +16,7 @@
    "sprite": "lunari_2d"
   },
   "mob_0005": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.25,
-   "placeholder": true
+   "sprite": "craglet_2d"
   },
   "mob_0006": {
    "sprite": "mosskin",

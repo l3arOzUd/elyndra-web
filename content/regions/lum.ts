@@ -61,7 +61,7 @@ const monsters: RegionDesign["monsters"] = [
     mods: { def: 1.4, speed: 1.2, atk: 0.9 }, why: "Stone-plated (+40% DEF), heavy (20% slower), blunt bite (-10% ATK). The first bruiser: a wall that rewards AoE over single hits.",
     drops: { common: "itm_0009", uncommon: "itm_0010", extra: [{ item_id: "itm_0074", rate_bp: 250 }, { item_id: "itm_0073", rate_bp: 60 }] },
     ecology: "Rock lizards on the scree outcrops; they swallow Aethrion gears and shards as gizzard stones, which is where old copper gears turn up.",
-    art_brief: "A squat lizard covered in slate plates, quartz flecks along the spine, a gear glinting in its belly seam.",
+    art_brief: "A squat lizard covered in slate plates, quartz flecks along the spine, a gear glinting in its belly seam.", sprite: "craglet_2d",
   },
   {
     id: "mob_0006", name: "Thornback", level: 8, archetype: "bruiser", family: "beast", element: "nature", behavior: "assist",

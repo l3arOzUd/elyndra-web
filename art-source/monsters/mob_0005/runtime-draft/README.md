@@ -8,4 +8,4 @@ Regenerate with node scripts/export-craglet-draft.mjs while Vite runs on localho
 
 The real SpriteActor/Animator review at ../game-review.html now offers Front. Front attack emitted hit at 375ms, front death held at 1000ms, and shownDir was S. Browser review found no page errors.
 
-Not bound to a live monster. Registration, foot sliding, plate continuity, side belly gear, rear action continuity, rear idle transition quality and abrupt action transitions remain open.
+Copied into public/sprites/craglet_2d and bound to mob_0005 as a playable draft. Source exports do not automatically overwrite the public copy; publish reviewed changes explicitly. Registration, foot sliding, plate continuity, side belly gear, rear action continuity, rear idle transition quality and abrupt action transitions remain open.

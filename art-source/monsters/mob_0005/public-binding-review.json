@@ -1,0 +1,15 @@
+{
+  "status": "playable-draft-refinement-pending",
+  "binding": "mob_0005 -> craglet_2d",
+  "verified": [
+    "loadContent returns the Craglet binding and matching monster sprite definition.",
+    "loadSprite loads all public clips without schema errors.",
+    "Real SpriteActor emits hit in W/E/S/N facings.",
+    "Production build passes."
+  ],
+  "notVerified": [
+    "Live server map combat session.",
+    "Final animation quality, anatomy and Bible fidelity."
+  ],
+  "limitationsFile": "public/sprites/craglet_2d/art-review.json"
+}

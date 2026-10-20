@@ -85,6 +85,7 @@
         "next": "Create articulated 2D assets and inspect turning, walk contact and death motion in game after roster turnarounds."
       },
       "sprite": "mosskin_2d",
+      "runtimeReview": null,
       "animationFiles": {
         "idle": {
           "path": "public/sprites/mosskin_2d/idle.png",
@@ -198,6 +199,7 @@
         "next": "Complete roster turnarounds, then author articulated waddling and action clips; do not substitute whole-body rotation for walking or death."
       },
       "sprite": "sporeling_2d",
+      "runtimeReview": null,
       "animationFiles": {
         "idle": {
           "path": "public/sprites/sporeling_2d/idle.png",
@@ -311,6 +313,7 @@
         "next": "Normalize framing, then prepare separate limb assets and a six-leg gait after roster turnarounds."
       },
       "sprite": "ambermite_2d",
+      "runtimeReview": null,
       "animationFiles": {
         "idle": {
           "path": "public/sprites/ambermite_2d/idle.png",
@@ -424,6 +427,7 @@
         "next": "Refine lateral torso/arm projection, then author separate tail and membrane-aware limb animation after roster references."
       },
       "sprite": "lunari_2d",
+      "runtimeReview": null,
       "animationFiles": {
         "idle": {
           "path": "public/sprites/lunari_2d/idle.png",
@@ -502,26 +506,67 @@
         "confirmed": [
           "Slate armored squat lizard, quartz spine and single stout tail retained",
           "Front tail tip clarified by reframing",
-          "Small belly gear visible front and character-left side only, not duplicated on opposite flank or rear",
+          "Small belly gear visible in front; the earlier claim that it was visible in the left master was incorrect",
           "Rear has no face; lateral views show one amber eye",
           "Four-view PNG alpha and framing diagnostics pass"
         ],
         "limitations": [
           "Rear view shows unequal hind-foot exposure and slight oblique presentation; refine camera/stance before animation",
           "Side images are smaller in body height because full tail occupies frame width; normalize using body landmarks, not whole alpha bounds",
-          "Individual stone plates and quartz counts vary by view; exact marking continuity not approved"
+          "Individual stone plates and quartz counts vary by view; exact marking continuity not approved",
+          "Left master and left animation lack the visible brass belly gear; resolve its side visibility against front design"
         ],
         "next": "Refine rear stance, register body scale and separate four leg chains plus tail for animation after roster references."
       },
-      "sprite": null,
-      "animationFiles": {
-        "idle": null,
-        "walk": null,
-        "attack": null,
-        "hit": null,
-        "death": null
+      "sprite": "craglet_2d",
+      "runtimeReview": {
+        "monster": "mob_0005",
+        "status": "playable-draft-refinement-pending",
+        "source": "art-source/monsters/mob_0005/runtime-draft",
+        "productionApproved": false,
+        "authoredViews": [
+          "front",
+          "left",
+          "back"
+        ],
+        "limitations": [
+          "Right facing mirrors left; diagonals reuse side art.",
+          "Rear walk is more orange than the other clips.",
+          "Body registration and planted-foot trajectories still drift.",
+          "Plate and crystal details change between painted poses.",
+          "Belly gear is visible front but missing in side art.",
+          "Tail obscures left rear leg; joint continuity not fully reviewed.",
+          "Rear idle has two poses; action transitions need in-betweens."
+        ]
       },
-      "animationReview": "pending-all-required-views"
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/craglet_2d/idle.png",
+          "width": 6144,
+          "height": 1920
+        },
+        "walk": {
+          "path": "public/sprites/craglet_2d/walk.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "attack": {
+          "path": "public/sprites/craglet_2d/attack.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "hit": {
+          "path": "public/sprites/craglet_2d/hit.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "death": {
+          "path": "public/sprites/craglet_2d/death.png",
+          "width": 2304,
+          "height": 1920
+        }
+      },
+      "animationReview": "playable-draft-refinement-pending"
     },
     {
       "id": "mob_0006",
@@ -584,6 +629,7 @@
         "next": "Refine lateral camera and consistent landmark scale; author weight-bearing four-leg gait and boar-specific attack/death after roster references."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -654,6 +700,7 @@
         "next": "Refine same-pose wing projection, register body landmarks and separate four wing layers and six leg chains before authored flight animation."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -725,6 +772,7 @@
         "next": "Correct rear tail plane and lateral camera, then define four fin-leg attachment points and separate fin layers for a waddling gait."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -819,6 +867,7 @@
         "next": "Refine cross-view shoulder and hand proportions and normalize landmark framing, then author reed-leg gait and seed-pod opening/dart attack with separate overlapping limb layers."
       },
       "sprite": "reedstalker_2d",
+      "runtimeReview": null,
       "animationFiles": {
         "idle": {
           "path": "public/sprites/reedstalker_2d/idle.png",
@@ -933,6 +982,7 @@
         "next": "Refine lateral projection and landmark registration, then author a low four-leg crawl with independent planted feet, core pulse and collapsing root death."
       },
       "sprite": "rotroot_2d",
+      "runtimeReview": null,
       "animationFiles": {
         "idle": {
           "path": "public/sprites/rotroot_2d/idle.png",
@@ -1048,6 +1098,7 @@
         "next": "Refine profile head projection and joint registration, then separate rigid wooden segments at copper pivots for weight-bearing gait, attack and joint-collapse death."
       },
       "sprite": "barkwarden_2d",
+      "runtimeReview": null,
       "animationFiles": {
         "idle": {
           "path": "public/sprites/barkwarden_2d/idle.png",
@@ -1139,6 +1190,7 @@
         "next": "Refine same-camera tripod support geometry; separate three complete leg chains and author sequential three-leg stepping with stable body support, hub glow and folding collapse."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1211,6 +1263,7 @@
         "next": "Resolve six leg roots and four wing roots explicitly, refine wing projection and scale, then author independent wingbeats, folded leg motion, needle attack and sap slosh."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1282,6 +1335,7 @@
         "next": "Resolve eight explicit leg attachments and opaque far limbs, refine side camera, then separate gear-body and eight articulated legs for spider gait and collapse."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1354,6 +1408,7 @@
         "next": "Refine camera and hood framing, separate heavy rigid segments at brass joints, then author weighted steps, fist strike and staged knee/torso collapse."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1426,6 +1481,7 @@
         "next": "Resolve continuous coil-to-neck-to-tail path, refine landmarks, then author snake-specific uncoiling travel, spring bite and low settling death without limb-style rigging."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1498,6 +1554,7 @@
         "next": "Resolve all six leg chains, harmonize shell geometry, then author beetle gait, mandible attack, folded-leg collapse and independent ember pulse."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1570,6 +1627,7 @@
         "next": "Refine lateral projection and joint registration, separate rigid sandstone segments, then author heavy steps, fist attack, joint collapse and sand emission."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1642,6 +1700,7 @@
         "next": "Resolve rigid halo panel layout and standard spear dimensions, refine landmarks, then separate right-hand weapon chain, legs and halo for thrust, guard and collapse animation."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1714,6 +1773,7 @@
         "next": "Resolve landmarks, foot direction and hidden joints, normalize framing, then separate articulated parts and author animation. Not an animation-ready approval."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1786,6 +1846,7 @@
         "next": "Resolve strict profile cameras, eight walking-leg attachments and fixed coral landmarks before part separation and animation."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1859,6 +1920,7 @@
         "next": "Correct mechanical axes, tank and valve mounts and hand orientation, then normalize, separate rigid parts and animate. Steam should be runtime VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -1932,6 +1994,7 @@
         "next": "Align dish cross-section and hose mounts, define hidden limbs and fixed joints, then separate parts and animate sonar emission as runtime VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2004,6 +2067,7 @@
         "next": "Resolve six-leg topology and shell landmarks, normalize frame and ground line, separate limbs and author alternating tripod movement without stretching."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2076,6 +2140,7 @@
         "next": "Resolve a shared hexagonal cage structure, separate core and near/far lattice layers, normalize framing, author hover/pulse/attack/death motion and separate rainbow-beam VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2148,6 +2213,7 @@
         "next": "Construct eight fixed-length leg chains and coherent gear stack, align cameras and landmarks, then separate rigid parts and author walking/attack/death with no limb stretching."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2222,6 +2288,7 @@
         "next": "Resolve head cross-section, hands and joints, normalize framing, draw hidden limb parts, then animate precise core-handling and combat motions."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2295,6 +2362,7 @@
         "next": "Align shell segmentation and twelve leg sockets, normalize frame and ground line, separate overlapping rigid plates and author slow sequential crawl without limb stretching."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2368,6 +2436,7 @@
         "next": "Correct hands, horn roots and far arm, align crack map and joints; separate horn flame layers and author grounded footsteps plus separate glowing footprint VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2442,6 +2511,7 @@
         "next": "Resolve four fixed-length canine leg chains and support feet, tail path and rib landmarks; separate armor/bellows layers and author grounded gait, jaw attack, collapse and separate spark/slag VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2515,6 +2585,7 @@
         "next": "Resolve furnace door hinge, right-hand grip, rigid blade and armor joint axes, then separate parts and author heavy walk/slash/collapse plus separate smoke and heat VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2587,6 +2658,7 @@
         "next": "Define consistent core cross-section and vapor layers, normalize frame, author flowing hover/attack/dissipation animation and separate dimming trail VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2661,6 +2733,7 @@
         "next": "Resolve fixed six-wheel chassis dimensions, lamp/exhaust mounts and jaw hinges; separate wheels, body, doors and shadow layers for roll/attack/collapse animation."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2734,6 +2807,7 @@
         "next": "Correct lateral vane projection and fixed frame geometry, separate lens/core/frame/vanes, then author tracking aim, hover, firing and breakup with separate beam VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2806,6 +2880,7 @@
         "next": "Refine arm-root topology and pose consistency, then separate articulated parts with fixed-length bones; validate motion and equipment/VFX later."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2878,6 +2953,7 @@
         "next": "Correct rear nozzle geometry and cross-view joint landmarks, then separate parts and author fixed-length articulated animation; not runtime-ready."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -2950,6 +3026,7 @@
         "next": "Correct tail depth and joint landmarks, then author separated fixed-length limb animation and verify in game. Reference availability is not animation readiness."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3022,6 +3099,7 @@
         "next": "Align wing hinge/extremity landmarks and six-leg topology, separate wings/body/legs for articulated flap animation and author luminous dust VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3094,6 +3172,7 @@
         "next": "Reconcile hind-leg pose and rear paw orientation, then separate body/head/four articulated legs/tail and author walk/attack/hit/death animations."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3166,6 +3245,7 @@
         "next": "Correct arm pose and tripod root correspondence, then separate articulated legs/shears and author walking, pruning attack and sap-spray animation/VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3238,6 +3318,7 @@
         "next": "Align ears/hips/hocks and tail attachment across views, then separate articulated parts and create hop cycle, attack, hit and death without stretching limbs."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3310,6 +3391,7 @@
         "next": "Resolve rear anatomy, antler correspondence and neutral leg pose; separate fixed-length limb parts and author locomotion/attack/death plus chest glow VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3382,6 +3464,7 @@
         "next": "Resolve vent/root correspondence, separate articulated roots and vent masks, then author float, pulse, attack/spore release, hit and death with separate particle VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3454,6 +3537,7 @@
         "next": "Map eight lantern anchors and consistent cap/stalk/root surfaces, then separate hanging pods for sway and author movement/attack/hit/death with spore VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3526,6 +3610,7 @@
         "next": "Correct left camera and rear heels, reconcile piston joints, then separate articulated limbs and author walk/punch/hit/death plus exhaust steam/spore VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3598,6 +3683,7 @@
         "next": "Align pump cylinders, limb joints and crown/root topology, then separate parts and author walk/attack/hit/death with pump-stroke and jade-vein VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3670,6 +3756,7 @@
         "next": "Reconcile coat/collar/stance landmarks, then separate four fixed-length legs, head/ears/tail/tag and author walk/run/attack/hit/death."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3742,6 +3829,7 @@
         "next": "Reconcile spars and ribbon topology, separate rigid kite frame/lens/gears from deformable ribbons, then author hover/attack/hit/death and lens VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3814,6 +3902,7 @@
         "next": "Correct camera, rear feet and tail topology, then separate four leg chains, torso/head/frill and tail club for idle/walk/attack/hit/death animation."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3887,6 +3976,7 @@
         "next": "Reconcile wrist orientation, crest geometry, robe seams and pendant segments; build articulated limb parts and cloth layers for idle/walk/mirror-cast/hit/death."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -3959,6 +4049,7 @@
         "next": "Reconcile posture, antenna direction and six leg attachment chains, then author skitter locomotion, attack, hit and death with fixed-length articulated legs."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4032,6 +4123,7 @@
         "next": "Reconcile hood depth, lantern grip and cloth strip topology; separate rigid lantern/skeletal arms from cloth for hover, move, attack, hit and dissolve death plus dust VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4106,6 +4198,7 @@
         "next": "Resolve arm contact, disc thickness and burial footprint; separate rigid shoulder/elbow/wrist/disc parts and sand layer for idle, drag, slam, hit and collapse animation."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4179,6 +4272,7 @@
         "next": "Lock ring/prism depth and three fin anchors, separate optical aperture from rigid body, then author hover/aim/fire/hit/shatter and orange beam VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4252,6 +4346,7 @@
         "next": "Reconcile shield mount, visor depth, joint pivots and stance; separate rigid armor parts and author idle/walk/shield-bash/reflect/hit/death."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4326,6 +4421,7 @@
         "next": "Define nine lens anchors and paired-panel arm topology, reconcile side projection, then separate rigid rings/core/arm panels/base for idle, aim, solar attack, hit and collapse with authored solar VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4399,6 +4495,7 @@
         "next": "Reconcile gull silhouette, dive pitch, wing roots and single tail; separate wings/primaries/body/head/feet for glide, flap, dive attack, hit and fall."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4472,6 +4569,7 @@
         "next": "Map all six tube roots and four legs consistently, reconcile rear height and feet, then separate body/legs/tubes for idle/walk/spit/hit/deflate death and magenta projectile VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4544,6 +4642,7 @@
         "next": "Lock six oyster anchors, braid/arm/root topology and bulb scale; separate frond chains for idle sway, movement, lash, hit and wilt death."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4618,6 +4717,7 @@
         "next": "Lock shell handedness, mouth axis and segmented centerline, then build fixed-volume body bend controls and author idle/crawl/bore/hit/collapse plus wood-chip VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4691,6 +4791,7 @@
         "next": "Lock disc thickness, tail centerline and fin anchors, then separate deformable fins/body/tail for skim, glide, tail attack, hit and settle death."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4764,6 +4865,7 @@
         "next": "Correct rear feet and profile pose, lock shell seams and porthole anchor, then articulate four leg chains/head/tail for idle/walk/bite/hit/collapse with storm discharge VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4837,6 +4939,7 @@
         "next": "Correct camera pitch and overlapping fin topology, lock dorsal markings and tail curvature; separate disc, fins, cephalic lobes and segmented tail for hover, travel, sting, hit and collapse. Add electrical VFX separately."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4911,6 +5014,7 @@
         "next": "Lock hatch hinge and nozzle topology, correct profile projection, separate three rotors from body for hover/travel/pressure attack/hit/power-down; add bubble emission as separate VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -4984,6 +5088,7 @@
         "next": "Establish numbered rim anchors and oral-arm topology, correct left pose, separate dome/nucleus/arms/tentacle chains; animate bell pulse, drift, sting, recoil and deflation with separate dark-halo VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5058,6 +5163,7 @@
         "next": "Correct master to six explicit numbered cable roots/tips, fix crown axes and profile projection, lock coral/lens landmarks; separate shell, dishes and six cable chains for hover/travel/sonar strike/hit/power-down with bubble and spark VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5131,6 +5237,7 @@
         "next": "Correct rear hindfoot anatomy and fixed ear pose, align body proportions and margins; separate limbs/ears/head/tail for idle, bound, strike, recoil and collapse, with frost particles separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5204,6 +5311,7 @@
         "next": "Align profile pose and horn axes, lock plate rows, then separate four limb chains/head/horns/tail for idle, walk, charge, hit and collapse. Author breath steam separately."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5277,6 +5385,7 @@
         "next": "Draw a continuous numbered body path with explicit tail tip, fix hood plane and coil projections, then segment head/neck/body/hood for coil idle, slither, bite, recoil and collapse; frost effects separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5351,6 +5460,7 @@
         "next": "Lock chassis and plough geometry, arm attachment points and armor map; separate tracks/rollers/pistons/blade/torso for idle, drive, plough strike, recoil and shutdown, plus furnace/steam VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5425,6 +5535,7 @@
         "next": "Correct flat planted feet and profile arm pose, align joint landmarks and edge wisps, separate torso/head/limb chains and eye overlay for idle/walk/slash/cast/hit/collapse with shadow smoke VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5498,6 +5609,7 @@
         "next": "Lock all four numbered tusk roots and tips in true profiles, correct rear heels/tail and body proportions; separate four legs/head/trunk/tusks/tail for idle, heavy walk, gore, hit and collapse with frost VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5572,6 +5684,7 @@
         "next": "Lock three hip roots and ground contacts, correct profile camera and lance geometry, remove left haze and normalize framing; separate three articulated legs/torso/lance/cell for idle, tripod walk, thrust, recoil and shutdown with joint frost VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5645,6 +5758,7 @@
         "next": "Align shoulder/elbow/hand poses, separate stable body silhouette from glyph-scroll and face-static overlays, rig ribbon chains for hover/travel/cast/hit/dissolve and animate flicker."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5719,6 +5833,7 @@
         "next": "Align shoulder/elbow pose and lance length, lock armor/joint landmarks, separate biped chains and integrated weapon for idle/walk/thrust/shot/hit/collapse with prism beam and frost VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5793,6 +5908,7 @@
         "next": "Fix shelf/core depth and arm poses, establish four numbered slate orbit anchors, separate pedestal/columns/core/crown/arms/slates for hover/travel/archive cast/hit/shutdown plus cryocore VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5866,6 +5982,7 @@
         "next": "Align four limb joints and toe anatomy, lock shell fissures and throat inflation volume; separate shell/body/head/throat/legs for idle bellows, hop, spit, hit and collapse with heat VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -5940,6 +6057,7 @@
         "next": "Lock six limb roots and rigid link lengths across views, align tool poses and foot directions, then separate chassis/four legs/two tool arms/cable/torch effect for idle, walk, welding attack, scoop attack, hit and mechanical collapse."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6014,6 +6132,7 @@
         "next": "Align stance, four limb joints, natural heels and five-digit feet; lock tail bend and glow boundaries. Separate head/throat/body/legs/tail for breathing, grounded crawl, bite/heat attack, hit and articulated collapse; add heat shimmer separately."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6088,6 +6207,7 @@
         "next": "Lock segment count, collar landmarks, mouth axis/depth and base anchors across views. Separate body rings, collar, lip/gullet, drips and stationary crust for breathing, emergence/burrow travel, spit windup/recoil, hit and segment-by-segment collapse; author separate magma projectile/splash."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6162,6 +6282,7 @@
         "next": "Define immutable hardware landmarks and two wire paths, align views/stance, then separate rigid body, lens/gear, spring legs and selected loose rivets for jittering idle, compressed takeoff/hop/landing, impact attack, hit and spring-collapse death with separate debris."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6236,6 +6357,7 @@
         "next": "Lock plate/crack/seam landmarks, verify two arms/two legs and rear hand/heel anatomy. Separate head/torso/upper arms/forearms/fists/thighs/shins/feet with band overlays for weighted walk, punch/slam, hit and knees-first collapse; core pulse and impact debris separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6310,6 +6432,7 @@
         "next": "Lock shoulder/elbow/wrist pose, neutral body volumes, grey-skin islands and numbered drip roots across views; separate core/skin/arms/hands/drip chains for molten idle, flowing travel, pour attack, hit and melt-collapse plus cooling/remelting VFX."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6384,6 +6507,7 @@
         "next": "Fix left far foot and shoulder pose, lock hopper/head heights and shovel dimensions, align armor landmarks. Separate articulated limbs/tool/hand/hopper/coal/grille for heavy walk, shovel strike/scoop, stoke cycle, hit and knees-first mechanical collapse; ember/firebox effects separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6458,6 +6582,7 @@
         "next": "Lock cylinder cross-section, front grille/rear hatch, rib landmarks and arm poses. Separate fixed base/torso/crown/core/grille/upperarms/forearms/crucibles for furnace idle, swivel, pour windup/tilt/recovery, hit and structural collapse; author molten streams/splash and core heat separately."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6532,6 +6657,7 @@
         "next": "Align crouch, forehand reach, hind ankles, four-digit hands and head proportions; lock bristle landmarks. Separate head/ears/eyes/body/upper and lower limbs/hands/feet/bristles for alert idle, grounded scuttle, swipe/lunge, hit and articulated crouch-collapse; bristle glow separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6605,6 +6731,7 @@
         "next": "Number petals and four root anchors, reconcile bowl depth/stem twist/stance, normalize framing. Separate eye/lids/petal layers/stem/root joints for idle sway, four-root walking, gaze/drain attack, hit and wilt-collapse; grey walking trail and drain VFX separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6677,6 +6804,7 @@
         "next": "Number six hip sockets and trace each three-link leg to one foot; rebuild ambiguous profile legs and rotate jaws correctly. Lock chassis dimensions, separate six legs/two jaws/body/lamp for tripod gait, snap attack, hit and joint collapse; status blink separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6750,6 +6878,7 @@
         "next": "Lock canine proportions, four limb joints and tail curve; enforce opaque body and thin edge style. Separate head/ears/legs/tail/white eyes/edge effect for alert idle, grounded gait, lunge/bite, hit and jointed collapse with controlled outline flicker/dissolve."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6823,6 +6952,7 @@
         "next": "Define shoulder/elbow/wrist wing skeleton and numbered primaries, match tail and toe anatomy. Separate body/head/beak/two wings/tail/legs for perched idle, hop/takeoff, flap/glide, peck/dive attack, hit and wing-fold collapse; landing arcs and wingtip sparks separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6896,6 +7026,7 @@
         "next": "Align grip/arm pose, weapon and halo planes, armor landmarks and grounded boot anatomy. Separate body joint plates/halberd/halo/light layers for idle, weighted walk, thrust/sweep, cast, hit and knees-first collapse; ring rotation and lattice trails separate."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -6967,6 +7098,7 @@
         "next": "Establish a canonical glyph layout from the Bible and isolate glyph artwork. Derive consistent view projection and spinning attack from that layout, then implement and visually review idle, movement, attack, hit and dispersal death in runtime."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -7040,6 +7172,7 @@
         "next": "Resolve eight-leg socket topology before rigging. Create four near and four far leg chains with fixed segment lengths, a shared body design and independent silk VFX; visually verify idle, alternating gait, ranged attack, hit and joint-folding death."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
@@ -7113,6 +7246,7 @@
         "next": "Define canonical cage depth, crown layout and arm sockets, correct hand projection, then separate layers and animate hovering, arm-unfolding attack, hit response and lattice/core collapse. Verify at game display size."
       },
       "sprite": null,
+      "runtimeReview": null,
       "animationFiles": {
         "idle": null,
         "walk": null,
