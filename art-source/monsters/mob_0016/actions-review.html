@@ -11,6 +11,7 @@
 <script type="module">
 const images={};for(const view of ['left','front','back']){const image=new Image();image.src=`actions-${view}.png`;await image.decode();images[view]=image;}
 let im=images.left;
+const repairs={};for(const view of ['front','back']){const image=new Image();image.src=`actions-${view}-v2.png`;await image.decode();repairs[view]=image;}
 const motion=document.querySelector('#motion'),g=motion.getContext('2d'),contact=document.querySelector('#contact');
 contact.getContext('2d').drawImage(im,0,0,1536,1024);
 const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
@@ -37,12 +38,12 @@ function draw(f){
   const sx=[0,530,1024,0,532,1024][pose],sy=pose<3?0:530;
   const sw=[530,494,512,532,492,512][pose],sh=pose<3?530:494;
   const ax=[310,800,1300,310,800,1300][pose],bottom=[488,489,491,927,927,928][pose];
-  g.drawImage(im,sx,sy,sw,sh,310+(sx-ax)*.9,550+(sy-bottom)*.9,sw*.9,sh*.9);
+  g.drawImage(pose===1?repairs.front:im,sx,sy,sw,sh,310+(sx-ax)*.9,550+(sy-bottom)*.9,sw*.9,sh*.9);
  }else{
   const sx=[0,540,1040,0,540,1040][pose],sy=pose<3?0:540;
   const sw=[540,500,496,540,500,496][pose],sh=pose<3?540:484;
   const ax=[265,770,1255,265,770,1255][pose],bottom=[505,503,503,954,954,955][pose];
-  g.drawImage(im,sx,sy,sw,sh,310+(sx-ax)*.9,550+(sy-bottom)*.9,sw*.9,sh*.9);
+  g.drawImage(pose===2?repairs.back:im,sx,sy,sw,sh,310+(sx-ax)*.9,550+(sy-bottom)*.9,sw*.9,sh*.9);
  }
  document.querySelector('#number').textContent=`${f+1} / 6`;
 }
@@ -55,6 +56,12 @@ function tick(t){
 document.querySelector('#frame').oninput=()=>document.querySelector('#paused').checked=true;
 document.querySelector('#replay').onclick=()=>{start=performance.now();document.querySelector('#paused').checked=false;};
 document.querySelector('#clip').onchange=()=>{start=performance.now();document.querySelector('#frame').value=0;};
-document.querySelector('#view').onchange=()=>{im=images[document.querySelector('#view').value];contact.getContext('2d').clearRect(0,0,1536,1024);contact.getContext('2d').drawImage(im,0,0,1536,1024);start=performance.now();};
+document.querySelector('#view').onchange=()=>{
+ const view=document.querySelector('#view').value;im=images[view];
+ const c=contact.getContext('2d');c.clearRect(0,0,1536,1024);c.drawImage(im,0,0,1536,1024);
+ if(view==='front'){c.clearRect(530,0,494,530);c.drawImage(repairs.front,530,0,494,530,530,0,494,530);}
+ if(view==='back'){c.clearRect(1040,0,496,540);c.drawImage(repairs.back,1040,0,496,540,1040,0,496,540);}
+ start=performance.now();
+};
 requestAnimationFrame(tick);window.__sandcoilActions={ready:true};
 </script>

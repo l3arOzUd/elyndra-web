@@ -1,0 +1,18 @@
+{
+  "tool": "builtin-imagegen",
+  "transparentBackground": true,
+  "repairs": [
+    {
+      "reference": "actions-back.png",
+      "output": "actions-back-v2.png",
+      "prompt": "Edit this Sandcoil rear action sheet. Change ONLY top right pose (bite strike). Keep other five poses exactly unchanged. The neck must extend FORWARD AWAY from camera almost horizontally at the height of the upper coil, rather than rising upright. Rear head crown is lower than the anticipation head in top middle cell, partly obscured by the far rim of the coil. Show no eyes or mouth, still strict rear view. Keep anchored two-tier coil, body thickness, single tail on right, granular saffron colors and same cell placement. Transparent background no glow or shadow. Preserve sheet dimensions and all other artwork.",
+      "selectedCell": 2
+    },
+    {
+      "reference": "actions-front.png",
+      "output": "actions-front-v2.png",
+      "prompt": "Edit ONLY top middle anticipation pose in this Sandcoil FRONT action sheet. Preserve all other five cells unchanged. Neck should coil backward in depth behind the head, not bend toward either side. Head centered exactly over center of anchored coil, both amber eyes symmetrical and facing camera directly, chin slightly lower than neutral. Broad cheek shape and head size same as top left. Neck S bends away from viewer, hide its curve behind centered head instead of exposing a long sideways curve. Same saffron scales orange belly body proportions and tail left. Transparent background, no glow shadows ground. Preserve original1536x1024 and all cell positions.",
+      "selectedCell": 1
+    }
+  ]
+}
