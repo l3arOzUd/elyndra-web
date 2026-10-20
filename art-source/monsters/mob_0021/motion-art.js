@@ -14,12 +14,13 @@ const sideWalk={
  right:['right-profile-study-v2.png','walk-right-lift-24.png','right-profile-study-v2.png','walk-right-lift-13-v2.png'],
 };
 export const rightAttackSources=['right-profile-study-v2.png','attack-right-windup.png','attack-right-pinch.png'];
+export const leftAttackSources=['left-profile-study-v2.png','attack-left-windup.png','attack-left-pinch.png'];
 export const rightHitSource='hit-right-brace-v2.png';
 export const rightDeathSources=['right-profile-study-v2.png','collapse-right-volume.png','death-right-volume-v2.png'];
 export const rightDeathGround=[1005,966,985];
 const extra=['walk-front-study.png','walk-back-study-v2.png','walk-back-study-v4.png','buckle-front-study.png','collapse-front-volume.png','death-front-volume-v2.png','pinch-back-depth-study.png','death-back-volume-v2.png','death-left-volume-study.png',...rightAttackSources];
 export async function loadMotionArt(){
- const files=new Set([...Object.values(idleSources).flat(),...Object.values(sideWalk).flat(),...Object.values(actionSpecs).map(s=>s.file),...extra,rightHitSource,...rightDeathSources]);
+ const files=new Set([...Object.values(idleSources).flat(),...Object.values(sideWalk).flat(),...Object.values(actionSpecs).map(s=>s.file),...extra,rightHitSource,...rightDeathSources,...leftAttackSources]);
  return Object.fromEntries(await Promise.all([...files].map(async file=>{
   const image=new Image();image.src=new URL('./'+file,import.meta.url).href;await image.decode();return[file,image];
  })));
@@ -50,6 +51,7 @@ export function drawMotion(g,art,view,clip,frame){
  }
  const cell=view==='front'&&clip==='death'?frontDeath[frame]:sequence[clip][frame];
  if(view==='right'&&clip==='attack'){whole(g,art,rightAttackSources[cell],.25,616,1005);return}
+ if(view==='left'&&clip==='attack'){whole(g,art,leftAttackSources[cell],.25,920,1005);return}
  if(view==='right'&&clip==='hit'){whole(g,art,cell===3?rightHitSource:rightAttackSources[0],.25,616,1005);return}
  if(view==='right'&&clip==='death'){const key=cell===0?0:cell===4?1:2;whole(g,art,rightDeathSources[key],.25,616,rightDeathGround[key]);return}
  if(view==='front'&&clip==='death'){

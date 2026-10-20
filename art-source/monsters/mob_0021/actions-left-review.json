@@ -3,6 +3,8 @@
   "status": "left-combat-death-drafts",
   "reference": "left-profile-study-v2.png",
   "source": "actions-left-study-v2.png",
+  "attackSources": ["left-profile-study-v2.png", "attack-left-windup.png", "attack-left-pinch.png"],
+  "attackRegistration": {"scale": 0.25, "anchor": [920, 1005], "destination": [256, 430], "perKeyFitting": false},
   "preview": "actions-left-review.html",
   "sequences": {
     "attack": [
@@ -37,7 +39,7 @@
     "New endpoint fully closes visible eye and restores fuller shell with four near walking feet."
   ],
   "remaining": [
-    "Four near walking chains from reference are not consistently retained.",
+    "New attack retains four clear near walking chains. Older hit/collapse sources still do not consistently retain them.",
     "Claw size and coral details change between poses.",
     "Far legs and claw-arm attachments remain partly concealed.",
     "Final endpoint preserves fuller shell but still reads as crouching; underside ground contact is not clear.",
@@ -64,10 +66,20 @@
     "deathFrameAfter1900ms": 5,
     "playingAfterDeath": false,
     "pageErrors": [],
-    "scope": "Preview timing, alpha display and canvas bounds only."
+    "scope": "Old sheet/source-pose checks. New isolated attack checked separately below; no anatomical approval."
   },
   "artApproved": false,
   "publicBinding": false,
+  "attackRevisionCheck": {
+    "timingFrames": 6,
+    "uniqueDrawings": 3,
+    "nearWalkingChains": [4, 4, 4],
+    "emptyFrames": 0,
+    "edgeFrames": 0,
+    "pageErrors": [],
+    "individualVersusCombinedPixelDifferences": [0, 0, 0, 0, 0, 0],
+    "visual": "Clean transparency, huge near claw retains rounded volume, canonical neutral registration. Eye position and claw details still drift."
+  },
   "override": {
     "pose5": "death-left-volume-study.png"
   },
