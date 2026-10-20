@@ -1,0 +1,19 @@
+{
+  "id": "mob_0092",
+  "name": "Coupler Mite",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front master and rear/opposite-side references.",
+  "confirmed": [
+    "Rail-coupler steel body, paired pincer jaws and one violet caged dorsal lamp retained.",
+    "Rear is closed service panel without duplicate jaws.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Six-leg topology NOT verified: profiles show only two clearly traceable near hip sockets, plus occluded legs/foot fragments; requires explicit three-per-side map.",
+    "Pincer opening faces camera in profiles instead of edge-on; jaw orientation/hinge axes inconsistent.",
+    "Body elongates in profiles and rear stance repeats front leg projection.",
+    "Plate seams/rivet positions/service panel shape and lamp cage orientation drift.",
+    "No separated six-leg rig, jaws/lamp or runtime clips yet."
+  ],
+  "next": "Number six hip sockets and trace each three-link leg to one foot; rebuild ambiguous profile legs and rotate jaws correctly. Lock chassis dimensions, separate six legs/two jaws/body/lamp for tripod gait, snap attack, hit and joint collapse; status blink separate."
+}
