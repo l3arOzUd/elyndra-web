@@ -1,0 +1,17 @@
+{
+  "status": "walk-draft-refinement-pending",
+  "source": "walk-back.png",
+  "verified": [
+    "Browser contact sheet shows three connected legs with alternate outer foot lifts.",
+    "Rear view contains no eyes or jade hub duplicated from front.",
+    "Pose5 center foot lifts while outer feet remain on their support baseline.",
+    "Transparent exterior and full silhouettes visible in browser."
+  ],
+  "limitations": [
+    "Pose5 center knee bend is shallow and needs stronger articulation for readability at game size.",
+    "Body and leaf silhouette shift; brass cuff and twig weave continuity need refinement.",
+    "Only six key poses; ground contacts and motion timing need engine review.",
+    "Front/rear combat clips and idle are still missing; no runtime binding."
+  ],
+  "next": "Author front and rear action sheets, idle, export and test with SpriteActor."
+}

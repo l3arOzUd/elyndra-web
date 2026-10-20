@@ -4,7 +4,7 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{display:block;background:#697a80;margin:16px 0;max-width:100%}</style>
 <h1>Graftling — tripod walk draft</h1>
 <p>Six authored stepping poses. Inspect three continuous leg chains and two planted supports. Brass hinge positions, body registration and foot trajectories need refinement. Not bound to gameplay.</p>
-<select id="clip"><option>walk</option><option>walk-front</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
+<select id="clip"><option>walk</option><option>walk-front</option><option>walk-back</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
 <canvas id="motion" width="600" height="540"></canvas>
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
@@ -14,8 +14,10 @@ const actions=new Image();actions.src='./actions-left.png';await actions.decode(
 const actionFix=new Image();actionFix.src='./actions-left-v2.png';await actionFix.decode();
 const frontWalk=new Image();frontWalk.src='./walk-front.png';await frontWalk.decode();
 const frontFix=new Image();frontFix.src='./walk-front-v3.png';await frontFix.decode();
+const backWalk=new Image();backWalk.src='./walk-back.png';await backWalk.decode();
 let clip='walk';const seq={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 function draw(ctx,f,x,y,s){
+ if(clip==='walk-back'){const sy=f<3?0:508,h=f<3?508:516,bottom=f<3?507:496;ctx.drawImage(backWalk,f%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
  if(clip==='walk-front'&&f===4){ctx.drawImage(frontFix,650,506,230,10,x-118*s,y-509*s,230*s,10*s);ctx.drawImage(frontFix,512,516,512,508,x-256*s,y-499*s,512*s,508*s);return;}
  if(clip==='walk-front'){ctx.drawImage(f===4?frontFix:frontWalk,f%3*512,Math.floor(f/3)*512,512,512,x-256*s,y-[504,506,504,499,499,499][f]*s,512*s,512*s);return;}
  if(clip!=='walk'){const pose=seq[clip][f],cuts=[0,530,990,1536],col=pose%3,sx=cuts[col],w=cuts[col+1]-sx,sy=pose<3?0:512,h=pose===0?511:pose===1?516:512;const bottom=[511,514,510,468,451,455][pose],anchor=[256,238,290,256,238,290][pose];ctx.drawImage(pose<2?actionFix:actions,sx,sy,w,h,x-anchor*s,y-bottom*s,w*s,h*s);return;}
