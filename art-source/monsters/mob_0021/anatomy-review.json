@@ -1,0 +1,22 @@
+{
+  "id": "mob_0021",
+  "status": "construction-reference-improved-not-animation-approved",
+  "originalPreserved": true,
+  "candidate": "front-anatomy-study-v2.png",
+  "inspection": "Direct visual comparison; visible foot count does not prove all concealed attachments.",
+  "improvements": [
+    "Both claw hands lifted away from walking-foot silhouettes.",
+    "Four distinct walking tips visible on each side, separately from the two claws.",
+    "Large anatomical right claw remains on viewer-left.",
+    "Full claws, coral and feet fit within the image."
+  ],
+  "remaining": [
+    "Two innermost walking legs are tucked upward rather than planted with the outer feet.",
+    "Outer walking-leg roots still overlap under the shell; exact attachment order needs construction.",
+    "Small claw is larger and gains coral decoration compared with original front.",
+    "Coral topology differs from original turnaround; do not mix sources as animation frames.",
+    "Raised-claw construction pose needs a settled neutral and matching back/profiles before final animation."
+  ],
+  "artApproved": false,
+  "publicBinding": false
+}

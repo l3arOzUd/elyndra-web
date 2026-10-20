@@ -1,0 +1,35 @@
+{
+  "id": "mob_0021",
+  "name": "Coral Claw",
+  "bibleSource": "content/regions/tha.ts",
+  "status": "anatomy-reference-refinement",
+  "bible": {
+    "level": 40,
+    "family": "crustacean",
+    "element": "water",
+    "behavior": "aggressive",
+    "design": "Dog-sized crab, pink/orange branching coral, wet teal legs, one much larger claw.",
+    "movement": "Sideways scuttle, armored bruiser."
+  },
+  "lockedIdentity": [
+    "Large anatomical right claw: viewer-left from the front, viewer-right from behind.",
+    "Two claw-bearing arms and eight walking legs; claw arms are not walking legs.",
+    "Four walking-leg chains per body side, indexed front to rear for animation continuity.",
+    "Rigid shell, coral branch bases and leg segments retain their shape."
+  ],
+  "clips": {
+    "idle": "Small eyestalk and claw-finger movement with planted walking feet.",
+    "walk": "Sideways scuttle with alternating planted and lifted leg groups; preserve individual leg identity.",
+    "attack": "Large claw opens, reaches and pinches, then returns; body supported by walking legs.",
+    "hit": "Short shell recoil with bracing bent legs and retracted eyestalks.",
+    "death": "Walking knees buckle under shell, body lowers, claws relax on ground; no backward flip."
+  },
+  "requiredViews": ["front", "back", "left", "right"],
+  "blockingArtIssues": [
+    "Original front and profile references do not expose eight individually traceable walking-leg chains.",
+    "Profile cameras retain oblique exposure.",
+    "Coral branch topology and small-claw decoration differ between views."
+  ],
+  "next": "Use front-anatomy-study-v2.png as construction reference: resolve tucked inner legs and hidden attachment order, then settle claws and reconcile back/profiles before motion support groups.",
+  "publicBinding": false
+}
