@@ -20,12 +20,26 @@ sequences['walk-front']=[0,1,2,3,4,5];
 sequences['attack-front']=[0,1,1,2,2,0];
 sequences['hit-front']=[0,3,3,0,0,0];
 sequences['death-front']=[0,4,4,5,5,5];
+const backWalk=new Image();backWalk.src='./walk-back.png';await backWalk.decode();
+const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
+for(const name of ['walk','attack','hit','death']){
+ sequences[`${name}-back`]=sequences[name];
+ document.querySelector('#clip').add(new Option(`${name}-back`,`${name}-back`));
+}
 let clip='walk';
 const bottoms=[475,475,475,442,442,444];
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 function draw(ctx,i,x,y,scale){
  const pose=sequences[clip][i];
+ if(clip.endsWith('-back')){
+  const walk=clip==='walk-back',sy=walk?Math.floor(pose/3)*512:pose<3?0:550;
+  const h=walk?512:pose<3?550:474;
+  const bottom=(walk?[510,509,503,503,503,503]:[534,539,538,455,452,454])[pose];
+  const anchor=(walk?[272,258,242,272,256,242]:[270,260,270,260,250,250])[pose],s=scale*.82;
+  ctx.drawImage(walk?backWalk:backActions,pose%3*512,sy,512,h,x-anchor*s,y-bottom*s,512*s,h*s);
+  return;
+ }
  if(clip.endsWith('-front')&&clip!=='walk-front'){
   const sy=[0,0,0,520,530,560][pose],h=pose<3?519:1024-sy;
   const bottom=[519,519,519,997,991,986][pose]-sy,anchor=[280,260,256,280,258,256][pose],s=scale*.82;
@@ -74,8 +88,8 @@ function tick(now){
 function exportDraft(){
  const previous=clip,images={},sizes={};
  const json={id:'thornback_2d',kind:'sheet',facingMode:'directional',
-  frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W','S','SW','NW'],
-  mirror:{E:'W',SE:'W',NE:'W',N:'W'},
+  frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W','S','SW','NW','N'],
+  mirror:{E:'W',SE:'W',NE:'W'},
   animations:{
    idle:{file:'idle.png',frames:16,fps:8,loop:true},
    walk:{file:'walk.png',frames:6,fps:8,loop:true,refMsPerCell:240},
@@ -88,8 +102,9 @@ function exportDraft(){
   const ctx=c.getContext('2d');clip=name;
   for(let row=0;row<json.rows.length;row++)for(let f=0;f<def.frames;f++){
    ctx.save();ctx.translate(f*384,row*384);
-   clip=row===1?(name==='idle'?'attack-front':`${name}-front`):name;
-   draw(ctx,row===1&&name==='idle'?0:f,192,346,.66);ctx.restore();
+   const suffix=row===1?'front':row===4?'back':null;
+   clip=suffix?(name==='idle'?`attack-${suffix}`:`${name}-${suffix}`):name;
+   draw(ctx,(row===1||row===4)&&name==='idle'?0:f,192,346,.66);ctx.restore();
   }
   images[name]=c.toDataURL('image/png');sizes[name]={width:c.width,height:c.height};
  }

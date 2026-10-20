@@ -1,0 +1,24 @@
+{
+  "status": "runtime-draft-review-pending",
+  "selected": [
+    "walk-back.png",
+    "actions-back.png"
+  ],
+  "unused": "actions-back-v2.png: unnecessary transparency edit; original alpha was already valid",
+  "registration": "Actions split at y=550 to preserve upper hooves; fixed scale, individual spine anchors and ground baselines.",
+  "verified": {
+    "exportCells": 200,
+    "schemaErrors": 0,
+    "edgeErrors": 0,
+    "runtimeFacing": "N",
+    "attackHitMs": 375,
+    "deathScreenshot": "output/thornback-back-death.png"
+  },
+  "remaining": [
+    "Front/rear idle static",
+    "Thorn and moss detail drifts between poses",
+    "Foot sliding and action transitions require refinement",
+    "Rear death hips remain high; needs comparison against side collapse",
+    "Not bound to gameplay"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "reference": "actions-back.png",
+  "prompt": "Remove brown background glow and shadows to transparent alpha; preserve six poses.",
+  "selected": false,
+  "reason": "Original already had valid alpha; initial preview was misleading."
+}
