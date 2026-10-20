@@ -1,0 +1,23 @@
+{
+  "status": "front-action-draft-unapproved",
+  "source": "actions-front.png",
+  "replacement": {
+    "cell": 2,
+    "source": "actions-front-v2.png",
+    "reason": "Restores two inner legs missing from initial bite."
+  },
+  "verified": [
+    "Six tips now visible in repaired front bite.",
+    "Open anticipation and closed strike mandibles distinct.",
+    "Death folds legs underneath rigid shell and dims eyes/core.",
+    "Initial browser preview alpha clean; death playback held final frame without errors."
+  ],
+  "limitations": [
+    "Death folded leg chains occlude each other; full six-leg continuity unverified.",
+    "Idle inner legs remain raised.",
+    "Source boundaries tight; custom crops and baseline anchors used.",
+    "Shell/core texture changes across poses.",
+    "Head thrust remains modest; timing needs runtime evaluation.",
+    "No rear actions yet; not runtime exported or gameplay bound."
+  ]
+}
