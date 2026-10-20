@@ -13,9 +13,12 @@ const actions=new Image();actions.src='./actions-front.png';await actions.decode
 const leftFlight=new Image();leftFlight.src='./flight-left.png';await leftFlight.decode();
 const leftActions=new Image();leftActions.src='./actions-left.png';await leftActions.decode();
 const backFlight=new Image();backFlight.src='./flight-back.png';await backFlight.decode();
+const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
 let clip='flight';
 const sequences={flight:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 for(const name of ['attack','hit','death']){sequences[`${name}-left`]=sequences[name];document.querySelector('#clip').add(new Option(`${name}-left`,`${name}-left`));}
+for(const name of ['attack','hit','death']){sequences[`${name}-back`]=sequences[name];document.querySelector('#clip').add(new Option(`${name}-back`,`${name}-back`));}
+const backActionCells=[[0,0,602,510,303,540],[602,0,445,510,225,540],[1047,0,489,510,250,540],[0,510,635,514,330,510],[600,560,445,464,220,410],[1047,600,489,424,250,340]];
 const leftActionCells=[[0,0,512,580,180,620],[512,0,480,580,200,620],[992,0,544,580,180,620],[0,580,520,444,220,440],[520,580,450,444,220,420],[970,580,566,444,250,385]];
 const actionCells=[[0,0,610,510,300,540],[610,0,440,512,215,540],[1050,0,486,550,240,540],[0,510,520,514,330,490],[520,550,510,474,255,450],[1030,600,506,424,175,325]];
 // Sheet ignores the requested 512px grid. Use measured gaps, and register
@@ -38,6 +41,10 @@ function draw(ctx,f,x,y,s){
   ctx.drawImage(leftFlight,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);return;
  }
  const pose=sequences[clip][f];
+ if(clip.endsWith('-back')){
+  const [sx,sy,w,h,ax,ay]=backActionCells[pose];
+  ctx.drawImage(backActions,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);return;
+ }
  if(clip.endsWith('-left')){
   const [sx,sy,w,h,ax,ay]=leftActionCells[pose];
   ctx.drawImage(leftActions,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);return;

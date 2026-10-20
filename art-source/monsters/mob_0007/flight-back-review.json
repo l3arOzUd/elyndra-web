@@ -19,6 +19,6 @@
     "Wing amplitude in pose2 too close to spread pose.",
     "Wing pattern, abdomen segment count and antenna shapes drift.",
     "Wingbeat phase does not yet precisely match front and side.",
-    "Rear actions still missing; no runtime binding."
+    "Rear action draft now exists but requires cleanup; no runtime binding."
   ]
 }

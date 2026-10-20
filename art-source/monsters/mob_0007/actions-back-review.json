@@ -1,0 +1,17 @@
+{
+  "status": "draft-needs-source-cleanup",
+  "source": "actions-back.png",
+  "verified": [
+    "Rear-facing attack pitches away without exposing face.",
+    "Final pose folds wings and lowers abdomen.",
+    "Browser preview loads and holds final pose."
+  ],
+  "limitations": [
+    "Neighboring wing fragment enters dying-pose rectangular crop; source cleanup required.",
+    "Final abdomen remains too upright compared with side belly-down death.",
+    "Wing markings and body segments drift.",
+    "Cross-view scales and flight-to-action registration unfinished.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Isolate dying pose and lower rear final body before runtime export."
+}
