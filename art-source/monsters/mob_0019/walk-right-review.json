@@ -1,0 +1,27 @@
+{
+  "status":"right-walk-attempts-unapproved",
+  "source":"walk-right.png",
+  "preview":"walk-right-review.html",
+  "observations":[
+    "Near arm hangs relaxed while far arm holds upright spear, matching right-view reference.",
+    "Four source poses contain two legs and two boots.",
+    "Both original contact poses appear to attach near hip to forward thigh; not a verified opposite pair."
+  ],
+  "revision":{
+    "source":"walk-right-v2.png",
+    "selected":false,
+    "observations":[
+      "Bottom-right near knee now bends forward, but rises too high and boot kicks backward.",
+      "Bottom-left contact still does not clearly reverse near/far thigh attachment.",
+      "Near hand and leg armor shift across revision.",
+      "Opaque browser preview reveals residual translucent background patches in revision; alpha cleanup required."
+    ]
+  },
+  "limitations":[
+    "No approved right walking loop; do not treat four source cells as complete locomotion.",
+    "Source spear tips too close to cell boundaries.",
+    "Cross-view proportions and mirror projection still inconsistent.",
+    "Not added to runtime or combined playback."
+  ],
+  "next":"Draw explicit near-hip-to-trailing-knee guide for isolated opposite contact; normalize passing height."
+}
