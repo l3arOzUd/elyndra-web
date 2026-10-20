@@ -26,5 +26,5 @@ function draw(){
 let playing=false,last=0,index=0;document.querySelector('#play').onclick=()=>playing=!playing;function tick(t){if(playing&&t-last>220){index=(index+1)%4;document.querySelector('#pose').value=['a','b','c','d'][index];draw();last=t;}requestAnimationFrame(tick);}requestAnimationFrame(tick);
 draw();document.querySelector('#pose').onchange=draw;
 document.querySelector('#view').onchange=draw;
-window.__sandcoilCrawl={ready:true};
+window.__sandcoilCrawl={ready:true,draw(ctx,f,x,y,scale,view){const v=document.querySelector('#view'),p=document.querySelector('#pose'),oldV=v.value,oldP=p.value;v.value=view;p.value=['a','b','c','d'][f%4];draw();ctx.drawImage(g.canvas,x-500*scale,y-(view==='left'?20+[817,814,703,791][f%4]*920/1536:590)*scale,1000*scale,650*scale);v.value=oldV;p.value=oldP;}};
 </script>

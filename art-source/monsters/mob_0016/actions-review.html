@@ -27,12 +27,12 @@ const regions=[
  [[1009,530],[1536,530],[1536,1024],[1009,1024]]
 ];
 const anchors=[305,790,1325,270,790,1300],bottoms=[508,508,508,931,937,920];
-function draw(f){
+function draw(f,showGround=true){
  const pose=sequences[document.querySelector('#clip').value][f];
  const view=document.querySelector('#view').value;
  const source=document.querySelector('#clip').value==='idle'&&idle[view]&&f!==2&&f!==3?idle[view]:im;
  g.clearRect(0,0,600,600);
- g.strokeStyle='#d7e0db';g.beginPath();g.moveTo(0,550);g.lineTo(600,550);g.stroke();
+ if(showGround){g.strokeStyle='#d7e0db';g.beginPath();g.moveTo(0,550);g.lineTo(600,550);g.stroke();}
  if(document.querySelector('#view').value==='left'){
   g.save();g.translate(310-anchors[pose]*.9,550-bottoms[pose]*.9);g.scale(.9,.9);
   g.beginPath();regions[pose].forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y));g.closePath();g.clip();
@@ -68,5 +68,5 @@ document.querySelector('#view').onchange=()=>{
  if(view==='back'){c.clearRect(1040,0,496,540);c.drawImage(repairs.back,1040,0,496,540,1040,0,496,540);}
  start=performance.now();
 };
-requestAnimationFrame(tick);window.__sandcoilActions={ready:true};
+requestAnimationFrame(tick);window.__sandcoilActions={ready:true,draw(ctx,f,x,y,scale,view,clip){const v=document.querySelector('#view'),c=document.querySelector('#clip'),oldV=v.value,oldC=c.value,oldIm=im;v.value=view;c.value=clip;im=images[view];draw(f,false);ctx.drawImage(motion,x-310*scale,y-550*scale,600*scale,600*scale);v.value=oldV;c.value=oldC;im=oldIm;}};
 </script>

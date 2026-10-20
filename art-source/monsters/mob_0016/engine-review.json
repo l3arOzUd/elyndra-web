@@ -1,0 +1,24 @@
+{
+  "status": "runtime-draft-not-production-approved",
+  "preview": "game-review.html",
+  "combinedPreview": "combined-review.html",
+  "runtimeBound": false,
+  "verified": [
+    "Five exported sprite clips, 140 cells, all nonempty and no visible pixels on cell edges.",
+    "Actual SpriteActor/Animator emits hit at 375ms for W, E, S and N.",
+    "Death remains active after 2000ms for W, E, S and N.",
+    "Browser game review reported no page errors.",
+    "Side walk uses per-pose lower alpha bounds to remove registration-induced floating.",
+    "Uniform render scales reduce the initial large idle/walk head-size discrepancy."
+  ],
+  "limitations": [
+    "Source head size, apparent length and thickness still drift across clips and views.",
+    "Front walk head is larger than idle; rear head height changes substantially.",
+    "Uncoil transition studies are not integrated into gameplay animator.",
+    "Four crawl poses do not yet form a convincing continuous traveling wave.",
+    "Rear idle remains static; tongue idle has painted detail drift.",
+    "Repeated action poses are holds, not authored in-betweens.",
+    "Right mirrors left and diagonals reuse side artwork.",
+    "Technical checks do not establish visual approval."
+  ]
+}
