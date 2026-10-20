@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "attack-back-windup-v2.png",
+    "back-anatomy-study-v4.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Edit image1 rear-view Coral Claw windup into ONE forward pinch-impact key; image2 is the neutral reference. Change ONLY huge IMAGE-RIGHT claw arm: extend it FORWARD AWAY FROM CAMERA along the crab's facing direction, so the forearm and base of claw become partly hidden behind the RIGHT edge of the shell/coral. Close the thick fingers on a target in front of the crab, not to its right side. We should mainly see the rounded BACK of the foreshortened closed claw peeking beyond the right-forward shell edge; no overhead raised claw, no horizontal sideways punch. Preserve huge claw physical volume and attach it correctly. Keep small left claw, all eight planted walking feet, shell/coral shape, body scale/position, camera and1448x1086 framing from image1. All parts inside margins. Rear remains faceless. True transparent background, no floor/shadow/text. One full crab."
+}

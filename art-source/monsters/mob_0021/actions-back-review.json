@@ -2,6 +2,9 @@
   "id": "mob_0021",
   "status": "rear-combat-and-death-drafts",
   "source": "actions-back-study.png",
+  "attackSources": ["back-anatomy-study-v4.png", "attack-back-windup-v2.png", "attack-back-pinch.png"],
+  "attackRegistration": {"scale": 0.28, "anchor": [740, 970], "destination": [256, 430], "perKeyFitting": false},
+  "unselectedWindup": {"file": "attack-back-windup.png", "reason": "Only 8px right margin; v2 increases clearance. Alpha does not actually touch the boundary."},
   "override": {
     "pose2": "pinch-back-depth-study.png",
     "pose5": "death-back-volume-v2.png"
@@ -39,7 +42,7 @@
     "Death folds legs and holds final key without flipping body."
   ],
   "remaining": [
-    "Attack endpoint still reads upward; forward foreshortening remains weak.",
+    "New closed claw recedes behind the right shell edge, but forward reach and attachment remain unapproved. Body and planted tips drift.",
     "Intermediate collapse still compresses shell; final endpoint is fuller but coral landmarks differ.",
     "Final endpoint has eight visible tips, but added inner legs appear shortened and their hidden joints are unverified.",
     "Cross-view neutral scale and attack/death timing need reconciliation."
@@ -69,6 +72,17 @@
   },
   "artApproved": false,
   "publicBinding": false,
+  "attackRevisionCheck": {
+    "timingFrames": 6,
+    "uniqueDrawings": 3,
+    "visibleFootTipsPerSide": [4, 4],
+    "emptyFrames": 0,
+    "edgeFrames": 0,
+    "sourceEdgePixelsAboveAlpha16": 0,
+    "pageErrors": [],
+    "individualVersusCombinedPixelDifferences": [0, 0, 0, 0, 0, 0],
+    "visual": "Clean transparency; faceless rear and large right claw retained. Neutral starts at idle scale, but pinch changes body/coral and foot positions."
+  },
   "selectedDeath": {
     "file": "death-back-volume-v2.png",
     "sourceSize": [

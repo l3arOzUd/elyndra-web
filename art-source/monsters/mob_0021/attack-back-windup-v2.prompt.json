@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "attack-back-windup.png",
+  "prompt": "Use case: precise-object-edit. Repair ONLY the huge IMAGE-RIGHT open claw in this rear crab drawing. Its tips currently reach the right canvas boundary. Flex its existing elbow inward so the entire open claw shifts LEFT by about100 pixels, tips inside x1340 on1448-wide canvas, while preserving the claw's exact size, open gape, rigid arm lengths and rounded palm. Do not scale or move the crab body. All shell/coral/legs/feet/small left claw stay in exactly the same pixels and pose. Eight walking tips remain. Same rear camera and1448x1086 transparent canvas, no text or shadow. One complete crab with at least60 transparent pixels beyond right claw."
+}

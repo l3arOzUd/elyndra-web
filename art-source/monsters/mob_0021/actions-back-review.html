@@ -1,14 +1,17 @@
 <!doctype html><meta charset="utf-8"><title>Coral Claw rear actions</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;height:auto}select,button,input{margin:8px}a{color:#a9e2e3}</style>
 <h1>Coral Claw: rear action drafts</h1>
-<p>Attack, recoil and grounded death studies. The new attack endpoint fits the frame, but still reads as an upward reach. Shell volume and folded-leg continuity are not approved.</p>
+<p>Attack uses isolated keys at the idle scale. The closed claw recedes behind the right shell edge, but body/foot registration and forward reach remain unapproved.</p>
+<p>Recoil and collapse still use the older sheet. The selected attack has more depth occlusion, but shell/coral drift and folded-leg continuity remain unapproved.</p>
 <select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All source poses</option></select>
 <button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" step="1"><span id="label"></span><br>
 <canvas id="preview" width="512" height="512"></canvas><canvas id="small" width="128" height="128"></canvas>
 <p>Death holds a separate fuller-shell endpoint with eight visible tips. The added inner legs look short and their concealed joints remain unresolved; the preceding collapse still needs matching volume.</p>
 <label><input id="oldDeath" type="checkbox">Compare original compressed endpoint</label>
-<p><a href="actions-front-review.html">Front actions</a> · <a href="walk-back-review.html">Rear walk</a> · <a href="actions-back-study.png">Original sheet</a> · <a href="pinch-back-depth-study.png">Selected attack endpoint</a></p>
+<p><a href="actions-front-review.html">Front actions</a> · <a href="walk-back-review.html">Rear walk</a> · <a href="actions-back-study.png">Original sheet</a> · <a href="attack-back-pinch.png">Selected attack endpoint</a></p>
 <script type="module">
+import {backAttackSources} from './motion-art.js';
+const attackImages=await Promise.all(backAttackSources.map(async file=>{const im=new Image();im.src='./'+file;await im.decode();return im}));
 const image=new Image();image.src='./actions-back-study.png';await image.decode();
 const pinch=new Image();pinch.src='./pinch-back-depth-study.png';await pinch.decode();
 const dead=new Image();dead.src='./death-back-volume-v2.png';await dead.decode();
@@ -21,7 +24,8 @@ const clip=document.querySelector('#clip'),slider=document.querySelector('#frame
 let playing=true,frame=0,last=0;
 function draw(f){
  frame=f;const cell=sequences[clip.value][f];g.clearRect(0,0,512,512);
- if(cell===2)g.drawImage(pinch,256-740*.295,430-988*.295,pinch.naturalWidth*.295,pinch.naturalHeight*.295);
+ if(clip.value==='attack'){const im=attackImages[cell];g.drawImage(im,256-740*.28,430-970*.28,im.naturalWidth*.28,im.naturalHeight*.28)}
+ else if(cell===2)g.drawImage(pinch,256-740*.295,430-988*.295,pinch.naturalWidth*.295,pinch.naturalHeight*.295);
  else if(cell===5&&!document.querySelector('#oldDeath').checked)g.drawImage(dead,256-740*.28,430-914*.28,dead.naturalWidth*.28,dead.naturalHeight*.28);
  else{
   const r=crops[cell],a=anchors[cell];g.save();

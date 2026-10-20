@@ -27,7 +27,8 @@
     "transitionPlayback": "All four views played idle, walk, attack, hit and death in sequence, stopped at death frame 5, and remained unchanged after another 300ms."
   },
   "visualFindings": [
-    "Rear action neutral still uses the older sheet: top y152 versus idle194. Front and side combat clips now start from canonical idle references.",
+    "Rear hit and collapse still use the older sheet: neutral top y152 versus idle194. All four attack clips now start from canonical idle references.",
+    "Rear attack uses isolated windup and closed-claw depth-occlusion keys at fixed idle scale. Four tips per side remain visible; pinch body/foot drift remains unresolved.",
     "Front attack and hit now use isolated same-scale drawings. Four foot tips per side remain visible; hidden roots, claw foreshortening and coral continuity are unapproved.",
     "Left attack now uses canonical neutral plus isolated windup/pinch, sharing idle scale and anchor. Four near walking chains remain readable; eye/claw details still drift.",
     "Left hit and collapse now use isolated drawings at the same canonical scale. Individual and combined previews match across both six-frame clips. Final death still needs convincing belly contact.",
