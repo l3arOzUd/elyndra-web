@@ -1,0 +1,18 @@
+{
+  "status": "action-draft-refinement-pending",
+  "source": "actions-back.png",
+  "verified": [
+    "Rear action poses retain plain brass hub without face or jade gem.",
+    "Browser death contact sheet shows lowering trunk and folded outer legs.",
+    "Transparent exterior visible without rectangular haze.",
+    "Attack-back hit-back death-back selectable in review page."
+  ],
+  "limitations": [
+    "Final death center leg stays extended toward viewer; needs a relaxed folded pose.",
+    "Windup and strike are close to standing, forward bash needs stronger readable anticipation.",
+    "Trunk weave and crown shape change through collapse.",
+    "Idle, export, engine checks and gameplay binding remain pending.",
+    "Only key poses; intermediate drawings needed."
+  ],
+  "next": "Fold final rear center leg, then add idle and export all views for SpriteActor review."
+}
