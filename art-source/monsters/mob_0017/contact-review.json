@@ -20,7 +20,7 @@
     "Core/reflection pattern differs from source.",
     "No runtime export or gameplay binding."
   ],
-  "next": "Restore visible far front support in passing B and coordinate all three swing legs.",
+  "next": "Coordinate all three swing legs and refine contact plane, stride continuity and shell stability.",
   "oppositeContact": {
     "source": "walk-left-contact-b.png",
     "verified": [
@@ -41,18 +41,32 @@
   "passingStudy": {
     "selected": [
       "walk-left-pass-a-v2.png",
-      "walk-left-pass-b.png"
+      "walk-left-pass-b-v4.png"
     ],
     "verified": [
       "Passing A moves raised near middle forward while retaining A support tripod.",
-      "Passing B advances near front/rear limbs; near middle and far rear stay down.",
+      "Passing B v4 retains six distinct foot tips: near front/rear and far middle raised, opposite tripod extended. Near front advances slightly from contact B.",
       "Browser composites clean; four-pose preview runs without errors."
     ],
     "limitations": [
-      "Far front support leg becomes fully obscured or missing in passing B; not yet anatomically approved.",
+      "Far front is visible again, but its tip remains higher than near middle and far rear; common ground contact is not yet established.",
       "Passing A advances only near middle; other swing legs need coordinated movement.",
       "Forward/back foot trajectories and rigid segment lengths need refinement.",
       "Shell/core surface flickers across authored images."
+    ],
+    "rejectedVariants": [
+      {
+        "source": "walk-left-pass-b.png",
+        "reason": "Far front support hidden or missing; five visible feet."
+      },
+      {
+        "source": "walk-left-pass-b-v2.png",
+        "reason": "Adds far front but duplicates near front: seven visible foot tips."
+      },
+      {
+        "source": "walk-left-pass-b-v3.png",
+        "reason": "Removes duplicate and far front together: five visible foot tips."
+      }
     ]
   }
 }
