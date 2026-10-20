@@ -1,0 +1,22 @@
+{
+  "status": "movement-study-not-production-approved",
+  "source": "crawl-front.png",
+  "prompt": "crawl-front.prompt.json",
+  "preview": "crawl-review.html",
+  "verified": [
+    "Four poses show frontal head with one continuous limbless body and one tail.",
+    "Body bends laterally behind head rather than making vertical caterpillar arches.",
+    "Preview translates whole frames to common head center and belly baseline without stretching artwork.",
+    "Browser composite shows transparent exterior; playback runs without page errors."
+  ],
+  "limitations": [
+    "Tail alternation is uneven; B and D remain too similar in trailing direction.",
+    "Apparent length and thickness vary between frames.",
+    "Head tilts differently in latter poses despite fixed center.",
+    "A seamless traveling wave is not established.",
+    "C pose body comes close to source cell right edge.",
+    "Rear movement and transition between crawl and resting coil remain missing.",
+    "Not exported or bound to gameplay."
+  ],
+  "next": "Author rear locomotion and resolve wave continuity before export."
+}
