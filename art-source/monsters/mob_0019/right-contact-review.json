@@ -1,0 +1,21 @@
+{
+  "status":"isolated-right-contact-candidate-unapproved",
+  "preview":"right-contact-review.html",
+  "guide":"contact-right-b-guide.svg",
+  "attempts":[
+    {"source":"walk-right-contact-b.png","selected":false,"result":"Near foreground thigh still slopes forward despite guide."},
+    {"source":"walk-right-contact-b-v2.png","selectedForComparison":true,"result":"Guide-primary generation places near knee slightly behind hip and darker far leg ahead, improving opposite overlap."}
+  ],
+  "verified":[
+    "Two arms remain: near arm relaxed, far hand gripping upright spear.",
+    "Browser preview of guide-primary candidate shows no obvious background patches.",
+    "Alternate preview switches between original near-forward contact and guide-primary candidate without errors."
+  ],
+  "limitations":[
+    "Candidate stride is much shorter than original contact.",
+    "Torso/hip proportions and spear size differ from source sheet.",
+    "Foreground boot and far boot ground depths differ; support needs review in assembled motion.",
+    "Passing poses remain unresolved; not a finished loop or runtime binding."
+  ],
+  "next":"Use guide-primary workflow for low near-leg passing, then register and compare right-side cycle."
+}

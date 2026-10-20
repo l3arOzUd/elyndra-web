@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+<rect width="1254" height="1254" fill="#eef1f0"/>
+<g fill="none" stroke="#839099" stroke-width="20" stroke-linecap="round">
+<ellipse cx="630" cy="280" rx="45" ry="65"/><ellipse cx="510" cy="330" rx="35" ry="230"/>
+<path d="M630 360L630 610M580 390L560 550L565 750M660 390L680 525L810 525M810 70L810 1165"/>
+</g>
+<!-- Far leg is drawn first, behind the near leg. -->
+<g fill="none" stroke="#d06525" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+<path d="M650 610L700 825L730 1040L755 1135L815 1175L740 1175L710 1120"/>
+</g>
+<!-- Near leg visibly trails to the left, in front of the far thigh. -->
+<g fill="none" stroke="#1785c0" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+<path d="M630 610L565 825L540 1040L565 1135L625 1175L550 1175L520 1120"/>
+</g>
+<g fill="#fff" stroke="#33444e" stroke-width="6">
+<circle cx="630" cy="610" r="15"/><circle cx="565" cy="825" r="15"/><circle cx="540" cy="1040" r="15"/>
+<circle cx="700" cy="825" r="13"/><circle cx="730" cy="1040" r="13"/>
+</g>
+<path d="M470 1175H860" stroke="#33444e" stroke-width="3"/>
+<g font-family="Arial" font-size="26" fill="#22343c">
+<text x="40" y="45">RIGHT-FACING CONTACT B</text>
+<text x="40" y="820">BLUE: near leg trails LEFT</text><text x="40" y="860">Visible hip joins this thigh</text>
+<text x="860" y="820">ORANGE: far leg</text><text x="860" y="860">steps forward RIGHT</text>
+<text x="40" y="1220">Both soles contact ground. Exactly two legs; blue thigh is foreground.</text>
+</g></svg>
