@@ -1,0 +1,29 @@
+{
+  "status": "side-action-draft-unapproved",
+  "source": "actions-left.png",
+  "preview": "actions-review.html",
+  "poses": [
+    "idle",
+    "windup",
+    "punch",
+    "hit",
+    "kneeling-collapse",
+    "dead"
+  ],
+  "verified": [
+    "Punch extends fist left while opposite fist guards.",
+    "Death bends through knees and folds torso forward onto forearms, visor dark.",
+    "Browser alpha clean; death preview holds final frame without page errors.",
+    "Custom crop includes punch fist extending left of regular cell boundary."
+  ],
+  "limitations": [
+    "Idle far arm/leg occluded.",
+    "Stone motifs, block dimensions and torso camera angle drift across poses.",
+    "Punch forearm/upperarm lengths and shoulder chain need continuity review.",
+    "Only two collapse drawings; transition still abrupt.",
+    "Ground contacts approximate after registration.",
+    "Sand emission VFX absent.",
+    "Front/back actions and runtime export missing; no gameplay binding."
+  ],
+  "next": "Author front/back actions and preserve rigid limb continuity; add intermediate collapse if needed."
+}
