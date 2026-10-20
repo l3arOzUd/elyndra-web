@@ -1,0 +1,21 @@
+{
+  "id": "mob_0083",
+  "name": "Magma Spitter",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation using front master and opposite-view references.",
+  "confirmed": [
+    "Eyeless limbless brick-red segmented worm, volcanic collar and attached crust base preserved.",
+    "Rear has closed red nape without duplicate mouth or gullet.",
+    "Profiles show short forward tube mouth and attached molten drips.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Left aperture remains too broad/oblique; right narrower but still exposes inner gullet, not a strict matching side elevation.",
+    "Body segment counts, ring heights and neck bend differ across views; requires numbered segment landmarks.",
+    "Collar spikes and fissure paths change; collar is bulkier in side views.",
+    "Rear closed nape is an inferred construction requiring reconciliation with mouth tunnel depth.",
+    "Front top spike has very tight margin; normalized scale/margins required before slicing.",
+    "Attached drips and lava glow baked into references; no separated layers or runtime clips yet."
+  ],
+  "next": "Lock segment count, collar landmarks, mouth axis/depth and base anchors across views. Separate body rings, collar, lip/gullet, drips and stationary crust for breathing, emergence/burrow travel, spit windup/recoil, hit and segment-by-segment collapse; author separate magma projectile/splash."
+}
