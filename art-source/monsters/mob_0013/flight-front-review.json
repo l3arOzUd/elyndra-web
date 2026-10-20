@@ -1,0 +1,21 @@
+{
+  "status": "flight-draft-refinement-pending",
+  "source": "flight-front.png",
+  "verified": [
+    "Browser contact sheet shows raised horizontal and lowered wing poses.",
+    "Front identity retains two jade eyes needle and sap tank.",
+    "Four wings visible in raised poses."
+  ],
+  "limitations": [
+    "Downstroke overlaps wing pairs, independent roots not clearly visible.",
+    "Far leg pair is obscured and six-leg anatomy remains unresolved.",
+    "Frame2 outer right wing approaches canvas edge and needs more source margin.",
+    "Shell tilt and sap highlights drift; registration approximate.",
+    "Not exported or bound to gameplay."
+  ],
+  "crop": {
+    "column": 615,
+    "row": 650
+  },
+  "next": "Repair tight wing margin and anatomical overlaps, author rear flight."
+}
