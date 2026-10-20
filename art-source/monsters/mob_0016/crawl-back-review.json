@@ -1,0 +1,23 @@
+{
+  "status": "movement-study-not-production-approved",
+  "source": "crawl-back.png",
+  "prompt": "crawl-back.prompt.json",
+  "preview": "crawl-review.html",
+  "verified": [
+    "Rear camera shows back of head with no eyes, nose or tongue.",
+    "All four poses have one continuous body and a single trailing tail.",
+    "Bends lie on ground plane rather than forming vertical arches.",
+    "Whole-frame translation aligns head center and trailing tail baseline without deformation.",
+    "Browser alpha composite is clean; four-frame playback has no page errors."
+  ],
+  "limitations": [
+    "A and B are too similar, followed by an abrupt bend reversal into C.",
+    "D still closely resembles C; intermediate wave propagation is weak.",
+    "Body length and thickness vary across poses.",
+    "Head size is smaller than front view at the same rendering scale.",
+    "Tail baseline is only a registration aid, not proof of ground contact.",
+    "Locomotion-to-resting-coil transition and authored in-betweens are missing.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Improve intermediate wave phases and idle-to-walk continuity before runtime export."
+}

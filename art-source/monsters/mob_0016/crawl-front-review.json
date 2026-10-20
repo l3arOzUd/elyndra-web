@@ -15,8 +15,8 @@
     "Head tilts differently in latter poses despite fixed center.",
     "A seamless traveling wave is not established.",
     "C pose body comes close to source cell right edge.",
-    "Rear movement and transition between crawl and resting coil remain missing.",
+    "Rear movement study now exists; transition between crawl and resting coil remains missing.",
     "Not exported or bound to gameplay."
   ],
-  "next": "Author rear locomotion and resolve wave continuity before export."
+  "next": "Resolve wave continuity across all views and author transition into resting coil before export."
 }
