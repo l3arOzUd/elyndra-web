@@ -1,0 +1,15 @@
+{
+  "status": "idle-draft-refinement-pending",
+  "source": "idle-left-leaves.png top-left only",
+  "neutral": "actions-left-v2.png top-left only",
+  "verified": [
+    "Browser contact sheet shows leafy crown changing while three feet remain planted.",
+    "Clean transparent exterior in browser preview."
+  ],
+  "limitations": [
+    "Two authored poses only; transition needs intermediate leaf positions.",
+    "Brass saturation and twig details shift slightly.",
+    "Front and rear idle remain uncreated.",
+    "Not exported or bound to runtime yet."
+  ]
+}

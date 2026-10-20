@@ -4,7 +4,7 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{display:block;background:#697a80;margin:16px 0;max-width:100%}</style>
 <h1>Graftling — tripod walk draft</h1>
 <p>Six authored stepping poses. Inspect three continuous leg chains and two planted supports. Brass hinge positions, body registration and foot trajectories need refinement. Not bound to gameplay.</p>
-<select id="clip"><option>walk</option><option>walk-front</option><option>walk-back</option><option>attack</option><option>hit</option><option>death</option><option>attack-front</option><option>hit-front</option><option>death-front</option><option>attack-back</option><option>hit-back</option><option>death-back</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
+<select id="clip"><option>walk</option><option>idle</option><option>walk-front</option><option>walk-back</option><option>attack</option><option>hit</option><option>death</option><option>attack-front</option><option>hit-front</option><option>death-front</option><option>attack-back</option><option>hit-back</option><option>death-back</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
 <canvas id="motion" width="600" height="540"></canvas>
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
@@ -18,8 +18,10 @@ const backWalk=new Image();backWalk.src='./walk-back.png';await backWalk.decode(
 const frontActions=new Image();frontActions.src='./actions-front-v2.png';await frontActions.decode();
 const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
 const backFix=new Image();backFix.src='./actions-back-v2.png';await backFix.decode();
+const idleLeaves=new Image();idleLeaves.src='./idle-left-leaves.png';await idleLeaves.decode();
 let clip='walk';const seq={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 function draw(ctx,f,x,y,s){
+ if(clip==='idle'){ctx.drawImage(f>=2&&f<=3?idleLeaves:actionFix,0,0,530,511,x-256*s,y-511*s,530*s,511*s);return;}
  if(clip.endsWith('-back')&&!clip.startsWith('walk')){const pose=seq[clip.replace('-back','')][f],sy=pose<3?0:516,h=pose<3?516:508,bottom=[516,515,502,490,459,453][pose];ctx.drawImage(pose===5?backFix:backActions,pose%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
  if(clip.endsWith('-front')&&!clip.startsWith('walk')){const pose=seq[clip.replace('-front','')][f],sy=pose<3?0:542,h=pose<3?542:482,bottom=[533,531,537,464,456,455][pose];ctx.drawImage(frontActions,pose%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
  if(clip==='walk-back'){const sy=f<3?0:508,h=f<3?508:516,bottom=f<3?507:496;ctx.drawImage(backWalk,f%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
@@ -38,6 +40,6 @@ let f=0,paused=false,last=0;
 document.querySelector('#clip').onchange=e=>{clip=e.target.value;f=0;paused=false;contact();};
 document.querySelector('#pause').onclick=()=>paused=!paused;
 document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
-function tick(t){if(!paused&&t-last>170){f=clip.startsWith('walk')?(f+1)%6:Math.min(5,f+1);last=t;}ctx.clearRect(0,0,600,540);draw(ctx,f,300,510,.9);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+function tick(t){if(!paused&&t-last>170){f=(clip.startsWith('walk')||clip==='idle')?(f+1)%6:Math.min(5,f+1);last=t;}ctx.clearRect(0,0,600,540);draw(ctx,f,300,510,.9);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
 window.__graftlingWalk={ready:true};requestAnimationFrame(tick);
 </script>
