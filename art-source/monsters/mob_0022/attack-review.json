@@ -4,14 +4,15 @@
   "sources": [
     "front-neutral-v2.png",
     "attack-front-windup-v2.png",
-    "attack-front-impact-v2.png"
+    "attack-front-impact-v2.png",
+    "attack-front-recovery.png"
   ],
   "sequence": [
     0,
     1,
     1,
     2,
-    1,
+    3,
     0
   ],
   "fps": 6.25,
@@ -28,8 +29,9 @@
     "Body proportions now match more closely, but exact landmark registration and surface continuity remain unapproved.",
     "Two curved clamp jaws restored; hinge and wrist construction still varies.",
     "Forward thrust has limited reach; heavy mechanical recoil not yet drawn.",
-    "Recovery reuses windup."
+    "Distinct recovery now lowers and opens the pincer; off-hand unexpectedly shifts and needs stabilizing."
   ],
-  "next": "Add a distinct recoil drawing, check planted feet and machine joint continuity.",
-  "revision": "v2 generated from canonical neutral; old four-knuckle variants retained but unselected."
+  "next": "Stabilize off-hand and painted landmarks; improve heavy piston reach and articulation.",
+  "revision": "v2 generated from canonical neutral; old four-knuckle variants retained but unselected.",
+  "uniqueDrawings": 4
 }

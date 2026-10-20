@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "attack-front-impact-v2.png",
+  "prompt": "Localized edit: same Brine Automaton front-view animation frame, AFTER the punch in recovery. Change ONLY image-left arm: shoulder rotates downward halfway toward resting, piston forearm retracts, two-jaw pincer drops to hip level and begins opening slightly. It must be visibly between forward extended punch and hanging neutral, not held up at chest like windup. Preserve exactly two curved clamp jaws and their pin hinges, no human fingers. Preserve rigid segment lengths. Keep torso, gauges, valves, tank, right-image arm, legs, feet, canvas, scale and all body positions unchanged. Do not tilt whole robot. Keep generous margins and transparent alpha, no floor, shadow, steam, text or effects. One full body, painted copper and verdigris as reference."
+}
