@@ -1,0 +1,20 @@
+{
+  "status": "opposite-leading-leg-studies-unapproved",
+  "sources": ["walk-front-contact-a.png", "walk-front-contact-b.png"],
+  "preview": "contact-review.html",
+  "observations": [
+    "A advances screen-left thigh and boot; B advances screen-right thigh and boot.",
+    "Spear remains viewer-left in both; weapon hand is not mirrored.",
+    "Five mirrors and featureless face retained.",
+    "Browser preview loads and switches poses without page errors; B composite clean."
+  ],
+  "limitations": [
+    "Trailing toes still read as suspended; double-support contact is not established.",
+    "Leg and torso widths and metal highlights drift between A and B.",
+    "Free arm counter swing remains weak.",
+    "Two isolated leading-leg poses only, not a complete walk cycle.",
+    "Source spear top margin remains smaller than requested."
+  ],
+  "next": "Refine trailing toe support and add passing poses with explicit grounded-foot registration.",
+  "publicBinding": false
+}
