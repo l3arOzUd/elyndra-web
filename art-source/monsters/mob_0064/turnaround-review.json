@@ -1,0 +1,20 @@
+{
+  "id": "mob_0064",
+  "name": "Pearl Skate",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front ray identity; corrected rear tail root and retained failed draft.",
+  "confirmed": [
+    "Cream nacre diamond ray with two downcurled fins and single whip tail.",
+    "Rear tail corrected to near posterior edge; no rear-facing eyes.",
+    "Profiles face left/right with one visible eye and no added limbs.",
+    "Four images pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Side cameras still elevated/oblique, showing broad dorsal disc rather than thin profile.",
+    "Tail near/far curve appears mirrored rather than one fixed anatomical path.",
+    "Rear disc head silhouette and pelvic lobes not anatomically resolved.",
+    "Dorsal ridge bumps, nacre patterns and fin curvature vary.",
+    "Margins tight despite passing edge check; no separated fin/tail layers or runtime clips yet."
+  ],
+  "next": "Lock disc thickness, tail centerline and fin anchors, then separate deformable fins/body/tail for skim, glide, tail attack, hit and settle death."
+}
