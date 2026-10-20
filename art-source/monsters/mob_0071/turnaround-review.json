@@ -1,0 +1,20 @@
+{
+  "id": "mob_0071",
+  "name": "Glassback Ram",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation plus targeted rear anatomy correction; original failed rear retained.",
+  "confirmed": [
+    "Grey wool, two curled blue-glass horns and overlapping dorsal glass plates retained.",
+    "Rear refinement removes two extra hoof fragments, changes inner ear bowls to furry outer backs and toe clefts to rounded heels.",
+    "Four accepted files pass alpha, nonempty and edge checks."
+  ],
+  "limitations": [
+    "Side camera angles and stance differ: left more oblique than right, foreleg overlap changes.",
+    "Horn curl planes and near/far overlap differ from front; fixed anatomical horn axes need reconciliation.",
+    "Glass plate count, rows and coverage vary; stable plate landmark map needed.",
+    "Rear limb perspective remains simplified; hock articulation should be checked against quadruped rig.",
+    "Margins tight at horn tops and right muzzle despite edge check passing.",
+    "No separated parts or runtime animation clips yet."
+  ],
+  "next": "Align profile pose and horn axes, lock plate rows, then separate four limb chains/head/horns/tail for idle, walk, charge, hit and collapse. Author breath steam separately."
+}

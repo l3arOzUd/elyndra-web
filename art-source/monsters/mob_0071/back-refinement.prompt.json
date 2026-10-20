@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Correct this BACK view anatomy only. Exactly FOUR legs total: two nearest hind legs under rump, two farther forelegs outside silhouette. REMOVE the two tiny extra dark hoof fragments between legs under belly. Nearest hind hooves show rounded heel backs with NO front toe cleft; toes point away. Ears show furry outer backs not inner bowls. Keep opaque back of head, tail, glass plates, blue curled horns, grey wool and pose unchanged. Full creature within transparent square no ground shadow text.",
+  "references": [
+    "back-draft-extra-hooves.png"
+  ]
+}
