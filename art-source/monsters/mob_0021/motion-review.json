@@ -3,13 +3,39 @@
   "status": "combined-four-view-five-clip-review",
   "module": "motion-art.js",
   "preview": "motion-review.html",
-  "views": ["front", "back", "left", "right"],
+  "views": [
+    "front",
+    "back",
+    "left",
+    "right"
+  ],
   "clips": {
-    "idle": {"frames": 20, "fps": 8, "loop": true},
-    "walk": {"frames": 4, "fps": 4, "loop": true},
-    "attack": {"frames": 6, "fps": 6.25, "loop": false},
-    "hit": {"frames": 6, "fps": 10, "loop": false},
-    "death": {"frames": 6, "fps": 6.25, "loop": false, "hold": true}
+    "idle": {
+      "frames": 20,
+      "fps": 8,
+      "loop": true
+    },
+    "walk": {
+      "frames": 4,
+      "fps": 4,
+      "loop": true
+    },
+    "attack": {
+      "frames": 6,
+      "fps": 6.25,
+      "loop": false
+    },
+    "hit": {
+      "frames": 6,
+      "fps": 10,
+      "loop": false
+    },
+    "death": {
+      "frames": 6,
+      "fps": 6.25,
+      "loop": false,
+      "hold": true
+    }
   },
   "registration": {
     "groundY": 430,
@@ -24,17 +50,18 @@
     "cellsTouchingPreviewEdge": 0,
     "pageErrors": [],
     "frontDeath": "Frame 5 held at successive 1300ms and 1800ms observations.",
-    "transitionPlayback": "All four views played idle, walk, attack, hit and death in sequence, stopped at death frame 5, and remained unchanged after another 300ms."
+    "transitionPlayback": "All four views played idle, walk, attack, hit and death in sequence, stopped at death frame 5, and remained unchanged after another 300ms.",
+    "latestRevision": "Rear isolated hit/collapse: reran all 168 timing cells; no empty or edge-touching cells, no page errors; front death stopped and held frame 5."
   },
   "visualFindings": [
-    "Rear hit and collapse still use the older sheet: neutral top y152 versus idle194. All four attack clips now start from canonical idle references.",
+    "Rear hit and collapse now use isolated drawings at canonical idle scale. All four combat neutral starts match their idle source bounds within rasterization tolerance.",
     "Rear attack uses isolated windup and closed-claw depth-occlusion keys at fixed idle scale. Four tips per side remain visible; pinch body/foot drift remains unresolved.",
     "Front attack and hit now use isolated same-scale drawings. Four foot tips per side remain visible; hidden roots, claw foreshortening and coral continuity are unapproved.",
     "Left attack now uses canonical neutral plus isolated windup/pinch, sharing idle scale and anchor. Four near walking chains remain readable; eye/claw details still drift.",
     "Left hit and collapse now use isolated drawings at the same canonical scale. Individual and combined previews match across both six-frame clips. Final death still needs convincing belly contact.",
     "Right attack now uses the canonical neutral plus isolated windup and pinch; its start matches idle bounds [109,180,479,431] exactly.",
     "Right hit now shares canonical neutral and fixed anchor with idle/attack. Cleaned hit-right-brace-v2 retains four near chains; planted tips still shift slightly.",
-    "This is a source-proportion/camera mismatch, not solved by matching foot baselines.",
+    "Matching scale and foot baselines does not resolve source anatomy or camera differences.",
     "Side idle-to-walk registration now shares identical source anchors.",
     "Right attack retains four near walking chains; its closed large claw still appears slimmer. Other attack and hit sources may lose near chains and change shell/coral detail.",
     "Right death now uses canonical neutral, isolated collapse and fuller-shell endpoint at a fixed scale. Four near chains remain visible, but belly support and coral consistency still need correction. Left death also reads as a low crouch.",

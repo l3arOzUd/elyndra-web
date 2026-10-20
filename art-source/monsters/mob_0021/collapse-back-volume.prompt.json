@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "back-anatomy-study-v4.png",
+    "death-back-volume-v2.png"
+  ],
+  "prompt": "Use case: precise-object-edit. One intermediate REAR collapse key of Coral Claw. Image1 neutral rear is the exact design/camera/scale reference; image2 is final folded pose reference only. Draw the crab HALFWAY through losing support: all EIGHT walking legs bend partway at real knees, four continuously attached chains and four grey tips on each side. Preserve full-length armoured segments; do not replace inner legs by short stubs. Rigid domed shell lowers as legs fold, not squashed flat. Retain exact coral branch topology, body width, massive image-right claw and small image-left claw. Both claws lower slightly, remaining in frame. Rear remains faceless. Same1448x1086 composition with ground near y970, no overall resizing or backward flip. Entire crab with genuine transparent space around and between limbs, no glow/shadow/floor/text."
+}

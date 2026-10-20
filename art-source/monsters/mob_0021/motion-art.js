@@ -18,6 +18,9 @@ export const leftAttackSources=['left-profile-study-v2.png','attack-left-windup.
 export const frontAttackSources=['front-rest-study.png','attack-front-windup.png','attack-front-pinch.png'];
 export const backAttackSources=['back-anatomy-study-v4.png','attack-back-windup-v2.png','attack-back-pinch.png'];
 export const frontHitSource='hit-front-brace.png';
+export const backHitSource='hit-back-brace.png';
+export const backDeathSources=['back-anatomy-study-v4.png','collapse-back-volume.png','death-back-volume-v2.png'];
+export const backDeathGround=[970,964,914];
 export const rightHitSource='hit-right-brace-v2.png';
 export const leftHitSource='hit-left-brace.png';
 export const leftDeathSources=['left-profile-study-v2.png','collapse-left-volume.png','death-left-volume-study.png'];
@@ -26,7 +29,7 @@ export const rightDeathSources=['right-profile-study-v2.png','collapse-right-vol
 export const rightDeathGround=[1005,966,985];
 const extra=['walk-front-study.png','walk-back-study-v2.png','walk-back-study-v4.png','buckle-front-study.png','collapse-front-volume.png','death-front-volume-v2.png','pinch-back-depth-study.png','death-back-volume-v2.png','death-left-volume-study.png',...rightAttackSources];
 export async function loadMotionArt(){
- const files=new Set([...Object.values(idleSources).flat(),...Object.values(sideWalk).flat(),...Object.values(actionSpecs).map(s=>s.file),...extra,rightHitSource,...rightDeathSources,...leftAttackSources,leftHitSource,...leftDeathSources,...frontAttackSources,frontHitSource,...backAttackSources]);
+ const files=new Set([...Object.values(idleSources).flat(),...Object.values(sideWalk).flat(),...Object.values(actionSpecs).map(s=>s.file),...extra,rightHitSource,...rightDeathSources,...leftAttackSources,leftHitSource,...leftDeathSources,...frontAttackSources,frontHitSource,...backAttackSources,backHitSource,...backDeathSources]);
  return Object.fromEntries(await Promise.all([...files].map(async file=>{
   const image=new Image();image.src=new URL('./'+file,import.meta.url).href;await image.decode();return[file,image];
  })));
@@ -61,6 +64,8 @@ export function drawMotion(g,art,view,clip,frame){
  if(view==='front'&&clip==='attack'){whole(g,art,frontAttackSources[cell],.28,740,978);return}
  if(view==='back'&&clip==='attack'){whole(g,art,backAttackSources[cell],.28,740,970);return}
  if(view==='front'&&clip==='hit'){whole(g,art,cell===3?frontHitSource:frontAttackSources[0],.28,740,978);return}
+ if(view==='back'&&clip==='hit'){whole(g,art,cell===3?backHitSource:backAttackSources[0],.28,740,970);return}
+ if(view==='back'&&clip==='death'){const key=cell===0?0:cell===4?1:2;whole(g,art,backDeathSources[key],.28,740,backDeathGround[key]);return}
  if(view==='right'&&clip==='hit'){whole(g,art,cell===3?rightHitSource:rightAttackSources[0],.25,616,1005);return}
  if(view==='left'&&clip==='hit'){whole(g,art,cell===3?leftHitSource:leftAttackSources[0],.25,920,1005);return}
  if(view==='left'&&clip==='death'){const key=cell===0?0:cell===4?1:2;whole(g,art,leftDeathSources[key],.25,920,leftDeathGround[key]);return}

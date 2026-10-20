@@ -2,9 +2,27 @@
   "id": "mob_0021",
   "status": "rear-combat-and-death-drafts",
   "source": "actions-back-study.png",
-  "attackSources": ["back-anatomy-study-v4.png", "attack-back-windup-v2.png", "attack-back-pinch.png"],
-  "attackRegistration": {"scale": 0.28, "anchor": [740, 970], "destination": [256, 430], "perKeyFitting": false},
-  "unselectedWindup": {"file": "attack-back-windup.png", "reason": "Only 8px right margin; v2 increases clearance. Alpha does not actually touch the boundary."},
+  "attackSources": [
+    "back-anatomy-study-v4.png",
+    "attack-back-windup-v2.png",
+    "attack-back-pinch.png"
+  ],
+  "attackRegistration": {
+    "scale": 0.28,
+    "anchor": [
+      740,
+      970
+    ],
+    "destination": [
+      256,
+      430
+    ],
+    "perKeyFitting": false
+  },
+  "unselectedWindup": {
+    "file": "attack-back-windup.png",
+    "reason": "Only 8px right margin; v2 increases clearance. Alpha does not actually touch the boundary."
+  },
   "override": {
     "pose2": "pinch-back-depth-study.png",
     "pose5": "death-back-volume-v2.png"
@@ -43,9 +61,9 @@
   ],
   "remaining": [
     "New closed claw recedes behind the right shell edge, but forward reach and attachment remain unapproved. Body and planted tips drift.",
-    "Intermediate collapse still compresses shell; final endpoint is fuller but coral landmarks differ.",
+    "Isolated intermediate collapse retains shell volume better than the sheet; coral landmarks and planted feet still drift.",
     "Final endpoint has eight visible tips, but added inner legs appear shortened and their hidden joints are unverified.",
-    "Cross-view neutral scale and attack/death timing need reconciliation."
+    "Combat neutral now matches canonical idle in this view. Cross-view anatomy and convincing ground support remain unapproved."
   ],
   "validation": {
     "visiblePixelsPerPose": [
@@ -75,12 +93,22 @@
   "attackRevisionCheck": {
     "timingFrames": 6,
     "uniqueDrawings": 3,
-    "visibleFootTipsPerSide": [4, 4],
+    "visibleFootTipsPerSide": [
+      4,
+      4
+    ],
     "emptyFrames": 0,
     "edgeFrames": 0,
     "sourceEdgePixelsAboveAlpha16": 0,
     "pageErrors": [],
-    "individualVersusCombinedPixelDifferences": [0, 0, 0, 0, 0, 0],
+    "individualVersusCombinedPixelDifferences": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
     "visual": "Clean transparency; faceless rear and large right claw retained. Neutral starts at idle scale, but pinch changes body/coral and foot positions."
   },
   "selectedDeath": {
@@ -110,5 +138,50 @@
     ],
     "selectedForDraftPreview": true,
     "artApproved": false
+  },
+  "hitSource": "hit-back-brace.png",
+  "deathSources": [
+    "back-anatomy-study-v4.png",
+    "collapse-back-volume.png",
+    "death-back-volume-v2.png"
+  ],
+  "deathRegistration": {
+    "scale": 0.28,
+    "anchorX": 740,
+    "groundAnchors": [
+      970,
+      964,
+      914
+    ],
+    "destination": [
+      256,
+      430
+    ],
+    "perKeyFitting": false
+  },
+  "hitAndDeathRevisionCheck": {
+    "timingFramesPerClip": 6,
+    "emptyFrames": 0,
+    "edgeFrames": 0,
+    "individualVersusCombinedPixelDifferences": {
+      "hit": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "death": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "pageErrors": [],
+    "visual": "Browser transparency is clean. Eight foot tips remain readable. Hidden joints, foot drift and shell/coral continuity are not approved."
   }
 }
