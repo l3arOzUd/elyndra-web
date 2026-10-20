@@ -7,9 +7,11 @@
 <label>Clip <select id="clip"><option>idle</option><option>walk</option><option>attack</option><option>hit</option><option>death</option></select></label>
 <label>Facing <select id="facing"><option value="-1">Left</option><option value="1">Right (mirrored)</option><option value="2">Front</option><option value="0">Back</option></select></label>
 <button id="replay">Replay</button><button id="pause">Pause</button>
+<label><input id="sand" type="checkbox" checked>Sand emission draft</label>
 <p id="status">Loading…</p><div id="stage"></div>
 <script type="module">
 import * as THREE from 'three';
+import {SandPreview} from './sand-preview.js';
 import {SpriteActor} from '/src/render/spriteActor.ts';
 import {spriteFromImages,validateSprite} from '/src/render/spriteDef.ts';
 const base='./runtime-draft/';
@@ -21,6 +23,7 @@ const images=Object.fromEntries(entries),problems=validateSprite(json,images);
 if(problems.length)throw Error(problems.join('; '));
 const sprite=spriteFromImages(json,images),actor=new SpriteActor(sprite);
 const scene=new THREE.Scene();scene.background=new THREE.Color('#334639');scene.add(actor.root);
+const sand=new SandPreview(THREE,scene);
 const grid=new THREE.GridHelper(8,8,0x83917c,0x4c6051);scene.add(grid);
 const camera=new THREE.OrthographicCamera(-1.6,1.6,1.1,-1.1,.01,100);
 camera.position.set(0,2.5,4);camera.lookAt(0,.4,0);
@@ -29,7 +32,7 @@ renderer.setSize(960,660);renderer.setPixelRatio(1);
 document.querySelector('#stage').append(renderer.domElement);
 let paused=false,last=performance.now(),events=[];
 function replay(){
- actor.revive();actor.setBase('idle');events=[];
+ actor.revive();actor.setBase('idle');events=[];sand.reset();
  const clip=document.querySelector('#clip').value;
  if(clip==='idle'||clip==='walk')actor.setBase(clip);
  else actor.play(clip,{onEvent:name=>events.push(name)});
@@ -39,11 +42,11 @@ document.querySelector('#replay').onclick=replay;
 document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelector('#pause').textContent=paused?'Play':'Pause';};
 function render(dt){
  actor.heading=Number(document.querySelector('#facing').value)*Math.PI/2;
- actor.update(dt,camera,0);renderer.render(scene,camera);
+ actor.update(dt,camera,0);sand.update(dt,actor.animator.current,actor.shownDir,document.querySelector('#sand').checked);renderer.render(scene,camera);
  document.querySelector('#status').textContent=`Animation: ${actor.animator.current}; facing: ${actor.shownDir}; events: ${events.join(', ')||'none'}`;
 }
 function tick(now){const dt=Math.min(100,now-last);last=now;render(paused?0:dt);requestAnimationFrame(tick);}
 replay();render(0);
-window.__duneGame={ready:true,actor,problems,step:dt=>{paused=true;render(dt);},replay,get events(){return [...events];}};
+window.__duneGame={ready:true,actor,sand,problems,step:dt=>{paused=true;render(dt);},replay,get events(){return [...events];}};
 requestAnimationFrame(tick);
 </script>

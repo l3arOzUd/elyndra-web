@@ -43,5 +43,10 @@
     "formatAndEdgeChecks": "passed",
     "actualEngineCheck": "engine-review.json: four facings, hit boundary 375ms, single event through recovery, death holds at 2000ms",
     "publicBinding": false
+  },
+  "sandPreview": {
+    "file": "sand-preview.js",
+    "review": "sand-review.json",
+    "status": "behavior-tested-visibility-unapproved"
   }
 }

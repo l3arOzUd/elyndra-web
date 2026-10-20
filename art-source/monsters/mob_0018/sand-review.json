@@ -1,0 +1,18 @@
+{
+  "status": "preview-only",
+  "errors": [],
+  "checks": {
+    "aliveParticles": 12,
+    "toggleHides": true,
+    "deathAfter2000ms": {
+      "particles": 0,
+      "clip": "death"
+    }
+  },
+  "limitations": [
+    "Emission positions are approximate per-facing seams, not per-frame attachments.",
+    "Particle visibility and color need review at game camera zoom.",
+    "Not wired to gameplay monster spawning."
+  ],
+  "visualReview": "At current camera scale the sparse sand is difficult to distinguish against sandstone; density, contrast and frame-specific emission placement need refinement."
+}
