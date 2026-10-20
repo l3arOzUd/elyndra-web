@@ -1,0 +1,21 @@
+{
+  "id": "mob_0063",
+  "name": "Hullborer",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front shell identity, rear continuous body and opposite profile.",
+  "confirmed": [
+    "Bone-white segmented limbless worm, rust-red rasp shell and attached wood shavings retained.",
+    "Rear shell has no duplicated mouth; single continuous body/tail.",
+    "Side mouth faces left/right correctly.",
+    "Four images pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Front master already oblique; exact frontal head axis remains unresolved.",
+    "Side mouth openings too broad for strict lateral camera.",
+    "Spiral ridge slope reverses between profiles; physical handedness must be reconciled rather than mirrored.",
+    "Body curl, segment count and attached wood landmarks vary across views.",
+    "Shell remains upright like cone hood; clarify drill motion axis before animation.",
+    "No separated body segments, drill animation or runtime clips yet."
+  ],
+  "next": "Lock shell handedness, mouth axis and segmented centerline, then build fixed-volume body bend controls and author idle/crawl/bore/hit/collapse plus wood-chip VFX."
+}
