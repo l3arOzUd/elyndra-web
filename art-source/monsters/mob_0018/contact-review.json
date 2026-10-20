@@ -1,0 +1,25 @@
+{
+  "status": "opposite-contact-study-unapproved",
+  "sources": [
+    "walk-left-contact-a.png",
+    "walk-left-contact-b.png"
+  ],
+  "rejected": {
+    "source": "walk-left-contact-a-v2.png",
+    "reason": "Arm swing changes but near upperarm becomes a hanging stub and rear arm connection reads as wrong shoulder. Not selected."
+  },
+  "observations": [
+    "Two fists and two feet in selected A/B.",
+    "Near thigh appears forward in A and trailing in B.",
+    "Head remains left-facing."
+  ],
+  "limitations": [
+    "A near arm still forward with near leg; counter-swing wrong.",
+    "Near/far leg attachment and identity need confirmation.",
+    "Carved motifs and block proportions drift.",
+    "Source head/feet margins too tight.",
+    "Only contact poses; passing poses absent.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Repair A near shoulder-to-elbow chain and counter-swing before intermediate poses."
+}
