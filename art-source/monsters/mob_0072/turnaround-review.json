@@ -1,0 +1,20 @@
+{
+  "id": "mob_0072",
+  "name": "Frostcoil Serpent",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front snake master, rear and opposite profile.",
+  "confirmed": [
+    "Pale-blue frost-ridged scales, ice hood and ventral cyan veins retained.",
+    "Rear neck has dorsal scales without duplicate face or ventral cyan pattern.",
+    "No legs introduced; four images pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Side hood remains broad and camera-facing instead of thin overlapping lateral fins.",
+    "Small terminal coil lacks clearly distinguishable tapering tip in all views, including front; body continuity cannot be verified.",
+    "Coil placement and winding differ between side views rather than representing fixed pose rotation.",
+    "Head/neck pitch and width vary; ventral plates remain too broadly exposed in profile.",
+    "Hood rib counts and dorsal ridge landmarks vary; tight top/bottom margins.",
+    "No separated parts or runtime animation clips yet."
+  ],
+  "next": "Draw a continuous numbered body path with explicit tail tip, fix hood plane and coil projections, then segment head/neck/body/hood for coil idle, slither, bite, recoil and collapse; frost effects separate."
+}
