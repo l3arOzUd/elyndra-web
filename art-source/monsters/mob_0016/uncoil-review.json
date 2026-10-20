@@ -19,7 +19,7 @@
     ]
   },
   "runtimeBound": false,
-  "next": "Register resting, guided middle and crawl endpoint at common head scale and ground contact; add missing intermediate phases.",
+  "next": "Create upper-loop descent pose between rest and early, then reconcile body thickness with crawl.",
   "guidedStudy": {
     "source": "uncoil-left-guided.png",
     "guide": "uncoil-guide.svg",
@@ -33,6 +33,25 @@
       "Head size and body volume need registration against both endpoints.",
       "Foreground overlap must unwind continuously in following frames.",
       "Neck remains raised and tail margin narrow."
+    ]
+  },
+  "registeredSequence": {
+    "frames": [
+      "left.png",
+      "uncoil-left-early.png",
+      "uncoil-left-guided.png",
+      "crawl-left-b-v3.png"
+    ],
+    "verified": [
+      "Approximate common head scale and ground baseline using uniform transforms only.",
+      "New early pose retains more body overlap than guided middle.",
+      "Browser playback reaches crawl endpoint without errors."
+    ],
+    "limitations": [
+      "Rest-to-early still skips upper-loop descent.",
+      "Early loop appears wider than middle; body volume continuity unproven.",
+      "Crawl body appears thinner and neck lifted relative to middle.",
+      "Only key poses, no smooth or gameplay-ready transition."
     ]
   }
 }
