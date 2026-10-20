@@ -14,6 +14,7 @@ const leftFlight=new Image();leftFlight.src='./flight-left.png';await leftFlight
 const leftActions=new Image();leftActions.src='./actions-left.png';await leftActions.decode();
 const backFlight=new Image();backFlight.src='./flight-back.png';await backFlight.decode();
 const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
+const backDeath=new Image();backDeath.src='./death-back-repair.png';await backDeath.decode();
 let clip='flight';
 const sequences={flight:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 for(const name of ['attack','hit','death']){sequences[`${name}-left`]=sequences[name];document.querySelector('#clip').add(new Option(`${name}-left`,`${name}-left`));}
@@ -41,6 +42,11 @@ function draw(ctx,f,x,y,s){
   ctx.drawImage(leftFlight,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);return;
  }
  const pose=sequences[clip][f];
+ if(clip.endsWith('-back')&&pose>=4){
+  const sx=pose===4?0:670,w=pose===4?670:866,ax=pose===4?350:420,ay=pose===4?860:768;
+  const k=s*.62;
+  ctx.drawImage(backDeath,sx,0,w,1024,x-ax*k,y-ay*k,w*k,1024*k);return;
+ }
  if(clip.endsWith('-back')){
   const [sx,sy,w,h,ax,ay]=backActionCells[pose];
   ctx.drawImage(backActions,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);return;

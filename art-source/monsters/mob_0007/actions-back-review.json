@@ -1,17 +1,19 @@
 {
-  "status": "draft-needs-source-cleanup",
+  "status": "draft-refinement-pending",
   "source": "actions-back.png",
   "verified": [
     "Rear-facing attack pitches away without exposing face.",
     "Final pose folds wings and lowers abdomen.",
-    "Browser preview loads and holds final pose."
+    "Browser preview loads and holds final pose.",
+    "Separate dying and resting poses eliminate neighboring wing fragment in browser preview.",
+    "Final silhouette is lower and wider with foreshortened abdomen; screenshot output/dustwing-back-death-repaired.png."
   ],
   "limitations": [
-    "Neighboring wing fragment enters dying-pose rectangular crop; source cleanup required.",
-    "Final abdomen remains too upright compared with side belly-down death.",
     "Wing markings and body segments drift.",
     "Cross-view scales and flight-to-action registration unfinished.",
-    "No runtime export or gameplay binding."
+    "No runtime export or gameplay binding.",
+    "Replacement poses alter wing colors and abdomen length; continuity and in-betweens still need refinement."
   ],
-  "next": "Isolate dying pose and lower rear final body before runtime export."
+  "next": "Calibrate cross-clip body scales and export draft for actual SpriteActor review.",
+  "deathReplacement": "death-back-repair.png"
 }
