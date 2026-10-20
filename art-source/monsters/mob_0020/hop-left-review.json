@@ -1,0 +1,36 @@
+{
+  "status": "four-key-left-hop-study-unapproved",
+  "source": "hop-left.png",
+  "preview": "hop-left-review.html",
+  "authoredKeys": ["crouch", "push", "airborne tuck", "landing"],
+  "method": "Render complete silhouettes using separate source crops and a single uniform scale; translate the body through hop height without stretching limbs.",
+  "technicalCheck": {
+    "browserErrors": [],
+    "nonemptyKeys": 4,
+    "canvasEdgeIntersections": 0,
+    "groundY": 430,
+    "observedOpaqueBoundsBeforeCrouchAdjustment": [
+      [131, 241, 382, 432],
+      [108, 214, 481, 430],
+      [113, 195, 418, 362],
+      [108, 237, 391, 429]
+    ],
+    "adjustment": "Raised crouch registration by 2 pixels after inspecting toes against ground line."
+  },
+  "visualFindings": [
+    "Hind limbs visibly extend at push and flex again during flight.",
+    "Forefeet lift at push and reach forward during flight; landing returns palms to ground.",
+    "Opaque browser comparison has no visible background matte or clipped neighboring frogs.",
+    "Takeoff heel/toe region meets the ground; airborne silhouette clears it."
+  ],
+  "limitations": [
+    "Shell dome changes from tall crouch to flatter airborne and landing forms; rigid volume continuity is not approved.",
+    "Barnacle groups broadly persist but shell plate boundaries and highlights drift.",
+    "Far hind-leg attachment is occluded; four-limb anatomy and rigid segment lengths are not fully verified.",
+    "Landing already has hind feet down; a separate forefoot-first descending key is missing.",
+    "Four-key loop is abrupt and lacks extension/recovery in-betweens.",
+    "Front, back and right hop poses, remaining clips and runtime export are unfinished."
+  ],
+  "next": "Author forefoot-first descent, then check shell volume and hidden hind-leg anatomy before directional expansion.",
+  "publicBinding": false
+}

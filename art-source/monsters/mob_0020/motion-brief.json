@@ -1,0 +1,35 @@
+{
+  "id": "mob_0020",
+  "name": "Tidehopper",
+  "source": "content/regions/tha.ts",
+  "status": "animation-art-in-progress",
+  "bible": {
+    "level": 36,
+    "family": "amphibian",
+    "element": "water",
+    "behavior": "passive",
+    "movement": "Spring-legged shore amphibian that hops out of the way."
+  },
+  "anatomy": [
+    "Exactly two short forelimbs and two enlarged folded hind limbs.",
+    "Preserve shoulder/elbow/wrist and hip/knee/ankle/toe chains during motion.",
+    "Shell dome, head and eye retain their volume; no shell squash or rubber leg scaling.",
+    "Keep the near and far limb identities through takeoff and landing."
+  ],
+  "clips": {
+    "idle": "Subtle throat breathing and blink; shell and planted feet remain still.",
+    "walk": "Short hop: crouch, hind-foot push, airborne tuck, forefoot landing and hind-foot recovery.",
+    "attack": "Short forward body bump with braced hind legs; no invented tongue projectile.",
+    "hit": "Brief flinch, closed eyes, flexed limbs and return to stance.",
+    "death": "Legs buckle and belly settles onto ground, eyes close, toes relax; shell does not flip backward."
+  },
+  "requiredViews": ["front", "back", "left", "right"],
+  "visualGates": [
+    "Inspect toes, limb count and rigid joint lengths at full size and game size.",
+    "Check shell tile landmarks and barnacle clusters between all poses.",
+    "Verify support changes from hind feet to forefeet during the hop.",
+    "Confirm cycle closure and cross-clip registration without resizing individual limbs.",
+    "Check all directional clips before runtime binding."
+  ],
+  "publicBinding": false
+}
