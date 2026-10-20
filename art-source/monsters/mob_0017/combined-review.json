@@ -18,7 +18,8 @@
     "All20 view/clip selections rendered without browser page errors.",
     "Contact sheet compares idle, opposite walk contacts and death in three authored views.",
     "Uniform image scaling only; no limb stretching.",
-    "Exported five sprite sheets,140 timing cells; format/nonempty/boundary checks passed."
+    "Exported five sprite sheets,140 timing cells; format/nonempty/boundary checks passed.",
+    "Actual SpriteActor/Animator tested W/E/S/N attack events and death hold; see engine-review.json."
   ],
   "limitations": [
     "Two idle drawings per view across six timing frames; needs smoother transition.",
@@ -30,5 +31,5 @@
     "Front/back camera and shell volume differ from side.",
     "Runtime draft exported but not gameplay bound or visually approved."
   ],
-  "next": "Test exported sheets in actual SpriteActor/Animator and continue art refinement."
+  "next": "Refine support/stride and shell consistency using game-review.html; production binding remains pending."
 }

@@ -1,0 +1,80 @@
+{
+  "status": "runtime-draft-not-production-approved",
+  "preview": "game-review.html",
+  "combinedPreview": "combined-review.html",
+  "runtimeBound": false,
+  "verified": [
+    "Actual SpriteActor/Animator loads all five draft clips.",
+    "W/E/S/N attack emits one hit event at375ms.",
+    "W/E/S/N death remains active after2000ms.",
+    "No browser page errors.",
+    "Rear death screenshot has clean alpha and rests at ground pivot."
+  ],
+  "results": [
+    {
+      "facing": "-1",
+      "attack": {
+        "events": [
+          "hit"
+        ],
+        "dir": "W",
+        "animation": "attack"
+      },
+      "death": {
+        "animation": "death",
+        "dir": "W"
+      }
+    },
+    {
+      "facing": "1",
+      "attack": {
+        "events": [
+          "hit"
+        ],
+        "dir": "E",
+        "animation": "attack"
+      },
+      "death": {
+        "animation": "death",
+        "dir": "E"
+      }
+    },
+    {
+      "facing": "2",
+      "attack": {
+        "events": [
+          "hit"
+        ],
+        "dir": "S",
+        "animation": "attack"
+      },
+      "death": {
+        "animation": "death",
+        "dir": "S"
+      }
+    },
+    {
+      "facing": "0",
+      "attack": {
+        "events": [
+          "hit"
+        ],
+        "dir": "N",
+        "animation": "attack"
+      },
+      "death": {
+        "animation": "death",
+        "dir": "N"
+      }
+    }
+  ],
+  "limitations": [
+    "Tripod support and swing trajectories remain unapproved.",
+    "Shell/core pattern and leg segment lengths drift.",
+    "Rear strike reads upward rather than forward.",
+    "Two idle drawings and repeated action holds need smoother authored transitions.",
+    "Right mirrors left and diagonal rows reuse side art.",
+    "Folded death legs occlude attachment chains.",
+    "Technical playback checks do not approve art quality."
+  ]
+}
