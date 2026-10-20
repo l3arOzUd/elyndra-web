@@ -1,7 +1,7 @@
 {
   "status": "opposite-contact-study-unapproved",
   "sources": [
-    "walk-left-contact-a.png",
+    "walk-left-contact-a-v4.png",
     "walk-left-contact-b.png"
   ],
   "rejected": {
@@ -11,15 +11,23 @@
   "observations": [
     "Two fists and two feet in selected A/B.",
     "Near thigh appears forward in A and trailing in B.",
-    "Head remains left-facing."
+    "Head remains left-facing.",
+    "A v4 places decorated fist behind torso and far knuckle fist forward; visible elbow/wrist chain."
   ],
   "limitations": [
-    "A near arm still forward with near leg; counter-swing wrong.",
+    "Near shoulder connection remains behind plate; U-shaped lower plate still ambiguous and needs cleanup.",
     "Near/far leg attachment and identity need confirmation.",
     "Carved motifs and block proportions drift.",
     "Source head/feet margins too tight.",
     "Only contact poses; passing poses absent.",
-    "No runtime export or gameplay binding."
+    "No runtime export or gameplay binding.",
+    "A arm and torso block proportions differ from contact B; rigid segment continuity not approved."
   ],
-  "next": "Repair A near shoulder-to-elbow chain and counter-swing before intermediate poses."
+  "next": "Clarify near shoulder underside and match arm segment proportions to contact B before passing poses.",
+  "rejectedFurther": [
+    {
+      "source": "walk-left-contact-a-v3.png",
+      "reason": "Retains stub and lengthens rearward arm excessively."
+    }
+  ]
 }
