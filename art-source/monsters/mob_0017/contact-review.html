@@ -1,10 +1,10 @@
 <!doctype html><meta charset="utf-8"><title>Glass Scarab support contacts</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas,img{background:#697a80;max-width:100%}</style>
 <h1>Glass Scarab - six-leg support study</h1>
-<p>Two alternating contact poses, not a completed walk cycle. Passing pose remains rejected.</p>
-<select id="pose"><option value="0">Contact A</option><option value="1">Contact B</option></select><button id="play">Alternate / pause</button><br><canvas width="900" height="900"></canvas><img src="tripod-a-guide.png" width="450">
+<p>Four key poses under review; far front occlusion and stride continuity remain unresolved.</p>
+<select id="pose"><option value="0">Contact A</option><option value="1">Passing A</option><option value="2">Contact B</option><option value="3">Passing B</option></select><button id="play">Alternate / pause</button><br><canvas width="900" height="900"></canvas><img src="tripod-a-guide.png" width="450">
 <script type="module">
-const images=[];for(const file of ['walk-left-contact-a-v2.png','walk-left-contact-b.png']){const im=new Image();im.src=file;await im.decode();images.push(im);}
+const images=[];for(const file of ['walk-left-contact-a-v2.png','walk-left-pass-a-v2.png','walk-left-contact-b.png','walk-left-pass-b.png']){const im=new Image();im.src=file;await im.decode();images.push(im);}
 const c=document.querySelector('canvas'),g=c.getContext('2d');function draw(){g.clearRect(0,0,900,900);g.drawImage(images[Number(document.querySelector('#pose').value)],0,0,900,900);}
-let playing=false,last=0;document.querySelector('#pose').onchange=draw;document.querySelector('#play').onclick=()=>playing=!playing;function tick(t){if(playing&&t-last>400){document.querySelector('#pose').value=1-Number(document.querySelector('#pose').value);draw();last=t;}requestAnimationFrame(tick);}draw();requestAnimationFrame(tick);window.__scarabContact={ready:true};
+let playing=false,last=0;document.querySelector('#pose').onchange=draw;document.querySelector('#play').onclick=()=>playing=!playing;function tick(t){if(playing&&t-last>180){document.querySelector('#pose').value=(Number(document.querySelector('#pose').value)+1)%images.length;draw();last=t;}requestAnimationFrame(tick);}draw();requestAnimationFrame(tick);window.__scarabContact={ready:true};
 </script>

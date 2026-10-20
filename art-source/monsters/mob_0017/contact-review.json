@@ -1,5 +1,5 @@
 {
-  "status": "two-support-poses-draft",
+  "status": "four-key-pose-gait-draft",
   "source": "walk-left-contact-a-v2.png",
   "guide": "tripod-a-guide.svg",
   "preview": "contact-review.html",
@@ -14,13 +14,13 @@
     "reason": "Shows six feet but near middle remained planted and far middle lifted."
   },
   "limitations": [
-    "Two contact poses, still no valid passing poses or complete walk cycle.",
+    "Four authored key poses, but support continuity and complete gait remain unapproved.",
     "Far middle segment appears longer and heavier than reference.",
     "Far-side hip attachments remain partly occluded.",
     "Core/reflection pattern differs from source.",
     "No runtime export or gameplay binding."
   ],
-  "next": "Author passing pose with an explicit guide retaining A support tripod.",
+  "next": "Restore visible far front support in passing B and coordinate all three swing legs.",
   "oppositeContact": {
     "source": "walk-left-contact-b.png",
     "verified": [
@@ -37,5 +37,22 @@
   "rejectedPassing": {
     "source": "walk-left-pass-a.png",
     "reason": "Near front lifts instead of retaining A support; near middle plants rather than swings, and one far foot is obscured. Does not preserve intended support tripod."
+  },
+  "passingStudy": {
+    "selected": [
+      "walk-left-pass-a-v2.png",
+      "walk-left-pass-b.png"
+    ],
+    "verified": [
+      "Passing A moves raised near middle forward while retaining A support tripod.",
+      "Passing B advances near front/rear limbs; near middle and far rear stay down.",
+      "Browser composites clean; four-pose preview runs without errors."
+    ],
+    "limitations": [
+      "Far front support leg becomes fully obscured or missing in passing B; not yet anatomically approved.",
+      "Passing A advances only near middle; other swing legs need coordinated movement.",
+      "Forward/back foot trajectories and rigid segment lengths need refinement.",
+      "Shell/core surface flickers across authored images."
+    ]
   }
 }
