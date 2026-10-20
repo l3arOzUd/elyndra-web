@@ -46,7 +46,8 @@ export class Fx {
   telegraph(s: SkillDef, x: number, z: number, aimX: number, aimZ: number, castMs: number) {
     const color = COLORS[s.id] ?? 0xffffff;
     const mesh = new THREE.Mesh(this.shapeGeometry(s), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.15, depthWrite: false, side: THREE.DoubleSide }));
-    const cx = s.shape === "ground" ? aimX : x, cz = s.shape === "ground" ? aimZ : z;
+    const targeted = s.shape === "ground" || s.shape === "pull";
+    const cx = targeted ? aimX : x, cz = targeted ? aimZ : z;
     mesh.position.set(cx, 0.07, cz);
     mesh.rotation.y = -Math.atan2(aimZ - z, aimX - x);
     this.scene.add(mesh);
@@ -64,6 +65,43 @@ export class Fx {
     const color = COLORS[s.id] ?? 0xffffff;
     const mat = (opacity: number) => new THREE.MeshBasicMaterial({ color, transparent: true, opacity, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending });
     switch (s.shape) {
+      case "ground":
+        this.burst(s, aimX, aimZ);
+        return true;
+      case "cone": {
+        const radius = s.radius ?? 6;
+        const spread = (s.angle_deg ?? 90) * Math.PI / 180;
+        const heading = Math.atan2(aimZ - z, aimX - x);
+        if (s.id === "splitshot_array") {
+          // A fan of five arrow streaks, bounded by the server's cone.
+          for (let i = 0; i < 5; i++) {
+            const angle = heading + spread * 0.8 * (i / 4 - 0.5);
+            const arrow = new THREE.Shape();
+            arrow.moveTo(0.8, -0.045);
+            arrow.lineTo(radius - 0.5, -0.045);
+            arrow.lineTo(radius - 0.5, -0.18);
+            arrow.lineTo(radius, 0);
+            arrow.lineTo(radius - 0.5, 0.18);
+            arrow.lineTo(radius - 0.5, 0.045);
+            arrow.lineTo(0.8, 0.045);
+            arrow.closePath();
+            const streak = new THREE.Mesh(new THREE.ShapeGeometry(arrow).rotateX(-Math.PI / 2), mat(0.95));
+            streak.position.set(x, 0.16, z);
+            streak.rotation.y = -angle;
+            this.add(streak, "flash", 280 + i * 15);
+          }
+        } else {
+          // Three tapered bands read as a blade sweep instead of a full AoE ring.
+          for (let i = 0; i < 3; i++) {
+            const outer = radius * (1 - i * 0.16);
+            const arc = new THREE.Mesh(new THREE.RingGeometry(outer - 0.12 - i * 0.04, outer, 32, 1, -spread / 2, spread).rotateX(-Math.PI / 2), mat(0.9));
+            arc.position.set(x, 0.12 + i * 0.025, z);
+            arc.rotation.y = -heading;
+            this.add(arc, "flash", 220 + i * 65);
+          }
+        }
+        return true;
+      }
       case "pull": {
         // Three rings closing on the point the horde is dragged to.
         for (let i = 0; i < 3; i++) {

@@ -1,0 +1,46 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Skill VFX runtime review</title>
+<style>
+body{margin:20px;background:#202b2c;color:#eee;font:16px system-ui}
+button,select{font:inherit;padding:8px;margin:6px}canvas{display:block}
+</style>
+<h1>Skill VFX runtime review</h1>
+<p>Uses the game's Fx renderer. Blue marker = caster, gold marker = aim. Geometry draft; painted effects are still pending.</p>
+<select id="skill"></select><button id="play">Replay cast → impact</button>
+<script type="module">
+import * as THREE from '/node_modules/three/build/three.module.js';
+import {Fx} from '/src/render/fx.ts';
+const skills=await(await fetch('/data/skills.json')).json();
+const select=document.querySelector('#skill');
+for(const s of skills)select.add(new Option(s.name,s.id));
+const scene=new THREE.Scene();scene.background=new THREE.Color('#26392f');
+const camera=new THREE.PerspectiveCamera(45,960/640,.1,100);
+camera.position.set(0,18,18);camera.lookAt(0,0,0);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setSize(960,640);
+document.body.append(renderer.domElement);
+scene.add(new THREE.GridHelper(30,30,0x65816b,0x3e5644));
+for(const [x,z,color] of [[-4,2,0x55aaff],[3,-2,0xffcc55]]){
+ const marker=new THREE.Mesh(new THREE.SphereGeometry(.18),new THREE.MeshBasicMaterial({color}));
+ marker.position.set(x,.3,z);scene.add(marker);
+}
+const fx=new Fx(scene);let age=0,impact=false,playing=false;
+function play(){fx.clear();age=0;impact=false;playing=true;const s=skills.find(s=>s.id===select.value);fx.telegraph(s,-4,2,3,-2,s.cast_ms);}
+document.querySelector('#play').onclick=play;select.onchange=play;
+let previous=performance.now();
+function tick(now){const dt=Math.min(50,now-previous);previous=now;fx.update(dt);
+ if(playing){age+=dt;const s=skills.find(s=>s.id===select.value);
+  if(!impact&&age>=s.cast_ms){impact=true;
+   if(s.shape==='mobility')fx.trail(-4,2,3,-2);
+   else if(!fx.shaped(s,-4,2,3,-2))fx.burst(s,-4,2);
+   if(s.ticks)fx.field(s,3,-2,s.ticks*s.tick_ms);
+  }
+ }renderer.render(scene,camera);requestAnimationFrame(tick);
+}
+window.__fxReview={fx,scene,renderer,camera,skills,play,show(id){
+ playing=false;fx.clear();const s=skills.find(s=>s.id===id);
+ if(!fx.shaped(s,-4,2,3,-2))fx.burst(s,-4,2);
+ renderer.render(scene,camera);
+}};
+play();requestAnimationFrame(tick);
+</script>
