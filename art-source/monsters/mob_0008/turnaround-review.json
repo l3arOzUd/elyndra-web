@@ -9,10 +9,11 @@
   ],
   "limitations": [
     "Lateral views still expose some frontal mouth and chest surface rather than strict orthographic profile",
-    "Tail is presented broadside in the rear view; its plane is inconsistent with the lateral fan tail",
+    "Original back.png has a broadside tail; back-v2.png corrects tail/dorsal projection and is selected for animation",
     "Dorsal fin bends and fin-ray patterns differ across views",
     "Four leg attachments need explicit layer design; rear far legs and profile far rear leg are obscured",
     "Register body landmarks and foot baseline before animation; file framing alone is insufficient"
   ],
-  "next": "Correct rear tail plane and lateral camera, then define four fin-leg attachment points and separate fin layers for a waddling gait."
+  "next": "Correct rear tail plane and lateral camera, then define four fin-leg attachment points and separate fin layers for a waddling gait.",
+  "selectedRearReference": "back-v2.png"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "authored-walk-draft-refinement-pending",
+  "source": "walk-back.png",
+  "reference": "back-v2.png",
+  "verified": [
+    "Rear tail and dorsal fin use narrow vertical projection.",
+    "Screen-left hind foot lifts in frame2, screen-right in frame5.",
+    "Browser contact sheet inspected; custom row split avoids clipping dorsal tips."
+  ],
+  "limitations": [
+    "Lifted finfeet curl more than front and side views; deformation needs review.",
+    "Body widths and scale patterns drift.",
+    "Ground contacts and full four-leg attachment continuity unverified.",
+    "Rear actions and idle remain missing; no runtime export."
+  ]
+}
