@@ -1,0 +1,20 @@
+{
+  "id": "mob_0093",
+  "name": "Riftling",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front master with rear/opposite-profile references.",
+  "confirmed": [
+    "Black canine body, violet edges, four visible paws and pointed ears retained.",
+    "Two white eyes front, one per profile, none rear.",
+    "Center body samples retain alpha252-253 rather than transparent holes; four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Interior alpha samples are near-opaque not255; full opaque-body mask still requires validation/refinement.",
+    "Violet edging and interior fur strokes too bright/thick versus Bible's thin-edged black silhouette, including original front.",
+    "Profiles remain slightly oblique; hind paw/hock placement and front leg overlaps differ.",
+    "Tail curvature effectively mirrors between profiles instead of consistent anatomical-left curl in depth.",
+    "Rear feet retain front-like toe contours; ear backs and stance need anatomy alignment.",
+    "Edge wisps and fur landmarks change; no separated body/limbs/outline layers or runtime clips yet."
+  ],
+  "next": "Lock canine proportions, four limb joints and tail curve; enforce opaque body and thin edge style. Separate head/ears/legs/tail/white eyes/edge effect for alert idle, grounded gait, lunge/bite, hit and jointed collapse with controlled outline flicker/dissolve."
+}
