@@ -16,6 +16,7 @@ const frontActions=new Image();frontActions.src='./actions-front.png';await fron
 const correctedFrontActions=new Image();correctedFrontActions.src='./actions-front-v2.png';await correctedFrontActions.decode();
 const backWalk=new Image();backWalk.src='./walk-back.png';await backWalk.decode();
 const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
+const correctedBackActions=new Image();correctedBackActions.src='./actions-back-v2.png';await correctedBackActions.decode();
 let clip='walk';
 const seq={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 for(const name of ['attack','hit','death']){seq[`${name}-front`]=seq[name];document.querySelector('#clip').add(new Option(`${name}-front`,`${name}-front`));}
@@ -33,8 +34,8 @@ function draw(ctx,f,x,y,s){
   ctx.drawImage(frontWalk,sx,Math.floor(f/3)*512,w,512,x-ax*s,y-bottom*s,w*s,512*s);return;
  }
  if(clip.endsWith('-back')){
-  const pose=seq[clip][f],bottom=[504,502,492,440,441,434][pose];
-  ctx.drawImage(backActions,pose%3*512,Math.floor(pose/3)*512,512,512,x-256*s,y-bottom*s,512*s,512*s);return;
+  const pose=seq[clip][f],bottom=[504,502,495,440,441,419][pose];
+  ctx.drawImage(pose===2||pose===5?correctedBackActions:backActions,pose%3*512,Math.floor(pose/3)*512,512,512,x-256*s,y-bottom*s,512*s,512*s);return;
  }
  if(clip.endsWith('-front')){
   const pose=seq[clip][f],sy=pose<3?0:530,h=pose<3?530:494;

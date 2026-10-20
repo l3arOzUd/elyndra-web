@@ -1,0 +1,4 @@
+{
+  "prompt": "Edit two specific anatomy issues in this exact six-pose Brookfin REAR sprite sheet,1536x1024. TOP RIGHT attack pose: shorten the screenLEFT stretched hindleg to match the short stubby right hindleg length, bend knee and plant its fanfoot directly below lefthip rather than far left. Keep four legs total, two frontfeet partly behind, no extra limbs. Preserve attacking body tilt and all otherfeatures. BOTTOM RIGHT death pose: bend the narrow central tail gently sideways at its base so its tip rests alongside belly ABOVE the same ground baseline as folded feet; must not point below belly like a spike penetratingfloor. Keep dorsalfin unchanged and bodyvolume. All otherposes unchanged, preserve sizes positions colors scalepatterns. Transparent alpha no floor shadow text.",
+  "reference": "actions-back.png"
+}

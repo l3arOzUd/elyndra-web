@@ -4,13 +4,15 @@
   "verified": [
     "All six silhouettes contained within source cells.",
     "Rear death lowers belly and folds feet; browser inspected.",
-    "Tail and dorsal fin retain narrow vertical planes."
+    "Tail and dorsal fin retain narrow vertical planes.",
+    "Attack screen-left hindleg shortened and bent under hip.",
+    "Death tail now bends sideways above foot baseline; browser inspected."
   ],
   "limitations": [
-    "Attack contact extends screen-left hind leg too far; shorten before acceptance.",
     "Attack asymmetry and body rotation exceed requested straight rear lunge.",
-    "Tail tip hangs below resting belly and needs ground contact adjustment.",
     "Scale pattern and finshape drift across poses.",
-    "Idle missing and runtime export pending."
-  ]
+    "Idle missing and runtime export pending.",
+    "Edited poses have stronger gold fin outlines; color continuity needs refinement."
+  ],
+  "selectedCorrections": "actions-back-v2.png poses2 and5 (zero based)"
 }
