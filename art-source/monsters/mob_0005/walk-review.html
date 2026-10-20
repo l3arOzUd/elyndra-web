@@ -75,6 +75,33 @@ function tick(now){
  document.querySelector('#label').textContent=String(frame+1);
  requestAnimationFrame(tick);
 }
-window.__cragletWalk={ready:true,boxes,actionBoxes,sequences};
+function exportDraft(){
+ const previous=clip,images={},sizes={};
+ const json={id:'craglet_2d',kind:'sheet',facingMode:'left-right',
+  frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W'],
+  animations:{
+   idle:{file:'idle.png',frames:1,fps:1,loop:true},
+   walk:{file:'walk.png',frames:6,fps:8,loop:true,refMsPerCell:260},
+   attack:{file:'attack.png',frames:6,fps:8,events:{hit:3}},
+   hit:{file:'hit.png',frames:6,fps:12},
+   death:{file:'death.png',frames:6,fps:8,hold:true}
+  }};
+ for(const [name,def]of Object.entries(json.animations)){
+  const canvas=document.createElement('canvas');canvas.width=384*def.frames;canvas.height=384;
+  const ctx=canvas.getContext('2d');
+  for(let f=0;f<def.frames;f++){
+   ctx.save();ctx.translate(f*384,0);
+   if(name==='idle'){
+    const b=deathBoxes[0],s=.3;
+    ctx.drawImage(deathImages[0],...b,192-b[2]*s/2,346-b[3]*s,b[2]*s,b[3]*s);
+   }else{clip=name;draw(ctx,sequences[name][f],192,346,.75);}
+   ctx.restore();
+  }
+  images[name]=canvas.toDataURL('image/png');sizes[name]={width:canvas.width,height:canvas.height};
+ }
+ clip=previous;
+ return {json,images,sizes};
+}
+window.__cragletWalk={ready:true,boxes,actionBoxes,sequences,exportDraft};
 requestAnimationFrame(tick);
 </script>

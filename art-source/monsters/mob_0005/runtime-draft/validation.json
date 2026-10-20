@@ -1,0 +1,164 @@
+{
+  "status": "technical-draft-only",
+  "runtimeBound": false,
+  "errors": [],
+  "formatProblems": [],
+  "frames": [
+    {
+      "clip": "idle",
+      "frame": 0,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "frame": 0,
+      "visible": 37204,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "frame": 1,
+      "visible": 36532,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "frame": 2,
+      "visible": 36955,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "frame": 3,
+      "visible": 37666,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "frame": 4,
+      "visible": 37562,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "frame": 5,
+      "visible": 37199,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "frame": 0,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "frame": 1,
+      "visible": 41725,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "frame": 2,
+      "visible": 41725,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "frame": 3,
+      "visible": 39745,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "frame": 4,
+      "visible": 39745,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "frame": 5,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "frame": 0,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "frame": 1,
+      "visible": 37532,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "frame": 2,
+      "visible": 37532,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "frame": 3,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "frame": 4,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "frame": 5,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "frame": 0,
+      "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "frame": 1,
+      "visible": 36550,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "frame": 2,
+      "visible": 33182,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "frame": 3,
+      "visible": 33182,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "frame": 4,
+      "visible": 32465,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "frame": 5,
+      "visible": 32465,
+      "edge": 0
+    }
+  ],
+  "limitations": [
+    "Idle is a static reference, not an authored idle animation.",
+    "Left-facing only; engine mirroring does not supply back/front artwork.",
+    "Walk color, body registration, foot trajectories and Bible belly gear remain unresolved.",
+    "Passing format and edge checks does not approve visual quality."
+  ]
+}
