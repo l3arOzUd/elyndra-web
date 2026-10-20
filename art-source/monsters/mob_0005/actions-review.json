@@ -2,19 +2,22 @@
   "id": "mob_0005",
   "status": "draft-actions-created-refinement-pending",
   "source": "actions-left.png",
+  "deathSources": ["left.png", "death-collapse.png", "death-final.png"],
   "preview": "walk-review.html",
   "verified": [
     "Browser canvas renders transparent exterior on light background with no brown background.",
     "Attack, hit and death preview selectors render without page errors.",
     "Death folds legs and lowers the belly rather than rotating the entire standing body backward; playback holds final frame.",
-    "Refined sheet keeps all six alpha bounds within their assigned cells."
+    "Refined sheet keeps all six alpha bounds within their assigned cells.",
+    "Death preview now uses separately authored collapse/final images from the original side master at a constant 0.4 scale. Domed armor and curled tail are preserved more closely than the rejected sheet death.",
+    "Browser review of replacement death reports no page errors and holds timeline frame 5."
   ],
   "limitations": [
-    "Death torso still loses apparent volume and tail length changes through collapse. Not approved as final anatomy.",
+    "Replacement death still needs intermediate timing poses: current three unique images make the initial drop abrupt. Armor plates and foot contacts drift slightly.",
     "Attack anticipation width differs from impact and jaw remains open at impact; needs a clear authored jaw-closing contact frame.",
     "Small brass belly gear remains absent; plate/crystal continuity and four-leg identity require refinement.",
-    "Three unique death poses plus neutral do not yet provide smooth fully authored timing.",
+    "Walk/attack sheet style is sharper and smaller-plated than the original side-master death set; reconcile style before runtime export.",
     "Only left-facing drafts; no runtime binding or complete directional animation coverage."
   ],
-  "next": "Correct volume and tail continuity in collapse frames, add jaw contact and missing gear detail, repair walk support order, then export and inspect runtime clips before replacing placeholder."
+  "next": "Add early collapse pose and reconcile body style across clips, add jaw contact and missing gear detail, repair walk support order, then export and inspect runtime clips before replacing placeholder."
 }
