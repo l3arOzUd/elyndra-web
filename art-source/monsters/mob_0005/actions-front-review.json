@@ -1,0 +1,22 @@
+{
+  "status": "draft-actions-created-refinement-pending",
+  "source": "actions-front-v2.png",
+  "rejectedLayout": "actions-front.png",
+  "layout": {"columns": 3, "rows": 2, "cell": [512, 512]},
+  "poses": ["neutral", "bite-windup", "bite-contact", "hit-recoil", "death-buckle", "death-rest"],
+  "preview": "walk-review.html: attack-front, hit-front, death-front",
+  "registration": "Constant scale; each cell translated vertically using alpha>32 bottom. Not normalized to equal height.",
+  "verified": [
+    "Second layout keeps alpha>32 content within all six cell boundaries.",
+    "Attack opens jaw then closes it; hit closes both eyes.",
+    "Death lowers chin and folds legs while retaining the armored dome."
+  ],
+  "limitations": [
+    "Only 2px right margin in neutral cell; below requested 30px.",
+    "Windup reads mostly as jaw opening; body anticipation is weak.",
+    "Plate shapes, head proportions and crystal arrangement drift.",
+    "Death has three authored poses, so intermediate motion remains abrupt.",
+    "Belly gear becomes occluded by head in final rest pose.",
+    "Not yet integrated into public runtime sheets or monster binding."
+  ]
+}

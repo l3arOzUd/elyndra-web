@@ -1,0 +1,4 @@
+{
+  "prompt": "Correct layout of this six pose sprite sheet, retain all six exact poses and design. 1536x1024 canvas, strict3columns2rows, each cell512square. CRITICAL each entire creature including tail and all claws must fit INSIDE its own cell with minimum30px empty transparent border on all four sides. Scale every creature uniformly down to85percent of its current size, centered in its cell, SAME scale across six cells. No body part may cross x512,x1024,y512. Preserve full slate-armored bodies, amber eyes, quartz, tiny belly brass gear, attack open jaw, hit closed eyes and lowered death body. TRUE transparent background, remove brown backdrop completely, no shadows no text no grid. Do not redesign anatomy. Do not enlarge death pose to fill its cell.",
+  "reference": "actions-front.png"
+}
