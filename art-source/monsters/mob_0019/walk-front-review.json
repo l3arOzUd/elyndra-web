@@ -16,5 +16,13 @@
     "Mirror highlights and chest details vary; rigid halo continuity not approved.",
     "Front-only study; side/rear locomotion, action clips and runtime export missing."
   ],
-  "publicBinding": false
+  "publicBinding": false,
+  "rejectedVariants": [
+    {
+      "source": "walk-front-v2.png",
+      "reason": "Contact cells 0 and 2 both lead with screen-left leg; toe-ground contact still unclear. Margins increase only slightly. Do not select as walk source.",
+      "preview": "Source dropdown allows explicit comparison; original remains default.",
+      "next": "Author isolated contact A/B with explicit planted heel/toe positions, then passing poses."
+    }
+  ]
 }
