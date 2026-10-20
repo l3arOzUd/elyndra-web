@@ -1,0 +1,20 @@
+{
+  "id": "mob_0065",
+  "name": "Thunderhull Turtle",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front porthole identity, rear shell and opposite profile.",
+  "confirmed": [
+    "Copper riveted hull shell, grey skin, amber eyes and barnacles retained.",
+    "One porthole remains on anatomical right-front shell, absent from left and rear.",
+    "Four legs and short rear tail; no duplicate rear face.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Rear feet retain front-facing claws; heel and leg orientation incorrect.",
+    "Side cameras oblique, feet stance and head extension differ.",
+    "Porthole size and broken-glass pattern vary from front.",
+    "Shell plate seams/rivets and barnacle clusters differ; stable shell landmark map needed.",
+    "Tail and feet near frame edges; no separated limbs/shell or runtime clips yet."
+  ],
+  "next": "Correct rear feet and profile pose, lock shell seams and porthole anchor, then articulate four leg chains/head/tail for idle/walk/bite/hit/collapse with storm discharge VFX."
+}
