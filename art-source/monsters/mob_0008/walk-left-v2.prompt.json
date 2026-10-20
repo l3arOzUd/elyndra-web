@@ -1,0 +1,4 @@
+{
+  "prompt": "Correct ONLY walking feet in TOP MIDDLE frame of this exact six-frame Brookfin fish sprite sheet. Near FRONT leg is the large foreground leg below the side fin, currently planted near cell center. Lift THAT foreground front finfoot off ground, flex short leg, swing foot slightly left, visible gap beneath. Plant the currently lifted far front finfoot at left under chin on ground. Keep near rear finfoot planted at right under rump; show a small separate far rear finfoot behind it to establish four feet total. No extra limb or frog toes. Preserve every other pixel as much as possible: body size position face scales fins tail and all five other frames unchanged. Same1536x1024 layout. Actual transparent alpha background no floor shadow text.",
+  "reference": "walk-left.png"
+}

@@ -4,14 +4,19 @@
   "confirmed": [
     "Blue-green scaled fish, cream belly and translucent fin identity retained.",
     "Frame 4 lifts the near rear fin-foot.",
-    "All six cells contain the complete silhouette within the requested grid."
+    "All six cells contain the complete silhouette within the requested grid.",
+    "Frame 2 foreground front fin-foot now lifts; browser image inspected."
   ],
   "limitations": [
-    "Frame 2 lifts far front foot instead of requested near front foot.",
     "Only three foot silhouettes are clear; four attachments remain unverified.",
     "Frame 3 changes front leg position and belly support.",
     "Fin-ray patterns and scale details drift.",
     "Camera remains slightly three-quarter rather than strict profile.",
-    "No runtime export or gameplay binding."
-  ]
+    "No runtime export or gameplay binding.",
+    "Corrected far rear fin-foot is visible but its ground contact is unclear."
+  ],
+  "selectedFrames": {
+    "frame2": "walk-left-v2.png top middle",
+    "others": "walk-left.png"
+  }
 }

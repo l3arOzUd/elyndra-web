@@ -3,15 +3,16 @@
 <title>Brookfin walk draft</title>
 <style>body{margin:24px;background:#263037;color:#eee;font:16px system-ui}canvas{background:#697a80;max-width:100%;display:block;margin:12px 0}button,input{margin:8px}</style>
 <h1>Brookfin - fin-foot walk draft</h1>
-<p>Inspect four limb attachments and near/far foot order. Frame 2 lifts the far front foot, not the requested near foot. Not approved or bound to gameplay.</p>
+<p>Inspect four limb attachments and near/far foot order. Frame 2 now lifts the near front foot; far rear support and attachment continuity still need review. Not approved or bound to gameplay.</p>
 <button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label>
 <canvas id="motion" width="600" height="520"></canvas>
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
 const image=new Image();image.src='./walk-left.png';await image.decode();
-const bottoms=[487,495,495,480,480,483];
+const corrected=new Image();corrected.src='./walk-left-v2.png';await corrected.decode();
+const bottoms=[487,487,495,480,480,483];
 function draw(ctx,f,x,y,s){
- ctx.drawImage(image,f%3*512,Math.floor(f/3)*512,512,512,x-256*s,y-bottoms[f]*s,512*s,512*s);
+ ctx.drawImage(f===1?corrected:image,f%3*512,Math.floor(f/3)*512,512,512,x-256*s,y-bottoms[f]*s,512*s,512*s);
 }
 const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
 for(let i=0;i<6;i++){draw(cg,i,i%3*400+200,Math.floor(i/3)*400+370,.7);cg.fillStyle='#fff';cg.fillText(`Frame ${i+1}`,i%3*400+12,Math.floor(i/3)*400+20);}
