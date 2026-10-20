@@ -1,5 +1,5 @@
 {
-  "status": "combined-preview-unapproved",
+  "status": "runtime-draft-unapproved",
   "preview": "combined-review.html",
   "views": [
     "left",
@@ -8,7 +8,7 @@
     "right-mirrored-left"
   ],
   "clips": [
-    "idle-front-and-side",
+    "idle",
     "walk",
     "attack",
     "hit",
@@ -17,17 +17,18 @@
   "verified": [
     "All20 view/clip selections rendered without browser page errors.",
     "Contact sheet compares idle, opposite walk contacts and death in three authored views.",
-    "Uniform image scaling only; no limb stretching."
+    "Uniform image scaling only; no limb stretching.",
+    "Exported five sprite sheets,140 timing cells; format/nonempty/boundary checks passed."
   ],
   "limitations": [
-    "Front/side idle use two antenna poses across six timing frames; rear remains static.",
+    "Two idle drawings per view across six timing frames; needs smoother transition.",
     "Front walk support and swing trajectories unresolved.",
     "Rear swing trajectories and outer support plane unresolved.",
     "Side core/reflection changes and support drift remain.",
     "Rear strike rises upward rather than a strong forward attack.",
     "Some death limbs hidden; six-leg continuity unverified.",
     "Front/back camera and shell volume differ from side.",
-    "No runtime export or gameplay binding."
+    "Runtime draft exported but not gameplay bound or visually approved."
   ],
-  "next": "Finish idle motion, inspect final registration and runtime draft behavior; retain art issues as unresolved."
+  "next": "Test exported sheets in actual SpriteActor/Animator and continue art refinement."
 }

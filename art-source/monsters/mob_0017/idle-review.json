@@ -1,5 +1,5 @@
 {
-  "status": "front-and-side-idle-draft",
+  "status": "three-view-idle-draft",
   "selected": {
     "file": "idle-left-twitch-v2.png",
     "cell": 0
@@ -20,14 +20,15 @@
     "Both antennae retained in selected alternate.",
     "Browser paired preview clean alpha and nearly fixed body footprint.",
     "Side and mirrored right use alternate; no squash or stretch.",
-    "Front alternate preserves two drooped antennae and fixed body framing; browser alpha clean."
+    "Front alternate preserves two drooped antennae and fixed body framing; browser alpha clean.",
+    "Rear alternate contracts abdomen plates while feet remain registered; browser alpha clean."
   ],
   "limitations": [
     "Twitch subtle at game size.",
     "Shell/core texture changes slightly despite requested fixed body.",
-    "Rear idle remains static; antennae hidden from this view.",
+    "Two authored idle poses per view; transition remains abrupt and core texture drifts.",
     "Idle uses raised-leg source pose; resting support still unfinished.",
-    "No runtime export or gameplay binding.",
+    "Runtime draft exported; no gameplay binding.",
     "Front antenna movement larger than intended tiny twitch; abrupt two-pose transition remains."
   ],
   "front": {
@@ -35,5 +36,9 @@
     "cell": 0,
     "rejected": "idle-front-twitch.png",
     "reason": "Initial edit had visible orange alpha haze; v2 browser composite clean."
+  },
+  "back": {
+    "selected": "idle-back-contract.png",
+    "cell": 0
   }
 }
