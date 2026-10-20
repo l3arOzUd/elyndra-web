@@ -1,0 +1,17 @@
+{
+  "status": "walking-draft-refinement-pending",
+  "source": "walk-back.png",
+  "verified": [
+    "Four rear walking keyframes generated from rear reference.",
+    "Browser inspection confirms rear intermeshed gears with no duplicate jade lens.",
+    "No neighboring sprite fragments visible with split x635 y650.",
+    "Nearest left and right legs alternate flexion."
+  ],
+  "limitations": [
+    "Far-leg chains overlap and remain difficult to trace; eight-leg topology is not approved.",
+    "Side outer vines touch source edges; margin repair remains.",
+    "Ground-contact timing, rigid segment consistency and surface drift remain.",
+    "Not exported or bound to gameplay."
+  ],
+  "next": "Author combat and collapse poses, then refine registration and contacts across clips."
+}
