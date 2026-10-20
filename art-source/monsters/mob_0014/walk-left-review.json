@@ -1,0 +1,17 @@
+{
+  "status": "walking-study-refinement-required",
+  "selectedSource": "walk-left-v2.png",
+  "verified": [
+    "Four different leg poses generated from left reference.",
+    "Joint bending is painted; playback does not stretch individual limbs."
+  ],
+  "limitations": [
+    "Initial sheet overlaps cell boundary; retained as rejected source.",
+    "V2 improves far-leg opacity but remains tightly packed and touches right image edge.",
+    "Eight full leg chains are not independently traceable.",
+    "Lower-row shell sits lower; body registration and support contacts need refinement.",
+    "V2 brass and leaves are more saturated than original reference.",
+    "Not exported or bound to game."
+  ],
+  "next": "Create isolated keyframes with complete feet and establish eight-leg support sequence."
+}
