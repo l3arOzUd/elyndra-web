@@ -1,0 +1,24 @@
+{
+  "status": "front-action-draft",
+  "sheet": "actions-front.png",
+  "finalDeath": "death-front-final-v2.png",
+  "preview": "actions-review.html",
+  "verified": [
+    "Windup and strike use character right arm on screen left.",
+    "Browser shows transparent exterior in selected frames.",
+    "Final isolated death has two fists, two rounded knee plates and torso folded over forearms.",
+    "Final hood hides eye and chest; no rigid backward fall.",
+    "Crop bounds exclude adjacent pose fragments."
+  ],
+  "rejected": [
+    "Sheet final death has ambiguous extra fist-like shapes at sides.",
+    "death-front-final.png remains too upright, so v2 is selected."
+  ],
+  "limitations": [
+    "Final death outer knee plates touch image edges and need additional source margin.",
+    "Final death design and scale differ from kneeling sheet pose.",
+    "Hit includes painted debris not present in side view.",
+    "Attack and death lack intermediate motion drawings.",
+    "Rear actions, idle movement and runtime binding still pending."
+  ]
+}
