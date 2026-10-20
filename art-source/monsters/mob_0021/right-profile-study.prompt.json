@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "right.png",
+    "left-profile-study.png"
+  ],
+  "prompt": "Create a RIGHT-FACING anatomical LEFT-flank profile of this exact Coral Claw crab. First image is old right-facing reference, second is new left-facing view for identity, not for mirroring. Camera exactly perpendicular to flank at eye level with slight game-sprite elevation, not frontal three-quarter. Head points screen RIGHT. SMALL anatomical LEFT claw is NEAR camera in front of shell; HUGE anatomical RIGHT claw is FAR side, behind near claw and partly occluded by head/shell, never near-side. Do not mirror second image. Four near-side walking legs attach sequentially under lateral shell, each a separate rigid bent upper/lower segment chain with pointed foot; four far-side walking legs behind shell, naturally staggered tips where visible. Exactly eight walking legs plus two claw arms. Same squat full-volume wet teal cream gold shell and pink/orange coral crown, preserve branch landmarks as physical opposite view. Near small claw relaxed nearly closed, both claws forward of legs. One dominant eyestalk, far eye occluded. Grounded neutral standing, all body parts within broad clear margins. Genuine transparent background, no colored haze, floor, shadow, labels or text. ONE full crab only, match hand-painted fantasy detail."
+}
