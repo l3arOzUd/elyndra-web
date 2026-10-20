@@ -1,0 +1,4 @@
+{
+  "prompt": "Clean up this exact six-frame moth animation sheet. Keep all six poses, body sizes and wing markings. Repack into a STRICT 3-column 2-row grid on1536x1024, each frame512x512, each creature fully contained with24px clear transparent margin. Uniformly reduce ALL six creatures by the SAME factor if necessary, do not normalize individual pose heights. Body thorax aligned at local(256,280) in everycell. No wings or stray fragments from neighboring frames. Preserve clear raised and lowered wing poses, six legs tucked close to torso. Actual transparent alpha, no background glow shadow text or grid.",
+  "reference": "flight-front.png"
+}

@@ -1,6 +1,6 @@
 {
   "status": "authored-flight-draft-review-pending",
-  "source": "flight-front.png",
+  "source": "flight-front-v2.png",
   "confirmed": [
     "Six distinct wing poses include raised, spread and lowered wings.",
     "Sandy wing palette, brass eyespots and cream body retained.",
@@ -14,7 +14,7 @@
     "Flight loop needs intermediate poses and timing refinement.",
     "Other views and attack, hit and death animation remain missing.",
     "Not bound to gameplay.",
-    "Contact-sheet frame 6 shows a small neighboring-wing fragment near its left edge; isolate that source pose before runtime export."
+    "V2 crop moved to the gap at x1060; all frames still need final runtime export edge checks."
   ],
   "browserReview": "flight-review.html loaded and contact sheet inspected; draft not approved for export."
 }

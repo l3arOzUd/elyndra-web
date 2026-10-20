@@ -1,0 +1,17 @@
+{
+  "status": "draft-refinement-pending",
+  "source": "actions-front.png",
+  "confirmed": [
+    "Dive attack reaches with front limbs.",
+    "Death rests belly on ground with folded wings; no backward body rotation.",
+    "Browser preview loads and holds final death pose."
+  ],
+  "limitations": [
+    "Final death turns slightly toward three-quarter view.",
+    "Six-leg attachment continuity not verified.",
+    "Face, antennae and wing pattern drift.",
+    "Only three authored death stages; in-betweens missing.",
+    "Sheet grid ignored; custom crop registration used.",
+    "Not bound to gameplay."
+  ]
+}
