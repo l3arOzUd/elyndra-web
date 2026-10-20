@@ -4399,19 +4399,31 @@
           "status": "master-created"
         },
         "back": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0081/back.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "left": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0081/left.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "right": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0081/right.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         }
       },
       "sprite": null,
@@ -7821,6 +7833,78 @@
     {
       "id": "itm_1338",
       "name": "Grand Echo of Spite",
+      "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1339",
+      "name": "Stormcaller Rod",
+      "slot": "weapon",
+      "visual": "aether_rod",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1340",
+      "name": "Wildwood Longbow",
+      "slot": "weapon",
+      "visual": "surveyor_bow",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1341",
+      "name": "Gearheart Gauntlet",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1342",
+      "name": "Executioner's Edge",
+      "slot": "weapon",
+      "visual": "copper_saber",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1343",
+      "name": "Bastion Plate",
+      "slot": "armor",
+      "visual": "leafweave_coat",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1344",
+      "name": "Windrunner Boots",
+      "slot": "boots",
+      "visual": "traveler_boots",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1345",
+      "name": "Frostwake Circlet",
+      "slot": "head",
+      "visual": "aether_circlet",
+      "generatedAlias": true,
+      "status": "shared-look-needs-distinct-design"
+    },
+    {
+      "id": "itm_1346",
+      "name": "Heart of Embers",
+      "slot": "accessory",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1347",
+      "name": "Echo Stone",
       "slot": "charm",
       "visual": null,
       "generatedAlias": false,

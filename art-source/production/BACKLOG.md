@@ -1,7 +1,7 @@
 # Art production backlog
 
 Monsters: 94; front masters created: 94; existing front references needing review: 0; missing front references: 0.
-Equipment definitions: 343; shared generated looks: 222. Skills needing authored VFX review: 13.
+Equipment definitions: 352; shared generated looks: 229. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
 
@@ -86,7 +86,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0078 | Cryo Lancer | master-created | master-created | master-created | master-created | placeholder |
 | mob_0079 | Cryocore Curator | master-created | master-created | master-created | master-created | placeholder |
 | mob_0080 | Slagback Toad | master-created | master-created | master-created | master-created | placeholder |
-| mob_0081 | Crucible Tender | master-created | missing | missing | missing | placeholder |
+| mob_0081 | Crucible Tender | master-created | master-created | master-created | master-created | placeholder |
 | mob_0082 | Vent Skink | master-created | missing | missing | missing | placeholder |
 | mob_0083 | Magma Spitter | master-created | missing | missing | missing | placeholder |
 | mob_0084 | Rivet Scrapling | master-created | missing | missing | missing | placeholder |

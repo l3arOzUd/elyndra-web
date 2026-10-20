@@ -1,0 +1,21 @@
+{
+  "id": "mob_0081",
+  "name": "Crucible Tender",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation; left flank hatch corrected in a second pass, failed draft retained.",
+  "confirmed": [
+    "Four walking feet and two distinct upper tools visible in each view.",
+    "Right welding torch and left slag scoop retained; near tool switches between profiles.",
+    "Rear has opaque service hatch rather than duplicate glowing lens; corrected profiles place lens and hatch at opposing ends.",
+    "Four files pass alpha, nonempty and edge checks."
+  ],
+  "limitations": [
+    "Tool arms still swing fore/aft in profiles instead of maintaining the front stance rotated in depth; joint anchors need reconciliation.",
+    "Profiles show top surfaces and are not strict eye-level orthographic elevations.",
+    "Rear leg plating and toes repeat front-oriented construction; heel direction needs correction.",
+    "Side vent housing, pipe paths, leg plate widths and chassis proportions drift across views.",
+    "Welding glow is baked into reference; needs a separate animated layer.",
+    "No separated parts or runtime animation clips yet."
+  ],
+  "next": "Lock six limb roots and rigid link lengths across views, align tool poses and foot directions, then separate chassis/four legs/two tool arms/cable/torch effect for idle, walk, welding attack, scoop attack, hit and mechanical collapse."
+}

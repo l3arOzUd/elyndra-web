@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Crucible Tender RIGHT SIDE orthographic eye-level facing imageRIGHT. References image1 front master image2 corrected left side construction. SAME four-legged brass machine rotated to opposite side, NOT simple mirror because tools differ. Anatomical RIGHT welding torch arm is NEAR viewer with black cable and tiny bluewhite electrode; anatomical LEFT slag scoop arm FAR behind. Orange front glass lens at RIGHT outline edge-on, rear hatch LEFT edge-on. Visible right flank small horizontal cylindrical brass vent housing, no large round hatch or frontal lens on flank. Exactly FOUR articulated legs/two upper tool arms, four feet. Maintain original neutral spread tool pose rotated in depth, not redesign arms forward/backward. Detailed handpainted fantasy soot brass same scale proportions hardware. Full tools and feet within transparent square with generous margins. No ground shadow text smoke sparks.",
+  "references": [
+    "front.png",
+    "left.png"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Crucible Tender LEFT SIDE orthographic eye-level character turnaround. Image1 front identity master, image2 rear construction reference. Rotate same machine exactly90degrees to face imageLEFT: orange front lens on LEFT edge seen edge-on, opaque rear hatch RIGHT. Exactly FOUR walking legs plus TWO upper tool arms. Anatomical LEFT slag scoop arm NEAR camera; anatomical RIGHT welding torch arm FAR camera with black cable and tiny bluewhite electrode. Preserve same neutral pose, body proportions, elevated tool arm joints, foot stance and hardware. Show scoop in side profile, not broad frontal bowl. Two near legs and two farther legs, no added legs. Front and rear distinct. Full body and all tools centered with generous10percent margins square transparent background. Hand-painted stylized fantasy brass and soot robot same style. No ground shadow text sparks smoke.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "view": "left",
+  "prompt": "Create strict LEFT orthographic elevation of reference brass four-legged robot, facing LEFT. Image1 original FRONT, image2 BACK. Not three-quarter. Front orange lens only at far LEFT outline EDGE ON, rear service hatch only at far RIGHT outline EDGE ON. Center of visible left side is small horizontal cylindrical vent housing from image1 side, NOT a large round hatch. The two raised tool arms originally extend sideways: in side view they overlap in depth, NOT one pointing forward and other backward. Near LEFT arm has slag scoop, far RIGHT arm welding torch with cable peeking behind. Same neutral pose rotated90degrees, compact compressed arm silhouette. Exactly four walking legs, two near two partially occluded far legs. All four feet grounded. No new hardware. Same proportions/brass paint. Full asset square transparent background generous margins, no shadow text or ground.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}
