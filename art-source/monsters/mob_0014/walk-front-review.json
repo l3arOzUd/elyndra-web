@@ -1,0 +1,16 @@
+{
+  "status": "walking-draft-refinement-pending",
+  "source": "walk-front.png",
+  "verified": [
+    "Four distinct front walking drawings with alternating front-leg flexion.",
+    "Browser grey-background inspection confirms transparent exterior; generated preview background was hidden RGB.",
+    "Cropped with horizontal split y537 and fixed scale; feet and leaf crowns visible."
+  ],
+  "limitations": [
+    "Far limbs overlap and appear weak; all eight complete chains remain unproven.",
+    "Ground support and metal segment lengths vary between poses.",
+    "Front palette is less saturated than isolated side images.",
+    "Not exported or bound to gameplay."
+  ],
+  "next": "Build rear movement and combat poses while retaining anatomy refinement requirements."
+}

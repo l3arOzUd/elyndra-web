@@ -2,15 +2,16 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;display:block;margin:16px 0}</style>
 <h1>Vinecrawler — left walking study</h1>
 <p>Four authored keyframes. Eight-leg attachment continuity, opaque far limbs and foot contacts require visual review. Not bound to gameplay.</p>
-<label><input id="isolated" type="checkbox" checked> Isolated four-pose study (passing B foot repaired; gait anatomy still under review)</label><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="3" value="0">
+<select id="view"><option value="left">Left</option><option value="front">Front draft</option></select><label><input id="isolated" type="checkbox" checked> Isolated four-pose study (passing B foot repaired; gait anatomy still under review)</label><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="3" value="0">
 <canvas id="motion" width="600" height="600"></canvas><canvas id="contact" width="1200" height="1200"></canvas>
 <script type="module">
 const im=new Image();im.src='./walk-left-v2.png';await im.decode();
 const poses=await Promise.all(['contact-a','pass-a','contact-b','pass-b-v2'].map(async key=>{const image=new Image();image.src=`./walk-left-${key}.png`;await image.decode();return image;}));
+const front=new Image();front.src='./walk-front.png';await front.decode();
 const w=im.width/2,h=im.height/2;
-function draw(ctx,f,x,y,scale){if(document.querySelector('#isolated').checked){const image=poses[f];ctx.drawImage(image,x-627*scale*.49,y-1190*scale*.49,image.width*scale*.49,image.height*scale*.49);return;}const sx=f%2?644:0,sw=f%2?im.width-644:644;ctx.drawImage(im,sx,Math.floor(f/2)*h,sw,h,x-(f%2?300:330)*scale,y-h*scale,sw*scale,h*scale);}
+function draw(ctx,f,x,y,scale){if(document.querySelector('#view').value==='front'){const sy=f<2?0:537,sh=f<2?537:487;ctx.drawImage(front,f%2*768,sy,768,sh,x-384*.72,y-(f<2?533:466)*.72,768*.72,sh*.72);return;}if(document.querySelector('#isolated').checked){const image=poses[f];ctx.drawImage(image,x-627*scale*.49,y-1190*scale*.49,image.width*scale*.49,image.height*scale*.49);return;}const sx=f%2?644:0,sw=f%2?im.width-644:644;ctx.drawImage(im,sx,Math.floor(f/2)*h,sw,h,x-(f%2?300:330)*scale,y-h*scale,sw*scale,h*scale);}
 const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d'),scale=560/Math.max(w,h);
-function contact(){cg.clearRect(0,0,1200,1200);for(let f=0;f<4;f++)draw(cg,f,f%2*600+300,Math.floor(f/2)*600+580,scale);}contact();document.querySelector('#isolated').onchange=contact;
+function contact(){cg.clearRect(0,0,1200,1200);for(let f=0;f<4;f++)draw(cg,f,f%2*600+300,Math.floor(f/2)*600+580,scale);}contact();document.querySelector('#isolated').onchange=contact;document.querySelector('#view').onchange=contact;
 let frame=0,paused=false,last=0;
 document.querySelector('#pause').onclick=()=>paused=!paused;
 document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;};
