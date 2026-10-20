@@ -1,0 +1,4 @@
+{
+  "prompt": "Rebuild this Sapdrone flight sheet with much smaller creatures and wide empty gutters. Exact1536x1024,3columns2rows of512. Each creature TOTAL bounding box including wings needle legs MUST fit x64..448 y64..448 within its cell. Shell itself only140px wide, same scale and center(256,270) in EVERY cell. Do not fill cells. Preserve exact brass beetle jade sap tank long needle facing left. FOUR glass wings at two pairs dorsal hinges, six folded insect legs. Six wingbeat phases high upstroke,mid descending,low downstroke angled backward/down,low recovery,mid ascending,high recovery. Wings rigid rotate at roots, no duplication. Entire needle tip and all wing tips isolated without crossing cell boundaries. Keep body position fixed and no scale changes. Clean transparent alpha no haze background shadow borders or text. Handpainted fantasy MMORPG reference style. Priority spacious framing and distinct articulated wings.",
+  "reference": "flight-left.png"
+}

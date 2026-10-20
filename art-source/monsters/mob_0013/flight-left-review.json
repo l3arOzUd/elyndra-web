@@ -1,17 +1,19 @@
 {
-  "status": "source-draft-repair-required",
+  "status": "flight-draft-refinement-pending",
   "source": "flight-left.png",
   "verified": [
     "Brass shell jade tank needle and left-facing identity retained.",
-    "Wing angles change across poses."
+    "Wing angles change across poses.",
+    "V3 switches to four isolated poses and contains a visibly lowered wing phase.",
+    "V3 actual image dimensions1254square; preview uses measured two-row layout."
   ],
   "limitations": [
-    "Needle and wing extremities cross nominal512px cell boundaries.",
-    "Bottom-left wing overlaps neighboring cell; bottom-right wings cross row boundary.",
-    "Four wing roots and six leg chains not consistently readable.",
-    "Downstroke stays mostly above shell and needs fuller travel.",
-    "Shell position shifts between rows; registration pending.",
+    "Four wing roots and six leg chains remain ambiguous through overlap.",
+    "Shell center and size drift across poses; initial row registration is approximate.",
+    "Wing ribs and sap highlights drift.",
+    "V1 and V2 sixpose drafts retained but not used due cell overlaps.",
     "No runtime export or gameplay binding."
   ],
-  "next": "Regenerate with smaller fixed shell scale and larger margins; resolve four distinct wing roots and six leg chains."
+  "next": "Inspect animated V3 in browser, refine wing roots and shell registration, then author front/rear flight.",
+  "selectedSource": "flight-left-v3.png"
 }
