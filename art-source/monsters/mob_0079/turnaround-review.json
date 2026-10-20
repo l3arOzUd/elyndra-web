@@ -1,0 +1,21 @@
+{
+  "id": "mob_0079",
+  "name": "Cryocore Curator",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front archive construct, rear supports and opposite profile.",
+  "confirmed": [
+    "Crystal shelving, cyan core, brass arms, frost crown and pedestal retained.",
+    "Rear columns closed with support plumbing rather than duplicated open shelves.",
+    "Four floating slates visible front/back/left; right has three distinguishable with fourth hidden or omitted.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Profiles remain oblique, shelf openings and crown ornaments face viewer too broadly.",
+    "Right fourth slate unverified; fixed orbit positions and orientation not preserved.",
+    "Rear hands still front-like and arm rotation inconsistent; profiles change arm spacing.",
+    "Shelf contents/count, crown crystals, pipe routes and pedestal details drift.",
+    "Core visibility inconsistent with column occlusion; architectural depth needs fixed plan.",
+    "No separate orbiting slate layers, articulated arms or runtime animation clips yet."
+  ],
+  "next": "Fix shelf/core depth and arm poses, establish four numbered slate orbit anchors, separate pedestal/columns/core/crown/arms/slates for hover/travel/archive cast/hit/shutdown plus cryocore VFX."
+}
