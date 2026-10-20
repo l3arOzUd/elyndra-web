@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Thornback walk draft</title>
+<style>body{margin:24px;background:#263037;color:#eee;font:16px system-ui}canvas{background:#e6e6e6;max-width:100%}button,input{margin:10px;padding:8px}</style>
+<h1>Thornback — walk draft</h1>
+<p>Six painted poses. Review near/far leg order, hoof contact and loop continuity. Not bound to gameplay; short margins and surface drift remain.</p>
+<button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label><span id="label"></span><br>
+<canvas id="motion" width="600" height="420"></canvas>
+<canvas id="contact" width="1200" height="680"></canvas>
+<script type="module">
+const image=new Image();image.src='./walk-left.png';await image.decode();
+const bottoms=[473,473,473,437,438,440];
+const motion=document.querySelector('#motion'),g=motion.getContext('2d');
+const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
+function draw(ctx,i,x,y,scale){
+ ctx.drawImage(image,i%3*512,Math.floor(i/3)*512,512,512,x-256*scale,y-bottoms[i]*scale,512*scale,512*scale);
+}
+for(let i=0;i<6;i++){
+ const x=i%3*400,y=Math.floor(i/3)*340;
+ draw(cg,i,x+200,y+310,.73);
+ cg.fillStyle='#222';cg.fillText(`Frame ${i+1}`,x+12,y+20);
+}
+let frame=0,paused=false,last=0;
+document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelector('#pause').textContent=paused?'Play':'Pause';};
+document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;document.querySelector('#pause').textContent='Play';};
+function tick(now){
+ if(!paused&&now-last>150){frame=(frame+1)%6;last=now;}
+ g.clearRect(0,0,600,420);g.strokeStyle='#888';g.beginPath();g.moveTo(0,390);g.lineTo(600,390);g.stroke();
+ draw(g,frame,300,390,.9);
+ document.querySelector('#frame').value=String(frame);document.querySelector('#label').textContent=String(frame+1);
+ requestAnimationFrame(tick);
+}
+window.__thornbackWalk={ready:true,bottoms};requestAnimationFrame(tick);
+</script>

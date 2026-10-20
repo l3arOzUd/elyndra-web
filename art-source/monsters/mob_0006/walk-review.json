@@ -1,0 +1,18 @@
+{
+  "status": "draft-motion-created-refinement-pending",
+  "source": "walk-left.png",
+  "layout": {"columns": 3, "rows": 2, "cell": [512, 512]},
+  "registration": "Constant scale with measured foot-baseline translations; no limb stretching.",
+  "verified": [
+    "Bark boar design, woody back thorns and moss tusks retained.",
+    "Frames4-5 show near forehoof lifting and reaching forward.",
+    "Four hoof silhouettes remain visible in the generated sheet."
+  ],
+  "limitations": [
+    "Frame2 appears to lift the far hindleg instead of the requested near hindleg.",
+    "Near/far gait phase and planted-foot travel need correction.",
+    "Some noses approach or touch cell boundaries.",
+    "Surface details and torso scale drift between poses.",
+    "No other actions or directional animation yet; not bound to gameplay."
+  ]
+}
