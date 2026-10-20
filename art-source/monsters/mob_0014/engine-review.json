@@ -1,0 +1,16 @@
+{
+  "status": "engine-draft-not-publicly-bound",
+  "verified": [
+    "All five sheets load through SpriteActor and Animator.",
+    "W E S N attack emits hit at 375ms without sprite format problems.",
+    "Rear final death inspected in engine: low folded body with transparent exterior.",
+    "140 exported cells nonempty and no alpha touching canvas edges."
+  ],
+  "limitations": [
+    "Only three authored views; right mirrored, diagonals aliases.",
+    "Eight-leg anatomy and attack leg identity unresolved.",
+    "Idle color popping and cross-clip position/scale need refinement.",
+    "Not tested in live server combat.",
+    "Technical playback does not establish production visual acceptance."
+  ]
+}

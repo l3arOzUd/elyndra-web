@@ -17,5 +17,5 @@ let frame=0,paused=false,last=0;
 document.querySelector('#pause').onclick=()=>paused=!paused;
 document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;};
 function tick(t){if(!paused&&t-last>180){frame=(frame+1)%4;last=t;}ctx.clearRect(0,0,600,600);draw(ctx,frame,300,580,scale);document.querySelector('#frame').value=frame;requestAnimationFrame(tick);}
-window.__vinecrawlerWalk={ready:true};requestAnimationFrame(tick);
+window.__vinecrawlerWalk={ready:true,draw(ctx,frame,x,y,s,view){const select=document.querySelector('#view'),old=select.value;select.value=view;ctx.save();ctx.translate(x,y);ctx.scale(s,s);draw(ctx,frame,0,0,scale);ctx.restore();select.value=old;}};requestAnimationFrame(tick);
 </script>

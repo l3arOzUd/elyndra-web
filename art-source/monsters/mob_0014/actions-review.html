@@ -22,5 +22,5 @@ const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySe
 function contact(){cg.clearRect(0,0,1200,800);for(let i=0;i<6;i++)draw(cg,i,i%3*400+200,Math.floor(i/3)*400+380,.62);}
 contact();document.querySelector('#view').onchange=()=>{f=0;paused=false;contact();};document.querySelector('#clip').onchange=e=>{clip=e.target.value;f=0;paused=false;contact();};document.querySelector('#replay').onclick=()=>{f=0;paused=false;};document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
 function tick(t){if(!paused&&t-last>140){f=clip==='idle'?(f+1)%6:Math.min(5,f+1);last=t;}ctx.clearRect(0,0,640,560);draw(ctx,f,320,510,.8);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
-window.__vinecrawlerActions={ready:true};requestAnimationFrame(tick);
+window.__vinecrawlerActions={ready:true,draw(ctx,frame,x,y,scale,view,action){const select=document.querySelector('#view'),old=select.value,oldClip=clip;select.value=view;clip=action;draw(ctx,frame,x,y,scale);select.value=old;clip=oldClip;}};requestAnimationFrame(tick);
 </script>
