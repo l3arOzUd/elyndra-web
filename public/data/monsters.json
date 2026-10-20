@@ -1875,6 +1875,18 @@
     "rate_bp": 800,
     "min_qty": 1,
     "max_qty": 1
+   },
+   {
+    "item_id": "itm_1340",
+    "rate_bp": 1000,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_1344",
+    "rate_bp": 800,
+    "min_qty": 1,
+    "max_qty": 1
    }
   ],
   "ecology": "The Engine's heart: an Aethrion pump fused with the oldest tree in Verdantis. It drives the sap that lights the forest and the spores that are now choking it.",
@@ -2284,6 +2296,18 @@
    },
    {
     "item_id": "itm_1325",
+    "rate_bp": 800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_1339",
+    "rate_bp": 1000,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_1343",
     "rate_bp": 800,
     "min_qty": 1,
     "max_qty": 1
@@ -2705,6 +2729,12 @@
     "rate_bp": 800,
     "min_qty": 1,
     "max_qty": 1
+   },
+   {
+    "item_id": "itm_1341",
+    "rate_bp": 1000,
+    "min_qty": 1,
+    "max_qty": 1
    }
   ],
   "ecology": "The relay's control mind, which drowned with the station and kept broadcasting; it has grown a body of drone hulls and cable round its sonar array in the Sonar Chamber, and its pulses are what keep Thalassia's constructs hostile.",
@@ -3123,6 +3153,18 @@
     "rate_bp": 800,
     "min_qty": 1,
     "max_qty": 1
+   },
+   {
+    "item_id": "itm_1345",
+    "rate_bp": 1000,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_1347",
+    "rate_bp": 600,
+    "min_qty": 1,
+    "max_qty": 1
    }
   ],
   "ecology": "The Archive's curator intelligence, wound round the cryocore in the Curator's Vault; it freezes anything that might disturb its records, which is why Crystallis's machines turned hostile.",
@@ -3496,6 +3538,12 @@
    {
     "item_id": "itm_1328",
     "rate_bp": 800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_1346",
+    "rate_bp": 1000,
     "min_qty": 1,
     "max_qty": 1
    }
@@ -3877,6 +3925,12 @@
    {
     "item_id": "itm_1329",
     "rate_bp": 800,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_1342",
+    "rate_bp": 600,
     "min_qty": 1,
     "max_qty": 1
    }

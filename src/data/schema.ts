@@ -263,6 +263,14 @@ export interface SystemsDef {
   relic_caps: { id: string; values: number[]; elements: string[] }[];
   totem_types: TotemTypeDef[];
   charm_slot_levels: number[];
+  /**
+   * Reforge (reroll affixes) and imbue (raise rarity) cost the base's sell
+   * price x these; job change is free up to a level then zeny a level;
+   * stash and bag sizes; monsters' resistance to their own element and
+   * weakness to its opposite (%).
+   */
+  crafting: { reforge_mult: number; imbue_mult: number; job_change_free_level: number; job_change_per_level: number; stash_max: number; bag_max: number;
+    monster_resist: number; monster_weakness: number; reset_scroll_level_price: number };
   /** Echo Totems: count multiplier by grade (Lesser, Greater, Grand), x for ultimates, affixes they can roll. */
   echo: { grade_charges: number[]; ultimate_mult: number; affixes: string[] };
   /** Job -> the tier 1 weapon a new character starts with. */

@@ -2713,6 +2713,80 @@
     "shin_far"
    ],
    "generated": true
+  },
+  "itm_1339": {
+   "name": "Stormcaller Rod",
+   "slot": "weapon",
+   "visual": "aether_rod",
+   "layers": [
+    "weapon"
+   ],
+   "generated": true
+  },
+  "itm_1340": {
+   "name": "Wildwood Longbow",
+   "slot": "weapon",
+   "visual": "surveyor_bow",
+   "layers": [
+    "weapon"
+   ],
+   "generated": true
+  },
+  "itm_1341": {
+   "name": "Gearheart Gauntlet",
+   "slot": "weapon",
+   "visual": "copper_saber",
+   "layers": [
+    "weapon"
+   ],
+   "generated": true
+  },
+  "itm_1342": {
+   "name": "Executioner's Edge",
+   "slot": "weapon",
+   "visual": "copper_saber",
+   "layers": [
+    "weapon"
+   ],
+   "generated": true
+  },
+  "itm_1343": {
+   "name": "Bastion Plate",
+   "slot": "armor",
+   "visual": "leafweave_coat",
+   "layers": [
+    "torso",
+    "arm_near",
+    "arm_far",
+    "cape",
+    "forearm_near",
+    "forearm_far"
+   ],
+   "generated": true,
+   "hides": [
+    "torso",
+    "arm_near",
+    "arm_far"
+   ]
+  },
+  "itm_1344": {
+   "name": "Windrunner Boots",
+   "slot": "boots",
+   "visual": "traveler_boots",
+   "layers": [
+    "shin_near",
+    "shin_far"
+   ],
+   "generated": true
+  },
+  "itm_1345": {
+   "name": "Frostwake Circlet",
+   "slot": "head",
+   "visual": "aether_circlet",
+   "layers": [
+    "head"
+   ],
+   "generated": true
   }
  }
 }

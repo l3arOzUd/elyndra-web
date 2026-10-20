@@ -8687,5 +8687,251 @@
     "grade": 3
    }
   }
+ },
+ {
+  "id": "itm_1339",
+  "name": "Stormcaller Rod",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 1520,
+  "stack_max": 1,
+  "description": "Your critical hits always Shock.",
+  "equip": {
+   "slot": "weapon",
+   "job": "arcanist",
+   "item_level": 40,
+   "min_level": 38,
+   "attack": 188,
+   "implicit": [
+    [
+     "added_cold",
+     15
+    ],
+    [
+     "inc_crit",
+     40
+    ]
+   ],
+   "unique": "stormcaller"
+  }
+ },
+ {
+  "id": "itm_1340",
+  "name": "Wildwood Longbow",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 1520,
+  "stack_max": 1,
+  "description": "Basic attacks pierce two more monsters.",
+  "equip": {
+   "slot": "weapon",
+   "job": "strider",
+   "item_level": 40,
+   "min_level": 38,
+   "attack": 188,
+   "implicit": [
+    [
+     "added_nature",
+     12
+    ],
+    [
+     "inc_attack_speed",
+     12
+    ]
+   ],
+   "unique": "wildwood"
+  }
+ },
+ {
+  "id": "itm_1341",
+  "name": "Gearheart Gauntlet",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 1520,
+  "stack_max": 1,
+  "description": "Pulse Beacon also restores 10% SP to everyone it touches.",
+  "equip": {
+   "slot": "weapon",
+   "job": "machinist",
+   "item_level": 40,
+   "min_level": 38,
+   "attack": 188,
+   "implicit": [
+    [
+     "inc_cdr",
+     20
+    ],
+    [
+     "added_fire",
+     10
+    ]
+   ],
+   "unique": "gearheart"
+  }
+ },
+ {
+  "id": "itm_1342",
+  "name": "Executioner's Edge",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 2960,
+  "stack_max": 1,
+  "description": "Huge critical strikes, at the cost of speed.",
+  "equip": {
+   "slot": "weapon",
+   "job": "vanguard",
+   "item_level": 80,
+   "min_level": 78,
+   "attack": 428,
+   "implicit": [
+    [
+     "crit_mult",
+     50
+    ],
+    [
+     "inc_crit",
+     60
+    ],
+    [
+     "inc_attack_speed",
+     -10
+    ]
+   ],
+   "unique": "executioner"
+  }
+ },
+ {
+  "id": "itm_1343",
+  "name": "Bastion Plate",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 1880,
+  "stack_max": 1,
+  "description": "Your Poise can rise to 70%.",
+  "equip": {
+   "slot": "armor",
+   "kind": "armour",
+   "item_level": 50,
+   "min_level": 48,
+   "armour": 310,
+   "req": {
+    "vit": 49
+   },
+   "implicit": [
+    [
+     "inc_hp",
+     10
+    ],
+    [
+     "cap_poise",
+     70
+    ]
+   ],
+   "unique": "bastion_plate"
+  }
+ },
+ {
+  "id": "itm_1344",
+  "name": "Windrunner Boots",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 1160,
+  "stack_max": 1,
+  "description": "Light as the wind.",
+  "equip": {
+   "slot": "boots",
+   "kind": "evasion",
+   "item_level": 30,
+   "min_level": 28,
+   "evasion": 76,
+   "req": {
+    "dex": 29
+   },
+   "implicit": [
+    [
+     "inc_move_speed",
+     25
+    ],
+    [
+     "stat_agi",
+     15
+    ]
+   ],
+   "unique": "windrunner"
+  }
+ },
+ {
+  "id": "itm_1345",
+  "name": "Frostwake Circlet",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 2600,
+  "stack_max": 1,
+  "description": "Chills what it strikes.",
+  "equip": {
+   "slot": "head",
+   "kind": "shield",
+   "item_level": 70,
+   "min_level": 68,
+   "shield": 465,
+   "req": {
+    "int": 69
+   },
+   "implicit": [
+    [
+     "chance_chill",
+     15
+    ],
+    [
+     "inc_shield",
+     25
+    ]
+   ],
+   "unique": "frostwake"
+  }
+ },
+ {
+  "id": "itm_1346",
+  "name": "Heart of Embers",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 2240,
+  "stack_max": 1,
+  "description": "Everything you strike can catch fire.",
+  "equip": {
+   "slot": "accessory",
+   "item_level": 60,
+   "min_level": 58,
+   "implicit": [
+    [
+     "added_fire",
+     20
+    ],
+    [
+     "chance_burn",
+     15
+    ],
+    [
+     "res_fire",
+     20
+    ]
+   ],
+   "unique": "heart_of_embers"
+  }
+ },
+ {
+  "id": "itm_1347",
+  "name": "Echo Stone",
+  "category": "charm",
+  "rarity": "epic",
+  "sell_price": 1140,
+  "stack_max": 1,
+  "description": "Your Echo Totems need 25% fewer kills, hits or hits taken.",
+  "equip": {
+   "slot": "charm",
+   "item_level": 40,
+   "min_level": 40,
+   "unique": "echo_stone"
+  }
  }
 ]

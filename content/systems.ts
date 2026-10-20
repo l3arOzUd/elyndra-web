@@ -24,6 +24,9 @@ export const AFFIXES: AffixDef[] = [
   { id: "flat_hp", kind: "prefix", label: "+{v} Max HP", slots: ["head", "armor", "boots", "accessory"], values: T(15, 40, 80, 140, 220, 320, 450) },
   { id: "inc_hp", kind: "prefix", label: "{v}% increased Max HP", slots: ["armor", "accessory"], values: T(3, 4, 6, 8, 10, 12, 15) },
   { id: "leech", kind: "prefix", label: "{v}% of Damage leeched as HP", slots: ["weapon", "accessory"], values: T(0.2, 0.4, 0.6, 0.8, 1.0, 1.3, 1.6) },
+  // Elemental damage (§2.11): part of every hit added as an element; monsters
+  // resist their own element and are weak to its opposite.
+  ...(["fire", "cold", "nature", "shadow"] as const).map((g): AffixDef => ({ id: `added_${g}`, kind: "prefix", label: `Adds {v}% of Damage as ${g[0].toUpperCase() + g.slice(1)}`, slots: ["weapon", "accessory"], values: T(3, 5, 8, 11, 14, 17, 20) })),
   // suffixes
   ...STATS.map((s): AffixDef => ({ id: `stat_${s}`, kind: "suffix", label: `+{v} ${s.toUpperCase()}`, slots: ["weapon", "head", "armor", "boots", "accessory"], values: T(2, 4, 7, 10, 13, 16, 20) })),
   { id: "inc_crit", kind: "suffix", label: "{v}% increased Critical Chance", slots: ["weapon", "head", "accessory"], values: T(10, 20, 30, 40, 55, 70, 85) },
@@ -232,7 +235,7 @@ export const DROPS: SystemsDef["drops"] = {
   boss_charm_bp: 3000,
   boss_totem_bp: 2000,
   own_job_weapon: 0.7,
-  gear_rarity: { normal: 7000, magic: 2500, rare: 500 },
+  gear_rarity: { normal: 7000, magic: 2500, rare: 480, unique: 20 },
   charm_rarity: { normal: 6000, magic: 3000, rare: 900, relic: 80, unique: 20 },
   totem_rarity: { normal: 6000, magic: 3000, rare: 1000 },
   relic_grade: [70, 25, 5],
@@ -358,6 +361,38 @@ export function gearItems(): ItemDef[] {
     description: "Wear it in a Charm slot and link a skill to it: the skill casts itself, free, whenever the count fills.",
     equip: { slot: "charm", item_level: GRADE_LEVELS[i], min_level: GRADE_LEVELS[i], totem: { type: tt.id, grade: i + 1 } },
   })));
+  // Second wave of uniques (after everything above so no id moves). They also
+  // drop rarely from any monster of their level (drops.gear_rarity.unique).
+  const wave2: ItemDef[] = [
+    { id: "", name: "Stormcaller Rod", category: "equipment", rarity: "epic", sell_price: price(40, 40), stack_max: 1,
+      description: "Your critical hits always Shock.",
+      equip: { slot: "weapon", job: "arcanist", item_level: 40, min_level: 38, attack: weaponAttack(40), implicit: [["added_cold", 15], ["inc_crit", 40]], unique: "stormcaller" } },
+    { id: "", name: "Wildwood Longbow", category: "equipment", rarity: "epic", sell_price: price(40, 40), stack_max: 1,
+      description: "Basic attacks pierce two more monsters.",
+      equip: { slot: "weapon", job: "strider", item_level: 40, min_level: 38, attack: weaponAttack(40), implicit: [["added_nature", 12], ["inc_attack_speed", 12]], unique: "wildwood" } },
+    { id: "", name: "Gearheart Gauntlet", category: "equipment", rarity: "epic", sell_price: price(40, 40), stack_max: 1,
+      description: "Pulse Beacon also restores 10% SP to everyone it touches.",
+      equip: { slot: "weapon", job: "machinist", item_level: 40, min_level: 38, attack: weaponAttack(40), implicit: [["inc_cdr", 20], ["added_fire", 10]], unique: "gearheart" } },
+    { id: "", name: "Executioner's Edge", category: "equipment", rarity: "epic", sell_price: price(80, 40), stack_max: 1,
+      description: "Huge critical strikes, at the cost of speed.",
+      equip: { slot: "weapon", job: "vanguard", item_level: 80, min_level: 78, attack: weaponAttack(80), implicit: [["crit_mult", 50], ["inc_crit", 60], ["inc_attack_speed", -10]], unique: "executioner" } },
+    { id: "", name: "Bastion Plate", category: "equipment", rarity: "epic", sell_price: price(50, 40), stack_max: 1,
+      description: "Your Poise can rise to 70%.",
+      equip: { slot: "armor", kind: "armour", item_level: 50, min_level: 48, ...pieceDefense("armor", "armour", 50), req: kindRequirement("armour", 50), implicit: [["inc_hp", 10], ["cap_poise", 70]], unique: "bastion_plate" } },
+    { id: "", name: "Windrunner Boots", category: "equipment", rarity: "epic", sell_price: price(30, 40), stack_max: 1,
+      description: "Light as the wind.",
+      equip: { slot: "boots", kind: "evasion", item_level: 30, min_level: 28, ...pieceDefense("boots", "evasion", 30), req: kindRequirement("evasion", 30), implicit: [["inc_move_speed", 25], ["stat_agi", 15]], unique: "windrunner" } },
+    { id: "", name: "Frostwake Circlet", category: "equipment", rarity: "epic", sell_price: price(70, 40), stack_max: 1,
+      description: "Chills what it strikes.",
+      equip: { slot: "head", kind: "shield", item_level: 70, min_level: 68, ...pieceDefense("head", "shield", 70), req: kindRequirement("shield", 70), implicit: [["chance_chill", 15], ["inc_shield", 25]], unique: "frostwake" } },
+    { id: "", name: "Heart of Embers", category: "equipment", rarity: "epic", sell_price: price(60, 40), stack_max: 1,
+      description: "Everything you strike can catch fire.",
+      equip: { slot: "accessory", item_level: 60, min_level: 58, implicit: [["added_fire", 20], ["chance_burn", 15], ["res_fire", 20]], unique: "heart_of_embers" } },
+    { id: "", name: "Echo Stone", category: "charm", rarity: "epic", sell_price: price(40, 30), stack_max: 1,
+      description: "Your Echo Totems need 25% fewer kills, hits or hits taken.",
+      equip: { slot: "charm", item_level: 40, min_level: 40, unique: "echo_stone" } },
+  ];
+  for (const u of wave2) out.push({ ...u, id: id() });
   return out;
 }
 
@@ -372,6 +407,15 @@ export const UNIQUE_DROPS: { boss: string; item: string; rate_bp: number }[] = [
   { boss: "Cryocore Curator", item: "Blood Pact", rate_bp: 800 },
   { boss: "Kiln Prime", item: "Lodestone", rate_bp: 800 },
   { boss: "Lattice Sovereign", item: "Glass Ember", rate_bp: 800 },
+  { boss: "Heliostat Sovereign", item: "Stormcaller Rod", rate_bp: 1000 },
+  { boss: "Heartwood Regent", item: "Wildwood Longbow", rate_bp: 1000 },
+  { boss: "Drowned Signalmind", item: "Gearheart Gauntlet", rate_bp: 1000 },
+  { boss: "Lattice Sovereign", item: "Executioner's Edge", rate_bp: 600 },
+  { boss: "Heliostat Sovereign", item: "Bastion Plate", rate_bp: 800 },
+  { boss: "Heartwood Regent", item: "Windrunner Boots", rate_bp: 800 },
+  { boss: "Cryocore Curator", item: "Frostwake Circlet", rate_bp: 1000 },
+  { boss: "Kiln Prime", item: "Heart of Embers", rate_bp: 1000 },
+  { boss: "Cryocore Curator", item: "Echo Stone", rate_bp: 600 },
 ];
 
 export function systems(): SystemsDef {
@@ -379,6 +423,8 @@ export function systems(): SystemsDef {
     rules: SYSTEMS_RULES, mastery: MASTERY, drops: DROPS, affixes: AFFIXES, totem_affixes: TOTEM_AFFIXES,
     labels: EXTRA_LABELS, charm_types: CHARM_TYPES, relic_caps: RELIC_CAPS, totem_types: [...TOTEM_TYPES, ...ECHO_TYPES],
     charm_slot_levels: [10, 30, 60],
+    crafting: { reforge_mult: 3, imbue_mult: 5, job_change_free_level: 10, job_change_per_level: 100, stash_max: 400, bag_max: 300,
+      monster_resist: 40, monster_weakness: 25, reset_scroll_level_price: 0 },
     echo: { grade_charges: [1.5, 1.2, 1], ultimate_mult: 2, affixes: ["totem_charges", "totem_effect", "totem_boss_charges", "totem_heal"] },
     starter_weapons: {},
   };
