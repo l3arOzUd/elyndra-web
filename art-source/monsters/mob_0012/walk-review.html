@@ -9,10 +9,11 @@
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
 const im=new Image();im.src='./walk-left.png';await im.decode();
+const corrected=new Image();corrected.src='./walk-left-v2.png';await corrected.decode();
 function draw(ctx,f,x,y,s){
- const cuts=f<3?[0,512,1024,1536]:[0,530,1024,1536],col=f%3,sx=cuts[col],w=cuts[col+1]-sx;
- const anchor=[256,256,256,256,238,256][f],bottom=[506,506,506,499,498,498][f];
- ctx.drawImage(im,sx,Math.floor(f/3)*512,w,512,x-anchor*s,y-bottom*s,w*s,512*s);
+ const cuts=f<3?[0,512,1024,1536]:[0,530,996,1536],col=f%3,sx=cuts[col],w=cuts[col+1]-sx;
+ const anchor=[256,256,256,256,238,284][f],bottom=[506,506,506,498,498,498][f];
+ ctx.drawImage(f>=3?corrected:im,sx,Math.floor(f/3)*512,w,512,x-anchor*s,y-bottom*s,w*s,512*s);
 }
 const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
 for(let f=0;f<6;f++){draw(cg,f,f%3*400+200,Math.floor(f/3)*400+380,.7);cg.fillStyle='#fff';cg.fillText(`Pose ${f+1}`,f%3*400+12,Math.floor(f/3)*400+18);}

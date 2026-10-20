@@ -4,14 +4,20 @@
   "verified": [
     "Browser contact sheet displays transparent exterior and complete feet.",
     "Poses 1, 3, 5 lift distinct legs using bent brass hinges.",
-    "Preview crops bottom row at x530 to retain pose4 rear foot without neighboring fragments."
+    "Preview crops bottom row at x530 to retain pose4 rear foot without neighboring fragments.",
+    "V2 bottom-row support feet reach a common baseline in browser contact sheet.",
+    "V2 pose4 removes redundant hinge fragment; three leg chains are readable.",
+    "Bottom-row crop boundaries 0/530/996/1536 retain full feet without neighboring fragments."
   ],
   "limitations": [
-    "Pose4 near/far hip hinges overlap ambiguously; confirm exactly three complete chains.",
-    "Far front foot in poses4-6 appears above the common support baseline.",
     "Hip positions and leaf silhouette shift between frames.",
     "Lifted foot trajectories and stable support polygon need refinement.",
-    "No gameplay binding; other action clips and front/rear walks not yet authored."
+    "No gameplay binding; other action clips and front/rear walks not yet authored.",
+    "Revised legs change brass cuff details; rigid segment lengths and frame-to-frame trajectories still need review."
   ],
-  "next": "Repair support contacts and ambiguous pose4 hip, then author front/rear walks and combat/collapse poses."
+  "next": "Author front/rear walk and combat/collapse poses; refine gait continuity before production approval.",
+  "selectedFrames": {
+    "0-2": "walk-left.png",
+    "3-5": "walk-left-v2.png"
+  }
 }
