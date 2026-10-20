@@ -94,7 +94,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0086 | Pour Wraith | master-created | master-created | master-created | master-created | placeholder |
 | mob_0087 | Zero Stoker | master-created | master-created | master-created | master-created | placeholder |
 | mob_0088 | Kiln Prime | master-created | master-created | master-created | master-created | placeholder |
-| mob_0090 | Gutter Lurk | master-created | missing | missing | missing | placeholder |
+| mob_0090 | Gutter Lurk | master-created | master-created | master-created | master-created | placeholder |
 | mob_0091 | Nullbloom | master-created | missing | missing | missing | placeholder |
 | mob_0092 | Coupler Mite | master-created | missing | missing | missing | placeholder |
 | mob_0093 | Riftling | master-created | missing | missing | missing | placeholder |

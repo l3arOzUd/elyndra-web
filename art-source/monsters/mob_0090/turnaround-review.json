@@ -1,0 +1,21 @@
+{
+  "id": "mob_0090",
+  "name": "Gutter Lurk",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation with rear ear/heel correction; failed rear retained.",
+  "confirmed": [
+    "Hairless slate-grey skin, large reflective violet eyes, long forefingers and dorsal violet bristles retained.",
+    "Four limbs and no added tail in all views.",
+    "Rear correction replaces inner ear bowls with outer backs and front-facing hind claw fans with heels.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Rear forehands still splay outward/backward, not matched to front forward reach; hind heels overly rounded.",
+    "Profiles remain oblique with front fingers fanned toward camera; joint and digit topology needs alignment.",
+    "Profile muzzle longer than front impression; head/body scale and shoulder hump differ.",
+    "Bristle ridge taller/denser than short-bristle Bible brief and changes shape between views.",
+    "Rear view more overhead than profiles, crouch/hip height inconsistent.",
+    "No separated limbs/face/bristles or runtime animation clips yet."
+  ],
+  "next": "Align crouch, forehand reach, hind ankles, four-digit hands and head proportions; lock bristle landmarks. Separate head/ears/eyes/body/upper and lower limbs/hands/feet/bristles for alert idle, grounded scuttle, swipe/lunge, hit and articulated crouch-collapse; bristle glow separate."
+}

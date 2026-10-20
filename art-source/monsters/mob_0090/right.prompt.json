@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Gutter Lurk RIGHT SIDE orthographic eye-level facing imageRIGHT. Reference1 original front identity, reference2 left side proportions. Hairless slate-grey wrinkled cat-sized scavenger hunched quadruped, huge glossy violet-black eye one visible, short narrow muzzle not elongated rat snout, small folded ear, violet bristle ridge nape along back. No tail. Exactly four limbs, two long forearms with long four-digit clawed hands matching reference, two bent hindlegs small claw feet. Same low neutral crouch/hand placement rotated; head below shoulder hump. Near right limbs clear far left partly occluded, no extra limbs. Match body length head size and bristle height from left. Full fingers feet ridge within transparent square generous margins. Painterly fantasy same skin and restrained glow no ground shadow text haze.",
+  "references": [
+    "front.png",
+    "left.png"
+  ]
+}
