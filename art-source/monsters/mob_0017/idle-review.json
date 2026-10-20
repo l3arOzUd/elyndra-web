@@ -1,0 +1,31 @@
+{
+  "status": "side-idle-draft",
+  "selected": {
+    "file": "idle-left-twitch-v2.png",
+    "cell": 0
+  },
+  "rejected": {
+    "file": "idle-left-twitch.png",
+    "reason": "One antenna disappears."
+  },
+  "timeline": {
+    "frames": 6,
+    "fps": 4,
+    "alternateFrames": [
+      2,
+      3
+    ]
+  },
+  "verified": [
+    "Both antennae retained in selected alternate.",
+    "Browser paired preview clean alpha and nearly fixed body footprint.",
+    "Side and mirrored right use alternate; no squash or stretch."
+  ],
+  "limitations": [
+    "Twitch subtle at game size.",
+    "Shell/core texture changes slightly despite requested fixed body.",
+    "Front/rear idle remain static.",
+    "Idle uses raised-leg source pose; resting support still unfinished.",
+    "No runtime export or gameplay binding."
+  ]
+}
