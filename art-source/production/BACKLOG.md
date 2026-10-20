@@ -67,7 +67,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0059 | Heliostat Sovereign | master-created | master-created | master-created | master-created | placeholder |
 | mob_0060 | Gullwing Skimmer | master-created | master-created | master-created | master-created | placeholder |
 | mob_0061 | Polyp Spitter | master-created | master-created | master-created | master-created | placeholder |
-| mob_0062 | Kelp Tender | master-created | missing | missing | missing | placeholder |
+| mob_0062 | Kelp Tender | master-created | master-created | master-created | master-created | placeholder |
 | mob_0063 | Hullborer | master-created | missing | missing | missing | placeholder |
 | mob_0064 | Pearl Skate | master-created | missing | missing | missing | placeholder |
 | mob_0065 | Thunderhull Turtle | master-created | missing | missing | missing | placeholder |

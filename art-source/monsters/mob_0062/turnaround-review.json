@@ -1,0 +1,19 @@
+{
+  "id": "mob_0062",
+  "name": "Kelp Tender",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front shell landmarks, rear braid and opposite profile.",
+  "confirmed": [
+    "Olive/teal braided stalk, soft glowing bulb, two frond arms and split holdfast roots retained.",
+    "Six oysters remain along front in profiles; no full shell row duplicated on rear.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Side arms trail rearward rather than retaining lateral spread of front stance.",
+    "Shell heights shapes and side offsets differ across views despite count matching.",
+    "Braid winding, frond count and root routes vary; stable attachment map needed.",
+    "Bulb top margins extremely tight; frame normalization needed after anatomical corrections.",
+    "No separated fronds, root locomotion or runtime animation yet."
+  ],
+  "next": "Lock six oyster anchors, braid/arm/root topology and bulb scale; separate frond chains for idle sway, movement, lash, hit and wilt death."
+}
