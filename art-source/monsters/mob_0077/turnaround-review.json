@@ -1,0 +1,20 @@
+{
+  "id": "mob_0077",
+  "name": "Archive Specter",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from frontal glyph-light spirit, rear and opposite profile.",
+  "confirmed": [
+    "Blank white static face limited to forward head; rear has glyph surface.",
+    "Violet/cold-white body, spectral arms and tapering ribbon lower body retained without legs.",
+    "Right profile face narrower than left; four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Left arms spread fore/aft; right near arm trails behind torso rather than preserving frontal lateral stance.",
+    "Glyph placements and flowing ribbon paths change across views; fixed surface/anchor map needed before scrolling animation.",
+    "Shoulder plumes, face width, torso proportions and tail curl drift.",
+    "Right far arm largely hidden; finger count and elbow landmarks unclear.",
+    "Side framing taller than front; transparency/glow must be reviewed on light/dark game backgrounds.",
+    "No separated body/glyph/static layers or runtime animation clips yet."
+  ],
+  "next": "Align shoulder/elbow/hand poses, separate stable body silhouette from glyph-scroll and face-static overlays, rig ribbon chains for hover/travel/cast/hit/dissolve and animate flicker."
+}
