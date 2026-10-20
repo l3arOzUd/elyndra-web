@@ -1,0 +1,18 @@
+{
+  "status": "playable-draft-refinement-pending",
+  "monster": "mob_0013",
+  "sprite": "sapdrone_2d",
+  "verified": [
+    "Content source, generated monster data and public index select sapdrone_2d.",
+    "Public SpriteActor loads all five clips without page or format errors.",
+    "W E S N attack emits hit at 375ms; death remains selected after 2000ms.",
+    "Rear attack screenshot inspected: neighboring wing fragments removed.",
+    "Production build passes.",
+    "130 exported cells have visible alpha without edge clipping."
+  ],
+  "notVerified": [
+    "Live server map combat",
+    "Production visual approval"
+  ],
+  "limitationsFile": "public/sprites/sapdrone_2d/art-review.json"
+}

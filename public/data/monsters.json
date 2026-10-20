@@ -526,7 +526,7 @@
   ],
   "ecology": "Aethrion harvesting drones that still tap the giant trunks for sap; they hang in clouds round the tapped trunks of Mossbridge, north of the creek and on the north-west slope, and dive on anything that comes near the taps. A drone that drank too long sometimes carries a bead of Living Jade.",
   "art_brief": "A fist-sized brass beetle-drone with four glassy wings and a long needle proboscis, its belly tank sloshing with glowing jade sap.",
-  "sprite": "mob_0013"
+  "sprite": "sapdrone_2d"
  },
  {
   "id": "mob_0014",

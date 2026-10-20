@@ -1,0 +1,17 @@
+{
+  "monster": "mob_0013",
+  "status": "playable-draft-refinement-pending",
+  "productionApproved": false,
+  "authoredViews": [
+    "front",
+    "left",
+    "back"
+  ],
+  "limitations": [
+    "Four-wing and six-leg attachments remain partly occluded and inconsistent.",
+    "Flight is reused for idle and movement; cross-clip body registration needs refinement.",
+    "Death needs intermediate landing drawings; repeated frames are holds, not unique poses.",
+    "Right mirrors left and diagonals alias side art.",
+    "Technical validation does not establish visual approval."
+  ]
+}

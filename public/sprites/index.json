@@ -60,14 +60,7 @@
    "placeholder": true
   },
   "mob_0013": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1,
-   "placeholder": true
+   "sprite": "sapdrone_2d"
   },
   "mob_0041": {
    "sprite": "mosskin",

@@ -52,7 +52,7 @@ const monsters: RegionDesign["monsters"] = [
     mods: { hp: 0.85, speed: 0.75, atk: 1.15 }, why: "A flying sap-harvester: a hollow shell (-15% HP), fast wings (25% faster) and a tapping needle that stings (+15% ATK). The first aggressive horde in Verdantis, and it guards the trees it taps.",
     drops: { common: "itm_0025", uncommon: "itm_0026", rare: "itm_0118" },
     ecology: "Aethrion harvesting drones that still tap the giant trunks for sap; they hang in clouds round the tapped trunks of Mossbridge, north of the creek and on the north-west slope, and dive on anything that comes near the taps. A drone that drank too long sometimes carries a bead of Living Jade.",
-    art_brief: "A fist-sized brass beetle-drone with four glassy wings and a long needle proboscis, its belly tank sloshing with glowing jade sap.",
+    art_brief: "A fist-sized brass beetle-drone with four glassy wings and a long needle proboscis, its belly tank sloshing with glowing jade sap.", sprite: "sapdrone_2d",
   },
   {
     id: "mob_0041", name: "Jadewing Moth", level: 22, archetype: "ranged", family: "insect", element: "wind", behavior: "aggressive",
