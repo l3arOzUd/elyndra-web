@@ -1,0 +1,21 @@
+{
+  "status": "side-walk-four-key-pose-study",
+  "source": "walk-left.png",
+  "preview": "walk-left-review.html",
+  "observations": [
+    "Two legs and boots visible in each pose.",
+    "Near thigh appears forward in first contact and trailing in opposite contact.",
+    "Passing drawings visibly separate lifted and supporting feet.",
+    "Spear held upright ahead of torso throughout.",
+    "Browser alpha clean; four-pose loop advances without page errors."
+  ],
+  "limitations": [
+    "Passing poses are asymmetric: one heel kicks backward while opposite knee rises high forward.",
+    "Near/far limb identity through passing transition still needs verification.",
+    "Halo panel spacing, head shape and armor highlights drift.",
+    "Foot support and heel contact require refinement; source margins tighter than requested.",
+    "Only four key drawings, not smooth final animation.",
+    "Frontal contact corrections remain unresolved; no gameplay binding."
+  ],
+  "next": "Normalize both passing heights and preserve rigid limb identity before deriving frontal gait."
+}
