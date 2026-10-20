@@ -1,0 +1,21 @@
+{
+  "status": "front-action-draft-unapproved",
+  "source": "actions-front.png",
+  "preview": "actions-front-review.html",
+  "poses": ["idle", "windup", "punch", "hit", "kneeling-collapse", "dead"],
+  "observed": [
+    "Two fists and two leg chains visible in standing poses; folded lower legs partly occluded in death.",
+    "Punch projects toward viewer with foreshortening.",
+    "Death kneels and folds forward with dark final visor.",
+    "Browser composite has transparent clean surroundings despite brown hidden RGB in source.",
+    "Custom row split at 525 preserves standing feet; wider hit crop preserves right fist."
+  ],
+  "limitations": [
+    "Shoulder runes, chest carving and fist proportions drift from reference between drawings.",
+    "Kneeling pose reads as resting on fists; final forearm support needs motion review.",
+    "Only two collapse drawings; no smooth intermediate fall yet.",
+    "Ground and horizontal registration approximate.",
+    "Back actions, front/back walking, sand emission and runtime integration remain outstanding."
+  ],
+  "publicBinding": false
+}
