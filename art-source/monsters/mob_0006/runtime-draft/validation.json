@@ -484,56 +484,56 @@
       "clip": "idle",
       "facing": "N",
       "frame": 4,
-      "visible": 32871,
+      "visible": 33451,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 5,
-      "visible": 32871,
+      "visible": 33451,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 6,
-      "visible": 32871,
+      "visible": 33451,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 7,
-      "visible": 32871,
+      "visible": 33451,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 8,
-      "visible": 32871,
+      "visible": 33451,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 9,
-      "visible": 32871,
+      "visible": 33451,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 10,
-      "visible": 32871,
+      "visible": 33451,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 11,
-      "visible": 32871,
+      "visible": 33451,
       "edge": 0
     },
     {
@@ -1406,7 +1406,7 @@
     }
   ],
   "limitations": [
-    "Left, front and rear action drafts exist; rear idle remains static, and diagonal aliases are not authored views.",
+    "Left, front and rear action drafts exist; rear idle uses two authored poses and needs smoother transitions, and diagonal aliases are not authored views.",
     "Hoof trajectories, leg angles, torso registration and surface continuity remain under review.",
     "Blink edit has minor body/detail drift; actions need in-between drawings.",
     "Technical checks do not establish visual acceptance."

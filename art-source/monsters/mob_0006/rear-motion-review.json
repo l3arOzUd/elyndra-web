@@ -2,7 +2,8 @@
   "status": "runtime-draft-review-pending",
   "selected": [
     "walk-back.png",
-    "actions-back.png"
+    "actions-back.png",
+    "idle-back-inhale.png (top-left cell only)"
   ],
   "unused": "actions-back-v2.png: unnecessary transparency edit; original alpha was already valid",
   "registration": "Actions split at y=550 to preserve upper hooves; fixed scale, individual spine anchors and ground baselines.",
@@ -12,10 +13,11 @@
     "edgeErrors": 0,
     "runtimeFacing": "N",
     "attackHitMs": 375,
-    "deathScreenshot": "output/thornback-back-death.png"
+    "deathScreenshot": "output/thornback-back-death.png",
+    "idleScreenshot": "output/thornback-back-idle.png"
   },
   "remaining": [
-    "Rear idle static",
+    "Rear idle uses two poses; tail root and bark shading drift slightly, transitions need intermediate poses",
     "Thorn and moss detail drifts between poses",
     "Foot sliding and action transitions require refinement",
     "Rear death hips remain high; needs comparison against side collapse",

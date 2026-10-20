@@ -21,6 +21,7 @@ sequences['walk-front']=[0,1,2,3,4,5];
 sequences['attack-front']=[0,1,1,2,2,0];
 sequences['hit-front']=[0,3,3,0,0,0];
 sequences['death-front']=[0,4,4,5,5,5];
+const backIdle=new Image();backIdle.src='./idle-back-inhale.png';await backIdle.decode();
 const backWalk=new Image();backWalk.src='./walk-back.png';await backWalk.decode();
 const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
 for(const name of ['walk','attack','hit','death']){
@@ -29,6 +30,8 @@ for(const name of ['walk','attack','hit','death']){
 }
 sequences['idle-front']=sequences.idle;
 document.querySelector('#clip').add(new Option('idle-front','idle-front'));
+sequences['idle-back']=[0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0];
+document.querySelector('#clip').add(new Option('idle-back','idle-back'));
 let clip='walk';
 const bottoms=[475,475,475,442,442,444];
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
@@ -38,6 +41,11 @@ function draw(ctx,i,x,y,scale){
  if(clip==='idle-front'){
   const s=scale*.82;
   ctx.drawImage(pose?frontBlink:frontActions,0,0,512,519,x-280*s,y-519*s,512*s,519*s);
+  return;
+ }
+ if(clip==='idle-back'){
+  const s=scale*.82;
+  ctx.drawImage(pose?backIdle:backActions,0,0,512,550,x-270*s,y-534*s,512*s,550*s);
   return;
  }
  if(clip.endsWith('-back')){
@@ -111,8 +119,8 @@ function exportDraft(){
   for(let row=0;row<json.rows.length;row++)for(let f=0;f<def.frames;f++){
    ctx.save();ctx.translate(f*384,row*384);
    const suffix=row===1?'front':row===4?'back':null;
-   clip=suffix?(name==='idle'&&suffix==='back'?'attack-back':`${name}-${suffix}`):name;
-   draw(ctx,row===4&&name==='idle'?0:f,192,346,.66);ctx.restore();
+   clip=suffix?`${name}-${suffix}`:name;
+   draw(ctx,f,192,346,.66);ctx.restore();
   }
   images[name]=c.toDataURL('image/png');sizes[name]={width:c.width,height:c.height};
  }

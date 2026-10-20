@@ -1,0 +1,4 @@
+{
+  "prompt": "Edit ONLY the top-left rear-facing boar in the supplied six-pose sheet to create a very subtle idle inhalation: slightly expand the upper ribcage by a few pixels, keep both hind hooves and the two visible forehooves in EXACT original positions. Gently shift the tip of the shaggy tail left by about 12 pixels. Preserve same height, every woody thorn, bark scale, moss patch, ear, body proportions, lighting and exact rear camera. All other five poses unchanged. Same 1536x1024 composition. True transparent alpha background, no ground shadow. This is a matching animation frame, not a redesign.",
+  "reference": "actions-back.png"
+}
