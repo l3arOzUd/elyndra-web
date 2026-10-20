@@ -1,30 +1,98 @@
 {
-  "status": "front-left-action-studies-unapproved",
+  "status": "four-view-action-studies-unapproved",
   "preview": "actions-review.html",
-  "sources": ["actions-left.png", "actions-front.png"],
-  "authoredKeysPerView": ["neutral", "preparation", "impact", "recoil", "collapse", "dead"],
+  "sources": [
+    "actions-left.png",
+    "actions-front.png",
+    "actions-back.png",
+    "actions-right.png",
+    "actions-right-v2.png cell 2 only"
+  ],
+  "authoredKeysPerView": [
+    "neutral",
+    "preparation",
+    "impact",
+    "recoil",
+    "collapse",
+    "dead"
+  ],
   "clips": {
-    "attack": [0, 1, 1, 2, 2, 0],
-    "hit": [0, 3, 3, 0, 0, 0],
-    "death": [0, 4, 4, 5, 5, 5]
+    "attack": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      0
+    ],
+    "hit": [
+      0,
+      3,
+      3,
+      0,
+      0,
+      0
+    ],
+    "death": [
+      0,
+      4,
+      4,
+      5,
+      5,
+      5
+    ]
   },
   "technicalCheck": {
-    "renderedSourceKeys": 12,
+    "renderedSourceKeys": 24,
     "emptyKeys": [],
     "canvasEdgeIntersections": [],
     "browserErrors": [],
     "groundY": 430,
     "opaqueBottomY": {
-      "left": [430, 430, 430, 430, 430, 430],
-      "front": [430, 430, 430, 430, 429, 430]
+      "left": [
+        430,
+        430,
+        430,
+        430,
+        430,
+        430
+      ],
+      "front": [
+        430,
+        430,
+        430,
+        430,
+        429,
+        430
+      ],
+      "back": [
+        429,
+        429,
+        429,
+        430,
+        430,
+        430
+      ],
+      "right": [
+        430,
+        430,
+        430,
+        430,
+        430,
+        430
+      ]
     },
-    "frontDeathPlayback": "Reached frame 5 after 1250 ms and remained at frame 5 after another 300 ms."
+    "frontDeathPlayback": "Reached frame 5 after 1250 ms and remained at frame 5 after another 300 ms.",
+    "rightDeathPlayback": "Reached frame 5 after 1250 ms and held through another 300 ms."
   },
   "visualFindings": [
     "Collapse folds forearms and hind knees while lowering the chest; shell remains on top rather than tipping backward.",
     "Final eyelids close and palms relax beside the lowered head.",
     "Two disconnected neighbor fragments were excluded from preview crops without removing pixels from the main frog silhouette.",
-    "Both contact sheets inspected on opaque backgrounds after crop and ground registration corrections."
+    "Both contact sheets inspected on opaque backgrounds after crop and ground registration corrections.",
+    "Rear and right action sheets inspected on opaque browser contact sheets.",
+    "Original right impact nose intersects source canvas boundary; revised cell 2 restores full snout with margin.",
+    "Right preparation crop excludes a disconnected neighbor foot fragment; main pose pixels preserved."
   ],
   "limitations": [
     "Shell becomes flatter between neutral and collapse, contradicting rigid-volume continuity.",
@@ -32,7 +100,16 @@
     "Far limb attachments are occluded in profile; anatomical consistency remains unverified.",
     "Head size, shell boundaries, barnacle placement and highlights drift between poses.",
     "Two collapse drawings and repeated holds do not provide smooth death animation.",
-    "Rear/right action views, authored idle motion, combined runtime assets and gameplay verification remain unfinished."
+    "Authored idle motion, combined runtime assets and gameplay verification remain unfinished.",
+    "Rear impact lifts the body too vertically; forward bump projection remains weak.",
+    "Right repaired impact loses the original driving-leg extension and reads like crouch; darker saturation creates material flicker.",
+    "Right collapse keeps more shell volume than left but cross-view shell size still differs."
   ],
-  "publicBinding": false
+  "publicBinding": false,
+  "rightImpactRepair": {
+    "original": "actions-right.png cell 2 rejected: nose clipped",
+    "candidate": "actions-right-v2.png cell 2",
+    "approved": false,
+    "next": "Re-author complete forward bump with braced extending hind leg, preserving neutral shell and lighting."
+  }
 }
