@@ -10,7 +10,7 @@ const browser=await chromium.launch({headless:true,executablePath:process.env.CH
 try{
  const page=await browser.newPage(),errors=[];
  page.on('pageerror',error=>errors.push(error.message));
- await page.goto(`http://localhost:5173/art-source/monsters/${monster}/walk-review.html`);
+ await page.goto(`http://localhost:5173/art-source/monsters/${monster}/${monster==='mob_0007'?'flight':'walk'}-review.html`);
  await page.waitForFunction(()=>window.__monsterDraft?.ready);
  const result=await page.evaluate(async()=>{
   const assets=window.__monsterDraft.exportDraft();
@@ -38,7 +38,7 @@ try{
  await writeFile(resolve(out,`${result.json.id}.sprite.json`),JSON.stringify(result.json,null,2)+'\n');
  const index=JSON.parse(await readFile(resolve(import.meta.dirname,'../public/sprites/index.json'),'utf8'));
  const report={status:'technical-draft-only',runtimeBound:index.monsters[monster]?.sprite===result.json.id,errors,formatProblems:result.problems,frames:result.frames,
-  limitations:monster==='mob_0005'?['Left and front idle use authored blinks; rear idle uses two breathing poses and needs smoother transitions.','Front, rear and left drafts are authored. Diagonals alias side rows and right mirrors left; accurate directional coverage remains unfinished.','Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved. Rear left-leg anatomy is largely hidden by tail.','Passing format and edge checks does not approve visual quality.']:['Left, front and rear action drafts exist; rear idle uses two authored poses and needs smoother transitions, and diagonal aliases are not authored views.','Hoof trajectories, leg angles, torso registration and surface continuity remain under review.','Blink edit has minor body/detail drift; actions need in-between drawings.','Technical checks do not establish visual acceptance.']};
+  limitations:monster==='mob_0007'?['Flight serves both idle and locomotion, with different playback rates.','Right mirrors left; diagonals alias side views.','Cross-clip scale, wingbeat phases, body registration and anatomical continuity need refinement.','Wing markings and abdomen segmentation drift. Death needs intermediate landing poses.','Technical validation is not visual approval.']:monster==='mob_0005'?['Left and front idle use authored blinks; rear idle uses two breathing poses and needs smoother transitions.','Front, rear and left drafts are authored. Diagonals alias side rows and right mirrors left; accurate directional coverage remains unfinished.','Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved. Rear left-leg anatomy is largely hidden by tail.','Passing format and edge checks does not approve visual quality.']:['Left, front and rear action drafts exist; rear idle uses two authored poses and needs smoother transitions, and diagonal aliases are not authored views.','Hoof trajectories, leg angles, torso registration and surface continuity remain under review.','Blink edit has minor body/detail drift; actions need in-between drawings.','Technical checks do not establish visual acceptance.']};
  await writeFile(resolve(out,'validation.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({output:out,clips:Object.keys(result.images),frames:result.frames.length,errors}));
 }finally{await browser.close();}
