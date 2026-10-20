@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "front-rest-study.png",
+  "prompt": "Use case: precise-object-edit. One subtle idle animation key of the reference Coral Claw front view. Keep the exact canvas framing, character scale, rigid shell, every coral branch, both claw arms and all EIGHT walking legs and their planted tips unchanged. Only gently swivel the two rigid eyestalks outward by about 8 degrees at their base joints as the crab looks around, and open the SMALL claw on image RIGHT a little by rotating only its movable finger. Keep huge image-left claw unchanged. No eyelids, no closed eyes, no breathing deformation of hard shell, no body bounce, no leg movement. Same painted fantasy rendering, genuinely transparent background, no shadow, no text, no sheet; one complete crab."
+}

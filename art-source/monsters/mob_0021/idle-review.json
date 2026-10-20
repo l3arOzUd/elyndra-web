@@ -1,0 +1,32 @@
+{
+  "id": "mob_0021",
+  "status": "four-view-idle-studies",
+  "preview": "idle-review.html",
+  "implementation": "idle-art.js",
+  "uniqueDrawingsPerView": 2,
+  "newDrawings": 4,
+  "timingFrames": 20,
+  "fps": 8,
+  "activeKeys": [12, 13, 14],
+  "transform": {"uniformScale": 0.3, "origin": [26, 100], "perKeyFitting": false},
+  "visualReview": {
+    "front": "Eyestalks turn outward and small claw opens. Shell, feet and coral also shift; unsuitable as a planted idle without repair.",
+    "back": "Small claw flexes. Rear shell and foot positions drift, large claw approaches source edge. Eight visible tips retained; roots concealed.",
+    "left": "Visible eyestalk turns forward. Four near walking chains retained. Stalk length and detail continuity still require review.",
+    "right": "Visible eyestalk turns forward. Four near chains and large far claw retained. No full cross-view identity approval."
+  },
+  "browserCheck": {
+    "visiblePixelsByView": {
+      "front": [59977, 64186],
+      "back": [59871, 62439],
+      "left": [72673, 73172],
+      "right": [72322, 72332]
+    },
+    "previewEdgePixels": 0,
+    "sourceEdgePixelsAboveAlpha16": 0,
+    "pageErrors": [],
+    "scope": "All eight source drawings load with transparency and remain inside preview bounds. Not proof of planted contacts or anatomical fidelity."
+  },
+  "artApproved": false,
+  "publicBinding": false
+}

@@ -2,7 +2,7 @@
   "id": "mob_0021",
   "name": "Coral Claw",
   "bibleSource": "content/regions/tha.ts",
-  "status": "four-view-motion-studies-idle-missing",
+  "status": "four-view-motion-and-idle-studies-unapproved",
   "bible": {
     "level": 40,
     "family": "crustacean",
@@ -35,6 +35,6 @@
     "Profile cameras retain oblique exposure.",
     "Coral branch topology and small-claw decoration differ between views."
   ],
-  "next": "Four views have motion studies, not approved runtime clips. Side leg-lift studies retain four near chains but still need far-leg continuity, fixed segment lengths and sideways propulsion. Refine attack/collapse shell and coral continuity, then author idle in all four views.",
+  "next": "Four views have all five clip studies, not approved runtime clips. Repair front/back idle shell and planted-foot drift; check side stalk length. Side leg-lift studies need far-leg continuity, fixed segment lengths and sideways propulsion. Refine attack/collapse shell and coral continuity before runtime export.",
   "publicBinding": false
 }

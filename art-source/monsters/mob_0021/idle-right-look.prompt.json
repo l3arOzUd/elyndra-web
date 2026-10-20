@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-profile-study-v2.png",
+  "prompt": "Use case: precise-object-edit. ONE minimal idle animation key of this right-facing Coral Claw. Change ONLY the visible eyestalk: rotate it about 8 degrees forward toward image right around its original base, same rigid stalk length and black eye. Everything else must remain fixed: all four near walking legs and the far leg fragments, all foot tips, huge far claw and visible small near claw, coral branch contours, shell outline, colours, canvas1536x1024, scale and position. No closed eyelid, no shell breathing, no claw movement or body rotation, no leg deformation. Preserve all original anatomy. Genuine transparent background, no haze, no shadow, no text, one full crab."
+}
