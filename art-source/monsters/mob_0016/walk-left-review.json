@@ -2,7 +2,10 @@
   "status": "locomotion-study-needs-ground-plane-correction",
   "preview": "walk-review.html",
   "source": "walk-left-v2.png",
-  "rejected": {"source": "walk-left.png", "reason": "Vertical body wave reads as caterpillar-like arching, not lateral snake locomotion."},
+  "rejected": {
+    "source": "walk-left.png",
+    "reason": "Vertical body wave reads as caterpillar-like arching, not lateral snake locomotion."
+  },
   "verified": [
     "Saffron granular scales, amber eye and orange belly match design.",
     "One continuous head-to-tail body, no invented legs or arms.",
@@ -16,5 +19,23 @@
     "Uncoiled length and head scale differ from resting reference.",
     "Not runtime exported or bound to gameplay."
   ],
-  "next": "Use a ground-plane path guide for each phase, with individually framed poses and constant body length."
+  "next": "Repair B to a single tail using an explicit second-phase path guide before constructing loop.",
+  "guidedStudy": {
+    "source": "crawl-left-a.png",
+    "guide": "crawl-guide.svg",
+    "preview": "crawl-review.html",
+    "verified": [
+      "Body bend now clearly turns in depth on a ground plane.",
+      "Browser confirms transparent exterior and one continuous head-to-tail body."
+    ],
+    "limitations": [
+      "Only one accepted key pose, not a movement cycle.",
+      "Tongue and tail margins remain narrow.",
+      "Neck/body scale differs from coiled resting reference."
+    ],
+    "rejectedNextPhase": {
+      "source": "crawl-left-b.png",
+      "reason": "Generated two tail tips and a branching rear trunk; cannot use as next animation frame."
+    }
+  }
 }

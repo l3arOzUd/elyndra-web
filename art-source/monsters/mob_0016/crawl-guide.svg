@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<rect width="1024" height="1024" fill="#eee9dd"/>
+<g stroke="#b6b9ae" stroke-width="2"><path d="M90 600L900 450M90 700L900 550M90 800L900 650M200 500L350 850M400 470L550 820M600 440L750 790M800 410L950 760"/></g>
+<path d="M850 640C770 680 690 720 590 700S480 600 590 570S730 530 680 500S470 510 420 580S320 650 260 620" fill="none" stroke="#be9535" stroke-width="100" stroke-linecap="round"/>
+<path d="M850 640Q910 612 930 580" fill="none" stroke="#be9535" stroke-width="30" stroke-linecap="round"/>
+<path d="M260 620Q245 575 230 540" fill="none" stroke="#be9535" stroke-width="110" stroke-linecap="round"/>
+<ellipse cx="192" cy="515" rx="92" ry="56" fill="#dfb84d"/>
+<ellipse cx="186" cy="500" rx="10" ry="15" fill="#34291a"/>
+<g font-family="sans-serif" font-size="24" fill="#343b31"><text x="60" y="70">Ground-plane body path: ALL bends lie flat.</text><text x="60" y="110">Head faces LEFT; only short neck rises above ground.</text><text x="60" y="950">Guide geometry only; use character reference for design.</text></g>
+</svg>

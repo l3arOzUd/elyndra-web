@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>Sandcoil ground-plane pose</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
+<h1>Sandcoil — guided ground-plane pose</h1>
+<p>Single key pose, not a completed animation. Compare body depth and belly contact with the earlier sheet.</p>
+<canvas width="1000" height="650"></canvas>
+<script type="module">
+const im=new Image();im.src='./crawl-left-a.png';await im.decode();
+const g=document.querySelector('canvas').getContext('2d');
+g.drawImage(im,40,20,920,920*im.height/im.width);
+window.__sandcoilCrawl={ready:true};
+</script>
