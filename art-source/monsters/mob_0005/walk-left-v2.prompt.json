@@ -1,0 +1,10 @@
+{
+  "prompt": "Exact reference Craglet painted full-body six-frame WALK cycle, 3columns2rows evenly separated. All face LEFT with same chunky LARGE slate plates, thick domed torso, head size, cream belly, warm quartz and long curled tail. Preserve original painterly style, no sharper small-plate redesign. Four legs: near foreleg is the prominent shoulder with two quartz flecks; it remains the SAME leg in every frame. Far foreleg always behind it. Six frames read order: 1 near forefoot reaches LEFT and plants, near hindfoot trails RIGHT; 2 same near forefoot bears weight while near hindleg lifts bends knee; 3 near hindfoot swings forward LEFT under hip while near forefoot now behind shoulder; 4 near hindfoot plants forward, near forefoot lifts with bent elbow; 5 SAME near foreleg swings LEFT above ground, far foreleg supports behind it; 6 near forefoot extends downward preparing frame1 contact, near hindfoot trails. Far legs opposite phases, exactly four limbs no disconnected extra feet. Constant bone lengths, no stretch. Body remains same dimensions with only tiny bob; tail counterbalances subtly. Whole figures inside central80percent EACH cell with clear generous empty gutters. True transparent alpha background NO ground shadow glow haze text grid. Landscape3:2 sheet.",
+  "references": [
+    "left.png"
+  ],
+  "layout": {
+    "columns": 3,
+    "rows": 2
+  }
+}
