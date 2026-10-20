@@ -1,0 +1,4 @@
+{
+  "prompt": "Clean alpha edges of this exact Brookfin sprite sheet. Remove the pale cloudy halo OUTSIDE the creature silhouettes, especially outside dorsal side and tail fins of TOP LEFT blink pose. Background outside silhouettes must be fully transparent, no glow fringe haze or shadow. Preserve translucent actual fin membranes INSIDE their gold outlines and retain all fin veins, body, colors, closed eyelids, poses and positions exactly. Do not erode the fins. Same1536x1024 layout. This is edge cleanup only, no redesign.",
+  "reference": "idle-front-blink.png"
+}

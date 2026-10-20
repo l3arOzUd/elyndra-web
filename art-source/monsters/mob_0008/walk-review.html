@@ -18,7 +18,7 @@ const backWalk=new Image();backWalk.src='./walk-back.png';await backWalk.decode(
 const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
 const correctedBackActions=new Image();correctedBackActions.src='./actions-back-v2.png';await correctedBackActions.decode();
 const blink=new Image();blink.src='./idle-left-blink.png';await blink.decode();
-const frontBlink=new Image();frontBlink.src='./idle-front-blink.png';await frontBlink.decode();
+const frontBlink=new Image();frontBlink.src='./idle-front-blink-v2.png';await frontBlink.decode();
 let clip='walk';
 const seq={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 for(const name of ['attack','hit','death']){seq[`${name}-front`]=seq[name];document.querySelector('#clip').add(new Option(`${name}-front`,`${name}-front`));}
