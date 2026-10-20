@@ -1,7 +1,7 @@
 <!doctype html><meta charset="utf-8"><title>Sandcoil action review</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}button,select{font:inherit;margin:8px}</style>
 <h1>Sandcoil — action key poses</h1>
-<p>Draft artwork. Check coil continuity, head size and floor contact. Not bound to gameplay. Idle tongue motion currently exists for side view only; front and back remain static.</p>
+<p>Draft artwork. Check coil continuity, head size and floor contact. Not bound to gameplay. Idle tongue motion exists for side and front; rear remains static.</p>
 <select id="view"><option value="left">Side</option><option value="front">Front</option><option value="back">Back</option></select>
 <select id="clip"><option>attack</option><option>hit</option><option>death</option><option>idle</option></select>
 <button id="replay">Replay</button><label><input id="paused" type="checkbox"> Pause</label>
@@ -12,7 +12,7 @@
 const images={};for(const view of ['left','front','back']){const image=new Image();image.src=`actions-${view}.png`;await image.decode();images[view]=image;}
 let im=images.left;
 const repairs={};for(const view of ['front','back']){const image=new Image();image.src=`actions-${view}-v2.png`;await image.decode();repairs[view]=image;}
-const idle={};for(const view of ['left']){const image=new Image();image.src=`idle-${view}-tongue-in.png`;await image.decode();idle[view]=image;}
+const idle={};for(const view of ['left','front']){const image=new Image();image.src=view==='front'?'idle-front-tongue-in-v4.png':`idle-${view}-tongue-in.png`;await image.decode();idle[view]=image;}
 const motion=document.querySelector('#motion'),g=motion.getContext('2d'),contact=document.querySelector('#contact');
 contact.getContext('2d').drawImage(im,0,0,1536,1024);
 const sequences={idle:[0,0,0,0,0,0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};

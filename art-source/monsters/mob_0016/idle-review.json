@@ -1,22 +1,41 @@
 {
-  "status": "side-idle-draft-front-repair-pending",
-  "selected": "idle-left-tongue-in.png cell 0",
+  "status": "front-and-side-idle-draft",
+  "selected": [
+    "idle-left-tongue-in.png cell 0",
+    "idle-front-tongue-in-v4.png cell 0"
+  ],
   "preview": "actions-review.html",
   "verified": [
     "Side idle alternates tongue-in and original tongue-out poses with eye open.",
     "Browser composite of side idle is clean.",
-    "Preview loop plays without page errors."
+    "Preview loop plays without page errors.",
+    "Front V4 restores clean browser alpha while retaining original frame registration.",
+    "Front idle loops tongue-in/out with open eyes without page errors."
   ],
   "frontAttempts": [
-    {"source": "idle-front-tongue-in.png", "result": "Rejected: actual translucent orange background haze in browser."},
-    {"source": "idle-front-tongue-in-v2.png", "result": "Alpha repaired, but head/body size, placement and color changed; not selected for idle loop."}
+    {
+      "source": "idle-front-tongue-in.png",
+      "result": "Rejected: actual translucent orange background haze in browser."
+    },
+    {
+      "source": "idle-front-tongue-in-v2.png",
+      "result": "Alpha repaired, but head/body size, placement and color changed; not selected for idle loop."
+    },
+    {
+      "source": "idle-front-tongue-in-v3.png",
+      "result": "Rejected: registration improved but visible orange haze remained."
+    },
+    {
+      "source": "idle-front-tongue-in-v4.png",
+      "result": "Selected draft: clean alpha and original cell placement; minor painted detail/color drift remains."
+    }
   ],
   "limitations": [
-    "Two unique side drawings repeated over six timeline frames.",
+    "Two unique drawings per front/side view repeated over six timeline frames.",
     "Minor scale-marking and color drift remains.",
-    "Front and back idle stay static.",
+    "Back idle stays static; tongue is occluded from rear.",
     "Existing closed-eye hit/death drawings are stylized and still require anatomy/art-direction review.",
     "No runtime export or gameplay binding."
   ],
-  "next": "Repair frontal idle while preserving original registration and proportions."
+  "next": "Review complete movement/action set in runtime draft while retaining open transition and anatomy issues."
 }
