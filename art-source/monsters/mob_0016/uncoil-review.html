@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><title>Sandcoil uncoil study</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
+<h1>Sandcoil ? uncoil intermediate</h1>
+<p>Isolated middle pose under review. The earlier four-pose sheet below is REJECTED: scale drift, crossing cell boundaries and missing middle stage.</p>
+<canvas id="motion" width="1000" height="650"></canvas><h2>Rejected sheet</h2><canvas id="sheet" width="1536" height="1024"></canvas>
+<script type="module">
+for(const [id,file]of [['motion','uncoil-left-middle.png'],['sheet','uncoil-left.png']]){const im=new Image();im.src=file;await im.decode();const c=document.getElementById(id);c.getContext('2d').drawImage(im,0,0,c.width,c.height);}
+window.__sandcoilUncoil={ready:true};
+</script>

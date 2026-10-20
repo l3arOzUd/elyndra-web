@@ -1,0 +1,23 @@
+{
+  "status": "transition-not-achieved",
+  "preview": "uncoil-review.html",
+  "rejectedSheet": {
+    "source": "uncoil-left.png",
+    "reason": "Last two poses shrink and revert to vertical body arches; third tail overlaps fourth cell. Missing coherent intermediate loop."
+  },
+  "isolatedStudy": {
+    "source": "uncoil-left-middle.png",
+    "verified": [
+      "One continuous body with single tail and clean browser alpha.",
+      "No cross-cell truncation in isolated image."
+    ],
+    "limitations": [
+      "Already resembles fully uncoiled crawl rather than the requested halfway open resting loop.",
+      "Neck taller than crawl reference.",
+      "Tongue and tail margins too narrow.",
+      "Cannot establish a transition from resting coil using this pose."
+    ]
+  },
+  "runtimeBound": false,
+  "next": "Use an explicit body-path guide for a retained horizontal open loop; do not repeat the same text-only transition request."
+}
