@@ -1,0 +1,20 @@
+{
+  "id": "mob_0075",
+  "name": "Hoarfrost Behemoth",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from frontal four-tusk mammoth, rear and opposite profile.",
+  "confirmed": [
+    "White/slate frost wool, shoulder hump, trunk and four legs retained.",
+    "Rear has no duplicate face; outer tusk arcs remain at silhouette edges.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Profile tusks overlap heavily; only three tips clearly read, fourth tusk root/tip not verified.",
+    "Both profiles remain three-quarter with frontal trunk/tusk arrangement.",
+    "Rear feet retain segmented front-like nail forms instead of clean heel pads.",
+    "Rear tail is longer/thicker than profile tail and resembles hanging trunk; tail shape needs alignment.",
+    "Wool/icicle map, hump shape and stance differ; side image scale differs from front.",
+    "Very tight lateral margins on left; no separated parts or runtime clips yet."
+  ],
+  "next": "Lock all four numbered tusk roots and tips in true profiles, correct rear heels/tail and body proportions; separate four legs/head/trunk/tusks/tail for idle, heavy walk, gore, hit and collapse with frost VFX."
+}
