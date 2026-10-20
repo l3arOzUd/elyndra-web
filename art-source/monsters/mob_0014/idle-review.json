@@ -5,13 +5,19 @@
   "verified": [
     "Browser comparison confirms crown leaves bend while feet retain approximately the same placement.",
     "Exterior alpha clean on grey preview.",
-    "Idle uses six timeline frames but only two unique painted poses."
+    "Idle uses six timeline frames but only two unique painted poses.",
+    "Front and rear browser comparisons show leaf alternates with feet approximately registered and clean exterior alpha."
   ],
   "limitations": [
     "Minor gear shading and vine-detail drift remains.",
-    "Front and rear idle currently hold neutral pose; leaf alternates not authored yet.",
     "Two-pose leaf switch needs intermediate drawings.",
-    "Other poses in edited sheet are unused; edit changed death lens brightness."
+    "Other poses in edited sheet are unused; edit changed death lens brightness.",
+    "Front/rear alternate is brighter and more saturated; color popping remains visible and needs correction."
   ],
-  "next": "Create front and rear leaf alternates, then combine draft clips for engine review."
+  "next": "Match alternate colors and combine clips for engine review; no production approval.",
+  "selectedSources": {
+    "left": "idle-left-leaves.png",
+    "front": "idle-front-leaves.png",
+    "back": "idle-back-leaves.png"
+  }
 }

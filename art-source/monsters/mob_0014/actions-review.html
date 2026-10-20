@@ -1,6 +1,6 @@
 <!doctype html><meta charset="utf-8"><title>Vinecrawler action study</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{display:block;background:#697a80;max-width:100%;margin:16px 0}</style>
-<h1>Vinecrawler — left action study</h1><p>Authored attack, recoil and folded collapse. Idle leaf motion is authored for left only; front/back hold neutral. Eight-leg continuity and transitions remain unfinished; not bound to gameplay.</p>
+<h1>Vinecrawler — left action study</h1><p>Authored attack, recoil and folded collapse. Idle uses two leaf poses per view; intermediate drawings remain pending. Eight-leg continuity and transitions remain unfinished; not bound to gameplay.</p>
 <select id="view"><option value="left">Left</option><option value="front">Front draft</option><option value="back">Back draft</option></select><select id="clip"><option>idle</option><option>attack</option><option>hit</option><option>death</option></select><button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" value="0">
 <canvas id="motion" width="640" height="560"></canvas><canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
@@ -8,11 +8,12 @@ const im=new Image();im.src='./actions-left.png';await im.decode();
 const front=new Image();front.src='./actions-front.png';await front.decode();
 const back=new Image();back.src='./actions-back.png';await back.decode();
 const idleLeaves=new Image();idleLeaves.src='./idle-left-leaves.png';await idleLeaves.decode();
+const frontIdle=new Image();frontIdle.src='./idle-front-leaves.png';await frontIdle.decode();const backIdle=new Image();backIdle.src='./idle-back-leaves.png';await backIdle.decode();
 const seq={idle:[0,0,0,0,0,0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 let clip='idle',f=0,paused=false,last=0;
 function draw(ctx,f,x,y,s){
- if(document.querySelector('#view').value==='back'){const p=seq[clip][f],sy=p<3?0:550,h=p<3?550:474,bottom=[502,499,511,438,399,410][p];const inset=p===1?24:0;ctx.drawImage(back,p%3*512+inset,sy,512-inset,h,x-(256-inset)*s,y-bottom*s,(512-inset)*s,h*s);return;}
- if(document.querySelector('#view').value==='front'){const p=seq[clip][f],cuts=[0,536,1022,1536],col=p%3,sx=cuts[col],w=p===1?474:cuts[col+1]-sx,sy=p<3?0:612,h=p===0?580:p<3?612:412,ax=[270,240,246,270,240,246][p],bottom=[568,558,610,355,325,326][p];ctx.drawImage(front,sx,sy,w,h,x-ax*s,y-bottom*s,w*s,h*s);return;}
+ if(document.querySelector('#view').value==='back'){const p=seq[clip][f],sy=p<3?0:550,h=p<3?550:474,bottom=[502,499,511,438,399,410][p];const inset=p===1?24:0;ctx.drawImage(clip==='idle'&&f>=2&&f<=3?backIdle:back,p%3*512+inset,sy,512-inset,h,x-(256-inset)*s,y-bottom*s,(512-inset)*s,h*s);return;}
+ if(document.querySelector('#view').value==='front'){const p=seq[clip][f],cuts=[0,536,1022,1536],col=p%3,sx=cuts[col],w=p===1?474:cuts[col+1]-sx,sy=p<3?0:612,h=p===0?580:p<3?612:412,ax=[270,240,246,270,240,246][p],bottom=[568,558,610,355,325,326][p];ctx.drawImage(clip==='idle'&&f>=2&&f<=3?frontIdle:front,sx,sy,w,h,x-ax*s,y-bottom*s,w*s,h*s);return;}
  const p=seq[clip][f],sx=[0,544,960,0,544,1080][p],sy=p<3?0:590,w=[544,474,576,544,536,456][p],h=p<3?590:434;
  const ax=[278,236,325,278,250,225][p],bottom=[565,565,584,400,388,378][p];
  ctx.save();if(p===1){ctx.beginPath();ctx.rect(x-ax*s,y-bottom*s,416*s,400*s);ctx.rect(x-ax*s,y-(bottom-400)*s,w*s,(h-400)*s);ctx.clip();}if(p===2){ctx.beginPath();ctx.rect(x-ax*s,y-bottom*s,w*s,400*s);ctx.rect(x-(ax-60)*s,y-(bottom-400)*s,(w-60)*s,(h-400)*s);ctx.clip();}ctx.drawImage(clip==='idle'&&f>=2&&f<=3?idleLeaves:im,sx,sy,w,h,x-ax*s,y-bottom*s,w*s,h*s);ctx.restore();
