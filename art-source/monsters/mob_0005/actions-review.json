@@ -1,0 +1,20 @@
+{
+  "id": "mob_0005",
+  "status": "draft-actions-created-refinement-pending",
+  "source": "actions-left.png",
+  "preview": "walk-review.html",
+  "verified": [
+    "Browser canvas renders transparent exterior on light background with no brown background.",
+    "Attack, hit and death preview selectors render without page errors.",
+    "Death folds legs and lowers the belly rather than rotating the entire standing body backward; playback holds final frame.",
+    "Refined sheet keeps all six alpha bounds within their assigned cells."
+  ],
+  "limitations": [
+    "Death torso still loses apparent volume and tail length changes through collapse. Not approved as final anatomy.",
+    "Attack anticipation width differs from impact and jaw remains open at impact; needs a clear authored jaw-closing contact frame.",
+    "Small brass belly gear remains absent; plate/crystal continuity and four-leg identity require refinement.",
+    "Three unique death poses plus neutral do not yet provide smooth fully authored timing.",
+    "Only left-facing drafts; no runtime binding or complete directional animation coverage."
+  ],
+  "next": "Correct volume and tail continuity in collapse frames, add jaw contact and missing gear detail, repair walk support order, then export and inspect runtime clips before replacing placeholder."
+}

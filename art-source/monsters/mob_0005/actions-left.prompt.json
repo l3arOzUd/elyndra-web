@@ -1,0 +1,11 @@
+{
+  "animation": "attack-hit-death",
+  "layout": {
+    "columns": 3,
+    "rows": 2
+  },
+  "prompt": "Create six full-body ACTION poses of same Craglet stone-armored quartz lizard from reference. Strict equal 3columns2rows sprite sheet, every creature faces LEFT, same size proportions camera plate identity and full tail, four short fixed-length legs. Top row: 1 neutral ready four-foot stance; 2 attack anticipation crouch hips loaded head drawn slightly back jaws opening; 3 attack impact head thrust forward LEFT jaws snapping, front feet braced hind legs pushing, body stays quadrupedal not airborne. Bottom row: 4 hit recoil shoulders lowered eyes squeezed, legs bending but supporting; 5 dying collapse elbows knees folding outward belly lowering head dropping, eyes closed; 6 final dead weight belly and chin resting low at ground level, forelegs folded naturally beside body, hindlegs relaxed, tail lowered, eyes closed, no smile. Death is gravity-driven collapse NOT rotating a standing silhouette backwards. No blood. Keep stone plate/crystal sizes consistent, do not flatten or shrink torso for death. Six distinct poses with identical scale. Each body fits within central85percent of its cell with clear transparent gutters, no background no ground no shadows no labels no glow haze. True transparent alpha. Hand-painted fantasy, slate grey armor, warm quartz spine, cream belly, amber eyes. Landscape3:2 sheet.",
+  "references": [
+    "walk-left.png"
+  ]
+}

@@ -1,43 +1,53 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Craglet walk — draft review</title>
+<title>Craglet motion — draft review</title>
 <style>
 body{background:#263037;color:#eee;font:16px system-ui;margin:24px}
 canvas{background:#e6e6e6;max-width:100%;border:1px solid #777}
 button,input{margin:12px;padding:8px}p{max-width:900px}
 </style>
-<h1>Craglet — six-frame walk draft</h1>
+<h1>Craglet — motion drafts</h1>
 <p>Animation review only. Not bound to the game. Constant scale, per-frame ground registration, no limb deformation. Check foot contact, four-leg continuity, body drift and the last-to-first transition.</p>
-<button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label><span id="label"></span>
+<label>Clip <select id="clip"><option>walk</option><option>attack</option><option>hit</option><option>death</option></select></label>
+<button id="pause">Pause</button><button id="replay">Replay</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label><span id="label"></span>
 <button id="background">Light / dark</button><br>
 <canvas id="motion" width="600" height="400"></canvas>
 <canvas id="contact" width="1200" height="640"></canvas>
 <script type="module">
 const image=new Image();image.src='./walk-left.png';await image.decode();
+const actions=new Image();actions.src='./actions-left.png';await actions.decode();
 const boxes=[[15,178,491,272],[521,174,485,283],[1027,177,499,280],[10,614,497,278],[525,612,485,279],[1026,620,504,276]];
+const actionBoxes=[[26,181,481,279],[546,181,441,283],[1026,181,492,281],[28,628,448,282],[523,698,488,216],[1060,746,462,173]];
+const sequences={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,3,4,4,5,5]};
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
-let paused=false,frame=0,last=0,light=true;
+let paused=false,frame=0,last=0,light=true,clip='walk';
 function draw(ctx,i,cx,baseline,scale){
- const b=boxes[i];ctx.drawImage(image,...b,cx-b[2]*scale/2,baseline-b[3]*scale,b[2]*scale,b[3]*scale);
+ const b=(clip==='walk'?boxes:actionBoxes)[i];ctx.drawImage(clip==='walk'?image:actions,...b,cx-b[2]*scale/2,baseline-b[3]*scale,b[2]*scale,b[3]*scale);
 }
+function contactSheet(){
+cg.clearRect(0,0,1200,640);
 for(let i=0;i<6;i++){
  const x=(i%3)*400,y=Math.floor(i/3)*320;
- draw(cg,i,x+200,y+280,.74);
+ draw(cg,sequences[clip][i],x+200,y+280,.74);
  cg.fillStyle='#222';cg.fillText(`Frame ${i+1}`,x+12,y+20);
 }
+}
+contactSheet();
+document.querySelector('#clip').onchange=e=>{clip=e.target.value;frame=0;last=performance.now();paused=false;document.querySelector('#pause').textContent='Pause';contactSheet();};
+document.querySelector('#replay').onclick=()=>{frame=0;paused=false;last=performance.now();document.querySelector('#pause').textContent='Pause';};
 document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelector('#pause').textContent=paused?'Play':'Pause';};
 document.querySelector('#frame').oninput=e=>{paused=true;frame=Number(e.target.value);document.querySelector('#pause').textContent='Play';};
 document.querySelector('#background').onclick=()=>{light=!light;for(const c of [motion,contact])c.style.background=light?'#e6e6e6':'#263037';};
 function tick(now){
- if(!paused&&now-last>=150){frame=(frame+1)%6;last=now;}
+ if(!paused&&now-last>=150){frame=clip==='walk'?(frame+1)%6:Math.min(5,frame+1);last=now;}
  g.clearRect(0,0,600,400);
  g.strokeStyle='#777';g.beginPath();g.moveTo(0,345);g.lineTo(600,345);g.stroke();
- draw(g,frame,300,345,1);
+ draw(g,sequences[clip][frame],300,345,1);
  document.querySelector('#frame').value=String(frame);
  document.querySelector('#label').textContent=String(frame+1);
  requestAnimationFrame(tick);
 }
-window.__cragletWalk={ready:true,boxes};
+window.__cragletWalk={ready:true,boxes,actionBoxes,sequences};
 requestAnimationFrame(tick);
 </script>
