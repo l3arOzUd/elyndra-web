@@ -1,0 +1,21 @@
+{
+  "id": "mob_0073",
+  "name": "Glacier Juggernaut",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from frontal tracked mech master, rear and opposite profile.",
+  "confirmed": [
+    "Rust-red frosted armor, front furnace and wedge plough retained; no walking legs introduced.",
+    "Rear engine panels opaque without duplicate front furnace/face.",
+    "Profiles show corresponding track mechanism with two large wheels and two lower rollers.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Side views remain oblique; blade shows broad front surface instead of narrow side projection.",
+    "Rear piston arms look downward/back toward tracks rather than clearly extending forward to blade.",
+    "Front blade width exceeds tracks but rear hides blade entirely; outer-tip visibility needs geometric reconciliation.",
+    "Rear exhaust height and torso depth differ; snow/icicle maps and plate fasteners drift.",
+    "Far track and arm fully/partly occluded; mounts not verified.",
+    "No separated track/roller/piston parts or runtime animation clips yet."
+  ],
+  "next": "Lock chassis and plough geometry, arm attachment points and armor map; separate tracks/rollers/pistons/blade/torso for idle, drive, plough strike, recoil and shutdown, plus furnace/steam VFX."
+}
