@@ -1,0 +1,20 @@
+{
+  "id": "mob_0091",
+  "name": "Nullbloom",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front master and opposite-view references.",
+  "confirmed": [
+    "Matte black glass flower, single violet eye, twisted stem and walking roots retained.",
+    "Rear blossom opaque with no duplicate eye; profiles show narrow eye at forward edge.",
+    "No ground trail baked into master; four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Petal count/order/curvature changes across views; rear largely resembles closed frontal petals rather than verified convex backs.",
+    "Profiles remain oblique and blossom axis tilts upward; bowl depth needs consistent construction.",
+    "Left only three root feet clearly separable; fourth root attachment occluded/unverified.",
+    "Stem spiral handedness and thorn placement not demonstrably consistent; root stance resembles front in all views.",
+    "Root toe directions/counts drift and top petal margin is tight.",
+    "No separated petals/eye/stem/roots or runtime clips yet."
+  ],
+  "next": "Number petals and four root anchors, reconcile bowl depth/stem twist/stance, normalize framing. Separate eye/lids/petal layers/stem/root joints for idle sway, four-root walking, gaze/drain attack, hit and wilt-collapse; grey walking trail and drain VFX separate."
+}
