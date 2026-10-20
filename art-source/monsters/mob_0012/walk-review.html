@@ -17,9 +17,10 @@ const frontFix=new Image();frontFix.src='./walk-front-v3.png';await frontFix.dec
 const backWalk=new Image();backWalk.src='./walk-back.png';await backWalk.decode();
 const frontActions=new Image();frontActions.src='./actions-front-v2.png';await frontActions.decode();
 const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
+const backFix=new Image();backFix.src='./actions-back-v2.png';await backFix.decode();
 let clip='walk';const seq={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 function draw(ctx,f,x,y,s){
- if(clip.endsWith('-back')&&!clip.startsWith('walk')){const pose=seq[clip.replace('-back','')][f],sy=pose<3?0:516,h=pose<3?516:508,bottom=[516,515,502,490,459,453][pose];ctx.drawImage(backActions,pose%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
+ if(clip.endsWith('-back')&&!clip.startsWith('walk')){const pose=seq[clip.replace('-back','')][f],sy=pose<3?0:516,h=pose<3?516:508,bottom=[516,515,502,490,459,453][pose];ctx.drawImage(pose===5?backFix:backActions,pose%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
  if(clip.endsWith('-front')&&!clip.startsWith('walk')){const pose=seq[clip.replace('-front','')][f],sy=pose<3?0:542,h=pose<3?542:482,bottom=[533,531,537,464,456,455][pose];ctx.drawImage(frontActions,pose%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
  if(clip==='walk-back'){const sy=f<3?0:508,h=f<3?508:516,bottom=f<3?507:496;ctx.drawImage(backWalk,f%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
  if(clip==='walk-front'&&f===4){ctx.drawImage(frontFix,650,506,230,10,x-118*s,y-509*s,230*s,10*s);ctx.drawImage(frontFix,512,516,512,508,x-256*s,y-499*s,512*s,508*s);return;}
