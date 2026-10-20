@@ -13,5 +13,22 @@
     "V2 brass and leaves are more saturated than original reference.",
     "Not exported or bound to game."
   ],
-  "next": "Create isolated keyframes with complete feet and establish eight-leg support sequence."
+  "next": "Create isolated keyframes with complete feet and establish eight-leg support sequence.",
+  "isolatedContactStudy": {
+    "sources": [
+      "walk-left-contact-a.png",
+      "walk-left-contact-b.png"
+    ],
+    "verified": [
+      "Browser comparison shows complete feet and clean exterior alpha without neighboring fragments.",
+      "Body crown and main gear centers remain approximately registered at one fixed draw scale.",
+      "Front near foot lifts clearly in contact B."
+    ],
+    "limitations": [
+      "Only two unique poses, displayed with holds; not a complete walking cycle.",
+      "A shows six obvious tips and B seven; all eight chains remain unproven.",
+      "Several near legs do not alternate support as requested.",
+      "Foot baseline and rigid segment lengths vary; passing poses still missing."
+    ]
+  }
 }
