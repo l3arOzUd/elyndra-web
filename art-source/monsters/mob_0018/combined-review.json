@@ -1,0 +1,29 @@
+{
+  "status": "combined-study-unapproved",
+  "preview": "combined-review.html",
+  "views": ["left", "front", "back", "right-mirrored-left"],
+  "clips": ["static-idle", "walk", "attack", "hit", "death"],
+  "technicalCheck": {
+    "browserErrors": [],
+    "checkedTimingCells": 92,
+    "emptyOrCanvasEdgeViolations": [],
+    "method": "Draw all frames for four preview facings into 384-square canvases; alpha greater than 32 must not touch boundary."
+  },
+  "visualFindings": [
+    "Standing height broadly registered across three authored views.",
+    "Side walking torso is thinner than side idle; uniform registration cannot fix source proportions.",
+    "Side contacts differ in arm thickness and carving design.",
+    "Front and rear walking retain visible alternating legs but foot trajectories and planted contact remain provisional.",
+    "Death collapses through bent knees in all views; two collapse drawings still too abrupt.",
+    "Rear strike still reads as raised guard despite corrected horizontal reach."
+  ],
+  "remaining": [
+    "Author idle variation and sand emission required by Bible.",
+    "Correct rigid segment and carving continuity.",
+    "Refine foot support and weight transfer, add missing in-between poses.",
+    "Refine rear punch projection and shoulder drive.",
+    "Export runtime sheets and check actual SpriteAnimator events and death hold after art refinements.",
+    "Right and diagonal original animation art remains missing; preview mirroring is provisional."
+  ],
+  "publicBinding": false
+}
