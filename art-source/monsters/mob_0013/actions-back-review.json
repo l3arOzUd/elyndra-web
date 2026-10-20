@@ -5,7 +5,9 @@
     "Browser death sequence retains rear shell with no duplicated eyes or needle.",
     "Tank dims and legs fold in terminal pose.",
     "Rear death crop has clean exterior without neighboring fragments.",
-    "V3 rear terminal shell sits lower with folded legs; browser confirms exterior haze removed."
+    "V3 rear terminal shell sits lower with folded legs; browser confirms exterior haze removed.",
+    "Isolated terminal sprite inspected on browser grey background: complete wing edges, no neighboring fragments or exterior haze; tank is dark jade.",
+    "Terminal image uses fixed scale and ground baseline; no per-frame stretching."
   ],
   "limitations": [
     "Attack pose resembles lateral bank more than forward thrust.",
@@ -13,12 +15,11 @@
     "Top-row asymmetric crops need attack inspection.",
     "Body scale drifts and intermediate landing drawings are missing.",
     "Not exported or bound to gameplay.",
-    "V3 brightened tank; powered-down sap color needs restoration.",
-    "Left wing edge near crop mask has a small notch; source gutter repair needed."
+    "Isolated redraw changes shell rivets and wing overlap; anatomy consistency still pending."
   ],
-  "next": "Repair terminal wing gutter and sap color, inspect attack crops then export runtime draft.",
+  "next": "Inspect attack crops and add landing transition before runtime export.",
   "selectedPoses": {
-    "5": "actions-back-v3.png",
+    "5": "death-back-final.png",
     "0-4": "actions-back.png"
   },
   "rejectedDraft": "actions-back-v2.png severe exterior alpha haze"
