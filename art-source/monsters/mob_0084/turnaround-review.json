@@ -1,0 +1,21 @@
+{
+  "id": "mob_0084",
+  "name": "Rivet Scrapling",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation from front identity master with rear and opposite-side references.",
+  "confirmed": [
+    "Single amber gear-eye remains frontal; rear has no duplicated eye.",
+    "Exactly two spring-wire legs with loop feet and no arms in each image.",
+    "Right profile emphasizes slotted screw and washer; left profile emphasizes large upper hex bolt.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Both profiles remain oblique with too much iris visible; strict side eye projection needs refinement.",
+    "Large slotted screw appears on left and rear too; hardware map is inconsistent rather than a rigid rotated assembly.",
+    "Upper hex bolt, rear triangular plate, washers and small nuts migrate in size/location across views.",
+    "Wire roots, spring winding, loop orientation and leg spacing differ; profiles imply staggered foot placement.",
+    "Back body is taller/broader relative to legs than front; normalize proportions before separation.",
+    "No separated scrap/eye/springs or runtime animation clips yet."
+  ],
+  "next": "Define immutable hardware landmarks and two wire paths, align views/stance, then separate rigid body, lens/gear, spring legs and selected loose rivets for jittering idle, compressed takeoff/hop/landing, impact attack, hit and spring-collapse death with separate debris."
+}
