@@ -1,13 +1,14 @@
 <!doctype html><meta charset="utf-8"><title>Sandcoil ground-plane pose</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
 <h1>Sandcoil — guided ground-plane pose</h1>
-<p>Single key pose, not a completed animation. Compare body depth and belly contact with the earlier sheet.</p>
-<select id="pose"><option value="a">Pose A</option><option value="b">Pose B - repaired tail</option></select><br>
+<p>Four key poses under review; not a completed production animation. Compare body depth and belly contact with the earlier sheet.</p>
+<select id="pose"><option value="a">Pose A</option><option value="b">Pose B - repaired tail</option><option value="c">Pose C</option><option value="d">Pose D</option></select><button id="play">Play / pause</button><br>
 <canvas width="1000" height="650"></canvas>
 <script type="module">
-const images={};for(const [key,file]of Object.entries({a:'crawl-left-a.png',b:'crawl-left-b-v3.png'})){const im=new Image();im.src=file;await im.decode();images[key]=im;}
+const images={};for(const [key,file]of Object.entries({a:'crawl-left-a.png',b:'crawl-left-b-v3.png',c:'crawl-left-c.png',d:'crawl-left-d.png'})){const im=new Image();im.src=file;await im.decode();images[key]=im;}
 const g=document.querySelector('canvas').getContext('2d');
 function draw(){const im=images[document.querySelector('#pose').value];g.clearRect(0,0,1000,650);g.drawImage(im,40,20,920,920*im.height/im.width);}
+let playing=false,last=0,index=0;document.querySelector('#play').onclick=()=>playing=!playing;function tick(t){if(playing&&t-last>220){index=(index+1)%4;document.querySelector('#pose').value=['a','b','c','d'][index];draw();last=t;}requestAnimationFrame(tick);}requestAnimationFrame(tick);
 draw();document.querySelector('#pose').onchange=draw;
 window.__sandcoilCrawl={ready:true};
 </script>

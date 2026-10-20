@@ -19,7 +19,7 @@
     "Uncoiled length and head scale differ from resting reference.",
     "Not runtime exported or bound to gameplay."
   ],
-  "next": "Create remaining lateral phases with one tail and register head/body landmarks before animation export.",
+  "next": "Register head position, stabilize body thickness and inspect wave continuity; front/rear motion and action clips remain.",
   "guidedStudy": {
     "source": "crawl-left-a.png",
     "guide": "crawl-guide.svg",
@@ -49,6 +49,27 @@
       "Head position and scale differ from A.",
       "Scale pattern and body thickness drift.",
       "Two poses do not yet form a complete traveling wave cycle."
+    ]
+  },
+  "fourPoseStudy": {
+    "preview": "crawl-review.html",
+    "frames": [
+      "crawl-left-a.png",
+      "crawl-left-b-v3.png",
+      "crawl-left-c.png",
+      "crawl-left-d.png"
+    ],
+    "verified": [
+      "C and D each retain one unbranched head-to-tail body.",
+      "Browser composites show transparent exteriors.",
+      "Preview can play four authored poses in sequence."
+    ],
+    "limitations": [
+      "Head height differs especially A versus B/C/D.",
+      "Body thickness and total apparent length drift.",
+      "Surface is glossier in later phases.",
+      "Ground contact and traveling wave continuity remain unapproved.",
+      "No runtime export or binding."
     ]
   }
 }
