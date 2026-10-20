@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "front.png",
+  "prompt": "Use case: precise-object-edit. Edit the reference Brine Automaton into a clean front animation master. Preserve exactly its design: copper barrel torso, turquoise verdigris and salt, two gauge eyes with their existing needles, two equal-height top valve wheels, rear pressure tank, paired piston arms, clamp hands, two mechanical legs and broad feet. Same neutral front view and proportions, same painted materials. Reframe the WHOLE machine smaller within a square canvas leaving at least 8 percent transparent clearance on EVERY side including above both valve wheels and below feet. Restore complete top wheel silhouettes where reference approaches boundary. Both arms and all clamp fingers fully inside canvas. Orthographic front, neutral symmetrical weight on both feet. Keep rigid mechanical shapes, no stretching or redesign, no steam, no floor, no cast shadow, no text, no extra parts. Real transparent alpha background. One character only."
+}

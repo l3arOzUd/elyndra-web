@@ -1,0 +1,26 @@
+{
+  "id": "mob_0022",
+  "file": "front-neutral-v2.png",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "alphaBoundsAbove16": [
+    139,
+    131,
+    1113,
+    1122
+  ],
+  "edgePixelsAbove16": 0,
+  "observed": [
+    "Both valve wheels now complete and equally high.",
+    "Gauge eyes, paired piston arms, clamp hands and broad feet retained."
+  ],
+  "remaining": [
+    "Salt and patina landmarks drift from original.",
+    "Other views still require mechanical alignment.",
+    "Animation not created yet."
+  ],
+  "artApproved": false,
+  "publicBinding": false
+}
