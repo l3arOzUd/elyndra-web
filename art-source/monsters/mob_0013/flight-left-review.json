@@ -5,7 +5,10 @@
     "Brass shell jade tank needle and left-facing identity retained.",
     "Wing angles change across poses.",
     "V3 switches to four isolated poses and contains a visibly lowered wing phase.",
-    "V3 actual image dimensions1254square; preview uses measured two-row layout."
+    "V3 actual image dimensions1254square; preview uses measured two-row layout.",
+    "Browser contact sheet shows full needles and wing tips without neighboring fragments.",
+    "Per-pose tank anchors replace approximate row shift; no per-frame scaling.",
+    "Added pause and frame slider for anatomy review."
   ],
   "limitations": [
     "Four wing roots and six leg chains remain ambiguous through overlap.",
@@ -14,6 +17,31 @@
     "V1 and V2 sixpose drafts retained but not used due cell overlaps.",
     "No runtime export or gameplay binding."
   ],
-  "next": "Inspect animated V3 in browser, refine wing roots and shell registration, then author front/rear flight.",
-  "selectedSource": "flight-left-v3.png"
+  "next": "Resolve far wing/leg roots and author front/rear flight; preserve fixed shell scale.",
+  "selectedSource": "flight-left-v3.png",
+  "registration": {
+    "anchors": [
+      [
+        325,
+        472
+      ],
+      [
+        910,
+        472
+      ],
+      [
+        308,
+        1053
+      ],
+      [
+        910,
+        1053
+      ]
+    ],
+    "cuts": {
+      "column": 625,
+      "row": 620
+    },
+    "scale": 0.8
+  }
 }
