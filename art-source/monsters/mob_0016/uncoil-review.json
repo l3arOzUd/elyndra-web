@@ -1,5 +1,5 @@
 {
-  "status": "transition-not-achieved",
+  "status": "guided-middle-key-pose-transition-still-incomplete",
   "preview": "uncoil-review.html",
   "rejectedSheet": {
     "source": "uncoil-left.png",
@@ -19,5 +19,20 @@
     ]
   },
   "runtimeBound": false,
-  "next": "Use an explicit body-path guide for a retained horizontal open loop; do not repeat the same text-only transition request."
+  "next": "Register resting, guided middle and crawl endpoint at common head scale and ground contact; add missing intermediate phases.",
+  "guidedStudy": {
+    "source": "uncoil-left-guided.png",
+    "guide": "uncoil-guide.svg",
+    "verified": [
+      "Retains one low overlapping body loop instead of immediately becoming fully uncoiled.",
+      "One head, one continuous body and one tapered tail.",
+      "Browser composite confirms clean alpha."
+    ],
+    "limitations": [
+      "Only one middle pose; no verified transition sequence.",
+      "Head size and body volume need registration against both endpoints.",
+      "Foreground overlap must unwind continuously in following frames.",
+      "Neck remains raised and tail margin narrow."
+    ]
+  }
 }

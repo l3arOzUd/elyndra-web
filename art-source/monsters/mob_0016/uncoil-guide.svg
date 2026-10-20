@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024">
+<rect width="1536" height="1024" fill="#e5e8e8"/>
+<!-- Rear loop then foreground crossing: one body, not stacked concentric rings. -->
+<path d="M260 275 C390 290 365 475 475 530 C590 595 955 430 1090 540 C1230 660 1050 830 760 815 C490 805 390 710 495 640 C595 570 770 620 850 690 C945 775 1125 860 1320 820"
+ fill="none" stroke="#855026" stroke-width="148" stroke-linecap="round"/>
+<path d="M260 275 C390 290 365 475 475 530 C590 595 955 430 1090 540 C1230 660 1050 830 760 815 C490 805 390 710 495 640 C595 570 770 620 850 690 C945 775 1125 860 1320 820"
+ fill="none" stroke="#e3ac49" stroke-width="126" stroke-linecap="round"/>
+<path d="M495 640 C595 570 770 620 850 690 C945 775 1125 860 1320 820" fill="none" stroke="#855026" stroke-width="148" stroke-linecap="round"/>
+<path d="M495 640 C595 570 770 620 850 690 C945 775 1125 860 1320 820" fill="none" stroke="#e3ac49" stroke-width="126" stroke-linecap="round"/>
+<ellipse cx="230" cy="260" rx="130" ry="85" fill="#e3ac49" stroke="#855026" stroke-width="8"/>
+<ellipse cx="235" cy="238" rx="22" ry="27" fill="#443a29"/>
+<path d="M1260 810 Q1340 850 1400 805 Q1350 882 1280 860" fill="#e3ac49"/>
+</svg>
