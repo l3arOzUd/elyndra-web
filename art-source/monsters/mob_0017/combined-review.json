@@ -8,7 +8,7 @@
     "right-mirrored-left"
   ],
   "clips": [
-    "idle-side-twitch",
+    "idle-front-and-side",
     "walk",
     "attack",
     "hit",
@@ -20,7 +20,7 @@
     "Uniform image scaling only; no limb stretching."
   ],
   "limitations": [
-    "Side idle has two authored antenna poses across six timing frames; front and rear remain static.",
+    "Front/side idle use two antenna poses across six timing frames; rear remains static.",
     "Front walk support and swing trajectories unresolved.",
     "Rear swing trajectories and outer support plane unresolved.",
     "Side core/reflection changes and support drift remain.",
