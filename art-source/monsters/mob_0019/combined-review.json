@@ -1,33 +1,46 @@
 {
-  "status":"combined-motion-study-unapproved",
-  "preview":"combined-review.html",
-  "views":["left","front","back","right"],
-  "clips":["front-rear-two-pose-idle-side-still","walk","attack","hit","death"],
-  "technicalCheck":{
-    "checkedTimingCells":112,
-    "emptyOrCanvasEdgeViolations":[],
-    "browserErrors":[],
-    "method":"Render every timing cell for four authored views into 384-square canvas; alpha >32 must be nonempty and avoid canvas boundary."
+  "status": "combined-motion-study-unapproved",
+  "preview": "combined-review.html",
+  "views": [
+    "left",
+    "front",
+    "back",
+    "right"
+  ],
+  "clips": [
+    "four-view-two-pose-idle",
+    "walk",
+    "attack",
+    "hit",
+    "death"
+  ],
+  "technicalCheck": {
+    "checkedTimingCells": 112,
+    "emptyOrCanvasEdgeViolations": [],
+    "browserErrors": [],
+    "method": "Render every timing cell for four authored views into 384-square canvas; alpha >32 must be nonempty and avoid canvas boundary."
   },
-  "visualReview":[
+  "visualReview": [
     "Compared idle, both walking contacts and settled death across all four authored views.",
     "Uniform walking scale adjusted toward matching idle body heights; no limb deformation used.",
     "Side gait torso and armor still differ from idle; frontal contacts remain floating.",
     "Rear thrust points sideways and rear death halo remains inconsistent.",
     "Right neutral uses original right.png, excluding generated extra-hand idle.",
     "Right walk mixes sheet and isolated poses; neutral torso is slimmer and contact stride lengths differ.",
-    "Right death playback reaches frame 5 and holds; right art is authored rather than mirrored."
+    "Right death playback reaches frame 5 and holds; right art is authored rather than mirrored.",
+    "Side idle uses two full reference-sized drawings with no mirror; inspected all four paired idle views.",
+    "All 112 timing cells rechecked after side idle integration; no empty cells, alpha boundary intersections or browser errors."
   ],
-  "remaining":[
+  "remaining": [
     "Refine right-facing driving-hand grip and unify source proportions and stride lengths.",
-    "Refine front/rear idle lighting continuity and author side idle motion.",
+    "Refine four-view idle lighting and armor continuity.",
     "Refine foot support and rigid limb continuity, add connecting poses.",
     "Correct rear thrust and halo panel projection.",
     "Harmonize weapon dimensions and death weapon-release transition.",
     "Refine procedural mirror-flare preview anchors, remove baked impact glow and integrate with gameplay hit event.",
-    "Export and test directional runtime assets after missing idle motion and pose corrections are supplied."
+    "Export and test directional runtime assets after pose corrections and idle continuity are supplied."
   ],
-  "idleReview":"idle-review.json",
-  "solarFlarePreview":"solar-flare-review.json",
-  "publicBinding":false
+  "idleReview": "idle-review.json",
+  "solarFlarePreview": "solar-flare-review.json",
+  "publicBinding": false
 }

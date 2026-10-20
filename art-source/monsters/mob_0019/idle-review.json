@@ -1,21 +1,38 @@
 {
-  "status":"front-rear-two-drawing-idle-study-unapproved",
-  "preview":"combined-review.html",
-  "selected":{"front":"idle-front-settle-v2.png cell 0","back":"idle-back-settle-v2.png cell 0"},
-  "timing":{"frames":6,"fps":4,"alternateFrames":[2,3],"authoredDrawingsPerAnimatedView":2},
-  "observations":[
+  "status": "four-view-two-drawing-idle-study-unapproved",
+  "preview": "combined-review.html",
+  "selected": {
+    "front": "idle-front-settle-v2.png cell 0",
+    "back": "idle-back-settle-v2.png cell 0",
+    "left": "left.png / idle-left-settle.png",
+    "right": "right.png / idle-right-settle.png"
+  },
+  "timing": {
+    "frames": 6,
+    "fps": 4,
+    "alternateFrames": [
+      2,
+      3
+    ],
+    "authoredDrawingsPerAnimatedView": 2
+  },
+  "observations": [
     "Initial alternate sheets contained translucent brown blocks; rejected for playback.",
     "Background-extraction revisions removed obvious brown blocks in opaque browser comparison.",
     "Feet stay broadly registered while free wrists settle slightly.",
     "Only cell 0 from revisions is used; action cells remain original selected sources.",
-    "All 112 timing cells remain nonempty and avoid canvas boundary."
+    "All 112 timing cells remain nonempty and avoid canvas boundary.",
+    "Side alternates inspected on opaque browser background: no obvious background matte or extra hand.",
+    "Side idle and action neutral now share full reference drawings, with fixed registration and scale.",
+    "Four-view paired browser capture: output/warden-idle-four-views.png."
   ],
-  "limitations":[
+  "limitations": [
     "Gold saturation and highlights changed in cleanup revisions, creating potential material flicker.",
     "Minor knee, torso and halo detail drift remains.",
     "Two drawings with repeated timing are not six distinct poses.",
-    "Left/right idle still use one static drawing.",
-    "No public binding or production approval."
+    "No public binding or production approval.",
+    "Left alternate is brighter and its free wrist/hand curls inward; armor detail changes beyond the intended wrist motion.",
+    "Right alternate movement is very subtle at runtime size."
   ],
-  "next":"Match idle lighting and armor details, then author side idle motion without extra hands."
+  "next": "Unify alternate lighting and armor, then correct rear thrust and gait contact before runtime export."
 }

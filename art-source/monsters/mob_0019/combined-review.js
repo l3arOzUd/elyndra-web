@@ -1,4 +1,4 @@
-const files=['idle-front-settle-v2.png','idle-back-settle-v2.png','walk-left-contacts-v2.png','walk-left-pass-a-v2.png','walk-left-pass-b.png','walk-front.png','walk-back.png','actions-left.png','actions-left-v2.png','actions-front.png','actions-back.png','right.png','actions-right.png','walk-right.png','walk-right-contact-b-v2.png','walk-right-pass-b.png'];
+const files=['left.png','idle-left-settle.png','idle-right-settle.png','idle-front-settle-v2.png','idle-back-settle-v2.png','walk-left-contacts-v2.png','walk-left-pass-a-v2.png','walk-left-pass-b.png','walk-front.png','walk-back.png','actions-left.png','actions-left-v2.png','actions-front.png','actions-back.png','right.png','actions-right.png','walk-right.png','walk-right-contact-b-v2.png','walk-right-pass-b.png'];
 import {drawSolarFlare,HIT_TIME} from './solar-flare.js';
 const images=Object.fromEntries(await Promise.all(files.map(async file=>{const im=new Image();im.src=file;await im.decode();return [file,im]})));
 const defs={idle:{frames:6,fps:4,loop:true},walk:{frames:4,fps:4,loop:true},attack:{frames:6,fps:8},hit:{frames:6,fps:10},death:{frames:6,fps:6}};
@@ -24,8 +24,8 @@ function draw(g,clip,f,view,elapsed){
    part(`walk-${view}.png`,[x,y,768,512],(front?[486,1110,484,1110]:[474,1042,474,1042])[cell],(front?[506,506,1010,1010]:[494,494,1003,1003])[cell],front?.54:.55);
   }
  }else{
-  const cell=sequences[clip][f],spec=specs[view],settling=clip==='idle'&&(view==='front'||view==='back')&&(f===2||f===3),file=settling?`idle-${view}-settle-v2.png`:view==='left'&&(cell===1||cell===3)?'actions-left-v2.png':`actions-${view}.png`;
-  if(view==='right'&&cell===0)part('right.png',[0,0,1254,1254],630,1180,.23);
+  const cell=sequences[clip][f],spec=specs[view],settling=clip==='idle'&&(f===2||f===3),file=settling?`idle-${view}-settle-v2.png`:view==='left'&&(cell===1||cell===3)?'actions-left-v2.png':`actions-${view}.png`;
+  if((view==='right'||view==='left')&&cell===0)part(settling?`idle-${view}-settle.png`:`${view}.png`,[0,0,1254,1254],view==='right'?630:650,1180,.23);
   else part(file,spec.crops[cell],spec.hips[cell],spec.ground[cell],spec.scale);
   if(cell===3&&view==='front')part(file,[80,515,80,55],spec.hips[cell],spec.ground[cell],spec.scale);
   if(cell===3&&view==='back')part(file,[430,530,50,25],spec.hips[cell],spec.ground[cell],spec.scale);
