@@ -4,16 +4,21 @@
   "verified": [
     "Browser death sequence shows limp wings bent legs and low resting shell.",
     "Needle points forward during attack and lies above ground in final death.",
-    "Attack browser inspection exposed neighboring needle fragment in windup; asymmetric crop now excludes lower-right50px strip."
+    "Attack browser inspection exposed neighboring needle fragment in windup; asymmetric crop now excludes lower-right50px strip.",
+    "V3 terminal death viewed in browser: dark eye/tank and clean exterior without V2 rectangular haze."
   ],
   "limitations": [
     "Only key poses; descent and attack need intermediate drawings.",
     "Shell size changes between action poses; registration requires refinement.",
     "Four wing and six leg roots remain partially occluded.",
     "Tight sheet gutters require asymmetric crops; attack clip needs further visual inspection.",
-    "Jade eye remains bright in death; needs powered-down appearance.",
-    "No runtime binding."
+    "No runtime binding.",
+    "V3 brass outlines brighten slightly relative to descending pose; intermediate power-down still missing."
   ],
-  "next": "Clean V2 death alpha before selecting; author front/rear actions.",
-  "rejectedDraft": "actions-left-v2.png: powered-down eye/tank correct but severe rectangular alpha haze in browser; not selected"
+  "next": "Author front/rear action clips and refine cross-clip registration.",
+  "rejectedDraft": "actions-left-v2.png: powered-down eye/tank correct but severe rectangular alpha haze in browser; not selected",
+  "selectedPoses": {
+    "5": "actions-left-v3.png",
+    "0-4": "actions-left.png"
+  }
 }
