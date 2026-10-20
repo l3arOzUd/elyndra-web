@@ -19,7 +19,7 @@
     "Uncoiled length and head scale differ from resting reference.",
     "Not runtime exported or bound to gameplay."
   ],
-  "next": "Repair B to a single tail using an explicit second-phase path guide before constructing loop.",
+  "next": "Create remaining lateral phases with one tail and register head/body landmarks before animation export.",
   "guidedStudy": {
     "source": "crawl-left-a.png",
     "guide": "crawl-guide.svg",
@@ -37,5 +37,18 @@
       "source": "crawl-left-b.png",
       "reason": "Generated two tail tips and a branching rear trunk; cannot use as next animation frame."
     }
+  },
+  "phaseBRepair": {
+    "selected": "crawl-left-b-v3.png",
+    "verified": [
+      "Extra upper tail removed; single continuous head-to-tail body.",
+      "V3 softens glossy saturation relative to V2.",
+      "Browser composite confirms clean alpha."
+    ],
+    "limitations": [
+      "Head position and scale differ from A.",
+      "Scale pattern and body thickness drift.",
+      "Two poses do not yet form a complete traveling wave cycle."
+    ]
   }
 }

@@ -2,10 +2,12 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
 <h1>Sandcoil — guided ground-plane pose</h1>
 <p>Single key pose, not a completed animation. Compare body depth and belly contact with the earlier sheet.</p>
+<select id="pose"><option value="a">Pose A</option><option value="b">Pose B - repaired tail</option></select><br>
 <canvas width="1000" height="650"></canvas>
 <script type="module">
-const im=new Image();im.src='./crawl-left-a.png';await im.decode();
+const images={};for(const [key,file]of Object.entries({a:'crawl-left-a.png',b:'crawl-left-b-v3.png'})){const im=new Image();im.src=file;await im.decode();images[key]=im;}
 const g=document.querySelector('canvas').getContext('2d');
-g.drawImage(im,40,20,920,920*im.height/im.width);
+function draw(){const im=images[document.querySelector('#pose').value];g.clearRect(0,0,1000,650);g.drawImage(im,40,20,920,920*im.height/im.width);}
+draw();document.querySelector('#pose').onchange=draw;
 window.__sandcoilCrawl={ready:true};
 </script>
