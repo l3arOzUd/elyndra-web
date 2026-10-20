@@ -19,7 +19,7 @@ export const TOTEM_COLORS: Record<string, number> = {
 };
 export const RARITY_COLORS: Record<string, number> = { normal: 0xd9b46a, magic: 0x6d9ed0, rare: 0xe0c35a, relic: 0xe07a3c, unique: 0xc9853a };
 
-interface Live { obj: THREE.Mesh; age: number; life: number; grow: number; kind: "tele" | "burst" | "aura" }
+interface Live { obj: THREE.Mesh; age: number; life: number; grow: number; kind: "tele" | "burst" | "aura" | "shrink" | "field" | "flash" }
 
 export class Fx {
   private live: Live[] = [];
@@ -53,6 +53,61 @@ export class Fx {
     this.live.push({ obj: mesh, age: 0, life: Math.max(150, castMs), grow: 0, kind: "tele" });
   }
 
+  private add(mesh: THREE.Mesh, kind: Live["kind"], life: number, grow = 0) {
+    this.scene.add(mesh);
+    this.live.push({ obj: mesh, age: 0, life, grow, kind });
+  }
+
+  /** Per-shape hit visuals (HORDE_SPEC §8 shapes). Returns false when the
+   * plain ring should play instead. */
+  shaped(s: SkillDef, x: number, z: number, aimX: number, aimZ: number): boolean {
+    const color = COLORS[s.id] ?? 0xffffff;
+    const mat = (opacity: number) => new THREE.MeshBasicMaterial({ color, transparent: true, opacity, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending });
+    switch (s.shape) {
+      case "pull": {
+        // Three rings closing on the point the horde is dragged to.
+        for (let i = 0; i < 3; i++) {
+          const ring = new THREE.Mesh(new THREE.RingGeometry(0.85, 1, 48).rotateX(-Math.PI / 2), mat(0.8));
+          ring.position.set(aimX, 0.1 + i * 0.01, aimZ);
+          ring.scale.setScalar((s.radius ?? 5) * (1 + i * 0.25));
+          this.add(ring, "shrink", 500 + i * 120, (s.radius ?? 5) * (1 + i * 0.25));
+        }
+        return true;
+      }
+      case "line": {
+        const len = s.length ?? 8, w = s.width ?? 2;
+        const beam = new THREE.Mesh(new THREE.PlaneGeometry(len, w * 0.6).translate(len / 2, 0, 0).rotateX(-Math.PI / 2), mat(0.95));
+        beam.position.set(x, 0.12, z);
+        beam.rotation.y = -Math.atan2(aimZ - z, aimX - x);
+        this.add(beam, "flash", 350);
+        return true;
+      }
+      case "ally":
+        this.aura(x, z, color, 1100, s.radius ? s.radius * 0.35 : 2.4);
+        return true;
+      case "mobility":
+        return true; // the trail plays at cast time
+    }
+    return false;
+  }
+
+  /** A ground skill that keeps hitting: the field lingers for its ticks. */
+  field(s: SkillDef, x: number, z: number, ms: number) {
+    const color = COLORS[s.id] ?? 0xffffff;
+    const disc = new THREE.Mesh(new THREE.CircleGeometry(s.radius ?? 3, 40).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.25, depthWrite: false, blending: THREE.AdditiveBlending }));
+    disc.position.set(x, 0.06, z);
+    this.add(disc, "field", ms);
+  }
+
+  /** A dash: a streak from where the player was to where it is going. */
+  trail(x: number, z: number, toX: number, toZ: number, color = 0x5adcb4) {
+    const len = Math.hypot(toX - x, toZ - z) || 0.5;
+    const streak = new THREE.Mesh(new THREE.PlaneGeometry(len, 0.8).translate(len / 2, 0, 0).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.8, depthWrite: false, blending: THREE.AdditiveBlending }));
+    streak.position.set(x, 0.1, z);
+    streak.rotation.y = -Math.atan2(toZ - z, toX - x);
+    this.add(streak, "flash", 450);
+  }
+
   /** The hit: an expanding ring in the skill's colour. */
   burst(s: SkillDef | undefined, x: number, z: number) {
     const color = s ? COLORS[s.id] ?? 0xffffff : 0xffffff;
@@ -84,7 +139,14 @@ export class Fx {
       const t = l.age / l.life;
       const mat = l.obj.material as THREE.MeshBasicMaterial;
       if (l.kind === "tele") mat.opacity = 0.12 + 0.3 * t;
-      else if (l.kind === "aura") {
+      else if (l.kind === "shrink") {
+        l.obj.scale.setScalar(Math.max(0.2, l.grow * (1 - t)));
+        mat.opacity = 0.8 * (1 - t * 0.6);
+      } else if (l.kind === "field") {
+        mat.opacity = 0.18 + 0.1 * Math.sin(l.age / 120) - (t > 0.85 ? (t - 0.85) * 1.2 : 0);
+      } else if (l.kind === "flash") {
+        mat.opacity = 0.95 * (1 - t);
+      } else if (l.kind === "aura") {
         l.obj.scale.set(1 + t * 0.3, 0.4 + t * 0.9, 1 + t * 0.3);
         mat.opacity = 0.45 * (1 - t);
       } else {

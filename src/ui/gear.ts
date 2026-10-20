@@ -40,6 +40,14 @@ export const REFINE = { max: 10, stepPct: 5, dropFrom: 7, costMult: 2, chance: [
 export const refinable = (it?: ItemDef) => !!it?.equip && ['weapon', 'head', 'armor', 'boots'].includes(it.equip.slot);
 export const refineCost = (it: ItemDef, g: GearView) => Math.max(10, it.sell_price * ((g.refine ?? 0) + 1) * REFINE.costMult);
 const refineMult = (g?: GearView) => 1 + ((g?.refine ?? 0) * REFINE.stepPct) / 100;
+/** Worn (not in the bag, not in the stash). */
+export const isWorn = (g: GearView) => !!g.slot && g.slot !== 'stash';
+/** Crafting prices (elyndra-server internal/game/craft.go): keep in step. */
+export const SELL_MULT: Record<string, number> = { normal: 1, magic: 1.5, rare: 2.5, relic: 5, unique: 4 };
+export const nextRarity = (g: GearView) => (g.rarity === 'normal' ? 'magic' : g.rarity === 'magic' ? 'rare' : '');
+export const reforgeCost = (c: ClientContent, it: ItemDef, g: GearView) => Math.max(20, Math.floor(it.sell_price * c.systems.crafting.reforge_mult * SELL_MULT[g.rarity]));
+export const imbueCost = (c: ClientContent, it: ItemDef, g: GearView) => Math.max(20, Math.floor(it.sell_price * c.systems.crafting.imbue_mult * (SELL_MULT[nextRarity(g)] ?? 1)));
+export const craftable = (it: ItemDef | undefined, g: GearView) => !!it?.equip && !it.equip.unique && g.rarity !== 'unique';
 /** "+3 Iron Saber". */
 export const gearTitle = (it: ItemDef | undefined, g: GearView) => (g.refine ? '+' + g.refine + ' ' : '') + (it?.name ?? g.base);
 

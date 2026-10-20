@@ -54,5 +54,25 @@ export function paintedItem(item?: ItemDef, rarity?: string): HTMLElement {
     cell = families.find(([pattern]) => pattern.test(name))?.[1] ?? 35;
   }
   const e = paintedIcon(cell, atlas); e.classList.add('rarity-' + (rarity ?? item?.rarity ?? 'common'));
+  const tint = gearTint(item);
+  if (tint) e.style.filter = tint;
   return e;
+}
+
+/**
+ * Generated gear shares a few drawings; tint them like their paper-doll
+ * variants (scripts/paint-gear-variants.py): era by item level, then the
+ * armour kind or the job.
+ */
+export function gearTint(item?: ItemDef): string {
+  const eq = item?.equip;
+  if (!eq || !item?.drop_pool || eq.slot === 'charm' || eq.slot === 'accessory') return '';
+  const lv = eq.item_level ?? 1, parts: string[] = [];
+  if (lv > 50) parts.push('hue-rotate(250deg) saturate(1.2)');
+  else if (lv > 20) parts.push('saturate(.5) brightness(1.1)');
+  const group = eq.slot === 'weapon' ? eq.job : (eq.kind ?? 'armour').split('_')[0];
+  if (group === 'armour') parts.push('saturate(.4) brightness(1.08)');
+  else if (group === 'shield') parts.push('hue-rotate(185deg)');
+  else if (group === 'machinist') parts.push('hue-rotate(30deg) saturate(.8)');
+  return parts.join(' ');
 }

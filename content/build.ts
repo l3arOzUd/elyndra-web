@@ -73,8 +73,14 @@ function writePaperDollLooks(gear: ItemDef[], path: string) {
     if (!e || file.items[g.id] || !["weapon", "armor", "boots", "head"].includes(e.slot)) continue;
     // Heads (scripts/paint-head-gear.py): Armour helm, Evasion hood, Aether Shield circlet.
     const head = e.kind?.includes("armour") ? "iron_helm" : e.kind?.includes("evasion") ? "leather_hood" : "aether_circlet";
-    const visual = e.slot === "weapon" ? weapon[e.job ?? "vanguard"] : e.slot === "armor" ? "leafweave_coat" : e.slot === "boots" ? "traveler_boots" : head;
-    const src = byVisual.get(visual);
+    const source = e.slot === "weapon" ? weapon[e.job ?? "vanguard"] : e.slot === "armor" ? "leafweave_coat" : e.slot === "boots" ? "traveler_boots" : head;
+    // Recoloured variants (scripts/paint-gear-variants.py): era by item level
+    // (bronze / steel / mythic), group by job (weapons) or primary kind.
+    const era = (e.item_level ?? 1) <= 20 ? 1 : (e.item_level ?? 1) <= 50 ? 2 : 3;
+    const group = e.slot === "weapon" ? e.job ?? "vanguard" : (e.kind ?? "armour").split("_")[0];
+    const variant = `gen_${e.slot}_${group}_e${era}`;
+    const visual = existsSync(join(dirname(path), "items", variant)) ? variant : source;
+    const src = byVisual.get(source);
     const look: Look = { name: g.name, slot: e.slot, visual, layers: [...(src?.layers ?? (e.slot === "head" ? ["head"] : []))], generated: true };
     if (src?.hides) look.hides = [...src.hides];
     file.items[g.id] = look;

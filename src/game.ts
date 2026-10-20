@@ -64,6 +64,8 @@ export class Game {
   private minimap: Minimap;
   private ents = new Map<number, Ent>();
   private piles = new Map<number, Pile>();
+  /** Where each recent cast was aimed (shaped effects need it when the hit lands). */
+  private lastAim = new Map<number, [number, number]>();
   private selfId = -1;
   private mapId = "";
   private grid: WalkGrid | null = null;
@@ -265,6 +267,9 @@ export class Game {
       e.actor.heading = headingOf(m.aim[0] - e.pos.x, m.aim[1] - e.pos.z);
       e.actor.play(e.kind === "p" ? skillAnimation(s) : "attack", { impactMs: castMs });
       if (s) this.fx.telegraph(s, e.pos.x, e.pos.z, m.aim[0], m.aim[1], castMs);
+      if (s?.shape === "mobility") this.fx.trail(e.pos.x, e.pos.z, m.aim[0], m.aim[1]);
+      if (s?.ticks && s.tick_ms) this.fx.field(s, m.aim[0], m.aim[1], s.ticks * s.tick_ms + castMs);
+      if (s) { this.lastAim.set(m.cast, [m.aim[0], m.aim[1]]); if (this.lastAim.size > 64) this.lastAim.delete(this.lastAim.keys().next().value!); }
     }
     if (m.echo && e) this.fx.aura(e.pos.x, e.pos.z, 0xffd246, 600, 1.1);
     // An Echo Totem's cast is free: the skill's own cooldown does not start.
@@ -277,7 +282,10 @@ export class Game {
   private onCombat(ev: CombatEvent) {
     const src = this.ents.get(ev.src);
     const s = ev.skill ? this.c.skills.get(ev.skill) : undefined;
-    if (s && src) this.fx.burst(s, src.pos.x, src.pos.z);
+    if (s && src) {
+      const aim = (ev.cast && this.lastAim.get(ev.cast)) || [src.pos.x, src.pos.z];
+      if (!this.fx.shaped(s, src.pos.x, src.pos.z, aim[0], aim[1])) this.fx.burst(s, src.pos.x, src.pos.z);
+    }
     for (const [id, dmg, flags] of ev.hits) {
       const t = this.ents.get(id);
       if (!t) continue;

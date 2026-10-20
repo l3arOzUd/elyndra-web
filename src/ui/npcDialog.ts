@@ -2,7 +2,8 @@ import type { ClientContent } from '../data/content';
 import type { MsgOf } from '../net/protocol';
 import type { Hud } from './hud';
 import { icon, itemIcon } from './icons';
-import { REFINE, gearTitle, refinable, refineCost } from './gear';
+import { REFINE, craftable, gearTitle, imbueCost, isWorn, nextRarity, refinable, refineCost, reforgeCost } from './gear';
+import { JOB_INFO } from './hud';
 
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: string): HTMLElementTagNameMap[K] {
   const e = document.createElement(tag); e.className = cls; if (text !== undefined) e.textContent = text; return e;
@@ -103,7 +104,47 @@ export class NpcDialog {
         card.append(button('Travel →', 'teleport', id, undefined, this.hud.zeny < cost)); s.append(card);
       }
     }
+    if (m.role === 'guild_registrar') {
+      // Stash (craft.go): gear kept here is neither worn nor carried.
+      const cr = this.c.systems.crafting, gear = [...this.hud.gear.values()];
+      const stash = gear.filter((g) => g.slot === 'stash'), bag = gear.filter((g) => !g.slot);
+      const s = section('Stash');
+      s.append(el('p', 'muted small', 'Stash ' + stash.length + ' / ' + cr.stash_max + ' · Bag ' + gear.filter((g) => g.slot !== 'stash').length + ' / ' + cr.bag_max));
+      if (!stash.length && !bag.length) s.append(el('p', 'empty-state', 'No gear to store.'));
+      for (const g of stash) {
+        const it = this.c.items.get(g.base), card = row(gearTitle(it, g), 'In your stash · ' + g.rarity + ' · item level ' + g.ilvl, itemIcon(it, g.rarity));
+        card.append(button('Take', 'stash_take', String(g.uid))); s.append(card);
+      }
+      for (const g of bag) {
+        const it = this.c.items.get(g.base), card = row(gearTitle(it, g), 'In your bag · ' + g.rarity + ' · item level ' + g.ilvl, itemIcon(it, g.rarity));
+        card.append(button('Store', 'stash_put', String(g.uid), undefined, stash.length >= cr.stash_max)); s.append(card);
+      }
+      // Job change: free up to a level, then zeny a level.
+      const j = section('Job');
+      const lv = this.hud.stats?.lv ?? 1, job = this.hud.stats?.job ?? 'vanguard';
+      const cost = lv <= cr.job_change_free_level ? 0 : cr.job_change_per_level * lv;
+      j.append(el('p', 'muted small', (cost ? 'Changing job costs ' + cost.toLocaleString() + ' z at Lv ' + lv : 'Free until Lv ' + cr.job_change_free_level) + '. Weapons of another job come off; Echo Totems forget its skills.'));
+      for (const name of Object.keys(JOB_INFO)) {
+        const card = row(name[0].toUpperCase() + name.slice(1) + (name === job ? ' (current)' : ''), JOB_INFO[name], icon(name === 'vanguard' ? 'sword' : name === 'strider' ? 'bow' : name === 'arcanist' ? 'staff' : 'gear', 'service-art'));
+        card.append(button('Become ' + name, 'change_job', name, undefined, name === job || this.hud.zeny < cost)); j.append(card);
+      }
+    }
     if (m.role === 'craftsman') {
+      // Reforge (reroll affixes) and imbue (raise rarity): craft.go.
+      const f = section('Reforge');
+      const own = [...this.hud.gear.values()].filter((g) => craftable(this.c.items.get(g.base), g));
+      const reforgeable = own.filter((g) => g.rarity !== 'normal'), imbueable = own.filter((g) => nextRarity(g));
+      if (!own.length) f.append(el('p', 'empty-state', 'No gear that can be reworked.'));
+      for (const g of reforgeable) {
+        const it = this.c.items.get(g.base)!, cost = reforgeCost(this.c, it, g);
+        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Reroll every affix (' + g.rarity + (g.rarity === 'relic' ? ', the cap stays' : '') + ') · ' + cost.toLocaleString() + ' z', itemIcon(it, g.rarity));
+        card.append(button('Reforge', 'reforge', String(g.uid), undefined, this.hud.zeny < cost)); f.append(card);
+      }
+      for (const g of imbueable) {
+        const it = this.c.items.get(g.base)!, cost = imbueCost(this.c, it, g);
+        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Imbue ' + g.rarity + ' → ' + nextRarity(g) + ' with fresh affixes · ' + cost.toLocaleString() + ' z', itemIcon(it, g.rarity));
+        card.append(button('Imbue', 'imbue', String(g.uid), undefined, this.hud.zeny < cost)); f.append(card);
+      }
       // Refining: weapons and armour, +1 at a time to +10 (refine.go).
       const s = section('Refine');
       const list = [...this.hud.gear.values()].filter((g) => refinable(this.c.items.get(g.base))).sort((a, b) => Number(!!b.slot) - Number(!!a.slot) || (b.refine ?? 0) - (a.refine ?? 0));

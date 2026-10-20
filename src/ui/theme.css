@@ -208,3 +208,11 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .job-pick small { grid-column:1 / -1; font-size:11px; line-height:1.35; }
 #login .job-pick label { display:flex !important; flex-direction:row; justify-content:flex-start; align-items:center; text-align:left; }#login .job-pick input { width:auto; margin:0; }
 .service-action:disabled { opacity:.45; cursor:not-allowed; filter:grayscale(.6); }
+.skill-picker { position:fixed; z-index:30; display:grid; gap:4px; padding:10px; min-width:200px; }
+.skill-picker .eyebrow { margin:0 0 4px; font-size:10px; }.skill-picker button { display:flex; align-items:center; gap:8px; font-size:12px; text-align:left; padding:4px 8px; }
+.skill-picker button .painted-icon { width:24px; height:24px; }
+#bag-count.bad { color:#9b2f22; font-weight:600; }
+@media (max-width:420px) {
+ .slot.totem .qty { font-size:9px; right:1px; }.slot .key { font-size:10px; }.buff { width:24px; height:24px; }.buff small { font-size:9px; }
+ .char-layout { padding:4px; gap:8px; }.stat-alloc { grid-template-columns:28px 1fr auto auto auto; }.stat-name small { display:none; }
+}

@@ -2,6 +2,7 @@ import type { ClientContent } from '../data/content';
 import type { BuffView, GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
 import { skillIcon, systemIcon } from './art';
+import { isWorn as isWornCopy } from './gear';
 import { CHARM_SLOTS, ECHO_COUNT, gearTitle, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
 
 const $ = (id: string) => document.getElementById(id)!;
@@ -56,16 +57,47 @@ export class Hud {
   onTotemFired: (type: string) => void = () => {};
   onLevelUp: (level: number) => void = () => {};
 
-  /** The skills on keys 1-4 (JOB_SKILLS of the character's job). */
+  /** The skills on keys 1-4 (JOB_SKILLS of the character's job, or the player's order). */
   hotbar: string[] = [...HOTBAR];
+  private job = 'vanguard';
+  /** Right-click menu: choose which skill a key holds. */
+  private pickSkill(slot: number, at: HTMLElement) {
+    document.getElementById('skill-picker')?.remove();
+    const menu = el('div', 'skill-picker win'); menu.id = 'skill-picker'; menu.setAttribute('role', 'menu');
+    menu.append(el('p', 'eyebrow', 'Key ' + (slot + 1) + ' casts'));
+    for (const s of this.c.skills.values()) {
+      if (!s.implemented || (s.job !== this.job && s.job !== 'all')) continue;
+      const b = el('button', 'subtle', s.name); b.prepend(skillIcon(s.id)); b.setAttribute('role', 'menuitem');
+      b.disabled = s.id === this.hotbar[slot];
+      b.onclick = () => {
+        const next = [...this.hotbar], other = next.indexOf(s.id);
+        if (other >= 0) next[other] = next[slot]; // swap when it is already on another key
+        next[slot] = s.id;
+        try { localStorage.setItem('elyndra.hotbar.' + this.job, JSON.stringify(next)); } catch { /* this session only */ }
+        document.querySelectorAll<HTMLButtonElement>('#hotbar .slot:not(.item)').forEach((x) => delete x.dataset.skill);
+        this.hotbar = next; this.setSkillSlots(this.job); this.refreshHotbar(); menu.remove();
+      };
+      menu.append(b);
+    }
+    const reset = el('button', 'subtle', 'Default order');
+    reset.onclick = () => { try { localStorage.removeItem('elyndra.hotbar.' + this.job); } catch { /* ok */ } document.querySelectorAll<HTMLButtonElement>('#hotbar .slot:not(.item)').forEach((x) => delete x.dataset.skill); this.setSkillSlots(this.job); this.refreshHotbar(); menu.remove(); };
+    menu.append(reset);
+    document.body.append(menu);
+    const r = at.getBoundingClientRect();
+    menu.style.left = Math.max(8, Math.min(innerWidth - menu.offsetWidth - 8, r.left)) + 'px';
+    menu.style.top = Math.max(8, r.top - menu.offsetHeight - 8) + 'px';
+    setTimeout(() => document.addEventListener('pointerdown', (ev) => { if (!menu.contains(ev.target as Node)) menu.remove(); }, { once: true }));
+  }
 
   constructor(private readonly c: ClientContent) {
     const bar = $('hotbar'); bar.replaceChildren();
     HOTBAR.forEach((_, i) => {
       const b = el('button', 'slot');
       b.append(el('span', 'key', String(i + 1)), skillIcon(HOTBAR[i]), el('span', 'name'), el('span', 'cd'));
-      this.bindTooltip(b, () => c.skills.get(b.dataset.skill!)?.name ?? '', () => this.skillText(b.dataset.skill!));
-      b.onclick = () => this.onSkill(b.dataset.skill!); bar.append(b);
+      this.bindTooltip(b, () => c.skills.get(b.dataset.skill!)?.name ?? '', () => this.skillText(b.dataset.skill!) + ' · right-click to change');
+      b.onclick = () => this.onSkill(b.dataset.skill!);
+      b.oncontextmenu = (ev) => { ev.preventDefault(); this.pickSkill(i, b); };
+      bar.append(b);
     });
     this.setSkillSlots('vanguard');
     ITEM_KEYS.forEach((id, i) => {
@@ -126,9 +158,26 @@ export class Hud {
     const more = (rank - 1) * m.more_damage_per_rank;
     return 'Rank ' + rank + (more ? ' (+' + more + '% damage)' : '') + ' · ' + Math.round(cost) + ' SP · cast ' + cast.toFixed(2) + 's · cooldown ' + cd.toFixed(1) + 's · ' + s.damage_multiplier + 'x ATK · up to ' + s.max_targets + ' targets';
   }
-  /** Puts a job's skills on keys 1-4. */
+  /** One line per number of a copy, for hover tooltips. */
+  gearSummary(g: GearView): string {
+    const it = this.c.items.get(g.base);
+    if (!it?.equip) return '';
+    const parts = [RARITY_LABEL[g.rarity] + ' ' + kindLabel(it) + ' · item level ' + g.ilvl + (g.slot === 'stash' ? ' · in stash' : isWornCopy(g) ? ' · worn' : '')];
+    parts.push(...baseLines(this.c, it, g));
+    for (const [aid, , v] of g.affixes) parts.push(affixText(this.c, aid, v));
+    return parts.join(' · ');
+  }
+  /**
+   * Puts a job's skills on keys 1-4: the player's own order for that job
+   * (right-click a skill slot to change it, saved in this browser), or
+   * JOB_SKILLS.
+   */
   setSkillSlots(job: string) {
-    this.hotbar = JOB_SKILLS[job] ?? [...HOTBAR];
+    this.job = job;
+    let saved: string[] = [];
+    try { saved = JSON.parse(localStorage.getItem('elyndra.hotbar.' + job) ?? '[]'); } catch { /* defaults */ }
+    const valid = (id: string) => { const s = this.c.skills.get(id); return !!s && s.implemented && (s.job === job || s.job === 'all'); };
+    this.hotbar = saved.length === 4 && saved.every(valid) ? saved : JOB_SKILLS[job] ?? [...HOTBAR];
     document.querySelectorAll<HTMLButtonElement>('#hotbar .slot:not(.item)').forEach((b, i) => {
       const id = this.hotbar[i], s = this.c.skills.get(id);
       if (!id || b.dataset.skill === id) return;
@@ -274,11 +323,14 @@ export class Hud {
       b.title = nameOf(id) + (g ? ' · ' + RARITY_LABEL[g.rarity] : ''); b.setAttribute('aria-label', g ? nameOf(id) + ', ' + RARITY_LABEL[g.rarity] + ', item level ' + g.ilvl : (it?.name ?? id) + ', quantity ' + this.inventory[id]); b.setAttribute('aria-pressed', String(id === this.selected)); b.dataset.item = id;
       b.append(itemIcon(it, g?.rarity), el('span', 'item-quantity', g ? (g.refine ? '+' + g.refine + ' ' : '') + (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
       b.onclick = () => { this.selected = id; this.renderInventory(); (list.querySelector('[data-item="' + CSS.escape(id) + '"]') as HTMLButtonElement | null)?.focus(); };
+      this.bindTooltip(b, () => (g ? gearTitle(it, g) : it?.name ?? id), () => (g ? this.gearSummary(g) : it?.description ?? ''));
       li.append(b); list.append(li);
     }
     $('inv-empty').hidden = ids.length > 0;
     $('inv-empty').textContent = all.length ? 'No items match your search.' : 'Your inventory is empty.';
-    $('bag-count').textContent = ids.length + ' shown · ' + all.length + ' in your satchel · ' + this.gear.size + ' gear';
+    const carriedGear = [...this.gear.values()].filter((g) => g.slot !== 'stash').length, bagMax = this.c.systems.crafting?.bag_max ?? 300;
+    $('bag-count').textContent = ids.length + ' shown · ' + all.length + ' in your satchel · gear ' + carriedGear + ' / ' + bagMax + (carriedGear >= bagMax - 20 ? ' · nearly full: store some at the Guild' : '');
+    $('bag-count').classList.toggle('bad', carriedGear >= bagMax - 20);
     this.renderDetail();
   }
   private showBag() {
@@ -337,7 +389,9 @@ export class Hud {
     }
     const actions = el('div', 'detail-actions');
     const met = reqs.every(([, ok]) => ok);
-    if (g.slot) {
+    if (g.slot === 'stash') {
+      actions.append(el('p', 'muted small', 'In your stash: take it out at a Guild Registrar.'));
+    } else if (g.slot) {
       const b = el('button', 'primary detail-action', 'Unequip'); b.onclick = () => this.onUnequip(g.slot!); actions.append(b);
     } else if (e.slot === 'charm') {
       const lv = this.stats?.lv ?? 1;
