@@ -18,7 +18,7 @@
     "Two isolated leading-leg poses only, not a complete walk cycle.",
     "Source spear top margin remains smaller than requested."
   ],
-  "next": "Refine trailing toe support and add passing poses with explicit grounded-foot registration.",
+  "next": "Establish side-view support and knee phases before more frontal contact edits; repeated text and guide edits have not reliably produced B contact.",
   "publicBinding": false,
   "variants": [
     {
@@ -66,6 +66,12 @@
       "result": "Correct leading leg and five mirrors retained, but trailing toe stays near y1070 instead of y1135. Guide did not overcome original lifted-foot pose.",
       "selection": "Rejected as grounded contact; no replacement.",
       "next": "Stop repeating edits of the lifted-foot source. Generate a new contact from neutral front reference with B guide as primary pose input."
+    },
+    {
+      "source": "walk-front-contact-b-v5.png",
+      "guide": "contact-b-guide.png",
+      "result": "New generation from neutral reference still leads with viewer-left leg, contrary to B guide. Halo and body scale also change.",
+      "selection": "Rejected; not added to active contact pair."
     }
   ]
 }
