@@ -1,0 +1,20 @@
+{
+  "id": "mob_0068",
+  "name": "Gloom Medusa",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front jellyfish master and opposite references.",
+  "confirmed": [
+    "Violet translucent dome, dark scalloped rim and single blue internal nucleus retained.",
+    "No humanoid face or limbs introduced.",
+    "Right reference upright; all four files pass alpha, nonempty and edge checks."
+  ],
+  "limitations": [
+    "Left bell is rolled/tilted relative to upright front/back/right; pose correction needed.",
+    "Tentacle counts, attachment roots, crossings and lengths drift; individual strands cannot yet be matched across views.",
+    "Ruffled oral arms change overlap and width; a stable appendage map is required.",
+    "Radial symmetry makes nominal view direction unprovable without fixed internal/rim landmarks; these are visual references, not verified rotations.",
+    "Faint colored edge haze needs light-background review before separating strands.",
+    "No separated parts, runtime clips or external dark halo VFX yet."
+  ],
+  "next": "Establish numbered rim anchors and oral-arm topology, correct left pose, separate dome/nucleus/arms/tentacle chains; animate bell pulse, drift, sting, recoil and deflation with separate dark-halo VFX."
+}
