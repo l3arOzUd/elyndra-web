@@ -3,15 +3,17 @@ import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import assert from 'node:assert/strict';
 const {chromium}=createRequire(import.meta.url)(process.env.PLAYWRIGHT_MODULE||'playwright-core');
-const out=resolve(import.meta.dirname,'../art-source/monsters/mob_0005/runtime-draft');
+const monster=process.argv[2]??'mob_0005';
+assert.match(monster,/^mob_\d{4}$/,'Expected monster ID such as mob_0006');
+const out=resolve(import.meta.dirname,`../art-source/monsters/${monster}/runtime-draft`);
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH});
 try{
  const page=await browser.newPage(),errors=[];
  page.on('pageerror',error=>errors.push(error.message));
- await page.goto('http://localhost:5173/art-source/monsters/mob_0005/walk-review.html');
- await page.waitForFunction(()=>window.__cragletWalk?.ready);
+ await page.goto(`http://localhost:5173/art-source/monsters/${monster}/walk-review.html`);
+ await page.waitForFunction(()=>window.__monsterDraft?.ready);
  const result=await page.evaluate(async()=>{
-  const assets=window.__cragletWalk.exportDraft();
+  const assets=window.__monsterDraft.exportDraft();
   const {validateSprite}=await import('/src/render/spriteDef.ts');
   const problems=validateSprite(assets.json,assets.sizes),frames=[];
   for(const [name,url]of Object.entries(assets.images)){
@@ -33,10 +35,10 @@ try{
  assert.ok(result.frames.every(f=>f.visible>0&&f.edge===0),'Nonempty frames must fit canvas');
  await mkdir(out,{recursive:true});
  for(const [name,data]of Object.entries(result.images))await writeFile(resolve(out,`${name}.png`),Buffer.from(data.split(',')[1],'base64'));
- await writeFile(resolve(out,'craglet_2d.sprite.json'),JSON.stringify(result.json,null,2)+'\n');
+ await writeFile(resolve(out,`${result.json.id}.sprite.json`),JSON.stringify(result.json,null,2)+'\n');
  const index=JSON.parse(await readFile(resolve(import.meta.dirname,'../public/sprites/index.json'),'utf8'));
- const report={status:'technical-draft-only',runtimeBound:index.monsters.mob_0005?.sprite==='craglet_2d',errors,formatProblems:result.problems,frames:result.frames,
-  limitations:['Left and front idle use authored blinks; rear idle uses two breathing poses and needs smoother transitions.','Front, rear and left drafts are authored. Diagonals alias side rows and right mirrors left; accurate directional coverage remains unfinished.','Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved. Rear left-leg anatomy is largely hidden by tail.','Passing format and edge checks does not approve visual quality.']};
+ const report={status:'technical-draft-only',runtimeBound:index.monsters[monster]?.sprite===result.json.id,errors,formatProblems:result.problems,frames:result.frames,
+  limitations:monster==='mob_0005'?['Left and front idle use authored blinks; rear idle uses two breathing poses and needs smoother transitions.','Front, rear and left drafts are authored. Diagonals alias side rows and right mirrors left; accurate directional coverage remains unfinished.','Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved. Rear left-leg anatomy is largely hidden by tail.','Passing format and edge checks does not approve visual quality.']:['Only left-facing art; mirroring is not authored directional coverage.','Hoof trajectories, leg angles, torso registration and surface continuity remain under review.','Blink edit has minor body/detail drift; actions need in-between drawings.','Technical checks do not establish visual acceptance.']};
  await writeFile(resolve(out,'validation.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({output:out,clips:Object.keys(result.images),frames:result.frames.length,errors}));
 }finally{await browser.close();}

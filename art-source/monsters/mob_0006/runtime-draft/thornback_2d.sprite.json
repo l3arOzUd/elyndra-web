@@ -1,0 +1,51 @@
+{
+  "id": "thornback_2d",
+  "kind": "sheet",
+  "facingMode": "left-right",
+  "frame": {
+    "w": 384,
+    "h": 384
+  },
+  "pivot": {
+    "x": 192,
+    "y": 346
+  },
+  "pixelsPerCell": 300,
+  "rows": [
+    "W"
+  ],
+  "animations": {
+    "idle": {
+      "file": "idle.png",
+      "frames": 16,
+      "fps": 8,
+      "loop": true
+    },
+    "walk": {
+      "file": "walk.png",
+      "frames": 6,
+      "fps": 8,
+      "loop": true,
+      "refMsPerCell": 240
+    },
+    "attack": {
+      "file": "attack.png",
+      "frames": 6,
+      "fps": 8,
+      "events": {
+        "hit": 3
+      }
+    },
+    "hit": {
+      "file": "hit.png",
+      "frames": 6,
+      "fps": 12
+    },
+    "death": {
+      "file": "death.png",
+      "frames": 6,
+      "fps": 8,
+      "hold": true
+    }
+  }
+}

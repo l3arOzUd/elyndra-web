@@ -1,0 +1,294 @@
+{
+  "status": "technical-draft-only",
+  "runtimeBound": false,
+  "errors": [],
+  "formatProblems": [],
+  "frames": [
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 0,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 1,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 2,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 3,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 4,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 5,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 6,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 7,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 8,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 9,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 10,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 11,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 12,
+      "visible": 55089,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 13,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 14,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 15,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 0,
+      "visible": 49745,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 1,
+      "visible": 48225,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 2,
+      "visible": 47834,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 3,
+      "visible": 48874,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 4,
+      "visible": 48877,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 5,
+      "visible": 49011,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 0,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 1,
+      "visible": 50187,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 2,
+      "visible": 50187,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 3,
+      "visible": 53712,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 4,
+      "visible": 53712,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 5,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 0,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 1,
+      "visible": 52852,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 2,
+      "visible": 52852,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 3,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 4,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 5,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 0,
+      "visible": 54856,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 1,
+      "visible": 49839,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 2,
+      "visible": 49839,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 3,
+      "visible": 44274,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 4,
+      "visible": 44274,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 5,
+      "visible": 44274,
+      "edge": 0
+    }
+  ],
+  "limitations": [
+    "Only left-facing art; mirroring is not authored directional coverage.",
+    "Hoof trajectories, leg angles, torso registration and surface continuity remain under review.",
+    "Blink edit has minor body/detail drift; actions need in-between drawings.",
+    "Technical checks do not establish visual acceptance."
+  ]
+}
