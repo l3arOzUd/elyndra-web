@@ -1,0 +1,20 @@
+{
+  "status": "locomotion-study-needs-ground-plane-correction",
+  "preview": "walk-review.html",
+  "source": "walk-left-v2.png",
+  "rejected": {"source": "walk-left.png", "reason": "Vertical body wave reads as caterpillar-like arching, not lateral snake locomotion."},
+  "verified": [
+    "Saffron granular scales, amber eye and orange belly match design.",
+    "One continuous head-to-tail body, no invented legs or arms.",
+    "Actual browser composite shows transparent exterior.",
+    "Revision adds depth curvature in front body compared with original vertical wave."
+  ],
+  "limitations": [
+    "Rear body still reads as an elevated arch; full belly contact not established.",
+    "Pose pairs are too similar to show a traveling muscular wave.",
+    "Tail tips lie close to cell boundaries and cause tiny adjacent-cell fragments.",
+    "Uncoiled length and head scale differ from resting reference.",
+    "Not runtime exported or bound to gameplay."
+  ],
+  "next": "Use a ground-plane path guide for each phase, with individually framed poses and constant body length."
+}

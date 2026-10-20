@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><title>Sandcoil locomotion study</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;display:block;margin:16px 0}</style>
+<h1>Sandcoil — locomotion study</h1>
+<p>Draft only: lateral wave and belly support still need refinement. Not bound to gameplay.</p>
+<select id="source"><option value="v2">Lateral-wave revision</option><option value="original">Rejected vertical-wave study</option></select>
+<button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="3" value="0">
+<canvas id="motion" width="800" height="500"></canvas><canvas id="contact" width="1600" height="1000"></canvas>
+<script type="module">
+const images={};for(const [key,file]of Object.entries({v2:'walk-left-v2.png',original:'walk-left.png'})){const im=new Image();im.src=file;await im.decode();images[key]=im;}
+function draw(g,f,x,y,s){const key=document.querySelector('#source').value,im=images[key],bottom=(key==='v2'?[421,421,378,378]:[414,414,353,353])[f];g.drawImage(im,f%2*768,Math.floor(f/2)*512,768,512,x-384*s,y-bottom*s,768*s,512*s);}
+const g=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
+function contact(){cg.clearRect(0,0,1600,1000);for(let f=0;f<4;f++)draw(cg,f,f%2*800+400,Math.floor(f/2)*500+450,.95);}
+contact();document.querySelector('#source').onchange=contact;
+let f=0,paused=false,last=0;document.querySelector('#pause').onclick=()=>paused=!paused;document.querySelector('#frame').oninput=e=>{f=+e.target.value;paused=true;};
+function tick(t){if(!paused&&t-last>180){f=(f+1)%4;last=t;}g.clearRect(0,0,800,500);draw(g,f,400,430,.9);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+window.__sandcoilWalk={ready:true};requestAnimationFrame(tick);
+</script>
