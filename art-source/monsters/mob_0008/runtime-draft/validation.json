@@ -204,7 +204,7 @@
       "clip": "idle",
       "facing": "S",
       "frame": 12,
-      "visible": 48692,
+      "visible": 58280,
       "edge": 0
     },
     {
@@ -1406,7 +1406,7 @@
     }
   ],
   "limitations": [
-    "Side idle blinks; front and rear idle remain static.",
+    "Side and front idle blink; rear idle remains static.",
     "Right mirrors left; diagonals reuse side art.",
     "Foot contacts, four-leg anatomy, cross-clip scale and body registration need refinement.",
     "Edited poses differ in fin outlines and scale shading; death needs intermediate poses.",
