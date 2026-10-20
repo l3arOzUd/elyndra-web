@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><title>Root Sentinel isolated gait</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;display:block;margin:16px 0}</style>
+<h1>Root Sentinel — four walk key poses</h1>
+<p>Draft contact / passing alternation. Inspect limb identity, support and design continuity; not bound to gameplay.</p>
+<button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="3" value="0">
+<canvas id="motion" width="600" height="560"></canvas><canvas id="contact" width="1600" height="560"></canvas>
+<script type="module">
+const names=['walk-left-contact-a.png','walk-left-pass-a.png','walk-left-contact-b-v2.png','walk-left-pass-b.png'];
+const ims=await Promise.all(names.map(async name=>{const im=new Image();im.src=name;await im.decode();return im;}));
+// Uniform scaling only; each full drawing keeps its original limb proportions.
+const base=[1193,1223,1224,1236],anchor=[660,660,660,660];
+function draw(g,f,x,y,s){const im=ims[f],k=s*1254/im.height;g.drawImage(im,x-anchor[f]*k,y-base[f]*k,im.width*k,im.height*k);}
+const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
+for(let f=0;f<4;f++){draw(cg,f,f*400+200,520,.38);cg.fillStyle='#fff';cg.fillText(['Contact A','Passing A','Contact B','Passing B'][f],f*400+20,30);cg.strokeStyle='#b3c4b9';cg.beginPath();cg.moveTo(f*400,520);cg.lineTo(f*400+400,520);cg.stroke();}
+let f=0,paused=false,last=0;
+document.querySelector('#pause').onclick=()=>paused=!paused;
+document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
+function tick(t){if(!paused&&t-last>240){f=(f+1)%4;last=t;}ctx.clearRect(0,0,600,560);draw(ctx,f,300,520,.4);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+window.__rootSentinelIsolated={ready:true};requestAnimationFrame(tick);
+</script>

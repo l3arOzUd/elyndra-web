@@ -38,5 +38,23 @@
     ],
     "runtimeSelected": false
   },
-  "next": "Author consistent contact A, weight transfer and passing poses matching the guided B proportions. Refine trailing toe support and lower near fist before exporting the cycle."
+  "isolatedCycle": {
+    "preview": "isolated-walk-review.html",
+    "frames": ["walk-left-contact-a.png", "walk-left-pass-a.png", "walk-left-contact-b-v2.png", "walk-left-pass-b.png"],
+    "verified": [
+      "Passing A raises the far foot while the near sole supports the body.",
+      "Passing B raises the near foot while the far sole supports the body.",
+      "Browser contact sheet shows separate airborne feet with transparent gaps.",
+      "All four full images have alpha greater than 32 confined inside canvas edges.",
+      "Preview uses uniform scale and ground registration without stretching limbs."
+    ],
+    "limitations": [
+      "Contact B retains a high bent near arm, unlike the relaxed arms in other poses.",
+      "Torso size and root/stone details still vary between drawings.",
+      "Passing feet extend forward rather than fully folding under the knee.",
+      "Four key poses need weight-transfer inbetweens for a heavy smooth walk.",
+      "No runtime export or public binding yet."
+    ]
+  },
+  "next": "Lower Contact B arm, stabilize torso proportions and add weight-transfer poses before runtime export; front/rear walk and other actions remain."
 }
