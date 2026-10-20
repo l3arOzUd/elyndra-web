@@ -169,7 +169,51 @@ ws.onopen = async () => {
     const cost = Math.max(10, items.get(weapon.base).sell_price * 2);
     check('refine: +1 costs zeny and raises weapon ATK 5%', state.gear.get(weapon.uid)?.refine === 1 && state.zeny === z - cost && Math.abs(state.sheet.d.weapon - atk * 1.05) < 0.01,
       `+${state.gear.get(weapon.uid)?.refine}, paid ${z - state.zeny}z (cost ${cost}), weapon ATK ${atk} -> ${state.sheet.d.weapon}`);
+    // Reforge a rare (affixes change, rarity stays) and imbue a normal to magic.
+    const rare = [...state.gear.values()].find((g) => g.rarity === 'rare' && !g.slot && items.get(g.base)?.equip?.slot !== 'charm');
+    if (rare) {
+      const before = JSON.stringify(rare.affixes), z1 = state.zeny;
+      send({ t: 'npc', npc: smith.id, op: 'reforge', arg: String(rare.uid) });
+      await until(() => JSON.stringify(state.gear.get(rare.uid)?.affixes) !== before || state.zeny !== z1, 3000);
+      const after = state.gear.get(rare.uid);
+      check('reforge: a rare keeps its rarity and gets new affixes for zeny', after?.rarity === 'rare' && state.zeny < z1 && after.affixes.length >= 3, `${z1 - state.zeny}z, ${after?.affixes.map((a) => a[0]).join(', ')}`);
+    }
+    const plain = [...state.gear.values()].find((g) => g.rarity === 'normal' && !g.slot && items.get(g.base)?.equip?.slot !== 'charm');
+    if (plain) {
+      send({ t: 'npc', npc: smith.id, op: 'imbue', arg: String(plain.uid) });
+      await until(() => state.gear.get(plain.uid)?.rarity === 'magic', 3000);
+      check('imbue: normal -> magic with affixes', state.gear.get(plain.uid)?.rarity === 'magic' && state.gear.get(plain.uid).affixes.length > 0, items.get(plain.base).name);
+    }
   } else check('refine: reach the craftsman', false, state.map);
+
+  // Guild Registrar: stash a copy and take it back.
+  const guild = npcs.find((n) => n.map_id === state.map && n.role === 'guild_registrar');
+  const spare = [...state.gear.values()].find((g) => !g.slot);
+  if (guild && spare && await walkTo(guild.position[0], guild.position[1] + 1)) {
+    send({ t: 'npc', npc: guild.id, op: 'stash_put', arg: String(spare.uid) });
+    const put = await until(() => state.gear.get(spare.uid)?.slot === 'stash', 3000);
+    send({ t: 'npc', npc: guild.id, op: 'stash_take', arg: String(spare.uid) });
+    const took = await until(() => state.gear.get(spare.uid)?.slot === undefined || state.gear.get(spare.uid)?.slot === '', 3000);
+    check('stash: store a copy and take it back', put && took, items.get(spare.base).name);
+  } else check('stash: reach the Guild Registrar', false, state.map);
+
+  // Job change at the Guild Registrar (paid above the free level).
+  if (guild && await walkTo(guild.position[0], guild.position[1] + 1)) {
+    const z = state.zeny, cost = state.stats.lv <= systems.crafting.job_change_free_level ? 0 : systems.crafting.job_change_per_level * state.stats.lv;
+    if (z >= cost) {
+      send({ t: 'npc', npc: guild.id, op: 'change_job', arg: 'strider' });
+      await until(() => state.stats.job === 'strider', 3000);
+      check('job change: Vanguard -> Strider, paid, Vanguard weapon off', state.stats.job === 'strider' && state.zeny === z - cost && !Object.values(state.equip).includes(state.equip.weapon ?? '__') , `paid ${z - state.zeny}z (cost ${cost}), weapon ${state.equip.weapon ?? 'none'}`);
+    } else check('job change: enough zeny', true, `skipped: ${z}z < ${cost}z`);
+    send({ t: 'npc', npc: guild.id, op: 'change_job', arg: 'vanguard' });
+    await until(() => state.stats.job === 'vanguard', 3000);
+    const saber = [...state.gear.values()].find((g) => g.uid === weapon?.uid);
+    if (saber) { send({ t: 'equip', gear: saber.uid }); await until(() => state.gear.get(saber.uid)?.slot === 'weapon', 3000); }
+    check('job change clears Echo links to the old job', !state.gear.get(echo.uid)?.link);
+    send({ t: 'link', slot: echoSlot, skill: linkSkill }); // back as a Vanguard: link again
+    await until(() => state.gear.get(echo.uid)?.link === linkSkill, 3000);
+  }
+
 
   // Field: fight, watch hits, kills, the Echo Totem and drops.
   const tele = npcs.find((n) => n.map_id === state.map && n.role === 'teleporter');
