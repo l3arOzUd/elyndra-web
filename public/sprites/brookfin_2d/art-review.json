@@ -1,0 +1,18 @@
+{
+  "monster": "mob_0008",
+  "status": "playable-draft-refinement-pending",
+  "source": "art-source/monsters/mob_0008/runtime-draft",
+  "productionApproved": false,
+  "authoredViews": [
+    "front",
+    "left",
+    "back"
+  ],
+  "limitations": [
+    "Side and front idle blink; rear idle alternates two fin poses and needs smoother transitions.",
+    "Right mirrors left; diagonals reuse side art.",
+    "Foot contacts, four-leg anatomy, cross-clip scale and body registration need refinement.",
+    "Edited poses differ in fin outlines and scale shading; death needs intermediate poses.",
+    "Technical validation does not establish visual approval."
+  ]
+}

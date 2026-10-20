@@ -323,7 +323,7 @@
   ],
   "ecology": "Amphibious fish that crawl up Moonbrook's banks and out onto its dry flats to sun their clear fins.",
   "art_brief": "A fat fish on stubby fin-legs, glass-clear fins showing faint aether veins; blue-green.",
-  "sprite": "mob_0008"
+  "sprite": "brookfin_2d"
  },
  {
   "id": "mob_0009",

@@ -1,0 +1,18 @@
+{
+  "status": "playable-draft-refinement-pending",
+  "monster": "mob_0008",
+  "sprite": "brookfin_2d",
+  "verified": [
+    "Content source and generated data select brookfin_2d.",
+    "Public binding replaces Mosskin placeholder and tint.",
+    "Public sheets load through SpriteActor with no page or format errors.",
+    "W E S N attack emits hit at 375ms.",
+    "Production build passes.",
+    "All 200 exported cells contain visible pixels without edge clipping."
+  ],
+  "notVerified": [
+    "Live server map combat",
+    "Production visual approval"
+  ],
+  "limitationsFile": "public/sprites/brookfin_2d/art-review.json"
+}

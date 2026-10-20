@@ -82,7 +82,7 @@ const monsters: RegionDesign["monsters"] = [
     mods: { hp: 1.1 }, why: "Slick scales (+10% HP). Passive: Moonbrook's banks are a place to gather with Anchor Shout, not to be ambushed.",
     drops: { common: "itm_0015", uncommon: "itm_0016" },
     ecology: "Amphibious fish that crawl up Moonbrook's banks and out onto its dry flats to sun their clear fins.",
-    art_brief: "A fat fish on stubby fin-legs, glass-clear fins showing faint aether veins; blue-green.",
+    art_brief: "A fat fish on stubby fin-legs, glass-clear fins showing faint aether veins; blue-green.", sprite: "brookfin_2d",
   },
   {
     id: "mob_0009", name: "Reedstalker", level: 14, archetype: "ranged", family: "plant", element: "water", behavior: "aggressive",

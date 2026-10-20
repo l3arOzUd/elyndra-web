@@ -25,14 +25,7 @@
    "sprite": "dustwing_2d"
   },
   "mob_0008": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1,
-   "placeholder": true
+   "sprite": "brookfin_2d"
   },
   "mob_0009": {
    "sprite": "reedstalker_2d"
