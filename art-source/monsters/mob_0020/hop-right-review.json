@@ -1,0 +1,37 @@
+{
+  "status": "right-hop-study-unapproved",
+  "source": "hop-right.png",
+  "preview": "hop-right-review.html",
+  "authoredKeys": [
+    "crouch",
+    "push-off",
+    "airborne tuck",
+    "forefoot contact"
+  ],
+  "technicalCheck": {
+    "nonemptyKeys": 4,
+    "canvasEdgeIntersections": 0,
+    "browserErrors": [],
+    "groundY": 430,
+    "opaqueBottomY": [
+      429,
+      430,
+      375,
+      429
+    ]
+  },
+  "visualFindings": [
+    "Authored from the matching directional reference, not mirrored.",
+    "Hind knees change from folded crouch to extension and back to tuck.",
+    "Forefoot contact leaves the hind feet elevated.",
+    "Opaque browser contact sheet has no visible matte blocks or neighboring pose fragments."
+  ],
+  "limitations": [
+    "Shell dome and plate landmarks change across poses; rigid volume consistency not approved.",
+    "Hind limb segment lengths, toe orientations and joint attachments need anatomical review.",
+    "No settled landing or recovery key; four-key loop remains abrupt.",
+    "No gameplay binding.",
+    "Far hind limb largely occluded; airborne forearm is longer-looking than crouch and left-view counterpart."
+  ],
+  "next": "Unify shell landmarks and limb construction; add landing recovery before runtime export."
+}

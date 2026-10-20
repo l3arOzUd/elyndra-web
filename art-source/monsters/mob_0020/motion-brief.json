@@ -23,7 +23,12 @@
     "hit": "Brief flinch, closed eyes, flexed limbs and return to stance.",
     "death": "Legs buckle and belly settles onto ground, eyes close, toes relax; shell does not flip backward."
   },
-  "requiredViews": ["front", "back", "left", "right"],
+  "requiredViews": [
+    "front",
+    "back",
+    "left",
+    "right"
+  ],
   "visualGates": [
     "Inspect toes, limb count and rigid joint lengths at full size and game size.",
     "Check shell tile landmarks and barnacle clusters between all poses.",
@@ -31,5 +36,21 @@
     "Confirm cycle closure and cross-clip registration without resizing individual limbs.",
     "Check all directional clips before runtime binding."
   ],
-  "publicBinding": false
+  "publicBinding": false,
+  "progress": {
+    "hopDrawings": {
+      "front": 4,
+      "back": 4,
+      "left": 5,
+      "right": 4
+    },
+    "review": "hop-directions-review.html",
+    "approved": false,
+    "remaining": [
+      "Hop anatomy and shell continuity",
+      "Landing recovery in front/back/right",
+      "Idle, attack, hit and death in all views",
+      "Runtime export and gameplay verification"
+    ]
+  }
 }
