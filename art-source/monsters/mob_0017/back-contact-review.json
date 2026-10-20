@@ -1,21 +1,24 @@
 {
-  "status": "rear-contact-pair-draft",
+  "status": "rear-four-key-pose-draft",
   "sources": [
     "walk-back-contact-a.png",
-    "walk-back-contact-b.png"
+    "walk-back-pass-a.png",
+    "walk-back-contact-b.png",
+    "walk-back-pass-b.png"
   ],
   "preview": "back-contact-review.html",
   "verified": [
     "Six distinct foot tips visible in A and B.",
     "A folds right foreground and lowers right inner; B reverses these support roles.",
-    "Shell remains rear-facing; browser alpha clean and alternation runs without page errors."
+    "Shell remains rear-facing; browser alpha clean and alternation runs without page errors.",
+    "Passing poses preserve six foot tips and the three extended support limbs of their contacts."
   ],
   "limitations": [
-    "Two contacts only; passing poses absent.",
+    "Four poses now present, but swing feet descend rather than follow intended inward/up passing trajectory; ground travel not yet convincing.",
     "Outer-leg contact plane still ambiguous due elevated camera.",
     "B leftmost claw extremely close to source boundary; requires padding/art check before export.",
     "Segment proportions, shell reflections and core texture drift.",
     "Not runtime exported or gameplay bound."
   ],
-  "next": "Create intermediate passing poses retaining support, improve margins and register rear gait."
+  "next": "Refine swing trajectories and support timing; improve margins and register rear gait."
 }
