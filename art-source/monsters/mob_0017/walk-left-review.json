@@ -1,0 +1,25 @@
+{
+  "status": "tripod-gait-study-not-production-approved",
+  "source": "walk-left-v2.png",
+  "preview": "walk-review.html",
+  "verified": [
+    "Amber glass shell, internal ember core and dark articulated chitin retained.",
+    "V2 bottom frames lift near front/rear legs while near middle extends down.",
+    "Browser composite confirms transparent exterior.",
+    "Four-frame preview plays without page errors."
+  ],
+  "rejectedOriginal": {
+    "source": "walk-left.png",
+    "reason": "Near legs barely alternate; no distinct opposite support phase."
+  },
+  "limitations": [
+    "Far front leg attachment remains obscured; six full chains not established.",
+    "Far support legs stay elevated in bottom frames, so supporting tripod is incomplete.",
+    "Upper frames still fail to clearly lift near middle leg.",
+    "Pairs of poses are very similar; forward stride and passing motion remain weak.",
+    "Shell occupies almost entire cell height with narrow top/bottom margins.",
+    "Shell reflection/core texture drift across frames.",
+    "Not exported or bound to gameplay."
+  ],
+  "next": "Use explicit six-leg joint/contact guides to establish two alternating support tripods."
+}
