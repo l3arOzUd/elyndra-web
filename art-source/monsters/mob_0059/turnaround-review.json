@@ -1,0 +1,21 @@
+{
+  "id": "mob_0059",
+  "name": "Heliostat Sovereign",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation with front/rear references; corrected first left draft that spread arms fore/aft.",
+  "confirmed": [
+    "Machine itself remains creature, no seated humanoid added.",
+    "Sun sphere, brass nested rings, two mirror-panel arms and lens crown retained.",
+    "Rear crown and arm panels have opaque backing; rear base maintenance details distinct.",
+    "Corrected side rings narrow and core round rather than disc.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Side arm panel count/layout simplified from front paired panels; exact hinge topology unresolved.",
+    "Mirror faces still turn toward side camera; should follow fixed panel orientation.",
+    "Right arm chain leans fore/aft unlike corrected left vertical chain; pose inconsistent.",
+    "Nine crown lenses not individually traceable in side overlap; anchor map needed.",
+    "Side base machinery and ring depths vary; no consistent reconstruction or separated animation parts yet."
+  ],
+  "next": "Define nine lens anchors and paired-panel arm topology, reconcile side projection, then separate rigid rings/core/arm panels/base for idle, aim, solar attack, hit and collapse with authored solar VFX."
+}
