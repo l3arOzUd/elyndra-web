@@ -453,6 +453,118 @@
       "edge": 0
     },
     {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 0,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 1,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 2,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 3,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 4,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 5,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 6,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 7,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 8,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 9,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 10,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 11,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 12,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 13,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 14,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 15,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
       "clip": "walk",
       "facing": "W",
       "frame": 0,
@@ -621,6 +733,48 @@
       "edge": 0
     },
     {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 0,
+      "visible": 34629,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 1,
+      "visible": 34119,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 2,
+      "visible": 35608,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 3,
+      "visible": 33996,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 4,
+      "visible": 32313,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 5,
+      "visible": 32332,
+      "edge": 0
+    },
+    {
       "clip": "attack",
       "facing": "W",
       "frame": 0,
@@ -786,6 +940,48 @@
       "facing": "NW",
       "frame": 5,
       "visible": 37401,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 0,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 1,
+      "visible": 30736,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 2,
+      "visible": 30736,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 3,
+      "visible": 35498,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 4,
+      "visible": 35498,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 5,
+      "visible": 34597,
       "edge": 0
     },
     {
@@ -957,6 +1153,48 @@
       "edge": 0
     },
     {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 0,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 1,
+      "visible": 36827,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 2,
+      "visible": 36827,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 3,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 4,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 5,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
       "clip": "death",
       "facing": "W",
       "frame": 0,
@@ -1122,13 +1360,55 @@
       "facing": "NW",
       "frame": 5,
       "visible": 32465,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 0,
+      "visible": 34597,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 1,
+      "visible": 32166,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 2,
+      "visible": 32166,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 3,
+      "visible": 26410,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 4,
+      "visible": 26410,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 5,
+      "visible": 26410,
       "edge": 0
     }
   ],
   "limitations": [
-    "Left idle uses an authored blink; front idle is a static neutral pose pending authored animation.",
-    "Front and left rows only. Remaining directions alias the side row for this draft; rear artwork and accurate directional coverage remain unfinished.",
-    "Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved.",
+    "Left idle uses an authored blink; front and rear idle are static neutral poses pending authored animation.",
+    "Front, rear and left drafts are authored. Diagonals alias side rows and right mirrors left; accurate directional coverage remains unfinished.",
+    "Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved. Rear left-leg anatomy is largely hidden by tail.",
     "Passing format and edge checks does not approve visual quality."
   ]
 }

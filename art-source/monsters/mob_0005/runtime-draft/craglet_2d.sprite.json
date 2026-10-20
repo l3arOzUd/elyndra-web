@@ -15,13 +15,13 @@
     "W",
     "S",
     "SW",
-    "NW"
+    "NW",
+    "N"
   ],
   "mirror": {
     "E": "W",
     "SE": "W",
-    "NE": "W",
-    "N": "W"
+    "NE": "W"
   },
   "animations": {
     "idle": {

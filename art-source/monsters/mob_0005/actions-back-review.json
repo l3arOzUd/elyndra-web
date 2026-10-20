@@ -1,0 +1,19 @@
+{
+  "status": "runtime-draft-refinement-pending",
+  "source": "actions-back.png",
+  "poses": ["neutral", "anticipation", "lunge", "recoil", "buckle", "rest"],
+  "preview": "game-review.html: Back",
+  "verified": [
+    "Real SpriteActor selects N row.",
+    "Attack emits hit at 375ms; death holds final rest image at 1000ms.",
+    "Exporter checks all five rows and all clips for nonempty, unclipped cells.",
+    "Rear artwork has no face or belly gear painted on the back."
+  ],
+  "limitations": [
+    "Left legs are heavily obscured by tail; joint continuity cannot be approved.",
+    "Attack reads mostly as body rise/fall, with weak forward anticipation.",
+    "Rear idle repeats neutral image and lacks authored breathing or tail motion.",
+    "Rear walk colors are more orange than rear actions.",
+    "Not bound to gameplay; tests establish technical loading, not visual acceptance."
+  ]
+}
