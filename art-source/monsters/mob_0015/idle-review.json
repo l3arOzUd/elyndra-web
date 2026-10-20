@@ -1,0 +1,17 @@
+{
+  "status": "left-idle-two-drawing-study",
+  "base": "actions-left.png",
+  "alternate": "idle-left-leaves.png",
+  "selectedCell": 0,
+  "preview": "actions-review.html",
+  "verified": [
+    "Alternate top-left drawing changes leaf tips while keeping planted feet and main body pose.",
+    "Actual browser composite has transparent exterior.",
+    "Only neutral cell is selected; changes to other generated cells are unused."
+  ],
+  "limitations": [
+    "Small stone/root detail and color changes remain.",
+    "Two unique drawings, not six authored idle frames.",
+    "Front/rear idle movement still missing."
+  ]
+}

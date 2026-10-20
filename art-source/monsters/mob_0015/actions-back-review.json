@@ -1,0 +1,18 @@
+{
+  "status": "rear-action-study",
+  "source": "actions-back.png",
+  "preview": "actions-review.html",
+  "verified": [
+    "Rear hood, scapula plates and brass spine preserved, no front eye or chest emblem.",
+    "Character right arm remains active in windup and strike.",
+    "Death lowers hips, folds knees and pitches torso forward away from camera.",
+    "Browser contact sheet shows clean transparent exterior and complete poses."
+  ],
+  "limitations": [
+    "Strike reaches diagonally outward more than front-view punch.",
+    "Final death heel blocks remain upright; ankle folding needs refinement.",
+    "Root routing and plate shapes drift.",
+    "Missing inbetweens and cross-view registration.",
+    "No gameplay binding."
+  ]
+}
