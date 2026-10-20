@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "front-neutral-v2.png",
+  "prompt": "Precise object edit for 2D animation. Same Brine Automaton front view, identical camera, canvas, scale, body and foot positions as reference. Create ATTACK WINDUP: robot's right arm (IMAGE LEFT) bends at mechanical elbow and raises its closed clamp fist beside the left edge of the chest, piston retracted ready to punch toward camera. Clamp fingers curl together as rigid metal pincers, not human fingers. Other arm remains hanging as reference. Preserve barrel chest, BOTH gauge eyes unobscured, tank, two valves, exact two legs and feet planted unchanged, all salt and brass bands. Only attacking arm changes. Full character transparent background, no shadow, no steam, no labels, no motion lines. Heavy rigid machine, no rubber or stretching. Preserve generous margins."
+}

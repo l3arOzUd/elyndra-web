@@ -1,0 +1,34 @@
+{
+  "id": "mob_0022",
+  "status": "front-punch-study",
+  "sources": [
+    "front-neutral-v2.png",
+    "attack-front-windup.png",
+    "attack-front-impact.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    1,
+    0
+  ],
+  "fps": 6.25,
+  "artApproved": false,
+  "publicBinding": false,
+  "validation": {
+    "timingFrames": 6,
+    "emptyFrames": 0,
+    "edgeFrames": 0,
+    "pageErrors": [],
+    "browserTransparency": "clean"
+  },
+  "remaining": [
+    "Neutral and action body scale differ; fixed-image preview exposes this.",
+    "Clamp becomes four block knuckles in impact; original pincer construction not preserved.",
+    "Piston thrust direction reads forward but articulation needs refinement.",
+    "Recovery currently reuses windup; no unique recoil drawing."
+  ],
+  "next": "Repair clamp construction and match body/foot landmarks to canonical neutral before runtime export."
+}
