@@ -204,7 +204,7 @@
       "clip": "idle",
       "facing": "S",
       "frame": 12,
-      "visible": 38293,
+      "visible": 38246,
       "edge": 0
     },
     {
@@ -1406,7 +1406,7 @@
     }
   ],
   "limitations": [
-    "Left, front and rear action drafts exist; front and rear idle remain static, and diagonal aliases are not authored views.",
+    "Left, front and rear action drafts exist; rear idle remains static, and diagonal aliases are not authored views.",
     "Hoof trajectories, leg angles, torso registration and surface continuity remain under review.",
     "Blink edit has minor body/detail drift; actions need in-between drawings.",
     "Technical checks do not establish visual acceptance."

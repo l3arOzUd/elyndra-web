@@ -15,7 +15,7 @@
     "deathScreenshot": "output/thornback-back-death.png"
   },
   "remaining": [
-    "Front/rear idle static",
+    "Rear idle static",
     "Thorn and moss detail drifts between poses",
     "Foot sliding and action transitions require refinement",
     "Rear death hips remain high; needs comparison against side collapse",

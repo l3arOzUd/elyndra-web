@@ -4,13 +4,13 @@
   "verified": [
     "Front attack selects S and emits hit at375ms.",
     "Final death pose rests chin on ground with eyes closed.",
-    "Per-pose source bounds exclude previous-row hoof fragments."
+    "Per-pose source bounds exclude previous-row hoof fragments.",
+    "Front idle uses authored closed eyelids at frame 12 of a 16-frame loop; SpriteActor S facing visually inspected."
   ],
   "limitations": [
-    "Front idle remains static.",
-    "Rear animation still missing.",
     "Head/tusk dimensions and thorn details drift across poses.",
     "Death has onlythreeauthoredposes and needs in-betweens.",
-    "Not bound to gameplay."
+    "Not bound to gameplay.",
+    "Blink changes fine fur shading slightly; breathing and intermediate eyelid poses remain unfinished."
   ]
 }

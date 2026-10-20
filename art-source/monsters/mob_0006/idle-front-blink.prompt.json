@@ -1,0 +1,4 @@
+{
+  "prompt": "Edit only the eyes of the TOP LEFT boar in this exact sprite sheet: close both eyelids gently for a natural idle blink. Preserve its head position, snout, tusks, thorns, body, legs, colors and exact scale. All other five poses must remain unchanged. Exact same 1536x1024 sheet layout. Preserve true transparent background alpha; no added shadow or ground.",
+  "reference": "actions-front.png"
+}

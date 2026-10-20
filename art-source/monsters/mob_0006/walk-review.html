@@ -10,6 +10,7 @@
 <script type="module">
 const image=new Image();image.src='./walk-left-v3.png';await image.decode();
 const frontWalk=new Image();frontWalk.src='./walk-front-v2.png';await frontWalk.decode();
+const frontBlink=new Image();frontBlink.src='./idle-front-blink.png';await frontBlink.decode();
 const frontActions=new Image();frontActions.src='./actions-front.png';await frontActions.decode();
 for(const name of ['attack-front','hit-front','death-front'])document.querySelector('#clip').add(new Option(name,name));
 document.querySelector('#clip').add(new Option('walk-front','walk-front'));
@@ -26,12 +27,19 @@ for(const name of ['walk','attack','hit','death']){
  sequences[`${name}-back`]=sequences[name];
  document.querySelector('#clip').add(new Option(`${name}-back`,`${name}-back`));
 }
+sequences['idle-front']=sequences.idle;
+document.querySelector('#clip').add(new Option('idle-front','idle-front'));
 let clip='walk';
 const bottoms=[475,475,475,442,442,444];
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 function draw(ctx,i,x,y,scale){
  const pose=sequences[clip][i];
+ if(clip==='idle-front'){
+  const s=scale*.82;
+  ctx.drawImage(pose?frontBlink:frontActions,0,0,512,519,x-280*s,y-519*s,512*s,519*s);
+  return;
+ }
  if(clip.endsWith('-back')){
   const walk=clip==='walk-back',sy=walk?Math.floor(pose/3)*512:pose<3?0:550;
   const h=walk?512:pose<3?550:474;
@@ -67,7 +75,7 @@ function contactSheet(){
 cg.clearRect(0,0,1200,680);
 for(let i=0;i<6;i++){
  const x=i%3*400,y=Math.floor(i/3)*340;
- const f=clip==='idle'?[0,4,8,11,12,15][i]:i;
+ const f=clip.startsWith('idle')?[0,4,8,11,12,15][i]:i;
  draw(cg,f,x+200,y+310,.65);
  cg.fillStyle='#222';cg.fillText(`Frame ${f+1}`,x+12,y+20);
 }
@@ -79,7 +87,7 @@ document.querySelector('#replay').onclick=()=>{frame=0;paused=false;last=perform
 document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelector('#pause').textContent=paused?'Play':'Pause';};
 document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;document.querySelector('#pause').textContent='Play';};
 function tick(now){
- if(!paused&&now-last>(clip==='idle'?125:150)){frame=clip.startsWith('walk')||clip==='idle'?(frame+1)%sequences[clip].length:Math.min(5,frame+1);last=now;}
+ if(!paused&&now-last>(clip.startsWith('idle')?125:150)){frame=clip.startsWith('walk')||clip.startsWith('idle')?(frame+1)%sequences[clip].length:Math.min(5,frame+1);last=now;}
  g.clearRect(0,0,600,420);g.strokeStyle='#888';g.beginPath();g.moveTo(0,390);g.lineTo(600,390);g.stroke();
  draw(g,frame,300,390,.9);
  document.querySelector('#frame').value=String(frame);document.querySelector('#label').textContent=String(frame+1);
@@ -103,8 +111,8 @@ function exportDraft(){
   for(let row=0;row<json.rows.length;row++)for(let f=0;f<def.frames;f++){
    ctx.save();ctx.translate(f*384,row*384);
    const suffix=row===1?'front':row===4?'back':null;
-   clip=suffix?(name==='idle'?`attack-${suffix}`:`${name}-${suffix}`):name;
-   draw(ctx,(row===1||row===4)&&name==='idle'?0:f,192,346,.66);ctx.restore();
+   clip=suffix?(name==='idle'&&suffix==='back'?'attack-back':`${name}-${suffix}`):name;
+   draw(ctx,row===4&&name==='idle'?0:f,192,346,.66);ctx.restore();
   }
   images[name]=c.toDataURL('image/png');sizes[name]={width:c.width,height:c.height};
  }
