@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "front-neutral-v2.png",
+    "death-front-settled.png"
+  ],
+  "prompt": "Animation key between standing and kneeling shutdown for this exact Brine Automaton. Image1 is neutral identity and scale authority, Image2 is eventual low kneeling endpoint, NOT scale authority. Draw early KNEE BUCKLE: both mechanical knees bend about 35 degrees and splay a little, hips descend slightly, both broad boots stay planted at exact neutral foot positions. Both clamp hands hang lower beside body, open and relaxed, still above floor. Keep barrel rigid and same width/height as image1, same tank and top valves. Gauge needles begin dropping low. Same front orthographic camera, unchanged canvas, generous margins, bottom boot baseline y1120 of1254. No body zoom, no rubber squashing, no whole-body backward fall. Real transparent alpha, no floor/shadow/steam/text. One full body."
+}

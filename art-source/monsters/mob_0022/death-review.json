@@ -1,0 +1,29 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "front-neutral-v2.png",
+    "death-front-buckle.png",
+    "death-front-settled.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "fps": 6.25,
+  "hold": true,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Final pose resembles resting squat.",
+    "Shell width and feet drift.",
+    "Knee and wrist mechanical continuity needs refinement."
+  ],
+  "observed": [
+    "No whole-body backward rotation.",
+    "Gauge needles drop; two clamp hands support lowered body."
+  ]
+}
