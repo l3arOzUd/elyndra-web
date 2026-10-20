@@ -1,0 +1,21 @@
+{
+  "id": "mob_0087",
+  "name": "Zero Stoker",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in image generation using front identity and rear/opposite-side construction references.",
+  "confirmed": [
+    "Anatomical right shovel arm and left normal hand retained; near tool switches correctly between profiles.",
+    "Rear shovel shows convex back, rear head opaque, hopper mounted on back.",
+    "Right profile shows both toes forward and compact rear heel.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Rear head rises above coal while front/profile coal rises above head; vertical hopper/head alignment inconsistent.",
+    "Left far shovel arm displaced backward and far foot appears reversed; neutral pose must be reconciled.",
+    "Right shovel blade profile shorter/narrower than front and left; grip shaft geometry changes.",
+    "Grille remains oblique in profiles; chest depth, armor panels and rivet count drift.",
+    "Rear normal hand planes resemble front; digit topology needs verification.",
+    "No separated tool/coal/body layers or runtime clips yet."
+  ],
+  "next": "Fix left far foot and shoulder pose, lock hopper/head heights and shovel dimensions, align armor landmarks. Separate articulated limbs/tool/hand/hopper/coal/grille for heavy walk, shovel strike/scoop, stoke cycle, hit and knees-first mechanical collapse; ember/firebox effects separate."
+}
