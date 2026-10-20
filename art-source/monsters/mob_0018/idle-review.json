@@ -1,17 +1,20 @@
 {
-  "status": "front-idle-two-pose-draft",
-  "sources": ["actions-front.png", "idle-front-settle.png"],
+  "status": "front-side-idle-two-pose-draft",
+  "sources": ["actions-front.png", "idle-front-settle.png", "actions-left.png", "idle-left-settle.png"],
   "selectedCell": 0,
   "timing": "Six timing frames at 4fps; alternate drawing only frames 2 and 3.",
   "observations": [
     "Helmet tilts downward, fists settle lower, both feet remain aligned.",
     "Two arms and legs retained; browser alpha clean.",
-    "Only top-left cell is consumed; other regenerated action cells are unused."
+    "Only top-left cell is consumed; other regenerated action cells are unused.",
+    "Side alternate lowers helmet and slightly shifts near fist while boots remain aligned.",
+    "Side comparison renders cleanly on browser background without page errors."
   ],
   "limitations": [
     "Chest carving and shoulder widths change between drawings.",
     "Two drawings with holds do not provide a smooth settling motion.",
-    "Side/rear idle still static.",
+    "Side helmet and shoulder details drift slightly; far limbs remain occluded.",
+    "Rear idle still static.",
     "Bible sand emission remains missing."
   ],
   "publicBinding": false
