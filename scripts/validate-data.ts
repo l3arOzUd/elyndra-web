@@ -495,7 +495,7 @@ function checkBalance(b: ContentBundle) {
     bruiser: { hits: [4, 11], dmg: [0.02, 0.06] },
     construct: { hits: [4, 11], dmg: [0.015, 0.05] },
     elite: { hits: [10, 30], dmg: [0.04, 0.1] },
-    boss: { hits: [60, 220], dmg: [0.06, 0.18] },
+    boss: { hits: [50, 220], dmg: [0.04, 0.18] }, // solo with potions (elyndra-server balance_jobs_test.go)
   };
   const expPerHp: number[] = [];
   for (const m of b.monsters) {

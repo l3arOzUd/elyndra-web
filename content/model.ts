@@ -87,7 +87,9 @@ export const ARCHETYPES: Record<Archetype, ArchetypeTargets> = {
   bruiser: { hits: 7, def: 0.15, dmg: 0.035, attack_ms: 2000, move_ms: 300, range: 1, exp: 2.3 },
   construct: { hits: 6.5, def: 0.25, dmg: 0.028, attack_ms: 1900, move_ms: 340, range: 1, exp: 2.2 },
   elite: { hits: 18, def: 0.2, dmg: 0.06, attack_ms: 1500, move_ms: 240, range: 1, exp: 6.5 },
-  boss: { hits: 120, def: 0.25, dmg: 0.1, attack_ms: 1400, move_ms: 260, range: 2, exp: 45 },
+  // Bosses are fought solo with potions: 70 hits (~40 s with skills) and
+  // 6.5% of max HP a swing (balance_jobs_test.go).
+  boss: { hits: 70, def: 0.25, dmg: 0.065, attack_ms: 1400, move_ms: 260, range: 2, exp: 45 },
 };
 
 export const AGGRO_RADIUS: Record<Behavior, number> = { passive: 0, flee: 0, assist: 6, aggressive: 7 };
