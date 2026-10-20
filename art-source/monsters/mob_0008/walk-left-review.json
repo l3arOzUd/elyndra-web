@@ -1,0 +1,17 @@
+{
+  "status": "draft-anatomy-correction-needed",
+  "source": "walk-left.png",
+  "confirmed": [
+    "Blue-green scaled fish, cream belly and translucent fin identity retained.",
+    "Frame 4 lifts the near rear fin-foot.",
+    "All six cells contain the complete silhouette within the requested grid."
+  ],
+  "limitations": [
+    "Frame 2 lifts far front foot instead of requested near front foot.",
+    "Only three foot silhouettes are clear; four attachments remain unverified.",
+    "Frame 3 changes front leg position and belly support.",
+    "Fin-ray patterns and scale details drift.",
+    "Camera remains slightly three-quarter rather than strict profile.",
+    "No runtime export or gameplay binding."
+  ]
+}
