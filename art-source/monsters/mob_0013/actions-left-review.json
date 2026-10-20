@@ -3,7 +3,8 @@
   "source": "actions-left.png",
   "verified": [
     "Browser death sequence shows limp wings bent legs and low resting shell.",
-    "Needle points forward during attack and lies above ground in final death."
+    "Needle points forward during attack and lies above ground in final death.",
+    "Attack browser inspection exposed neighboring needle fragment in windup; asymmetric crop now excludes lower-right50px strip."
   ],
   "limitations": [
     "Only key poses; descent and attack need intermediate drawings.",
@@ -13,5 +14,6 @@
     "Jade eye remains bright in death; needs powered-down appearance.",
     "No runtime binding."
   ],
-  "next": "Inspect attack crops and dim dead eye; author front/rear actions."
+  "next": "Clean V2 death alpha before selecting; author front/rear actions.",
+  "rejectedDraft": "actions-left-v2.png: powered-down eye/tank correct but severe rectangular alpha haze in browser; not selected"
 }
