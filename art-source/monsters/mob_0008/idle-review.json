@@ -1,0 +1,15 @@
+{
+  "status": "idle-draft-refinement-pending",
+  "source": "idle-left-blink.png",
+  "selectedCell": "top-left only",
+  "verified": [
+    "Browser shows closed eyelid while body remains standing.",
+    "Loop holds neutral pose and blinks on frame12 of16."
+  ],
+  "limitations": [
+    "Gold outlines and scale shading differ slightly from neutral.",
+    "No breathing or fin idle motion yet.",
+    "Front and rear idle not authored.",
+    "Not bound to gameplay."
+  ]
+}
