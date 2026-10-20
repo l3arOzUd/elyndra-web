@@ -1,0 +1,22 @@
+{
+  "status": "side-idle-draft-front-repair-pending",
+  "selected": "idle-left-tongue-in.png cell 0",
+  "preview": "actions-review.html",
+  "verified": [
+    "Side idle alternates tongue-in and original tongue-out poses with eye open.",
+    "Browser composite of side idle is clean.",
+    "Preview loop plays without page errors."
+  ],
+  "frontAttempts": [
+    {"source": "idle-front-tongue-in.png", "result": "Rejected: actual translucent orange background haze in browser."},
+    {"source": "idle-front-tongue-in-v2.png", "result": "Alpha repaired, but head/body size, placement and color changed; not selected for idle loop."}
+  ],
+  "limitations": [
+    "Two unique side drawings repeated over six timeline frames.",
+    "Minor scale-marking and color drift remains.",
+    "Front and back idle stay static.",
+    "Existing closed-eye hit/death drawings are stylized and still require anatomy/art-direction review.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Repair frontal idle while preserving original registration and proportions."
+}

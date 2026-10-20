@@ -1,9 +1,9 @@
 <!doctype html><meta charset="utf-8"><title>Sandcoil action review</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}button,select{font:inherit;margin:8px}</style>
 <h1>Sandcoil — action key poses</h1>
-<p>Draft artwork. Check coil continuity, head size and floor contact. Not bound to gameplay.</p>
+<p>Draft artwork. Check coil continuity, head size and floor contact. Not bound to gameplay. Idle tongue motion currently exists for side view only; front and back remain static.</p>
 <select id="view"><option value="left">Side</option><option value="front">Front</option><option value="back">Back</option></select>
-<select id="clip"><option>attack</option><option>hit</option><option>death</option></select>
+<select id="clip"><option>attack</option><option>hit</option><option>death</option><option>idle</option></select>
 <button id="replay">Replay</button><label><input id="paused" type="checkbox"> Pause</label>
 <input id="frame" type="range" min="0" max="5" value="0"><span id="number"></span><br>
 <canvas id="motion" width="600" height="600"></canvas>
@@ -12,9 +12,10 @@
 const images={};for(const view of ['left','front','back']){const image=new Image();image.src=`actions-${view}.png`;await image.decode();images[view]=image;}
 let im=images.left;
 const repairs={};for(const view of ['front','back']){const image=new Image();image.src=`actions-${view}-v2.png`;await image.decode();repairs[view]=image;}
+const idle={};for(const view of ['left']){const image=new Image();image.src=`idle-${view}-tongue-in.png`;await image.decode();idle[view]=image;}
 const motion=document.querySelector('#motion'),g=motion.getContext('2d'),contact=document.querySelector('#contact');
 contact.getContext('2d').drawImage(im,0,0,1536,1024);
-const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
+const sequences={idle:[0,0,0,0,0,0],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 let start=performance.now();
 // Sheet layout is irregular: preserve the strike tongue and the adjacent coil.
 const regions=[
@@ -28,17 +29,19 @@ const regions=[
 const anchors=[305,790,1325,270,790,1300],bottoms=[508,508,508,931,937,920];
 function draw(f){
  const pose=sequences[document.querySelector('#clip').value][f];
+ const view=document.querySelector('#view').value;
+ const source=document.querySelector('#clip').value==='idle'&&idle[view]&&f!==2&&f!==3?idle[view]:im;
  g.clearRect(0,0,600,600);
  g.strokeStyle='#d7e0db';g.beginPath();g.moveTo(0,550);g.lineTo(600,550);g.stroke();
  if(document.querySelector('#view').value==='left'){
   g.save();g.translate(310-anchors[pose]*.9,550-bottoms[pose]*.9);g.scale(.9,.9);
   g.beginPath();regions[pose].forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y));g.closePath();g.clip();
-  g.drawImage(im,0,0,1536,1024);g.restore();
+  g.drawImage(source,0,0,1536,1024);g.restore();
  }else if(document.querySelector('#view').value==='front'){
   const sx=[0,530,1024,0,532,1024][pose],sy=pose<3?0:530;
   const sw=[530,494,512,532,492,512][pose],sh=pose<3?530:494;
   const ax=[310,800,1300,310,800,1300][pose],bottom=[488,489,491,927,927,928][pose];
-  g.drawImage(pose===1?repairs.front:im,sx,sy,sw,sh,310+(sx-ax)*.9,550+(sy-bottom)*.9,sw*.9,sh*.9);
+  g.drawImage(pose===1?repairs.front:source,sx,sy,sw,sh,310+(sx-ax)*.9,550+(sy-bottom)*.9,sw*.9,sh*.9);
  }else{
   const sx=[0,540,1040,0,540,1040][pose],sy=pose<3?0:540;
   const sw=[540,500,496,540,500,496][pose],sh=pose<3?540:484;
@@ -49,7 +52,9 @@ function draw(f){
 }
 function tick(t){
  const paused=document.querySelector('#paused').checked;
- const f=paused?Number(document.querySelector('#frame').value):Math.max(0,Math.min(5,Math.floor((t-start)/180)));
+ const isIdle=document.querySelector('#clip').value==='idle';
+ const frame=Math.max(0,Math.floor((t-start)/(isIdle?350:180)));
+ const f=paused?Number(document.querySelector('#frame').value):isIdle?frame%6:Math.min(5,frame);
  if(!paused)document.querySelector('#frame').value=f;
  draw(f);requestAnimationFrame(tick);
 }
