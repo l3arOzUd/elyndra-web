@@ -27,10 +27,11 @@
     "transitionPlayback": "All four views played idle, walk, attack, hit and death in sequence, stopped at death frame 5, and remained unchanged after another 300ms."
   },
   "visualFindings": [
-    "Action neutral silhouettes are taller than idle: front top y144 versus188, back152 versus194, left132 versus187, right93 versus180.",
+    "Older action neutral silhouettes are taller than idle: front top y144 versus188, back152 versus194, left132 versus187. Right hit/death remain y93 versus180.",
+    "Right attack now uses the canonical neutral plus isolated windup and pinch; its start matches idle bounds [109,180,479,431] exactly.",
     "This is a source-proportion/camera mismatch, not solved by matching foot baselines.",
     "Side idle-to-walk registration now shares identical source anchors.",
-    "Attack and hit still change shell/coral detail and may lose near walking chains.",
+    "Right attack retains four near walking chains; its closed large claw still appears slimmer. Other attack and hit sources may lose near chains and change shell/coral detail.",
     "Right death compresses the shell; left death still reads as a low crouch.",
     "Front/back idle drift and correct sideways propulsion remain unresolved."
   ],

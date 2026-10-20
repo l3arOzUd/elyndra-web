@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "attack-right-windup.png",
+    "right-profile-study-v2.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Edit image1 (right-facing Coral Claw windup) into ONE pinch-impact attack key. Image2 is neutral anatomy reference only. Keep EXACT shell/coral/eye/body/legs/small-near-claw registration from image1. Change ONLY the large FAR claw: lower its raised forearm slightly forward toward image right and snap its two fingers closed into a forceful horizontal pinch, with both tips safely inside the 1536x1024 canvas. Keep the original huge claw size and rounded volume, coral markings, same rigid arm lengths, far arm behind body. Keep all FOUR near walking legs and every visible far-leg segment from image1, foot positions unchanged. Do not resize crab or shorten legs, do not turn camera or stretch body. Full animal, transparent background, no effects or motion trails, no text or shadow, one key not a sheet."
+}

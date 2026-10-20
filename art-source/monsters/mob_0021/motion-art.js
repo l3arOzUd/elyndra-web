@@ -13,7 +13,8 @@ const sideWalk={
  left:['left-profile-study-v2.png','walk-left-lift-24.png','left-profile-study-v2.png','walk-left-lift-13.png'],
  right:['right-profile-study-v2.png','walk-right-lift-24.png','right-profile-study-v2.png','walk-right-lift-13-v2.png'],
 };
-const extra=['walk-front-study.png','walk-back-study-v2.png','walk-back-study-v4.png','buckle-front-study.png','collapse-front-volume.png','death-front-volume-v2.png','pinch-back-depth-study.png','death-back-volume-v2.png','death-left-volume-study.png'];
+export const rightAttackSources=['right-profile-study-v2.png','attack-right-windup.png','attack-right-pinch.png'];
+const extra=['walk-front-study.png','walk-back-study-v2.png','walk-back-study-v4.png','buckle-front-study.png','collapse-front-volume.png','death-front-volume-v2.png','pinch-back-depth-study.png','death-back-volume-v2.png','death-left-volume-study.png',...rightAttackSources];
 export async function loadMotionArt(){
  const files=new Set([...Object.values(idleSources).flat(),...Object.values(sideWalk).flat(),...Object.values(actionSpecs).map(s=>s.file),...extra]);
  return Object.fromEntries(await Promise.all([...files].map(async file=>{
@@ -45,6 +46,7 @@ export function drawMotion(g,art,view,clip,frame){
   }return;
  }
  const cell=view==='front'&&clip==='death'?frontDeath[frame]:sequence[clip][frame];
+ if(view==='right'&&clip==='attack'){whole(g,art,rightAttackSources[cell],.25,616,1005);return}
  if(view==='front'&&clip==='death'){
   const file=cell===5?'death-front-volume-v2.png':cell===4?'collapse-front-volume.png':cell===6?'buckle-front-study.png':'front-rest-study.png';
   whole(g,art,file,.28,740,cell===5?927:cell===4?951:cell===6?970:978);return;

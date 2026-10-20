@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-profile-study-v2.png",
+  "prompt": "Use case: precise-object-edit. Create ONE attack windup key by minimally editing this right-facing Coral Claw reference. Keep EXACTLY the same 1536x1024 composition, crab body scale and position, camera, coral branches, shell, eye, small NEAR claw, FOUR near walking-leg chains and partly visible far legs. Change ONLY the LARGE FAR claw arm at image right: draw its elbow back and raise the large claw slightly so its tip stays well INSIDE the frame, and open its two fingers into a clear threatening gape. The far claw stays behind the body and small near claw. Retain its original size, volume, cream teeth and coral surface. Do not enlarge the body, lengthen legs, tilt the shell, or change planted foot positions. This must overlay the idle reference with body and feet registered. Full animal, genuine transparent background, no text, no floor/shadow, no sheet."
+}
