@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "walk-right-lift-13.png",
+    "right-profile-study-v2.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Image 1 is the edit target: right-facing Coral Claw with near walking legs 1 and 3 lifted. Image 2 is the neutral anatomical reference. Make ONE minimal correction to image 1: restore the two visibly hanging FAR walking-leg segments under the belly that exist in image 2 but disappeared in image 1. Keep these far legs BEHIND all four near walking legs, using their original dark teal armour and grey pointed tips. They should peek through the gaps between near legs, clearly separate from those legs. Do not add any new near legs. Preserve the exact four near-leg poses, all segment shapes, shell, claws, eye, coral branches, camera, framing and scale from image 1. Genuine transparent background, no background glow, no floor/shadow, no labels or text. One full character only."
+}

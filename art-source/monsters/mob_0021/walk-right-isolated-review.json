@@ -1,0 +1,31 @@
+{
+  "id": "mob_0021",
+  "status": "right-alternating-leg-anatomy-study",
+  "reference": "right-profile-study-v2.png",
+  "sources": ["right-profile-study-v2.png", "walk-right-lift-24.png", "walk-right-lift-13-v2.png"],
+  "sequence": [0, 1, 0, 2],
+  "uniqueDrawings": 3,
+  "fps": 4,
+  "preview": "walk-right-isolated-review.html",
+  "transform": {"scale": 0.3, "origin": [26, 115], "perFrameFitting": false},
+  "visualReview": {
+    "clearNearWalkingChainsByDrawing": [4, 4, 4],
+    "largeClaw": "Far side retained; small claw remains near.",
+    "repair": "Lift-13 v2 restores two far-leg fragments lost in the first lift-13 drawing. Original is retained for comparison, not selected.",
+    "remaining": [
+      "Eight complete walking chains cannot be traced through concealed roots.",
+      "Fixed segment lengths and planted foot continuity remain unverified.",
+      "Leg lifting does not yet establish sideways propulsion.",
+      "Lifted front near leg overlaps the small claw.",
+      "Cross-view coral landmarks and motion timing need reconciliation."
+    ]
+  },
+  "browserCheck": {
+    "visiblePixelsByTimingKey": [72334, 69771, 72329, 67825],
+    "edgePixels": [0, 0, 0, 0],
+    "pageErrors": [],
+    "scope": "Rendering and canvas containment; not anatomical approval."
+  },
+  "artApproved": false,
+  "publicBinding": false
+}

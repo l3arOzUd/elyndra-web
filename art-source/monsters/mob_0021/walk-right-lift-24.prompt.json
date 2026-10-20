@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-profile-study-v2.png",
+  "prompt": "Use case: precise-object-edit. Edit the reference into ONE animation key of the exact same right-facing Coral Claw crab. Retain the same 1536x1024 framing, camera, shell, coral branches, eyes, both claw arms, colours and sizes. Keep the huge claw FAR behind the body and small claw NEAR. ONLY articulate two near-side walking legs: number the FOUR near walking legs from front (image right, next to small claw) to rear (image left). Lift near legs 2 and 4 by bending their existing joints, drawing all their rigid armour segments and pointed feet continuously from the same roots. Keep near legs 1 and 3 planted exactly as reference. Maintain original segment lengths; fold at joints rather than shortening, deleting, or merging parts. Four distinct near walking chains must remain clearly visible, plus the existing partly hidden far legs. Keep shell and coral motionless for registration. Transparent background, no floor, no cast shadow, no text, no contact sheet."
+}
