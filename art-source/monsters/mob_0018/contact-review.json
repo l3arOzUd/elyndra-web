@@ -1,9 +1,10 @@
 {
-  "status": "opposite-contact-study-unapproved",
+  "status": "four-key-pose-walk-draft",
   "sources": [
     "walk-left-contact-a-v5.png",
     "walk-left-pass-a.png",
-    "walk-left-contact-b.png"
+    "walk-left-contact-b.png",
+    "walk-left-pass-b.png"
   ],
   "rejected": {
     "source": "walk-left-contact-a-v2.png",
@@ -15,18 +16,21 @@
     "Head remains left-facing.",
     "A v4 places decorated fist behind torso and far knuckle fist forward; visible elbow/wrist chain.",
     "A v5 replaces orphan-looking U-shaped shoulder underside with flat flank armor.",
-    "Passing A brings trailing boot inward and slightly above planted sole while retaining near support foot."
+    "Passing A brings trailing boot inward and slightly above planted sole while retaining near support foot.",
+    "Passing B raises near boot in front of planted far shin; both boots remain readable.",
+    "Preview applies uniform0.58 scale, per-contact hip and ground anchors without deforming limbs; browser four-pose loop reports no errors."
   ],
   "limitations": [
     "Near shoulder connection remains occluded behind armor; flank now reads as torso.",
     "Near/far leg attachment and identity need confirmation.",
     "Carved motifs and block proportions drift.",
     "Source head/feet margins too tight.",
-    "Passing B absent; passing A lift is small and does not fully reach beneath hips.",
+    "Four poses present; swing reach and transfer between A/B still abrupt, not a finished gait.",
     "No runtime export or gameplay binding.",
-    "A arm and torso block proportions differ from contact B; rigid segment continuity not approved."
+    "A arm and torso block proportions differ from contact B; rigid segment continuity not approved.",
+    "Contact B torso/arms remain bulkier than A; image registration cannot resolve source proportion drift."
   ],
-  "next": "Author opposite passing pose, align body proportions and assess full stride.",
+  "next": "Register hips/ground and inspect full cycle; add landing/weight-transfer poses where needed.",
   "rejectedFurther": [
     {
       "source": "walk-left-contact-a-v3.png",
