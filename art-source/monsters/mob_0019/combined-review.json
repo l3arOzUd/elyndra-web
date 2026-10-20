@@ -1,0 +1,28 @@
+{
+  "status":"combined-motion-study-unapproved",
+  "preview":"combined-review.html",
+  "views":["left","front","back"],
+  "clips":["still-idle","walk","attack","hit","death"],
+  "technicalCheck":{
+    "checkedTimingCells":69,
+    "emptyOrCanvasEdgeViolations":[],
+    "browserErrors":[],
+    "method":"Render every timing cell for three authored views into 384-square canvas; alpha >32 must be nonempty and avoid canvas boundary."
+  },
+  "visualReview":[
+    "Compared idle, both walking contacts and settled death across all three views.",
+    "Uniform walking scale adjusted toward matching idle body heights; no limb deformation used.",
+    "Side gait torso and armor still differ from idle; frontal contacts remain floating.",
+    "Rear thrust points sideways and rear death halo remains inconsistent."
+  ],
+  "remaining":[
+    "Author right-facing animation that preserves right-handed spear grip; mirroring left would swap hands.",
+    "Author idle settling motion; current idle is explicitly one still.",
+    "Refine foot support and rigid limb continuity, add connecting poses.",
+    "Correct rear thrust and halo panel projection.",
+    "Harmonize weapon dimensions and death weapon-release transition.",
+    "Add separate mirror-flare VFX with animation timing.",
+    "Export and test complete directional runtime assets after missing views and motion are supplied."
+  ],
+  "publicBinding":false
+}
