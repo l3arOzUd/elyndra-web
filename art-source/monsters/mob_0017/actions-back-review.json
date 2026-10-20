@@ -1,0 +1,24 @@
+{
+  "status": "rear-action-draft-unapproved",
+  "source": "actions-back.png",
+  "replacement": {
+    "cell": 2,
+    "source": "actions-back-v2.png",
+    "reason": "Restores inner pair missing in strike. Only cell2 selected because repair brightened death core elsewhere."
+  },
+  "verified": [
+    "Rear-facing throughout with no face/antennae appearing.",
+    "Repaired strike has six visible foot tips.",
+    "Original dying/dead cells fold limbs and dim ember core.",
+    "Browser death playback holds frame5 without errors; alpha clean."
+  ],
+  "limitations": [
+    "Strike reads upward rise more than forward push; shell shape narrows.",
+    "Idle inner pair raised rather than full planted stance.",
+    "Folded six-leg topology not independently readable.",
+    "Hit crop boundary adjusted to x565 because right claw crosses regular cell.",
+    "Shell/texture registration and action continuity still unapproved.",
+    "Not runtime exported or gameplay bound."
+  ],
+  "next": "Unify all views in shared action/walk preview, inspect transitions and fix registration before runtime draft export."
+}
