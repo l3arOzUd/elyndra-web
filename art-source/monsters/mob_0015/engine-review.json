@@ -4,21 +4,46 @@
   "preview": "game-review.html",
   "registrationPreview": "combined-review.html",
   "technicalChecks": {
-    "clips": ["idle", "walk", "attack", "hit", "death"],
+    "clips": [
+      "idle",
+      "walk",
+      "attack",
+      "hit",
+      "death"
+    ],
     "sheetCells": 180,
     "formatErrors": [],
     "emptyOrEdgeClippedCells": 0,
     "browserErrors": [],
-    "hitEventAt375ms": ["W", "E", "S", "N"],
-    "deathStillActiveAt2000ms": ["W", "E", "S", "N"]
+    "hitEventAt375ms": [
+      "W",
+      "E",
+      "S",
+      "N"
+    ],
+    "deathStillActiveAt2000ms": [
+      "W",
+      "E",
+      "S",
+      "N"
+    ]
   },
   "limitations": [
     "180 cells include repeated poses and directional aliases, not 180 unique drawings.",
     "Right mirrors left; diagonal views reuse side artwork.",
     "Side walk has slimmer/brighter body than side idle.",
-    "Front death source reaches side edges despite padded export passing edge checks.",
     "Attack direction, rear death ankle folding and foot support need refinement.",
     "Surface patterns and colors drift between poses.",
     "Not tested in live combat and not bound in public sprite index."
-  ]
+  ],
+  "frontDeathRepair": {
+    "source": "death-front-final-v3.png",
+    "alphaBBox": [
+      41,
+      389,
+      1212,
+      1032
+    ],
+    "engineReviewed": true
+  }
 }
