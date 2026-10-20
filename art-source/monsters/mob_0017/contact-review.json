@@ -1,0 +1,24 @@
+{
+  "status": "single-support-pose-draft",
+  "source": "walk-left-contact-a-v2.png",
+  "guide": "tripod-a-guide.svg",
+  "preview": "contact-review.html",
+  "verified": [
+    "Six distinct foot tips visible, including far front previously obscured in reference.",
+    "Near front/rear and far middle reach approximately common support baseline.",
+    "Near middle and far front/rear have visible ground clearance.",
+    "Browser composite confirms clean alpha and intact amber shell/core."
+  ],
+  "rejectedInitial": {
+    "source": "walk-left-contact-a.png",
+    "reason": "Shows six feet but near middle remained planted and far middle lifted."
+  },
+  "limitations": [
+    "Only one contact pose, not an alternating walk cycle.",
+    "Far middle segment appears longer and heavier than reference.",
+    "Far-side hip attachments remain partly occluded.",
+    "Core/reflection pattern differs from source.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Create opposite tripod with matched shell registration and segment lengths, then passing poses."
+}
