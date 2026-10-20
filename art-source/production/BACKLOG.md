@@ -79,7 +79,7 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0071 | Glassback Ram | master-created | master-created | master-created | master-created | placeholder |
 | mob_0072 | Frostcoil Serpent | master-created | master-created | master-created | master-created | placeholder |
 | mob_0073 | Glacier Juggernaut | master-created | master-created | master-created | master-created | placeholder |
-| mob_0074 | Mirrorshade | master-created | missing | missing | missing | placeholder |
+| mob_0074 | Mirrorshade | master-created | master-created | master-created | master-created | placeholder |
 | mob_0075 | Hoarfrost Behemoth | master-created | missing | missing | missing | placeholder |
 | mob_0076 | Cryo Sentry | master-created | missing | missing | missing | placeholder |
 | mob_0077 | Archive Specter | master-created | missing | missing | missing | placeholder |

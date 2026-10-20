@@ -1,0 +1,21 @@
+{
+  "id": "mob_0074",
+  "name": "Mirrorshade",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front mirror humanoid and opposite views.",
+  "confirmed": [
+    "Single eye glint visible in front and anatomical left profile, absent from back and right.",
+    "Rear shows back anatomy and heels without duplicate face.",
+    "Dark reflective charcoal material with silver-blue/violet highlights retained.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Profiles move arms backward against torso instead of preserving front lateral arm spacing.",
+    "Profile heels look elevated/block-like despite barefoot brief; ankle/sole anatomy needs correction.",
+    "Near/far limbs almost completely overlap; far limb placement and finger count cannot be verified.",
+    "Shoulder, torso and hip proportions vary; attached shadow wisps move between anatomical sides.",
+    "Reflections change across views, expected partly for reflective material but stable surface landmarks and lighting needed for animation.",
+    "No separated parts or runtime animation clips; external shadow smoke not authored yet."
+  ],
+  "next": "Correct flat planted feet and profile arm pose, align joint landmarks and edge wisps, separate torso/head/limb chains and eye overlay for idle/walk/slash/cast/hit/collapse with shadow smoke VFX."
+}

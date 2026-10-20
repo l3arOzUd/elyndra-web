@@ -4028,19 +4028,31 @@
           "status": "master-created"
         },
         "back": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0074/back.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "left": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0074/left.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         },
         "right": {
-          "master": null,
+          "master": {
+            "path": "art-source/monsters/mob_0074/right.png",
+            "width": 1254,
+            "height": 1254
+          },
           "existingReference": null,
-          "status": "missing"
+          "status": "master-created"
         }
       },
       "sprite": null,
