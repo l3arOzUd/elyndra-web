@@ -63,6 +63,7 @@ export class Hud {
   /** Right-click menu: choose which skill a key holds. */
   private pickSkill(slot: number, at: HTMLElement) {
     document.getElementById('skill-picker')?.remove();
+    $('skill-tooltip').hidden = true;
     const menu = el('div', 'skill-picker win'); menu.id = 'skill-picker'; menu.setAttribute('role', 'menu');
     menu.append(el('p', 'eyebrow', 'Key ' + (slot + 1) + ' casts'));
     for (const s of this.c.skills.values()) {
