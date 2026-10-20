@@ -18,13 +18,13 @@ try{
    const image=new Image();image.src=url;await image.decode();
    const c=document.createElement('canvas');c.width=c.height=384;
    const g=c.getContext('2d',{willReadFrequently:true});
-   for(let f=0;f<assets.json.animations[name].frames;f++){
-    g.clearRect(0,0,384,384);g.drawImage(image,f*384,0,384,384,0,0,384,384);
+   for(let row=0;row<assets.json.rows.length;row++)for(let f=0;f<assets.json.animations[name].frames;f++){
+    g.clearRect(0,0,384,384);g.drawImage(image,f*384,row*384,384,384,0,0,384,384);
     const d=g.getImageData(0,0,384,384).data;let visible=0,edge=0;
     for(let y=0;y<384;y++)for(let x=0;x<384;x++)if(d[(y*384+x)*4+3]>32){
      visible++;if(x===0||x===383||y===0||y===383)edge++;
     }
-    frames.push({clip:name,frame:f,visible,edge});
+    frames.push({clip:name,facing:assets.json.rows[row],frame:f,visible,edge});
    }
   }
   return {...assets,problems,frames};
@@ -35,7 +35,7 @@ try{
  for(const [name,data]of Object.entries(result.images))await writeFile(resolve(out,`${name}.png`),Buffer.from(data.split(',')[1],'base64'));
  await writeFile(resolve(out,'craglet_2d.sprite.json'),JSON.stringify(result.json,null,2)+'\n');
  const report={status:'technical-draft-only',runtimeBound:false,errors,formatProblems:result.problems,frames:result.frames,
-  limitations:['Idle uses a single authored blink; subtle body/plate drift still needs visual review.','Left-facing only; engine mirroring does not supply back/front artwork.','Walk color, body registration, foot trajectories and Bible belly gear remain unresolved.','Passing format and edge checks does not approve visual quality.']};
+  limitations:['Left idle uses an authored blink; front idle is a static neutral pose pending authored animation.','Front and left rows only. Remaining directions alias the side row for this draft; rear artwork and accurate directional coverage remain unfinished.','Walk color, body registration, foot trajectories and side-view Bible belly gear remain unresolved.','Passing format and edge checks does not approve visual quality.']};
  await writeFile(resolve(out,'validation.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({output:out,clips:Object.keys(result.images),frames:result.frames.length,errors}));
 }finally{await browser.close();}

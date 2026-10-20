@@ -101,8 +101,9 @@ function tick(now){
 }
 function exportDraft(){
  const previous=clip,images={},sizes={};
- const json={id:'craglet_2d',kind:'sheet',facingMode:'left-right',
-  frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W'],
+ const json={id:'craglet_2d',kind:'sheet',facingMode:'directional',
+  frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W','S','SW','NW'],
+  mirror:{E:'W',SE:'W',NE:'W',N:'W'},
   animations:{
    idle:{file:'idle.png',frames:16,fps:8,loop:true},
    walk:{file:'walk.png',frames:6,fps:8,loop:true,refMsPerCell:260},
@@ -111,12 +112,21 @@ function exportDraft(){
    death:{file:'death.png',frames:6,fps:8,hold:true}
   }};
  for(const [name,def]of Object.entries(json.animations)){
-  const canvas=document.createElement('canvas');canvas.width=384*def.frames;canvas.height=384;
+  const canvas=document.createElement('canvas');canvas.width=384*def.frames;canvas.height=384*json.rows.length;
   const ctx=canvas.getContext('2d');
   for(let f=0;f<def.frames;f++){
    ctx.save();ctx.translate(f*384,0);
    clip=name;draw(ctx,sequences[name][f],192,346,.75);
    ctx.restore();
+   ctx.save();ctx.translate(f*384,384);
+   clip=name==='idle'?'attack-front':`${name}-front`;
+   draw(ctx,name==='idle'?0:sequences[clip][f],192,346,.75);
+   ctx.restore();
+   for(const row of [2,3]){
+    ctx.save();ctx.translate(f*384,row*384);
+    clip=name;draw(ctx,sequences[name][f],192,346,.75);
+    ctx.restore();
+   }
   }
   images[name]=canvas.toDataURL('image/png');sizes[name]={width:canvas.width,height:canvas.height};
  }

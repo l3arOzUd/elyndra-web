@@ -1,10 +1,11 @@
-﻿# Craglet runtime-format draft
+# Craglet runtime-format draft
 
-Five PNG sheets and `craglet_2d.sprite.json` use the game's sheet schema: 384Ã—384 cells, west-facing row, pivot (192,346), 300 pixels per cell. Attack contact is frame 3 (zero-based); death holds the last frame.
+Five PNG sheets use 384 x 384 cells, pivot (192,346), and 300 pixels per cell. Authored views: left and front. Rows W/S/SW/NW include duplicated left art for western diagonals; east and north still use side aliases. This does not establish rear or diagonal artwork coverage.
 
-Regenerate from the web repository with `node scripts/export-craglet-draft.mjs` while Vite is running at localhost:5173. Set `PLAYWRIGHT_MODULE` and `CHROMIUM_PATH` if Playwright is not installed locally.
+Attack hit is frame 3 (zero-based), and death holds the final frame. Left idle has an authored blink; front idle repeats a neutral pose and needs animation. There are 160 exported cells because duplicated direction rows are included, not 160 distinct authored poses.
 
-The exporter runs the actual `validateSprite` function and checks every exported cell for visible content and edge clipping. `validation.json` records the results.
+Regenerate with node scripts/export-craglet-draft.mjs while Vite runs on localhost:5173. Set PLAYWRIGHT_MODULE and CHROMIUM_PATH for the local browser installation. The exporter validates every row and checks nonempty alpha and clipping, not visual quality.
 
-This is not a completed monster or an active game binding. Idle now contains an authored blink in a two-second loop (16 frames at 8 fps). Only left-facing art is authored; mirroring does not prove directional coverage. Walk color drift, body registration, planted-foot trajectories, plate continuity and the Bible's belly gear still require work. Review visuals in `../walk-review.html` before promoting assets. Do not count technical format checks as animation approval.
+The real SpriteActor/Animator review at ../game-review.html now offers Front. Front attack emitted hit at 375ms, front death held at 1000ms, and shownDir was S. Browser review found no page errors.
 
+Not bound to a live monster. Registration, foot sliding, plate continuity, side belly gear, missing rear actions, static front idle and abrupt action transitions remain open.
