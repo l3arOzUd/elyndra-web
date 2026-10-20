@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Kiln Prime RIGHT SIDE exact90degree orthographic elevation facing imageRIGHT. Reference1 FRONT identity reference2 BACK. Cylindrical kiln torso, two crucible arms, integrated broad base no legs. VISIBLE RIGHT FLANK plain curved brick wall and iron ribs, NO hatch here: rear service hatch only at far LEFT rear outline edge-on. Front lattice window only at far RIGHT front outline edge-on, no crystal on flank. Near right shoulder centered on flank, arm hangs downward, near crucible below at mid-body height; far left arm mostly hidden directly behind near arm in depth, NOT extended backward. Both pouring spouts point RIGHT. Same dimensions/neutral joint angles/crown finial/brick rows and iron bands. Full body generous margins transparent square. Handpainted fantasy scorched brick iron gold trim warm contained glow, no ground shadow streams smoke sparks text.",
+  "references": [
+    "front.png",
+    "back.png"
+  ]
+}

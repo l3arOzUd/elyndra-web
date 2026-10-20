@@ -1,0 +1,21 @@
+{
+  "id": "mob_0088",
+  "name": "Kiln Prime",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front master with rear construction reference.",
+  "confirmed": [
+    "Cylindrical brick/iron kiln, integrated base without legs and two molten crucible arms retained.",
+    "Rear has closed brick/service hatch instead of duplicate crystal grille.",
+    "Right profile places hatch near rear edge and both spouts toward front.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Left view incorrectly places rear hatch on broad visible flank; both arms spread fore/aft instead of maintaining neutral pose.",
+    "Right arms project forward and overlap differently from left/front; shoulder roots and elbow angles need fixed landmarks.",
+    "Crucible spouts/size and rim tilt vary; rear spouts hidden rather than proven continuous.",
+    "Crown/base rib count, brick courses, gold fittings and vent positions drift across views.",
+    "Profiles remain oblique; crystal visibility and wall thickness unverified.",
+    "No separated kiln/arm/cup/core layers or runtime animation clips yet."
+  ],
+  "next": "Lock cylinder cross-section, front grille/rear hatch, rib landmarks and arm poses. Separate fixed base/torso/crown/core/grille/upperarms/forearms/crucibles for furnace idle, swivel, pour windup/tilt/recovery, hit and structural collapse; author molten streams/splash and core heat separately."
+}
