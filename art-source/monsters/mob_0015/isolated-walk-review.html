@@ -21,5 +21,5 @@ document.querySelector('#pause').onclick=()=>paused=!paused;
 document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
 function tick(t){if(!paused&&t-last>160){f=(f+1)%count();last=t;}ctx.clearRect(0,0,600,560);draw(ctx,f,300,520,.4);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
 document.querySelector('#view').onchange=()=>{f=0;document.querySelector('#frame').max=count()-1;contact();};
-window.__rootSentinelIsolated={ready:true};requestAnimationFrame(tick);
+window.__rootSentinelIsolated={ready:true,draw(g,frame,x,y,scale,view){const old=document.querySelector('#view').value;document.querySelector('#view').value=view==='left'?'side':view;draw(g,frame%count(),x,y,scale);document.querySelector('#view').value=old;}};requestAnimationFrame(tick);
 </script>
