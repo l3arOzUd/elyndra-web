@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Graftling tripod walk review</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{display:block;background:#697a80;margin:16px 0;max-width:100%}</style>
+<h1>Graftling — tripod walk draft</h1>
+<p>Six authored stepping poses. Inspect three continuous leg chains and two planted supports. Brass hinge positions, body registration and foot trajectories need refinement. Not bound to gameplay.</p>
+<button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
+<canvas id="motion" width="600" height="540"></canvas>
+<canvas id="contact" width="1200" height="800"></canvas>
+<script type="module">
+const im=new Image();im.src='./walk-left.png';await im.decode();
+function draw(ctx,f,x,y,s){
+ const cuts=f<3?[0,512,1024,1536]:[0,530,1024,1536],col=f%3,sx=cuts[col],w=cuts[col+1]-sx;
+ const anchor=[256,256,256,256,238,256][f],bottom=[506,506,506,499,498,498][f];
+ ctx.drawImage(im,sx,Math.floor(f/3)*512,w,512,x-anchor*s,y-bottom*s,w*s,512*s);
+}
+const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
+for(let f=0;f<6;f++){draw(cg,f,f%3*400+200,Math.floor(f/3)*400+380,.7);cg.fillStyle='#fff';cg.fillText(`Pose ${f+1}`,f%3*400+12,Math.floor(f/3)*400+18);}
+let f=0,paused=false,last=0;
+document.querySelector('#pause').onclick=()=>paused=!paused;
+document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
+function tick(t){if(!paused&&t-last>170){f=(f+1)%6;last=t;}ctx.clearRect(0,0,600,540);draw(ctx,f,300,510,.9);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+window.__graftlingWalk={ready:true};requestAnimationFrame(tick);
+</script>
