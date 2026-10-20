@@ -1,0 +1,21 @@
+{
+  "status": "rear-depth-attack-study-unapproved",
+  "preview": "rear-thrust-depth-review.html",
+  "sources": ["back.png", "rear-thrust-depth-study.png", "rear-thrust-extended-study.png"],
+  "sequence": [0, 1, 1, 2, 2, 0],
+  "tool": "builtin-imagegen",
+  "observations": [
+    "First generated image has a visible right elbow and foreshortened spear butt, but reads as preparation rather than impact.",
+    "Second image raises and extends the right arm while retaining the first image's feet and five halo panels.",
+    "Opaque browser comparison shows clean backgrounds without obvious translucent matte blocks.",
+    "Preview loads and displays the three source drawings without browser errors."
+  ],
+  "limitations": [
+    "Extended right arm still projects too far sideways; left supporting grip is occluded and unreadable.",
+    "Spear shaft becomes hard to recognize at runtime size in the extended drawing.",
+    "Contact pose has a longer stride and higher head/halo than the neutral reference; uniform scale cannot repair the pose anatomy.",
+    "A connected recovery drawing and grounded weight-transfer in-betweens remain missing.",
+    "Not selected in the combined preview or bound to gameplay."
+ ],
+ "next": "Construct an explicit rear shoulder/elbow/hand depth guide with a visible spear butt and shorten the stride before another revision."
+}

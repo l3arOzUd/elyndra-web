@@ -1,0 +1,26 @@
+<!doctype html><meta charset="utf-8">
+<title>Sun Warden rear thrust depth study</title>
+<style>body{margin:24px;background:#263037;color:#eee;font:16px system-ui}canvas{background:#697a80;max-width:100%}a{color:#f1ce89}</style>
+<h1>Rear thrust: shoulder and weapon projection</h1>
+<p>Draft study. Check the right elbow, forward reach, five halo panels and spear depth. This page does not change gameplay bindings.</p>
+<p><a href="combined-review.html">Combined preview</a></p>
+<button id="play">Play / pause</button>
+<input id="frame" type="range" min="0" max="5" value="0"><span id="label"></span><br>
+<canvas id="motion" width="384" height="384"></canvas>
+<p>Reference / drawn-back elbow / extended candidate. Repeated timing cells are not additional drawings.</p>
+<canvas id="comparison" width="1152" height="384"></canvas>
+<script type="module">
+const sources=['back.png','rear-thrust-depth-study.png','rear-thrust-extended-study.png'];
+const images=await Promise.all(sources.map(async src=>{const im=new Image();im.src=src;await im.decode();return im}));
+const sequence=[0,1,1,2,2,0],names=['reference','drawn-back elbow','extended candidate'];
+const slider=document.querySelector('#frame'),g=document.querySelector('#motion').getContext('2d');
+function draw(ctx,cell){const im=images[cell],scale=.23,hip=cell?620:625,ground=cell?1210:1160;ctx.drawImage(im,192-hip*scale,346-ground*scale,im.width*scale,im.height*scale)}
+function render(){g.clearRect(0,0,384,384);const cell=sequence[Number(slider.value)];draw(g,cell);document.querySelector('#label').textContent=names[cell]}
+let playing=false,start=0;
+slider.oninput=()=>{playing=false;render()};
+document.querySelector('#play').onclick=()=>{playing=!playing;start=performance.now()};
+function tick(t){if(playing){slider.value=String(Math.min(5,Math.floor((t-start)/150)));render();if(Number(slider.value)===5)playing=false}requestAnimationFrame(tick)}
+const comp=document.querySelector('#comparison').getContext('2d');
+for(let cell=0;cell<images.length;cell++){comp.save();comp.translate(cell*384,0);draw(comp,cell);comp.fillStyle='white';comp.fillText(names[cell],12,20);comp.restore()}
+render();requestAnimationFrame(tick);window.__rearThrustDepth={ready:true,draw,sequence};
+</script>
