@@ -1,0 +1,7 @@
+{
+  "view": "back",
+  "prompt": "Correct BACK-view toad anatomy in this image. REMOVE the two long forearm-like limbs and huge fingers reaching toward camera at bottom. Replace with natural folded TOAD HIND LEGS: large thigh bulges at sides of pelvis, shins folded alongside body, rounded hock/heel ends toward viewer and toes extending FORWARD AWAY around outside edges, mostly occluded. Forelegs are ahead behind body, not extra haunches. Exactly four legs total. Preserve black slag shell orange fissures no face no glowing throat on back. No tail. Same crouch transparent background no ground shadow text.",
+  "references": [
+    "back-draft-reversed-feet.png"
+  ]
+}

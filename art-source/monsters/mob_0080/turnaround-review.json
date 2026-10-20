@@ -1,0 +1,20 @@
+{
+  "id": "mob_0080",
+  "name": "Slagback Toad",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation with targeted rear hind-leg correction; failed rear retained.",
+  "confirmed": [
+    "Black slag shell with orange fissures, amber eyes and glowing throat sac retained.",
+    "Rear has no face/throat duplication; refinement removes long backward-reaching forearm-like limbs and substitutes folded hind hocks.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Rear folded-leg topology still simplified, hidden forelimbs and toe directions need reconciliation with front stance.",
+    "Profiles remain three-quarter; throat sac projection and head height differ.",
+    "Shell rock plates/fissure network change between views; stable landmark map required.",
+    "Toe counts and near/far foot overlap vary, far hind foot unverified in profiles.",
+    "Brown skin lighter than charcoal brief; preserve approved palette consistently during refinement.",
+    "No separated limbs/throat/shell or runtime animation clips yet."
+  ],
+  "next": "Align four limb joints and toe anatomy, lock shell fissures and throat inflation volume; separate shell/body/head/throat/legs for idle bellows, hop, spit, hit and collapse with heat VFX."
+}
