@@ -13,16 +13,22 @@
   "verified": [
     "Browser composite shows transparent background without source-preview halo.",
     "Death lowers intact shell and folds legs beneath it; no backwards whole-body rotation.",
-    "Core dims across dying and dead poses."
+    "Core dims across dying and dead poses.",
+    "Isolated six-foot closed-bite image replaces sheet strike in attack timeline.",
+    "Uniform per-source scales and shell/ground anchors applied; no bone stretching.",
+    "Browser playback reaches frame 5 without page errors; death ends in folded-leg silhouette."
   ],
   "limitations": [
     "Six legs are not independently readable in every pose.",
     "Idle copied lifted-leg contact rather than all feet planted.",
     "Bite head thrust is weak and pose differs little from anticipation.",
-    "Cell margins too tight; neighboring pixels intrude at 512-column boundaries. Dead preview excludes leftmost 16px to remove neighbor tip. Other crop boundaries need repair.",
-    "Ground baseline and shell registration drift; shell volume changes.",
+    "Source sheet margins tight. Preview uses adjusted boundaries and anticipation upper-right clip to exclude neighbor antenna; source art itself remains unchanged.",
+    "Ground and shell approximately registered, but shell volume and texture still change; bite support and force need refinement.",
     "Eye stays bright in dead pose.",
     "Only side action study, not runtime exported or public bound."
   ],
-  "next": "Repair isolated cells, preserve six-leg topology, strengthen bite and align support baseline."
+  "next": "Strengthen attack brace and lunge; complete front/back action and locomotion art before runtime export.",
+  "replacements": {
+    "bite": "bite-left-v2.png"
+  }
 }
