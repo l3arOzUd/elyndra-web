@@ -1,0 +1,33 @@
+{
+  "status": "combined-preview-unapproved",
+  "preview": "combined-review.html",
+  "views": [
+    "left",
+    "front",
+    "back",
+    "right-mirrored-left"
+  ],
+  "clips": [
+    "static-idle",
+    "walk",
+    "attack",
+    "hit",
+    "death"
+  ],
+  "verified": [
+    "All20 view/clip selections rendered without browser page errors.",
+    "Contact sheet compares idle, opposite walk contacts and death in three authored views.",
+    "Uniform image scaling only; no limb stretching."
+  ],
+  "limitations": [
+    "Idle is static, not finished animation.",
+    "Front walk support and swing trajectories unresolved.",
+    "Rear swing trajectories and outer support plane unresolved.",
+    "Side core/reflection changes and support drift remain.",
+    "Rear strike rises upward rather than a strong forward attack.",
+    "Some death limbs hidden; six-leg continuity unverified.",
+    "Front/back camera and shell volume differ from side.",
+    "No runtime export or gameplay binding."
+  ],
+  "next": "Finish idle motion, inspect final registration and runtime draft behavior; retain art issues as unresolved."
+}
