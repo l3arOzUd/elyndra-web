@@ -1,0 +1,26 @@
+<!doctype html><meta charset="utf-8"><title>Sun Warden right cycle study</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}</style>
+<h1>Sun Warden: assembled right walk study</h1>
+<p>Provisional source combination. Inspect uneven stride, torso changes and support identity. Not approved for gameplay.</p>
+<button id="play">Play / pause</button><input id="frame" type="range" min="0" max="3" value="0"><span id="label"></span><br>
+<canvas width="640" height="640"></canvas>
+<script type="module">
+const files=['walk-right.png','walk-right-contact-b-v2.png','walk-right-pass-b.png'];
+const images=await Promise.all(files.map(async f=>{const im=new Image();im.src=f;await im.decode();return im}));
+const poses=[
+ {image:0,crop:[0,0,768,512],hip:460,ground:500,scale:.9,name:'Near-forward contact'},
+ {image:0,crop:[768,0,768,512],hip:1090,ground:500,scale:.9,name:'Far-foot passing — heel kick unresolved'},
+ {image:1,crop:[0,0,1254,1254],hip:630,ground:1205,scale:.39,name:'Far-forward short contact candidate'},
+ {image:2,crop:[0,0,1254,1254],hip:630,ground:1190,scale:.39,name:'Low near-foot passing candidate'}
+];
+const g=document.querySelector('canvas').getContext('2d'),slider=document.querySelector('#frame');
+let playing=false,last=0;
+function draw(){const pose=poses[Number(slider.value)],[x,y,w,h]=pose.crop,s=pose.scale;
+ g.clearRect(0,0,640,640);g.drawImage(images[pose.image],x,y,w,h,320+(x-pose.hip)*s,590+(y-pose.ground)*s,w*s,h*s);
+ g.strokeStyle='#b1babe';g.beginPath();g.moveTo(10,590);g.lineTo(630,590);g.stroke();document.querySelector('#label').textContent=pose.name;
+}
+slider.oninput=()=>{playing=false;draw()};
+document.querySelector('#play').onclick=()=>{playing=!playing;last=performance.now()};
+function tick(t){if(playing&&t-last>300){slider.value=String((Number(slider.value)+1)%4);last=t;draw()}requestAnimationFrame(tick)}
+draw();requestAnimationFrame(tick);window.__wardenRightCycle={ready:true,poses};
+</script>

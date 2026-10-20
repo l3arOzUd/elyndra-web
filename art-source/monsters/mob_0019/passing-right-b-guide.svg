@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+<rect width="1254" height="1254" fill="#eef1f0"/>
+<g fill="none" stroke="#839099" stroke-width="20" stroke-linecap="round">
+<ellipse cx="630" cy="280" rx="45" ry="65"/><ellipse cx="510" cy="330" rx="35" ry="230"/>
+<path d="M630 360L630 610M580 390L560 550L565 750M660 390L680 525L810 525M810 70L810 1165"/>
+</g>
+<g fill="none" stroke="#d06525" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+<path d="M650 610L650 825L650 1060L680 1140L740 1180L660 1180L625 1130"/>
+</g>
+<g fill="none" stroke="#1785c0" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+<path d="M630 610L690 825L650 1035L680 1105L740 1145L660 1145L625 1095"/>
+</g>
+<g fill="#fff" stroke="#33444e" stroke-width="6">
+<circle cx="630" cy="610" r="15"/><circle cx="690" cy="825" r="15"/><circle cx="650" cy="1035" r="15"/>
+</g>
+<path d="M550 1180H800" stroke="#33444e" stroke-width="3"/>
+<g font-family="Arial" font-size="26" fill="#22343c">
+<text x="40" y="45">RIGHT-FACING LOW PASSING B</text>
+<text x="40" y="850">Orange FAR leg supports</text>
+<text x="810" y="820">Blue NEAR knee forward RIGHT</text>
+<text x="810" y="1060">Near ankle under hip</text>
+<text x="40" y="1220">Blue near boot just above ground, level sole, no backward heel kick.</text>
+</g></svg>

@@ -1,0 +1,21 @@
+{
+  "status":"assembled-right-walk-study-unapproved",
+  "preview":"right-cycle-review.html",
+  "sources":["walk-right.png cells 0 and 1","walk-right-contact-b-v2.png","walk-right-pass-b.png"],
+  "guide":"passing-right-b-guide.svg",
+  "observations":[
+    "New near passing candidate has low boot clearance and a nearly level sole rather than high knee/pointed toe.",
+    "Near foreground thigh is forward; far leg supports behind it.",
+    "Far arm still grips spear and near arm hangs relaxed.",
+    "Four-pose playback advances without browser errors; all poses inspected on opaque contact sheet."
+  ],
+  "limitations":[
+    "Original contact has wider stride than new opposite contact.",
+    "Original far passing still has backward heel kick.",
+    "New near passing remains close to standing; movement may be too subtle at gameplay size.",
+    "Torso width, hip armor and halo scale differ between sheet and isolated sources.",
+    "Uniform registration cannot repair local proportion changes.",
+    "No runtime binding or visual approval."
+  ],
+  "next":"Replace original wide contact and far passing using the same short-stride guide-primary proportions; then integrate fourth authored view for cross-view review."
+}
