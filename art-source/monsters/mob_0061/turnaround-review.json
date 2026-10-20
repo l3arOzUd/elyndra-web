@@ -1,0 +1,20 @@
+{
+  "id": "mob_0061",
+  "name": "Polyp Spitter",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from six-tube four-leg front reference and opposite profile.",
+  "confirmed": [
+    "Pink/violet coral mound, white tube rims and magenta interiors retained without face.",
+    "Four root legs visible in each view.",
+    "Front and rear show six mouths; side height gradient points shorter tubes toward front.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Only five mouths distinguishable in each side view; sixth hidden or omitted, attachment continuity unproven.",
+    "Rear far tube tops remain above near tall tubes; height/occlusion inconsistent with front.",
+    "Rear feet retain toe fans instead of heels.",
+    "Side cameras oblique and body length/stance vary; tube positions need a stable anchor map.",
+    "Polyp clusters and porous leg details drift; no separated parts or runtime animation yet."
+  ],
+  "next": "Map all six tube roots and four legs consistently, reconcile rear height and feet, then separate body/legs/tubes for idle/walk/spit/hit/deflate death and magenta projectile VFX."
+}
