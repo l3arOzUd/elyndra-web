@@ -34,14 +34,16 @@
   "passingStudy": {
     "sources": [
       "walk-left-pass-a.png",
-      "walk-left-pass-b.png"
+      "walk-left-pass-b-v2.png"
     ],
     "status": "anatomy-correction-required-not-runtime-approved",
     "findings": [
       "Passing A bends a foreleg and third near leg, with shell approximately registered.",
-      "Passing B bends second and fourth near legs but duplicates the left-front pointed foot into a stacked extra segment.",
-      "Visible leg chains change across poses; reliable eight-leg topology has not been established."
+      "Passing B v2 removes stacked duplicate blade and extra joint; browser alpha inspection confirms clean empty area below repaired foot.",
+      "Visible leg chains change across poses; reliable eight-leg topology has not been established.",
+      "Remaining support issue: third near foot is lowest while other tips lift; grounded weight transfer needs correction."
     ],
-    "next": "Repair passing B stacked foot and reconcile all eight leg roots before selecting a production cycle."
+    "next": "Reconcile eight leg roots and support-foot baselines across all four poses; foot repair alone does not approve gait.",
+    "rejectedSource": "walk-left-pass-b.png"
   }
 }
