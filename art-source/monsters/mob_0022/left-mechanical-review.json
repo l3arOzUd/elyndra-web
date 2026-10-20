@@ -1,0 +1,61 @@
+{
+  "id": "mob_0022",
+  "selectedDraft": "left-valve-v4.png",
+  "artApproved": false,
+  "publicBinding": false,
+  "observed": [
+    "Only one valve wheel visible in profile.",
+    "Horizontal upper rear tank retained."
+  ],
+  "remaining": [
+    "Knee plate still resembles front-facing plate; lateral hinge construction not resolved.",
+    "Far leg and arm attachment hidden.",
+    "Gauge still too exposed for strict profile.",
+    "Surface details drift; top margin still tight."
+  ],
+  "rejectedAlternatives": {
+    "left-mechanical-v2.png": "Unequal valve heights persist.",
+    "left-mechanical-v3.png": "Replaced horizontal tank with vertical tank, violating design."
+  },
+  "files": {
+    "left-mechanical-v2.png": {
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaBoundsAbove16": [
+        333,
+        19,
+        1018,
+        1193
+      ],
+      "edgePixelsAbove16": 0
+    },
+    "left-mechanical-v3.png": {
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaBoundsAbove16": [
+        422,
+        55,
+        991,
+        1157
+      ],
+      "edgePixelsAbove16": 0
+    },
+    "left-valve-v4.png": {
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaBoundsAbove16": [
+        352,
+        18,
+        1031,
+        1195
+      ],
+      "edgePixelsAbove16": 0
+    }
+  }
+}

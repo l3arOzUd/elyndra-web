@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "left.png",
+    "front-neutral-v2.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Correct this Brine Automaton left-facing reference for mechanically consistent 2D animation. Image 1 is the left view to repair, image 2 is the front design authority. One whole copper/verdigris barrel automaton facing LEFT in strict orthographic SIDE view. Keep the same gauges, piston arms, two clamp hands, short two legs, broad boots, rear pressure tank, brass bands, salt and painted style. Correct both top valves to identical stem length and same absolute height: in strict side view the far wheel is occluded behind near wheel, NOT a shorter second valve. Correct the knee: show the lateral hinge cap facing camera on transverse left-right rotation axis; the decorative front kneecap points LEFT and is seen edge-on, not a second circular disk facing viewer. Same for ankle. Near foot and far foot both point left; show the far foot subtly offset so two legs can be read, without a third leg. Neutral weight bearing straight legs. Preserve body dimensions and tank rear placement. Full body centered with 8 percent clear margins all sides. Transparent alpha, no ground, shadow, steam, labels or diagram. Do not turn torso toward camera. Do not add parts."
+}

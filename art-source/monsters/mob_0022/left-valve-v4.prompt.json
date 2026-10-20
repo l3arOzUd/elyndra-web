@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "left-mechanical-v2.png",
+  "prompt": "Precise localized edit of this left-facing copper robot. Change ONLY the top valves: remove the shorter rear valve wheel and its exposed stem that peek to the RIGHT of the tall foreground valve. Fill only that small area with transparency or the existing tank surface behind it, as appropriate. Keep the tall foreground valve entirely unchanged. The second valve is now hidden behind it in side view. Absolutely preserve every other pixel-level feature: horizontal rounded upper-back tank, pipework, shoulder, belly, gauges, hands, legs, boots, colors, texture, framing and pose. Do not add a new tank or reshape any mechanical part. One unchanged full robot, real transparent alpha. No text or shadow."
+}
