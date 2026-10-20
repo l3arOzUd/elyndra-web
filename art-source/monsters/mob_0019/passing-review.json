@@ -15,5 +15,21 @@
     "Hip armor and upper-body details drift; not approved for replacement.",
     "No complete walk cycle or gameplay binding."
   ],
-  "next": "Use a drawn pose guide for forward far knee and ankle under pelvis, preserving the relaxed arm explicitly."
+  "guideBasedCandidate": {
+    "source": "walk-left-pass-b.png",
+    "guide": "passing-side-guide.svg",
+    "observations": [
+      "Knee is now ahead of hip and lifted ankle passes under pelvis.",
+      "Relaxed far arm is visible again.",
+      "Near thigh overlaps far thigh: reads as near-leg passing, opposite of requested far-leg passing.",
+      "Two boots visible; lifted toe points down and crosses the supporting shin."
+    ],
+    "limitations": [
+      "Source scale and spear height changed; requires body registration before cycle integration.",
+      "Foot crossing and pointed toe still need review at gameplay scale.",
+      "Does not yet provide the missing far-leg passing pose.",
+      "No approval or runtime binding."
+    ]
+  },
+  "next": "Register near-leg passing candidate to contact B, then derive complementary far-leg passing with explicit occlusion guide."
 }
