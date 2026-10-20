@@ -1,0 +1,19 @@
+{
+  "status": "gait-draft-unapproved",
+  "selected": "walk-front-v2.png",
+  "previous": "walk-front.png",
+  "observations": [
+    "Four front-facing poses with six distinct feet each.",
+    "V2 lifts foreground right foot in B and foreground left foot in C/D; inner opposite limbs extend lower.",
+    "Shell retains frontal orientation."
+  ],
+  "limitations": [
+    "A right foreground foot still too low; A/B support differs.",
+    "Inner planted feet do not convincingly share support plane with larger limbs.",
+    "C/D poses nearly identical; stride progression weak.",
+    "Margins below40px, no visible cross-cell body overlap.",
+    "Shell reflections and limb segment shape drift.",
+    "No runtime export or public binding."
+  ],
+  "next": "Refine A support and C/D swing progression, then register with side gait."
+}
