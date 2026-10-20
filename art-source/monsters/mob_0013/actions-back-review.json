@@ -1,0 +1,18 @@
+{
+  "status": "action-draft-refinement-pending",
+  "source": "actions-back.png",
+  "verified": [
+    "Browser death sequence retains rear shell with no duplicated eyes or needle.",
+    "Tank dims and legs fold in terminal pose.",
+    "Rear death crop has clean exterior without neighboring fragments."
+  ],
+  "limitations": [
+    "Terminal shell remains upright compared with side/front dead poses; needs lower forward-resting silhouette.",
+    "Attack pose resembles lateral bank more than forward thrust.",
+    "Four wing and six leg attachments are partly occluded.",
+    "Top-row asymmetric crops need attack inspection.",
+    "Body scale drifts and intermediate landing drawings are missing.",
+    "Not exported or bound to gameplay."
+  ],
+  "next": "Lower rear terminal shell and inspect attack crops, then export draft for engine review."
+}
