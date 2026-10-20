@@ -1,0 +1,21 @@
+{
+  "id": "mob_0076",
+  "name": "Cryo Sentry",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front tripod, rear service shell and opposite profile.",
+  "confirmed": [
+    "Three legs, no arms, tall lance head and white/cyan/gold material retained.",
+    "Rear lacks duplicated front chest cylinder; profiles place cylinder on forward side.",
+    "Right removes most left-style detached joint haze.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Profiles remain oblique; lateral leg roots move forward and stance changes instead of fixed tripod rotation.",
+    "Rear central leg appears much longer than front projection; ground-plane consistency unverified.",
+    "Lance profile width and facets differ; cyan cell/panel trim and icicles drift.",
+    "Left has baked translucent haze around joints and feet that must be removed for separate VFX.",
+    "Lance tip and feet nearly touch frame boundaries despite edge check passing.",
+    "No separated leg chains or runtime animation clips yet."
+  ],
+  "next": "Lock three hip roots and ground contacts, correct profile camera and lance geometry, remove left haze and normalize framing; separate three articulated legs/torso/lance/cell for idle, tripod walk, thrust, recoil and shutdown with joint frost VFX."
+}
