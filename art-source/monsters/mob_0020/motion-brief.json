@@ -50,9 +50,9 @@
       "Hop anatomy and shell continuity",
       "Landing recovery in front/back/right",
       "Repair right bump posture and rear forward projection",
-      "Rear idle motion and blink continuity",
+      "Idle continuity, rear foot registration and foreleg anatomy",
       "Action shell consistency and connecting poses",
-      "Runtime export and gameplay verification"
+      "Visual refinement and live gameplay integration"
     ],
     "actionDrawings": {
       "front": 6,
@@ -65,7 +65,8 @@
       "left": 2,
       "front": 2,
       "right": 2,
-      "back": 1
-    }
+      "back": 2
+    },
+    "runtimeDraft": "runtime-draft/tidehopper_2d/"
   }
 }

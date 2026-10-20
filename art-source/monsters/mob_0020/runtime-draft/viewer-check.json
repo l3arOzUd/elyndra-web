@@ -1,0 +1,15 @@
+{
+  "status": "technical-runtime-viewer-check-only",
+  "page": "../runtime-review.html",
+  "browserErrors": [],
+  "loader": "src/render/spriteDef.ts loadSprite",
+  "animator": "src/render/animator.ts Animator",
+  "testedFacing": "E",
+  "facingRow": 6,
+  "mirrored": false,
+  "attackHitEvents": 1,
+  "attackReturnsTo": "idle",
+  "deathHeldFrame": 5,
+  "artApproved": false,
+  "liveGameplayVerified": false
+}

@@ -1,0 +1,2251 @@
+{
+  "status": "technical-draft-unapproved",
+  "runtimeBound": false,
+  "formatProblems": [],
+  "browserErrors": [],
+  "frames": [
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 0,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 1,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 2,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 3,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 4,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 5,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 6,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 7,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 8,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 9,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 10,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 11,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 12,
+      "visible": 23159,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 13,
+      "visible": 23159,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 14,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "S",
+      "frame": 15,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 1,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 2,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 3,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 4,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 6,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 7,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 8,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 9,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 10,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 11,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 12,
+      "visible": 22897,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 13,
+      "visible": 22897,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 14,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SW",
+      "frame": 15,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 1,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 2,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 3,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 4,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 6,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 7,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 8,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 9,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 10,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 11,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 12,
+      "visible": 22897,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 13,
+      "visible": 22897,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 14,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "W",
+      "frame": 15,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 1,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 2,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 3,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 4,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 6,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 7,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 8,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 9,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 10,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 11,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 12,
+      "visible": 22897,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 13,
+      "visible": 22897,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 14,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NW",
+      "frame": 15,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 0,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 1,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 2,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 3,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 4,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 5,
+      "visible": 20985,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 6,
+      "visible": 20985,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 7,
+      "visible": 20985,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 8,
+      "visible": 20985,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 9,
+      "visible": 20985,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 10,
+      "visible": 20985,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 11,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 12,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 13,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 14,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "N",
+      "frame": 15,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 1,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 2,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 3,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 4,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 6,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 7,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 8,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 9,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 10,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 11,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 12,
+      "visible": 23418,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 13,
+      "visible": 23418,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 14,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "NE",
+      "frame": 15,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 1,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 2,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 3,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 4,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 6,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 7,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 8,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 9,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 10,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 11,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 12,
+      "visible": 23418,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 13,
+      "visible": 23418,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 14,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "E",
+      "frame": 15,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 1,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 2,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 3,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 4,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 6,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 7,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 8,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 9,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 10,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 11,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 12,
+      "visible": 23418,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 13,
+      "visible": 23418,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 14,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "idle",
+      "facing": "SE",
+      "frame": 15,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "S",
+      "frame": 0,
+      "visible": 15716,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "S",
+      "frame": 1,
+      "visible": 13961,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "S",
+      "frame": 2,
+      "visible": 13811,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "S",
+      "frame": 3,
+      "visible": 15950,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "S",
+      "frame": 4,
+      "visible": 15716,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SW",
+      "frame": 0,
+      "visible": 18282,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SW",
+      "frame": 1,
+      "visible": 19351,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SW",
+      "frame": 2,
+      "visible": 17820,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SW",
+      "frame": 3,
+      "visible": 18983,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SW",
+      "frame": 4,
+      "visible": 20509,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 0,
+      "visible": 18282,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 1,
+      "visible": 19351,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 2,
+      "visible": 17820,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 3,
+      "visible": 18983,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "W",
+      "frame": 4,
+      "visible": 20509,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NW",
+      "frame": 0,
+      "visible": 18282,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NW",
+      "frame": 1,
+      "visible": 19351,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NW",
+      "frame": 2,
+      "visible": 17820,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NW",
+      "frame": 3,
+      "visible": 18983,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NW",
+      "frame": 4,
+      "visible": 20509,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 0,
+      "visible": 15801,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 1,
+      "visible": 14451,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 2,
+      "visible": 13930,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 3,
+      "visible": 14252,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "N",
+      "frame": 4,
+      "visible": 15801,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NE",
+      "frame": 0,
+      "visible": 20230,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NE",
+      "frame": 1,
+      "visible": 18425,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NE",
+      "frame": 2,
+      "visible": 18147,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NE",
+      "frame": 3,
+      "visible": 18010,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "NE",
+      "frame": 4,
+      "visible": 20230,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "E",
+      "frame": 0,
+      "visible": 20230,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "E",
+      "frame": 1,
+      "visible": 18425,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "E",
+      "frame": 2,
+      "visible": 18147,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "E",
+      "frame": 3,
+      "visible": 18010,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "E",
+      "frame": 4,
+      "visible": 20230,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SE",
+      "frame": 0,
+      "visible": 20230,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SE",
+      "frame": 1,
+      "visible": 18425,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SE",
+      "frame": 2,
+      "visible": 18147,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SE",
+      "frame": 3,
+      "visible": 18010,
+      "edge": 0
+    },
+    {
+      "clip": "walk",
+      "facing": "SE",
+      "frame": 4,
+      "visible": 20230,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "S",
+      "frame": 0,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "S",
+      "frame": 1,
+      "visible": 19736,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "S",
+      "frame": 2,
+      "visible": 19736,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "S",
+      "frame": 3,
+      "visible": 23029,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "S",
+      "frame": 4,
+      "visible": 23029,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "S",
+      "frame": 5,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SW",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SW",
+      "frame": 1,
+      "visible": 19527,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SW",
+      "frame": 2,
+      "visible": 19527,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SW",
+      "frame": 3,
+      "visible": 20061,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SW",
+      "frame": 4,
+      "visible": 20061,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SW",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 1,
+      "visible": 19527,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 2,
+      "visible": 19527,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 3,
+      "visible": 20061,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 4,
+      "visible": 20061,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "W",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NW",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NW",
+      "frame": 1,
+      "visible": 19527,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NW",
+      "frame": 2,
+      "visible": 19527,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NW",
+      "frame": 3,
+      "visible": 20061,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NW",
+      "frame": 4,
+      "visible": 20061,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NW",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 0,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 1,
+      "visible": 18576,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 2,
+      "visible": 18576,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 3,
+      "visible": 19383,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 4,
+      "visible": 19383,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "N",
+      "frame": 5,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NE",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NE",
+      "frame": 1,
+      "visible": 23551,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NE",
+      "frame": 2,
+      "visible": 23551,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NE",
+      "frame": 3,
+      "visible": 21914,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NE",
+      "frame": 4,
+      "visible": 21914,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "NE",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "E",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "E",
+      "frame": 1,
+      "visible": 23551,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "E",
+      "frame": 2,
+      "visible": 23551,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "E",
+      "frame": 3,
+      "visible": 21914,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "E",
+      "frame": 4,
+      "visible": 21914,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "E",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SE",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SE",
+      "frame": 1,
+      "visible": 23551,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SE",
+      "frame": 2,
+      "visible": 23551,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SE",
+      "frame": 3,
+      "visible": 21914,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SE",
+      "frame": 4,
+      "visible": 21914,
+      "edge": 0
+    },
+    {
+      "clip": "attack",
+      "facing": "SE",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "S",
+      "frame": 0,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "S",
+      "frame": 1,
+      "visible": 23031,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "S",
+      "frame": 2,
+      "visible": 23031,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "S",
+      "frame": 3,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "S",
+      "frame": 4,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "S",
+      "frame": 5,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SW",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SW",
+      "frame": 1,
+      "visible": 22439,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SW",
+      "frame": 2,
+      "visible": 22439,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SW",
+      "frame": 3,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SW",
+      "frame": 4,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SW",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 1,
+      "visible": 22439,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 2,
+      "visible": 22439,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 3,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 4,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "W",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NW",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NW",
+      "frame": 1,
+      "visible": 22439,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NW",
+      "frame": 2,
+      "visible": 22439,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NW",
+      "frame": 3,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NW",
+      "frame": 4,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NW",
+      "frame": 5,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 0,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 1,
+      "visible": 20821,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 2,
+      "visible": 20821,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 3,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 4,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "N",
+      "frame": 5,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NE",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NE",
+      "frame": 1,
+      "visible": 23493,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NE",
+      "frame": 2,
+      "visible": 23493,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NE",
+      "frame": 3,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NE",
+      "frame": 4,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "NE",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "E",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "E",
+      "frame": 1,
+      "visible": 23493,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "E",
+      "frame": 2,
+      "visible": 23493,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "E",
+      "frame": 3,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "E",
+      "frame": 4,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "E",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SE",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SE",
+      "frame": 1,
+      "visible": 23493,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SE",
+      "frame": 2,
+      "visible": 23493,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SE",
+      "frame": 3,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SE",
+      "frame": 4,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "hit",
+      "facing": "SE",
+      "frame": 5,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "S",
+      "frame": 0,
+      "visible": 22956,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "S",
+      "frame": 1,
+      "visible": 19089,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "S",
+      "frame": 2,
+      "visible": 19089,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "S",
+      "frame": 3,
+      "visible": 15995,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "S",
+      "frame": 4,
+      "visible": 15995,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "S",
+      "frame": 5,
+      "visible": 15995,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SW",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SW",
+      "frame": 1,
+      "visible": 17642,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SW",
+      "frame": 2,
+      "visible": 17642,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SW",
+      "frame": 3,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SW",
+      "frame": 4,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SW",
+      "frame": 5,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 1,
+      "visible": 17642,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 2,
+      "visible": 17642,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 3,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 4,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "W",
+      "frame": 5,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NW",
+      "frame": 0,
+      "visible": 22631,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NW",
+      "frame": 1,
+      "visible": 17642,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NW",
+      "frame": 2,
+      "visible": 17642,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NW",
+      "frame": 3,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NW",
+      "frame": 4,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NW",
+      "frame": 5,
+      "visible": 16876,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 0,
+      "visible": 21097,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 1,
+      "visible": 17567,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 2,
+      "visible": 17567,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 3,
+      "visible": 16973,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 4,
+      "visible": 16973,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "N",
+      "frame": 5,
+      "visible": 16973,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NE",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NE",
+      "frame": 1,
+      "visible": 21747,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NE",
+      "frame": 2,
+      "visible": 21747,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NE",
+      "frame": 3,
+      "visible": 18419,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NE",
+      "frame": 4,
+      "visible": 18419,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "NE",
+      "frame": 5,
+      "visible": 18419,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "E",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "E",
+      "frame": 1,
+      "visible": 21747,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "E",
+      "frame": 2,
+      "visible": 21747,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "E",
+      "frame": 3,
+      "visible": 18419,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "E",
+      "frame": 4,
+      "visible": 18419,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "E",
+      "frame": 5,
+      "visible": 18419,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SE",
+      "frame": 0,
+      "visible": 23331,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SE",
+      "frame": 1,
+      "visible": 21747,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SE",
+      "frame": 2,
+      "visible": 21747,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SE",
+      "frame": 3,
+      "visible": 18419,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SE",
+      "frame": 4,
+      "visible": 18419,
+      "edge": 0
+    },
+    {
+      "clip": "death",
+      "facing": "SE",
+      "frame": 5,
+      "visible": 18419,
+      "edge": 0
+    }
+  ],
+  "engine": {
+    "beforeHit": 0,
+    "onHit": 1,
+    "events": [
+      "hit"
+    ],
+    "dead": {
+      "anim": "death",
+      "frame": 5,
+      "progress": 1
+    },
+    "held": {
+      "anim": "death",
+      "frame": 5,
+      "progress": 1
+    },
+    "facings": {
+      "S": {
+        "row": 0,
+        "flip": false
+      },
+      "SW": {
+        "row": 1,
+        "flip": false
+      },
+      "W": {
+        "row": 2,
+        "flip": false
+      },
+      "NW": {
+        "row": 3,
+        "flip": false
+      },
+      "N": {
+        "row": 4,
+        "flip": false
+      },
+      "NE": {
+        "row": 5,
+        "flip": false
+      },
+      "E": {
+        "row": 6,
+        "flip": false
+      },
+      "SE": {
+        "row": 7,
+        "flip": false
+      }
+    }
+  },
+  "limitations": [
+    "Four authored cardinal views; diagonal rows reuse side art.",
+    "Only two idle drawings per view; repeated frames are holds.",
+    "Front/back/right hop reuse crouch for missing settled landing.",
+    "Shell volume, limb anatomy, right impact and rear forward projection remain unapproved.",
+    "Rear exhale adds more exposed foreleg segments and changes highlights.",
+    "Technical checks do not establish visual approval or live multiplayer behavior."
+  ]
+}

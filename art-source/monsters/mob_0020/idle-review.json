@@ -1,31 +1,43 @@
 {
-  "status": "three-view-blink-study-unapproved",
+  "status": "four-view-idle-study-unapproved",
   "preview": "combined-review.html",
   "sources": {
     "left": "idle-left-blink.png cell 0",
     "front": "idle-front-blink.png cell 0",
     "right": "idle-right-blink.png cell 0",
-    "back": "actions-back.png cell 0, static"
+    "back": "idle-back-exhale.png cell 0 / actions-back.png cell 0"
   },
   "timing": {
     "frames": 16,
     "fps": 8,
-    "closedFrames": [12, 13],
+    "closedFrames": [
+      12,
+      13
+    ],
     "authoredDrawingsPerBlinkView": 2,
-    "note": "Repeated timing frames are holds; rear idle has one drawing and one timing frame."
+    "note": "Two authored drawings in each view; repeated timing frames are holds.",
+    "rearExhaleFrames": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
   },
   "observations": [
     "Open/closed pairs inspected on opaque browser background using unchanged neutral registration.",
     "Feet and shell silhouette broadly remain aligned; no obvious matte blocks.",
     "Front closes both eyelids; each profile closes its one visible eye.",
     "Only cell 0 from each revision is selected; original action drawings remain unchanged.",
-    "All 138 combined timing cells are nonempty and avoid the canvas boundary; death hold rechecked in all four views."
+    "All 153 combined timing cells are nonempty and avoid the canvas boundary; death hold rechecked in all four views.",
+    "Rear neutral/exhale pair inspected with fixed registration on opaque browser background."
   ],
   "limitations": [
     "Minor skin, shell highlight and face detail drift remains; pixel-identical body preservation is not established.",
     "Closing/opening has no intermediate eyelid drawing.",
-    "Rear idle remains static; breathing motion is unfinished.",
-    "Not approved or bound to gameplay."
+    "Not approved or bound to gameplay.",
+    "Rear exhale changes toe spacing, exposed upper foreleg segments and shell highlights more than intended."
   ],
-  "next": "Author a subtle rear breathing pose without deforming the rigid shell, then review continuity across all idle views."
+  "next": "Refine idle body/foot registration and material continuity, especially the rear exhale."
 }

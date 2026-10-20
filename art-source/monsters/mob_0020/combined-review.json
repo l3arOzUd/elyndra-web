@@ -8,7 +8,7 @@
     "right"
   ],
   "clips": [
-    "three-view-blink-rear-static-idle",
+    "four-view-two-drawing-idle",
     "hop-as-walk",
     "attack",
     "hit",
@@ -17,11 +17,12 @@
   "sharedRenderers": [
     "actions-art.js",
     "hop-art.js",
-    "idle-art.js"
+    "idle-art.js",
+    "motion-art.js"
   ],
   "technicalCheck": {
     "unchangedSourceRenderHashesAfterExtraction": 41,
-    "checkedCombinedTimingCells": 138,
+    "checkedCombinedTimingCells": 153,
     "emptyOrCanvasEdgeViolations": [],
     "browserErrors": [],
     "deathHolds": "All four views reached frame 5 after 1100 ms and remained there after another 200 ms.",
@@ -48,12 +49,22 @@
     "128-square preview available beside the larger canvas for checking small-size readability."
   ],
   "remaining": [
-    "Author rear idle motion and refine blink continuity.",
+    "Refine idle toe registration, exposed rear foreleg anatomy and material continuity.",
     "Correct rigid shell volume, anatomy and cross-clip proportions.",
     "Repair right impact and rear forward bump projection.",
     "Add landing recovery and connecting poses.",
-    "Export directional runtime assets and verify gameplay integration after art refinement."
+    "Refine visuals, then bind and verify in live gameplay."
   ],
   "publicBinding": false,
-  "idleReview": "idle-review.json"
+  "idleReview": "idle-review.json",
+  "runtimeDraft": {
+    "path": "runtime-draft/tidehopper_2d/",
+    "preview": "runtime-review.html",
+    "validation": "runtime-draft/validation.json",
+    "frames": 312,
+    "authoredViews": 4,
+    "engineRows": 8,
+    "diagonals": "reuse side drawings",
+    "bound": false
+  }
 }

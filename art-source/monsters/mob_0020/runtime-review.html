@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8">
+<title>Tidehopper exported sprite test</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80}a{color:#a9e2e3}</style>
+<h1>Tidehopper: exported sprite test</h1>
+<p>Loads the exported PNG sheets through the game's sprite loader, facing resolver and Animator. Art is an unapproved draft. Diagonals reuse side drawings. This page does not bind the monster in gameplay.</p>
+<p><a href="combined-review.html">Source-art preview</a></p>
+<select id="direction"><option>S</option><option>SW</option><option>W</option><option>NW</option><option>N</option><option>NE</option><option>E</option><option>SE</option></select>
+<select id="clip"><option>idle</option><option>walk</option><option>attack</option><option>hit</option><option>death</option></select>
+<button id="replay">Replay / revive</button><span id="status"></span><br>
+<canvas width="384" height="384"></canvas>
+<script type="module">
+import {loadSprite,resolveFacing} from '/src/render/spriteDef.ts';
+import {Animator} from '/src/render/animator.ts';
+const sprite=await loadSprite('tidehopper_2d','./runtime-draft/');
+const direction=document.querySelector('#direction'),clip=document.querySelector('#clip'),g=document.querySelector('canvas').getContext('2d');
+let animator,last=performance.now(),state,hitEvents=0;
+function reset(){animator=new Animator(sprite.json.animations);hitEvents=0;if(clip.value==='idle'||clip.value==='walk')animator.setBase(clip.value);else animator.play(clip.value,{onEvent:event=>{if(event==='hit')hitEvents++}});last=performance.now()}
+clip.onchange=reset;document.querySelector('#replay').onclick=reset;
+function tick(t){
+ state=animator.update(Math.max(0,t-last));last=t;
+ const facing=resolveFacing(sprite.json,direction.value),sheet=sprite.sheets[state.anim],frame=sprite.json.frame;
+ g.clearRect(0,0,384,384);g.drawImage(sheet.image,state.frame*frame.w,facing.row*frame.h,frame.w,frame.h,0,0,384,384);
+ document.querySelector('#status').textContent=`${state.anim} frame ${state.frame}; hit events ${hitEvents}`;
+ requestAnimationFrame(tick);
+}
+reset();requestAnimationFrame(tick);
+window.__tideRuntime={ready:true,sprite,snapshot:()=>({state,hitEvents,facing:resolveFacing(sprite.json,direction.value),dead:animator.isDead})};
+</script>
