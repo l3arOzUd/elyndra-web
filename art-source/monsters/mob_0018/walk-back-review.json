@@ -1,0 +1,21 @@
+{
+  "status": "rear-walk-four-key-pose-draft",
+  "source": "walk-back.png",
+  "preview": "walk-back-review.html",
+  "playbackCellOrder": [0, 1, 2, 3],
+  "observations": [
+    "All four poses retain rear helmet without face, paired back plates and brass spine.",
+    "Two fists and two boot chains visible per pose.",
+    "Cell 1 raises screen-right heel showing sole; cell 3 raises screen-left heel.",
+    "Contact frames alternate forward foot and opposite arm swing.",
+    "Browser alpha composite clean; four-pose loop advances without page errors."
+  ],
+  "limitations": [
+    "Raised soles make passing poses read as a rear kick; forward swing under hips needs refinement.",
+    "Boot size, knee blocks and back carvings vary between frames.",
+    "Only four poses; support transfer and foot sliding need further work.",
+    "Ground alignment approximate; front/side/back scale not yet compared together.",
+    "Animated idle, sand emission and runtime export remain outstanding."
+  ],
+  "publicBinding": false
+}
