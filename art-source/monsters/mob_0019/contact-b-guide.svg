@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+<rect width="1254" height="1254" fill="#eef1f0"/>
+<g fill="none" stroke="#6d7b84" stroke-width="18" stroke-linecap="round">
+<path d="M640 320L640 570M560 390L715 390M560 390L520 510L420 510M715 390L760 530L800 650M575 580L705 580"/>
+<circle cx="640" cy="280" r="55"/><circle cx="640" cy="300" r="180"/>
+<path d="M420 80L420 1135"/>
+</g>
+<g fill="none" stroke="#1785c0" stroke-width="22" stroke-linecap="round">
+<path d="M705 580L685 790L680 1040L690 1155"/>
+<path d="M655 1175L720 1175L700 1130L670 1140Z"/>
+</g>
+<g fill="none" stroke="#d06525" stroke-width="22" stroke-linecap="round">
+<path d="M575 580L570 805L575 1040L580 1090L585 1135"/>
+<path d="M565 1135L595 1135L595 1122L575 1080"/>
+</g>
+<g opacity="0" fill="#fff" stroke="#32434d" stroke-width="6">
+<circle cx="575" cy="580" r="14"/><circle cx="595" cy="790" r="14"/><circle cx="600" cy="1040" r="14"/>
+<circle cx="705" cy="580" r="14"/><circle cx="720" cy="805" r="14"/><circle cx="735" cy="1040" r="14"/>
+</g>
+<g stroke="#555" stroke-width="3" stroke-dasharray="10 8"><path d="M640 1175H740M540 1135H620"/></g>
+<g font-family="Arial" font-size="25" fill="#22343c">
+<text x="50" y="50">CONTACT B: front view, two support contacts</text>
+<text x="80" y="1195">Blue: forward sole planted</text>
+<text x="800" y="1110">Orange: heel raised</text><text x="800" y="1145">Toe touches ground</text>
+<text x="825" y="1200">No leg crossing</text>
+</g></svg>
+

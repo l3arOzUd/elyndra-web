@@ -59,6 +59,13 @@
       "result": "Correct B leading leg retained from original, but trailing toe remains near y1080 instead of target y1140.",
       "selection": "Comparison only; no demonstrated contact improvement.",
       "next": "Use B-specific pose guide rather than repeated unassisted text edits."
+    },
+    {
+      "source": "walk-front-contact-b-v4.png",
+      "guide": "contact-b-guide.png",
+      "result": "Correct leading leg and five mirrors retained, but trailing toe stays near y1070 instead of y1135. Guide did not overcome original lifted-foot pose.",
+      "selection": "Rejected as grounded contact; no replacement.",
+      "next": "Stop repeating edits of the lifted-foot source. Generate a new contact from neutral front reference with B guide as primary pose input."
     }
   ]
 }
