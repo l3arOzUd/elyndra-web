@@ -1,0 +1,20 @@
+{
+  "status": "isolated-bite-draft",
+  "selected": "bite-left-v2.png",
+  "rejected": {
+    "source": "bite-left.png",
+    "reason": "Seven foot tips and mandibles open despite requested strike."
+  },
+  "observations": [
+    "V2 removes extra dangling limb between middle and rear legs.",
+    "Six foot tips visible; paired mandibles closed.",
+    "Full isolated silhouette avoids sprite-sheet neighbor contamination."
+  ],
+  "limitations": [
+    "Head extension remains modest; may read as mouth closure rather than full lunge.",
+    "Raised limbs remain closer to gait pose than firm attack brace.",
+    "Shell texture drifts from contact source.",
+    "Source margins smaller than requested; needs registration before integration.",
+    "Not integrated into action timeline or runtime."
+  ]
+}
