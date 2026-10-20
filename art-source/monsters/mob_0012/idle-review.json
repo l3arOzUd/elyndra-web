@@ -5,14 +5,15 @@
   "verified": [
     "Browser contact sheet shows leafy crown changing while three feet remain planted.",
     "Clean transparent exterior in browser preview.",
-    "Front idle rendered in browser with leaf crown variation and planted feet; exterior alpha clean."
+    "Front idle rendered in browser with leaf crown variation and planted feet; exterior alpha clean.",
+    "Rear idle rendered with SpriteActor N row at600ms, clean alpha and planted center foot."
   ],
   "limitations": [
     "Two authored poses only; transition needs intermediate leaf positions.",
     "Brass saturation and twig details shift slightly.",
-    "Rear idle remains uncreated.",
-    "Not exported or bound to runtime yet.",
-    "Front alternate changes leaf arrangement and brightens brass slightly; needs consistent in-between leaves."
+    "Front alternate changes leaf arrangement and brightens brass slightly; needs consistent in-between leaves.",
+    "Exported runtime draft, not yet bound to gameplay."
   ],
-  "frontSource": "idle-front-leaves.png top-left only; neutral actions-front-v2.png"
+  "frontSource": "idle-front-leaves.png top-left only; neutral actions-front-v2.png",
+  "rearSource": "idle-back-leaves.png top-left only"
 }

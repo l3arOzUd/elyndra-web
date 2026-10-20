@@ -4,7 +4,7 @@
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{display:block;background:#697a80;margin:16px 0;max-width:100%}</style>
 <h1>Graftling — tripod walk draft</h1>
 <p>Six authored stepping poses. Inspect three continuous leg chains and two planted supports. Brass hinge positions, body registration and foot trajectories need refinement. Not bound to gameplay.</p>
-<select id="clip"><option>walk</option><option>idle</option><option>idle-front</option><option>walk-front</option><option>walk-back</option><option>attack</option><option>hit</option><option>death</option><option>attack-front</option><option>hit-front</option><option>death-front</option><option>attack-back</option><option>hit-back</option><option>death-back</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
+<select id="clip"><option>walk</option><option>idle</option><option>idle-front</option><option>idle-back</option><option>walk-front</option><option>walk-back</option><option>attack</option><option>hit</option><option>death</option><option>attack-front</option><option>hit-front</option><option>death-front</option><option>attack-back</option><option>hit-back</option><option>death-back</option></select><button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
 <canvas id="motion" width="600" height="540"></canvas>
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
@@ -20,8 +20,10 @@ const backActions=new Image();backActions.src='./actions-back.png';await backAct
 const backFix=new Image();backFix.src='./actions-back-v2.png';await backFix.decode();
 const idleLeaves=new Image();idleLeaves.src='./idle-left-leaves.png';await idleLeaves.decode();
 const frontIdle=new Image();frontIdle.src='./idle-front-leaves.png';await frontIdle.decode();
+const backIdle=new Image();backIdle.src='./idle-back-leaves.png';await backIdle.decode();
 let clip='walk';const seq={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 function draw(ctx,f,x,y,s){
+ if(clip==='idle-back'){ctx.drawImage(f>=2&&f<=3?backIdle:backActions,0,0,512,516,x-256*s,y-516*s,512*s,516*s);return;}
  if(clip==='idle-front'){ctx.drawImage(f>=2&&f<=3?frontIdle:frontActions,0,0,512,542,x-256*s,y-533*s,512*s,542*s);return;}
  if(clip==='idle'){ctx.drawImage(f>=2&&f<=3?idleLeaves:actionFix,0,0,530,511,x-256*s,y-511*s,530*s,511*s);return;}
  if(clip.endsWith('-back')&&!clip.startsWith('walk')){const pose=seq[clip.replace('-back','')][f],sy=pose<3?0:516,h=pose<3?516:508,bottom=[516,515,502,490,459,453][pose];ctx.drawImage(pose===5?backFix:backActions,pose%3*512,sy,512,h,x-256*s,y-bottom*s,512*s,h*s);return;}
@@ -43,5 +45,18 @@ document.querySelector('#clip').onchange=e=>{clip=e.target.value;f=0;paused=fals
 document.querySelector('#pause').onclick=()=>paused=!paused;
 document.querySelector('#frame').oninput=e=>{f=Number(e.target.value);paused=true;};
 function tick(t){if(!paused&&t-last>170){f=(clip.startsWith('walk')||clip.startsWith('idle'))?(f+1)%6:Math.min(5,f+1);last=t;}ctx.clearRect(0,0,600,540);draw(ctx,f,300,510,.9);document.querySelector('#frame').value=f;requestAnimationFrame(tick);}
+function exportDraft(){
+ const previous=clip,images={},sizes={};
+ const json={id:'graftling_2d',kind:'sheet',facingMode:'directional',frame:{w:384,h:384},pivot:{x:192,y:346},pixelsPerCell:300,rows:['W','S','SW','NW','N'],mirror:{E:'W',SE:'W',NE:'W'},animations:{idle:{file:'idle.png',frames:6,fps:4,loop:true},walk:{file:'walk.png',frames:6,fps:8,loop:true,refMsPerCell:240},attack:{file:'attack.png',frames:6,fps:8,events:{hit:3}},hit:{file:'hit.png',frames:6,fps:12},death:{file:'death.png',frames:6,fps:8,hold:true}}};
+ for(const [name,def]of Object.entries(json.animations)){
+  const c=document.createElement('canvas');c.width=384*def.frames;c.height=384*json.rows.length;const ctx=c.getContext('2d');
+  for(let row=0;row<json.rows.length;row++)for(let f=0;f<def.frames;f++){
+   clip=name+(row===1?'-front':row===4?'-back':'');ctx.save();ctx.translate(f*384,row*384);draw(ctx,f,192,346,.60);ctx.restore();
+  }
+  images[name]=c.toDataURL('image/png');sizes[name]={width:c.width,height:c.height};
+ }
+ clip=previous;return {json,images,sizes};
+}
+window.__monsterDraft={ready:true,exportDraft};
 window.__graftlingWalk={ready:true};requestAnimationFrame(tick);
 </script>
