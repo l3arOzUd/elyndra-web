@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "front-rest-study.png",
+    "death-front-volume-v2.png"
+  ],
+  "prompt": "Draw ONE intermediate collapsing pose of the EXACT Coral Claw crab shared by the two references. First image = neutral standing. Second image = final dead on ground. Pose halfway between them: knees begin folding outward, shell underside lowered halfway to ground, heavy claw hands halfway down, eyestalks half retracted and lids half shut. Most important preserve rigid full size carapace, identical pink/orange coral branches and same giant anatomical right claw on image LEFT; small claw image RIGHT. Do not inflate, shrink or squash body or claws. Eight walking legs, four per side, separate from two claw arms, fixed segment lengths, feet maintaining support while knees bend. Keep coral silhouette of the SECOND reference as closely as possible. No body roll or sideways tilt; frontal camera. One complete creature only, large generous transparent margins around all feet and coral. Match exact wet teal cream and gold ornate painted fantasy style. Genuine transparent background, no floor, shadow, captions or labels. Full body grounded intermediate death key, not final flat corpse and not upright resting stance."
+}

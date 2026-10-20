@@ -3,12 +3,36 @@
   "status": "frontal-action-drafts-not-approved",
   "source": "actions-front-study.png",
   "preview": "actions-front-review.html",
-  "sourceSize": [1774, 887],
-  "uniqueSourcePoses": 6,
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "uniqueSourcePoses": 9,
   "sequences": {
-    "attack": [0, 1, 1, 2, 2, 0],
-    "hit": [0, 3, 3, 0, 0, 0],
-    "death": [0, 4, 4, 5, 5, 5]
+    "attack": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      0
+    ],
+    "hit": [
+      0,
+      3,
+      3,
+      0,
+      0,
+      0
+    ],
+    "death": [
+      0,
+      6,
+      4,
+      4,
+      5,
+      5
+    ]
   },
   "observed": [
     "Large claw opens for windup and closes on the contact key.",
@@ -18,7 +42,7 @@
   ],
   "remaining": [
     "Attack has weak forward reach.",
-    "Intermediate collapse still compresses shell and changes claw proportions before the repaired endpoint.",
+    "Claw perspective and apparent size change during collapse; coral landmarks still drift.",
     "Coral and walking-leg details vary across poses.",
     "Concealed legs do not establish consistent attachment order.",
     "Only front view exists for these actions; no live runtime binding."
@@ -36,11 +60,25 @@
   "selectedDeath": {
     "file": "death-front-volume-v2.png",
     "selectedForDraftPreview": true,
-    "sourceSize": [1448, 1086],
-    "alphaBoundsAbove16": [26, 185, 1416, 927],
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "alphaBoundsAbove16": [
+      26,
+      185,
+      1416,
+      927
+    ],
     "uniformScale": 0.28,
-    "sourceAnchor": [740, 927],
-    "previewAnchor": [256, 430],
+    "sourceAnchor": [
+      740,
+      927
+    ],
+    "previewAnchor": [
+      256,
+      430
+    ],
     "improvements": [
       "Outer feet fit inside source canvas.",
       "Large anatomical right claw remains visibly larger than left claw.",
@@ -49,19 +87,69 @@
     "limitations": [
       "Only visible folded feet are verifiable; concealed attachment order remains unresolved.",
       "Coral and eye details differ from neutral.",
-      "Intermediate collapse key needs matching art to prevent a proportion jump."
+      "New buckle and collapse keys improve staging but do not yet preserve every claw and coral landmark."
     ]
   },
   "validation": {
     "method": "Browser preview plus direct source inspection",
-    "visiblePixelsPerSourcePose": [69901, 72685, 65354, 61468, 62901, 46982],
-    "canvasEdgePixels": [0, 0, 0, 0, 0, 0],
+    "visiblePixelsPerSourcePose": [
+      69901,
+      72685,
+      65354,
+      61468,
+      53576,
+      46982
+    ],
+    "canvasEdgePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
     "deathFrameAfter1300ms": 5,
     "deathFrameAfter1900ms": 5,
     "playingAfterDeath": false,
     "pageErrors": [],
-    "scope": "Preview display and timing only; not visual approval or game integration."
+    "scope": "Preview display and timing only; not visual approval or game integration.",
+    "deathTimingFramesChecked": 6,
+    "deathTimingFrameEdgePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "artApproved": false,
-  "publicBinding": false
+  "publicBinding": false,
+  "selectedCollapse": {
+    "file": "collapse-front-volume.png",
+    "sourceAnchor": [
+      740,
+      951
+    ],
+    "uniformScale": 0.28,
+    "limitation": "Already low to the ground; claw perspective differs from neutral."
+  },
+  "selectedEarlyBuckle": {
+    "file": "buckle-front-study.png",
+    "sourceAnchor": [
+      740,
+      970
+    ],
+    "uniformScale": 0.28,
+    "limitation": "Knee bend is subtle; outer right foot has only a narrow source margin."
+  },
+  "deathNeutral": {
+    "file": "front-rest-study.png",
+    "sourceAnchor": [
+      740,
+      978
+    ],
+    "uniformScale": 0.28
+  },
+  "sourceNote": "Six original sheet poses plus separate neutral, buckle, collapse and dead images; two original sheet death poses are superseded in default preview. Nine selected distinct drawings across all previews."
 }

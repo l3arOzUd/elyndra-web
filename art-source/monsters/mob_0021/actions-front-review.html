@@ -6,26 +6,32 @@
 <select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All source poses</option></select>
 <button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" step="1" value="0"><span id="label"></span><br>
 <canvas id="preview" width="512" height="512"></canvas><canvas id="small" width="128" height="128"></canvas>
-<p>Attack reads as a raised claw closing, with limited forward reach. Death now uses a separate full-volume endpoint; the preceding collapse still needs matching shell and claw proportions. Folded feet remain partly concealed.</p>
-<label><input id="originalDeath" type="checkbox">Compare original compressed death endpoint</label>
+<p>Attack reads as a raised claw closing, with limited forward reach. Death uses four separate neutral, early buckle, collapse and settled drawings at one scale. Early buckle is subtle; coral, claw shape and hidden-leg continuity still need refinement.</p>
+<label><input id="originalDeath" type="checkbox">Compare original sheet death poses</label>
 <p><a href="anatomy-review.html">Reference comparison</a> · <a href="walk-front-review.html">Scuttle study</a> · <a href="actions-front-study.png">Source sheet</a></p>
 <details><summary>Separate death-volume candidate — not selected</summary><img src="death-front-volume-study.png" alt="Death pose retaining a large claw and fuller shell" style="width:600px;max-width:100%;background:#697a80"><p>Fuller shell and large claw, but the outer left foot reaches the source boundary, hidden legs remain ambiguous and closed eyes gain a new shape. Needs repair before replacing the sequence endpoint.</p></details>
 <script type="module">
 const image=new Image();image.src='./actions-front-study.png';await image.decode();
 const dead=new Image();dead.src='./death-front-volume-v2.png';await dead.decode();
+const collapse=new Image();collapse.src='./collapse-front-volume.png';await collapse.decode();
+const neutral=new Image();neutral.src='./front-rest-study.png';await neutral.decode();
+const buckle=new Image();buckle.src='./buckle-front-study.png';await buckle.decode();
 const crops=[[0,15,595,452],[610,15,600,452],[1210,15,564,452],[0,468,580,410],[580,480,620,398],[1200,540,574,338]];
 const anchors=[[297,451],[910,455],[1490,464],[292,855],[890,853],[1485,846]];
-const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5],all:[0,1,2,3,4,5]};
-const names=['neutral','windup','pinch','recoil','collapse','dead'];
+const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,6,4,4,5,5],all:[0,1,2,3,4,5]};
+const names=['neutral','windup','pinch','recoil','collapse','dead','early buckle'];
 const c=document.querySelector('#preview'),g=c.getContext('2d'),s=document.querySelector('#small'),sg=s.getContext('2d');
 const clip=document.querySelector('#clip'),slider=document.querySelector('#frame'),label=document.querySelector('#label');
 let playing=true,frame=0,last=0;
 function draw(f){
-  frame=f;const cell=sequences[clip.value][f],r=crops[cell],a=anchors[cell];
+  frame=f;const original=document.querySelector('#originalDeath').checked;
+  const cell=original&&clip.value==='death'?[0,4,4,5,5,5][f]:sequences[clip.value][f],r=crops[cell],a=anchors[cell];
   g.clearRect(0,0,512,512);
-  if(cell===5&&!document.querySelector('#originalDeath').checked){
+  if(!original&&(cell===4||cell===5||cell===6||(clip.value==='death'&&cell===0))){
     // One uniform scale for the complete painting; ground aligns with other keys.
-    g.drawImage(dead,256-740*.28,430-927*.28,dead.naturalWidth*.28,dead.naturalHeight*.28);
+    const source=cell===5?dead:cell===4?collapse:cell===6?buckle:neutral;
+    const ground=cell===5?927:cell===4?951:cell===6?970:978;
+    g.drawImage(source,256-740*.28,430-ground*.28,source.naturalWidth*.28,source.naturalHeight*.28);
   }else g.drawImage(image,...r,256+(r[0]-a[0])*.7,430+(r[1]-a[1])*.7,r[2]*.7,r[3]*.7);
   sg.clearRect(0,0,128,128);sg.drawImage(c,0,0,128,128);slider.value=String(f);label.textContent=`Frame ${f+1}: ${names[cell]}`;
 }

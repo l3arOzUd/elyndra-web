@@ -24,12 +24,17 @@
     "hit": "Short shell recoil with bracing bent legs and retracted eyestalks.",
     "death": "Walking knees buckle under shell, body lowers, claws relax on ground; no backward flip."
   },
-  "requiredViews": ["front", "back", "left", "right"],
+  "requiredViews": [
+    "front",
+    "back",
+    "left",
+    "right"
+  ],
   "blockingArtIssues": [
     "Original front and profile references do not expose eight individually traceable walking-leg chains.",
     "Profile cameras retain oblique exposure.",
     "Coral branch topology and small-claw decoration differ between views."
   ],
-  "next": "Match the collapse key to selected death-front-volume-v2.png, improve forward pinch reach, then reconcile back/profiles and planted-foot continuity. Idle animation and remaining directional actions are still missing.",
+  "next": "Frontal death now has four authored keys. Refine claw/coral continuity, improve forward pinch reach, then reconcile back/profiles and planted-foot continuity. Idle animation and remaining directional actions are still missing.",
   "publicBinding": false
 }
