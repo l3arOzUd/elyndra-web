@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { poseAt, type ItemLook, type Rig } from "../src/render/paperDoll";
+import { DOLL_ANIMS, poseAt, type ItemLook, type Rig } from "../src/render/paperDoll";
 import type { ItemDef } from "../src/data/schema";
 
 // The Wayfarer kit is edited by hand (rig.json, equipment.json) and by the art
@@ -70,10 +70,24 @@ describe("wayfarer poses", () => {
     expect(strike).toBeGreaterThan(windup); // swinging forward
   });
   it("collapses through knees and spine without tipping the whole body backward", () => {
-    const end = poseAt("side", "death", 7, 8);
+    const n = DOLL_ANIMS.death!.frames;
+    const end = poseAt("side", "death", n - 1, n);
     expect(end.rot).toBe(0);
     expect(end.dy).toBeGreaterThan(40); // hips lower while rotated boot tips stay above ground
     expect(end.angle.torso).toBeLessThan(-30);
     expect(end.angle.shin_near).toBeLessThan(-100);
+  });
+  it("lands on the knees before the torso finishes folding, then holds still", () => {
+    const n = DOLL_ANIMS.death!.frames;
+    for (const view of ["side", "front", "back"]) {
+      const contact = poseAt(view, "death", 7, n);
+      const end = poseAt(view, "death", n - 1, n);
+      const kneeY = 336 + 72 * Math.cos(end.angle.thigh_near * Math.PI / 180) + end.dy;
+      expect(kneeY).toBeCloseTo(428); // reserve the painted knee/boot volume below the joint
+      expect(Math.abs(contact.angle.torso)).toBeLessThan(Math.abs(end.angle.torso));
+      expect(poseAt(view, "death", n - 2, n)).toEqual(end);
+      expect(end.unconscious).toBe(true);
+    }
+    expect(DOLL_ANIMS.death!.hold).toBe(true);
   });
 });

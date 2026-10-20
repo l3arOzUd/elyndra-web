@@ -84,7 +84,7 @@ export const DOLL_ANIMS: SpriteDefJson["animations"] = {
   shoot: { file: "(paper doll)", frames: 12, fps: 20, events: { hit: 8 } },
   cast: { file: "(paper doll)", frames: 12, fps: 16, events: { hit: 8 } },
   hit: { file: "(paper doll)", frames: 4, fps: 12 },
-  death: { file: "(paper doll)", frames: 8, fps: 10, hold: true },
+  death: { file: "(paper doll)", frames: 12, fps: 12, hold: true },
 };
 
 interface Pose {
@@ -172,20 +172,26 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
     case "death": {
       // Knees give way first, then the spine folds and the head settles.
       // Keep the root upright: never rotate the standing silhouette like a plank.
-      const knees=ease(Math.min(1,k/.65));
-      const slump=ease(Math.max(0,Math.min(1,(k-.2)/.7)));
-      p.angle.thigh_near=(side?65:60)*knees;
-      p.angle.thigh_far=(side?72:-60)*knees;
-      p.angle.shin_near=(side?-135:-100)*knees;
-      p.angle.shin_far=(side?-140:100)*knees;
-      // Compensate for the shortened vertical leg reach, keeping feet grounded.
+      const knees=ease(Math.min(1,k/.55));
+      const slump=ease(Math.max(0,Math.min(1,(k-.3)/.6)));
+      p.angle.thigh_near=(side?78:60)*knees;
+      p.angle.thigh_far=(side?84:-60)*knees;
+      p.angle.shin_near=(side?-158:-145)*knees;
+      p.angle.shin_far=(side?-164:145)*knees;
+      // Transfer support from the soles to the knees. The old foot-only
+      // compensation left both knees suspended in a permanent squat.
       const rad=Math.PI/180;
       const thigh=p.angle.thigh_near*rad,shin=(p.angle.thigh_near+p.angle.shin_near)*rad;
-      p.dy=144-72*Math.cos(thigh)-72*Math.cos(shin)-(side?32:0)*knees;
-      p.angle.torso=(side?-40:12*out)*slump;
-      p.angle.head=(side?-18:12*out)*slump;
-      p.angle.arm_near=(side?35:-12*out)*slump;
-      p.angle.arm_far=(side?28:10*out)*slump;
+      const soleSupport=144-72*Math.cos(thigh)-72*Math.cos(shin);
+      // The painted knee/boot extends below its joint; reserve that volume.
+      const kneeSupport=92-72*Math.cos(thigh);
+      const contact=ease(Math.max(0,Math.min(1,(k-.25)/.3)));
+      p.dy=lerp(soleSupport,kneeSupport,contact);
+      p.dx=side?60*slump:0;
+      p.angle.torso=(side?-68:40*out)*slump;
+      p.angle.head=(side?-16:18*out)*slump;
+      p.angle.arm_near=(side?58:-12*out)*slump;
+      p.angle.arm_far=(side?50:10*out)*slump;
       p.hurt=.35*(1-Math.min(1,k*3));
       p.unconscious=k>=.25;
       break;
@@ -227,11 +233,13 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
     aim(which,lerp(r[0],target[0],t),lerp(r[1],target[1],t),bend,lerp(start,angle,t));
   };
   if(anim==="death") {
-    const settle=ease(Math.min(1,k/.8));
+    const settle=ease(Math.max(0,Math.min(1,(k-.2)/(motion==="melee"?.5:.7))));
     if(motion!=="unarmed") {
       const start=rest("near");
-      aim("near",lerp(start[0],near[0]-12,settle),lerp(start[1],near[1]+80,settle),-1,
-        lerp(side?(motion==="cast"?-18:motion==="shoot"?-14:-5):0,motion==="cast"?(side?-50:-65*sign):side?-25:-35*sign,settle));
+      // Counter the folded torso so the hand hangs below the shoulder,
+      // rather than keeping the weapon in a combat-ready chest carry.
+      aim("near",lerp(start[0],near[0]-(side?72:12*sign),settle),lerp(start[1],near[1]+38,settle),-1,
+        lerp(side?(motion==="cast"?-18:motion==="shoot"?-14:-5):0,side?(motion==="melee"?-65:-18):-65*sign,settle));
     }
     return p;
   }
