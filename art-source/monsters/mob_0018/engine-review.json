@@ -1,0 +1,193 @@
+{
+  "status": "engine-draft-verified-art-unapproved",
+  "errors": [],
+  "results": [
+    {
+      "clip": "idle",
+      "current": "idle",
+      "facing": "W",
+      "events": []
+    },
+    {
+      "clip": "walk",
+      "current": "walk",
+      "facing": "W",
+      "events": []
+    },
+    {
+      "clip": "attack",
+      "current": "attack",
+      "facing": "W",
+      "events": [
+        "hit"
+      ]
+    },
+    {
+      "clip": "hit",
+      "current": "idle",
+      "facing": "W",
+      "events": []
+    },
+    {
+      "clip": "death",
+      "current": "death",
+      "facing": "W",
+      "events": []
+    },
+    {
+      "clip": "idle",
+      "current": "idle",
+      "facing": "E",
+      "events": []
+    },
+    {
+      "clip": "walk",
+      "current": "walk",
+      "facing": "E",
+      "events": []
+    },
+    {
+      "clip": "attack",
+      "current": "attack",
+      "facing": "E",
+      "events": [
+        "hit"
+      ]
+    },
+    {
+      "clip": "hit",
+      "current": "idle",
+      "facing": "E",
+      "events": []
+    },
+    {
+      "clip": "death",
+      "current": "death",
+      "facing": "E",
+      "events": []
+    },
+    {
+      "clip": "idle",
+      "current": "idle",
+      "facing": "S",
+      "events": []
+    },
+    {
+      "clip": "walk",
+      "current": "walk",
+      "facing": "S",
+      "events": []
+    },
+    {
+      "clip": "attack",
+      "current": "attack",
+      "facing": "S",
+      "events": [
+        "hit"
+      ]
+    },
+    {
+      "clip": "hit",
+      "current": "idle",
+      "facing": "S",
+      "events": []
+    },
+    {
+      "clip": "death",
+      "current": "death",
+      "facing": "S",
+      "events": []
+    },
+    {
+      "clip": "idle",
+      "current": "idle",
+      "facing": "N",
+      "events": []
+    },
+    {
+      "clip": "walk",
+      "current": "walk",
+      "facing": "N",
+      "events": []
+    },
+    {
+      "clip": "attack",
+      "current": "attack",
+      "facing": "N",
+      "events": [
+        "hit"
+      ]
+    },
+    {
+      "clip": "hit",
+      "current": "idle",
+      "facing": "N",
+      "events": []
+    },
+    {
+      "clip": "death",
+      "current": "death",
+      "facing": "N",
+      "events": []
+    }
+  ],
+  "assertions": {
+    "attackSingleHitAllFacings": true,
+    "deathHoldsAllFacings": true,
+    "idleWalkLoop": true,
+    "hitReturnsIdle": true,
+    "attackEventBoundaryAndRecovery": true
+  },
+  "limitations": [
+    "This verifies SpriteActor and Animator behavior, not visual quality.",
+    "Right mirrors left; diagonals reuse side art.",
+    "Sand emission and rigid block/foot continuity remain unfinished."
+  ],
+  "publicBinding": false,
+  "attackBoundaryChecks": [
+    {
+      "facing": "W",
+      "beforeHit": [],
+      "atHit": [
+        "hit"
+      ],
+      "afterCompletion": [
+        "hit"
+      ],
+      "current": "idle"
+    },
+    {
+      "facing": "E",
+      "beforeHit": [],
+      "atHit": [
+        "hit"
+      ],
+      "afterCompletion": [
+        "hit"
+      ],
+      "current": "idle"
+    },
+    {
+      "facing": "S",
+      "beforeHit": [],
+      "atHit": [
+        "hit"
+      ],
+      "afterCompletion": [
+        "hit"
+      ],
+      "current": "idle"
+    },
+    {
+      "facing": "N",
+      "beforeHit": [],
+      "atHit": [
+        "hit"
+      ],
+      "afterCompletion": [
+        "hit"
+      ],
+      "current": "idle"
+    }
+  ]
+}

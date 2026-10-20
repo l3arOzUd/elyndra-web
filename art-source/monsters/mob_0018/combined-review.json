@@ -33,15 +33,15 @@
     "Correct rigid segment and carving continuity.",
     "Refine foot support and weight transfer, add missing in-between poses.",
     "Refine rear punch projection and shoulder drive.",
-    "Check exported sheets with actual SpriteAnimator events and death hold; export format checks alone do not verify gameplay.",
-    "Right and diagonal original animation art remains missing; preview mirroring is provisional."
+    "Right and diagonal original animation art remains missing; preview mirroring is provisional.",
+    "Repeat engine review after further art changes; current behavior checks do not approve artwork."
   ],
   "publicBinding": false,
   "runtimeExport": {
     "directory": "runtime-draft",
     "timingCells": 140,
     "formatAndEdgeChecks": "passed",
-    "actualEngineCheck": "pending",
+    "actualEngineCheck": "engine-review.json: four facings, hit boundary 375ms, single event through recovery, death holds at 2000ms",
     "publicBinding": false
   }
 }
