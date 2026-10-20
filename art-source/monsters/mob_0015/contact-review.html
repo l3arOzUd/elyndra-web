@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><title>Root Sentinel contact review</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;display:block;margin:16px 0}</style>
+<h1>Root Sentinel — opposite contact review</h1>
+<p>Contact A / guided contact B / revised arm swing. Pose study only; not a complete walk cycle or gameplay binding.</p>
+<canvas id="contact" width="1500" height="560"></canvas>
+<script type="module">
+const sources=['walk-left.png','walk-left-contact-b-guided.png','walk-left-contact-b-v2.png'];
+const images=await Promise.all(sources.map(async src=>{const im=new Image();im.src=src;await im.decode();return im;}));
+const c=document.querySelector('canvas'),g=c.getContext('2d');
+images.forEach((im,i)=>{
+  const s=i===0?.95:490/im.height;
+  if(i===0)g.drawImage(im,0,0,512,512,250-270*s,520-503*s,512*s,512*s);
+  else g.drawImage(im,i*500+250-im.width*s/2,520-1220/1254*im.height*s,im.width*s,im.height*s);
+  g.strokeStyle='#adc3bb';g.beginPath();g.moveTo(i*500,520);g.lineTo(i*500+500,520);g.stroke();
+});
+window.__rootSentinelContact={ready:true};
+</script>

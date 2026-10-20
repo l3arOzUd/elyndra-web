@@ -20,5 +20,23 @@
     "preview": "walk-review.html exposes the rejected sheet separately for direct comparison without replacing the original.",
     "additionalIssue": "The isolated image places the rear foot close to the right edge and changes stone/root details."
   },
-  "next": "Use a clear skeletal pose guide for opposite contact; image-to-image prompts preserve the incorrect limb arrangement. Then author weight transfer and passing poses from the corrected contact."
+  "guidedContact": {
+    "poseGuide": "opposite-contact-guide.svg",
+    "selectedStudy": "walk-left-contact-b-v2.png",
+    "comparison": "contact-review.html",
+    "verified": [
+      "Near cream knee now extends screen-right behind pelvis; far leg reaches screen-left.",
+      "Revised near fist swings forward while near leg trails; far fist is behind the body.",
+      "Both feet remain complete; browser composite shows transparent exterior."
+    ],
+    "limitations": [
+      "New contact is more upright with longer-looking legs and smaller torso than original contact A.",
+      "Rear foot points outward instead of a clear toe-off side profile.",
+      "Near arm bends too high across chest for a subtle heavy walk.",
+      "Root routes and plate details drift; hood has a narrow top margin.",
+      "Weight-transfer and passing poses for this lead leg are still missing."
+    ],
+    "runtimeSelected": false
+  },
+  "next": "Author consistent contact A, weight transfer and passing poses matching the guided B proportions. Refine trailing toe support and lower near fist before exporting the cycle."
 }
