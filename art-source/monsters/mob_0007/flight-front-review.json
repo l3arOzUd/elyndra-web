@@ -1,0 +1,20 @@
+{
+  "status": "authored-flight-draft-review-pending",
+  "source": "flight-front.png",
+  "confirmed": [
+    "Six distinct wing poses include raised, spread and lowered wings.",
+    "Sandy wing palette, brass eyespots and cream body retained.",
+    "Preview uses fixed scale and thorax registration."
+  ],
+  "limitations": [
+    "Requested equal grid ignored; custom crops required.",
+    "Six-leg attachments remain unclear in overlapping furry limbs.",
+    "Wing markings and body fur drift between frames.",
+    "Lower wing roots and foreshortening need anatomical review.",
+    "Flight loop needs intermediate poses and timing refinement.",
+    "Other views and attack, hit and death animation remain missing.",
+    "Not bound to gameplay.",
+    "Contact-sheet frame 6 shows a small neighboring-wing fragment near its left edge; isolate that source pose before runtime export."
+  ],
+  "browserReview": "flight-review.html loaded and contact sheet inspected; draft not approved for export."
+}
