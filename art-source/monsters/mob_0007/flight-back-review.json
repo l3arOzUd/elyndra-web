@@ -1,0 +1,24 @@
+{
+  "status": "authored-flight-draft-refinement-pending",
+  "source": "flight-back.png",
+  "previewPoseOrder": [
+    0,
+    1,
+    2,
+    1,
+    3,
+    5
+  ],
+  "verified": [
+    "Rear anatomy omits facial eyes and ventral legs.",
+    "Contact sheet inspected in browser; transparent background rendered cleanly.",
+    "Custom column bounds preserve full wing tips."
+  ],
+  "limitations": [
+    "Generated pose4 was already downstroke; preview substitutes pose2 for descending upper half.",
+    "Wing amplitude in pose2 too close to spread pose.",
+    "Wing pattern, abdomen segment count and antenna shapes drift.",
+    "Wingbeat phase does not yet precisely match front and side.",
+    "Rear actions still missing; no runtime binding."
+  ]
+}
