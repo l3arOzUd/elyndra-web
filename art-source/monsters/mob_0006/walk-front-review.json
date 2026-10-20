@@ -1,0 +1,18 @@
+{
+  "status": "draft-motion-created-refinement-pending",
+  "source": "walk-front-v2.png",
+  "rejectedSource": "walk-front.png: frame6 lifted screen-right forehoof instead of left.",
+  "preview": "walk-review.html: walk-front",
+  "registration": "Source row gutter at y517, measured snout center and foot baseline, constant scale. No per-frame stretching.",
+  "verified": [
+    "Version2 lifts screen-left forehoof in frame6 with right forehoof planted.",
+    "Both moss tusks and four hoof silhouettes remain present.",
+    "Transparent row gutter is y514-519; fixed512px extraction would clip feet and contaminate bottom row."
+  ],
+  "limitations": [
+    "Face, tusks and bark patterns change slightly across frames.",
+    "Foreleg segment lengths and rear-foot contact need motion review.",
+    "Top thorns have very little margin.",
+    "Only front walking exists; other front actions and rear animation remain missing."
+  ]
+}

@@ -9,15 +9,24 @@
 <canvas id="contact" width="1200" height="680"></canvas>
 <script type="module">
 const image=new Image();image.src='./walk-left-v3.png';await image.decode();
+const frontWalk=new Image();frontWalk.src='./walk-front-v2.png';await frontWalk.decode();
+document.querySelector('#clip').add(new Option('walk-front','walk-front'));
 const actions=new Image();actions.src='./actions-left.png';await actions.decode();
 const blink=new Image();blink.src='./idle-blink.png';await blink.decode();
 const sequences={idle:[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
+sequences['walk-front']=[0,1,2,3,4,5];
 let clip='walk';
 const bottoms=[475,475,475,442,442,444];
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 function draw(ctx,i,x,y,scale){
  const pose=sequences[clip][i];
+ if(clip==='walk-front'){
+  const sy=i<3?0:517,h=i<3?517:507;
+  const bottom=[514,514,514,496,494,494][i],anchor=[280,262,236,280,264,235][i],s=scale*.82;
+  ctx.drawImage(frontWalk,i%3*512,sy,512,h,x-anchor*s,y-bottom*s,512*s,h*s);
+  return;
+ }
  if(clip==='idle'){
   ctx.drawImage(pose?blink:actions,0,0,532,512,x-256*scale,y-495*scale,532*scale,512*scale);
   return;
@@ -45,7 +54,7 @@ document.querySelector('#replay').onclick=()=>{frame=0;paused=false;last=perform
 document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelector('#pause').textContent=paused?'Play':'Pause';};
 document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;document.querySelector('#pause').textContent='Play';};
 function tick(now){
- if(!paused&&now-last>(clip==='idle'?125:150)){frame=clip==='walk'||clip==='idle'?(frame+1)%sequences[clip].length:Math.min(5,frame+1);last=now;}
+ if(!paused&&now-last>(clip==='idle'?125:150)){frame=clip.startsWith('walk')||clip==='idle'?(frame+1)%sequences[clip].length:Math.min(5,frame+1);last=now;}
  g.clearRect(0,0,600,420);g.strokeStyle='#888';g.beginPath();g.moveTo(0,390);g.lineTo(600,390);g.stroke();
  draw(g,frame,300,390,.9);
  document.querySelector('#frame').value=String(frame);document.querySelector('#label').textContent=String(frame+1);

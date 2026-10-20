@@ -1,0 +1,4 @@
+{
+  "prompt": "Edit ONLY BOTTOM RIGHT cell(frame6) of this6frame frontal boarwalk sheet. Frame6 currently lifts SCREEN RIGHT forehoof, WRONG. Change frame6 to SCREEN LEFT forehoof lifted forward toward camera, knee bent, hoof underside slightly visible, and SCREEN RIGHT forehoof fully planted supportingweight. Exactly like bottom-middle frame5 phase but screen-left hoof slightly farther forward. Preserve all other5cells EXACTLY. Preserve head two tusks moss thorns chest and fourlegs, same bodyposition scale and colors. Do NOT mirror whole boar. True transparent alpha, no background shadowtext. Keep1536x1024 3x2cells.",
+  "reference": "walk-front.png"
+}
