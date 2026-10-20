@@ -1,0 +1,21 @@
+{
+  "id": "mob_0069",
+  "name": "Drowned Signalmind",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from frontal boss master, opaque rear shell and opposite profile.",
+  "confirmed": [
+    "Brass/coral head, single large cracked cyan frontal lens and cable tentacles retained.",
+    "Rear central eye replaced by opaque maintenance hatch.",
+    "Seven crown dishes distinguishable in front/rear; profiles show overlapping dishes.",
+    "Four files pass alpha, nonempty and edge checks."
+  ],
+  "limitations": [
+    "Brief requests six cable tentacles but only five tips clearly distinguishable in front and generated views; sixth root/tip unverified or omitted.",
+    "Side images remain oblique with excessively broad lens/hatch faces.",
+    "Tentacle spread remains front-like in profiles instead of rotating in depth.",
+    "Rear outermost dishes still expose concave fronts while central five show rear shells; orientation inconsistent.",
+    "Coral/barnacle clusters, lens cracks, cable collars and small ports drift between views.",
+    "Front crown nearly touches top edge; no separated parts or runtime animation yet."
+  ],
+  "next": "Correct master to six explicit numbered cable roots/tips, fix crown axes and profile projection, lock coral/lens landmarks; separate shell, dishes and six cable chains for hover/travel/sonar strike/hit/power-down with bubble and spark VFX."
+}
