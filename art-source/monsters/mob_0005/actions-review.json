@@ -2,6 +2,7 @@
   "id": "mob_0005",
   "status": "draft-actions-created-refinement-pending",
   "source": "actions-left.png",
+  "attackSources": ["left.png", "attack-windup.png", "attack-contact.png"],
   "deathSources": ["left.png", "death-buckle.png", "death-collapse.png", "death-final.png"],
   "preview": "walk-review.html",
   "verified": [
@@ -11,14 +12,16 @@
     "Refined sheet keeps all six alpha bounds within their assigned cells.",
     "Death preview now uses separately authored collapse/final images from the original side master at a constant 0.4 scale. Domed armor and curled tail are preserved more closely than the rejected sheet death.",
     "Browser review of replacement death reports no page errors and holds timeline frame 5.",
-    "Added a separate early buckle pose with half-closed eye and slight leg bend. Preview sequence is now [0,1,2,2,3,3], four unique drawings at constant scale."
+    "Added a separate early buckle pose with half-closed eye and slight leg bend. Preview sequence is now [0,1,2,2,3,3], four unique drawings at constant scale.",
+    "Attack now uses original-master-based windup and closed-jaw contact paintings at constant scale; browser contact sheet confirms open-to-closed jaw and return to neutral with no page errors.",
+    "Contact nose is close to source boundary but left-edge alpha max is 2; visible alpha over 32 begins at x=6."
   ],
   "limitations": [
     "Early buckle reduces the standing-to-collapse jump, but armor plates and foot contacts still drift slightly; final timing needs runtime-scale review.",
-    "Attack anticipation width differs from impact and jaw remains open at impact; needs a clear authored jaw-closing contact frame.",
+    "Attack body/head proportions and foot placements still drift slightly. Windup does not clearly shift weight backward; stronger anticipation and foot anchoring remain needed.",
     "Small brass belly gear remains absent; plate/crystal continuity and four-leg identity require refinement.",
-    "Walk/attack sheet style is sharper and smaller-plated than the original side-master death set; reconcile style before runtime export.",
+    "Walk and hit still use old sheets with sharper, smaller plates than the replacement attack/death; reconcile style before runtime export.",
     "Only left-facing drafts; no runtime binding or complete directional animation coverage."
   ],
-  "next": "Reconcile body style across clips, add jaw contact and missing gear detail, repair walk support order, then export and inspect runtime clips before replacing placeholder."
+  "next": "Reconcile walk/hit style, add missing gear detail, repair walk support order and attack weight transfer, then export and inspect runtime clips before replacing placeholder."
 }
