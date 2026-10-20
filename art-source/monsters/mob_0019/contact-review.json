@@ -48,6 +48,17 @@
         "Heel lift subtle; weight transfer still needs moving-cycle review.",
         "Contact B remains older proportion set and needs matching."
       ]
+    },
+    {
+      "source": "walk-front-contact-b-v2.png",
+      "result": "Rejected: preserves A leading leg instead of switching to B.",
+      "selection": "Not selected."
+    },
+    {
+      "source": "walk-front-contact-b-v3.png",
+      "result": "Correct B leading leg retained from original, but trailing toe remains near y1080 instead of target y1140.",
+      "selection": "Comparison only; no demonstrated contact improvement.",
+      "next": "Use B-specific pose guide rather than repeated unassisted text edits."
     }
   ]
 }
