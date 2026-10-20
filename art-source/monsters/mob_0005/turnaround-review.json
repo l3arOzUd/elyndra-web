@@ -4,14 +4,15 @@
   "confirmed": [
     "Slate armored squat lizard, quartz spine and single stout tail retained",
     "Front tail tip clarified by reframing",
-    "Small belly gear visible front and character-left side only, not duplicated on opposite flank or rear",
+    "Small belly gear visible in front; the earlier claim that it was visible in the left master was incorrect",
     "Rear has no face; lateral views show one amber eye",
     "Four-view PNG alpha and framing diagnostics pass"
   ],
   "limitations": [
     "Rear view shows unequal hind-foot exposure and slight oblique presentation; refine camera/stance before animation",
     "Side images are smaller in body height because full tail occupies frame width; normalize using body landmarks, not whole alpha bounds",
-    "Individual stone plates and quartz counts vary by view; exact marking continuity not approved"
+    "Individual stone plates and quartz counts vary by view; exact marking continuity not approved",
+    "Left master and left animation lack the visible brass belly gear; resolve its side visibility against front design"
   ],
   "next": "Refine rear stance, register body scale and separate four leg chains plus tail for animation after roster references."
 }

@@ -8,13 +8,14 @@ button,input{margin:12px;padding:8px}p{max-width:900px}
 </style>
 <h1>Craglet — motion drafts</h1>
 <p>Animation review only. Not bound to the game. Constant scale, per-frame ground registration, no limb deformation. Check foot contact, four-leg continuity, body drift and the last-to-first transition.</p>
-<label>Clip <select id="clip"><option>walk</option><option>idle</option><option>attack</option><option>hit</option><option>death</option></select></label>
+<label>Clip <select id="clip"><option>walk</option><option>walk-front</option><option>idle</option><option>attack</option><option>hit</option><option>death</option></select></label>
 <button id="pause">Pause</button><button id="replay">Replay</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label><span id="label"></span>
 <button id="background">Light / dark</button><br>
 <canvas id="motion" width="600" height="400"></canvas>
 <canvas id="contact" width="1200" height="640"></canvas>
 <script type="module">
 const image=new Image();image.src='./walk-left.png';await image.decode();
+const frontWalk=new Image();frontWalk.src='./walk-front.png';await frontWalk.decode();
 const walkImages=await Promise.all([1,2,3,4,5,6].map(async n=>{const img=new Image();img.src=`./walk-0${n}${n>=3&&n<=5?'-color':''}.png`;await img.decode();return img;}));
 const walkBoxes=[[34,338,1204,632],[33,337,1208,663],[33,336,1213,670],[34,336,1211,667],[34,332,1211,678],[33,336,1211,633]];
 const actions=new Image();actions.src='./actions-left.png';await actions.decode();
@@ -27,10 +28,16 @@ const blinkImage=new Image();blinkImage.src='./idle-blink.png';await blinkImage.
 const boxes=[[15,178,491,272],[521,174,485,283],[1027,177,499,280],[10,614,497,278],[525,612,485,279],[1026,620,504,276]];
 const actionBoxes=[[26,181,481,279],[546,181,441,283],[1026,181,492,281],[28,628,448,282],[523,698,488,216],[1060,746,462,173]];
 const sequences={idle:[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,1,2,2,3,3]};
+sequences['walk-front']=[0,1,2,3,4,5];
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 let paused=false,frame=0,last=0,light=true,clip='walk';
 function draw(ctx,i,cx,baseline,scale){
+ if(clip==='walk-front'){
+  const size=512*scale*.7;
+  ctx.drawImage(frontWalk,(i%3)*512,Math.floor(i/3)*512,512,512,cx-size/2,baseline-size,size,size);
+  return;
+ }
  if(clip==='idle'){
   const b=deathBoxes[0],s=scale*.4;
   ctx.drawImage(i?blinkImage:deathImages[0],...b,cx-b[2]*s/2,baseline-b[3]*s,b[2]*s,b[3]*s);
@@ -74,7 +81,7 @@ document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelec
 document.querySelector('#frame').oninput=e=>{paused=true;frame=Number(e.target.value);document.querySelector('#pause').textContent='Play';};
 document.querySelector('#background').onclick=()=>{light=!light;for(const c of [motion,contact])c.style.background=light?'#e6e6e6':'#263037';};
 function tick(now){
- if(!paused&&now-last>=(clip==='idle'?125:150)){frame=clip==='walk'||clip==='idle'?(frame+1)%sequences[clip].length:Math.min(sequences[clip].length-1,frame+1);last=now;}
+ if(!paused&&now-last>=(clip==='idle'?125:150)){frame=clip.startsWith('walk')||clip==='idle'?(frame+1)%sequences[clip].length:Math.min(sequences[clip].length-1,frame+1);last=now;}
  g.clearRect(0,0,600,400);
  g.strokeStyle='#777';g.beginPath();g.moveTo(0,345);g.lineTo(600,345);g.stroke();
  draw(g,sequences[clip][frame],300,345,1);

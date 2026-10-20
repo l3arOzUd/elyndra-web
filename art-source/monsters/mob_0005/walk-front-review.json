@@ -1,0 +1,18 @@
+{
+  "status": "draft-motion-created-refinement-pending",
+  "source": "walk-front.png",
+  "layout": {"columns": 3, "rows": 2, "cell": [512, 512]},
+  "preview": "walk-review.html, select walk-front",
+  "verified": [
+    "Browser contact sheet confirms transparent exterior on light background.",
+    "Frames2-3 lift screen-right forepaw; frames5-6 lift screen-left forepaw.",
+    "Brass belly gear remains visible in all six frames.",
+    "Frame6 wrong-side lift in the original draft was corrected with an image edit."
+  ],
+  "limitations": [
+    "Rear-foot support phase and leg proportions still need motion review.",
+    "Top and bottom rows have different body registration and slight scale drift.",
+    "Stone plates and quartz details change slightly between frames.",
+    "No front idle, attack, hit or death clips yet; not bound to gameplay."
+  ]
+}

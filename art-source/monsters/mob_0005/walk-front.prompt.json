@@ -1,0 +1,4 @@
+{
+  "prompt": "Edit this six-frame sprite sheet. Preserve first five cells exactly. Correct ONLY bottom-right cell (frame6): LEFT side of image forepaw must be lifted and swinging forward, elbow bent, claws off floor; RIGHT side of image forepaw must be PLANTED supporting weight, long forearm reaching ground, like bottom-middle frame5 but left paw more forward. Currently bottom-right lifts wrong forepaw. Keep exact same head, armor, quartz, tiny gold belly gear, tail curls right, same four legs and overall scale. No added limbs. Keep 3x2 equal 512px cell layout on1536x1024, full bodies fully within cells with clear margins. Remove ALL background to fully transparent true alpha, no brown, no ground or shadows. Preserve detailed hand-painted creature colors. No text or grid.",
+  "reference": "walk-front-draft.png"
+}
