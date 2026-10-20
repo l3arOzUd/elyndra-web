@@ -1,0 +1,16 @@
+{
+  "status": "draft-refinement-pending",
+  "source": "actions-front.png",
+  "verified": [
+    "Front death closes eyes and rests chin with folded feet; browser inspected.",
+    "Attack windup and mouth opening differ from neutral pose."
+  ],
+  "limitations": [
+    "Attack contact invents small teeth absent in reference and side attack; correct before acceptance.",
+    "Contact pose tilts head and changes dorsal-fin direction.",
+    "Final death tilts slightly rather than exact frontal symmetry.",
+    "Scale, belly volume and foot attachment continuity need refinement.",
+    "Custom crops need full edge review before export.",
+    "Rear actions, idle and runtime export still missing."
+  ]
+}
