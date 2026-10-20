@@ -187,11 +187,12 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
       const kneeSupport=92-72*Math.cos(thigh);
       const contact=ease(Math.max(0,Math.min(1,(k-.25)/.3)));
       p.dy=lerp(soleSupport,kneeSupport,contact);
-      p.dx=side?35*slump:0;
-      // Fold over the planted knees. A large screen-plane rotation in
-      // front/back reads as a sideways seated lean rather than a collapse.
-      p.angle.torso=(side?-92:12*out)*slump;
-      p.angle.head=(side?-22:18*out)*slump;
+      p.dx=side?35*slump:-35*out*slump;
+      // Once the knees support the body, fold the upper body all the way
+      // down. A small frontal tilt leaves a visibly seated, upright corpse.
+      // Rotate the spine only; the planted legs never tip with the torso.
+      p.angle.torso=(side?-92:78*out)*slump;
+      p.angle.head=(side?-22:12*out)*slump;
       p.angle.arm_near=(side?58:-12*out)*slump;
       p.angle.arm_far=(side?50:10*out)*slump;
       p.hurt=.35*(1-Math.min(1,k*3));
@@ -236,6 +237,15 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
   };
   if(anim==="death") {
     const settle=ease(Math.max(0,Math.min(1,(k-.2)/(motion==="melee"?.5:.7))));
+    // Lower the shoulders and fold the elbows as the hands meet the floor.
+    // Fully straight hanging arms would penetrate the floor after the fall.
+    const fall=ease(Math.max(0,Math.min(1,(k-.3)/.6)));
+    p.angle.arm_far=-(p.angle.torso??0)*.55;
+    p.angle.forearm_far=(side?10:90*sign)*fall;
+    if(motion==="unarmed") {
+      p.angle.arm_near=-(p.angle.torso??0)*.6;
+      p.angle.forearm_near=(side?15:85*sign)*fall;
+    }
     if(motion!=="unarmed") {
       const start=rest("near");
       // Counter the folded torso so the hand hangs below the shoulder,
