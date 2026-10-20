@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#edf0ed"/>
+  <path d="M80 920H940" stroke="#778080" stroke-width="4"/>
+  <!-- Far limbs first, then body, then near limbs. Left-facing contact B. -->
+  <g fill="none" stroke="#50628b" stroke-width="60" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M510 600L345 745L240 895L160 902"/>
+    <path d="M505 340L650 450L720 590"/>
+  </g>
+  <path d="M470 270L590 315L600 535L520 615L430 560L405 375Z" fill="#b7b9b1" stroke="#525e57" stroke-width="8"/>
+  <path d="M480 130L370 155L325 225L410 270L500 250L540 195Z" fill="#9daca0" stroke="#525e57" stroke-width="8"/>
+  <path d="M335 213L377 210" stroke="#168f78" stroke-width="16"/>
+  <g fill="none" stroke="#c58732" stroke-width="66" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M530 610L685 750L800 875L820 916"/>
+    <path d="M485 340L350 435L230 520"/>
+  </g>
+  <g fill="#f5d8a5" stroke="#805c28" stroke-width="5">
+    <circle cx="530" cy="610" r="24"/><circle cx="685" cy="750" r="24"/>
+    <circle cx="800" cy="875" r="24"/><circle cx="485" cy="340" r="24"/>
+    <circle cx="350" cy="435" r="24"/>
+  </g>
+  <g font-family="sans-serif" font-size="24" fill="#24332d">
+    <text x="50" y="55">LEFT FACING / OPPOSITE CONTACT</text>
+    <text x="50" y="975">BLUE: far leg forward, heel down. GOLD: near leg back, toe down.</text>
+    <text x="685" y="705">Near knee</text>
+    <text x="160" y="720">Far knee</text>
+  </g>
+</svg>

@@ -13,5 +13,12 @@
     "Minor tiny fragments near row split need crop refinement.",
     "Not exported or bound to gameplay."
   ],
-  "next": "Replace poses4-6 with actual opposite contact, weight transfer and passing leg positions."
+  "correctionReview": {
+    "rejectedSheet": "walk-left-v2.png",
+    "rejectedIsolatedPose": "walk-left-opposite-contact.png",
+    "result": "Neither correction reverses the lead leg: the bright near knee still reaches screen-left and the darker far leg remains behind. Do not use either as opposite contact.",
+    "preview": "walk-review.html exposes the rejected sheet separately for direct comparison without replacing the original.",
+    "additionalIssue": "The isolated image places the rear foot close to the right edge and changes stone/root details."
+  },
+  "next": "Use a clear skeletal pose guide for opposite contact; image-to-image prompts preserve the incorrect limb arrangement. Then author weight transfer and passing poses from the corrected contact."
 }

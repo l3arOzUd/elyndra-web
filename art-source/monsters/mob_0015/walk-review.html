@@ -3,12 +3,15 @@
 <h1>Root Sentinel — left walking draft</h1>
 <p>Six authored poses. Opposite stride, weight transfer and stone segment continuity need correction. Not bound to gameplay.</p>
 <button id="pause">Pause / play</button><input id="frame" type="range" min="0" max="5" value="0">
+<label>Study <select id="study"><option value="original">Original gait</option><option value="v2">Rejected correction — same lead leg</option></select></label>
 <canvas id="motion" width="600" height="560"></canvas><canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
 const im=new Image();im.src='./walk-left.png';await im.decode();
-function draw(ctx,f,x,y,s){const ax=[270,255,250,270,275,275][f],bottom=[503,503,503,486,488,486][f];ctx.drawImage(im,f%3*512,Math.floor(f/3)*512,512,512,x-ax*s,y-bottom*s,512*s,512*s);}
+const v2=new Image();v2.src='./walk-left-v2.png';await v2.decode();
+function draw(ctx,f,x,y,s){const source=document.querySelector('#study').value==='v2'?v2:im;const ax=[270,255,250,270,275,275][f],bottom=[503,503,503,486,488,486][f];ctx.drawImage(source,f%3*512,Math.floor(f/3)*512,512,512,x-ax*s,y-bottom*s,512*s,512*s);}
 const ctx=document.querySelector('#motion').getContext('2d'),cg=document.querySelector('#contact').getContext('2d');
-for(let f=0;f<6;f++){draw(cg,f,f%3*400+200,Math.floor(f/3)*400+380,.7);cg.strokeStyle='#a9bcae';cg.beginPath();cg.moveTo(f%3*400,Math.floor(f/3)*400+380);cg.lineTo(f%3*400+400,Math.floor(f/3)*400+380);cg.stroke();}
+function contact(){cg.clearRect(0,0,1200,800);for(let f=0;f<6;f++){draw(cg,f,f%3*400+200,Math.floor(f/3)*400+380,.7);cg.strokeStyle='#a9bcae';cg.beginPath();cg.moveTo(f%3*400,Math.floor(f/3)*400+380);cg.lineTo(f%3*400+400,Math.floor(f/3)*400+380);cg.stroke();}}
+contact();document.querySelector('#study').onchange=contact;
 let frame=0,paused=false,last=0;document.querySelector('#pause').onclick=()=>paused=!paused;document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;};
 function tick(t){if(!paused&&t-last>180){frame=(frame+1)%6;last=t;}ctx.clearRect(0,0,600,560);draw(ctx,frame,300,520,.95);document.querySelector('#frame').value=frame;requestAnimationFrame(tick);}
 window.__rootSentinelWalk={ready:true};requestAnimationFrame(tick);

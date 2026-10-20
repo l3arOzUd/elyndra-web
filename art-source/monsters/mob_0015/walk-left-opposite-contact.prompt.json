@@ -1,0 +1,7 @@
+{
+  "reference": "walk-left-v2.png",
+  "intent": "One isolated left-facing opposite contact: near leg reaches screen-right behind the pelvis, far leg reaches screen-left; near fist forward and far fist back. Preserve stone lengths, brass hinges and bark hood; exactly two arms and two legs; transparent background.",
+  "review": "Rejected: generated near leg still reaches screen-left. Not selected for animation.",
+  "generator": "Built-in imagegen",
+  "transparentBackground": true
+}
