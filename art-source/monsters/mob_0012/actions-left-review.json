@@ -1,0 +1,19 @@
+{
+  "status": "action-draft-refinement-pending",
+  "selectedPoses": {
+    "0-1": "actions-left-v2.png",
+    "2-5": "actions-left.png"
+  },
+  "verified": [
+    "V2 neutral and windup remove fourth dangling leg.",
+    "Browser death sequence shows knee buckle then low grounded twig body with folded legs.",
+    "Preview offers attack, hit, death sequences and holds terminal frame."
+  ],
+  "limitations": [
+    "Sequences reuse six key poses; need intermediate action drawings.",
+    "Windup edit changes near-leg cuff and knee detail.",
+    "Final death folded chains overlap; all three attachments not fully visible.",
+    "Body registration and rigid leg lengths need refinement across walk/action clips.",
+    "Front/rear actions and walks still missing; not bound to gameplay."
+  ]
+}

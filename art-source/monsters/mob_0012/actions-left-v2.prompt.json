@@ -1,0 +1,4 @@
+{
+  "prompt": "Correct ONLY top-left and top-middle poses of this exact 1536x1024 sixpose sheet. They incorrectly have FOUR legs. Remove the small vertical dangling fourth wooden leg directly under center of twig trunk (top-left around x270 y400-485; top-middle around x790 y420-480). Leave actual THREE complete legs: TWO slanting down-left front legs and ONE down-right rear leg. Restore transparent empty space where removed limb was, and finish bottom of twig trunk naturally. Do not remove either left slanting leg or right leg. Preserve every other pose and entire layout, colors, dimensions, body and leaf shapes. Exactly three legs, no extra stumps. Real transparent alpha background without halos.",
+  "reference": "actions-left.png"
+}
