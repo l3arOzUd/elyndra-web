@@ -31,6 +31,13 @@
         "Upper-body shading changes.",
         "Grounded double support still unresolved."
       ]
+    },
+    {
+      "source": "walk-front-contact-a-v3.png",
+      "guide": "contact-a-guide.png",
+      "result": "Trailing foot moves outward and lower, ankle/heel angle now visible. Toe still above requested y1135 and boot rotates too far outward.",
+      "selection": "Comparison candidate only, original contact remains default.",
+      "next": "Reduce outward boot rotation while retaining heel/toe articulation; validate both contacts in motion."
     }
   ]
 }
