@@ -17,5 +17,6 @@
     "Top/bottom margins tighter than requested.",
     "No runtime export or public binding."
   ],
-  "next": "Use isolated rear contact poses with explicit foot landmarks to correct support groups."
+  "next": "Use isolated rear contact pair in back-contact-review.html as improved support basis; add passing poses.",
+  "newContactStudy": "back-contact-review.json"
 }

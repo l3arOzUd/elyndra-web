@@ -1,0 +1,21 @@
+{
+  "status": "rear-contact-pair-draft",
+  "sources": [
+    "walk-back-contact-a.png",
+    "walk-back-contact-b.png"
+  ],
+  "preview": "back-contact-review.html",
+  "verified": [
+    "Six distinct foot tips visible in A and B.",
+    "A folds right foreground and lowers right inner; B reverses these support roles.",
+    "Shell remains rear-facing; browser alpha clean and alternation runs without page errors."
+  ],
+  "limitations": [
+    "Two contacts only; passing poses absent.",
+    "Outer-leg contact plane still ambiguous due elevated camera.",
+    "B leftmost claw extremely close to source boundary; requires padding/art check before export.",
+    "Segment proportions, shell reflections and core texture drift.",
+    "Not runtime exported or gameplay bound."
+  ],
+  "next": "Create intermediate passing poses retaining support, improve margins and register rear gait."
+}
