@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "front-neutral-v2.png",
+  "prompt": "Precise localized animation edit. Keep this exact full robot at the exact same scale, foot positions, torso outline, gauge-eye positions and top-valve height within the square transparent canvas. Change ONLY its right arm on IMAGE LEFT to a forward thrust attack. Raise the upper arm slightly forward, foreshorten the piston forearm toward viewer, and present the CLOSED TWO-JAW METAL Pincer toward viewer beside the left edge of chest. The existing hand is a mechanical clamp with TWO broad curved opposing jaws around an opening. Preserve those TWO jaws and their hinge pins. NO human fist, NO four square knuckles, NO extra fingers. Jaws nearly meet but a thin dark slit remains between them; show the rounded clamp cuff behind, and short parallel piston rods leading to unchanged shoulder socket. Leave BOTH eyes visible. Keep other arm, both legs, tank, all rivets and weathering unchanged. Full-body front view, real transparent alpha, no steam, shadow, text, floor or effects. Do not zoom in or enlarge the whole robot. Preserve original 10 percent top/bottom margins."
+}

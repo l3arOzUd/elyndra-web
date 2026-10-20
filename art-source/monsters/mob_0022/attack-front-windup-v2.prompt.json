@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "attack-front-impact-v2.png",
+  "prompt": "Localized animation edit: convert this exact robot punch pose to its WINDUP key. Change ONLY the image-left attacking arm: bend elbow to retract its closed two-jaw pincer close beside the left side of lower chest, forearm angled upward, piston compressed, ready to thrust forward. Preserve exactly TWO curved clamp jaws with central slit, no fingers/knuckles. Keep shoulder attachment fixed. Preserve ALL other features pixel-aligned: both feet and legs, barrel outline, gauge eyes, top valves, tank, other dangling arm, salt patterns, overall scale, canvas and margins. Whole front-view robot, same copper/verdigris/brass painted art, real transparent alpha, no shadow, steam, floor or text. No zoom, no body resizing."
+}

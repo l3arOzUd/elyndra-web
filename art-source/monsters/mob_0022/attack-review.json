@@ -3,8 +3,8 @@
   "status": "front-punch-study",
   "sources": [
     "front-neutral-v2.png",
-    "attack-front-windup.png",
-    "attack-front-impact.png"
+    "attack-front-windup-v2.png",
+    "attack-front-impact-v2.png"
   ],
   "sequence": [
     0,
@@ -25,10 +25,11 @@
     "browserTransparency": "clean"
   },
   "remaining": [
-    "Neutral and action body scale differ; fixed-image preview exposes this.",
-    "Clamp becomes four block knuckles in impact; original pincer construction not preserved.",
-    "Piston thrust direction reads forward but articulation needs refinement.",
-    "Recovery currently reuses windup; no unique recoil drawing."
+    "Body proportions now match more closely, but exact landmark registration and surface continuity remain unapproved.",
+    "Two curved clamp jaws restored; hinge and wrist construction still varies.",
+    "Forward thrust has limited reach; heavy mechanical recoil not yet drawn.",
+    "Recovery reuses windup."
   ],
-  "next": "Repair clamp construction and match body/foot landmarks to canonical neutral before runtime export."
+  "next": "Add a distinct recoil drawing, check planted feet and machine joint continuity.",
+  "revision": "v2 generated from canonical neutral; old four-knuckle variants retained but unselected."
 }
