@@ -1,0 +1,5 @@
+{
+  "prompt": "Minimal edit of this sprite sheet. ONLY change the two eyes of the creature in TOP LEFT cell to gently CLOSED EYELIDS for a natural blink. Same relaxed neutral expression, mouth unchanged, no angry squint. Preserve EVERY other pixel as closely as possible: head outline, torso, legs, tail, brass gear, all plates/crystals, scale, position, framing and lighting. Do not alter the other five cells. Keep1536x1024 3x2sheet, true transparent alpha, no new background no shadows no text. This is a single blink frame alternating with original top-left cell, so absolutely no pose or body motion.",
+  "reference": "actions-front-v2.png",
+  "selectedCell": 0
+}

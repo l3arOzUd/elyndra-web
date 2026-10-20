@@ -20,6 +20,8 @@ const backWalk=new Image();backWalk.src='./walk-back-v3.png';await backWalk.deco
 const backActions=new Image();backActions.src='./actions-back.png';await backActions.decode();
 for(const name of ['attack-back','hit-back','death-back'])document.querySelector('#clip').add(new Option(name,name));
 const frontActions=new Image();frontActions.src='./actions-front-v2.png';await frontActions.decode();
+const frontBlink=new Image();frontBlink.src='./idle-front-blink.png';await frontBlink.decode();
+document.querySelector('#clip').add(new Option('idle-front','idle-front'));
 const frontActionBottom=[471,468,477,430,424,420];
 const walkImages=await Promise.all([1,2,3,4,5,6].map(async n=>{const img=new Image();img.src=`./walk-0${n}${n>=3&&n<=5?'-color':''}.png`;await img.decode();return img;}));
 const walkBoxes=[[34,338,1204,632],[33,337,1208,663],[33,336,1213,670],[34,336,1211,667],[34,332,1211,678],[33,336,1211,633]];
@@ -33,6 +35,7 @@ const blinkImage=new Image();blinkImage.src='./idle-blink.png';await blinkImage.
 const boxes=[[15,178,491,272],[521,174,485,283],[1027,177,499,280],[10,614,497,278],[525,612,485,279],[1026,620,504,276]];
 const actionBoxes=[[26,181,481,279],[546,181,441,283],[1026,181,492,281],[28,628,448,282],[523,698,488,216],[1060,746,462,173]];
 const sequences={idle:[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,1,2,2,3,3]};
+sequences['idle-front']=[...sequences.idle];
 sequences['walk-front']=[0,1,2,3,4,5];
 sequences['walk-back']=[0,1,2,3,4,5];
 sequences['attack-front']=[0,1,1,2,2,0];
@@ -45,6 +48,11 @@ const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 let paused=false,frame=0,last=0,light=true,clip='walk';
 function draw(ctx,i,cx,baseline,scale){
+ if(clip==='idle-front'){
+  const s=scale*.7;
+  ctx.drawImage(i?frontBlink:frontActions,0,0,512,512,cx-256*s,baseline-frontActionBottom[0]*s,512*s,512*s);
+  return;
+ }
  if(clip.endsWith('-back')&&clip!=='walk-back'){
   const cuts=i<3?[0,528,1013,1536]:[0,519,1022,1536];
   const col=i%3,x=cuts[col],w=cuts[col+1]-x,s=scale*.7;
@@ -98,7 +106,7 @@ function contactSheet(){
 cg.clearRect(0,0,1200,640);
 for(let i=0;i<6;i++){
  const x=(i%3)*400,y=Math.floor(i/3)*320;
- const f=clip==='idle'?[0,4,8,11,12,15][i]:i;
+ const f=clip.startsWith('idle')?[0,4,8,11,12,15][i]:i;
  draw(cg,sequences[clip][f],x+200,y+280,.74);
  cg.fillStyle='#222';cg.fillText(`Frame ${f+1}`,x+12,y+20);
 }
@@ -110,7 +118,7 @@ document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelec
 document.querySelector('#frame').oninput=e=>{paused=true;frame=Number(e.target.value);document.querySelector('#pause').textContent='Play';};
 document.querySelector('#background').onclick=()=>{light=!light;for(const c of [motion,contact])c.style.background=light?'#e6e6e6':'#263037';};
 function tick(now){
- if(!paused&&now-last>=(clip==='idle'?125:150)){frame=clip.startsWith('walk')||clip==='idle'?(frame+1)%sequences[clip].length:Math.min(sequences[clip].length-1,frame+1);last=now;}
+ if(!paused&&now-last>=(clip.startsWith('idle')?125:150)){frame=clip.startsWith('walk')||clip.startsWith('idle')?(frame+1)%sequences[clip].length:Math.min(sequences[clip].length-1,frame+1);last=now;}
  g.clearRect(0,0,600,400);
  g.strokeStyle='#777';g.beginPath();g.moveTo(0,345);g.lineTo(600,345);g.stroke();
  draw(g,sequences[clip][frame],300,345,1);
@@ -138,8 +146,8 @@ function exportDraft(){
    clip=name;draw(ctx,sequences[name][f],192,346,.75);
    ctx.restore();
    ctx.save();ctx.translate(f*384,384);
-   clip=name==='idle'?'attack-front':`${name}-front`;
-   draw(ctx,name==='idle'?0:sequences[clip][f],192,346,.75);
+   clip=`${name}-front`;
+   draw(ctx,sequences[clip][f],192,346,.75);
    ctx.restore();
    for(const row of [2,3]){
     ctx.save();ctx.translate(f*384,row*384);

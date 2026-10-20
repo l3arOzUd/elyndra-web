@@ -1,0 +1,20 @@
+{
+  "status": "runtime-draft-refinement-pending",
+  "source": "idle-front-blink.png",
+  "selectedCell": 0,
+  "timing": {
+    "frames": 16,
+    "fps": 8,
+    "blinkFrame": 12
+  },
+  "verified": [
+    "Browser contact sheet shows eyes closed only at selected blink frame.",
+    "Same crop, scale and baseline used for neutral and blink.",
+    "Runtime export validates all rows without edge clipping."
+  ],
+  "limitations": [
+    "Minor painted plate and color changes remain in blink edit.",
+    "No authored breathing yet.",
+    "This is not approval of the complete monster."
+  ]
+}
