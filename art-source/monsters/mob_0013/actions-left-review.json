@@ -1,0 +1,17 @@
+{
+  "status": "action-draft-refinement-pending",
+  "source": "actions-left.png",
+  "verified": [
+    "Browser death sequence shows limp wings bent legs and low resting shell.",
+    "Needle points forward during attack and lies above ground in final death."
+  ],
+  "limitations": [
+    "Only key poses; descent and attack need intermediate drawings.",
+    "Shell size changes between action poses; registration requires refinement.",
+    "Four wing and six leg roots remain partially occluded.",
+    "Tight sheet gutters require asymmetric crops; attack clip needs further visual inspection.",
+    "Jade eye remains bright in death; needs powered-down appearance.",
+    "No runtime binding."
+  ],
+  "next": "Inspect attack crops and dim dead eye; author front/rear actions."
+}
