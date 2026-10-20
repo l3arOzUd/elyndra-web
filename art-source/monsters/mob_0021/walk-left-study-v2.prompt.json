@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "walk-left-study.png",
+  "prompt": "Correct missing near walking legs in ONLY TOP RIGHT and BOTTOM LEFT panels of this 2x2 LEFT-FACING crab walk sheet. Keep TOP LEFT and BOTTOM RIGHT unchanged. In top right and bottom left, there are currently only THREE large near-side walking chains; add ONE fourth near-side chain in each, positioned immediately behind the giant claw arm and ahead of current first near walking leg, attached to lower near flank. Match thick fixed-length upper/lower armored segments of the existing near legs, with distinct knee and separate pointed foot. Pose new leg lifted in top-right and planted in bottom-left, preserve support cycle. Final FOUR near legs per panel, four far legs behind body naturally occluded, two claws separate. Do not create extra detached feet or change existing three legs. Keep shell, coral, giant near claw, camera, scale and source layout unchanged. Transparent background with no brown matte or haze, no floor shadow labels text. All animals fully in their own cell."
+}

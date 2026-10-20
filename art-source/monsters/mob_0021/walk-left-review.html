@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8">
+<title>Coral Claw left-facing scuttle study</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;height:auto}button,input{margin:8px}a{color:#a9e2e3}</style>
+<h1>Coral Claw: left-facing scuttle study</h1>
+<p>Draft: four authored keys, not approved for gameplay. Check individual foot contacts, shell continuity and concealed leg roots.</p>
+<button id="toggle">Pause</button><input id="frame" type="range" min="0" max="3" step="1" value="0"><span id="label"></span><label><input id="tips" type="checkbox" checked>Show inspected near feet</label><br>
+<canvas id="preview" width="512" height="512"></canvas>
+<canvas id="small" width="128" height="128"></canvas>
+<p>Fixed uniform scale; no limb deformation or mirroring. Keys 2 and 3 expose only three clear near-side walking chains. Four are readable in keys 1 and 4. Far-side roots and fixed segment lengths remain unresolved; this is not yet a verified sideways support cycle.</p>
+<p><a href="anatomy-review.html">Neutral anatomy comparisons</a> · <a href="walk-left-study.png">Source sheet</a></p>
+<script type="module">
+const image=new Image();image.src='./walk-left-study.png';await image.decode();
+const canvas=document.querySelector('#preview'),g=canvas.getContext('2d'),small=document.querySelector('#small'),sg=small.getContext('2d');
+const slider=document.querySelector('#frame'),label=document.querySelector('#label'),button=document.querySelector('#toggle');
+const w=image.naturalWidth/2,h=image.naturalHeight/2;
+const tips=[[[174,486],[450,438],[529,500],[699,480]],[[257,459],[410,503],[672,468]],[[315,435],[405,501],[685,476]],[[190,498],[340,431],[520,496],[735,490]]];
+let playing=true,frame=0,last=0;
+function draw(f){
+  frame=f;g.clearRect(0,0,512,512);
+  // Fixed cell placement avoids masking leg-length changes with per-frame fitting.
+  const scale=460/w;
+  g.drawImage(image,(f%2)*w,Math.floor(f/2)*h,w,h,26,430-h*scale,w*scale,h*scale);
+  sg.clearRect(0,0,128,128);sg.drawImage(canvas,0,0,128,128);
+  slider.value=String(f);label.textContent=`Key ${f+1}/4 ? ${tips[f].length} clear near feet`;
+  if(document.querySelector('#tips').checked){g.strokeStyle='#8cffee';g.fillStyle='#fff';g.lineWidth=2;g.font='14px system-ui';tips[f].forEach(([x,y],i)=>{const px=26+x*scale,py=430-h*scale+y*scale;g.beginPath();g.arc(px,py,6,0,Math.PI*2);g.stroke();g.fillText(String(i+1),px+8,py)})} 
+}
+document.querySelector('#tips').onchange=()=>draw(frame);
+button.onclick=()=>{playing=!playing;button.textContent=playing?'Pause':'Play'};
+slider.oninput=()=>{playing=false;button.textContent='Play';draw(Number(slider.value))};
+function tick(now){if(playing&&now-last>=250){draw((frame+1)%4);last=now}requestAnimationFrame(tick)}
+draw(0);requestAnimationFrame(tick);
+window.__coralWalk={ready:true,draw,pause(){playing=false},image};
+</script>

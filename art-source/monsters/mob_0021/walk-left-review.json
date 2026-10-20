@@ -1,0 +1,29 @@
+{
+  "id": "mob_0021",
+  "status": "left-scuttle-draft-with-missing-near-chains",
+  "reference": "left-profile-study-v2.png",
+  "source": "walk-left-study.png",
+  "preview": "walk-left-review.html",
+  "uniqueKeys": 4,
+  "fps": 4,
+  "clearNearWalkingChainsByKey": [4, 3, 3, 4],
+  "inspectionOverlay": "Manually located near-foot tips only; labels are per-frame inspection order, not proven cross-frame leg identity.",
+  "rejectedRepair": {
+    "file": "walk-left-study-v2.png",
+    "reason": "Moves existing legs but does not establish a fourth near chain in keys 2 and 3."
+  },
+  "remaining": [
+    "Repair missing near walking chains in keys 2 and 3.",
+    "Far legs and root order remain partly concealed.",
+    "Fixed segment lengths, support groups and lateral contact travel are unverified.",
+    "Coral and shell details drift between keys."
+  ],
+  "browserCheck": {
+    "visiblePixels": [71703, 71963, 72202, 75457],
+    "canvasEdgePixels": [0, 0, 0, 0],
+    "pageErrors": [],
+    "scope": "Draft display with inspection overlay disabled."
+  },
+  "artApproved": false,
+  "publicBinding": false
+}
