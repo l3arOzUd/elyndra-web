@@ -8,11 +8,11 @@
 <canvas id="motion" width="600" height="420"></canvas>
 <canvas id="contact" width="1200" height="680"></canvas>
 <script type="module">
-const image=new Image();image.src='./walk-left.png';await image.decode();
+const image=new Image();image.src='./walk-left-v3.png';await image.decode();
 const actions=new Image();actions.src='./actions-left.png';await actions.decode();
 const sequences={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 let clip='walk';
-const bottoms=[473,473,473,437,438,440];
+const bottoms=[475,475,475,442,442,444];
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 function draw(ctx,i,x,y,scale){

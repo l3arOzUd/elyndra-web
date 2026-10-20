@@ -1,18 +1,22 @@
 {
   "status": "draft-motion-created-refinement-pending",
-  "source": "walk-left.png",
+  "source": "walk-left-v3.png",
+  "rejected": {
+    "walk-left.png": "Lifted far hindleg instead of near hindleg in frames2-3.",
+    "walk-left-v2.png": "Near hindleg lift corrected but far support leg disappeared, leaving only three hooves."
+  },
   "layout": {"columns": 3, "rows": 2, "cell": [512, 512]},
   "registration": "Constant scale with measured foot-baseline translations; no limb stretching.",
   "verified": [
     "Bark boar design, woody back thorns and moss tusks retained.",
     "Frames4-5 show near forehoof lifting and reaching forward.",
-    "Four hoof silhouettes remain visible in the generated sheet."
+    "Version3 restores far hind support and shows four hoof silhouettes while near hindleg lifts in frames2-3."
   ],
   "limitations": [
-    "Frame2 appears to lift the far hindleg instead of the requested near hindleg.",
+    "Near hindleg bends sharply; joint angles and fixed segment lengths still need review.",
     "Near/far gait phase and planted-foot travel need correction.",
     "Some noses approach or touch cell boundaries.",
     "Surface details and torso scale drift between poses.",
-    "No other actions or directional animation yet; not bound to gameplay."
+    "Left action drafts now exist separately. Other directions and idle remain unfinished; not bound to gameplay."
   ]
 }
