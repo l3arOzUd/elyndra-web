@@ -1,0 +1,24 @@
+{
+  "id": "mob_0021",
+  "status": "rear-scuttle-draft-unapproved",
+  "reference": "back-anatomy-study-v4.png",
+  "source": "walk-back-study.png",
+  "preview": "walk-back-review.html",
+  "uniqueKeys": 4,
+  "fps": 4,
+  "confirmed": ["Large claw stays image-right.", "No rear face.", "Transparent background renders correctly."],
+  "remaining": [
+    "Some frames expose only seven distinct foot tips; missing versus occluded inner leg is unresolved.",
+    "No per-leg identity tracking proves alternating support groups.",
+    "Coral and shell details drift between keys.",
+    "Planted-foot motion has not been matched to world displacement."
+  ],
+  "browserCheck": {
+    "visiblePixels": [66732, 67891, 68758, 68060],
+    "canvasEdgePixels": [0, 0, 0, 0],
+    "pageErrors": [],
+    "scope": "Preview display only, not anatomy or runtime approval."
+  },
+  "artApproved": false,
+  "publicBinding": false
+}

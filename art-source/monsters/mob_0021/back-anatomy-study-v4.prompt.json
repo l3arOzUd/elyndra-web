@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-anatomy-study-v3.png",
+  "prompt": "Repair framing of this exact rear-view crab, preserving its anatomy. Zoom OUT to leave broad clear transparent margins on all sides, with the complete creature occupying only 75% canvas width. Reconstruct the clipped outer RIGHT edge of the large claw and outer right walking leg; all tips must be fully visible. Keep exactly FOUR walking legs on image LEFT and FOUR on image RIGHT (eight total), plus TWO claw arms above and forward beyond shell. Do not add or delete legs. Preserve exact pose, folded inner legs, rigid teal cream gold carapace and pink orange coral arrangement. Large claw remains image RIGHT, small image LEFT, no face or eyes in rear. No change to claw size relative to body. One full rear-view crab only, transparent background, no floor, shadow, text, labels or grid. This is an outpainting/framing repair, not a redesign."
+}

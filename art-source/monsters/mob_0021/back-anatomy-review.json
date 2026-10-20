@@ -3,20 +3,61 @@
   "status": "rear-anatomy-construction-unapproved",
   "review": "back-anatomy-review.html",
   "versions": [
-    {"file": "back-anatomy-study.png", "visibleWalkingTips": [5, 5], "selected": false, "reason": "Two excess walking legs."},
-    {"file": "back-anatomy-study-v2.png", "visibleWalkingTips": [3, 4], "selected": false, "reason": "Left inner walking leg removed together with excess leg."},
-    {"file": "back-anatomy-study-v3.png", "visibleWalkingTips": [4, 4], "selected": false, "reason": "Correct visible count, but right claw and outer walking leg intersect image boundary."}
+    {
+      "file": "back-anatomy-study.png",
+      "visibleWalkingTips": [
+        5,
+        5
+      ],
+      "selected": false,
+      "reason": "Two excess walking legs."
+    },
+    {
+      "file": "back-anatomy-study-v2.png",
+      "visibleWalkingTips": [
+        3,
+        4
+      ],
+      "selected": false,
+      "reason": "Left inner walking leg removed together with excess leg."
+    },
+    {
+      "file": "back-anatomy-study-v3.png",
+      "visibleWalkingTips": [
+        4,
+        4
+      ],
+      "selected": false,
+      "reason": "Correct visible count, but right claw and outer walking leg intersect image boundary."
+    },
+    {
+      "file": "back-anatomy-study-v4.png",
+      "visibleWalkingTips": [
+        4,
+        4
+      ],
+      "selected": true,
+      "scope": "Construction reference for unapproved rear walk draft only; not final art."
+    }
   ],
-  "latestSourceSize": [1448, 1086],
-  "latestAlphaBoundsAbove16": [30, 90, 1447, 1028],
-  "latestRightEdgeOpaquePixelsAbove16": 324,
+  "latestSourceSize": [
+    1448,
+    1086
+  ],
+  "latestAlphaBoundsAbove16": [
+    76,
+    128,
+    1411,
+    969
+  ],
+  "latestRightEdgeOpaquePixelsAbove16": 0,
   "confirmed": [
     "No face or eyestalks on rear.",
     "Large claw remains image-right.",
-    "V3 restores four visible walking tips per side."
+    "V3 restores four visible walking tips per side.",
+    "V4 repairs right-side clipping while retaining four visible tips per side."
   ],
   "remaining": [
-    "Repair right-side framing without changing limb count.",
     "Inner feet still tucked rather than sharing planted ground plane.",
     "Hidden claw-arm attachment and walking-leg root order remain unproven.",
     "Coral branches differ from frontal neutral; exact cross-view topology not established."
