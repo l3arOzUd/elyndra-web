@@ -6394,5 +6394,83 @@
       }
     },
     "visualConsistency": "requires-direct-review"
+  },
+  {
+    "id": "mob_0086",
+    "views": {
+      "front": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          352,
+          18,
+          904,
+          1233
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "back": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          343,
+          18,
+          909,
+          1230
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "left": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          528,
+          19,
+          764,
+          1238
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      },
+      "right": {
+        "size": [
+          1254,
+          1254
+        ],
+        "bounds": [
+          492,
+          18,
+          734,
+          1239
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "edgePixels": 0,
+        "passes": true
+      }
+    },
+    "visualConsistency": "requires-direct-review"
   }
 ]

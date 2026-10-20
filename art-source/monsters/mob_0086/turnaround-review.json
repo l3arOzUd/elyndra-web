@@ -1,0 +1,21 @@
+{
+  "id": "mob_0086",
+  "name": "Pour Wraith",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from front master with rear/opposite profile references.",
+  "confirmed": [
+    "Faceless smooth head without eyes/nose/mouth maintained in all views.",
+    "White-hot ivory metal, cooling cracked grey skin and attached trailing drops preserved.",
+    "Rear has scapular back planes and central spine casting seam; profiles move front seam to leading edge.",
+    "Four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Far arms extend backward in profiles instead of preserving front coronal neutral stance.",
+    "Grey skin islands and drip roots/counts/lengths change; right hip patch not reliably continuous around body.",
+    "Back hand planes still resemble front hand shapes; digit topology needs checking.",
+    "Side chest and hips more gendered than genderless brief; normalize body volumes.",
+    "Head/neck profile and torso thickness vary; tight upper/lower margins need normalized framing.",
+    "No separated cooling-skin/drop layers or runtime animation clips yet."
+  ],
+  "next": "Lock shoulder/elbow/wrist pose, neutral body volumes, grey-skin islands and numbered drip roots across views; separate core/skin/arms/hands/drip chains for molten idle, flowing travel, pour attack, hit and melt-collapse plus cooling/remelting VFX."
+}
