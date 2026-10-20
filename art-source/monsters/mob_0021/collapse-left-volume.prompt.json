@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "left-profile-study-v2.png",
+    "death-left-volume-study.png"
+  ],
+  "prompt": "Use case: precise-object-edit. ONE intermediate collapse key for left-facing Coral Claw. Image1 neutral standing is the primary design, image2 folded endpoint is pose direction only. Keep original1536x1024 frame, camera, body width, full shell thickness, coral topology and claw volumes. Draw the four NEAR walking legs bending halfway at knees/ankles, all four continuous chains and tips readable; far legs remain behind. Lower the rigid shell a little as knees buckle, no shell/coral squashing, no resized body. Huge near claw lowers toward ground still same volume; small far claw behind it. Eyestalk droops partway, still black eye visible, no human eyelid. Feet near original ground at y1005. This is early loss of support, not a seated pose or backward flip. Preserve all legs and margins, transparent empty space around and between legs, no haze/glow/floor/shadow/text. One complete crab."
+}

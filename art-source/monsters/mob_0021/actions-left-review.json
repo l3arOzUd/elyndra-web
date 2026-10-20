@@ -5,6 +5,9 @@
   "source": "actions-left-study-v2.png",
   "attackSources": ["left-profile-study-v2.png", "attack-left-windup.png", "attack-left-pinch.png"],
   "attackRegistration": {"scale": 0.25, "anchor": [920, 1005], "destination": [256, 430], "perKeyFitting": false},
+  "hitSource": "hit-left-brace.png",
+  "deathSources": ["left-profile-study-v2.png", "collapse-left-volume.png", "death-left-volume-study.png"],
+  "deathRegistration": {"scale": 0.25, "anchorX": 920, "groundByDrawing": [1005, 988, 930], "destination": [256, 430]},
   "preview": "actions-left-review.html",
   "sequences": {
     "attack": [
@@ -39,11 +42,11 @@
     "New endpoint fully closes visible eye and restores fuller shell with four near walking feet."
   ],
   "remaining": [
-    "New attack retains four clear near walking chains. Older hit/collapse sources still do not consistently retain them.",
+    "Selected attack, hit and collapse retain four clear near walking chains. Far roots remain unverified.",
     "Claw size and coral details change between poses.",
     "Far legs and claw-arm attachments remain partly concealed.",
     "Final endpoint preserves fuller shell but still reads as crouching; underside ground contact is not clear.",
-    "Intermediate collapse proportions do not yet match new endpoint."
+    "Intermediate collapse uses the canonical body scale now, but lowering is subtle and claw/coral continuity into the endpoint still needs refinement."
   ],
   "validation": {
     "visiblePixelsPerPose": [
@@ -70,6 +73,15 @@
   },
   "artApproved": false,
   "publicBinding": false,
+  "hitDeathRevisionCheck": {
+    "hitTimingFrames": 6,
+    "deathTimingFrames": 6,
+    "emptyFrames": 0,
+    "edgeFrames": 0,
+    "pageErrors": [],
+    "individualVersusCombinedPixelDifferences": 0,
+    "visual": "Transparent previews, four near chains in both new drawings; same fixed scale as idle. Still unapproved anatomy and grounding."
+  },
   "attackRevisionCheck": {
     "timingFrames": 6,
     "uniqueDrawings": 3,

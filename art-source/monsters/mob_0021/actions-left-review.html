@@ -1,7 +1,7 @@
 <!doctype html><meta charset="utf-8"><title>Coral Claw left actions</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;height:auto}select,button,input{margin:8px}a{color:#a9e2e3}</style>
 <h1>Coral Claw: left action drafts</h1>
-<p>Attack uses new isolated drawings at the idle reference scale, retaining four near walking chains. Hit and collapse still use the earlier sheet. All poses remain unapproved.</p>
+<p>Attack, hit and collapse use isolated drawings at the idle reference scale, retaining four near walking chains. Final death still reads as crouching. All poses remain unapproved.</p>
 <p>Near giant claw opens, extends and closes. Generated leg chains and shell volume still vary between poses; not approved for gameplay.</p>
 <select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All source poses</option></select>
 <button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" step="1"><span id="label"></span><br>
@@ -10,8 +10,10 @@
 <label><input id="oldDeath" type="checkbox">Compare original flattened endpoint</label>
 <p><a href="profile-review.html">Profile references</a> · <a href="actions-front-review.html">Front actions</a> · <a href="actions-back-review.html">Rear actions</a> · <a href="actions-left-study-v2.png">Source sheet</a></p>
 <script type="module">
-import {leftAttackSources} from './motion-art.js';
+import {leftAttackSources,leftHitSource,leftDeathSources,leftDeathGround} from './motion-art.js';
 const attackImages=await Promise.all(leftAttackSources.map(async file=>{const im=new Image();im.src='./'+file;await im.decode();return im}));
+const hitImage=new Image();hitImage.src='./'+leftHitSource;await hitImage.decode();
+const deathImages=await Promise.all(leftDeathSources.map(async file=>{const im=new Image();im.src='./'+file;await im.decode();return im}));
 const image=new Image();image.src='./actions-left-study-v2.png';await image.decode();
 const dead=new Image();dead.src='./death-left-volume-study.png';await dead.decode();
 const crops=[[0,0,512,512],[512,0,496,512],[1008,0,528,512],[0,512,512,512],[512,512,512,512],[1024,512,512,512]];
@@ -23,7 +25,8 @@ const clip=document.querySelector('#clip'),slider=document.querySelector('#frame
 let playing=true,frame=0,last=0;
 function draw(f){
  frame=f;const cell=sequences[clip.value][f],r=crops[cell],a=anchors[cell];g.clearRect(0,0,512,512);
- if(clip.value==='attack'){const im=attackImages[cell];g.drawImage(im,256-920*.25,430-1005*.25,im.naturalWidth*.25,im.naturalHeight*.25)}
+ if(clip.value==='attack'||clip.value==='hit'){const im=clip.value==='attack'?attackImages[cell]:cell===3?hitImage:attackImages[0];g.drawImage(im,256-920*.25,430-1005*.25,im.naturalWidth*.25,im.naturalHeight*.25)}
+ else if(clip.value==='death'&&!document.querySelector('#oldDeath').checked){const key=cell===0?0:cell===4?1:2,im=deathImages[key];g.drawImage(im,256-920*.25,430-leftDeathGround[key]*.25,im.naturalWidth*.25,im.naturalHeight*.25)}
  else if(cell===5&&!document.querySelector('#oldDeath').checked)g.drawImage(dead,256-920*.25,430-930*.25,dead.naturalWidth*.25,dead.naturalHeight*.25);
  else g.drawImage(image,...r,256+(r[0]-a[0])*.8,430+(r[1]-a[1])*.8,r[2]*.8,r[3]*.8);
  sg.clearRect(0,0,128,128);sg.drawImage(c,0,0,128,128);slider.value=String(f);label.textContent=`Frame ${f+1}: ${names[cell]}`;
