@@ -1,0 +1,6 @@
+{
+  "prompt": "Precise background removal edit. Keep exactly these six complete Craglet walking poses and all their painted pixels, same3columns2rows layout. Remove ALL brown gradient backdrop and ALL cast glow haze behind creatures, replace with true transparent alpha. Preserve stone, cream belly, quartz and claws. Do not repaint anatomy, do not change poses or add shadows. Shrink each whole figure uniformly slightly within its own cell if needed to leave clear margin on every side; no cropping tails or noses. Output transparent sprite sheet.",
+  "references": [
+    "walk-left-draft.png"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "mob_0005",
+  "animation": "walk",
+  "status": "draft-motion-created-refinement-pending",
+  "source": "walk-left.png",
+  "preview": "walk-review.html",
+  "layout": {"columns": 3, "rows": 2, "cell": [512, 512]},
+  "verified": [
+    "Browser canvas on light background confirms transparent exterior without the brown backdrop visible in the generation preview.",
+    "Six full-body poses contain distinct foreleg reach, planted support and hindleg lift, rather than whole-body translation alone.",
+    "Preview uses constant scale and ground-registered alpha bounds without stretching limbs."
+  ],
+  "limitations": [
+    "Near/far foreleg ownership changes ambiguously around frames 3-4; refine diagonal support order before runtime acceptance.",
+    "Stone plates, quartz arrangement and limb thickness drift slightly between painted frames.",
+    "The small brass belly gear from the Bible is not visible in this side master or cycle; resolve visibility rather than declaring it complete.",
+    "Ground registration follows lowest visible pixel, not measured planted-foot trajectories; foot sliding remains unverified.",
+    "Only left-facing walking draft exists. Attack, hit, death and other authored views remain outstanding.",
+    "No runtime binding changed; Craglet remains a placeholder until its full clip set is ready and reviewed."
+  ]
+}

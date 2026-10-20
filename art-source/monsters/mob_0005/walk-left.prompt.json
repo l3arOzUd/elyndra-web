@@ -1,0 +1,13 @@
+{
+  "view": "left",
+  "animation": "walk",
+  "layout": {
+    "columns": 3,
+    "rows": 2
+  },
+  "prompt": "Create authored 2D WALK CYCLE sprite sheet of EXACT Craglet slate-armored quartz lizard from reference. Six separate complete full-body frames in strict 3 columns x2 rows equal cells, read left to right top to bottom. All face LEFT, same camera, fixed body size and plate/crystal design, full tail, four legs only. Slow heavy quadruped gait with visibly changing joint poses: frame1 near forefoot reaches forward left while near hindfoot pushes back right; frame2 forefoot plants and body passes over it; frame3 near hindfoot lifts and swings forward under hip, near forefoot moves rearward relative shoulder; frame4 opposite diagonal support with near hindfoot planted forward and near forefoot lifting; frame5 near forefoot swings forward with bent elbow, far limbs support; frame6 near forefoot extends preparing frame1 contact. Fixed limb lengths, natural bent elbows/knees, no stretched rubber legs, no extra feet. Torso barely bobs, tail small counterbalance only. Four claw toes on visible feet. Warm amber eye, slate-gray overlapping stone plates, short warm quartz spine, cream belly. Preserve body identity, not turtle. Each creature safely inside its own equal cell with empty gutters at least8percent; identical foot baseline per row and matched hip height. Landscape 3:2 canvas transparent true alpha; no background floor shadows labels grid or motion trails. Hand painted polished fantasy game art. Distinct actual foot positions each frame, not six identical standing poses.",
+  "references": [
+    "left.png"
+  ],
+  "status": "generated-review-required"
+}
