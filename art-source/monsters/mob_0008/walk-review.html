@@ -4,7 +4,7 @@
 <style>body{margin:24px;background:#263037;color:#eee;font:16px system-ui}canvas{background:#697a80;max-width:100%;display:block;margin:12px 0}button,input{margin:8px}</style>
 <h1>Brookfin - fin-foot walk draft</h1>
 <p>Inspect four limb attachments and near/far foot order. Frame 2 now lifts the near front foot; far rear support and attachment continuity still need review. Not approved or bound to gameplay.</p>
-<select id="clip"><option>walk</option><option>idle</option><option>idle-front</option><option>walk-front</option><option>walk-back</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label>
+<select id="clip"><option>walk</option><option>idle</option><option>idle-front</option><option>idle-back</option><option>walk-front</option><option>walk-back</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label>
 <canvas id="motion" width="600" height="520"></canvas>
 <canvas id="contact" width="1200" height="800"></canvas>
 <script type="module">
@@ -19,12 +19,14 @@ const backActions=new Image();backActions.src='./actions-back.png';await backAct
 const correctedBackActions=new Image();correctedBackActions.src='./actions-back-v2.png';await correctedBackActions.decode();
 const blink=new Image();blink.src='./idle-left-blink.png';await blink.decode();
 const frontBlink=new Image();frontBlink.src='./idle-front-blink-v2.png';await frontBlink.decode();
+const backFins=new Image();backFins.src='./idle-back-fins.png';await backFins.decode();
 let clip='walk';
 const seq={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
 for(const name of ['attack','hit','death']){seq[`${name}-front`]=seq[name];document.querySelector('#clip').add(new Option(`${name}-front`,`${name}-front`));}
 for(const name of ['attack','hit','death']){seq[`${name}-back`]=seq[name];document.querySelector('#clip').add(new Option(`${name}-back`,`${name}-back`));}
 const bottoms=[487,487,495,480,480,483];
 function draw(ctx,f,x,y,s){
+ if(clip==='idle-back'){ctx.drawImage(f>=4&&f<=11?backFins:backActions,0,0,512,512,x-256*s,y-504*s,512*s,512*s);return;}
  if(clip==='idle-front'){ctx.drawImage(f===12?frontBlink:frontActions,0,0,512,530,x-256*s,y-512*s,512*s,530*s);return;}
 
  if(clip==='idle'){ctx.drawImage(f===12?blink:actions,0,0,526,550,x-256*s,y-530*s,526*s,550*s);return;}
@@ -76,8 +78,8 @@ function exportDraft(){
   const c=document.createElement('canvas');c.width=384*def.frames;c.height=384*json.rows.length;const ctx=c.getContext('2d');
   for(let row=0;row<json.rows.length;row++)for(let f=0;f<def.frames;f++){
    const suffix=row===1?'-front':row===4?'-back':'';
-   clip=(name==='idle'&&suffix==='-back'?'attack':name)+suffix;
-   ctx.save();ctx.translate(f*384,row*384);draw(ctx,name==='idle'&&suffix==='-back'?0:f,192,346,.60);ctx.restore();
+   clip=name+suffix;
+   ctx.save();ctx.translate(f*384,row*384);draw(ctx,f,192,346,.60);ctx.restore();
   }
   images[name]=c.toDataURL('image/png');sizes[name]={width:c.width,height:c.height};
  }

@@ -6,14 +6,15 @@
     "Browser shows closed eyelid while body remains standing.",
     "Loop holds neutral pose and blinks on frame12 of16.",
     "Front blink rendered through SpriteActor S row at1500ms.",
-    "V2 removes broad exterior halo in actual SpriteActor screenshot; fin membranes remain visible."
+    "V2 removes broad exterior halo in actual SpriteActor screenshot; fin membranes remain visible.",
+    "Rear fin pose rendered through SpriteActor N row at 750ms; transparent exterior and feet at ground baseline."
   ],
   "limitations": [
     "Gold outlines and scale shading differ slightly from neutral.",
-    "No breathing or fin idle motion yet.",
-    "Rear idle remains static.",
     "Not bound to gameplay.",
-    "V2 strengthens gold outlines; blink-to-neutral color continuity still needs review."
+    "V2 strengthens gold outlines; blink-to-neutral color continuity still needs review.",
+    "Rear idle alternates neutral and lowered fins; needs intermediate fin poses and surface continuity refinement."
   ],
-  "frontSource": "idle-front-blink-v2.png top-left only"
+  "frontSource": "idle-front-blink-v2.png top-left only",
+  "rearSource": "idle-back-fins.png top-left only"
 }

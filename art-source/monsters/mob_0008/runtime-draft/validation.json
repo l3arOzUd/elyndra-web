@@ -484,56 +484,56 @@
       "clip": "idle",
       "facing": "N",
       "frame": 4,
-      "visible": 39798,
+      "visible": 37531,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 5,
-      "visible": 39798,
+      "visible": 37531,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 6,
-      "visible": 39798,
+      "visible": 37531,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 7,
-      "visible": 39798,
+      "visible": 37531,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 8,
-      "visible": 39798,
+      "visible": 37531,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 9,
-      "visible": 39798,
+      "visible": 37531,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 10,
-      "visible": 39798,
+      "visible": 37531,
       "edge": 0
     },
     {
       "clip": "idle",
       "facing": "N",
       "frame": 11,
-      "visible": 39798,
+      "visible": 37531,
       "edge": 0
     },
     {
@@ -1406,7 +1406,7 @@
     }
   ],
   "limitations": [
-    "Side and front idle blink; rear idle remains static.",
+    "Side and front idle blink; rear idle alternates two fin poses and needs smoother transitions.",
     "Right mirrors left; diagonals reuse side art.",
     "Foot contacts, four-leg anatomy, cross-clip scale and body registration need refinement.",
     "Edited poses differ in fin outlines and scale shading; death needs intermediate poses.",
