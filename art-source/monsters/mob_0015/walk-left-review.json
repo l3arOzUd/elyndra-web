@@ -40,21 +40,33 @@
   },
   "isolatedCycle": {
     "preview": "isolated-walk-review.html",
-    "frames": ["walk-left-contact-a.png", "walk-left-pass-a.png", "walk-left-contact-b-v2.png", "walk-left-pass-b.png"],
+    "frames": [
+      "walk-left-contact-a.png",
+      "walk-left-down-a.png",
+      "walk-left-pass-a.png",
+      "walk-left-contact-b-v3.png",
+      "walk-left-down-b.png",
+      "walk-left-pass-b.png"
+    ],
     "verified": [
       "Passing A raises the far foot while the near sole supports the body.",
       "Passing B raises the near foot while the far sole supports the body.",
       "Browser contact sheet shows separate airborne feet with transparent gaps.",
       "All four full images have alpha greater than 32 confined inside canvas edges.",
-      "Preview uses uniform scale and ground registration without stretching limbs."
+      "Preview uses uniform scale and ground registration without stretching limbs.",
+      "Contact B v3 lowers near fist from chest to hip; legs retain opposite stride.",
+      "Individual transfer A/B frames keep two arms and bend the trailing knee; preview now has six authored frames."
     ],
     "limitations": [
-      "Contact B retains a high bent near arm, unlike the relaxed arms in other poses.",
-      "Torso size and root/stone details still vary between drawings.",
-      "Passing feet extend forward rather than fully folding under the knee.",
-      "Four key poses need weight-transfer inbetweens for a heavy smooth walk.",
-      "No runtime export or public binding yet."
+      "Torso and hood size vary between contacts and passing poses.",
+      "Transfer B toe support and weight shift are still weak.",
+      "Root and stone details drift; no production approval.",
+      "Front/rear walks, actions and runtime binding remain."
     ]
   },
-  "next": "Lower Contact B arm, stabilize torso proportions and add weight-transfer poses before runtime export; front/rear walk and other actions remain."
+  "next": "Build front/rear walks and actions, then check registration across clips; refine hood/torso drift and transfer B support.",
+  "rejectedTransferSheet": {
+    "file": "walk-left-transfer.png",
+    "reason": "Both figures contain three fists/arms and repeat a similar lead leg; never selected."
+  }
 }
