@@ -213,6 +213,6 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .skill-picker button .painted-icon { width:24px; height:24px; }
 #bag-count.bad { color:#9b2f22; font-weight:600; }
 @media (max-width:420px) {
- .slot.totem .qty { font-size:9px; right:1px; }.slot .key { font-size:10px; }.buff { width:24px; height:24px; }.buff small { font-size:9px; }
+ .slot.totem .qty { font-size:8px; right:0; left:0; text-align:right; letter-spacing:-.3px; }.slot .key { font-size:10px; }.buff { width:24px; height:24px; }.buff small { font-size:9px; }
  .char-layout { padding:4px; gap:8px; }.stat-alloc { grid-template-columns:28px 1fr auto auto auto; }.stat-name small { display:none; }
 }
