@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <title>Dustwing flight review</title>
 <style>body{background:#253039;color:#eee;font:16px system-ui;margin:24px}canvas{background:#56656b;max-width:100%}button,input{margin:8px}</style>
-<h1>Dustwing — front flight draft</h1>
+<h1>Dustwing ? flight and action drafts</h1>
 <p>Authored wing poses, fixed body scale. Review leg count, wing-root anatomy, pattern drift and loop continuity. Not bound to gameplay.</p>
 <select id="clip"><option>flight</option><option>flight-left</option><option>attack</option><option>hit</option><option>death</option></select><button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label>
 <canvas id="motion" width="600" height="520"></canvas>
@@ -11,8 +11,11 @@
 const image=new Image();image.src='./flight-front-v2.png';await image.decode();
 const actions=new Image();actions.src='./actions-front.png';await actions.decode();
 const leftFlight=new Image();leftFlight.src='./flight-left.png';await leftFlight.decode();
+const leftActions=new Image();leftActions.src='./actions-left.png';await leftActions.decode();
 let clip='flight';
 const sequences={flight:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
+for(const name of ['attack','hit','death']){sequences[`${name}-left`]=sequences[name];document.querySelector('#clip').add(new Option(`${name}-left`,`${name}-left`));}
+const leftActionCells=[[0,0,512,580,180,620],[512,0,480,580,200,620],[992,0,544,580,180,620],[0,580,520,444,220,440],[520,580,450,444,220,420],[970,580,566,444,250,385]];
 const actionCells=[[0,0,610,510,300,540],[610,0,440,512,215,540],[1050,0,486,550,240,540],[0,510,520,514,330,490],[520,550,510,474,255,450],[1030,600,506,424,175,325]];
 // Sheet ignores the requested 512px grid. Use measured gaps, and register
 // the thorax rather than changing each pose's scale to fit its silhouette.
@@ -28,12 +31,16 @@ function draw(ctx,f,x,y,s){
   ctx.drawImage(leftFlight,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);return;
  }
  const pose=sequences[clip][f];
+ if(clip.endsWith('-left')){
+  const [sx,sy,w,h,ax,ay]=leftActionCells[pose];
+  ctx.drawImage(leftActions,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);return;
+ }
  const [sx,sy,w,h,ax,ay]=(clip==='flight'?cells:actionCells)[pose];
  ctx.drawImage(clip==='flight'?image:actions,sx,sy,w,h,x-ax*s,y-ay*s,w*s,h*s);
 }
 const canvas=document.querySelector('#motion'),ctx=canvas.getContext('2d');
 const sheet=document.querySelector('#contact'),cg=sheet.getContext('2d');
-function contacts(){cg.clearRect(0,0,1200,800);for(let f=0;f<6;f++){draw(cg,f,f%3*400+200,Math.floor(f/3)*400+(clip.startsWith('flight')?220:370),.65);cg.fillStyle='#fff';cg.fillText(`Frame ${f+1}`,f%3*400+12,Math.floor(f/3)*400+20);}
+function contacts(){cg.clearRect(0,0,1200,800);for(let f=0;f<6;f++){draw(cg,f,f%3*400+200,Math.floor(f/3)*400+(clip.startsWith('flight')?220:370),clip.endsWith('-left')&&!clip.startsWith('flight')?.56:.65);cg.fillStyle='#fff';cg.fillText(`Frame ${f+1}`,f%3*400+12,Math.floor(f/3)*400+20);}
 }
 contacts();
 let frame=0,paused=false,last=0;
@@ -42,7 +49,7 @@ document.querySelector('#pause').onclick=()=>{paused=!paused;};
 document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;};
 function tick(now){
  if(!paused&&now-last>100){frame=clip.startsWith('flight')?(frame+1)%6:Math.min(5,frame+1);last=now;}
- ctx.clearRect(0,0,600,520);draw(ctx,frame,300,clip.startsWith('flight')?280:490,.9);
+ ctx.clearRect(0,0,600,520);draw(ctx,frame,300,clip.startsWith('flight')?280:490,clip.endsWith('-left')&&!clip.startsWith('flight')?.75:.9);
  document.querySelector('#frame').value=frame;requestAnimationFrame(tick);
 }
 window.__dustwingFlight={ready:true,cells};requestAnimationFrame(tick);

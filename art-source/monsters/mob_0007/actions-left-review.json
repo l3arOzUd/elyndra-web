@@ -1,0 +1,17 @@
+{
+  "status": "authored-action-draft-refinement-pending",
+  "source": "actions-left.png",
+  "verified": [
+    "Browser death sequence inspected, final pose holds belly-down with folded wings.",
+    "Attack tilts torso toward left with front legs extended.",
+    "All six source poses use a fixed drawing scale, not per-pose silhouette normalization."
+  ],
+  "limitations": [
+    "Flight and action sheets have different body scales; cross-clip registration not yet calibrated.",
+    "Three near legs visible; far leg anatomy not fully verified.",
+    "Wing markings and segmentation drift.",
+    "Death lacks intermediate landing frames.",
+    "Rear clips missing and runtime export not yet available.",
+    "Not bound to gameplay."
+  ]
+}
