@@ -2,29 +2,44 @@
 <meta charset="utf-8">
 <title>Thornback walk draft</title>
 <style>body{margin:24px;background:#263037;color:#eee;font:16px system-ui}canvas{background:#e6e6e6;max-width:100%}button,input{margin:10px;padding:8px}</style>
-<h1>Thornback — walk draft</h1>
+<h1>Thornback — motion drafts</h1>
 <p>Six painted poses. Review near/far leg order, hoof contact and loop continuity. Not bound to gameplay; short margins and surface drift remain.</p>
-<button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label><span id="label"></span><br>
+<select id="clip"><option>walk</option><option>attack</option><option>hit</option><option>death</option></select><button id="replay">Replay</button><button id="pause">Pause</button><label>Frame <input id="frame" type="range" min="0" max="5" value="0"></label><span id="label"></span><br>
 <canvas id="motion" width="600" height="420"></canvas>
 <canvas id="contact" width="1200" height="680"></canvas>
 <script type="module">
 const image=new Image();image.src='./walk-left.png';await image.decode();
+const actions=new Image();actions.src='./actions-left.png';await actions.decode();
+const sequences={walk:[0,1,2,3,4,5],attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5]};
+let clip='walk';
 const bottoms=[473,473,473,437,438,440];
 const motion=document.querySelector('#motion'),g=motion.getContext('2d');
 const contact=document.querySelector('#contact'),cg=contact.getContext('2d');
 function draw(ctx,i,x,y,scale){
- ctx.drawImage(image,i%3*512,Math.floor(i/3)*512,512,512,x-256*scale,y-bottoms[i]*scale,512*scale,512*scale);
+ const pose=sequences[clip][i];
+ if(clip==='walk')ctx.drawImage(image,pose%3*512,Math.floor(pose/3)*512,512,512,x-256*scale,y-bottoms[pose]*scale,512*scale,512*scale);
+ else{
+  const cuts=pose<3?[0,532,1037,1536]:[0,512,1012,1536],col=pose%3,sx=cuts[col],w=cuts[col+1]-sx;
+  const bottom=[495,495,499,455,447,440][pose];
+  ctx.drawImage(actions,sx,Math.floor(pose/3)*512,w,512,x-256*scale+(sx-col*512)*scale,y-bottom*scale,w*scale,512*scale);
+ }
 }
+function contactSheet(){
+cg.clearRect(0,0,1200,680);
 for(let i=0;i<6;i++){
  const x=i%3*400,y=Math.floor(i/3)*340;
- draw(cg,i,x+200,y+310,.73);
+ draw(cg,i,x+200,y+310,.65);
  cg.fillStyle='#222';cg.fillText(`Frame ${i+1}`,x+12,y+20);
 }
+}
+contactSheet();
 let frame=0,paused=false,last=0;
+document.querySelector('#clip').onchange=e=>{clip=e.target.value;frame=0;paused=false;last=performance.now();contactSheet();};
+document.querySelector('#replay').onclick=()=>{frame=0;paused=false;last=performance.now();};
 document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelector('#pause').textContent=paused?'Play':'Pause';};
 document.querySelector('#frame').oninput=e=>{frame=Number(e.target.value);paused=true;document.querySelector('#pause').textContent='Play';};
 function tick(now){
- if(!paused&&now-last>150){frame=(frame+1)%6;last=now;}
+ if(!paused&&now-last>150){frame=clip==='walk'?(frame+1)%6:Math.min(5,frame+1);last=now;}
  g.clearRect(0,0,600,420);g.strokeStyle='#888';g.beginPath();g.moveTo(0,390);g.lineTo(600,390);g.stroke();
  draw(g,frame,300,390,.9);
  document.querySelector('#frame').value=String(frame);document.querySelector('#label').textContent=String(frame+1);

@@ -1,0 +1,19 @@
+{
+  "status": "draft-actions-created-refinement-pending",
+  "source": "actions-left.png",
+  "poses": ["neutral", "head-low-windup", "tusk-scoop", "hit-recoil", "death-buckle", "death-rest"],
+  "preview": "walk-review.html",
+  "registration": "Fixed scale with per-pose bottom translation; transparent gutters measured at top532/1037 and bottom512/1012.",
+  "verified": [
+    "Attack bends neck down then raises tusks, with four hooves retained.",
+    "Hit closes eyes and flexes legs.",
+    "Death folds legs and lowers chest to ground without rotating the standing silhouette."
+  ],
+  "limitations": [
+    "Attack contact raises head more than it advances body; needs a stronger forward push.",
+    "Thorn and moss details change across poses.",
+    "Three authored death poses need additional transition drawings.",
+    "Artwork crosses nominal cell boundaries; measured crops are required.",
+    "No other directions or authored idle yet; not bound to gameplay."
+  ]
+}
