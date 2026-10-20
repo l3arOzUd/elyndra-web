@@ -50,7 +50,7 @@
       "Hop anatomy and shell continuity",
       "Landing recovery in front/back/right",
       "Repair right bump posture and rear forward projection",
-      "Idle motion in all views",
+      "Rear idle motion and blink continuity",
       "Action shell consistency and connecting poses",
       "Runtime export and gameplay verification"
     ],
@@ -60,6 +60,12 @@
       "back": 6,
       "right": 6
     },
-    "actionReview": "actions-review.html"
+    "actionReview": "actions-review.html",
+    "idleDrawings": {
+      "left": 2,
+      "front": 2,
+      "right": 2,
+      "back": 1
+    }
   }
 }
