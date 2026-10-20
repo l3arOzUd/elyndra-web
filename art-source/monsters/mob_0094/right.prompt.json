@@ -1,0 +1,8 @@
+{
+  "view": "right",
+  "prompt": "Sparkwing RIGHT SIDE strict orthographic eye-level whole bird facing RIGHT. Image1 FRONT canonical anatomy short tail, image2 LEFT material/body side reference but its long tail is incorrect. Same copper foil bird, one violet eye right, copper hooked beak right, two feet toes forward right hallux left. Two partly open wings original front pose rotated90degrees: near right wing projects toward viewer foreshortened, far left behind body, NOT front view with turned head. Keep tail SHORT like front, no long phoenix tail. Hammered layered copper feathers dark bronze body bright worn edges, original head/neck proportions. Minimal tiny violet sparks at wingtips only no haze. Entire bird square transparent generous margins no ground shadow text.",
+  "references": [
+    "front.png",
+    "left.png"
+  ]
+}

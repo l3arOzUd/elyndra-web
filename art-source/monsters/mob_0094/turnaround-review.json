@@ -1,0 +1,20 @@
+{
+  "id": "mob_0094",
+  "name": "Sparkwing",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation with left whole-body rotation retry; failed front-torso draft retained.",
+  "confirmed": [
+    "Copper foil feather material, violet eye and two feet retained.",
+    "Rear head has no duplicated face; revised left rotates torso rather than head only.",
+    "Right tail shortened relative to left draft; four files pass alpha/nonempty/edge checks."
+  ],
+  "limitations": [
+    "Wing pose not consistent across views: profiles extend near wing backward with broad face visible rather than preserving lateral spread in depth.",
+    "Rear feet still show front-like three-toe fans instead of correct hallux/heel projection.",
+    "Left tail much longer than front/right; tail volume and number of feathers need locking.",
+    "Feather counts/order and crown/neck proportions drift; far wing partially hidden and anatomy unverified.",
+    "Baked violet arcs/haze too broad for restrained wingtip effect and must be separated.",
+    "No separated feather/wing skeleton or runtime animation clips yet."
+  ],
+  "next": "Define shoulder/elbow/wrist wing skeleton and numbered primaries, match tail and toe anatomy. Separate body/head/beak/two wings/tail/legs for perched idle, hop/takeoff, flap/glide, peck/dive attack, hit and wing-fold collapse; landing arcs and wingtip sparks separate."
+}

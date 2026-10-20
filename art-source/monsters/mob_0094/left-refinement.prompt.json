@@ -1,0 +1,7 @@
+{
+  "view": "left",
+  "prompt": "Sparkwing true LEFT anatomical SIDE ELEVATION facing LEFT. Rotate WHOLE bird90degrees not just head. Camera sees narrow side torso: breast LEFT back RIGHT, beak LEFT, tail RIGHT, both feet toes LEFT. Original wings spread laterally: near wing projects toward camera and is FORESHORTENED, far wing mostly hidden behind torso. DO NOT show two broad symmetrical wings fanning left/right across image, that is FRONT view and wrong. Copper foil feathers same bird head beak violet eye and partly open wing joint pose as reference. Full body transparent square generous margins. Painterly fantasy no ground shadow text. Minimal wingtip violet spark.",
+  "references": [
+    "front.png"
+  ]
+}
