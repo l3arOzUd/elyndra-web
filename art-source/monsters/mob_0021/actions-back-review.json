@@ -1,0 +1,34 @@
+{
+  "id": "mob_0021",
+  "status": "rear-combat-and-death-drafts",
+  "source": "actions-back-study.png",
+  "override": {"pose2": "pinch-back-depth-study.png"},
+  "preview": "actions-back-review.html",
+  "sequences": {
+    "attack": [0, 1, 1, 2, 2, 0],
+    "hit": [0, 3, 3, 0, 0, 0],
+    "death": [0, 4, 4, 5, 5, 5]
+  },
+  "observed": [
+    "Rear remains faceless and large claw stays image-right.",
+    "Separate attack endpoint avoids clipped claw from original sheet.",
+    "Death folds legs and holds final key without flipping body."
+  ],
+  "remaining": [
+    "Attack endpoint still reads upward; forward foreshortening remains weak.",
+    "Death compresses shell height and changes coral silhouette.",
+    "Some folded walking legs are concealed; identity and segment continuity not established.",
+    "Cross-view neutral scale and attack/death timing need reconciliation."
+  ],
+  "validation": {
+    "visiblePixelsPerPose": [69316, 74958, 61050, 66506, 59813, 49716],
+    "canvasEdgePixels": [0, 0, 0, 0, 0, 0],
+    "deathFrameAfter1300ms": 5,
+    "deathFrameAfter1900ms": 5,
+    "playingAfterDeath": false,
+    "pageErrors": [],
+    "scope": "Draft preview display and final hold only, not anatomy or gameplay approval."
+  },
+  "artApproved": false,
+  "publicBinding": false
+}

@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8"><title>Coral Claw rear actions</title>
+<style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%;height:auto}select,button,input{margin:8px}a{color:#a9e2e3}</style>
+<h1>Coral Claw: rear action drafts</h1>
+<p>Attack, recoil and grounded death studies. The new attack endpoint fits the frame, but still reads as an upward reach. Shell volume and folded-leg continuity are not approved.</p>
+<select id="clip"><option value="attack">Attack</option><option value="hit">Hit</option><option value="death">Death</option><option value="all">All source poses</option></select>
+<button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" step="1"><span id="label"></span><br>
+<canvas id="preview" width="512" height="512"></canvas><canvas id="small" width="128" height="128"></canvas>
+<p>No mirrored views or stretched limbs. Death holds the last key; lowered shell also changes shape in the source and needs a matching volume repair.</p>
+<p><a href="actions-front-review.html">Front actions</a> · <a href="walk-back-review.html">Rear walk</a> · <a href="actions-back-study.png">Original sheet</a> · <a href="pinch-back-depth-study.png">Selected attack endpoint</a></p>
+<script type="module">
+const image=new Image();image.src='./actions-back-study.png';await image.decode();
+const pinch=new Image();pinch.src='./pinch-back-depth-study.png';await pinch.decode();
+const crops=[[0,20,585,450],[585,20,615,450],[1160,80,614,390],[0,475,590,405],[590,490,590,390],[1180,550,594,330]];
+const anchors=[[297,465],[895,466],[1470,465],[298,859],[885,851],[1475,846]];
+const sequences={attack:[0,1,1,2,2,0],hit:[0,3,3,0,0,0],death:[0,4,4,5,5,5],all:[0,1,2,3,4,5]};
+const names=['neutral','windup','pinch','recoil','collapse','dead'];
+const c=document.querySelector('#preview'),g=c.getContext('2d'),small=document.querySelector('#small'),sg=small.getContext('2d');
+const clip=document.querySelector('#clip'),slider=document.querySelector('#frame'),label=document.querySelector('#label');
+let playing=true,frame=0,last=0;
+function draw(f){
+ frame=f;const cell=sequences[clip.value][f];g.clearRect(0,0,512,512);
+ if(cell===2)g.drawImage(pinch,256-740*.295,430-988*.295,pinch.naturalWidth*.295,pinch.naturalHeight*.295);
+ else{
+  const r=crops[cell],a=anchors[cell];g.save();
+  if(cell===1){const path=new Path2D();path.rect(0,0,512,512);path.rect(256+(1160-a[0])*.7,430+(280-a[1])*.7,40*.7,190*.7);g.clip(path,'evenodd')}
+  g.drawImage(image,...r,256+(r[0]-a[0])*.7,430+(r[1]-a[1])*.7,r[2]*.7,r[3]*.7);g.restore();
+ }
+ sg.clearRect(0,0,128,128);sg.drawImage(c,0,0,128,128);slider.value=String(f);label.textContent=`Frame ${f+1}: ${names[cell]}`;
+}
+function replay(){playing=true;last=performance.now();draw(0)}
+clip.onchange=replay;document.querySelector('#replay').onclick=replay;slider.oninput=()=>{playing=false;draw(Number(slider.value))};
+function tick(now){if(playing&&now-last>=160){if(frame<5)draw(frame+1);else playing=false;last=now}requestAnimationFrame(tick)}
+draw(0);requestAnimationFrame(tick);
+window.__coralActions={ready:true,draw,sequences,crops,anchors,pause(){playing=false},snapshot(){return{frame,clip:clip.value,playing}}};
+</script>
