@@ -18,7 +18,7 @@
   ],
   "remaining": [
     "Attack has weak forward reach.",
-    "Final sheet death compresses shell height and reduces large-claw size.",
+    "Intermediate collapse still compresses shell and changes claw proportions before the repaired endpoint.",
     "Coral and walking-leg details vary across poses.",
     "Concealed legs do not establish consistent attachment order.",
     "Only front view exists for these actions; no live runtime binding."
@@ -33,9 +33,28 @@
       "Closed eyes have a different shape from sheet endpoint."
     ]
   },
+  "selectedDeath": {
+    "file": "death-front-volume-v2.png",
+    "selectedForDraftPreview": true,
+    "sourceSize": [1448, 1086],
+    "alphaBoundsAbove16": [26, 185, 1416, 927],
+    "uniformScale": 0.28,
+    "sourceAnchor": [740, 927],
+    "previewAnchor": [256, 430],
+    "improvements": [
+      "Outer feet fit inside source canvas.",
+      "Large anatomical right claw remains visibly larger than left claw.",
+      "Shell retains fuller vertical volume than original sheet endpoint."
+    ],
+    "limitations": [
+      "Only visible folded feet are verifiable; concealed attachment order remains unresolved.",
+      "Coral and eye details differ from neutral.",
+      "Intermediate collapse key needs matching art to prevent a proportion jump."
+    ]
+  },
   "validation": {
     "method": "Browser preview plus direct source inspection",
-    "visiblePixelsPerSourcePose": [69901, 72685, 65354, 61468, 62901, 45657],
+    "visiblePixelsPerSourcePose": [69901, 72685, 65354, 61468, 62901, 46982],
     "canvasEdgePixels": [0, 0, 0, 0, 0, 0],
     "deathFrameAfter1300ms": 5,
     "deathFrameAfter1900ms": 5,
