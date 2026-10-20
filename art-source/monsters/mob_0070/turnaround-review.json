@@ -1,0 +1,20 @@
+{
+  "id": "mob_0070",
+  "name": "Rimehare",
+  "status": "reference-set-created-consistency-refinement-pending",
+  "method": "Built-in generation from frontal hare master, rear and opposite profile.",
+  "confirmed": [
+    "White fur, silver-blue shadows, frost-tipped long ears and icy whiskers retained.",
+    "Rear has white tail and no duplicated face; four limbs identifiable in profiles.",
+    "Four files pass alpha, nonempty and edge checks."
+  ],
+  "limitations": [
+    "Rear hind feet still show toe lobes toward viewer rather than heels with toes pointing away.",
+    "Profile ears expose broad inner surfaces instead of matching fixed front ear orientation.",
+    "Ear spread, haunch proportions, tail size and forepaw spacing differ across views.",
+    "Whisker ice and fur landmarks vary; stable whisker roots needed.",
+    "Ear tips extremely close to top despite passing edge check; framing must be normalized before animation.",
+    "No separated body parts or runtime animation clips yet."
+  ],
+  "next": "Correct rear hindfoot anatomy and fixed ear pose, align body proportions and margins; separate limbs/ears/head/tail for idle, bound, strike, recoil and collapse, with frost particles separate."
+}
