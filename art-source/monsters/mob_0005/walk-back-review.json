@@ -1,0 +1,21 @@
+{
+  "status": "draft-motion-created-refinement-pending",
+  "source": "walk-back-v3.png",
+  "preview": "walk-review.html: walk-back",
+  "rejected": {
+    "walk-back.png": "Frames5-6 lift the same right hindpaw as frames2-3.",
+    "walk-back-v2.png": "Frame5 has an oversized disconnected sole over the tail; frame6 still lifts wrong leg."
+  },
+  "verified": [
+    "Version3 removes the disconnected sole over the tail.",
+    "Frames5-6 show small left hindclaws under tail while right hindpaw is planted.",
+    "Tail remains on screen left, without mirroring the whole creature."
+  ],
+  "limitations": [
+    "Repeated image edits increased orange saturation, especially quartz and belly.",
+    "Left knee connection is occluded by tail; full anatomical continuity remains unverified.",
+    "Body registration, leg segment lengths and foreleg support phases require review.",
+    "Artwork crosses equal-cell boundaries. Preview isolates poses using measured transparent gutters (top x518/1004, bottom x522/1006); fixed-grid extraction is invalid.",
+    "Rear idle, attack, hit and death are still missing."
+  ]
+}

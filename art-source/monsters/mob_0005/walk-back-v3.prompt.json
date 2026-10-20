@@ -1,0 +1,4 @@
+{
+  "prompt": "Fix ONLY bottom-middle and bottom-right cells of this rear-view 6frame Craglet sheet. Bottom-middle currently has a DISCONNECTED giant sole floating over the tail: REMOVE this entire floating sole. Instead show a SMALL screen-left hindpaw with bent ankle naturally attached to the left hindleg BELOW the tail, partially occluded by tail, just slightly raised from ground. Bottom-right: screen-right hindfoot must be PLANTED FLAT on ground, toes pointing away, no sole facing camera. Screen-left hindpaw is the lifting leg, subtly visible below left tail, connected to left knee; only show small claws if tail obscures it. Do not force giant exposed soles. Preserve first four frames, all tails curve left, torso/spine/plates unchanged. Maintain same3x2sheet1536x1024, separatecells, transparent background no text or ground. Anatomically connected hindlegs, fourlegs total. Do NOT place any paw ON TOP of tail.",
+  "reference": "walk-back-v2.png"
+}
