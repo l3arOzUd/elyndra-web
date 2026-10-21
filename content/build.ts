@@ -134,9 +134,11 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
         behavior: m.behavior, ...s, aggro_radius: AGGRO_RADIUS[m.behavior], leash_radius: LEASH_RADIUS,
         drops: dropsFor(m), ecology: m.ecology, art_brief: m.art_brief, sprite: m.sprite ?? m.id,
       });
+      // Size on screen follows the archetype for painted sprites and placeholders alike.
+      const scale = m.archetype === "boss" ? 2.4 : m.archetype === "elite" ? 1.6 : m.archetype === "bruiser" || m.archetype === "construct" ? 1.25 : 1;
       spriteIndex[m.id] = m.sprite
-        ? { sprite: m.sprite }
-        : { sprite: "mosskin", tint: ELEMENT_TINT[m.element] ?? [0.8, 0.8, 0.8], scale: m.archetype === "boss" ? 2.4 : m.archetype === "elite" ? 1.6 : m.archetype === "bruiser" || m.archetype === "construct" ? 1.25 : 1, placeholder: true };
+        ? (scale === 1 ? { sprite: m.sprite } : { sprite: m.sprite, scale })
+        : { sprite: "mosskin", tint: ELEMENT_TINT[m.element] ?? [0.8, 0.8, 0.8], scale, placeholder: true };
     }
     for (const mat of r.materials) {
       const price = mat.tier === "common" ? materialPrice(mat.level) : mat.tier === "uncommon" ? uncommonPrice(mat.level) : rarePrice(mat.level);

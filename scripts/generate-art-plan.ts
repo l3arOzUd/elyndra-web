@@ -119,7 +119,7 @@ p(
   "Transparent background with real alpha, no ground, no shadow, no text, no grid lines.",
   "```",
   "",
-  "**ขนาดบนจอ:** ตั้ง `pixelsPerCell` ตามประเภท (ยังไม่ทำ ดู ROADMAP ช่วง 1) แนวทาง: swarm/ranged 1×, bruiser/construct/support 1.25×, elite 1.6×, boss 2.2×",
+  "**ขนาดบนจอ:** ไม่ต้องวาดให้ใหญ่ตามประเภท `content/build.ts` ขยายให้เอง: swarm/ranged/support 1×, bruiser/construct 1.25×, elite 1.6×, boss 2.4×",
   "",
 );
 
