@@ -154,6 +154,8 @@ export const TOTEM_AFFIXES: AffixDef[] = [
 export const SYSTEMS_RULES: SystemsDef["rules"] = {
   stat_points_per_level: 3,
   free_reset_level: 20,
+  // A Reset Scroll costs this x character level (about 5-10 minutes of farming).
+  reset_scroll_zeny_per_level: 200,
   pow_weapon_pct: 1,
   luk_crit: 0.2,
   luk_crit_mult: 0.4,

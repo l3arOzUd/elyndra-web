@@ -52,6 +52,13 @@ for (const [w, h] of [[1440, 900], [1280, 720], [390, 844]]) {
     await page.click('#hotbar .slot:not(.item) >> nth=0', { button: 'right' });
     expect(await page.locator('#skill-picker button').count() >= 4, `${w}: right-click opens the skill picker`);
     await page.screenshot({ path: `${out}/picker-${w}.png` });
+    // The newer jobs use the painted skills-v3 atlas.
+    await page.evaluate(() => document.getElementById('skill-picker')?.remove());
+    await page.evaluate(() => window.uiPreview.hud.setStats({ t: 'stats', lv: 30, job: 'arcanist', hp: 1500, mhp: 1500, sp: 300, msp: 300, sh: 0, msh: 0, atk: 300, def: 100, exp: 0, next: 1200 }));
+    expect(await page.locator('#hotbar .painted-icon.skill3-art').count() >= 3, `${w}: Arcanist keys use the skills-v3 art`);
+    await page.evaluate(async () => { const img = new Image(); img.src = '/ui/painted/skills-v3.png'; await img.decode(); });
+    await page.waitForTimeout(200);
+    await page.screenshot({ path: `${out}/arcanist-${w}.png` });
   }
   await page.close();
 }

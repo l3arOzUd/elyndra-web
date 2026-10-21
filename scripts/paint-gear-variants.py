@@ -5,12 +5,15 @@ Shield blue) or the job (weapons). Output: public/sprites/wayfarer/items/
 gen_<slot>_<group>_e<era>/<view>/<layer>.png, same canvas and pose as the
 source. content/build.ts maps every generated base to its variant.
 
+Eras also differ in shape, not only colour: steel gear gets an outer steel
+edge, mythic gear a dark outline, a gold rim and glowing gem studs.
+
     python scripts/paint-gear-variants.py
 """
 import os
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 ROOT = os.path.join(os.path.dirname(__file__), "..", "public", "sprites", "wayfarer", "items")
 VIEWS = ("front", "side", "back")
@@ -69,6 +72,45 @@ def recolor(img, era, group):
     return Image.fromarray((rgba * 255).round().astype(np.uint8), "RGBA")
 
 
+def grow(alpha, px):
+    """The silhouette grown by px pixels (alpha as an 'L' image)."""
+    return alpha.filter(ImageFilter.MaxFilter(px * 2 + 1))
+
+
+def trim(img, era):
+    """Era ornaments around the drawn shape; era 1 stays as drawn."""
+    if era == 1 or img.getbbox() is None:
+        return img
+    a = img.getchannel("A").point(lambda v: 255 if v > 96 else 0)
+    out = Image.new("RGBA", img.size)
+    if era == 2:
+        out.paste((150, 160, 172, 255), mask=grow(a, 2))
+        out.paste((52, 56, 64, 255), mask=Image.fromarray(np.asarray(grow(a, 2)) & ~np.asarray(grow(a, 1))))
+    else:
+        out.paste((40, 24, 52, 255), mask=grow(a, 3))
+        out.paste((232, 194, 92, 255), mask=grow(a, 2))
+    out.alpha_composite(img)
+    if era == 3:
+        # Gem studs on the upper rim, spaced along the shape's width.
+        x0, y0, x1, y1 = img.getbbox()
+        arr = np.asarray(a)
+        glow = Image.new("RGBA", img.size)
+        from PIL import ImageDraw
+        d = ImageDraw.Draw(glow)
+        n = max(1, (x1 - x0) // 28)
+        for i in range(n):
+            x = x0 + (x1 - x0) * (i + 1) // (n + 1)
+            ys = np.nonzero(arr[:, x])[0]
+            if not len(ys):
+                continue
+            y = int(ys[0]) + 3
+            d.ellipse((x - 6, y - 6, x + 6, y + 6), fill=(190, 120, 255, 90))
+            d.ellipse((x - 3, y - 3, x + 3, y + 3), fill=(236, 190, 255, 255))
+            d.point((x - 1, y - 1), fill=(255, 255, 255, 255))
+        out.alpha_composite(glow.filter(ImageFilter.GaussianBlur(0.6)))
+    return out
+
+
 def main():
     made = 0
     for slot, groups in SOURCES.items():
@@ -83,7 +125,7 @@ def main():
                     os.makedirs(od, exist_ok=True)
                     for f in os.listdir(sd):
                         if f.endswith(".png"):
-                            recolor(Image.open(os.path.join(sd, f)), era, group).save(os.path.join(od, f), optimize=True)
+                            trim(recolor(Image.open(os.path.join(sd, f)), era, group), era).save(os.path.join(od, f), optimize=True)
                             made += 1
     print("wrote", made, "layer images")
 
