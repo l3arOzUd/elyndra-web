@@ -50,7 +50,9 @@ interface Ent {
   ref?: string;
   name: string;
   level: number;
-  hp: number;
+  hp: number; // shown: drops as each hit (or part of a multi-hit) lands
+  serverHp: number; // the server's value; hp settles on it
+  parts: number; // multi-hit parts still waiting to show
   mhp: number;
   msPerCell: number;
   actor: SpriteActor;
@@ -243,9 +245,11 @@ export class Game {
       if (!e) continue;
       e.samples.push({ t: m.time, x: x100 / 100, y: y100 / 100, h: (h * Math.PI) / 180, st });
       if (e.samples.length > 12) e.samples.shift();
-      if (hp < e.hp && e.kind === "m") e.hurtAt = performance.now();
-      e.hp = hp;
-      e.label?.setHp(hp, e.mhp);
+      if (hp < e.serverHp && e.kind === "m") e.hurtAt = performance.now();
+      e.serverHp = hp;
+      // The hit already took its HP off the bar; while parts of a multi-hit
+      // are still to show, let them bring it down instead of jumping ahead.
+      if (e.parts === 0 || hp > e.hp) { e.hp = hp; e.label?.setHp(hp, e.mhp); }
     }
     for (const id of m.gone ?? []) {
       const e = this.ents.get(id);
@@ -271,7 +275,7 @@ export class Game {
     actor.heading = (a.h * Math.PI) / 180;
     const isSelf = a.id === this.selfId;
     const e: Ent = {
-      id: a.id, kind: a.k, look: a.look, ref: a.ref, name: a.name, level: a.lv, hp: a.hp, mhp: a.mhp, msPerCell: a.ms || 150,
+      id: a.id, kind: a.k, look: a.look, ref: a.ref, name: a.name, level: a.lv, hp: a.hp, serverHp: a.hp, parts: 0, mhp: a.mhp, msPerCell: a.ms || 150,
       actor, label: null, samples: [{ t, x: a.x, y: a.y, h: actor.heading, st: a.st }], pos: new THREE.Vector3(a.x, 0, a.y),
       state: a.st, dead: a.st === EntState.Dead, hurtAt: 0, leaving: false,
     };
@@ -330,8 +334,11 @@ export class Game {
     for (const [id, dmg, flags] of ev.hits) {
       const k = flags >> 8;
       const combo = step ? `${ev.cast}:${id}` : undefined;
-      if (k > 0 && step) setTimeout(() => this.showHit(ev, id, dmg, flags, combo), k * step);
-      else this.showHit(ev, id, dmg, flags, combo);
+      const t = k > 0 && step ? this.ents.get(id) : undefined;
+      if (t) {
+        t.parts++;
+        setTimeout(() => { t.parts--; this.showHit(ev, id, dmg, flags, combo); }, k * step);
+      } else this.showHit(ev, id, dmg, flags, combo);
     }
     const dieAfter = step * ((s?.hits ?? 1) - 1);
     // Each target's combo counter (counting up with the parts) floats off after the last one.
@@ -350,7 +357,10 @@ export class Game {
   private showHit(ev: CombatEvent, id: number, dmg: number, flags: number, combo?: string) {
     const t = this.ents.get(id);
     if (!t) return;
-    t.hp = Math.max(0, t.hp - dmg);
+    // A later part of a multi-hit arrives after the snapshot, so it never takes
+    // the bar below the server's HP, and the last part settles it there.
+    if (flags >> 8 > 0) t.hp = t.parts === 0 ? t.serverHp : Math.max(t.serverHp, t.hp - dmg);
+    else t.hp = Math.max(0, t.hp - dmg);
     t.label?.setHp(t.hp, t.mhp);
     t.hurtAt = performance.now();
     t.actor.hitFlash();
