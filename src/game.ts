@@ -20,7 +20,7 @@ import { Minimap } from "./ui/minimap";
 import type { NpcDialog } from "./ui/npcDialog";
 import { Overlay, type Label } from "./ui/overlay";
 import { WalkGrid } from "./world/grid";
-import { findPath } from "./world/pathfinding";
+import { findPath, smoothPath } from "./world/pathfinding";
 
 /** Remote entities are drawn this far in the past, between two snapshots. */
 const INTERP_MS = 120;
@@ -493,7 +493,7 @@ export class Game {
     this.moveSeq++;
     this.conn.send({ t: "move", seq: this.moveSeq, to: [dest[0] + 0.5, dest[1] + 0.5] });
     // While casting, follow the server instead: it starts this walk when the cast lands.
-    if (path && path.length > 1 && performance.now() >= this.castingUntil) this.predicted = { path: path.slice(1), at: me.pos.clone() };
+    if (path && path.length > 1 && performance.now() >= this.castingUntil) this.predicted = { path: smoothPath(this.grid, path).slice(1), at: me.pos.clone() };
     if (!marker) return;
     tmpA.set(dest[0] + 0.5, 0.06, dest[1] + 0.5);
     this.clickMarker.group.position.copy(tmpA);

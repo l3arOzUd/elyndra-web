@@ -4,7 +4,7 @@ import { pathTimes, samplePath, type Cell } from "../src/shared/path";
 import { Animator } from "../src/render/animator";
 import { resolveFacing, validateSprite, type SpriteDefJson } from "../src/render/spriteDef";
 import { WalkGrid } from "../src/world/grid";
-import { findPath } from "../src/world/pathfinding";
+import { findPath, lineFree, smoothPath } from "../src/world/pathfinding";
 
 describe("directions", () => {
   it("headings follow the compass, clockwise from north", () => {
@@ -83,6 +83,22 @@ describe("paths", () => {
     const g = new WalkGrid(10, 10);
     const p = findPath(g, [0, 0], [6, 0], { range: 1 })!;
     expect(p.at(-1)).toEqual([5, 0]);
+  });
+
+  it("a smoothed walk in the open is one straight line", () => {
+    const g = new WalkGrid(64, 64);
+    for (const to of [[42, 33], [40, 36], [26, 44], [20, 22]] as [number, number][]) {
+      expect(smoothPath(g, findPath(g, [30, 30], to)!)).toEqual([[30, 30], to]);
+    }
+  });
+
+  it("a smoothed walk keeps every leg clear of walls", () => {
+    const g = new WalkGrid(40, 40);
+    for (let y = 5; y <= 30; y++) g.set(20, y, 0);
+    const p = smoothPath(g, findPath(g, [10, 20], [30, 18])!);
+    expect(p.length).toBeGreaterThan(2);
+    expect(p.at(-1)).toEqual([30, 18]);
+    for (let i = 1; i < p.length; i++) expect(lineFree(g, p[i - 1], p[i])).toBe(true);
   });
 
 });

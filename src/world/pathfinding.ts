@@ -106,3 +106,43 @@ export function findPath(grid: WalkGrid, from: Cell, to: Cell, opts: PathOptions
   }
   return null;
 }
+
+/**
+ * Keeps only the turns of a findPath result (`from` first): each kept cell is
+ * the farthest one a straight line still reaches, so a walk in the open is one
+ * straight line at any angle instead of 8-way steps that zigzag. The server's
+ * Searcher.Smooth (internal/nav/nav.go) is the same, so both walk one route.
+ */
+export function smoothPath(grid: WalkGrid, path: Cell[]): Cell[] {
+  if (path.length < 3) return path;
+  const out: Cell[] = [path[0]];
+  let anchor = path[0];
+  for (let i = 2; i < path.length; i++) {
+    if (!lineFree(grid, anchor, path[i])) {
+      anchor = path[i - 1];
+      out.push(anchor);
+    }
+  }
+  out.push(path[path.length - 1]);
+  return out;
+}
+
+/**
+ * Whether the straight line between two cell centres touches only walkable
+ * cells; through an exact corner both side cells must be walkable.
+ */
+export function lineFree(grid: WalkGrid, a: Cell, b: Cell): boolean {
+  const nx = Math.abs(b[0] - a[0]), ny = Math.abs(b[1] - a[1]);
+  const sx = Math.sign(b[0] - a[0]), sy = Math.sign(b[1] - a[1]);
+  let x = a[0], y = a[1];
+  for (let ix = 0, iy = 0; ix < nx || iy < ny;) {
+    const d = (1 + 2 * ix) * ny - (1 + 2 * iy) * nx;
+    if (d === 0) {
+      if (!grid.walkable(x + sx, y) || !grid.walkable(x, y + sy)) return false;
+      x += sx; y += sy; ix++; iy++;
+    } else if (d < 0) { x += sx; ix++; }
+    else { y += sy; iy++; }
+    if (!grid.walkable(x, y)) return false;
+  }
+  return true;
+}
