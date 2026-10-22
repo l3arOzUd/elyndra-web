@@ -384,8 +384,8 @@ export class Hud {
       this.bindTooltip(b, () => (g ? gearTitle(it, g) : it?.name ?? id), () => (g ? this.gearSummary(g) : it?.description ?? ''));
       li.append(b); list.append(li);
     }
-    // Empty sockets complete the grid, so the satchel reads as a bag of slots.
-    if (ids.length) for (let i = ids.length; i < Math.max(25, Math.ceil(ids.length / 5) * 5); i++) list.append(el('li', 'empty-slot'));
+    // Empty sockets complete the grid, so the satchel reads as a bag of slots (a search shows only matches).
+    if (ids.length || !search) for (let i = ids.length; i < Math.max(25, Math.ceil(ids.length / 5) * 5); i++) list.append(el('li', 'empty-slot'));
     $('inv-empty').hidden = ids.length > 0;
     $('inv-empty').textContent = all.length ? 'No items match your search.' : 'Your inventory is empty.';
     const carriedGear = [...this.gear.values()].filter((g) => g.slot !== 'stash').length, bagMax = this.c.systems.crafting?.bag_max ?? 300;
