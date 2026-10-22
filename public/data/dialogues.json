@@ -6,6 +6,57 @@
    "Welcome to the Wayfarer Guild, Avelorn chapter. Survey, clear, report. I keep the reports.",
    "I walked with Aldric Venn's survey until my knee gave out. If you find his pages out east, bring them to me. All of them.",
    "Start in Dawnmeadow through the East Gate. The Mosskin there have turned mean since the Quickening."
+  ],
+  "stages": [
+   {
+    "after": "q_lum_hollowroot",
+    "lines": [
+     "A Choir sigil, bolted to the Warden's valves. And this page is Aldric's hand. \"Someone turned the valve.\" So he knew, even then.",
+     "Go east. Sylvara's woods are choking, and I'd wager the same hand is behind it."
+    ]
+   },
+   {
+    "after": "q_ver_heartwood",
+    "lines": [
+     "Another sigil, another page. Aldric writes that Ilvane said trees can't feel. Ilvane Thorne. His second on the survey.",
+     "She told us he fell into the Rift. I filed that report myself. Find out what else she lied about."
+    ]
+   },
+   {
+    "after": "q_sol_heliostat",
+    "lines": [
+     "\"All the light goes east.\" The mirrors, the water, the sap. Everything the Hearts make is being sent to the Gate.",
+     "The Signalmind's song is next. Marisol at Pearl Coast swears it gets louder every night."
+    ]
+   },
+   {
+    "after": "q_tha_drowned_relay",
+    "lines": [
+     "The machines went quiet for a whole day after the Signalmind fell. The first quiet day since the Quickening.",
+     "\"It's talking to the Gate.\" Aldric again. The Archive under Cinder Expanse holds Ysra Callow's warnings. We need them."
+    ]
+   },
+   {
+    "after": "q_cry_cryocore",
+    "lines": [
+     "Callow's warning: the Gate needs the six Hearts, and whoever stands in it becomes its voice. Ilvane means to stand in it.",
+     "Kiln Prime is forging something for her. Stop it before it's finished."
+    ]
+   },
+   {
+    "after": "q_emb_furnace_zero",
+    "lines": [
+     "Too late for the key, then. \"She is two days ahead of me.\" Aldric's last dated page, three years old.",
+     "Ser Aveline holds the camp at Meridian Gate. Take the Keysigil from the Executors and go down."
+    ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "His last page. He held the Gate shut for three years with a Guild ward and nothing else. I'll put his name on the wall myself.",
+     "The Sovereign will wake again. They all will. That's the Long Watch now, and you're the first name on its roster. Survey, clear, report."
+    ]
+   }
   ]
  },
  {
@@ -22,6 +73,15 @@
   "lines": [
    "Sit down, let me look at you. There. Good as new, and don't make me do it again today.",
    "Every camp on the road has one of my Hospice lanterns. Come back to one breathing."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "You came back breathing from the bottom of the world. Sit. That's an order from the Hospice.",
+     "Every lantern on the road burns a little brighter tonight. People know what you did."
+    ]
+   }
   ]
  },
  {
@@ -38,6 +98,22 @@
   "lines": [
    "Bring me materials and I'll make you something that keeps you alive.",
    "Copper gears? Craglets swallow them. And mind who you talk to in the Collegium. Not everyone with a lamp is on our side."
+  ],
+  "stages": [
+   {
+    "after": "q_lum_hollowroot",
+    "lines": [
+     "That sigil is Collegium work. Resonance keys: we made them to tune transit crystals. Someone took the design east.",
+     "Bring me materials and I'll make you something that keeps you alive. We're going to need it."
+    ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Collegium has cleared out every Choir lamp in Avelorn. Too late, but cleared.",
+     "Bring me materials. The Long Watch needs gear as much as any war."
+    ]
+   }
   ]
  },
  {
@@ -46,6 +122,15 @@
   "lines": [
    "East Gate. Dawnmeadow lies beyond, and past it every field in turn, each ten levels harder.",
    "If you see three dozen of anything chasing you, run for the town. The camps will not save you."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Wayfarer. I won't say much, but the road east feels lighter. Thank you.",
+     "The fields are still wild. Mind the herds, same as always."
+    ]
+   }
   ]
  },
  {
@@ -62,6 +147,15 @@
   "lines": [
    "My orchard's up there, rotting. I came down to find out why and stayed to run the lift.",
    "Going up? Avelorn or the orchard. Mind your head on the roots."
+  ],
+  "stages": [
+   {
+    "after": "q_lum_hollowroot",
+    "lines": [
+     "The water's running clear down here for the first time in years. My orchard might live.",
+     "Going up? Avelorn or the orchard. Mind your head on the roots."
+    ]
+   }
   ]
  },
  {
@@ -96,6 +190,15 @@
   "lines": [
    "Aldric Venn stood right where you're standing, seven years back, and asked me which way the wind was blowing. East, I said. It always is, out here.",
    "Moonbrook Vale's past me, Lv 11 and up. Or I can send you home."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "So Aldric held the Gate all that time. I told him the wind always blows east. Seems he blew back.",
+     "Moonbrook Vale's past me, Lv 11 and up. Or I can send you home."
+    ]
+   }
   ]
  },
  {
@@ -146,6 +249,15 @@
   "lines": [
    "The forest isn't dying on its own. The Heartwood Engine is breathing spores into it. I grafted that wood; I know its sickness.",
    "Newt slick for vital tonic, moth scale for focus. Field drops make better supplies than the merchant's, if you bring enough."
+  ],
+  "stages": [
+   {
+    "after": "q_ver_heartwood",
+    "lines": [
+     "The jade light came back over Elderroot last night. Faint, but back. I cried, a little.",
+     "Newt slick for vital tonic, moth scale for focus. Bring me what you find."
+    ]
+   }
   ]
  },
  {
@@ -154,6 +266,15 @@
   "lines": [
    "Ten generations of my family tended this Engine. It's sick, not wicked. Put it to sleep gently, if you can.",
    "Root lift's working. Avelorn, or back up to Elderroot Expanse? Don't touch the sap lines; they bite."
+  ],
+  "stages": [
+   {
+    "after": "q_ver_heartwood",
+    "lines": [
+     "It's sleeping. Breathing sap again, not spores. Thank you for putting it down gently.",
+     "Root lift's working. Avelorn, or back up to Elderroot Expanse?"
+    ]
+   }
   ]
  },
  {
@@ -238,6 +359,15 @@
   "lines": [
    "I polished lenses for the Duskhar observatory. Every mirror out there points east now. Someone turned them.",
    "Jackal pelts render down for vital tonic. Scarab glass makes a decent focus draught."
+  ],
+  "stages": [
+   {
+    "after": "q_sol_heliostat",
+    "lines": [
+     "The mirrors stopped turning east. For one noon the Wastes were only hot, not burning.",
+     "Jackal pelts render down for vital tonic. Scarab glass makes a decent focus draught."
+    ]
+   }
   ]
  },
  {
@@ -296,6 +426,15 @@
   "lines": [
    "Kelp, hopper tendon, medusa jelly: all useful, once you know how to boil it.",
    "We heard the Signalmind singing every night before we left. It sang louder the week before the Retreat."
+  ],
+  "stages": [
+   {
+    "after": "q_tha_drowned_relay",
+    "lines": [
+     "The sea's quiet at night now. No song. My mother would have liked to hear that.",
+     "Kelp, hopper tendon, medusa jelly: bring them and I'll boil you something useful."
+    ]
+   }
   ]
  },
  {
@@ -307,6 +446,17 @@
    "The Pearl Skates lying still in the mud are Gorged. Big as doors. The Guild pays a bounty on every one.",
    "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
    "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
+  ],
+  "stages": [
+   {
+    "after": "q_tha_drowned_relay",
+    "lines": [
+     "The song stopped. I put my ear to the water all night and heard only water. It'll start again, but for now: quiet.",
+     "The Pearl Skates are still Gorged and the bounty still stands.",
+     "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
+     "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
+    ]
+   }
   ]
  },
  {
@@ -346,6 +496,15 @@
   "lines": [
    "Archon Ysra Callow warned them not to open the Gate. Her warnings are in the Cryocore Archive, and the Curator won't let anyone read them.",
    "Hare haunch, mite gel, wisp dust. I'll make rations and tonics from your materials, cheaper than the merchant."
+  ],
+  "stages": [
+   {
+    "after": "q_cry_cryocore",
+    "lines": [
+     "You read Callow's warnings. Three hundred years late, but someone finally read them.",
+     "Hare haunch, mite gel, wisp dust. I'll make rations and tonics from your materials."
+    ]
+   }
   ]
  },
  {
@@ -365,6 +524,17 @@
    "Hoarfrost Behemoths that keep grazing while you walk past are Gorged. They hit back like avalanches. The Guild pays for them anyway.",
    "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
    "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
+  ],
+  "stages": [
+   {
+    "after": "q_cry_cryocore",
+    "lines": [
+     "A blue scarf. You found it in the Archive. He's not coming back, is he. Thank you for bringing it.",
+     "The Divide is no safer for it. Keep your blade close.",
+     "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
+     "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
+    ]
+   }
   ]
  },
  {
@@ -404,6 +574,15 @@
   "lines": [
    "Slag glands, vent bladders, cheap ash meat: I can turn your surplus into tonics for less than the shop asks.",
    "Don't sell me your Living Embers. Keep them. Kiln Prime is coming up out of the ground, and you'll want every one."
+  ],
+  "stages": [
+   {
+    "after": "q_emb_furnace_zero",
+    "lines": [
+     "The furnaces in the Expanse went cold for an hour after Kiln Prime fell. An hour. First time since the Sundering.",
+     "Keep your Living Embers. You'll need them at the Gate."
+    ]
+   }
   ]
  },
  {
@@ -454,6 +633,22 @@
   "lines": [
    "I studied under Ilvane Thorne. She was the best of us. If she's done what I think she's done, it's partly my fault for not seeing it.",
    "Blooms, wisp cores, lurk bristles: I make tonics from what the city leaves us. Hold on to your Lattice Nodes."
+  ],
+  "stages": [
+   {
+    "after": "q_cry_cryocore",
+    "lines": [
+     "\"Whoever stands in the Gate becomes its voice.\" Ilvane read that warning years ago. In my class. She asked me what it meant.",
+     "Blooms, wisp cores, lurk bristles: I make tonics from what the city leaves us."
+    ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "You heard her voice down there. Was it still her? Don't answer. I don't want to know.",
+     "Hold on to your Lattice Nodes. The Watch will need them."
+    ]
+   }
   ]
  },
  {
@@ -462,6 +657,15 @@
   "lines": [
    "Aldric Venn went down this lift three years ago. Alone. He told me to keep it running for whoever came next. That's you.",
    "Back up? Avelorn or the Gate. Don't look at the lattice too long. It looks back."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "You came back up. He never did. But you brought his page, and that's more than I hoped for.",
+     "Back up? Avelorn or the Gate. The Sovereign will wake again; I'll keep the lift for whoever goes down next."
+    ]
+   }
   ]
  },
  {
@@ -473,6 +677,17 @@
    "The Sparkwings that won't lift off the dishes are Gorged with static. Bring one down and you'll feel it in your teeth. Bounty's posted.",
    "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
    "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
+  ],
+  "stages": [
+   {
+    "after": "q_emb_furnace_zero",
+    "lines": [
+     "The key's gone, then. Ilvane has it, or had it. The Executors guard the rest at the Gate.",
+     "The Sparkwings are still Gorged on the dishes. Bounty's posted.",
+     "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
+     "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
+    ]
+   }
   ]
  },
  {
@@ -507,6 +722,26 @@
    "The Array Sentinels standing idle in the colonnade are Gorged and half asleep. They wake when struck. The bounty is the richest on the road.",
    "Meridian Gate runs from Lv 91 by this camp to Lv 99 in the east.",
    "Sentinel Colonnade (Lv 91-95): Array Sentinel, Glyph Swarm. Glyph Plaza (Lv 92-95): Glyph Swarm, Meridian Executor. Lattice Verge (Lv 95-95): Glyph Swarm."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_meridian_gate",
+    "lines": [
+     "You have the Keysigil. Then go down. Ferrin keeps the lift; he saw Aldric go. Bring him home, one way or another.",
+     "Gorged sentinels still stand in the colonnade. Bounty stands too.",
+     "Meridian Gate runs from Lv 91 by this camp to Lv 99 in the east.",
+     "Sentinel Colonnade (Lv 91-95): Array Sentinel, Glyph Swarm. Glyph Plaza (Lv 92-95): Glyph Swarm, Meridian Executor. Lattice Verge (Lv 95-95): Glyph Swarm."
+    ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "My father says the Long Watch starts here, at this camp. I asked to keep it. Someone should be here when you come back.",
+     "The Executors will gather again. So will the glyphs. We'll be ready.",
+     "Meridian Gate runs from Lv 91 by this camp to Lv 99 in the east.",
+     "Sentinel Colonnade (Lv 91-95): Array Sentinel, Glyph Swarm. Glyph Plaza (Lv 92-95): Glyph Swarm, Meridian Executor. Lattice Verge (Lv 95-95): Glyph Swarm."
+    ]
+   }
   ]
  },
  {

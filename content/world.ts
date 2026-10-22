@@ -12,7 +12,7 @@
 import { decodeWalk, type DialogueDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
 import { bakeLayout, shapeContains } from "./layout";
 import { BOUNTY } from "./model";
-import { DUNGEON_ZONE_NOTE, ECOLOGY, FIELD_CAST, QUEST_SUMMARY, TOWN_CAST } from "./lore";
+import { DUNGEON_ZONE_NOTE, ECOLOGY, FIELD_CAST, QUEST_SUMMARY, STORY_STAGES, TOWN_CAST } from "./lore";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
 
 export const HUB = "lum_town_01";
@@ -454,6 +454,8 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
     return d.npcs.find((n) => n.role === "scout")?.id ?? d.npcs[0].id;
   };
 
+  const people = new Set([...newMaps.values()].flatMap(({ design }) => design.npcs.map((n) => n.id)));
+  for (const id of Object.keys(STORY_STAGES)) if (!people.has(id)) throw new Error(`lore.ts STORY_STAGES: no NPC ${id} in the world`);
   return regions.map((r) => {
     const quests = r.quests.map((q0) => {
       const q = structuredClone(q0);
@@ -485,7 +487,13 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
     const dialogues = [
       ...r.dialogues.filter((d) => kept.has(d.npc_id) && !generated.has(d.id)).map((d) => (TOWN_CAST[d.npc_id] ? { ...d, lines: TOWN_CAST[d.npc_id].lines } : d)),
       ...fieldsHere.flatMap((f) => fieldDialogues(f, look, FIELDS[FIELDS.indexOf(f) + 1])),
-    ];
+    ].map((d) => {
+      // Story stages (lore.ts); a scout keeps its zone guide after them.
+      const stages = STORY_STAGES[d.npc_id];
+      if (!stages) return d;
+      const guide = d.npc_id.endsWith("_scout") ? d.lines.slice(-2) : [];
+      return { ...d, stages: stages.map((st) => ({ after: st.after, lines: [...st.lines, ...guide] })) };
+    });
     // Each field's bounty is passive; every other monster attacks on sight.
     const bounties = new Set(FIELDS.map((f) => f.bounty));
     // Their ecology follows (lore.ts ECOLOGY), and the bounties are Gorged.

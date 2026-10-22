@@ -393,6 +393,9 @@ export interface DialogueDef {
   id: string;
   npc_id: string;
   lines: string[];
+  /** Story stages: once the player has finished `after`, these lines replace `lines`
+   * (the latest finished stage in this order speaks). */
+  stages?: { after: string; lines: string[] }[];
 }
 
 export type SkillShape = "circle" | "cone" | "line" | "ground" | "pull" | "taunt" | "single" | "mobility" | "ally";

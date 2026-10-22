@@ -370,7 +370,7 @@ export const QUEST_SUMMARY: Record<string, string> = {
   q_cry_prism_pass: "Break the Archive Keepers' alarm in the Drowned Archive and stop the Glacier Juggernauts of Squall Point that crush caravans.",
   q_cry_mirror_ice: "Kill the Mirrorshades that mend everything round them, then claim the bounty on the Gorged Hoarfrost Behemoths. Silvered shards go to the lens researchers.",
   q_cry_white_circuit: "Clear the Cryo Sentries and the specters seeping from the vents. The breach leads to the Archive door.",
-  q_cry_cryocore: "Chapter 5. Archon Ysra Callow's warnings lie frozen in the Archive. Silence the Cryocore Curator beneath Cinder Expanse and report to Wenna Lark.",
+  q_cry_cryocore: "Chapter 5. Archon Ysra Callow's warnings lie frozen in the Archive, and Sigrun Vale's brother went in after them. Silence the Cryocore Curator beneath Cinder Expanse and report to Wenna Lark.",
   q_emb_intro: "The Ashcrawler herds of Frostfire Divide's Ash Flats charge anyone on the ash since the Quickening. Thin them.",
   q_emb_slag_pools: "Break the Slagback Toad pools; their warts are the base of the Cindervale tonic.",
   q_emb_cinder_track: "Visit Frostfire Divide, then clear the Cinder Imp horde: three full trains through the hollows.",
@@ -486,4 +486,153 @@ export const DUNGEON_ZONE_NOTE: Record<string, string> = {
   "noc_dun_01/The Loom": "Weavers at work on the short route to the Sovereign; pull them back into the corridor.",
   "noc_dun_01/Spindle Hall": "Weavers in the long machine hall on the far route; the best Lattice Node farm.",
   "noc_dun_01/Sovereign's Chamber": "The Lattice Sovereign, speaking with Ilvane Thorne's voice, and Aldric Venn's failing ward. The Long Watch keeps it silenced.",
+};
+
+/** What people say as the story moves on: each stage replaces the NPC's lines once the
+ * player has finished its quest. Stages run in story order; the latest finished one speaks. */
+export const STORY_STAGES: Record<string, { after: string; lines: string[] }[]> = {
+  npc_lum_guild_registrar: [
+    { after: "q_lum_hollowroot", lines: [
+      "A Choir sigil, bolted to the Warden's valves. And this page is Aldric's hand. \"Someone turned the valve.\" So he knew, even then.",
+      "Go east. Sylvara's woods are choking, and I'd wager the same hand is behind it.",
+    ] },
+    { after: "q_ver_heartwood", lines: [
+      "Another sigil, another page. Aldric writes that Ilvane said trees can't feel. Ilvane Thorne. His second on the survey.",
+      "She told us he fell into the Rift. I filed that report myself. Find out what else she lied about.",
+    ] },
+    { after: "q_sol_heliostat", lines: [
+      "\"All the light goes east.\" The mirrors, the water, the sap. Everything the Hearts make is being sent to the Gate.",
+      "The Signalmind's song is next. Marisol at Pearl Coast swears it gets louder every night.",
+    ] },
+    { after: "q_tha_drowned_relay", lines: [
+      "The machines went quiet for a whole day after the Signalmind fell. The first quiet day since the Quickening.",
+      "\"It's talking to the Gate.\" Aldric again. The Archive under Cinder Expanse holds Ysra Callow's warnings. We need them.",
+    ] },
+    { after: "q_cry_cryocore", lines: [
+      "Callow's warning: the Gate needs the six Hearts, and whoever stands in it becomes its voice. Ilvane means to stand in it.",
+      "Kiln Prime is forging something for her. Stop it before it's finished.",
+    ] },
+    { after: "q_emb_furnace_zero", lines: [
+      "Too late for the key, then. \"She is two days ahead of me.\" Aldric's last dated page, three years old.",
+      "Ser Aveline holds the camp at Meridian Gate. Take the Keysigil from the Executors and go down.",
+    ] },
+    { after: "q_noc_lattice_heart", lines: [
+      "His last page. He held the Gate shut for three years with a Guild ward and nothing else. I'll put his name on the wall myself.",
+      "The Sovereign will wake again. They all will. That's the Long Watch now, and you're the first name on its roster. Survey, clear, report.",
+    ] },
+  ],
+  npc_lum_craftsman: [
+    { after: "q_lum_hollowroot", lines: [
+      "That sigil is Collegium work. Resonance keys: we made them to tune transit crystals. Someone took the design east.",
+      "Bring me materials and I'll make you something that keeps you alive. We're going to need it.",
+    ] },
+    { after: "q_noc_lattice_heart", lines: [
+      "The Collegium has cleared out every Choir lamp in Avelorn. Too late, but cleared.",
+      "Bring me materials. The Long Watch needs gear as much as any war.",
+    ] },
+  ],
+  npc_lum_healer: [
+    { after: "q_noc_lattice_heart", lines: [
+      "You came back breathing from the bottom of the world. Sit. That's an order from the Hospice.",
+      "Every lantern on the road burns a little brighter tonight. People know what you did.",
+    ] },
+  ],
+  npc_lum_east_gate_guard: [
+    { after: "q_noc_lattice_heart", lines: [
+      "Wayfarer. I won't say much, but the road east feels lighter. Thank you.",
+      "The fields are still wild. Mind the herds, same as always.",
+    ] },
+  ],
+  npc_lum_dawnmeadow_post: [
+    { after: "q_noc_lattice_heart", lines: [
+      "So Aldric held the Gate all that time. I told him the wind always blows east. Seems he blew back.",
+      "Moonbrook Vale's past me, Lv 11 and up. Or I can send you home.",
+    ] },
+  ],
+  npc_lum_hollowroot_lift: [
+    { after: "q_lum_hollowroot", lines: [
+      "The water's running clear down here for the first time in years. My orchard might live.",
+      "Going up? Avelorn or the orchard. Mind your head on the roots.",
+    ] },
+  ],
+  npc_ver_heartwood_keeper: [
+    { after: "q_ver_heartwood", lines: [
+      "It's sleeping. Breathing sap again, not spores. Thank you for putting it down gently.",
+      "Root lift's working. Avelorn, or back up to Elderroot Expanse?",
+    ] },
+  ],
+  npc_ver_craftsman: [
+    { after: "q_ver_heartwood", lines: [
+      "The jade light came back over Elderroot last night. Faint, but back. I cried, a little.",
+      "Newt slick for vital tonic, moth scale for focus. Bring me what you find.",
+    ] },
+  ],
+  npc_sol_craftsman: [
+    { after: "q_sol_heliostat", lines: [
+      "The mirrors stopped turning east. For one noon the Wastes were only hot, not burning.",
+      "Jackal pelts render down for vital tonic. Scarab glass makes a decent focus draught.",
+    ] },
+  ],
+  npc_tha_craftsman: [
+    { after: "q_tha_drowned_relay", lines: [
+      "The sea's quiet at night now. No song. My mother would have liked to hear that.",
+      "Kelp, hopper tendon, medusa jelly: bring them and I'll boil you something useful.",
+    ] },
+  ],
+  npc_tha_pearl_coast_scout: [
+    { after: "q_tha_drowned_relay", lines: [
+      "The song stopped. I put my ear to the water all night and heard only water. It'll start again, but for now: quiet.",
+      "The Pearl Skates are still Gorged and the bounty still stands.",
+    ] },
+  ],
+  npc_cry_craftsman: [
+    { after: "q_cry_cryocore", lines: [
+      "You read Callow's warnings. Three hundred years late, but someone finally read them.",
+      "Hare haunch, mite gel, wisp dust. I'll make rations and tonics from your materials.",
+    ] },
+  ],
+  npc_cry_frostfire_divide_scout: [
+    { after: "q_cry_cryocore", lines: [
+      "A blue scarf. You found it in the Archive. He's not coming back, is he. Thank you for bringing it.",
+      "The Divide is no safer for it. Keep your blade close.",
+    ] },
+  ],
+  npc_emb_craftsman: [
+    { after: "q_emb_furnace_zero", lines: [
+      "The furnaces in the Expanse went cold for an hour after Kiln Prime fell. An hour. First time since the Sundering.",
+      "Keep your Living Embers. You'll need them at the Gate.",
+    ] },
+  ],
+  npc_noc_veil_rift_scout: [
+    { after: "q_emb_furnace_zero", lines: [
+      "The key's gone, then. Ilvane has it, or had it. The Executors guard the rest at the Gate.",
+      "The Sparkwings are still Gorged on the dishes. Bounty's posted.",
+    ] },
+  ],
+  npc_noc_craftsman: [
+    { after: "q_cry_cryocore", lines: [
+      "\"Whoever stands in the Gate becomes its voice.\" Ilvane read that warning years ago. In my class. She asked me what it meant.",
+      "Blooms, wisp cores, lurk bristles: I make tonics from what the city leaves us.",
+    ] },
+    { after: "q_noc_lattice_heart", lines: [
+      "You heard her voice down there. Was it still her? Don't answer. I don't want to know.",
+      "Hold on to your Lattice Nodes. The Watch will need them.",
+    ] },
+  ],
+  npc_noc_meridian_gate_scout: [
+    { after: "q_noc_meridian_gate", lines: [
+      "You have the Keysigil. Then go down. Ferrin keeps the lift; he saw Aldric go. Bring him home, one way or another.",
+      "Gorged sentinels still stand in the colonnade. Bounty stands too.",
+    ] },
+    { after: "q_noc_lattice_heart", lines: [
+      "My father says the Long Watch starts here, at this camp. I asked to keep it. Someone should be here when you come back.",
+      "The Executors will gather again. So will the glyphs. We'll be ready.",
+    ] },
+  ],
+  npc_noc_heart_lift: [
+    { after: "q_noc_lattice_heart", lines: [
+      "You came back up. He never did. But you brought his page, and that's more than I hoped for.",
+      "Back up? Avelorn or the Gate. The Sovereign will wake again; I'll keep the lift for whoever goes down next.",
+    ] },
+  ],
 };

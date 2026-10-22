@@ -637,11 +637,19 @@ function checkLore(b: ContentBundle) {
     if (n.name === n.title || roleWords.test(n.name) || b.maps.some((m) => n.name.startsWith(m.name + " "))) report("error", "lore.npc_name", n.id, `"${n.name}" is a role, not a person's name`);
   }
   for (const m of b.maps) if (!m.intro) report("error", "lore.map_intro", m.id, "no intro shown on entering the map");
+  // Story stages: a real quest each, in the order the story reaches them.
+  const questIds = new Set(b.quests.map((q) => q.id));
+  const storyOrder = (id: string) => b.quests.find((q) => q.id === id)?.min_level ?? -1;
+  for (const d of b.dialogues) (d.stages ?? []).forEach((st, i, all) => {
+    if (!questIds.has(st.after)) report("error", "lore.stage", d.id, `stage after unknown quest ${st.after}`);
+    if (i > 0 && storyOrder(st.after) < storyOrder(all[i - 1].after)) report("error", "lore.stage", d.id, `stage after ${st.after} comes before ${all[i - 1].after} in the story`);
+    if (!st.lines.length) report("error", "lore.stage", d.id, `stage after ${st.after} says nothing`);
+  });
   // Nothing the player reads may send them to a map that no longer exists.
   const said: [string, string][] = [
     ...b.monsters.flatMap((m): [string, string][] => [[`monsters/${m.id}`, m.ecology], [`monsters/${m.id}`, m.story ?? ""], ...(m.habitat ?? []).map((h): [string, string] => [`monsters/${m.id}`, h.note])]),
     ...b.quests.map((q): [string, string] => [`quests/${q.id}`, q.summary]),
-    ...b.dialogues.map((d): [string, string] => [`dialogues/${d.id}`, d.lines.join(" ")]),
+    ...b.dialogues.map((d): [string, string] => [`dialogues/${d.id}`, [...d.lines, ...(d.stages ?? []).flatMap((st) => st.lines)].join(" ")]),
     ...b.maps.map((m): [string, string] => [`maps/${m.id}`, m.intro ?? ""]),
     ...b.items.map((i): [string, string] => [`items/${i.id}`, i.description ?? ""]),
   ];
