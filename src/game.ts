@@ -5,7 +5,7 @@ import { decodeWalk } from "./data/schema";
 import type { Connection } from "./net/connection";
 import { EntState, type CombatEvent, type EntityAdd, type MsgOf, type ServerMsg } from "./net/protocol";
 import { IsoCamera } from "./render/camera";
-import { COLORS as SKILL_COLORS, Fx, RARITY_COLORS, TOTEM_COLORS } from "./render/fx";
+import { COLORS as SKILL_COLORS, ELEMENT_COLORS, Fx, RARITY_COLORS, TOTEM_COLORS } from "./render/fx";
 import { wayfarerSprite } from "./render/paperDoll";
 import { skillAnimation } from "./render/combatAnimation";
 import { SpriteActor } from "./render/spriteActor";
@@ -365,7 +365,24 @@ export class Game {
     // Multi-hit skills (RO style): part k of a hit shows k × hit_ms after the
     // first (index in flags bits 8+), and deaths wait for the last part.
     const step = s?.hits && s.hits > 1 ? s.hit_ms ?? 180 : 0;
-    for (const [id, dmg, flags] of ev.hits) {
+    // A ranged monster's attack: a dart flies to each target, and the hit
+    // shows when it lands (a monster's look is its monster id).
+    const shooter = !s && src?.kind === "m" ? this.c.monsters.get(src.look) : undefined;
+    let shotMs = 0;
+    if (src && shooter && shooter.attack_range > 1.5) {
+      const from = src.actor.root.position.clone().addScaledVector(UP, src.actor.height * 0.55);
+      for (const [id, dmg, flags] of ev.hits) {
+        const t = this.ents.get(id);
+        if (!t) continue;
+        const to = t.pos.clone().addScaledVector(UP, t.actor.height * 0.5);
+        const ms = THREE.MathUtils.clamp(from.distanceTo(to) * 55, 140, 380);
+        this.fx.projectile(from, to, ELEMENT_COLORS[shooter.element] ?? 0xffffff, ms);
+        t.parts++;
+        setTimeout(() => { t.parts--; this.showHit(ev, id, dmg, flags); }, ms);
+        shotMs = Math.max(shotMs, ms);
+      }
+    }
+    for (const [id, dmg, flags] of shotMs ? [] : ev.hits) {
       const k = flags >> 8;
       const combo = step ? `${ev.cast}:${id}` : undefined;
       const t = k > 0 && step ? this.ents.get(id) : undefined;
@@ -374,7 +391,7 @@ export class Game {
         setTimeout(() => { t.parts--; this.showHit(ev, id, dmg, flags, combo); }, k * step);
       } else this.showHit(ev, id, dmg, flags, combo);
     }
-    const dieAfter = step * ((s?.hits ?? 1) - 1);
+    const dieAfter = Math.max(step * ((s?.hits ?? 1) - 1), shotMs);
     // Each target's combo counter (counting up with the parts) floats off after the last one.
     if (step) {
       const ids = new Set(ev.hits.map(([id]) => id));

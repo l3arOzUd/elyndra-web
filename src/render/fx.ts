@@ -17,16 +17,24 @@ export const TOTEM_COLORS: Record<string, number> = {
   surge: 0x50a0ff, bulwark: 0xb4b4c8, aegis: 0x6edcff, mending: 0x5adc6e, gale: 0xa0f0d2, hunt: 0xd2963c,
   echo_slaughter: 0xaa283c, echo_fury: 0xffd246, echo_spite: 0x6ec85a,
 };
+/** Ranged monster shots, by the monster's element. */
+export const ELEMENT_COLORS: Record<string, number> = {
+  fire: 0xff7a2e, water: 0x5fd0ff, ice: 0xbfefff, nature: 0x9be05a, earth: 0xd0a35a, wind: 0xd8fff0, shadow: 0xb070ff,
+};
 export const RARITY_COLORS: Record<string, number> = { normal: 0xd9b46a, magic: 0x6d9ed0, rare: 0xe0c35a, relic: 0xe07a3c, unique: 0xc9853a };
 
 interface Live {
   obj: THREE.Mesh; age: number; life: number; grow: number;
-  kind: "tele" | "burst" | "aura" | "shrink" | "field" | "flash" | "beam" | "spark";
+  kind: "tele" | "burst" | "aura" | "shrink" | "field" | "flash" | "beam" | "spark" | "bolt";
   /** ms before it shows (staggered rings). */
   delay?: number;
   /** spark velocity, cells per second. */
   v?: [number, number, number];
+  /** bolt: flies from `from` to `to`, rising `arc` cells at mid-flight. */
+  from?: THREE.Vector3; to?: THREE.Vector3; arc?: number;
 }
+
+const tmp = new THREE.Vector3();
 
 // Shared across maps. Each effect owns its material, not this reusable texture.
 let cleavingTexture: THREE.Texture | undefined;
@@ -187,6 +195,30 @@ export class Fx {
     this.add(streak, "flash", 450);
   }
 
+  /**
+   * A ranged monster's shot: a glowing dart from `from` to `to` over `ms`
+   * (a shallow arc), then a small splash ring where it lands.
+   */
+  projectile(from: THREE.Vector3, to: THREE.Vector3, color: number, ms: number) {
+    const dart = new THREE.Mesh(
+      new THREE.CapsuleGeometry(0.07, 0.36, 2, 6).rotateX(Math.PI / 2),
+      new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 1, depthWrite: false, blending: THREE.AdditiveBlending }),
+    );
+    const core = new THREE.Mesh(new THREE.SphereGeometry(0.06, 6, 4), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+    core.position.z = 0.16;
+    dart.add(core);
+    dart.position.copy(from);
+    this.scene.add(dart);
+    const arc = Math.min(1.2, from.distanceTo(to) * 0.12);
+    this.live.push({ obj: dart, age: 0, life: ms, grow: 0, kind: "bolt", from: from.clone(), to: to.clone(), arc });
+    const ring = new THREE.Mesh(new THREE.RingGeometry(0.55, 1, 28).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.9, depthWrite: false }));
+    ring.position.set(to.x, 0.09, to.z);
+    ring.scale.setScalar(0.3);
+    ring.visible = false;
+    this.scene.add(ring);
+    this.live.push({ obj: ring, age: 0, life: 300, grow: 0.7, kind: "burst", delay: ms });
+  }
+
   /** The hit: an expanding ring in the skill's colour. */
   burst(s: SkillDef | undefined, x: number, z: number) {
     const color = s ? COLORS[s.id] ?? 0xffffff : 0xffffff;
@@ -276,6 +308,12 @@ export class Fx {
         l.v![1] *= 0.985;
         l.obj.rotation.y += s * 6; l.obj.rotation.x += s * 3;
         mat.opacity = t < 0.6 ? 1 : 1 - (t - 0.6) / 0.4;
+      } else if (l.kind === "bolt") {
+        const k = Math.min(1, t);
+        tmp.lerpVectors(l.from!, l.to!, k);
+        tmp.y += Math.sin(k * Math.PI) * l.arc!;
+        l.obj.lookAt(tmp);
+        l.obj.position.copy(tmp);
       } else if (l.kind === "aura") {
         l.obj.scale.set(1 + t * 0.3, 0.4 + t * 0.9, 1 + t * 0.3);
         mat.opacity = 0.45 * (1 - t);
@@ -285,8 +323,7 @@ export class Fx {
       }
       if (t >= 1) {
         l.obj.removeFromParent();
-        l.obj.geometry.dispose();
-        mat.dispose();
+        l.obj.traverse((o) => { if (o instanceof THREE.Mesh) { o.geometry.dispose(); (o.material as THREE.Material).dispose(); } });
         return false;
       }
       return true;
@@ -294,7 +331,7 @@ export class Fx {
   }
 
   clear() {
-    for (const l of this.live) { l.obj.removeFromParent(); l.obj.geometry.dispose(); (l.obj.material as THREE.Material).dispose(); }
+    for (const l of this.live) { l.obj.removeFromParent(); l.obj.traverse((o) => { if (o instanceof THREE.Mesh) { o.geometry.dispose(); (o.material as THREE.Material).dispose(); } }); }
     this.live = [];
   }
 }
