@@ -215,10 +215,12 @@ export async function applyPaintedTerrain(
   const road = ROAD_PAINT[roadKindOf(layout)] ?? ROAD_PAINT.dirt!, stoneRoad = ROAD_PAINT.stone!;
   const trampled = layout.ground === "snow" || layout.ground === "sand" ? GROUND_PAINT[layout.ground] : ROAD_PAINT.dirt!;
   // A made-for-purpose texture is used as painted: no tint, its own scale.
-  const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled].map((r) => (r.art && envArt.textures.has(r.art) ? paint(r.tex, [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, ART_SCALE, r.art) : r));
+  const meadow = paint("grass_dry", [1, 1, 1], 0, 0, 9, "grass_alt");
+  const forest = paint("moss", [0.84, 0.84, 0.84], 0, 0, 7, "moss");
+  const plazaPaint = paint("plaza_tile", [1, 1, 1], 0, 0, 8, "paving");
+  const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled, meadow, forest, plazaPaint].map((r) => (r.art && envArt.textures.has(r.art) ? paint(r.tex, [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, ART_SCALE, r.art) : r));
   const maps = recipes.map((r) => tile(r.art && envArt.textures.has(r.art) ? r.art : r.tex));
-  const dry = tile(envArt.textures.has("grass_alt") ? "grass_alt" : "grass_dry"), moss = tile("moss"), plaza = tile("plaza_tile");
-  if (maps.every(Boolean) && dry && moss && plaza) {
+  if (maps.every(Boolean)) {
     // DataTextures avoid canvas alpha premultiplication: alpha is a weight too.
     const pixels = terrainBlendMask(layout);
     const maskOf = (data: Uint8Array) => {
@@ -234,7 +236,7 @@ export async function applyPaintedTerrain(
         terrainSize: { value: new THREE.Vector2(layout.width, layout.height) },
         terrainMask: { value: maskOf(pixels.data) }, terrainZones: { value: maskOf(pixels.zones) },
         terrainZoneA: { value: maps[1] }, terrainZoneB: { value: maps[2] }, terrainRoad: { value: maps[3] }, terrainStone: { value: maps[4] }, terrainTrampled: { value: maps[5] },
-        terrainDry: { value: dry }, terrainMoss: { value: moss }, terrainPlaza: { value: plaza },
+        terrainDry: { value: maps[6] }, terrainMoss: { value: maps[7] }, terrainPlaza: { value: maps[8] },
         terrainRecipes: { value: recipes.map(recipe) }, terrainTints: { value: recipes.map(tint) },
         // The old dry grass reads as olive mud on a painted ground; only its own alt mixes in.
         terrainMeadow: { value: envArt.textures.has(recipes[0].art ?? "") && !envArt.textures.has("grass_alt") ? 0 : MEADOW[layout.ground] ?? 0 },
@@ -244,8 +246,8 @@ export async function applyPaintedTerrain(
         varying vec2 vTerrainUv;
         uniform vec2 terrainSize;
         uniform sampler2D terrainMask, terrainZones, terrainZoneA, terrainZoneB, terrainRoad, terrainStone, terrainTrampled, terrainDry, terrainMoss, terrainPlaza;
-        uniform vec4 terrainRecipes[6];
-        uniform vec3 terrainTints[6];
+        uniform vec4 terrainRecipes[9];
+        uniform vec3 terrainTints[9];
         uniform float terrainMeadow;
         ${PAINT_GLSL}
       ${shader.fragmentShader}`.replace("#include <map_fragment>", `
@@ -259,10 +261,10 @@ export async function applyPaintedTerrain(
         float grain = terrainNoise(world * 1.9) - 0.5;
         vec3 terrain = terrainPaint(map, world, terrainRecipes[0], terrainTints[0]);
         float meadow = smoothstep(0.35, 0.85, terrainNoise(world / 18.0)) * terrainMeadow;
-        terrain = mix(terrain, texture2D(terrainDry, world / 9.0).rgb, meadow);
+        terrain = mix(terrain, terrainPaint(terrainDry, world, terrainRecipes[6], terrainTints[6]), meadow);
         terrain = mix(terrain, terrainPaint(terrainZoneA, world, terrainRecipes[1], terrainTints[1]), smoothstep(0.3, 0.7, zones.r + grain * 0.2));
         terrain = mix(terrain, terrainPaint(terrainZoneB, world, terrainRecipes[2], terrainTints[2]), smoothstep(0.3, 0.7, zones.g + grain * 0.2));
-        terrain = mix(terrain, texture2D(terrainMoss, world / 7.0).rgb * 0.84, weights.g);
+        terrain = mix(terrain, terrainPaint(terrainMoss, world, terrainRecipes[7], terrainTints[7]), weights.g);
         terrain = mix(terrain, terrainPaint(terrainTrampled, world, terrainRecipes[5], terrainTints[5]), smoothstep(0.15, 0.85, zones.b + grain * 0.35) * 0.8);
         // Roads: a ragged edge and a darker painted rim on both sides of it.
         float roadW = smoothstep(0.38, 0.62, weights.r + grain * 0.28);
@@ -270,14 +272,14 @@ export async function applyPaintedTerrain(
         float rim = max(smoothstep(0.08, 0.4, weights.r) * (1.0 - roadW), smoothstep(0.08, 0.4, weights.b) * (1.0 - stoneW));
         terrain = mix(terrain, terrainPaint(terrainRoad, world, terrainRecipes[3], terrainTints[3]), roadW);
         terrain = mix(terrain, terrainPaint(terrainStone, world, terrainRecipes[4], terrainTints[4]), stoneW);
-        terrain = mix(terrain, texture2D(terrainPlaza, world / 8.0).rgb, weights.a);
+        terrain = mix(terrain, terrainPaint(terrainPlaza, world, terrainRecipes[8], terrainTints[8]), weights.a);
         terrain *= 1.0 - rim * 0.22;
         // Broad light and shade, as a painter would wash over a large field.
         terrain *= mix(0.88, 1.06, terrainNoise(world / 41.0)) * mix(0.95, 1.03, terrainNoise(world / 12.0));
         diffuseColor.rgb *= terrain;
       `);
     };
-    ground.customProgramCacheKey = () => "painted-ground-v2";
+    ground.customProgramCacheKey = () => "painted-ground-v3";
     ground.needsUpdate = true;
   }
   let waterMask: THREE.CanvasTexture | undefined;

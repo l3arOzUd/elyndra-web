@@ -1,13 +1,34 @@
 {
  "sprites": {
   "any": {
+   "bush": [
+    "bush_1.png",
+    "bush_2.png",
+    "bush_3.png"
+   ],
+   "flowers": [
+    "flowers_1.png",
+    "flowers_2.png",
+    "flowers_3.png"
+   ],
+   "rock": [
+    "rock_1.png",
+    "rock_2.png",
+    "rock_3.png"
+   ],
    "tree": [
     "tree_1.png"
+   ],
+   "tuft": [
+    "tuft_1.png",
+    "tuft_2.png",
+    "tuft_3.png"
    ]
   }
  },
  "textures": [
   "grass",
+  "grass_alt",
   "path"
  ]
 }
