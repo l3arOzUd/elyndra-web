@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { loadContent, loadLayout } from "../data/content";
 import { IsoCamera } from "../render/camera";
+import { loadEnvArt } from "../render/envArt";
 import { animate, buildMap } from "../render/terrain";
 import { buildHeroSprite } from "../render/heroSprite";
 import { SpriteActor } from "../render/spriteActor";
@@ -32,6 +33,7 @@ const hero = new SpriteActor(buildHeroSprite(), {});
 scene.add(hero.root);
 
 const content = await loadContent();
+await loadEnvArt();
 const mapIds = [...content.maps.keys()];
 let built: ReturnType<typeof buildMap> | null = null;
 let mapId = "";

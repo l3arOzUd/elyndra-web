@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import type { BlockerKind, MapLayout, Shape } from "../data/schema";
+import { envArt } from "./envArt";
 
 // Painted ground for every map. The ten painted Lumeris textures are the
 // only ground art, so every ground type is a recipe over them (texture,
@@ -17,28 +18,34 @@ type Ground = MapLayout["ground"];
 type RoadKind = MapLayout["roads"][number]["kind"];
 export interface TerrainSurface { kind: BlockerKind; geometry: THREE.BufferGeometry; material: THREE.MeshLambertMaterial | THREE.MeshPhongMaterial }
 
-/** How a painted texture becomes a ground: tint × mix(texture, grey, desat) + lift, at scale cells a repeat. */
-interface Paint { tex: Tile; tint: [number, number, number]; desat: number; lift: number; scale: number }
-const paint = (tex: Tile, tint: [number, number, number] = [1, 1, 1], desat = 0, lift = 0, scale = 8): Paint => ({ tex, tint, desat, lift, scale });
+/**
+ * How a painted texture becomes a ground: tint × mix(texture, grey, desat) + lift, at scale
+ * cells a repeat. art names the made-for-purpose texture (textures/env/<art>.png) that,
+ * when present, is used as it is instead.
+ */
+interface Paint { tex: Tile; tint: [number, number, number]; desat: number; lift: number; scale: number; art?: string }
+const paint = (tex: Tile, tint: [number, number, number] = [1, 1, 1], desat = 0, lift = 0, scale = 8, art?: string): Paint => ({ tex, tint, desat, lift, scale, art });
+/** Cells a made-for-purpose ground texture spans per repeat. */
+const ART_SCALE = 10;
 
 const GROUND_PAINT: Record<Ground, Paint> = {
-  grass: paint("grass"),
-  moss: paint("moss", [0.96, 1, 0.94], 0, 0, 7),
-  sand: paint("dirt_path", [2.2, 1.8, 1.07], 0.5, 0.35, 11),
-  snow: paint("dirt_path", [0.95, 1, 1.1], 0.95, 1.5, 12),
-  ash: paint("cave_floor", [1.35, 1.22, 1.15], 0.5, 0.16, 8),
-  stone: paint("cobblestone", [1, 1, 1], 0, 0, 5),
-  shore: paint("grass_dry", [2, 1.8, 1.3], 0.6, 0.3, 9),
-  metal: paint("cave_floor", [1.4, 1.48, 1.7], 0.6, 0.18, 7),
-  cave: paint("cave_floor"),
+  grass: paint("grass", [1, 1, 1], 0, 0, 8, "grass"),
+  moss: paint("moss", [0.96, 1, 0.94], 0, 0, 7, "moss"),
+  sand: paint("dirt_path", [2.2, 1.8, 1.07], 0.5, 0.35, 11, "sand"),
+  snow: paint("dirt_path", [0.95, 1, 1.1], 0.95, 1.5, 12, "snow"),
+  ash: paint("cave_floor", [1.35, 1.22, 1.15], 0.5, 0.16, 8, "ash"),
+  stone: paint("cobblestone", [1, 1, 1], 0, 0, 5, "paving"),
+  shore: paint("grass_dry", [2, 1.8, 1.3], 0.6, 0.3, 9, "shore"),
+  metal: paint("cave_floor", [1.4, 1.48, 1.7], 0.6, 0.18, 7, "metal"),
+  cave: paint("cave_floor", [1, 1, 1], 0, 0, 8, "cave"),
 };
 
 const ROAD_PAINT: Partial<Record<RoadKind, Paint>> = {
-  dirt: paint("dirt_path", [1, 1, 1], 0, 0, 6),
-  stone: paint("cobblestone", [1, 1, 1], 0, 0, 5),
-  brass: paint("cobblestone", [1.16, 0.96, 0.64], 0.35, 0.02, 5),
-  ice: paint("dirt_path", [0.92, 1.0, 1.12], 0.95, 1.0, 7),
-  obsidian: paint("cave_floor", [0.56, 0.5, 0.62], 0.3, 0, 6),
+  dirt: paint("dirt_path", [1, 1, 1], 0, 0, 6, "path"),
+  stone: paint("cobblestone", [1, 1, 1], 0, 0, 5, "path_stone"),
+  brass: paint("cobblestone", [1.16, 0.96, 0.64], 0.35, 0.02, 5, "path_brass"),
+  ice: paint("dirt_path", [0.92, 1.0, 1.12], 0.95, 1.0, 7, "path_snow"),
+  obsidian: paint("cave_floor", [0.56, 0.5, 0.62], 0.3, 0, 6, "path_obsidian"),
 };
 
 /** Grounds that get a little dry-grass meadow variation. */
@@ -190,10 +197,10 @@ export async function applyPaintedTerrain(
   const loaded = await Promise.all(PAINTED_TILES.map(async name => [name, await loadImage(name)] as const));
   if (disposed()) return;
   const sources = new Map(loaded);
-  const textures = new Map<Tile, THREE.Texture>();
-  const tile = (name: Tile) => {
+  const textures = new Map<string, THREE.Texture>();
+  const tile = (name: string) => {
     const existing = textures.get(name); if (existing) return existing;
-    const image = sources.get(name); if (!image) return undefined;
+    const image = envArt.textures.get(name) ?? sources.get(name as Tile); if (!image) return undefined;
     const texture = track(new THREE.Texture(image));
     texture.colorSpace = THREE.SRGBColorSpace;
     // The art is seamless: plain repeats (mirroring made kaleidoscopes on roads).
@@ -205,9 +212,10 @@ export async function applyPaintedTerrain(
   const base = GROUND_PAINT[layout.ground], zoneA = GROUND_PAINT[zones[0] ?? layout.ground], zoneB = GROUND_PAINT[zones[1] ?? layout.ground];
   const road = ROAD_PAINT[roadKindOf(layout)] ?? ROAD_PAINT.dirt!, stoneRoad = ROAD_PAINT.stone!;
   const trampled = layout.ground === "snow" || layout.ground === "sand" ? GROUND_PAINT[layout.ground] : ROAD_PAINT.dirt!;
-  const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled];
-  const maps = recipes.map((r) => tile(r.tex));
-  const dry = tile("grass_dry"), moss = tile("moss"), plaza = tile("plaza_tile");
+  // A made-for-purpose texture is used as painted: no tint, its own scale.
+  const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled].map((r) => (r.art && envArt.textures.has(r.art) ? paint(r.tex, [1, 1, 1], 0, 0, ART_SCALE, r.art) : r));
+  const maps = recipes.map((r) => tile(r.art && envArt.textures.has(r.art) ? r.art : r.tex));
+  const dry = tile(envArt.textures.has("grass_alt") ? "grass_alt" : "grass_dry"), moss = tile("moss"), plaza = tile("plaza_tile");
   if (maps.every(Boolean) && dry && moss && plaza) {
     // DataTextures avoid canvas alpha premultiplication: alpha is a weight too.
     const pixels = terrainBlendMask(layout);

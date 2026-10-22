@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import type { MapLayout, Prop, PropKind } from "../data/schema";
+import { envSprites } from "./envArt";
 
 type Blocker = MapLayout["blockers"][number];
 
@@ -16,7 +17,8 @@ type Blocker = MapLayout["blockers"][number];
 export const PAINTED_KINDS = new Set<PropKind>(["tree", "pine", "bush", "rock", "boulder", "dead_tree", "palm", "coral", "ice_spike", "crystal", "giant_tree", "crate", "brass_pipe", "gear_ruin", "rune_stone"]);
 
 type Look = "green" | "snow" | "dry" | "dark";
-interface Card { kind: string; w: number; h: number; px: number; py: number }
+/** An atlas cell: w×h pixels at px,py; drawn cw×ch cells. */
+interface Card { kind: string; w: number; h: number; px: number; py: number; cw: number; ch: number }
 /** Card size in cells (w across, h up) and atlas pixels per cell. */
 const SIZE: Record<string, [number, number]> = {
   tree: [3, 3.6], pine: [2.2, 3.8], bush: [1.4, 1.1], rock: [1.1, 0.9], boulder: [2.2, 1.8], dead_tree: [2.6, 3.2],
@@ -337,8 +339,18 @@ function atlasFor(look: Look): Atlas {
   const have = atlases.get(look);
   if (have) return have;
   const kinds = Object.keys(SIZE);
-  const cells: { kind: string; w: number; h: number }[] = [];
-  for (const kind of kinds) for (let v = 0; v < VARIANTS; v++) cells.push({ kind, w: Math.ceil(SIZE[kind][0] * PPC), h: Math.ceil(SIZE[kind][1] * PPC) });
+  // Painted art made outside the code wins (sized by its own aspect at the kind's
+  // height); kinds without any are painted here.
+  const cells: { kind: string; w: number; h: number; cw: number; ch: number; art?: HTMLImageElement }[] = [];
+  for (const kind of kinds) {
+    const art = envSprites(look, kind);
+    const ch = SIZE[kind][1];
+    if (art) for (const img of art) {
+      const h = Math.min(img.naturalHeight, Math.ceil(ch * PPC * 1.5)), w = Math.ceil((h * img.naturalWidth) / img.naturalHeight);
+      cells.push({ kind, w, h, cw: (ch * img.naturalWidth) / img.naturalHeight, ch, art: img });
+    }
+    else for (let v = 0; v < VARIANTS; v++) cells.push({ kind, w: Math.ceil(SIZE[kind][0] * PPC), h: Math.ceil(ch * PPC), cw: SIZE[kind][0], ch });
+  }
   // Shelf packing into a 2048-wide atlas.
   const W = 2048;
   let x = 0, y = 0, row = 0;
@@ -348,7 +360,7 @@ function atlasFor(look: Look): Atlas {
     x += c.w + 4; row = Math.max(row, c.h);
     return at;
   });
-  const H = THREE.MathUtils.ceilPowerOfTwo(y + row);
+  const H = Math.min(8192, THREE.MathUtils.ceilPowerOfTwo(y + row));
   const canvas = document.createElement("canvas");
   canvas.width = W; canvas.height = H;
   const g = canvas.getContext("2d")!;
@@ -357,9 +369,11 @@ function atlasFor(look: Look): Atlas {
     g.save();
     g.beginPath(); g.rect(c.px, c.py, c.w, c.h); g.clip();
     g.translate(c.px, c.py);
-    paintCard(g, c.kind, c.w, c.h, rng(1000 + i * 7919), look);
+    if (c.art) g.drawImage(c.art, 0, 0, c.w, c.h);
+    else paintCard(g, c.kind, c.w, c.h, rng(1000 + i * 7919), look);
     g.restore();
-    cards.set(c.kind, [...(cards.get(c.kind) ?? []), c]);
+    const { art: _, ...card } = c;
+    cards.set(c.kind, [...(cards.get(c.kind) ?? []), card]);
   });
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -459,7 +473,7 @@ export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T ex
   const tex = atlas.texture.image as HTMLCanvasElement;
   const dummy = new THREE.Object3D();
   for (const [card, list] of groups) {
-    const [cw, ch] = SIZE[card.kind];
+    const { cw, ch } = card;
     // Lean back so the card faces the camera, as the creature cards do.
     const geo = track(new THREE.PlaneGeometry(cw, ch).translate(0, ch / 2, 0).rotateX(-THREE.MathUtils.degToRad(CAMERA_PITCH)));
     const uv = geo.getAttribute("uv") as THREE.BufferAttribute;

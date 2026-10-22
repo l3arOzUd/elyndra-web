@@ -218,12 +218,34 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
   write("skills", skills);
   write("player_curve", Array.from({ length: 99 }, (_, i) => playerAt(i + 1)));
   write("systems", sys);
+  write("env_art", envArtManifest(join(OUT, "..")));
   writePaperDollLooks(gear, join(dirname(spriteIndexPath), "wayfarer", "equipment.json"));
   mkdirSync(dirname(spriteIndexPath), { recursive: true });
   writeFileSync(spriteIndexPath, JSON.stringify({
     player: { sprite: "wayfarer" }, monsters: spriteIndex, fallback: { sprite: "mosskin", tint: [0.75, 0.75, 0.8], placeholder: true },
   }, null, 1));
   return `build:content — ${regions.length} regions, ${maps.length} maps, ${monsters.length} monsters, ${items.length} items, ${warps.length} warps, ${npcs.length} npcs`;
+}
+
+/**
+ * Which painted environment art is present (sprite/ENV_ART_FIELDS.md), so
+ * the client loads what exists and paints the rest itself: prop sprites in
+ * public/sprites/env/[<look>/]<kind>_<n>.png and ground textures in
+ * public/textures/env/<name>.png. Sprites in the root folder serve every
+ * look; a look folder (green, dry, snow, dark) overrides them for that look.
+ */
+function envArtManifest(publicDir: string): { sprites: Record<string, Record<string, string[]>>; textures: string[] } {
+  const pngs = (dir: string) => (existsSync(dir) ? readdirSync(dir).filter((f) => /\.png$/i.test(f)).sort() : []);
+  const sprites: Record<string, Record<string, string[]>> = {};
+  const spriteDir = join(publicDir, "sprites", "env");
+  for (const look of ["", "green", "dry", "snow", "dark"]) {
+    for (const f of pngs(join(spriteDir, look))) {
+      const m = /^([a-z_]+?)_\d+\.png$/i.exec(f);
+      if (!m) continue;
+      ((sprites[look || "any"] ??= {})[m[1]] ??= []).push(look ? `${look}/${f}` : f);
+    }
+  }
+  return { sprites, textures: pngs(join(publicDir, "textures", "env")).map((f) => f.replace(/\.png$/i, "")) };
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) console.log(buildContent(REGIONS, PUBLIC_DATA));

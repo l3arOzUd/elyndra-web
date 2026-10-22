@@ -1,6 +1,7 @@
 import "./style.css";
 import { mountShell } from "./ui/shell";
 import { loadContent } from "./data/content";
+import { loadEnvArt } from "./render/envArt";
 import { Game } from "./game";
 import { Connection } from "./net/connection";
 import { buildHeroSprite } from "./render/heroSprite";
@@ -31,6 +32,7 @@ async function main() {
   try {
     status.textContent = "Loading world data...";
     const content = await loadContent();
+    await loadEnvArt();
     status.textContent = "Loading sprites...";
     const sheetIds = new Set([content.sprites.fallback.sprite, ...Object.values(content.sprites.monsters).map((b) => b.sprite)]);
     sheetIds.delete("wayfarer");
