@@ -421,8 +421,9 @@ export class Hud {
       if (g && it) this.bindTooltip(b, () => gearTitle(it, g), () => this.gearSummary(g));
       return b;
     };
-    $('doll-left').replaceChildren(...['head', 'armor', 'boots'].map(slotButton));
-    $('doll-right').replaceChildren(...['weapon', 'accessory'].map(slotButton));
+    // Three rows each side: head / weapon / (free) on the left, accessory / body / boots on the right.
+    $('doll-left').replaceChildren(...['head', 'weapon'].map(slotButton));
+    $('doll-right').replaceChildren(...['accessory', 'armor', 'boots'].map(slotButton));
     $('doll-charms').replaceChildren(...CHARM_SLOTS.map(slotButton));
     $('equipment-job').textContent = this.stats ? this.stats.job[0].toUpperCase() + this.stats.job.slice(1) + ' · Lv ' + lv : '';
     const outfit = [...this.gear.values()].filter(isWornCopy).map((g) => g.base).sort();
