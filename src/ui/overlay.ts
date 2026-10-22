@@ -1,17 +1,19 @@
 import * as THREE from "three";
 
 // DOM over the 3D view: names, HP bars and floating numbers. Damage on one
-// target is summed over 150 ms into one number (HORDE_SPEC §3), and at most
-// MAX_FLOATS numbers exist at once, from a pool, so a 50-target AoE costs
-// at most 50 elements, reused.
+// target is summed over 150 ms into one number (HORDE_SPEC §3), except the
+// parts of a multi-hit skill, which each keep their own number, stepped up
+// like a ladder (RO style). At most MAX_FLOATS numbers exist at once, from a
+// pool (a 40-target, 5-hit Gearstorm is 200), each nudged sideways so a
+// stack stays readable.
 
 const tmp = new THREE.Vector3();
-const MAX_FLOATS = 70;
+const MAX_FLOATS = 300;
 const MERGE_MS = 150;
 
 type FloatKind = "dmg" | "crit" | "taken" | "heal" | "exp" | "info";
 
-interface Float { el: HTMLElement; pos: THREE.Vector3; age: number; life: number; busy: boolean }
+interface Float { el: HTMLElement; pos: THREE.Vector3; age: number; life: number; busy: boolean; dx: number; dy: number }
 
 export class Overlay {
   private pool: Float[] = [];
@@ -38,8 +40,10 @@ export class Overlay {
     return new Label(el, fill);
   }
 
-  /** Queues damage on a target; numbers within 150 ms merge. */
-  damage(target: number, amount: number, crit: boolean, kind: FloatKind, pos: THREE.Vector3) {
+  /** Queues damage on a target; numbers within 150 ms merge. A multi-hit part
+   * (its index in the cast) shows at once, `part` steps above the first. */
+  damage(target: number, amount: number, crit: boolean, kind: FloatKind, pos: THREE.Vector3, part?: number) {
+    if (part !== undefined) { this.spawn(String(amount), pos, crit ? "crit" : kind, part * 16); return; }
     const p = this.pending.get(target);
     if (p) { p.amount += amount; p.crit ||= crit; p.pos.copy(pos); return; }
     this.pending.set(target, { amount, crit, kind, pos: pos.clone(), at: performance.now() });
@@ -49,7 +53,7 @@ export class Overlay {
     this.spawn(text, pos, kind);
   }
 
-  private spawn(text: string, pos: THREE.Vector3, kind: FloatKind) {
+  private spawn(text: string, pos: THREE.Vector3, kind: FloatKind, rise = 0) {
     let f = this.pool.find((x) => !x.busy);
     if (!f) {
       if (this.pool.length >= MAX_FLOATS) {
@@ -57,12 +61,14 @@ export class Overlay {
       } else {
         const el = document.createElement("div");
         this.root.append(el);
-        f = { el, pos: new THREE.Vector3(), age: 0, life: 900, busy: false };
+        f = { el, pos: new THREE.Vector3(), age: 0, life: 900, busy: false, dx: 0, dy: 0 };
         this.pool.push(f);
       }
     }
     f.busy = true;
     f.age = 0;
+    f.dx = kind === "info" ? 0 : (Math.random() - 0.5) * (rise ? 16 : 36);
+    f.dy = rise;
     f.pos.copy(pos);
     f.el.className = `float float-${kind}`;
     f.el.textContent = text;
@@ -82,7 +88,7 @@ export class Overlay {
       if (f.age >= f.life) { f.busy = false; f.el.style.display = "none"; continue; }
       const t = f.age / f.life;
       const [x, y] = project(tmp.copy(f.pos), camera, w, h);
-      f.el.style.transform = `translate(${x}px, ${y - 34 * t}px) translate(-50%, -100%) scale(${1 + Math.max(0, 0.25 - t)})`;
+      f.el.style.transform = `translate(${x + f.dx}px, ${y - f.dy - 34 * t}px) translate(-50%, -100%) scale(${1 + Math.max(0, 0.25 - t)})`;
       f.el.style.opacity = String(t < 0.65 ? 1 : 1 - (t - 0.65) / 0.35);
     }
   }

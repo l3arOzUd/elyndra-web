@@ -286,26 +286,38 @@ export class Game {
       const aim = (ev.cast && this.lastAim.get(ev.cast)) || [src.pos.x, src.pos.z];
       if (!this.fx.shaped(s, src.pos.x, src.pos.z, aim[0], aim[1])) this.fx.burst(s, src.pos.x, src.pos.z);
     }
+    // Multi-hit skills (RO style): part k of a hit shows k × hit_ms after the
+    // first (index in flags bits 8+), and deaths wait for the last part.
+    const step = s?.hits && s.hits > 1 ? s.hit_ms ?? 180 : 0;
     for (const [id, dmg, flags] of ev.hits) {
-      const t = this.ents.get(id);
-      if (!t) continue;
-      t.hp = Math.max(0, t.hp - dmg);
-      t.label?.setHp(t.hp, t.mhp);
-      t.hurtAt = performance.now();
-      t.actor.hitFlash();
-      if (!t.dead) t.actor.play("hit");
-      const at = tmpA.copy(t.pos).addScaledVector(UP, t.actor.height + 0.3);
-      if (flags & 2) { this.overlay.text("Evade", at, "taken"); continue; } // evaded: no damage
-      // Ailments landing (8 burn, 16 shock, 32 chill): a word above the target.
-      if (flags & 56 && dmg > 0 && (flags & 8 ? ev.src !== id : true)) this.overlay.text(flags & 16 ? "Shock" : flags & 32 ? "Chill" : "Burn", at.clone().addScaledVector(UP, 0.4), "info");
-      if (flags & 4) { this.overlay.text("◈ " + dmg, at, "taken"); continue; } // the Aether Shield took it all
-      this.overlay.damage(id, dmg, (flags & 1) === 1, id === this.selfId ? "taken" : "dmg", at);
-      if (id === this.selfId && dmg > t.mhp * 0.1) this.cam.kick(0.25);
+      const k = flags >> 8;
+      if (k > 0 && step) setTimeout(() => this.showHit(ev, id, dmg, flags, k), k * step);
+      else this.showHit(ev, id, dmg, flags, step ? 0 : undefined);
     }
+    const dieAfter = step * ((s?.hits ?? 1) - 1);
     for (const id of ev.deaths ?? []) {
       const t = this.ents.get(id);
-      if (t && !t.dead) this.die(t);
+      if (!t || t.dead) continue;
+      if (dieAfter) setTimeout(() => { if (this.ents.get(id) === t && !t.dead) this.die(t); }, dieAfter);
+      else this.die(t);
     }
+  }
+
+  private showHit(ev: CombatEvent, id: number, dmg: number, flags: number, part?: number) {
+    const t = this.ents.get(id);
+    if (!t) return;
+    t.hp = Math.max(0, t.hp - dmg);
+    t.label?.setHp(t.hp, t.mhp);
+    t.hurtAt = performance.now();
+    t.actor.hitFlash();
+    if (!t.dead) t.actor.play("hit");
+    const at = tmpA.copy(t.pos).addScaledVector(UP, t.actor.height + 0.3);
+    if (flags & 2) { this.overlay.text("Evade", at, "taken"); return; } // evaded: no damage
+    // Ailments landing (8 burn, 16 shock, 32 chill): a word above the target.
+    if (flags & 56 && dmg > 0 && (flags & 8 ? ev.src !== id : true)) this.overlay.text(flags & 16 ? "Shock" : flags & 32 ? "Chill" : "Burn", at.clone().addScaledVector(UP, 0.4), "info");
+    if (flags & 4) { this.overlay.text("◈ " + dmg, at, "taken"); return; } // the Aether Shield took it all
+    this.overlay.damage(id, dmg, (flags & 1) === 1, id === this.selfId ? "taken" : "dmg", at, part);
+    if (id === this.selfId && dmg > t.mhp * 0.1) this.cam.kick(0.25);
   }
 
   private die(e: Ent) {

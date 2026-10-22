@@ -380,6 +380,9 @@ export interface SkillDef {
   damage_multiplier: number;
   ticks?: number;
   tick_ms?: number;
+  /** One cast split into this many hits (same total damage), hit_ms apart, each with its own number. */
+  hits?: number;
+  hit_ms?: number;
   unlock_level: number;
   target_sort: "distance_then_entity_id";
   vfx: string;

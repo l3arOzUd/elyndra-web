@@ -13,6 +13,8 @@
   "cooldown_ms": 5000,
   "resource_cost": 12,
   "damage_multiplier": 1.7,
+  "hits": 2,
+  "hit_ms": 180,
   "unlock_level": 1,
   "vfx": "fx_cleaving_arc",
   "implemented": true
@@ -30,6 +32,8 @@
   "cooldown_ms": 12000,
   "resource_cost": 22,
   "damage_multiplier": 2.4,
+  "hits": 4,
+  "hit_ms": 180,
   "unlock_level": 5,
   "vfx": "fx_iron_cyclone",
   "implemented": true
@@ -64,6 +68,8 @@
   "cooldown_ms": 45000,
   "resource_cost": 45,
   "damage_multiplier": 4,
+  "hits": 3,
+  "hit_ms": 220,
   "unlock_level": 15,
   "vfx": "fx_sundering_pulse",
   "implemented": true
@@ -100,6 +106,8 @@
   "cooldown_ms": 10000,
   "resource_cost": 25,
   "damage_multiplier": 2.5,
+  "hits": 3,
+  "hit_ms": 180,
   "unlock_level": 5,
   "vfx": "fx_aether_nova",
   "implemented": true
@@ -135,6 +143,8 @@
   "cooldown_ms": 8000,
   "resource_cost": 16,
   "damage_multiplier": 2,
+  "hits": 3,
+  "hit_ms": 170,
   "unlock_level": 1,
   "vfx": "fx_meridian_lance",
   "implemented": true
@@ -153,6 +163,8 @@
   "cooldown_ms": 7000,
   "resource_cost": 14,
   "damage_multiplier": 1.6,
+  "hits": 3,
+  "hit_ms": 170,
   "unlock_level": 5,
   "vfx": "fx_splitshot",
   "implemented": true
@@ -186,6 +198,8 @@
   "cooldown_ms": 10000,
   "resource_cost": 18,
   "damage_multiplier": 2.2,
+  "hits": 2,
+  "hit_ms": 200,
   "unlock_level": 1,
   "vfx": "fx_coil_mine",
   "implemented": true
@@ -203,6 +217,8 @@
   "cooldown_ms": 16000,
   "resource_cost": 28,
   "damage_multiplier": 2.6,
+  "hits": 5,
+  "hit_ms": 170,
   "unlock_level": 5,
   "vfx": "fx_gearstorm",
   "implemented": true
