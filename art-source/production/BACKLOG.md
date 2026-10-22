@@ -1,7 +1,7 @@
 # Art production backlog
 
 Monsters: 94; front masters created: 94; existing front references needing review: 0; missing front references: 0.
-Equipment definitions: 352; shared generated looks: 229. Skills needing authored VFX review: 13.
+Equipment definitions: 414; shared generated looks: 229. Skills needing authored VFX review: 13.
 
 Order: finish front masters for every monster, then consistent back/left/right, then authored 2D animation and in-game validation. Equipment and VFX remain part of the full objective.
 
@@ -16,12 +16,12 @@ No species renames or proposed cross-species substitutions are treated as comple
 | mob_0005 | Craglet | master-created | master-created | master-created | master-created | craglet_2d |
 | mob_0006 | Thornback | master-created | master-created | master-created | master-created | thornback_2d |
 | mob_0007 | Dustwing | master-created | master-created | master-created | master-created | dustwing_2d |
-| mob_0008 | Brookfin | master-created | master-created | master-created | master-created | placeholder |
+| mob_0008 | Brookfin | master-created | master-created | master-created | master-created | brookfin_2d |
 | mob_0009 | Reedstalker | master-created | master-created | master-created | master-created | reedstalker_2d |
 | mob_0010 | Rotroot | master-created | master-created | master-created | master-created | rotroot_2d |
 | mob_0011 | Barkwarden | master-created | master-created | master-created | master-created | barkwarden_2d |
-| mob_0012 | Graftling | master-created | master-created | master-created | master-created | placeholder |
-| mob_0013 | Sapdrone | master-created | master-created | master-created | master-created | placeholder |
+| mob_0012 | Graftling | master-created | master-created | master-created | master-created | graftling_2d |
+| mob_0013 | Sapdrone | master-created | master-created | master-created | master-created | sapdrone_2d |
 | mob_0014 | Vinecrawler | master-created | master-created | master-created | master-created | placeholder |
 | mob_0015 | Root Sentinel | master-created | master-created | master-created | master-created | placeholder |
 | mob_0016 | Sandcoil | master-created | master-created | master-created | master-created | placeholder |
@@ -106,8 +106,9 @@ No species renames or proposed cross-species substitutions are treated as comple
 
 ## Completion evidence
 
+Monsters with source motion review files: 13/94; this includes incomplete and rejected studies.
 Four-view files present: 94/94. This count does not establish consistent anatomy or visual approval.
 Recorded turnaround review states: reference-set-created-animation-pending: 2; reference-set-created-consistency-refinement-pending: 92.
-Non-placeholder runtime bindings: 10/94; placeholder or missing bindings: 84. Existing bindings still require animation and Bible fidelity review.
+Non-placeholder runtime bindings: 13/94; placeholder or missing bindings: 81. Existing bindings still require animation and Bible fidelity review.
 Animation PNG existence does not verify frame count, distinct motion, leg articulation, death quality, direction coverage or in-game behavior.
 Skill VFX implementation and appearance must be inspected in current runtime code; this data-only audit does not classify current effects as generic or finished.

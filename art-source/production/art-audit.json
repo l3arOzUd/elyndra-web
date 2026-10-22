@@ -84,6 +84,7 @@
         ],
         "next": "Create articulated 2D assets and inspect turning, walk contact and death motion in game after roster turnarounds."
       },
+      "sourceMotionStudies": [],
       "sprite": "mosskin_2d",
       "runtimeReview": null,
       "animationFiles": {
@@ -198,6 +199,7 @@
         ],
         "next": "Complete roster turnarounds, then author articulated waddling and action clips; do not substitute whole-body rotation for walking or death."
       },
+      "sourceMotionStudies": [],
       "sprite": "sporeling_2d",
       "runtimeReview": null,
       "animationFiles": {
@@ -312,6 +314,7 @@
         ],
         "next": "Normalize framing, then prepare separate limb assets and a six-leg gait after roster turnarounds."
       },
+      "sourceMotionStudies": [],
       "sprite": "ambermite_2d",
       "runtimeReview": null,
       "animationFiles": {
@@ -426,6 +429,7 @@
         ],
         "next": "Refine lateral torso/arm projection, then author separate tail and membrane-aware limb animation after roster references."
       },
+      "sourceMotionStudies": [],
       "sprite": "lunari_2d",
       "runtimeReview": null,
       "animationFiles": {
@@ -518,6 +522,77 @@
         ],
         "next": "Refine rear stance, register body scale and separate four leg chains plus tail for animation after roster references."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-back-review.json",
+          "status": "runtime-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Only two selected painted poses; transition still needs in-betweens.",
+            "Plate and tail shape drift slightly.",
+            "Left leg remains obscured by tail.",
+            "Source is1254square with irregular gutters, not requested1024 grid."
+          ]
+        },
+        {
+          "file": "idle-front-review.json",
+          "status": "runtime-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Minor painted plate and color changes remain in blink edit.",
+            "No authored breathing yet.",
+            "This is not approval of the complete monster."
+          ]
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "draft-motion-created-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Repeated image edits increased orange saturation, especially quartz and belly.",
+            "Left knee connection is occluded by tail; full anatomical continuity remains unverified.",
+            "Body registration, leg segment lengths and foreleg support phases require review.",
+            "Artwork crosses equal-cell boundaries. Preview isolates poses using measured transparent gutters (top x518/1004, bottom x522/1006); fixed-grid extraction is invalid.",
+            "Rear idle, attack, hit and death are still missing."
+          ]
+        },
+        {
+          "file": "walk-front-review.json",
+          "status": "draft-motion-created-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Rear-foot support phase and leg proportions still need motion review.",
+            "Top and bottom rows have different body registration and slight scale drift.",
+            "Stone plates and quartz details change slightly between frames.",
+            "No front idle, attack, hit or death clips yet; not bound to gameplay."
+          ]
+        },
+        {
+          "file": "walk-review.json",
+          "status": "draft-motion-created-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Individual-frame replacement now keeps near foreleg lift in frames4-5 and near hindleg lift in frames2-3. Far-leg support timing and fixed segment lengths remain unverified.",
+            "Frames3-5 now use color-corrected image edits against frame1. Red-orange rims are reduced; plate details and lighting still vary, so this is not final continuity approval.",
+            "Foot-bound registration causes visible torso height changes; register planted contacts and body landmarks before runtime acceptance.",
+            "Stone plates, quartz arrangement and limb thickness drift slightly between painted frames.",
+            "The small brass belly gear from the Bible is not visible in this side master or cycle; resolve visibility rather than declaring it complete.",
+            "Ground registration follows lowest visible pixel, not measured planted-foot trajectories; foot sliding remains unverified.",
+            "Only left-facing walking draft exists. Attack, hit and death drafts now exist separately; other authored views remain outstanding.",
+            "No runtime binding changed; Craglet remains a placeholder until its full clip set is ready and reviewed."
+          ]
+        }
+      ],
       "sprite": "craglet_2d",
       "runtimeReview": {
         "monster": "mob_0005",
@@ -628,6 +703,35 @@
         ],
         "next": "Refine lateral camera and consistent landmark scale; author weight-bearing four-leg gait and boar-specific attack/death after roster references."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "walk-front-review.json",
+          "status": "draft-motion-created-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Face, tusks and bark patterns change slightly across frames.",
+            "Foreleg segment lengths and rear-foot contact need motion review.",
+            "Top thorns have very little margin.",
+            "Only front walking exists; other front actions and rear animation remain missing."
+          ]
+        },
+        {
+          "file": "walk-review.json",
+          "status": "draft-motion-created-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Near hindleg bends sharply; joint angles and fixed segment lengths still need review.",
+            "Near/far gait phase and planted-foot travel need correction.",
+            "Some noses approach or touch cell boundaries.",
+            "Surface details and torso scale drift between poses.",
+            "Left action drafts now exist separately. Other directions and idle remain unfinished; not bound to gameplay."
+          ]
+        }
+      ],
       "sprite": "thornback_2d",
       "runtimeReview": {
         "monster": "mob_0006",
@@ -737,6 +841,7 @@
         ],
         "next": "Refine same-pose wing projection, register body landmarks and separate four wing layers and six leg chains before authored flight animation."
       },
+      "sourceMotionStudies": [],
       "sprite": "dustwing_2d",
       "runtimeReview": {
         "monster": "mob_0007",
@@ -840,23 +945,118 @@
         ],
         "limitations": [
           "Lateral views still expose some frontal mouth and chest surface rather than strict orthographic profile",
-          "Tail is presented broadside in the rear view; its plane is inconsistent with the lateral fan tail",
+          "Original back.png has a broadside tail; back-v2.png corrects tail/dorsal projection and is selected for animation",
           "Dorsal fin bends and fin-ray patterns differ across views",
           "Four leg attachments need explicit layer design; rear far legs and profile far rear leg are obscured",
           "Register body landmarks and foot baseline before animation; file framing alone is insufficient"
         ],
-        "next": "Correct rear tail plane and lateral camera, then define four fin-leg attachment points and separate fin layers for a waddling gait."
+        "next": "Correct rear tail plane and lateral camera, then define four fin-leg attachment points and separate fin layers for a waddling gait.",
+        "selectedRearReference": "back-v2.png"
       },
-      "sprite": null,
-      "runtimeReview": null,
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "idle-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Gold outlines and scale shading differ slightly from neutral.",
+            "V2 strengthens gold outlines; blink-to-neutral color continuity still needs review.",
+            "Rear idle alternates neutral and lowered fins; needs intermediate fin poses and surface continuity refinement."
+          ]
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "authored-walk-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Lifted finfeet curl more than front and side views; deformation needs review.",
+            "Body widths and scale patterns drift.",
+            "Ground contacts and full four-leg attachment continuity unverified.",
+            "Rear actions and idle remain missing; no runtime export."
+          ]
+        },
+        {
+          "file": "walk-front-review.json",
+          "status": "authored-walk-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Tail and side fin extend beyond requested grid; custom cuts used.",
+            "Body width and belly position drift, especially lower row.",
+            "Far rear foot ground contacts need review.",
+            "Dorsal and tail fin planes inherit inconsistent reference perspective.",
+            "Intermediate footfall poses and runtime export missing.",
+            "Not bound to gameplay."
+          ]
+        },
+        {
+          "file": "walk-left-review.json",
+          "status": "draft-anatomy-correction-needed",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Only three foot silhouettes are clear; four attachments remain unverified.",
+            "Frame 3 changes front leg position and belly support.",
+            "Fin-ray patterns and scale details drift.",
+            "Camera remains slightly three-quarter rather than strict profile.",
+            "No runtime export or gameplay binding.",
+            "Corrected far rear fin-foot is visible but its ground contact is unclear."
+          ]
+        }
+      ],
+      "sprite": "brookfin_2d",
+      "runtimeReview": {
+        "monster": "mob_0008",
+        "status": "playable-draft-refinement-pending",
+        "source": "art-source/monsters/mob_0008/runtime-draft",
+        "productionApproved": false,
+        "authoredViews": [
+          "front",
+          "left",
+          "back"
+        ],
+        "limitations": [
+          "Side and front idle blink; rear idle alternates two fin poses and needs smoother transitions.",
+          "Right mirrors left; diagonals reuse side art.",
+          "Foot contacts, four-leg anatomy, cross-clip scale and body registration need refinement.",
+          "Edited poses differ in fin outlines and scale shading; death needs intermediate poses.",
+          "Technical validation does not establish visual approval."
+        ]
+      },
       "animationFiles": {
-        "idle": null,
-        "walk": null,
-        "attack": null,
-        "hit": null,
-        "death": null
+        "idle": {
+          "path": "public/sprites/brookfin_2d/idle.png",
+          "width": 6144,
+          "height": 1920
+        },
+        "walk": {
+          "path": "public/sprites/brookfin_2d/walk.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "attack": {
+          "path": "public/sprites/brookfin_2d/attack.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "hit": {
+          "path": "public/sprites/brookfin_2d/hit.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "death": {
+          "path": "public/sprites/brookfin_2d/death.png",
+          "width": 2304,
+          "height": 1920
+        }
       },
-      "animationReview": "pending-all-required-views"
+      "animationReview": "playable-draft-refinement-pending"
     },
     {
       "id": "mob_0009",
@@ -942,6 +1142,7 @@
         ],
         "next": "Refine cross-view shoulder and hand proportions and normalize landmark framing, then author reed-leg gait and seed-pod opening/dart attack with separate overlapping limb layers."
       },
+      "sourceMotionStudies": [],
       "sprite": "reedstalker_2d",
       "runtimeReview": null,
       "animationFiles": {
@@ -1057,6 +1258,7 @@
         ],
         "next": "Refine lateral projection and landmark registration, then author a low four-leg crawl with independent planted feet, core pulse and collapsing root death."
       },
+      "sourceMotionStudies": [],
       "sprite": "rotroot_2d",
       "runtimeReview": null,
       "animationFiles": {
@@ -1173,6 +1375,7 @@
         ],
         "next": "Refine profile head projection and joint registration, then separate rigid wooden segments at copper pivots for weight-bearing gait, attack and joint-collapse death."
       },
+      "sourceMotionStudies": [],
       "sprite": "barkwarden_2d",
       "runtimeReview": null,
       "animationFiles": {
@@ -1265,16 +1468,106 @@
         ],
         "next": "Refine same-camera tripod support geometry; separate three complete leg chains and author sequential three-leg stepping with stable body support, hub glow and folding collapse."
       },
-      "sprite": null,
-      "runtimeReview": null,
-      "animationFiles": {
-        "idle": null,
-        "walk": null,
-        "attack": null,
-        "hit": null,
-        "death": null
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "idle-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Two authored poses only; transition needs intermediate leaf positions.",
+            "Brass saturation and twig details shift slightly.",
+            "Front alternate changes leaf arrangement and brightens brass slightly; needs consistent in-between leaves.",
+            "Bound as gameplay draft, not production approved."
+          ]
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "walk-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Pose5 center knee bend is shallow and needs stronger articulation for readability at game size.",
+            "Body and leaf silhouette shift; brass cuff and twig weave continuity need refinement.",
+            "Only six key poses; ground contacts and motion timing need engine review.",
+            "Front/rear combat clips and idle are still missing; no runtime binding."
+          ]
+        },
+        {
+          "file": "walk-front-review.json",
+          "status": "walk-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Rear planted foot projects well above front soles, matching reference but ground-plane consistency remains unproven.",
+            "Hub and eye registration shift slightly; leaf and brass details drift.",
+            "No gameplay binding; rear walk and front/rear actions still missing.",
+            "V3 brightens brass and bark and raises leaf crown; color and silhouette continuity need refinement."
+          ]
+        },
+        {
+          "file": "walk-left-review.json",
+          "status": "walk-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Hip positions and leaf silhouette shift between frames.",
+            "Lifted foot trajectories and stable support polygon need refinement.",
+            "No gameplay binding; other action clips and front/rear walks not yet authored.",
+            "Revised legs change brass cuff details; rigid segment lengths and frame-to-frame trajectories still need review."
+          ]
+        }
+      ],
+      "sprite": "graftling_2d",
+      "runtimeReview": {
+        "monster": "mob_0012",
+        "status": "playable-draft-refinement-pending",
+        "productionApproved": false,
+        "authoredViews": [
+          "front",
+          "left",
+          "back"
+        ],
+        "limitations": [
+          "Idle uses two leaf poses with color drift; needs intermediate drawings.",
+          "Right mirrors left; diagonals alias side views.",
+          "Tripod contacts, rigid leg lengths, cross-clip size and body registration need refinement.",
+          "Folded legs overlap; death needs intermediate collapse drawings.",
+          "Technical validation does not approve visual quality."
+        ]
       },
-      "animationReview": "pending-all-required-views"
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/graftling_2d/idle.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "walk": {
+          "path": "public/sprites/graftling_2d/walk.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "attack": {
+          "path": "public/sprites/graftling_2d/attack.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "hit": {
+          "path": "public/sprites/graftling_2d/hit.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "death": {
+          "path": "public/sprites/graftling_2d/death.png",
+          "width": 2304,
+          "height": 1920
+        }
+      },
+      "animationReview": "playable-draft-refinement-pending"
     },
     {
       "id": "mob_0013",
@@ -1338,16 +1631,53 @@
         ],
         "next": "Resolve six leg roots and four wing roots explicitly, refine wing projection and scale, then author independent wingbeats, folded leg motion, needle attack and sap slosh."
       },
-      "sprite": null,
-      "runtimeReview": null,
-      "animationFiles": {
-        "idle": null,
-        "walk": null,
-        "attack": null,
-        "hit": null,
-        "death": null
+      "sourceMotionStudies": [],
+      "sprite": "sapdrone_2d",
+      "runtimeReview": {
+        "monster": "mob_0013",
+        "status": "playable-draft-refinement-pending",
+        "productionApproved": false,
+        "authoredViews": [
+          "front",
+          "left",
+          "back"
+        ],
+        "limitations": [
+          "Four-wing and six-leg attachments remain partly occluded and inconsistent.",
+          "Flight is reused for idle and movement; cross-clip body registration needs refinement.",
+          "Death needs intermediate landing drawings; repeated frames are holds, not unique poses.",
+          "Right mirrors left and diagonals alias side art.",
+          "Technical validation does not establish visual approval."
+        ]
       },
-      "animationReview": "pending-all-required-views"
+      "animationFiles": {
+        "idle": {
+          "path": "public/sprites/sapdrone_2d/idle.png",
+          "width": 1536,
+          "height": 1920
+        },
+        "walk": {
+          "path": "public/sprites/sapdrone_2d/walk.png",
+          "width": 1536,
+          "height": 1920
+        },
+        "attack": {
+          "path": "public/sprites/sapdrone_2d/attack.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "hit": {
+          "path": "public/sprites/sapdrone_2d/hit.png",
+          "width": 2304,
+          "height": 1920
+        },
+        "death": {
+          "path": "public/sprites/sapdrone_2d/death.png",
+          "width": 2304,
+          "height": 1920
+        }
+      },
+      "animationReview": "playable-draft-refinement-pending"
     },
     {
       "id": "mob_0014",
@@ -1410,6 +1740,64 @@
         ],
         "next": "Resolve eight explicit leg attachments and opaque far limbs, refine side camera, then separate gear-body and eight articulated legs for spider gait and collapse."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "idle-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Minor gear shading and vine-detail drift remains.",
+            "Two-pose leaf switch needs intermediate drawings.",
+            "Other poses in edited sheet are unused; edit changed death lens brightness.",
+            "Front/rear alternate is brighter and more saturated; color popping remains visible and needs correction.",
+            "Front v2 still has brighter brass shading than neutral source; color matching remains partial."
+          ]
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "walking-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Far-leg chains overlap and remain difficult to trace; eight-leg topology is not approved.",
+            "Side outer vines touch source edges; margin repair remains.",
+            "Ground-contact timing, rigid segment consistency and surface drift remain.",
+            "Not exported or bound to gameplay.",
+            "Rear shell still sits roughly25-30 display pixels higher than idle; proportional repair only partial."
+          ]
+        },
+        {
+          "file": "walk-front-review.json",
+          "status": "walking-draft-refinement-pending",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Far limbs overlap and appear weak; all eight complete chains remain unproven.",
+            "Ground support and metal segment lengths vary between poses.",
+            "Front palette is less saturated than isolated side images.",
+            "Not exported or bound to gameplay."
+          ]
+        },
+        {
+          "file": "walk-left-review.json",
+          "status": "walking-study-refinement-required",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Initial sheet overlaps cell boundary; retained as rejected source.",
+            "V2 improves far-leg opacity but remains tightly packed and touches right image edge.",
+            "Eight full leg chains are not independently traceable.",
+            "Lower-row shell sits lower; body registration and support contacts need refinement.",
+            "V2 brass and leaves are more saturated than original reference.",
+            "Not exported or bound to game."
+          ]
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -1483,6 +1871,49 @@
         ],
         "next": "Refine camera and hood framing, separate heavy rigid segments at brass joints, then author weighted steps, fist strike and staged knee/torso collapse."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "three-view-two-drawing-idle-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Stone/root detail and color changes remain between alternate drawings.",
+            "Two unique drawings per view, not six authored idle frames.",
+            "Cross-clip registration and runtime export still pending."
+          ]
+        },
+        {
+          "file": "walk-front-back-review.json",
+          "status": "authored-walking-studies-not-production-approved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Four-keyframe gait needs weight-transfer inbetweens.",
+            "Front feet lift high; it reads as marching more than a slow heavy walk.",
+            "Rear torso and root details vary between poses.",
+            "Rear contact has weak heel-to-toe movement.",
+            "Cross-view scale is provisional; no runtime export or public binding.",
+            "Attack, hit, death and idle animation still pending."
+          ]
+        },
+        {
+          "file": "walk-left-review.json",
+          "status": "walking-study-gait-correction-required",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Poses4-5 repeat same lead leg rather than opposite stride; gait reads as dragging.",
+            "Pose6 overlaps lifted foot and supporting leg, hiding knee chain.",
+            "Arm counter-swing is weak and body proportions drift.",
+            "Minor tiny fragments near row split need crop refinement.",
+            "Not exported or bound to gameplay."
+          ]
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -1556,6 +1987,36 @@
         ],
         "next": "Resolve continuous coil-to-neck-to-tail path, refine landmarks, then author snake-specific uncoiling travel, spring bite and low settling death without limb-style rigging."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "front-and-side-idle-draft",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Two unique drawings per front/side view repeated over six timeline frames.",
+            "Minor scale-marking and color drift remains.",
+            "Back idle stays static; tongue is occluded from rear.",
+            "Existing closed-eye hit/death drawings are stylized and still require anatomy/art-direction review.",
+            "No runtime export or gameplay binding."
+          ]
+        },
+        {
+          "file": "walk-left-review.json",
+          "status": "locomotion-study-needs-ground-plane-correction",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Rear body still reads as an elevated arch; full belly contact not established.",
+            "Pose pairs are too similar to show a traveling muscular wave.",
+            "Tail tips lie close to cell boundaries and cause tiny adjacent-cell fragments.",
+            "Uncoiled length and head scale differ from resting reference.",
+            "Not runtime exported or bound to gameplay."
+          ]
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -1629,6 +2090,68 @@
         ],
         "next": "Resolve all six leg chains, harmonize shell geometry, then author beetle gait, mandible attack, folded-leg collapse and independent ember pulse."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "three-view-idle-draft",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Twitch subtle at game size.",
+            "Shell/core texture changes slightly despite requested fixed body.",
+            "Two authored idle poses per view; transition remains abrupt and core texture drifts.",
+            "Idle uses raised-leg source pose; resting support still unfinished.",
+            "Runtime draft exported; no gameplay binding.",
+            "Front antenna movement larger than intended tiny twitch; abrupt two-pose transition remains."
+          ]
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "rear-gait-study-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Both large foreground limbs stay low; inner pair remain raised. Not a valid alternating tripod cycle.",
+            "C/D very similar; weak stride progression.",
+            "Shell/core texture drift and changing limb lengths.",
+            "Top/bottom margins tighter than requested.",
+            "No runtime export or public binding."
+          ]
+        },
+        {
+          "file": "walk-front-review.json",
+          "status": "gait-draft-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "A right foreground foot still too low; A/B support differs.",
+            "Inner planted feet do not convincingly share support plane with larger limbs.",
+            "C/D poses nearly identical; stride progression weak.",
+            "Margins below40px, no visible cross-cell body overlap.",
+            "Shell reflections and limb segment shape drift.",
+            "No runtime export or public binding."
+          ]
+        },
+        {
+          "file": "walk-left-review.json",
+          "status": "tripod-gait-study-not-production-approved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Far front leg attachment remains obscured; six full chains not established.",
+            "Far support legs stay elevated in bottom frames, so supporting tripod is incomplete.",
+            "Upper frames still fail to clearly lift near middle leg.",
+            "Pairs of poses are very similar; forward stride and passing motion remain weak.",
+            "Shell occupies almost entire cell height with narrow top/bottom margins.",
+            "Shell reflection/core texture drift across frames.",
+            "Not exported or bound to gameplay."
+          ]
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -1702,6 +2225,66 @@
         ],
         "next": "Refine lateral projection and joint registration, separate rigid sandstone segments, then author heavy steps, fist attack, joint collapse and sand emission."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "three-view-idle-two-pose-draft",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Chest carving and shoulder widths change between drawings.",
+            "Two drawings with holds do not provide a smooth settling motion.",
+            "Side helmet and shoulder details drift slightly; far limbs remain occluded.",
+            "Bible sand emission remains missing.",
+            "Rear fist and knee detailing changes; two drawing loop remains abrupt."
+          ]
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "rear-walk-four-key-pose-draft",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Raised soles make passing poses read as a rear kick; forward swing under hips needs refinement.",
+            "Boot size, knee blocks and back carvings vary between frames.",
+            "Only four poses; support transfer and foot sliding need further work.",
+            "Ground alignment approximate; front/side/back scale not yet compared together.",
+            "Animated idle, sand emission and runtime export remain outstanding."
+          ]
+        },
+        {
+          "file": "walk-front-review.json",
+          "status": "front-walk-four-key-pose-draft",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Four poses only; weight transfer and landing are abrupt.",
+            "Boot size, knee silhouette, carved motifs and body proportions vary.",
+            "Passing knees lift high for a slow grinding construct gait.",
+            "Body anchors and ground contacts approximate; support foot sliding not solved.",
+            "No rear walk or runtime export yet; visual approval remains pending."
+          ]
+        },
+        {
+          "file": "walk-review.json",
+          "status": "walk-study-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Bottom row still repeats same leading leg; no complete alternating walk.",
+            "Arm swing does not alternate adequately.",
+            "Head and torso scale/framing vary slightly.",
+            "Carved symbols and stone segment shapes change across poses.",
+            "Margins tight at top/bottom.",
+            "Sand emission absent; runtime VFX outstanding.",
+            "No runtime export or gameplay binding."
+          ]
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -1768,13 +2351,91 @@
         ],
         "limitations": [
           "Halo profiles are still partly oblique; visible panel positions do not prove one consistent rigid ring",
-          "Original front prompt requests six panels but front and rear show only five clearly visible; resolve hidden panel/mount design before animation",
+          "Five-panel layout chosen from front/rear references; profile panel projection and back mounting still need consistency refinement",
           "Front figure is smaller in frame; register head, grip, hips and feet rather than whole weapon bounding box",
           "Rear spear blade is longer than front relative to head; weapon dimensions need harmonization",
           "Profile head and heel geometry differ from front and require refinement"
         ],
-        "next": "Resolve rigid halo panel layout and standard spear dimensions, refine landmarks, then separate right-hand weapon chain, legs and halo for thrust, guard and collapse animation."
+        "next": "Refine front contact and passing poses; preserve five-panel rigid halo and standard spear dimensions across side/rear motion.",
+        "designDecision": {
+          "halo": "Five visible mirror panels: top, upper-left, lower-left, upper-right, lower-right. No sixth hidden panel assumed.",
+          "basis": "Bible requires halo-ring of sun mirrors but no count; existing front and rear both show five. Original generated prompt six was not a Bible requirement.",
+          "status": "Animation design target; profiles still need continuity validation."
+        }
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "four-view-two-drawing-idle-study-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Gold saturation and highlights changed in cleanup revisions, creating potential material flicker.",
+            "Minor knee, torso and halo detail drift remains.",
+            "Two drawings with repeated timing are not six distinct poses.",
+            "No public binding or production approval.",
+            "Left alternate is brighter and its free wrist/hand curls inward; armor detail changes beyond the intended wrist motion.",
+            "Right alternate movement is very subtle at runtime size."
+          ]
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "four-key-rear-walk-study-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Contact poses do not clearly establish both toe contacts; forward boot can read as floating.",
+            "Passing boot soles show backward heel lift rather than a fully controlled low passing trajectory.",
+            "Pelvis width, calf shape and halo spacing drift between poses.",
+            "Spear tips have insufficient source padding near cell boundaries.",
+            "Four key drawings only; no final animation or gameplay binding."
+          ]
+        },
+        {
+          "file": "walk-front-review.json",
+          "status": "front-walk-study-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Contact and passing drawings are too similar; trailing feet often look suspended rather than planted.",
+            "Free-arm counter swing is minimal.",
+            "Spear tips nearly touch source top edge; generous source margins were not followed.",
+            "Mirror highlights and chest details vary; rigid halo continuity not approved.",
+            "Front-only study; side/rear locomotion, action clips and runtime export missing."
+          ]
+        },
+        {
+          "file": "walk-left-review.json",
+          "status": "side-walk-four-key-pose-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Passing poses are asymmetric: one heel kicks backward while opposite knee rises high forward.",
+            "Near/far limb identity through passing transition still needs verification.",
+            "Halo panel spacing, head shape and armor highlights drift.",
+            "Foot support and heel contact require refinement; source margins tighter than requested.",
+            "Only four key drawings, not smooth final animation.",
+            "Frontal contact corrections remain unresolved; no gameplay binding."
+          ]
+        },
+        {
+          "file": "walk-right-review.json",
+          "status": "right-walk-attempts-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "No approved right walking loop; do not treat four source cells as complete locomotion.",
+            "Source spear tips too close to cell boundaries.",
+            "Cross-view proportions and mirror projection still inconsistent.",
+            "Not added to runtime or combined playback."
+          ]
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -1848,6 +2509,21 @@
         ],
         "next": "Resolve landmarks, foot direction and hidden joints, normalize framing, then separate articulated parts and author animation. Not an animation-ready approval."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-review.json",
+          "status": "four-view-idle-study-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Minor skin, shell highlight and face detail drift remains; pixel-identical body preservation is not established.",
+            "Closing/opening has no intermediate eyelid drawing.",
+            "Not approved or bound to gameplay.",
+            "Rear exhale changes toe spacing, exposed upper foreleg segments and shell highlights more than intended."
+          ]
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -1921,6 +2597,92 @@
         ],
         "next": "Resolve strict profile cameras, eight walking-leg attachments and fixed coral landmarks before part separation and animation."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "idle-registration-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Alpha disagreement does not assess internal textures, joints, correct anatomy, colours or motion quality.",
+            "These region counts are diagnostic comparisons, not pass scores.",
+            "No idle animation is approved for runtime binding."
+          ]
+        },
+        {
+          "file": "idle-review.json",
+          "status": "four-view-idle-studies",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": []
+        },
+        {
+          "file": "motion-review.json",
+          "status": "combined-four-view-five-clip-review",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": []
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "rear-scuttle-draft-unapproved",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "No per-leg identity tracking proves alternating support groups.",
+            "Coral and shell details drift between keys.",
+            "Planted-foot motion has not been matched to world displacement.",
+            "Added inner-leg roots are partly concealed; visible tip counts do not prove anatomical continuity."
+          ]
+        },
+        {
+          "file": "walk-front-review.json",
+          "status": "authored-four-key-scuttle-draft",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Concealed leg roots prevent reliable assignment of every support-group leg.",
+            "Coral branches and shell details drift between generated keys.",
+            "Leg segment proportions vary, so rigid bone length is not established.",
+            "Planted-foot sliding has not been measured against world displacement.",
+            "Only the front-facing scuttle draft exists; other views and actions remain pending."
+          ]
+        },
+        {
+          "file": "walk-left-isolated-review.json",
+          "status": "alternating-leg-anatomy-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": 3,
+          "remaining": []
+        },
+        {
+          "file": "walk-left-review.json",
+          "status": "left-scuttle-draft-with-missing-near-chains",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Repair missing near walking chains in keys 2 and 3.",
+            "Far legs and root order remain partly concealed.",
+            "Fixed segment lengths, support groups and lateral contact travel are unverified.",
+            "Coral and shell details drift between keys."
+          ]
+        },
+        {
+          "file": "walk-right-isolated-review.json",
+          "status": "right-alternating-leg-anatomy-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": 3,
+          "remaining": []
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -1995,6 +2757,143 @@
         ],
         "next": "Correct mechanical axes, tank and valve mounts and hand orientation, then normalize, separate rigid parts and animate. Steam should be runtime VFX."
       },
+      "sourceMotionStudies": [
+        {
+          "file": "attack-back-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": 4,
+          "remaining": [
+            "Occluded impact arm reads as missing limb; depth cue needs work.",
+            "Closed clamp construction and elbow continuity still drift.",
+            "Recovery clamp pivot construction differs from neutral.",
+            "Surface details drift across drawings."
+          ]
+        },
+        {
+          "file": "attack-review.json",
+          "status": "front-punch-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": 4,
+          "remaining": [
+            "Body proportions now match more closely, but exact landmark registration and surface continuity remain unapproved.",
+            "Two curved clamp jaws restored; hinge and wrist construction still varies.",
+            "Forward thrust has limited reach; heavy mechanical recoil not yet drawn.",
+            "Distinct recovery now lowers and opens the pincer; off-hand unexpectedly shifts and needs stabilizing."
+          ]
+        },
+        {
+          "file": "attack-right-review.json",
+          "status": "four-drawing-attack-draft",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": 4,
+          "remaining": [
+            "Foot centers registered, but foot silhouette and body details still drift.",
+            "Shared padding accommodates translated fist; verify export uses same registration.",
+            "Knee side has an extra front-facing plate.",
+            "Far leg remains obscured; cross-view construction unverified.",
+            "In-betweens missing; recovery hinge and salt patterns drift from other poses."
+          ]
+        },
+        {
+          "file": "death-back-review.json",
+          "status": "three-key-shutdown-draft",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Square framing restored, but body width still needs matching to neutral.",
+            "Arms still appear weight-bearing.",
+            "Cross-view folded leg and clamp geometry not approved.",
+            "Intermediate heel locations drift; support continuity unapproved."
+          ]
+        },
+        {
+          "file": "death-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Asymmetric forward slump is clearer, but elbows remain braced rather than fully relaxed.",
+            "Shell width and feet drift.",
+            "Knee and wrist mechanical continuity needs refinement."
+          ]
+        },
+        {
+          "file": "hit-back-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Planted heels and barrel landmarks drift.",
+            "Occluded wrists need cross-view construction review.",
+            "Rear recoil is subtle; impact readability unapproved."
+          ]
+        },
+        {
+          "file": "hit-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Feet shift from neutral.",
+            "Clamp proportions and surface details drift.",
+            "Only two unique drawings; recovery needs review."
+          ]
+        },
+        {
+          "file": "idle-back-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": 2,
+          "remaining": [
+            "Surface and outline drift persist despite localized edit.",
+            "Clamp hinge consistency with front remains unapproved."
+          ]
+        },
+        {
+          "file": "idle-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": 2,
+          "remaining": [
+            "Body outline and painted details still drift.",
+            "Gauge and clamp hinge continuity need visual review."
+          ]
+        },
+        {
+          "file": "walk-back-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Ankle hinges and sole patterns differ between lifted feet.",
+            "Body and foot landmarks drift.",
+            "Weight transfer uses neutral instead of authored contact poses."
+          ]
+        },
+        {
+          "file": "walk-review.json",
+          "status": "unclassified-study",
+          "artApproved": false,
+          "publicBinding": false,
+          "uniqueDrawings": null,
+          "remaining": [
+            "Support feet drift.",
+            "Body and limb proportions vary.",
+            "Neutral reused for both contacts; no dedicated weight-transfer keys."
+          ]
+        }
+      ],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2069,6 +2968,7 @@
         ],
         "next": "Align dish cross-section and hose mounts, define hidden limbs and fixed joints, then separate parts and animate sonar emission as runtime VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2142,6 +3042,7 @@
         ],
         "next": "Resolve six-leg topology and shell landmarks, normalize frame and ground line, separate limbs and author alternating tripod movement without stretching."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2215,6 +3116,7 @@
         ],
         "next": "Resolve a shared hexagonal cage structure, separate core and near/far lattice layers, normalize framing, author hover/pulse/attack/death motion and separate rainbow-beam VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2288,6 +3190,7 @@
         ],
         "next": "Construct eight fixed-length leg chains and coherent gear stack, align cameras and landmarks, then separate rigid parts and author walking/attack/death with no limb stretching."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2363,6 +3266,7 @@
         ],
         "next": "Resolve head cross-section, hands and joints, normalize framing, draw hidden limb parts, then animate precise core-handling and combat motions."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2437,6 +3341,7 @@
         ],
         "next": "Align shell segmentation and twelve leg sockets, normalize frame and ground line, separate overlapping rigid plates and author slow sequential crawl without limb stretching."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2511,6 +3416,7 @@
         ],
         "next": "Correct hands, horn roots and far arm, align crack map and joints; separate horn flame layers and author grounded footsteps plus separate glowing footprint VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2586,6 +3492,7 @@
         ],
         "next": "Resolve four fixed-length canine leg chains and support feet, tail path and rib landmarks; separate armor/bellows layers and author grounded gait, jaw attack, collapse and separate spark/slag VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2660,6 +3567,7 @@
         ],
         "next": "Resolve furnace door hinge, right-hand grip, rigid blade and armor joint axes, then separate parts and author heavy walk/slash/collapse plus separate smoke and heat VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2733,6 +3641,7 @@
         ],
         "next": "Define consistent core cross-section and vapor layers, normalize frame, author flowing hover/attack/dissipation animation and separate dimming trail VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2808,6 +3717,7 @@
         ],
         "next": "Resolve fixed six-wheel chassis dimensions, lamp/exhaust mounts and jaw hinges; separate wheels, body, doors and shadow layers for roll/attack/collapse animation."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2882,6 +3792,7 @@
         ],
         "next": "Correct lateral vane projection and fixed frame geometry, separate lens/core/frame/vanes, then author tracking aim, hover, firing and breakup with separate beam VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -2955,6 +3866,7 @@
         ],
         "next": "Refine arm-root topology and pose consistency, then separate articulated parts with fixed-length bones; validate motion and equipment/VFX later."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3028,6 +3940,7 @@
         ],
         "next": "Correct rear nozzle geometry and cross-view joint landmarks, then separate parts and author fixed-length articulated animation; not runtime-ready."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3101,6 +4014,7 @@
         ],
         "next": "Correct tail depth and joint landmarks, then author separated fixed-length limb animation and verify in game. Reference availability is not animation readiness."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3174,6 +4088,7 @@
         ],
         "next": "Align wing hinge/extremity landmarks and six-leg topology, separate wings/body/legs for articulated flap animation and author luminous dust VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3247,6 +4162,7 @@
         ],
         "next": "Reconcile hind-leg pose and rear paw orientation, then separate body/head/four articulated legs/tail and author walk/attack/hit/death animations."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3320,6 +4236,7 @@
         ],
         "next": "Correct arm pose and tripod root correspondence, then separate articulated legs/shears and author walking, pruning attack and sap-spray animation/VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3393,6 +4310,7 @@
         ],
         "next": "Align ears/hips/hocks and tail attachment across views, then separate articulated parts and create hop cycle, attack, hit and death without stretching limbs."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3466,6 +4384,7 @@
         ],
         "next": "Resolve rear anatomy, antler correspondence and neutral leg pose; separate fixed-length limb parts and author locomotion/attack/death plus chest glow VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3539,6 +4458,7 @@
         ],
         "next": "Resolve vent/root correspondence, separate articulated roots and vent masks, then author float, pulse, attack/spore release, hit and death with separate particle VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3612,6 +4532,7 @@
         ],
         "next": "Map eight lantern anchors and consistent cap/stalk/root surfaces, then separate hanging pods for sway and author movement/attack/hit/death with spore VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3685,6 +4606,7 @@
         ],
         "next": "Correct left camera and rear heels, reconcile piston joints, then separate articulated limbs and author walk/punch/hit/death plus exhaust steam/spore VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3758,6 +4680,7 @@
         ],
         "next": "Align pump cylinders, limb joints and crown/root topology, then separate parts and author walk/attack/hit/death with pump-stroke and jade-vein VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3831,6 +4754,7 @@
         ],
         "next": "Reconcile coat/collar/stance landmarks, then separate four fixed-length legs, head/ears/tail/tag and author walk/run/attack/hit/death."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3904,6 +4828,7 @@
         ],
         "next": "Reconcile spars and ribbon topology, separate rigid kite frame/lens/gears from deformable ribbons, then author hover/attack/hit/death and lens VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -3977,6 +4902,7 @@
         ],
         "next": "Correct camera, rear feet and tail topology, then separate four leg chains, torso/head/frill and tail club for idle/walk/attack/hit/death animation."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4051,6 +4977,7 @@
         ],
         "next": "Reconcile wrist orientation, crest geometry, robe seams and pendant segments; build articulated limb parts and cloth layers for idle/walk/mirror-cast/hit/death."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4124,6 +5051,7 @@
         ],
         "next": "Reconcile posture, antenna direction and six leg attachment chains, then author skitter locomotion, attack, hit and death with fixed-length articulated legs."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4198,6 +5126,7 @@
         ],
         "next": "Reconcile hood depth, lantern grip and cloth strip topology; separate rigid lantern/skeletal arms from cloth for hover, move, attack, hit and dissolve death plus dust VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4273,6 +5202,7 @@
         ],
         "next": "Resolve arm contact, disc thickness and burial footprint; separate rigid shoulder/elbow/wrist/disc parts and sand layer for idle, drag, slam, hit and collapse animation."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4347,6 +5277,7 @@
         ],
         "next": "Lock ring/prism depth and three fin anchors, separate optical aperture from rigid body, then author hover/aim/fire/hit/shatter and orange beam VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4421,6 +5352,7 @@
         ],
         "next": "Reconcile shield mount, visor depth, joint pivots and stance; separate rigid armor parts and author idle/walk/shield-bash/reflect/hit/death."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4496,6 +5428,7 @@
         ],
         "next": "Define nine lens anchors and paired-panel arm topology, reconcile side projection, then separate rigid rings/core/arm panels/base for idle, aim, solar attack, hit and collapse with authored solar VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4570,6 +5503,7 @@
         ],
         "next": "Reconcile gull silhouette, dive pitch, wing roots and single tail; separate wings/primaries/body/head/feet for glide, flap, dive attack, hit and fall."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4644,6 +5578,7 @@
         ],
         "next": "Map all six tube roots and four legs consistently, reconcile rear height and feet, then separate body/legs/tubes for idle/walk/spit/hit/deflate death and magenta projectile VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4717,6 +5652,7 @@
         ],
         "next": "Lock six oyster anchors, braid/arm/root topology and bulb scale; separate frond chains for idle sway, movement, lash, hit and wilt death."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4792,6 +5728,7 @@
         ],
         "next": "Lock shell handedness, mouth axis and segmented centerline, then build fixed-volume body bend controls and author idle/crawl/bore/hit/collapse plus wood-chip VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4866,6 +5803,7 @@
         ],
         "next": "Lock disc thickness, tail centerline and fin anchors, then separate deformable fins/body/tail for skim, glide, tail attack, hit and settle death."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -4940,6 +5878,7 @@
         ],
         "next": "Correct rear feet and profile pose, lock shell seams and porthole anchor, then articulate four leg chains/head/tail for idle/walk/bite/hit/collapse with storm discharge VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5014,6 +5953,7 @@
         ],
         "next": "Correct camera pitch and overlapping fin topology, lock dorsal markings and tail curvature; separate disc, fins, cephalic lobes and segmented tail for hover, travel, sting, hit and collapse. Add electrical VFX separately."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5089,6 +6029,7 @@
         ],
         "next": "Lock hatch hinge and nozzle topology, correct profile projection, separate three rotors from body for hover/travel/pressure attack/hit/power-down; add bubble emission as separate VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5163,6 +6104,7 @@
         ],
         "next": "Establish numbered rim anchors and oral-arm topology, correct left pose, separate dome/nucleus/arms/tentacle chains; animate bell pulse, drift, sting, recoil and deflation with separate dark-halo VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5238,6 +6180,7 @@
         ],
         "next": "Correct master to six explicit numbered cable roots/tips, fix crown axes and profile projection, lock coral/lens landmarks; separate shell, dishes and six cable chains for hover/travel/sonar strike/hit/power-down with bubble and spark VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5312,6 +6255,7 @@
         ],
         "next": "Correct rear hindfoot anatomy and fixed ear pose, align body proportions and margins; separate limbs/ears/head/tail for idle, bound, strike, recoil and collapse, with frost particles separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5386,6 +6330,7 @@
         ],
         "next": "Align profile pose and horn axes, lock plate rows, then separate four limb chains/head/horns/tail for idle, walk, charge, hit and collapse. Author breath steam separately."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5460,6 +6405,7 @@
         ],
         "next": "Draw a continuous numbered body path with explicit tail tip, fix hood plane and coil projections, then segment head/neck/body/hood for coil idle, slither, bite, recoil and collapse; frost effects separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5535,6 +6481,7 @@
         ],
         "next": "Lock chassis and plough geometry, arm attachment points and armor map; separate tracks/rollers/pistons/blade/torso for idle, drive, plough strike, recoil and shutdown, plus furnace/steam VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5610,6 +6557,7 @@
         ],
         "next": "Correct flat planted feet and profile arm pose, align joint landmarks and edge wisps, separate torso/head/limb chains and eye overlay for idle/walk/slash/cast/hit/collapse with shadow smoke VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5684,6 +6632,7 @@
         ],
         "next": "Lock all four numbered tusk roots and tips in true profiles, correct rear heels/tail and body proportions; separate four legs/head/trunk/tusks/tail for idle, heavy walk, gore, hit and collapse with frost VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5759,6 +6708,7 @@
         ],
         "next": "Lock three hip roots and ground contacts, correct profile camera and lance geometry, remove left haze and normalize framing; separate three articulated legs/torso/lance/cell for idle, tripod walk, thrust, recoil and shutdown with joint frost VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5833,6 +6783,7 @@
         ],
         "next": "Align shoulder/elbow/hand poses, separate stable body silhouette from glyph-scroll and face-static overlays, rig ribbon chains for hover/travel/cast/hit/dissolve and animate flicker."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5908,6 +6859,7 @@
         ],
         "next": "Align shoulder/elbow pose and lance length, lock armor/joint landmarks, separate biped chains and integrated weapon for idle/walk/thrust/shot/hit/collapse with prism beam and frost VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -5983,6 +6935,7 @@
         ],
         "next": "Fix shelf/core depth and arm poses, establish four numbered slate orbit anchors, separate pedestal/columns/core/crown/arms/slates for hover/travel/archive cast/hit/shutdown plus cryocore VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6057,6 +7010,7 @@
         ],
         "next": "Align four limb joints and toe anatomy, lock shell fissures and throat inflation volume; separate shell/body/head/throat/legs for idle bellows, hop, spit, hit and collapse with heat VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6132,6 +7086,7 @@
         ],
         "next": "Lock six limb roots and rigid link lengths across views, align tool poses and foot directions, then separate chassis/four legs/two tool arms/cable/torch effect for idle, walk, welding attack, scoop attack, hit and mechanical collapse."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6207,6 +7162,7 @@
         ],
         "next": "Align stance, four limb joints, natural heels and five-digit feet; lock tail bend and glow boundaries. Separate head/throat/body/legs/tail for breathing, grounded crawl, bite/heat attack, hit and articulated collapse; add heat shimmer separately."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6282,6 +7238,7 @@
         ],
         "next": "Lock segment count, collar landmarks, mouth axis/depth and base anchors across views. Separate body rings, collar, lip/gullet, drips and stationary crust for breathing, emergence/burrow travel, spit windup/recoil, hit and segment-by-segment collapse; author separate magma projectile/splash."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6357,6 +7314,7 @@
         ],
         "next": "Define immutable hardware landmarks and two wire paths, align views/stance, then separate rigid body, lens/gear, spring legs and selected loose rivets for jittering idle, compressed takeoff/hop/landing, impact attack, hit and spring-collapse death with separate debris."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6432,6 +7390,7 @@
         ],
         "next": "Lock plate/crack/seam landmarks, verify two arms/two legs and rear hand/heel anatomy. Separate head/torso/upper arms/forearms/fists/thighs/shins/feet with band overlays for weighted walk, punch/slam, hit and knees-first collapse; core pulse and impact debris separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6507,6 +7466,7 @@
         ],
         "next": "Lock shoulder/elbow/wrist pose, neutral body volumes, grey-skin islands and numbered drip roots across views; separate core/skin/arms/hands/drip chains for molten idle, flowing travel, pour attack, hit and melt-collapse plus cooling/remelting VFX."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6582,6 +7542,7 @@
         ],
         "next": "Fix left far foot and shoulder pose, lock hopper/head heights and shovel dimensions, align armor landmarks. Separate articulated limbs/tool/hand/hopper/coal/grille for heavy walk, shovel strike/scoop, stoke cycle, hit and knees-first mechanical collapse; ember/firebox effects separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6657,6 +7618,7 @@
         ],
         "next": "Lock cylinder cross-section, front grille/rear hatch, rib landmarks and arm poses. Separate fixed base/torso/crown/core/grille/upperarms/forearms/crucibles for furnace idle, swivel, pour windup/tilt/recovery, hit and structural collapse; author molten streams/splash and core heat separately."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6732,6 +7694,7 @@
         ],
         "next": "Align crouch, forehand reach, hind ankles, four-digit hands and head proportions; lock bristle landmarks. Separate head/ears/eyes/body/upper and lower limbs/hands/feet/bristles for alert idle, grounded scuttle, swipe/lunge, hit and articulated crouch-collapse; bristle glow separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6806,6 +7769,7 @@
         ],
         "next": "Number petals and four root anchors, reconcile bowl depth/stem twist/stance, normalize framing. Separate eye/lids/petal layers/stem/root joints for idle sway, four-root walking, gaze/drain attack, hit and wilt-collapse; grey walking trail and drain VFX separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6879,6 +7843,7 @@
         ],
         "next": "Number six hip sockets and trace each three-link leg to one foot; rebuild ambiguous profile legs and rotate jaws correctly. Lock chassis dimensions, separate six legs/two jaws/body/lamp for tripod gait, snap attack, hit and joint collapse; status blink separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -6953,6 +7918,7 @@
         ],
         "next": "Lock canine proportions, four limb joints and tail curve; enforce opaque body and thin edge style. Separate head/ears/legs/tail/white eyes/edge effect for alert idle, grounded gait, lunge/bite, hit and jointed collapse with controlled outline flicker/dissolve."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -7027,6 +7993,7 @@
         ],
         "next": "Define shoulder/elbow/wrist wing skeleton and numbered primaries, match tail and toe anatomy. Separate body/head/beak/two wings/tail/legs for perched idle, hop/takeoff, flap/glide, peck/dive attack, hit and wing-fold collapse; landing arcs and wingtip sparks separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -7101,6 +8068,7 @@
         ],
         "next": "Align grip/arm pose, weapon and halo planes, armor landmarks and grounded boot anatomy. Separate body joint plates/halberd/halo/light layers for idle, weighted walk, thrust/sweep, cast, hit and knees-first collapse; ring rotation and lattice trails separate."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -7173,6 +8141,7 @@
         ],
         "next": "Establish a canonical glyph layout from the Bible and isolate glyph artwork. Derive consistent view projection and spinning attack from that layout, then implement and visually review idle, movement, attack, hit and dispersal death in runtime."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -7247,6 +8216,7 @@
         ],
         "next": "Resolve eight-leg socket topology before rigging. Create four near and four far leg chains with fixed segment lengths, a shared body design and independent silk VFX; visually verify idle, alternating gait, ranged attack, hit and joint-folding death."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -7321,6 +8291,7 @@
         ],
         "next": "Define canonical cage depth, crown layout and arm sockets, correct hand projection, then separate layers and animate hovering, arm-unfolding attack, hit response and lattice/core collapse. Verify at game display size."
       },
+      "sourceMotionStudies": [],
       "sprite": null,
       "runtimeReview": null,
       "animationFiles": {
@@ -7378,7 +8349,7 @@
       "id": "itm_1001",
       "name": "Worn Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e1",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7386,7 +8357,7 @@
       "id": "itm_1002",
       "name": "Worn Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e1",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7394,7 +8365,7 @@
       "id": "itm_1003",
       "name": "Worn Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e1",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7402,7 +8373,7 @@
       "id": "itm_1004",
       "name": "Worn Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e1",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7410,7 +8381,7 @@
       "id": "itm_1005",
       "name": "Worn Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7418,7 +8389,7 @@
       "id": "itm_1006",
       "name": "Worn Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e1",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7426,7 +8397,7 @@
       "id": "itm_1007",
       "name": "Worn Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e1",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7434,7 +8405,7 @@
       "id": "itm_1008",
       "name": "Worn Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7442,7 +8413,7 @@
       "id": "itm_1009",
       "name": "Worn Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7450,7 +8421,7 @@
       "id": "itm_1010",
       "name": "Worn Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e1",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7458,7 +8429,7 @@
       "id": "itm_1011",
       "name": "Worn Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7466,7 +8437,7 @@
       "id": "itm_1012",
       "name": "Worn Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7474,7 +8445,7 @@
       "id": "itm_1013",
       "name": "Worn Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7482,7 +8453,7 @@
       "id": "itm_1014",
       "name": "Worn Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7490,7 +8461,7 @@
       "id": "itm_1015",
       "name": "Worn Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7498,7 +8469,7 @@
       "id": "itm_1016",
       "name": "Worn Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7506,7 +8477,7 @@
       "id": "itm_1017",
       "name": "Worn Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7514,7 +8485,7 @@
       "id": "itm_1018",
       "name": "Worn Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7522,7 +8493,7 @@
       "id": "itm_1019",
       "name": "Worn Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7530,7 +8501,7 @@
       "id": "itm_1020",
       "name": "Worn Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7538,7 +8509,7 @@
       "id": "itm_1021",
       "name": "Worn Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7546,7 +8517,7 @@
       "id": "itm_1022",
       "name": "Worn Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7562,7 +8533,7 @@
       "id": "itm_1024",
       "name": "Bronze Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e1",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7570,7 +8541,7 @@
       "id": "itm_1025",
       "name": "Bronze Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e1",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7578,7 +8549,7 @@
       "id": "itm_1026",
       "name": "Bronze Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e1",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7586,7 +8557,7 @@
       "id": "itm_1027",
       "name": "Bronze Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e1",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7594,7 +8565,7 @@
       "id": "itm_1028",
       "name": "Bronze Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7602,7 +8573,7 @@
       "id": "itm_1029",
       "name": "Bronze Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e1",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7610,7 +8581,7 @@
       "id": "itm_1030",
       "name": "Bronze Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e1",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7618,7 +8589,7 @@
       "id": "itm_1031",
       "name": "Bronze Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7626,7 +8597,7 @@
       "id": "itm_1032",
       "name": "Bronze Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7634,7 +8605,7 @@
       "id": "itm_1033",
       "name": "Bronze Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e1",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7642,7 +8613,7 @@
       "id": "itm_1034",
       "name": "Bronze Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7650,7 +8621,7 @@
       "id": "itm_1035",
       "name": "Bronze Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7658,7 +8629,7 @@
       "id": "itm_1036",
       "name": "Bronze Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7666,7 +8637,7 @@
       "id": "itm_1037",
       "name": "Bronze Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7674,7 +8645,7 @@
       "id": "itm_1038",
       "name": "Bronze Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7682,7 +8653,7 @@
       "id": "itm_1039",
       "name": "Bronze Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7690,7 +8661,7 @@
       "id": "itm_1040",
       "name": "Bronze Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7698,7 +8669,7 @@
       "id": "itm_1041",
       "name": "Bronze Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7706,7 +8677,7 @@
       "id": "itm_1042",
       "name": "Bronze Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7714,7 +8685,7 @@
       "id": "itm_1043",
       "name": "Bronze Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7722,7 +8693,7 @@
       "id": "itm_1044",
       "name": "Bronze Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7730,7 +8701,7 @@
       "id": "itm_1045",
       "name": "Bronze Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7746,7 +8717,7 @@
       "id": "itm_1047",
       "name": "Iron Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e1",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7754,7 +8725,7 @@
       "id": "itm_1048",
       "name": "Iron Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e1",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7762,7 +8733,7 @@
       "id": "itm_1049",
       "name": "Iron Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e1",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7770,7 +8741,7 @@
       "id": "itm_1050",
       "name": "Iron Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e1",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7778,7 +8749,7 @@
       "id": "itm_1051",
       "name": "Iron Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7786,7 +8757,7 @@
       "id": "itm_1052",
       "name": "Iron Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e1",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7794,7 +8765,7 @@
       "id": "itm_1053",
       "name": "Iron Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e1",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7802,7 +8773,7 @@
       "id": "itm_1054",
       "name": "Iron Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7810,7 +8781,7 @@
       "id": "itm_1055",
       "name": "Iron Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7818,7 +8789,7 @@
       "id": "itm_1056",
       "name": "Iron Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e1",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7826,7 +8797,7 @@
       "id": "itm_1057",
       "name": "Iron Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7834,7 +8805,7 @@
       "id": "itm_1058",
       "name": "Iron Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7842,7 +8813,7 @@
       "id": "itm_1059",
       "name": "Iron Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7850,7 +8821,7 @@
       "id": "itm_1060",
       "name": "Iron Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7858,7 +8829,7 @@
       "id": "itm_1061",
       "name": "Iron Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7866,7 +8837,7 @@
       "id": "itm_1062",
       "name": "Iron Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e1",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7874,7 +8845,7 @@
       "id": "itm_1063",
       "name": "Iron Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7882,7 +8853,7 @@
       "id": "itm_1064",
       "name": "Iron Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7890,7 +8861,7 @@
       "id": "itm_1065",
       "name": "Iron Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7898,7 +8869,7 @@
       "id": "itm_1066",
       "name": "Iron Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7906,7 +8877,7 @@
       "id": "itm_1067",
       "name": "Iron Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7914,7 +8885,7 @@
       "id": "itm_1068",
       "name": "Iron Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e1",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7930,7 +8901,7 @@
       "id": "itm_1070",
       "name": "Steel Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e2",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7938,7 +8909,7 @@
       "id": "itm_1071",
       "name": "Steel Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e2",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7946,7 +8917,7 @@
       "id": "itm_1072",
       "name": "Steel Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e2",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7954,7 +8925,7 @@
       "id": "itm_1073",
       "name": "Steel Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e2",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7962,7 +8933,7 @@
       "id": "itm_1074",
       "name": "Steel Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7970,7 +8941,7 @@
       "id": "itm_1075",
       "name": "Steel Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e2",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7978,7 +8949,7 @@
       "id": "itm_1076",
       "name": "Steel Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e2",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7986,7 +8957,7 @@
       "id": "itm_1077",
       "name": "Steel Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -7994,7 +8965,7 @@
       "id": "itm_1078",
       "name": "Steel Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8002,7 +8973,7 @@
       "id": "itm_1079",
       "name": "Steel Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e2",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8010,7 +8981,7 @@
       "id": "itm_1080",
       "name": "Steel Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8018,7 +8989,7 @@
       "id": "itm_1081",
       "name": "Steel Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8026,7 +8997,7 @@
       "id": "itm_1082",
       "name": "Steel Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8034,7 +9005,7 @@
       "id": "itm_1083",
       "name": "Steel Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8042,7 +9013,7 @@
       "id": "itm_1084",
       "name": "Steel Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8050,7 +9021,7 @@
       "id": "itm_1085",
       "name": "Steel Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8058,7 +9029,7 @@
       "id": "itm_1086",
       "name": "Steel Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8066,7 +9037,7 @@
       "id": "itm_1087",
       "name": "Steel Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8074,7 +9045,7 @@
       "id": "itm_1088",
       "name": "Steel Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8082,7 +9053,7 @@
       "id": "itm_1089",
       "name": "Steel Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8090,7 +9061,7 @@
       "id": "itm_1090",
       "name": "Steel Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8098,7 +9069,7 @@
       "id": "itm_1091",
       "name": "Steel Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8114,7 +9085,7 @@
       "id": "itm_1093",
       "name": "Cobalt Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e2",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8122,7 +9093,7 @@
       "id": "itm_1094",
       "name": "Cobalt Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e2",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8130,7 +9101,7 @@
       "id": "itm_1095",
       "name": "Cobalt Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e2",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8138,7 +9109,7 @@
       "id": "itm_1096",
       "name": "Cobalt Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e2",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8146,7 +9117,7 @@
       "id": "itm_1097",
       "name": "Cobalt Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8154,7 +9125,7 @@
       "id": "itm_1098",
       "name": "Cobalt Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e2",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8162,7 +9133,7 @@
       "id": "itm_1099",
       "name": "Cobalt Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e2",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8170,7 +9141,7 @@
       "id": "itm_1100",
       "name": "Cobalt Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8178,7 +9149,7 @@
       "id": "itm_1101",
       "name": "Cobalt Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8186,7 +9157,7 @@
       "id": "itm_1102",
       "name": "Cobalt Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e2",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8194,7 +9165,7 @@
       "id": "itm_1103",
       "name": "Cobalt Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8202,7 +9173,7 @@
       "id": "itm_1104",
       "name": "Cobalt Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8210,7 +9181,7 @@
       "id": "itm_1105",
       "name": "Cobalt Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8218,7 +9189,7 @@
       "id": "itm_1106",
       "name": "Cobalt Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8226,7 +9197,7 @@
       "id": "itm_1107",
       "name": "Cobalt Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8234,7 +9205,7 @@
       "id": "itm_1108",
       "name": "Cobalt Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8242,7 +9213,7 @@
       "id": "itm_1109",
       "name": "Cobalt Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8250,7 +9221,7 @@
       "id": "itm_1110",
       "name": "Cobalt Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8258,7 +9229,7 @@
       "id": "itm_1111",
       "name": "Cobalt Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8266,7 +9237,7 @@
       "id": "itm_1112",
       "name": "Cobalt Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8274,7 +9245,7 @@
       "id": "itm_1113",
       "name": "Cobalt Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8282,7 +9253,7 @@
       "id": "itm_1114",
       "name": "Cobalt Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8298,7 +9269,7 @@
       "id": "itm_1116",
       "name": "Runic Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e2",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8306,7 +9277,7 @@
       "id": "itm_1117",
       "name": "Runic Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e2",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8314,7 +9285,7 @@
       "id": "itm_1118",
       "name": "Runic Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e2",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8322,7 +9293,7 @@
       "id": "itm_1119",
       "name": "Runic Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e2",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8330,7 +9301,7 @@
       "id": "itm_1120",
       "name": "Runic Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8338,7 +9309,7 @@
       "id": "itm_1121",
       "name": "Runic Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e2",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8346,7 +9317,7 @@
       "id": "itm_1122",
       "name": "Runic Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e2",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8354,7 +9325,7 @@
       "id": "itm_1123",
       "name": "Runic Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8362,7 +9333,7 @@
       "id": "itm_1124",
       "name": "Runic Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e2",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8370,7 +9341,7 @@
       "id": "itm_1125",
       "name": "Runic Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e2",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8378,7 +9349,7 @@
       "id": "itm_1126",
       "name": "Runic Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8386,7 +9357,7 @@
       "id": "itm_1127",
       "name": "Runic Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8394,7 +9365,7 @@
       "id": "itm_1128",
       "name": "Runic Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8402,7 +9373,7 @@
       "id": "itm_1129",
       "name": "Runic Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8410,7 +9381,7 @@
       "id": "itm_1130",
       "name": "Runic Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8418,7 +9389,7 @@
       "id": "itm_1131",
       "name": "Runic Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8426,7 +9397,7 @@
       "id": "itm_1132",
       "name": "Runic Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8434,7 +9405,7 @@
       "id": "itm_1133",
       "name": "Runic Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8442,7 +9413,7 @@
       "id": "itm_1134",
       "name": "Runic Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8450,7 +9421,7 @@
       "id": "itm_1135",
       "name": "Runic Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8458,7 +9429,7 @@
       "id": "itm_1136",
       "name": "Runic Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8466,7 +9437,7 @@
       "id": "itm_1137",
       "name": "Runic Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8482,7 +9453,7 @@
       "id": "itm_1139",
       "name": "Mythril Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8490,7 +9461,7 @@
       "id": "itm_1140",
       "name": "Mythril Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e3",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8498,7 +9469,7 @@
       "id": "itm_1141",
       "name": "Mythril Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e3",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8506,7 +9477,7 @@
       "id": "itm_1142",
       "name": "Mythril Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8514,7 +9485,7 @@
       "id": "itm_1143",
       "name": "Mythril Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8522,7 +9493,7 @@
       "id": "itm_1144",
       "name": "Mythril Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e3",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8530,7 +9501,7 @@
       "id": "itm_1145",
       "name": "Mythril Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e3",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8538,7 +9509,7 @@
       "id": "itm_1146",
       "name": "Mythril Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8546,7 +9517,7 @@
       "id": "itm_1147",
       "name": "Mythril Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8554,7 +9525,7 @@
       "id": "itm_1148",
       "name": "Mythril Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e3",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8562,7 +9533,7 @@
       "id": "itm_1149",
       "name": "Mythril Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8570,7 +9541,7 @@
       "id": "itm_1150",
       "name": "Mythril Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8578,7 +9549,7 @@
       "id": "itm_1151",
       "name": "Mythril Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8586,7 +9557,7 @@
       "id": "itm_1152",
       "name": "Mythril Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8594,7 +9565,7 @@
       "id": "itm_1153",
       "name": "Mythril Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8602,7 +9573,7 @@
       "id": "itm_1154",
       "name": "Mythril Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8610,7 +9581,7 @@
       "id": "itm_1155",
       "name": "Mythril Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8618,7 +9589,7 @@
       "id": "itm_1156",
       "name": "Mythril Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8626,7 +9597,7 @@
       "id": "itm_1157",
       "name": "Mythril Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8634,7 +9605,7 @@
       "id": "itm_1158",
       "name": "Mythril Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8642,7 +9613,7 @@
       "id": "itm_1159",
       "name": "Mythril Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8650,7 +9621,7 @@
       "id": "itm_1160",
       "name": "Mythril Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8666,7 +9637,7 @@
       "id": "itm_1162",
       "name": "Ember Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8674,7 +9645,7 @@
       "id": "itm_1163",
       "name": "Ember Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e3",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8682,7 +9653,7 @@
       "id": "itm_1164",
       "name": "Ember Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e3",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8690,7 +9661,7 @@
       "id": "itm_1165",
       "name": "Ember Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8698,7 +9669,7 @@
       "id": "itm_1166",
       "name": "Ember Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8706,7 +9677,7 @@
       "id": "itm_1167",
       "name": "Ember Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e3",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8714,7 +9685,7 @@
       "id": "itm_1168",
       "name": "Ember Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e3",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8722,7 +9693,7 @@
       "id": "itm_1169",
       "name": "Ember Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8730,7 +9701,7 @@
       "id": "itm_1170",
       "name": "Ember Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8738,7 +9709,7 @@
       "id": "itm_1171",
       "name": "Ember Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e3",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8746,7 +9717,7 @@
       "id": "itm_1172",
       "name": "Ember Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8754,7 +9725,7 @@
       "id": "itm_1173",
       "name": "Ember Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8762,7 +9733,7 @@
       "id": "itm_1174",
       "name": "Ember Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8770,7 +9741,7 @@
       "id": "itm_1175",
       "name": "Ember Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8778,7 +9749,7 @@
       "id": "itm_1176",
       "name": "Ember Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8786,7 +9757,7 @@
       "id": "itm_1177",
       "name": "Ember Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8794,7 +9765,7 @@
       "id": "itm_1178",
       "name": "Ember Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8802,7 +9773,7 @@
       "id": "itm_1179",
       "name": "Ember Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8810,7 +9781,7 @@
       "id": "itm_1180",
       "name": "Ember Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8818,7 +9789,7 @@
       "id": "itm_1181",
       "name": "Ember Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8826,7 +9797,7 @@
       "id": "itm_1182",
       "name": "Ember Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8834,7 +9805,7 @@
       "id": "itm_1183",
       "name": "Ember Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8850,7 +9821,7 @@
       "id": "itm_1185",
       "name": "Star Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8858,7 +9829,7 @@
       "id": "itm_1186",
       "name": "Star Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e3",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8866,7 +9837,7 @@
       "id": "itm_1187",
       "name": "Star Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e3",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8874,7 +9845,7 @@
       "id": "itm_1188",
       "name": "Star Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8882,7 +9853,7 @@
       "id": "itm_1189",
       "name": "Star Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8890,7 +9861,7 @@
       "id": "itm_1190",
       "name": "Star Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e3",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8898,7 +9869,7 @@
       "id": "itm_1191",
       "name": "Star Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e3",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8906,7 +9877,7 @@
       "id": "itm_1192",
       "name": "Star Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8914,7 +9885,7 @@
       "id": "itm_1193",
       "name": "Star Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8922,7 +9893,7 @@
       "id": "itm_1194",
       "name": "Star Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e3",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8930,7 +9901,7 @@
       "id": "itm_1195",
       "name": "Star Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8938,7 +9909,7 @@
       "id": "itm_1196",
       "name": "Star Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8946,7 +9917,7 @@
       "id": "itm_1197",
       "name": "Star Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8954,7 +9925,7 @@
       "id": "itm_1198",
       "name": "Star Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8962,7 +9933,7 @@
       "id": "itm_1199",
       "name": "Star Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8970,7 +9941,7 @@
       "id": "itm_1200",
       "name": "Star Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8978,7 +9949,7 @@
       "id": "itm_1201",
       "name": "Star Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8986,7 +9957,7 @@
       "id": "itm_1202",
       "name": "Star Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -8994,7 +9965,7 @@
       "id": "itm_1203",
       "name": "Star Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9002,7 +9973,7 @@
       "id": "itm_1204",
       "name": "Star Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9010,7 +9981,7 @@
       "id": "itm_1205",
       "name": "Star Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9018,7 +9989,7 @@
       "id": "itm_1206",
       "name": "Star Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9034,7 +10005,7 @@
       "id": "itm_1208",
       "name": "Sovereign Saber",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9042,7 +10013,7 @@
       "id": "itm_1209",
       "name": "Sovereign Bow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e3",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9050,7 +10021,7 @@
       "id": "itm_1210",
       "name": "Sovereign Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e3",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9058,7 +10029,7 @@
       "id": "itm_1211",
       "name": "Sovereign Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9066,7 +10037,7 @@
       "id": "itm_1212",
       "name": "Sovereign Helm",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9074,7 +10045,7 @@
       "id": "itm_1213",
       "name": "Sovereign Hood",
       "slot": "head",
-      "visual": "gen_head_evasion_e3",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9082,7 +10053,7 @@
       "id": "itm_1214",
       "name": "Sovereign Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e3",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9090,7 +10061,7 @@
       "id": "itm_1215",
       "name": "Sovereign Sallet",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9098,7 +10069,7 @@
       "id": "itm_1216",
       "name": "Sovereign Warcrown",
       "slot": "head",
-      "visual": "gen_head_armour_e3",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9106,7 +10077,7 @@
       "id": "itm_1217",
       "name": "Sovereign Mask",
       "slot": "head",
-      "visual": "gen_head_evasion_e3",
+      "visual": "leather_hood",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9114,7 +10085,7 @@
       "id": "itm_1218",
       "name": "Sovereign Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9122,7 +10093,7 @@
       "id": "itm_1219",
       "name": "Sovereign Leathers",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9130,7 +10101,7 @@
       "id": "itm_1220",
       "name": "Sovereign Robe",
       "slot": "armor",
-      "visual": "gen_armor_shield_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9138,7 +10109,7 @@
       "id": "itm_1221",
       "name": "Sovereign Brigandine",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9146,7 +10117,7 @@
       "id": "itm_1222",
       "name": "Sovereign Runeplate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9154,7 +10125,7 @@
       "id": "itm_1223",
       "name": "Sovereign Duskcloak",
       "slot": "armor",
-      "visual": "gen_armor_evasion_e3",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9162,7 +10133,7 @@
       "id": "itm_1224",
       "name": "Sovereign Sabatons",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9170,7 +10141,7 @@
       "id": "itm_1225",
       "name": "Sovereign Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9178,7 +10149,7 @@
       "id": "itm_1226",
       "name": "Sovereign Slippers",
       "slot": "boots",
-      "visual": "gen_boots_shield_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9186,7 +10157,7 @@
       "id": "itm_1227",
       "name": "Sovereign Greaves",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9194,7 +10165,7 @@
       "id": "itm_1228",
       "name": "Sovereign Warboots",
       "slot": "boots",
-      "visual": "gen_boots_armour_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9202,7 +10173,7 @@
       "id": "itm_1229",
       "name": "Sovereign Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9938,7 +10909,7 @@
       "id": "itm_1321",
       "name": "Hollowroot Crown",
       "slot": "head",
-      "visual": "gen_head_armour_e1",
+      "visual": "iron_helm",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -9946,7 +10917,7 @@
       "id": "itm_1322",
       "name": "Emberwake Treads",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e3",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -10082,7 +11053,7 @@
       "id": "itm_1339",
       "name": "Stormcaller Rod",
       "slot": "weapon",
-      "visual": "gen_weapon_arcanist_e2",
+      "visual": "aether_rod",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -10090,7 +11061,7 @@
       "id": "itm_1340",
       "name": "Wildwood Longbow",
       "slot": "weapon",
-      "visual": "gen_weapon_strider_e2",
+      "visual": "surveyor_bow",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -10098,7 +11069,7 @@
       "id": "itm_1341",
       "name": "Gearheart Gauntlet",
       "slot": "weapon",
-      "visual": "gen_weapon_machinist_e2",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -10106,7 +11077,7 @@
       "id": "itm_1342",
       "name": "Executioner's Edge",
       "slot": "weapon",
-      "visual": "gen_weapon_vanguard_e3",
+      "visual": "copper_saber",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -10114,7 +11085,7 @@
       "id": "itm_1343",
       "name": "Bastion Plate",
       "slot": "armor",
-      "visual": "gen_armor_armour_e2",
+      "visual": "leafweave_coat",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -10122,7 +11093,7 @@
       "id": "itm_1344",
       "name": "Windrunner Boots",
       "slot": "boots",
-      "visual": "gen_boots_evasion_e2",
+      "visual": "traveler_boots",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -10130,7 +11101,7 @@
       "id": "itm_1345",
       "name": "Frostwake Circlet",
       "slot": "head",
-      "visual": "gen_head_shield_e3",
+      "visual": "aether_circlet",
       "generatedAlias": true,
       "status": "shared-look-needs-distinct-design"
     },
@@ -10146,6 +11117,502 @@
       "id": "itm_1347",
       "name": "Echo Stone",
       "slot": "charm",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1348",
+      "name": "Worn Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1349",
+      "name": "Worn Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1350",
+      "name": "Worn Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1351",
+      "name": "Worn Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1352",
+      "name": "Worn Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1353",
+      "name": "Worn Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1354",
+      "name": "Bronze Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1355",
+      "name": "Bronze Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1356",
+      "name": "Bronze Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1357",
+      "name": "Bronze Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1358",
+      "name": "Bronze Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1359",
+      "name": "Bronze Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1360",
+      "name": "Iron Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1361",
+      "name": "Iron Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1362",
+      "name": "Iron Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1363",
+      "name": "Iron Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1364",
+      "name": "Iron Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1365",
+      "name": "Iron Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1366",
+      "name": "Steel Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1367",
+      "name": "Steel Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1368",
+      "name": "Steel Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1369",
+      "name": "Steel Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1370",
+      "name": "Steel Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1371",
+      "name": "Steel Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1372",
+      "name": "Cobalt Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1373",
+      "name": "Cobalt Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1374",
+      "name": "Cobalt Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1375",
+      "name": "Cobalt Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1376",
+      "name": "Cobalt Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1377",
+      "name": "Cobalt Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1378",
+      "name": "Runic Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1379",
+      "name": "Runic Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1380",
+      "name": "Runic Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1381",
+      "name": "Runic Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1382",
+      "name": "Runic Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1383",
+      "name": "Runic Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1384",
+      "name": "Mythril Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1385",
+      "name": "Mythril Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1386",
+      "name": "Mythril Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1387",
+      "name": "Mythril Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1388",
+      "name": "Mythril Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1389",
+      "name": "Mythril Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1390",
+      "name": "Ember Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1391",
+      "name": "Ember Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1392",
+      "name": "Ember Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1393",
+      "name": "Ember Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1394",
+      "name": "Ember Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1395",
+      "name": "Ember Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1396",
+      "name": "Star Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1397",
+      "name": "Star Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1398",
+      "name": "Star Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1399",
+      "name": "Star Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1400",
+      "name": "Star Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1401",
+      "name": "Star Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1402",
+      "name": "Sovereign Handguards",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1403",
+      "name": "Sovereign Gloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1404",
+      "name": "Sovereign Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1405",
+      "name": "Sovereign Grips",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1406",
+      "name": "Sovereign Wargloves",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1407",
+      "name": "Sovereign Mitts",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1408",
+      "name": "Bloodgrip Wraps",
+      "slot": "gloves",
+      "visual": null,
+      "generatedAlias": false,
+      "status": "needs-visual-scope-review"
+    },
+    {
+      "id": "itm_1409",
+      "name": "Ironclasp Handguards",
+      "slot": "gloves",
       "visual": null,
       "generatedAlias": false,
       "status": "needs-visual-scope-review"
