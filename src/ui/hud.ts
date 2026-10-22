@@ -482,8 +482,8 @@ export class Hud {
     const it = gearItem(this.c, g);
     if (!it?.equip) { d.append(el('p', 'muted', g.base)); return; }
     const e = it.equip;
-    this.detailHead(d, itemIcon(it, g.rarity), RARITY_LABEL[g.rarity] + ' · ' + kindLabel(it), gearTitle(it, g), 'rarity-text-' + g.rarity,
-      'Item level ' + g.ilvl + (g.slot === 'stash' ? ' · in stash' : isWornCopy(g) ? ' · worn' : ''));
+    this.detailHead(d, itemIcon(it, g.rarity), RARITY_LABEL[g.rarity] + ' · item level ' + g.ilvl, gearTitle(it, g), 'rarity-text-' + g.rarity,
+      kindLabel(it) + (g.slot === 'stash' ? ' · in stash' : isWornCopy(g) ? ' · worn' : ''));
     if (e.unique || it.category === 'totem' || it.description) d.append(el('p', 'item-description', it.description));
     const lines = baseLines(this.c, it, g);
     if (lines.length) { const s = this.section(d, 'Properties'); for (const line of lines) s.append(el('p', 'item-stat', line)); }

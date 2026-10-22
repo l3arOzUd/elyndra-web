@@ -221,7 +221,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .bag-tabs button.active small { background:#6d482b; color:#fbe8c0; }
 #open-equip { display:flex; align-items:center; gap:6px; padding:7px 10px; white-space:nowrap; }
 #open-equip kbd { font-size:10px; }
-#inventory { max-height:300px; }
+#inventory { grid-template-columns:repeat(5,62px); grid-auto-rows:62px; max-height:calc(62px * 5 + 6px * 4); justify-content:start; }
 #inventory li.empty-slot { aspect-ratio:1; border:1px solid #5d4a30; border-radius:2px; background:radial-gradient(#2b241c,#1d1813); box-shadow:inset 0 0 0 1px #120e0a,inset 0 2px 6px #0008; }
 .bag-footer { display:flex; align-items:center; gap:10px; padding-top:10px; }
 .bag-footer .bag-count { padding:0; flex:1; min-width:0; }
@@ -230,7 +230,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .capacity span.full { background:#b8442f; }
 
 /* Item detail: header, then sections divided by rules, then sell value and actions. */
-.item-detail { display:flex; flex-direction:column; min-height:0; max-height:440px; overflow:auto; scrollbar-color:#9e7a43 #b8a17644; }
+.item-detail { display:flex; flex-direction:column; min-height:0; max-height:420px; overflow:auto; scrollbar-color:#9e7a43 #b8a17644; }
 .detail-head { display:flex; gap:10px; align-items:center; padding-bottom:10px; border-bottom:1px solid #aa8c5b77; }
 .detail-head > .painted-icon,.detail-socket { width:58px; height:58px; flex:none; border:2px ridge #a98a51; border-radius:3px; }
 .detail-socket { display:grid; place-items:center; background:radial-gradient(#2e271e,#1a1612); color:#a98a51; }
@@ -246,12 +246,12 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .detail-sec .compare-row { padding:3px 0; }.detail-sec .compare-row b { margin-left:auto; }
 .req-chips { display:flex; flex-wrap:wrap; gap:4px; }
 .req { font-size:11px; padding:1px 8px; border:1px solid currentColor; border-radius:9px; background:#fff6df60; }
-.detail-foot { margin-top:auto; padding-top:10px; }
+.detail-foot { position:sticky; bottom:-12px; margin:auto -12px -12px; padding:10px 12px 12px; background:linear-gradient(#e2cda6,#dbc49a); border-top:1px solid #aa8c5b77; }
 .detail-foot .sell-value { margin:0 0 8px; }
 .detail-foot .detail-actions { gap:6px; }
 
 /* Equipment: the paper doll on a dark stage, slots round the figure, Charms below. */
-.equip-body { display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:14px; padding:12px 0; min-height:0; overflow:auto; }
+.equip-body { display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:14px; padding:12px 0 0; min-height:0; overflow:auto; scrollbar-color:#9e7a43 #b8a17644; }
 .paper-doll { display:grid; grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr); grid-template-areas:"left fig right" "charms charms charms"; gap:10px 8px; padding:12px; border:1px solid #8d6d40; background:radial-gradient(ellipse at 50% 38%,#4a3f2c,#2a231b 72%); box-shadow:inset 0 2px 8px #0009; }
 .doll-left { grid-area:left; }.doll-right { grid-area:right; }.doll-figure { grid-area:fig; }
 .doll-col { display:flex; flex-direction:column; justify-content:space-around; gap:8px; min-width:0; }
@@ -259,8 +259,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .doll-slot { display:flex; align-items:center; gap:8px; padding:4px; min-width:0; text-align:left; color:#f1e2bf; background:none; border:1px solid transparent; border-radius:3px; box-shadow:none; }
 .doll-slot:hover:not(:disabled) { background:#ffffff0f; border-color:#c8a45c66; }
 .doll-slot.selected { background:#e9c47c1f; border-color:#e9c47c; }
-.doll-right .doll-slot { flex-direction:row-reverse; text-align:right; }
-.doll-charms .doll-slot { flex-direction:column; text-align:center; gap:4px; }
+.doll-slot { flex-direction:column; text-align:center; gap:4px; }
 .doll-socket { position:relative; flex:none; width:56px; height:56px; display:grid; place-items:center; border:2px ridge #b29460; border-radius:3px; background:radial-gradient(#2e271e,#1a1612); box-shadow:inset 0 2px 6px #000a; overflow:hidden; }
 .doll-socket .painted-icon { width:100%; height:100%; margin:0; }
 .doll-socket .empty-equip { width:28px; height:28px; color:#a98a51; opacity:.55; }
@@ -271,7 +270,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .doll-slot.inactive .doll-socket { border-color:#c4533b; }.doll-slot.inactive .painted-icon { filter:grayscale(.8) brightness(.6) !important; }
 .doll-slot.locked .doll-socket { opacity:.45; }
 .doll-text { display:flex; flex-direction:column; min-width:0; }
-.doll-charms .doll-text { align-items:center; }
+.doll-text { align-items:center; }
 .doll-text .eyebrow { font-size:10px; color:#c7ae7c; letter-spacing:.06em; }
 .doll-text strong { font-size:12px; line-height:1.3; font-weight:600; color:#bfae8c; overflow-wrap:anywhere; }
 .doll-slot.filled .doll-text strong { color:#fff0c2; }
@@ -287,7 +286,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .doll-caption { position:relative; width:100%; padding:6px 6px 9px; text-align:center; background:linear-gradient(transparent,#1d1812d0 40%); }
 .doll-caption strong { display:block; font:700 18px/1.2 var(--ui-font-title); color:#fff0c2; overflow-wrap:anywhere; }
 .doll-caption small { font-size:11px; color:#d6bd8a; }
-.equip-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; padding:10px 6px 12px; border-top:1px solid #9c7a4e70; flex:none; }
+.equip-stats { grid-column:1 / -1; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; padding:10px 6px 12px; border-top:1px solid #9c7a4e70; }
 .equip-stat-group h4 { margin:0 0 4px; font-size:10px; }
 .candidate { display:flex; align-items:center; gap:8px; width:100%; margin-top:5px; padding:5px; text-align:left; background:#fff6df70; box-shadow:none; }
 .candidate .painted-icon { width:38px; height:38px; flex:none; }
@@ -301,10 +300,11 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 }
 @media (max-width:600px) {
  .paper-doll { grid-template-columns:minmax(0,1fr) 104px minmax(0,1fr); padding:8px; gap:8px 4px; }
- .doll-slot { flex-direction:column !important; text-align:center !important; gap:3px; padding:3px; }.doll-text { align-items:center; }
+ .doll-slot { gap:3px; padding:3px; }
  .doll-socket { width:48px; height:48px; }.doll-text strong { font-size:11px; }
  .doll-figure { min-height:180px; border-radius:52px 52px 4px 4px; }#doll-canvas { width:150px; height:150px; }
  .equip-stats { grid-template-columns:1fr; gap:6px; }
  .heading-currency { font-size:12px; padding:2px 8px; }.bag-tabs button { padding:7px 6px; }
  #open-equip { display:none; }
+ #inventory { grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:auto; max-height:250px; }
 }
