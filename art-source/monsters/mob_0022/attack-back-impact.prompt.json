@@ -1,0 +1,6 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-neutral-v3.png",
+  "prompt": "Use case: precise-object-edit. Input is the canonical rear neutral Brine Automaton. Make ONE rear-view attack impact sprite. Preserve exact square framing, body scale, boots planted at identical positions, copper barrel, rear horizontal tank and straps, valves, right-hinged hatch, left arm and painted materials. Only anatomical RIGHT arm (image RIGHT) punches straight FORWARD AWAY FROM VIEWER: shoulder rotates forward, forearm is strongly foreshortened and MOSTLY OCCLUDED BY RIGHT SIDE OF TORSO, closed two-jaw clamp just barely visible beyond upper-right shoulder silhouette. Rear of elbow visible beside upper right ribs. This is a punch away from camera, NOT sideways, NOT toward viewer. No extra joints, no human fingers, no face, no enlarged hand, no stretched arm. True transparent background, full body, no ground shadow, text, steam or motion trails.",
+  "artApproved": false
+}

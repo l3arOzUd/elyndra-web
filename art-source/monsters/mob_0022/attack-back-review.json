@@ -1,0 +1,26 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "back-neutral-v3.png",
+    "attack-back-windup.png",
+    "attack-back-impact.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    1,
+    0
+  ],
+  "fps": 6.25,
+  "uniqueDrawings": 3,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Impact body grows taller and feet shift.",
+    "Punch angles outward instead of directly away.",
+    "Closed clamp construction and elbow continuity need correction.",
+    "Dedicated recovery drawing missing; windup reused."
+  ]
+}
