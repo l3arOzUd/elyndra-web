@@ -265,9 +265,10 @@ export class Fx {
         this.glow(x, z, color, 1.4, { life: 220 });
         return true;
       case "splitshot_array":
-        // A volley of five arrows per part, fanned across the cone.
-        each((k, d) => {
-          for (let i = 0; i < 5; i++) this.arrow(x, z, color, heading + spread * 0.8 * (i / 4 - 0.5) + (k ? rand(-0.05, 0.05) : 0), r, d + i * 14);
+        // A ragged volley of five arrows per part: each flies its own way
+        // inside the cone, lands at its own distance, leaves a beat apart.
+        each((_k, d) => {
+          for (let i = 0; i < 5; i++) this.arrow(x, z, color, heading + spread * rand(-0.45, 0.45), r * rand(0.6, 1), d + rand(0, 70));
           this.glow(x + Math.cos(heading) * 0.6, z + Math.sin(heading) * 0.6, color, 0.8, { delay: d, life: 160 });
         });
         return true;
