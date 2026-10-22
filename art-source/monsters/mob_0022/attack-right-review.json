@@ -2,9 +2,10 @@
   "id": "mob_0022",
   "sources": [
     "right-neutral-v2.png",
+    "attack-right-windup.png",
     "attack-right-impact.png"
   ],
-  "status": "two-pose-construction-study",
+  "status": "three-drawing-attack-draft",
   "artApproved": false,
   "publicBinding": false,
   "confirmed": [
@@ -16,7 +17,16 @@
     "Impact fist right margin is too tight for motion.",
     "Knee side has an extra front-facing plate.",
     "Far leg remains obscured; cross-view construction unverified.",
-    "Windup, recovery and in-betweens missing."
+    "Dedicated recovery and in-betweens missing; windup reused for recovery."
   ],
-  "next": "Register neutral and impact with fixed landmarks, preserve joint lengths; use the extended chain to inform rear projection."
+  "next": "Register neutral and impact with fixed landmarks, preserve joint lengths; use the extended chain to inform rear projection.",
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    1,
+    0
+  ],
+  "fps": 6.25
 }

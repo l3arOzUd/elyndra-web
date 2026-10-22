@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-neutral-v2.png",
+  "prompt": "Precise localized sprite edit. Right-facing copper Brine Automaton preparing a piston punch. Change ONLY near arm: rotate upper arm backward toward image LEFT, elbow drawn behind waist; bend elbow so forearm points horizontally image RIGHT, closed TWO-JAW pincer held near lower ribs ready to extend. Retain same metal segment lengths, hinges, piston pair, and claw design; no human fist. Preserve exact original body position and size, planted foot and toe positions, tank, valves, gauges, legs, texture, camera and square framing. Do not recenter the character based on changed arm silhouette. Full body transparent background, no shadows, text, steam or motion effects. One anticipation keyframe."
+}
