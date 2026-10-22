@@ -26,6 +26,19 @@ const UP = new THREE.Vector3(0, 1, 0);
 const tmpA = new THREE.Vector3();
 const tmpB = new THREE.Vector3();
 
+// Where an entity's sprite stands. Melee monsters stack in one cell on the
+// server; each is nudged a little, always the same way for the same monster,
+// so a pile reads as a pile (and its damage numbers sit over each sprite).
+function drawnAt(e: { id: number; kind: string; pos: THREE.Vector3 }, out: THREE.Vector3): THREE.Vector3 {
+  out.copy(e.pos);
+  if (e.kind === "m") {
+    const a = e.id * 2.39996, r = 0.12 + (e.id % 7) * 0.035;
+    out.x += Math.cos(a) * r;
+    out.z += Math.sin(a) * r;
+  }
+  return out;
+}
+
 interface Sample { t: number; x: number; y: number; h: number; st: number }
 
 interface Ent {
@@ -291,20 +304,15 @@ export class Game {
     const step = s?.hits && s.hits > 1 ? s.hit_ms ?? 180 : 0;
     for (const [id, dmg, flags] of ev.hits) {
       const k = flags >> 8;
-      if (k > 0 && step) setTimeout(() => this.showHit(ev, id, dmg, flags, k), k * step);
-      else this.showHit(ev, id, dmg, flags, step ? 0 : undefined);
+      const combo = step ? `${ev.cast}:${id}` : undefined;
+      if (k > 0 && step) setTimeout(() => this.showHit(ev, id, dmg, flags, combo), k * step);
+      else this.showHit(ev, id, dmg, flags, combo);
     }
     const dieAfter = step * ((s?.hits ?? 1) - 1);
-    // After the last part, the sum per target in one big number (RO style).
+    // Each target's combo counter (counting up with the parts) floats off after the last one.
     if (step) {
-      const sums = new Map<number, number>();
-      for (const [id, dmg, flags] of ev.hits) if (!(flags & 6)) sums.set(id, (sums.get(id) ?? 0) + dmg);
-      setTimeout(() => {
-        for (const [id, sum] of sums) {
-          const t = this.ents.get(id);
-          if (t) this.overlay.total(sum, tmpA.copy(t.pos).addScaledVector(UP, t.actor.height + 0.3), s!.hits!);
-        }
-      }, dieAfter + 90);
+      const ids = new Set(ev.hits.map(([id]) => id));
+      setTimeout(() => { for (const id of ids) this.overlay.endCombo(`${ev.cast}:${id}`); }, dieAfter + 60);
     }
     for (const id of ev.deaths ?? []) {
       const t = this.ents.get(id);
@@ -314,7 +322,7 @@ export class Game {
     }
   }
 
-  private showHit(ev: CombatEvent, id: number, dmg: number, flags: number, part?: number) {
+  private showHit(ev: CombatEvent, id: number, dmg: number, flags: number, combo?: string) {
     const t = this.ents.get(id);
     if (!t) return;
     t.hp = Math.max(0, t.hp - dmg);
@@ -327,7 +335,10 @@ export class Game {
     // Ailments landing (8 burn, 16 shock, 32 chill): a word above the target.
     if (flags & 56 && dmg > 0 && (flags & 8 ? ev.src !== id : true)) this.overlay.text(flags & 16 ? "Shock" : flags & 32 ? "Chill" : "Burn", at.clone().addScaledVector(UP, 0.4), "info");
     if (flags & 4) { this.overlay.text("◈ " + dmg, at, "taken"); return; } // the Aether Shield took it all
-    this.overlay.damage(id, dmg, (flags & 1) === 1, id === this.selfId ? "taken" : "dmg", at, part);
+    // A combo's numbers sit over the sprite as drawn (a pile's members are nudged apart).
+    // Each monster's own numbers, over its own sprite.
+    if (combo) this.overlay.part(combo, id, dmg, (flags & 1) === 1, drawnAt(t, tmpB).addScaledVector(UP, t.actor.height + 0.3));
+    else this.overlay.damage(id, dmg, (flags & 1) === 1, id === this.selfId ? "taken" : "dmg", at);
     if (id === this.selfId && dmg > t.mhp * 0.1) this.cam.kick(0.25);
   }
 
@@ -589,14 +600,7 @@ export class Game {
         if (e.state === EntState.Dead && !e.dead) this.die(e);
         if (prevState === EntState.Dead && e.state !== EntState.Dead) { e.dead = false; e.actor.revive(); e.label?.el.classList.remove("tag-dead"); }
       }
-      e.actor.root.position.copy(e.pos);
-      // Melee monsters stack in one cell on the server; nudge each a little,
-      // always the same way for the same monster, so a pile reads as a pile.
-      if (e.kind === "m") {
-        const a = e.id * 2.39996, r = 0.12 + (e.id % 7) * 0.035;
-        e.actor.root.position.x += Math.cos(a) * r;
-        e.actor.root.position.z += Math.sin(a) * r;
-      }
+      drawnAt(e, e.actor.root.position);
     }
     // Monsters whose death has played out leave.
     for (const e of [...this.ents.values()]) {
