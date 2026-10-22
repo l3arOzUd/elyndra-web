@@ -96,8 +96,8 @@ export class Fx {
   /** A flat shader effect on the ground at (x, z), driven by `step` each frame. */
   private ground(shader: FxShader, color: number, x: number, z: number, y: number, life: number,
     step: (t: number, u: Uniforms, mesh: THREE.Mesh, ageMs: number) => void,
-    o: { geo?: THREE.BufferGeometry; extra?: Record<string, number>; delay?: number; heading?: number; additive?: boolean } = {}) {
-    const mesh = new THREE.Mesh(o.geo ?? disc(), fxMaterial(shader, color, o.extra, o.additive));
+    o: { geo?: THREE.BufferGeometry; extra?: Record<string, number>; delay?: number; heading?: number } = {}) {
+    const mesh = new THREE.Mesh(o.geo ?? disc(), fxMaterial(shader, color, o.extra));
     mesh.position.set(x, y, z);
     if (o.heading !== undefined) mesh.rotation.y = -o.heading;
     const u = (mesh.material as THREE.ShaderMaterial).uniforms;
@@ -138,13 +138,12 @@ export class Fx {
     }
   }
 
-  /** A column of light: a bright core inside a wide soft one. A skill's core is tinted and softer than a level-up's white one. */
-  private pillar(x: number, z: number, color: number, r: number, h: number, life: number, o: { delay?: number; white?: boolean } = {}) {
-    const core = o.white ? 0xffffff : new THREE.Color(color).lerp(new THREE.Color(0xffffff), 0.45).getHex();
-    for (const [k, a] of [[0.32, o.white ? 0.9 : 0.55], [1, 0.35]] as const) {
-      const beam = new THREE.Mesh(new THREE.CylinderGeometry(r * k, r * k * 1.3, h, 24, 1, true).translate(0, h / 2, 0), glowMat(k < 1 ? core : color, a));
+  /** A column of light: a bright core inside a wide soft one (level-ups; on a skill it reads as a solid post). */
+  private pillar(x: number, z: number, color: number, r: number, h: number, life: number) {
+    for (const [k, o] of [[0.32, 0.9], [1, 0.35]] as const) {
+      const beam = new THREE.Mesh(new THREE.CylinderGeometry(r * k, r * k * 1.3, h, 24, 1, true).translate(0, h / 2, 0), glowMat(k < 1 ? 0xffffff : color, o));
       beam.position.set(x, 0.02, z);
-      this.push(beam, "beam", life, { delay: o.delay });
+      this.push(beam, "beam", life);
     }
   }
 
@@ -217,7 +216,7 @@ export class Fx {
       u.uProgress.value = Math.min(1, p);
       u.uFlash.value = p < 1 ? 0 : 1 - (age - castMs) / tail;
       u.uOpacity.value = p < 1 ? Math.min(1, age / 120) : u.uFlash.value;
-    }, { geo, heading: Math.atan2(aimZ - z, aimX - x), extra, additive: false });
+    }, { geo, heading: Math.atan2(aimZ - z, aimX - x), extra });
     if (s.cast_ms > 0) this.channel(x, z, color, castMs);
   }
 
@@ -294,7 +293,6 @@ export class Fx {
         return true;
       }
       case "anchor_shout":
-        this.aura(x, z, color, 800, 1.6);
         for (let i = 0; i < 3; i++) this.wave(x, z, color, r, { delay: i * 130, life: 620, width: 0.06 });
         this.glow(x, z, color, 2, { life: 300 });
         this.sparks(x, z, color, 14, { r: 1, speed: 5, up: 1, g: 4, life: 500 });
@@ -308,7 +306,6 @@ export class Fx {
         return true;
       case "aether_nova":
         this.glow(x, z, color, r * 0.6, { life: 420 });
-        this.pillar(x, z, color, 0.8, 6, 800);
         each((_k, d) => this.wave(x, z, color, r, { delay: d, life: 480, width: 0.07 }));
         this.sparks(x, z, color, 22, { r: r * 0.5, speed: 1.5, up: 4, life: 900, stagger: 300 });
         return true;
@@ -319,7 +316,7 @@ export class Fx {
           u.uOpacity.value = Math.min(1, age / 100) * (1 - t * t);
         });
         for (let i = 0; i < 3; i++) {
-          const ring = new THREE.Mesh(new THREE.RingGeometry(0.85, 1, 48).rotateX(-Math.PI / 2), glowMat(color, 0.8));
+          const ring = new THREE.Mesh(new THREE.RingGeometry(0.85, 1, 48).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color, transparent: true, depthWrite: false }));
           ring.position.set(aimX, 0.1 + i * 0.01, aimZ);
           ring.scale.setScalar(r * (1 + i * 0.25));
           this.push(ring, "shrink", 500 + i * 120, { grow: r * (1 + i * 0.25) });
@@ -340,7 +337,6 @@ export class Fx {
           this.wave(aimX, aimZ, color, r * 1.1, { delay: d, life: 460, width: 0.08 });
           if (k) this.glow(aimX, aimZ, color, r * 0.7, { delay: d, life: 300 });
         });
-        this.pillar(aimX, aimZ, color, 0.7, 3, 450);
         this.sparks(aimX, aimZ, color, 18, { r: 0.4, speed: 4, up: 5, g: 14, life: 750, size: 0.1 });
         return true;
       case "gearstorm": {
@@ -359,8 +355,7 @@ export class Fx {
         return true;
       }
       case "pulse_beacon":
-        this.aura(x, z, color, 1100, 2.4);
-        this.pillar(x, z, color, 0.7, 7, 1000);
+        this.glow(x, z, color, 2.4, { life: 500 });
         for (let i = 0; i < 2; i++) this.wave(x, z, color, r, { delay: i * 220, life: 700, width: 0.05 });
         this.sparks(x, z, color, 16, { r: r * 0.6, speed: 0.2, up: 2.5, life: 1000, stagger: 400, size: 0.09 });
         return true;
@@ -490,7 +485,7 @@ export class Fx {
    * up; skill ranks use about 0.6. About 30 meshes, once, so cheap enough.
    */
   celebrate(x: number, z: number, color: number, power = 1) {
-    this.pillar(x, z, color, 1.1 * power, 9 * power, 1600 * Math.max(0.7, power), { white: true });
+    this.pillar(x, z, color, 1.1 * power, 9 * power, 1600 * Math.max(0.7, power));
     // Rings rolling out.
     for (let i = 0; i < 3; i++) {
       const ring = new THREE.Mesh(new THREE.RingGeometry(0.85, 1, 48).rotateX(-Math.PI / 2), glowMat(i === 1 ? 0xffffff : color, 0.95));

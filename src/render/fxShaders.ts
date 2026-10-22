@@ -3,6 +3,8 @@ import * as THREE from "three";
 // Procedural ground materials for skill effects. Nothing to load, and every
 // effect of one kind shares a shader program however many are live. All of
 // them draw on geometry laid flat (rotated into XZ), read as vP = (x, z).
+// They blend normally, not additively: added light washes to white on bright
+// grass, and each skill should keep its own colour on any ground.
 
 const vertexShader = /* glsl */ `
   varying vec2 vP;
@@ -60,8 +62,8 @@ const telegraphFrag = /* glsl */ `
       float t = fract(vP.x * 0.7 - abs(vP.y) * 0.45 - uTime * 1.6);
       marks = band(t, 0.5, 0.12) * (1.0 - smoothstep(0.55, 0.85, abs(vP.y) / (uWid * 0.5)));
     }
-    float a = body + filled + front * 0.75 + rim * 0.8 + marks * 0.4 + uFlash * (0.5 - 0.25 * e);
-    vec3 col = mix(uColor, vec3(1.0), clamp(front * 0.75 + rim * 0.3 + uFlash * 0.6, 0.0, 1.0));
+    float a = body + filled + front * 0.75 + rim * 0.8 + marks * 0.4 + uFlash * (0.06 + 0.4 * rim);
+    vec3 col = mix(uColor, vec3(1.0), clamp(front * 0.75 + rim * (0.3 + 0.4 * uFlash), 0.0, 1.0));
     gl_FragColor = vec4(col, a * uOpacity);
     ${out}
   }
@@ -97,7 +99,7 @@ const waveFrag = /* glsl */ `
     if (d > 1.0) discard;
     float w = uWidth * (1.0 - uT * 0.6);
     float ring = exp(-pow((d - 0.92) / w, 2.0));
-    float wash = smoothstep(0.2, 0.92, d) * 0.22 * (1.0 - uT);
+    float wash = smoothstep(0.2, 0.92, d) * 0.12 * (1.0 - uT);
     vec3 col = mix(uColor, vec3(1.0), ring * 0.55 * (1.0 - uT));
     gl_FragColor = vec4(col, (ring + wash) * uOpacity);
     ${out}
@@ -195,12 +197,11 @@ const shaders = { telegraph: telegraphFrag, sigil: sigilFrag, wave: waveFrag, gl
 export type FxShader = keyof typeof shaders;
 
 /** A material for one effect, with its own uniforms (uColor, uOpacity, uTime and the extras). */
-export function fxMaterial(kind: FxShader, color: number, extra: Record<string, number> = {}, additive = kind !== "telegraph") {
+export function fxMaterial(kind: FxShader, color: number, extra: Record<string, number> = {}) {
   const uniforms: Record<string, THREE.IUniform> = { uColor: { value: new THREE.Color(color) }, uOpacity: { value: 0 }, uTime: { value: 0 } };
   for (const [k, v] of Object.entries(extra)) uniforms[k] = { value: v };
   return new THREE.ShaderMaterial({
     vertexShader, fragmentShader: shaders[kind], uniforms,
     transparent: true, depthWrite: false, side: THREE.DoubleSide,
-    blending: additive ? THREE.AdditiveBlending : THREE.NormalBlending,
   });
 }
