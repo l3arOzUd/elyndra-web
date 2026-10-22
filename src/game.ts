@@ -114,6 +114,8 @@ export class Game {
   private holdWalk = { on: false, at: 0 };
   /** Client-side prediction of our own walk. */
   private predicted: { path: Cell[]; at: THREE.Vector3 } | null = null;
+  /** When we last walked by our own prediction (steering or a click path). */
+  private ownWalkAt = 0;
   /** Our own cast in progress (until its first combat event, or a timeout):
    * the server holds a walk ordered meanwhile until the cast lands, so we do
    * not walk ahead of it (that used to snap us back). */
@@ -687,6 +689,7 @@ export class Game {
     const latest = e.samples[e.samples.length - 1];
     if ((this.steerDir[0] || this.steerDir[1]) && !e.dead && this.grid && performance.now() >= this.castingUntil) {
       this.steerStep(e, dt);
+      this.ownWalkAt = performance.now();
       // Reconcile: if the server disagrees by more than 2.5 cells, trust it.
       if (Math.hypot(latest.x - e.pos.x, latest.y - e.pos.z) > 2.5 && this.conn.serverNow() - latest.t < 300) e.pos.set(latest.x, 0, latest.y);
       return;
@@ -705,6 +708,7 @@ export class Game {
       }
       e.pos.copy(p.at);
       e.actor.setBase(p.path.length ? "walk" : "idle", e.msPerCell);
+      if (p.path.length) this.ownWalkAt = performance.now();
       // Reconcile: if the server disagrees by more than 2.5 cells, trust it.
       if (Math.hypot(latest.x - p.at.x, latest.y - p.at.z) > 2.5 && this.conn.serverNow() - latest.t < 300) this.predicted = null;
       if (!p.path.length && Math.hypot(latest.x - p.at.x, latest.y - p.at.z) < 0.2) this.predicted = null;
@@ -715,10 +719,12 @@ export class Game {
     const ox = e.pos.x, oz = e.pos.z;
     e.pos.x += (latest.x - e.pos.x) * k;
     e.pos.z += (latest.y - e.pos.z) * k;
-    // Face the server's heading, never the glide: after a short key tap our
-    // prediction is a little ahead of the newest sample, and settling back onto
-    // it would turn us around.
-    const walking = latest.st === EntState.Walk && Math.hypot(e.pos.x - ox, e.pos.z - oz) > dt * 0.8;
+    // Just after our own walk the server is still catching up: its late
+    // samples (the rest of an earlier tap, a step back onto its position) must
+    // not turn us away from the way we last walked. Later, face its heading,
+    // never the glide.
+    const settling = performance.now() - this.ownWalkAt < 500;
+    const walking = !settling && latest.st === EntState.Walk && Math.hypot(e.pos.x - ox, e.pos.z - oz) > dt * 0.8;
     if (walking || latest.st === EntState.Attack || latest.st === EntState.Cast) e.actor.heading = latest.h;
     if (!e.dead) e.actor.setBase(walking ? "walk" : "idle", e.msPerCell);
   }
