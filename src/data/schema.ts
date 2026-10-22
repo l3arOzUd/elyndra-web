@@ -156,7 +156,7 @@ export type ItemCategory = "material" | "rare_material" | "consumable" | "equipm
 export type Rarity = "common" | "uncommon" | "rare" | "epic";
 
 export type StatId = "pow" | "luk" | "agi" | "dex" | "int" | "vit";
-export type GearSlot = "weapon" | "head" | "armor" | "boots" | "accessory";
+export type GearSlot = "weapon" | "head" | "armor" | "gloves" | "boots" | "accessory";
 export type DefenseKind = "armour" | "evasion" | "shield" | "armour_evasion" | "armour_shield" | "evasion_shield";
 
 export interface ItemDef {

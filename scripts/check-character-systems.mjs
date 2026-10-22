@@ -103,7 +103,7 @@ ws.onopen = async () => {
 
   // Gear: wear the rare copy of each slot; defences and stats follow.
   const sheetBefore = { ...state.sheet.d };
-  for (const slot of ['weapon', 'head', 'armor', 'boots', 'accessory']) {
+  for (const slot of ['weapon', 'head', 'armor', 'gloves', 'boots', 'accessory']) {
     const g = [...state.gear.values()].find((x) => !x.slot && items.get(x.base)?.equip?.slot === slot && x.rarity === 'rare');
     if (!g) { check(`equip rare ${slot}`, false, 'none in the dev kit'); continue; }
     send({ t: 'equip', gear: g.uid });

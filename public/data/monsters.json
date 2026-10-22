@@ -1887,6 +1887,12 @@
     "rate_bp": 800,
     "min_qty": 1,
     "max_qty": 1
+   },
+   {
+    "item_id": "itm_1408",
+    "rate_bp": 800,
+    "min_qty": 1,
+    "max_qty": 1
    }
   ],
   "ecology": "The Engine's heart: an Aethrion pump fused with the oldest tree in Verdantis. It drives the sap that lights the forest and the spores that are now choking it.",
@@ -2733,6 +2739,12 @@
    {
     "item_id": "itm_1341",
     "rate_bp": 1000,
+    "min_qty": 1,
+    "max_qty": 1
+   },
+   {
+    "item_id": "itm_1409",
+    "rate_bp": 800,
     "min_qty": 1,
     "max_qty": 1
    }

@@ -40,6 +40,7 @@ async function main() {
     copy(tier('head', 'armour'), 'magic', [['inc_area', 3, 8]], 'head'),
     copy(tier('armor', 'armour'), 'rare', [['inc_local_defense', 3, 27], ['flat_hp', 3, 74], ['res_fire', 3, 15]], 'armor'),
     copy(tier('boots', 'armour_evasion'), 'magic', [['inc_move_speed', 3, 9], ['stat_vit', 2, 4]], 'boots'),
+    copy(tier('gloves', 'evasion'), 'rare', [['inc_attack_speed', 3, 7], ['leech', 2, 0.4], ['inc_crit', 3, 26]], 'gloves'),
     copy(tier('accessory'), 'normal', [], 'accessory'),
     copy(charmBase('clover'), 'relic', [['stat_luk', 3, 4], ['cap_crit', 2, 53]], 'charm1'),
     copy(totemBase('fury'), 'magic', [['totem_duration', 2, 17]], 'charm2'),

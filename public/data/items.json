@@ -717,7 +717,7 @@
    "kind": "evasion",
    "item_level": 1,
    "min_level": 1,
-   "evasion": 6
+   "evasion": 5
   }
  },
  {
@@ -733,8 +733,8 @@
    "kind": "evasion_shield",
    "item_level": 5,
    "min_level": 5,
-   "evasion": 24,
-   "shield": 18,
+   "evasion": 22,
+   "shield": 16,
    "req": {
     "dex": 2,
     "int": 2
@@ -2063,7 +2063,7 @@
    "kind": "armour",
    "item_level": 1,
    "min_level": 1,
-   "armour": 10,
+   "armour": 8,
    "req": {}
   }
  },
@@ -2081,7 +2081,7 @@
    "kind": "evasion",
    "item_level": 1,
    "min_level": 1,
-   "evasion": 10,
+   "evasion": 8,
    "req": {}
   }
  },
@@ -2099,7 +2099,7 @@
    "kind": "shield",
    "item_level": 1,
    "min_level": 1,
-   "shield": 9,
+   "shield": 8,
    "req": {}
   }
  },
@@ -2117,8 +2117,8 @@
    "kind": "armour_evasion",
    "item_level": 1,
    "min_level": 1,
-   "armour": 6,
-   "evasion": 6,
+   "armour": 5,
+   "evasion": 5,
    "req": {}
   }
  },
@@ -2136,7 +2136,7 @@
    "kind": "armour_shield",
    "item_level": 1,
    "min_level": 1,
-   "armour": 6,
+   "armour": 5,
    "shield": 5,
    "req": {}
   }
@@ -2155,7 +2155,7 @@
    "kind": "evasion_shield",
    "item_level": 1,
    "min_level": 1,
-   "evasion": 6,
+   "evasion": 5,
    "shield": 5,
    "req": {}
   }
@@ -2174,7 +2174,7 @@
    "kind": "armour",
    "item_level": 1,
    "min_level": 1,
-   "armour": 16,
+   "armour": 14,
    "req": {}
   }
  },
@@ -2192,7 +2192,7 @@
    "kind": "evasion",
    "item_level": 1,
    "min_level": 1,
-   "evasion": 16,
+   "evasion": 14,
    "req": {}
   }
  },
@@ -2210,7 +2210,7 @@
    "kind": "shield",
    "item_level": 1,
    "min_level": 1,
-   "shield": 15,
+   "shield": 14,
    "req": {}
   }
  },
@@ -2228,8 +2228,8 @@
    "kind": "armour_evasion",
    "item_level": 1,
    "min_level": 1,
-   "armour": 10,
-   "evasion": 10,
+   "armour": 9,
+   "evasion": 9,
    "req": {}
   }
  },
@@ -2247,8 +2247,8 @@
    "kind": "armour_shield",
    "item_level": 1,
    "min_level": 1,
-   "armour": 10,
-   "shield": 9,
+   "armour": 9,
+   "shield": 8,
    "req": {}
   }
  },
@@ -2266,8 +2266,8 @@
    "kind": "evasion_shield",
    "item_level": 1,
    "min_level": 1,
-   "evasion": 10,
-   "shield": 9,
+   "evasion": 9,
+   "shield": 8,
    "req": {}
   }
  },
@@ -2285,7 +2285,7 @@
    "kind": "armour",
    "item_level": 1,
    "min_level": 1,
-   "armour": 6,
+   "armour": 5,
    "req": {}
   }
  },
@@ -2303,7 +2303,7 @@
    "kind": "evasion",
    "item_level": 1,
    "min_level": 1,
-   "evasion": 6,
+   "evasion": 5,
    "req": {}
   }
  },
@@ -2321,7 +2321,7 @@
    "kind": "shield",
    "item_level": 1,
    "min_level": 1,
-   "shield": 6,
+   "shield": 5,
    "req": {}
   }
  },
@@ -2339,8 +2339,8 @@
    "kind": "armour_evasion",
    "item_level": 1,
    "min_level": 1,
-   "armour": 4,
-   "evasion": 4,
+   "armour": 3,
+   "evasion": 3,
    "req": {}
   }
  },
@@ -2358,8 +2358,8 @@
    "kind": "armour_shield",
    "item_level": 1,
    "min_level": 1,
-   "armour": 4,
-   "shield": 4,
+   "armour": 3,
+   "shield": 3,
    "req": {}
   }
  },
@@ -2377,8 +2377,8 @@
    "kind": "evasion_shield",
    "item_level": 1,
    "min_level": 1,
-   "evasion": 4,
-   "shield": 4,
+   "evasion": 3,
+   "shield": 3,
    "req": {}
   }
  },
@@ -2485,7 +2485,7 @@
    "kind": "armour",
    "item_level": 10,
    "min_level": 10,
-   "armour": 42,
+   "armour": 35,
    "req": {
     "vit": 9
    }
@@ -2505,7 +2505,7 @@
    "kind": "evasion",
    "item_level": 10,
    "min_level": 10,
-   "evasion": 42,
+   "evasion": 35,
    "req": {
     "dex": 9
    }
@@ -2525,7 +2525,7 @@
    "kind": "shield",
    "item_level": 10,
    "min_level": 10,
-   "shield": 32,
+   "shield": 27,
    "req": {
     "int": 9
    }
@@ -2545,8 +2545,8 @@
    "kind": "armour_evasion",
    "item_level": 10,
    "min_level": 10,
-   "armour": 25,
-   "evasion": 25,
+   "armour": 21,
+   "evasion": 21,
    "req": {
     "vit": 4,
     "dex": 4
@@ -2567,8 +2567,8 @@
    "kind": "armour_shield",
    "item_level": 10,
    "min_level": 10,
-   "armour": 25,
-   "shield": 19,
+   "armour": 21,
+   "shield": 16,
    "req": {
     "vit": 4,
     "int": 4
@@ -2589,8 +2589,8 @@
    "kind": "evasion_shield",
    "item_level": 10,
    "min_level": 10,
-   "evasion": 25,
-   "shield": 19,
+   "evasion": 21,
+   "shield": 16,
    "req": {
     "dex": 4,
     "int": 4
@@ -2611,7 +2611,7 @@
    "kind": "armour",
    "item_level": 10,
    "min_level": 10,
-   "armour": 70,
+   "armour": 63,
    "req": {
     "vit": 9
    }
@@ -2631,7 +2631,7 @@
    "kind": "evasion",
    "item_level": 10,
    "min_level": 10,
-   "evasion": 70,
+   "evasion": 63,
    "req": {
     "dex": 9
    }
@@ -2651,7 +2651,7 @@
    "kind": "shield",
    "item_level": 10,
    "min_level": 10,
-   "shield": 54,
+   "shield": 48,
    "req": {
     "int": 9
    }
@@ -2671,8 +2671,8 @@
    "kind": "armour_evasion",
    "item_level": 10,
    "min_level": 10,
-   "armour": 42,
-   "evasion": 42,
+   "armour": 38,
+   "evasion": 38,
    "req": {
     "vit": 4,
     "dex": 4
@@ -2693,8 +2693,8 @@
    "kind": "armour_shield",
    "item_level": 10,
    "min_level": 10,
-   "armour": 42,
-   "shield": 32,
+   "armour": 38,
+   "shield": 29,
    "req": {
     "vit": 4,
     "int": 4
@@ -2715,8 +2715,8 @@
    "kind": "evasion_shield",
    "item_level": 10,
    "min_level": 10,
-   "evasion": 42,
-   "shield": 32,
+   "evasion": 38,
+   "shield": 29,
    "req": {
     "dex": 4,
     "int": 4
@@ -2737,7 +2737,7 @@
    "kind": "armour",
    "item_level": 10,
    "min_level": 10,
-   "armour": 28,
+   "armour": 21,
    "req": {
     "vit": 9
    }
@@ -2757,7 +2757,7 @@
    "kind": "evasion",
    "item_level": 10,
    "min_level": 10,
-   "evasion": 28,
+   "evasion": 21,
    "req": {
     "dex": 9
    }
@@ -2777,7 +2777,7 @@
    "kind": "shield",
    "item_level": 10,
    "min_level": 10,
-   "shield": 21,
+   "shield": 16,
    "req": {
     "int": 9
    }
@@ -2797,8 +2797,8 @@
    "kind": "armour_evasion",
    "item_level": 10,
    "min_level": 10,
-   "armour": 17,
-   "evasion": 17,
+   "armour": 13,
+   "evasion": 13,
    "req": {
     "vit": 4,
     "dex": 4
@@ -2819,8 +2819,8 @@
    "kind": "armour_shield",
    "item_level": 10,
    "min_level": 10,
-   "armour": 17,
-   "shield": 13,
+   "armour": 13,
+   "shield": 10,
    "req": {
     "vit": 4,
     "int": 4
@@ -2841,8 +2841,8 @@
    "kind": "evasion_shield",
    "item_level": 10,
    "min_level": 10,
-   "evasion": 17,
-   "shield": 13,
+   "evasion": 13,
+   "shield": 10,
    "req": {
     "dex": 4,
     "int": 4
@@ -2952,7 +2952,7 @@
    "kind": "armour",
    "item_level": 20,
    "min_level": 20,
-   "armour": 78,
+   "armour": 65,
    "req": {
     "vit": 19
    }
@@ -2972,7 +2972,7 @@
    "kind": "evasion",
    "item_level": 20,
    "min_level": 20,
-   "evasion": 78,
+   "evasion": 65,
    "req": {
     "dex": 19
    }
@@ -2992,7 +2992,7 @@
    "kind": "shield",
    "item_level": 20,
    "min_level": 20,
-   "shield": 71,
+   "shield": 59,
    "req": {
     "int": 19
    }
@@ -3012,8 +3012,8 @@
    "kind": "armour_evasion",
    "item_level": 20,
    "min_level": 20,
-   "armour": 47,
-   "evasion": 47,
+   "armour": 39,
+   "evasion": 39,
    "req": {
     "vit": 9,
     "dex": 9
@@ -3034,8 +3034,8 @@
    "kind": "armour_shield",
    "item_level": 20,
    "min_level": 20,
-   "armour": 47,
-   "shield": 42,
+   "armour": 39,
+   "shield": 35,
    "req": {
     "vit": 9,
     "int": 9
@@ -3056,8 +3056,8 @@
    "kind": "evasion_shield",
    "item_level": 20,
    "min_level": 20,
-   "evasion": 47,
-   "shield": 42,
+   "evasion": 39,
+   "shield": 35,
    "req": {
     "dex": 9,
     "int": 9
@@ -3078,7 +3078,7 @@
    "kind": "armour",
    "item_level": 20,
    "min_level": 20,
-   "armour": 130,
+   "armour": 117,
    "req": {
     "vit": 19
    }
@@ -3098,7 +3098,7 @@
    "kind": "evasion",
    "item_level": 20,
    "min_level": 20,
-   "evasion": 130,
+   "evasion": 117,
    "req": {
     "dex": 19
    }
@@ -3118,7 +3118,7 @@
    "kind": "shield",
    "item_level": 20,
    "min_level": 20,
-   "shield": 118,
+   "shield": 106,
    "req": {
     "int": 19
    }
@@ -3138,8 +3138,8 @@
    "kind": "armour_evasion",
    "item_level": 20,
    "min_level": 20,
-   "armour": 78,
-   "evasion": 78,
+   "armour": 70,
+   "evasion": 70,
    "req": {
     "vit": 9,
     "dex": 9
@@ -3160,8 +3160,8 @@
    "kind": "armour_shield",
    "item_level": 20,
    "min_level": 20,
-   "armour": 78,
-   "shield": 71,
+   "armour": 70,
+   "shield": 63,
    "req": {
     "vit": 9,
     "int": 9
@@ -3182,8 +3182,8 @@
    "kind": "evasion_shield",
    "item_level": 20,
    "min_level": 20,
-   "evasion": 78,
-   "shield": 71,
+   "evasion": 70,
+   "shield": 63,
    "req": {
     "dex": 9,
     "int": 9
@@ -3204,7 +3204,7 @@
    "kind": "armour",
    "item_level": 20,
    "min_level": 20,
-   "armour": 52,
+   "armour": 39,
    "req": {
     "vit": 19
    }
@@ -3224,7 +3224,7 @@
    "kind": "evasion",
    "item_level": 20,
    "min_level": 20,
-   "evasion": 52,
+   "evasion": 39,
    "req": {
     "dex": 19
    }
@@ -3244,7 +3244,7 @@
    "kind": "shield",
    "item_level": 20,
    "min_level": 20,
-   "shield": 47,
+   "shield": 35,
    "req": {
     "int": 19
    }
@@ -3264,8 +3264,8 @@
    "kind": "armour_evasion",
    "item_level": 20,
    "min_level": 20,
-   "armour": 31,
-   "evasion": 31,
+   "armour": 23,
+   "evasion": 23,
    "req": {
     "vit": 9,
     "dex": 9
@@ -3286,8 +3286,8 @@
    "kind": "armour_shield",
    "item_level": 20,
    "min_level": 20,
-   "armour": 31,
-   "shield": 28,
+   "armour": 23,
+   "shield": 21,
    "req": {
     "vit": 9,
     "int": 9
@@ -3308,8 +3308,8 @@
    "kind": "evasion_shield",
    "item_level": 20,
    "min_level": 20,
-   "evasion": 31,
-   "shield": 28,
+   "evasion": 23,
+   "shield": 21,
    "req": {
     "dex": 9,
     "int": 9
@@ -3419,7 +3419,7 @@
    "kind": "armour",
    "item_level": 30,
    "min_level": 30,
-   "armour": 114,
+   "armour": 95,
    "req": {
     "vit": 29
    }
@@ -3439,7 +3439,7 @@
    "kind": "evasion",
    "item_level": 30,
    "min_level": 30,
-   "evasion": 114,
+   "evasion": 95,
    "req": {
     "dex": 29
    }
@@ -3459,7 +3459,7 @@
    "kind": "shield",
    "item_level": 30,
    "min_level": 30,
-   "shield": 122,
+   "shield": 102,
    "req": {
     "int": 29
    }
@@ -3479,8 +3479,8 @@
    "kind": "armour_evasion",
    "item_level": 30,
    "min_level": 30,
-   "armour": 68,
-   "evasion": 68,
+   "armour": 57,
+   "evasion": 57,
    "req": {
     "vit": 14,
     "dex": 14
@@ -3501,8 +3501,8 @@
    "kind": "armour_shield",
    "item_level": 30,
    "min_level": 30,
-   "armour": 68,
-   "shield": 73,
+   "armour": 57,
+   "shield": 61,
    "req": {
     "vit": 14,
     "int": 14
@@ -3523,8 +3523,8 @@
    "kind": "evasion_shield",
    "item_level": 30,
    "min_level": 30,
-   "evasion": 68,
-   "shield": 73,
+   "evasion": 57,
+   "shield": 61,
    "req": {
     "dex": 14,
     "int": 14
@@ -3545,7 +3545,7 @@
    "kind": "armour",
    "item_level": 30,
    "min_level": 30,
-   "armour": 190,
+   "armour": 171,
    "req": {
     "vit": 29
    }
@@ -3565,7 +3565,7 @@
    "kind": "evasion",
    "item_level": 30,
    "min_level": 30,
-   "evasion": 190,
+   "evasion": 171,
    "req": {
     "dex": 29
    }
@@ -3585,7 +3585,7 @@
    "kind": "shield",
    "item_level": 30,
    "min_level": 30,
-   "shield": 204,
+   "shield": 184,
    "req": {
     "int": 29
    }
@@ -3605,8 +3605,8 @@
    "kind": "armour_evasion",
    "item_level": 30,
    "min_level": 30,
-   "armour": 114,
-   "evasion": 114,
+   "armour": 103,
+   "evasion": 103,
    "req": {
     "vit": 14,
     "dex": 14
@@ -3627,8 +3627,8 @@
    "kind": "armour_shield",
    "item_level": 30,
    "min_level": 30,
-   "armour": 114,
-   "shield": 122,
+   "armour": 103,
+   "shield": 110,
    "req": {
     "vit": 14,
     "int": 14
@@ -3649,8 +3649,8 @@
    "kind": "evasion_shield",
    "item_level": 30,
    "min_level": 30,
-   "evasion": 114,
-   "shield": 122,
+   "evasion": 103,
+   "shield": 110,
    "req": {
     "dex": 14,
     "int": 14
@@ -3671,7 +3671,7 @@
    "kind": "armour",
    "item_level": 30,
    "min_level": 30,
-   "armour": 76,
+   "armour": 57,
    "req": {
     "vit": 29
    }
@@ -3691,7 +3691,7 @@
    "kind": "evasion",
    "item_level": 30,
    "min_level": 30,
-   "evasion": 76,
+   "evasion": 57,
    "req": {
     "dex": 29
    }
@@ -3711,7 +3711,7 @@
    "kind": "shield",
    "item_level": 30,
    "min_level": 30,
-   "shield": 82,
+   "shield": 61,
    "req": {
     "int": 29
    }
@@ -3731,8 +3731,8 @@
    "kind": "armour_evasion",
    "item_level": 30,
    "min_level": 30,
-   "armour": 46,
-   "evasion": 46,
+   "armour": 34,
+   "evasion": 34,
    "req": {
     "vit": 14,
     "dex": 14
@@ -3753,8 +3753,8 @@
    "kind": "armour_shield",
    "item_level": 30,
    "min_level": 30,
-   "armour": 46,
-   "shield": 49,
+   "armour": 34,
+   "shield": 37,
    "req": {
     "vit": 14,
     "int": 14
@@ -3775,8 +3775,8 @@
    "kind": "evasion_shield",
    "item_level": 30,
    "min_level": 30,
-   "evasion": 46,
-   "shield": 49,
+   "evasion": 34,
+   "shield": 37,
    "req": {
     "dex": 14,
     "int": 14
@@ -3886,7 +3886,7 @@
    "kind": "armour",
    "item_level": 40,
    "min_level": 40,
-   "armour": 150,
+   "armour": 125,
    "req": {
     "vit": 39
    }
@@ -3906,7 +3906,7 @@
    "kind": "evasion",
    "item_level": 40,
    "min_level": 40,
-   "evasion": 150,
+   "evasion": 125,
    "req": {
     "dex": 39
    }
@@ -3926,7 +3926,7 @@
    "kind": "shield",
    "item_level": 40,
    "min_level": 40,
-   "shield": 188,
+   "shield": 157,
    "req": {
     "int": 39
    }
@@ -3946,8 +3946,8 @@
    "kind": "armour_evasion",
    "item_level": 40,
    "min_level": 40,
-   "armour": 90,
-   "evasion": 90,
+   "armour": 75,
+   "evasion": 75,
    "req": {
     "vit": 19,
     "dex": 19
@@ -3968,8 +3968,8 @@
    "kind": "armour_shield",
    "item_level": 40,
    "min_level": 40,
-   "armour": 90,
-   "shield": 113,
+   "armour": 75,
+   "shield": 94,
    "req": {
     "vit": 19,
     "int": 19
@@ -3990,8 +3990,8 @@
    "kind": "evasion_shield",
    "item_level": 40,
    "min_level": 40,
-   "evasion": 90,
-   "shield": 113,
+   "evasion": 75,
+   "shield": 94,
    "req": {
     "dex": 19,
     "int": 19
@@ -4012,7 +4012,7 @@
    "kind": "armour",
    "item_level": 40,
    "min_level": 40,
-   "armour": 250,
+   "armour": 225,
    "req": {
     "vit": 39
    }
@@ -4032,7 +4032,7 @@
    "kind": "evasion",
    "item_level": 40,
    "min_level": 40,
-   "evasion": 250,
+   "evasion": 225,
    "req": {
     "dex": 39
    }
@@ -4052,7 +4052,7 @@
    "kind": "shield",
    "item_level": 40,
    "min_level": 40,
-   "shield": 313,
+   "shield": 282,
    "req": {
     "int": 39
    }
@@ -4072,8 +4072,8 @@
    "kind": "armour_evasion",
    "item_level": 40,
    "min_level": 40,
-   "armour": 150,
-   "evasion": 150,
+   "armour": 135,
+   "evasion": 135,
    "req": {
     "vit": 19,
     "dex": 19
@@ -4094,8 +4094,8 @@
    "kind": "armour_shield",
    "item_level": 40,
    "min_level": 40,
-   "armour": 150,
-   "shield": 188,
+   "armour": 135,
+   "shield": 169,
    "req": {
     "vit": 19,
     "int": 19
@@ -4116,8 +4116,8 @@
    "kind": "evasion_shield",
    "item_level": 40,
    "min_level": 40,
-   "evasion": 150,
-   "shield": 188,
+   "evasion": 135,
+   "shield": 169,
    "req": {
     "dex": 19,
     "int": 19
@@ -4138,7 +4138,7 @@
    "kind": "armour",
    "item_level": 40,
    "min_level": 40,
-   "armour": 100,
+   "armour": 75,
    "req": {
     "vit": 39
    }
@@ -4158,7 +4158,7 @@
    "kind": "evasion",
    "item_level": 40,
    "min_level": 40,
-   "evasion": 100,
+   "evasion": 75,
    "req": {
     "dex": 39
    }
@@ -4178,7 +4178,7 @@
    "kind": "shield",
    "item_level": 40,
    "min_level": 40,
-   "shield": 125,
+   "shield": 94,
    "req": {
     "int": 39
    }
@@ -4198,8 +4198,8 @@
    "kind": "armour_evasion",
    "item_level": 40,
    "min_level": 40,
-   "armour": 60,
-   "evasion": 60,
+   "armour": 45,
+   "evasion": 45,
    "req": {
     "vit": 19,
     "dex": 19
@@ -4220,8 +4220,8 @@
    "kind": "armour_shield",
    "item_level": 40,
    "min_level": 40,
-   "armour": 60,
-   "shield": 75,
+   "armour": 45,
+   "shield": 56,
    "req": {
     "vit": 19,
     "int": 19
@@ -4242,8 +4242,8 @@
    "kind": "evasion_shield",
    "item_level": 40,
    "min_level": 40,
-   "evasion": 60,
-   "shield": 75,
+   "evasion": 45,
+   "shield": 56,
    "req": {
     "dex": 19,
     "int": 19
@@ -4353,7 +4353,7 @@
    "kind": "armour",
    "item_level": 50,
    "min_level": 50,
-   "armour": 186,
+   "armour": 155,
    "req": {
     "vit": 49
    }
@@ -4373,7 +4373,7 @@
    "kind": "evasion",
    "item_level": 50,
    "min_level": 50,
-   "evasion": 186,
+   "evasion": 155,
    "req": {
     "dex": 49
    }
@@ -4393,7 +4393,7 @@
    "kind": "shield",
    "item_level": 50,
    "min_level": 50,
-   "shield": 267,
+   "shield": 222,
    "req": {
     "int": 49
    }
@@ -4413,8 +4413,8 @@
    "kind": "armour_evasion",
    "item_level": 50,
    "min_level": 50,
-   "armour": 112,
-   "evasion": 112,
+   "armour": 93,
+   "evasion": 93,
    "req": {
     "vit": 24,
     "dex": 24
@@ -4435,8 +4435,8 @@
    "kind": "armour_shield",
    "item_level": 50,
    "min_level": 50,
-   "armour": 112,
-   "shield": 160,
+   "armour": 93,
+   "shield": 133,
    "req": {
     "vit": 24,
     "int": 24
@@ -4457,8 +4457,8 @@
    "kind": "evasion_shield",
    "item_level": 50,
    "min_level": 50,
-   "evasion": 112,
-   "shield": 160,
+   "evasion": 93,
+   "shield": 133,
    "req": {
     "dex": 24,
     "int": 24
@@ -4479,7 +4479,7 @@
    "kind": "armour",
    "item_level": 50,
    "min_level": 50,
-   "armour": 310,
+   "armour": 279,
    "req": {
     "vit": 49
    }
@@ -4499,7 +4499,7 @@
    "kind": "evasion",
    "item_level": 50,
    "min_level": 50,
-   "evasion": 310,
+   "evasion": 279,
    "req": {
     "dex": 49
    }
@@ -4519,7 +4519,7 @@
    "kind": "shield",
    "item_level": 50,
    "min_level": 50,
-   "shield": 445,
+   "shield": 400,
    "req": {
     "int": 49
    }
@@ -4539,8 +4539,8 @@
    "kind": "armour_evasion",
    "item_level": 50,
    "min_level": 50,
-   "armour": 186,
-   "evasion": 186,
+   "armour": 167,
+   "evasion": 167,
    "req": {
     "vit": 24,
     "dex": 24
@@ -4561,8 +4561,8 @@
    "kind": "armour_shield",
    "item_level": 50,
    "min_level": 50,
-   "armour": 186,
-   "shield": 267,
+   "armour": 167,
+   "shield": 240,
    "req": {
     "vit": 24,
     "int": 24
@@ -4583,8 +4583,8 @@
    "kind": "evasion_shield",
    "item_level": 50,
    "min_level": 50,
-   "evasion": 186,
-   "shield": 267,
+   "evasion": 167,
+   "shield": 240,
    "req": {
     "dex": 24,
     "int": 24
@@ -4605,7 +4605,7 @@
    "kind": "armour",
    "item_level": 50,
    "min_level": 50,
-   "armour": 124,
+   "armour": 93,
    "req": {
     "vit": 49
    }
@@ -4625,7 +4625,7 @@
    "kind": "evasion",
    "item_level": 50,
    "min_level": 50,
-   "evasion": 124,
+   "evasion": 93,
    "req": {
     "dex": 49
    }
@@ -4645,7 +4645,7 @@
    "kind": "shield",
    "item_level": 50,
    "min_level": 50,
-   "shield": 178,
+   "shield": 133,
    "req": {
     "int": 49
    }
@@ -4665,8 +4665,8 @@
    "kind": "armour_evasion",
    "item_level": 50,
    "min_level": 50,
-   "armour": 74,
-   "evasion": 74,
+   "armour": 56,
+   "evasion": 56,
    "req": {
     "vit": 24,
     "dex": 24
@@ -4687,8 +4687,8 @@
    "kind": "armour_shield",
    "item_level": 50,
    "min_level": 50,
-   "armour": 74,
-   "shield": 107,
+   "armour": 56,
+   "shield": 80,
    "req": {
     "vit": 24,
     "int": 24
@@ -4709,8 +4709,8 @@
    "kind": "evasion_shield",
    "item_level": 50,
    "min_level": 50,
-   "evasion": 74,
-   "shield": 107,
+   "evasion": 56,
+   "shield": 80,
    "req": {
     "dex": 24,
     "int": 24
@@ -4820,7 +4820,7 @@
    "kind": "armour",
    "item_level": 60,
    "min_level": 60,
-   "armour": 222,
+   "armour": 185,
    "req": {
     "vit": 59
    }
@@ -4840,7 +4840,7 @@
    "kind": "evasion",
    "item_level": 60,
    "min_level": 60,
-   "evasion": 222,
+   "evasion": 185,
    "req": {
     "dex": 59
    }
@@ -4860,7 +4860,7 @@
    "kind": "shield",
    "item_level": 60,
    "min_level": 60,
-   "shield": 359,
+   "shield": 299,
    "req": {
     "int": 59
    }
@@ -4880,8 +4880,8 @@
    "kind": "armour_evasion",
    "item_level": 60,
    "min_level": 60,
-   "armour": 133,
-   "evasion": 133,
+   "armour": 111,
+   "evasion": 111,
    "req": {
     "vit": 29,
     "dex": 29
@@ -4902,8 +4902,8 @@
    "kind": "armour_shield",
    "item_level": 60,
    "min_level": 60,
-   "armour": 133,
-   "shield": 215,
+   "armour": 111,
+   "shield": 180,
    "req": {
     "vit": 29,
     "int": 29
@@ -4924,8 +4924,8 @@
    "kind": "evasion_shield",
    "item_level": 60,
    "min_level": 60,
-   "evasion": 133,
-   "shield": 215,
+   "evasion": 111,
+   "shield": 180,
    "req": {
     "dex": 29,
     "int": 29
@@ -4946,7 +4946,7 @@
    "kind": "armour",
    "item_level": 60,
    "min_level": 60,
-   "armour": 370,
+   "armour": 333,
    "req": {
     "vit": 59
    }
@@ -4966,7 +4966,7 @@
    "kind": "evasion",
    "item_level": 60,
    "min_level": 60,
-   "evasion": 370,
+   "evasion": 333,
    "req": {
     "dex": 59
    }
@@ -4986,7 +4986,7 @@
    "kind": "shield",
    "item_level": 60,
    "min_level": 60,
-   "shield": 599,
+   "shield": 539,
    "req": {
     "int": 59
    }
@@ -5006,8 +5006,8 @@
    "kind": "armour_evasion",
    "item_level": 60,
    "min_level": 60,
-   "armour": 222,
-   "evasion": 222,
+   "armour": 200,
+   "evasion": 200,
    "req": {
     "vit": 29,
     "dex": 29
@@ -5028,8 +5028,8 @@
    "kind": "armour_shield",
    "item_level": 60,
    "min_level": 60,
-   "armour": 222,
-   "shield": 359,
+   "armour": 200,
+   "shield": 323,
    "req": {
     "vit": 29,
     "int": 29
@@ -5050,8 +5050,8 @@
    "kind": "evasion_shield",
    "item_level": 60,
    "min_level": 60,
-   "evasion": 222,
-   "shield": 359,
+   "evasion": 200,
+   "shield": 323,
    "req": {
     "dex": 29,
     "int": 29
@@ -5072,7 +5072,7 @@
    "kind": "armour",
    "item_level": 60,
    "min_level": 60,
-   "armour": 148,
+   "armour": 111,
    "req": {
     "vit": 59
    }
@@ -5092,7 +5092,7 @@
    "kind": "evasion",
    "item_level": 60,
    "min_level": 60,
-   "evasion": 148,
+   "evasion": 111,
    "req": {
     "dex": 59
    }
@@ -5112,7 +5112,7 @@
    "kind": "shield",
    "item_level": 60,
    "min_level": 60,
-   "shield": 239,
+   "shield": 180,
    "req": {
     "int": 59
    }
@@ -5132,8 +5132,8 @@
    "kind": "armour_evasion",
    "item_level": 60,
    "min_level": 60,
-   "armour": 89,
-   "evasion": 89,
+   "armour": 67,
+   "evasion": 67,
    "req": {
     "vit": 29,
     "dex": 29
@@ -5154,8 +5154,8 @@
    "kind": "armour_shield",
    "item_level": 60,
    "min_level": 60,
-   "armour": 89,
-   "shield": 144,
+   "armour": 67,
+   "shield": 108,
    "req": {
     "vit": 29,
     "int": 29
@@ -5176,8 +5176,8 @@
    "kind": "evasion_shield",
    "item_level": 60,
    "min_level": 60,
-   "evasion": 89,
-   "shield": 144,
+   "evasion": 67,
+   "shield": 108,
    "req": {
     "dex": 29,
     "int": 29
@@ -5287,7 +5287,7 @@
    "kind": "armour",
    "item_level": 70,
    "min_level": 70,
-   "armour": 258,
+   "armour": 215,
    "req": {
     "vit": 69
    }
@@ -5307,7 +5307,7 @@
    "kind": "evasion",
    "item_level": 70,
    "min_level": 70,
-   "evasion": 258,
+   "evasion": 215,
    "req": {
     "dex": 69
    }
@@ -5327,7 +5327,7 @@
    "kind": "shield",
    "item_level": 70,
    "min_level": 70,
-   "shield": 465,
+   "shield": 388,
    "req": {
     "int": 69
    }
@@ -5347,8 +5347,8 @@
    "kind": "armour_evasion",
    "item_level": 70,
    "min_level": 70,
-   "armour": 155,
-   "evasion": 155,
+   "armour": 129,
+   "evasion": 129,
    "req": {
     "vit": 34,
     "dex": 34
@@ -5369,8 +5369,8 @@
    "kind": "armour_shield",
    "item_level": 70,
    "min_level": 70,
-   "armour": 155,
-   "shield": 279,
+   "armour": 129,
+   "shield": 233,
    "req": {
     "vit": 34,
     "int": 34
@@ -5391,8 +5391,8 @@
    "kind": "evasion_shield",
    "item_level": 70,
    "min_level": 70,
-   "evasion": 155,
-   "shield": 279,
+   "evasion": 129,
+   "shield": 233,
    "req": {
     "dex": 34,
     "int": 34
@@ -5413,7 +5413,7 @@
    "kind": "armour",
    "item_level": 70,
    "min_level": 70,
-   "armour": 430,
+   "armour": 387,
    "req": {
     "vit": 69
    }
@@ -5433,7 +5433,7 @@
    "kind": "evasion",
    "item_level": 70,
    "min_level": 70,
-   "evasion": 430,
+   "evasion": 387,
    "req": {
     "dex": 69
    }
@@ -5453,7 +5453,7 @@
    "kind": "shield",
    "item_level": 70,
    "min_level": 70,
-   "shield": 775,
+   "shield": 698,
    "req": {
     "int": 69
    }
@@ -5473,8 +5473,8 @@
    "kind": "armour_evasion",
    "item_level": 70,
    "min_level": 70,
-   "armour": 258,
-   "evasion": 258,
+   "armour": 232,
+   "evasion": 232,
    "req": {
     "vit": 34,
     "dex": 34
@@ -5495,8 +5495,8 @@
    "kind": "armour_shield",
    "item_level": 70,
    "min_level": 70,
-   "armour": 258,
-   "shield": 465,
+   "armour": 232,
+   "shield": 419,
    "req": {
     "vit": 34,
     "int": 34
@@ -5517,8 +5517,8 @@
    "kind": "evasion_shield",
    "item_level": 70,
    "min_level": 70,
-   "evasion": 258,
-   "shield": 465,
+   "evasion": 232,
+   "shield": 419,
    "req": {
     "dex": 34,
     "int": 34
@@ -5539,7 +5539,7 @@
    "kind": "armour",
    "item_level": 70,
    "min_level": 70,
-   "armour": 172,
+   "armour": 129,
    "req": {
     "vit": 69
    }
@@ -5559,7 +5559,7 @@
    "kind": "evasion",
    "item_level": 70,
    "min_level": 70,
-   "evasion": 172,
+   "evasion": 129,
    "req": {
     "dex": 69
    }
@@ -5579,7 +5579,7 @@
    "kind": "shield",
    "item_level": 70,
    "min_level": 70,
-   "shield": 310,
+   "shield": 233,
    "req": {
     "int": 69
    }
@@ -5599,8 +5599,8 @@
    "kind": "armour_evasion",
    "item_level": 70,
    "min_level": 70,
-   "armour": 103,
-   "evasion": 103,
+   "armour": 77,
+   "evasion": 77,
    "req": {
     "vit": 34,
     "dex": 34
@@ -5621,8 +5621,8 @@
    "kind": "armour_shield",
    "item_level": 70,
    "min_level": 70,
-   "armour": 103,
-   "shield": 186,
+   "armour": 77,
+   "shield": 140,
    "req": {
     "vit": 34,
     "int": 34
@@ -5643,8 +5643,8 @@
    "kind": "evasion_shield",
    "item_level": 70,
    "min_level": 70,
-   "evasion": 103,
-   "shield": 186,
+   "evasion": 77,
+   "shield": 140,
    "req": {
     "dex": 34,
     "int": 34
@@ -5754,7 +5754,7 @@
    "kind": "armour",
    "item_level": 80,
    "min_level": 80,
-   "armour": 294,
+   "armour": 245,
    "req": {
     "vit": 79
    }
@@ -5774,7 +5774,7 @@
    "kind": "evasion",
    "item_level": 80,
    "min_level": 80,
-   "evasion": 294,
+   "evasion": 245,
    "req": {
     "dex": 79
    }
@@ -5794,7 +5794,7 @@
    "kind": "shield",
    "item_level": 80,
    "min_level": 80,
-   "shield": 584,
+   "shield": 487,
    "req": {
     "int": 79
    }
@@ -5814,8 +5814,8 @@
    "kind": "armour_evasion",
    "item_level": 80,
    "min_level": 80,
-   "armour": 176,
-   "evasion": 176,
+   "armour": 147,
+   "evasion": 147,
    "req": {
     "vit": 39,
     "dex": 39
@@ -5836,8 +5836,8 @@
    "kind": "armour_shield",
    "item_level": 80,
    "min_level": 80,
-   "armour": 176,
-   "shield": 351,
+   "armour": 147,
+   "shield": 292,
    "req": {
     "vit": 39,
     "int": 39
@@ -5858,8 +5858,8 @@
    "kind": "evasion_shield",
    "item_level": 80,
    "min_level": 80,
-   "evasion": 176,
-   "shield": 351,
+   "evasion": 147,
+   "shield": 292,
    "req": {
     "dex": 39,
     "int": 39
@@ -5880,7 +5880,7 @@
    "kind": "armour",
    "item_level": 80,
    "min_level": 80,
-   "armour": 490,
+   "armour": 441,
    "req": {
     "vit": 79
    }
@@ -5900,7 +5900,7 @@
    "kind": "evasion",
    "item_level": 80,
    "min_level": 80,
-   "evasion": 490,
+   "evasion": 441,
    "req": {
     "dex": 79
    }
@@ -5920,7 +5920,7 @@
    "kind": "shield",
    "item_level": 80,
    "min_level": 80,
-   "shield": 974,
+   "shield": 877,
    "req": {
     "int": 79
    }
@@ -5940,8 +5940,8 @@
    "kind": "armour_evasion",
    "item_level": 80,
    "min_level": 80,
-   "armour": 294,
-   "evasion": 294,
+   "armour": 265,
+   "evasion": 265,
    "req": {
     "vit": 39,
     "dex": 39
@@ -5962,8 +5962,8 @@
    "kind": "armour_shield",
    "item_level": 80,
    "min_level": 80,
-   "armour": 294,
-   "shield": 584,
+   "armour": 265,
+   "shield": 526,
    "req": {
     "vit": 39,
     "int": 39
@@ -5984,8 +5984,8 @@
    "kind": "evasion_shield",
    "item_level": 80,
    "min_level": 80,
-   "evasion": 294,
-   "shield": 584,
+   "evasion": 265,
+   "shield": 526,
    "req": {
     "dex": 39,
     "int": 39
@@ -6006,7 +6006,7 @@
    "kind": "armour",
    "item_level": 80,
    "min_level": 80,
-   "armour": 196,
+   "armour": 147,
    "req": {
     "vit": 79
    }
@@ -6026,7 +6026,7 @@
    "kind": "evasion",
    "item_level": 80,
    "min_level": 80,
-   "evasion": 196,
+   "evasion": 147,
    "req": {
     "dex": 79
    }
@@ -6046,7 +6046,7 @@
    "kind": "shield",
    "item_level": 80,
    "min_level": 80,
-   "shield": 390,
+   "shield": 292,
    "req": {
     "int": 79
    }
@@ -6066,8 +6066,8 @@
    "kind": "armour_evasion",
    "item_level": 80,
    "min_level": 80,
-   "armour": 118,
-   "evasion": 118,
+   "armour": 88,
+   "evasion": 88,
    "req": {
     "vit": 39,
     "dex": 39
@@ -6088,8 +6088,8 @@
    "kind": "armour_shield",
    "item_level": 80,
    "min_level": 80,
-   "armour": 118,
-   "shield": 234,
+   "armour": 88,
+   "shield": 175,
    "req": {
     "vit": 39,
     "int": 39
@@ -6110,8 +6110,8 @@
    "kind": "evasion_shield",
    "item_level": 80,
    "min_level": 80,
-   "evasion": 118,
-   "shield": 234,
+   "evasion": 88,
+   "shield": 175,
    "req": {
     "dex": 39,
     "int": 39
@@ -6221,7 +6221,7 @@
    "kind": "armour",
    "item_level": 90,
    "min_level": 90,
-   "armour": 330,
+   "armour": 275,
    "req": {
     "vit": 89
    }
@@ -6241,7 +6241,7 @@
    "kind": "evasion",
    "item_level": 90,
    "min_level": 90,
-   "evasion": 330,
+   "evasion": 275,
    "req": {
     "dex": 89
    }
@@ -6261,7 +6261,7 @@
    "kind": "shield",
    "item_level": 90,
    "min_level": 90,
-   "shield": 717,
+   "shield": 598,
    "req": {
     "int": 89
    }
@@ -6281,8 +6281,8 @@
    "kind": "armour_evasion",
    "item_level": 90,
    "min_level": 90,
-   "armour": 198,
-   "evasion": 198,
+   "armour": 165,
+   "evasion": 165,
    "req": {
     "vit": 44,
     "dex": 44
@@ -6303,8 +6303,8 @@
    "kind": "armour_shield",
    "item_level": 90,
    "min_level": 90,
-   "armour": 198,
-   "shield": 430,
+   "armour": 165,
+   "shield": 359,
    "req": {
     "vit": 44,
     "int": 44
@@ -6325,8 +6325,8 @@
    "kind": "evasion_shield",
    "item_level": 90,
    "min_level": 90,
-   "evasion": 198,
-   "shield": 430,
+   "evasion": 165,
+   "shield": 359,
    "req": {
     "dex": 44,
     "int": 44
@@ -6347,7 +6347,7 @@
    "kind": "armour",
    "item_level": 90,
    "min_level": 90,
-   "armour": 550,
+   "armour": 495,
    "req": {
     "vit": 89
    }
@@ -6367,7 +6367,7 @@
    "kind": "evasion",
    "item_level": 90,
    "min_level": 90,
-   "evasion": 550,
+   "evasion": 495,
    "req": {
     "dex": 89
    }
@@ -6387,7 +6387,7 @@
    "kind": "shield",
    "item_level": 90,
    "min_level": 90,
-   "shield": 1196,
+   "shield": 1076,
    "req": {
     "int": 89
    }
@@ -6407,8 +6407,8 @@
    "kind": "armour_evasion",
    "item_level": 90,
    "min_level": 90,
-   "armour": 330,
-   "evasion": 330,
+   "armour": 297,
+   "evasion": 297,
    "req": {
     "vit": 44,
     "dex": 44
@@ -6429,8 +6429,8 @@
    "kind": "armour_shield",
    "item_level": 90,
    "min_level": 90,
-   "armour": 330,
-   "shield": 717,
+   "armour": 297,
+   "shield": 646,
    "req": {
     "vit": 44,
     "int": 44
@@ -6451,8 +6451,8 @@
    "kind": "evasion_shield",
    "item_level": 90,
    "min_level": 90,
-   "evasion": 330,
-   "shield": 717,
+   "evasion": 297,
+   "shield": 646,
    "req": {
     "dex": 44,
     "int": 44
@@ -6473,7 +6473,7 @@
    "kind": "armour",
    "item_level": 90,
    "min_level": 90,
-   "armour": 220,
+   "armour": 165,
    "req": {
     "vit": 89
    }
@@ -6493,7 +6493,7 @@
    "kind": "evasion",
    "item_level": 90,
    "min_level": 90,
-   "evasion": 220,
+   "evasion": 165,
    "req": {
     "dex": 89
    }
@@ -6513,7 +6513,7 @@
    "kind": "shield",
    "item_level": 90,
    "min_level": 90,
-   "shield": 478,
+   "shield": 359,
    "req": {
     "int": 89
    }
@@ -6533,8 +6533,8 @@
    "kind": "armour_evasion",
    "item_level": 90,
    "min_level": 90,
-   "armour": 132,
-   "evasion": 132,
+   "armour": 99,
+   "evasion": 99,
    "req": {
     "vit": 44,
     "dex": 44
@@ -6555,8 +6555,8 @@
    "kind": "armour_shield",
    "item_level": 90,
    "min_level": 90,
-   "armour": 132,
-   "shield": 287,
+   "armour": 99,
+   "shield": 215,
    "req": {
     "vit": 44,
     "int": 44
@@ -6577,8 +6577,8 @@
    "kind": "evasion_shield",
    "item_level": 90,
    "min_level": 90,
-   "evasion": 132,
-   "shield": 287,
+   "evasion": 99,
+   "shield": 215,
    "req": {
     "dex": 44,
     "int": 44
@@ -8329,7 +8329,7 @@
    "kind": "armour",
    "item_level": 20,
    "min_level": 18,
-   "armour": 78,
+   "armour": 65,
    "implicit": [
     [
      "inc_area",
@@ -8356,7 +8356,7 @@
    "kind": "evasion",
    "item_level": 60,
    "min_level": 58,
-   "evasion": 148,
+   "evasion": 111,
    "implicit": [
     [
      "inc_move_speed",
@@ -8813,7 +8813,7 @@
    "kind": "armour",
    "item_level": 50,
    "min_level": 48,
-   "armour": 310,
+   "armour": 279,
    "req": {
     "vit": 49
    },
@@ -8843,7 +8843,7 @@
    "kind": "evasion",
    "item_level": 30,
    "min_level": 28,
-   "evasion": 76,
+   "evasion": 57,
    "req": {
     "dex": 29
    },
@@ -8873,7 +8873,7 @@
    "kind": "shield",
    "item_level": 70,
    "min_level": 68,
-   "shield": 465,
+   "shield": 388,
    "req": {
     "int": 69
    },
@@ -8932,6 +8932,1311 @@
    "item_level": 40,
    "min_level": 40,
    "unique": "echo_stone"
+  }
+ },
+ {
+  "id": "itm_1348",
+  "name": "Worn Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 5,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1349",
+  "name": "Worn Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 5,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1350",
+  "name": "Worn Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 1,
+   "min_level": 1,
+   "shield": 5,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1351",
+  "name": "Worn Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 3,
+   "evasion": 3,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1352",
+  "name": "Worn Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 1,
+   "min_level": 1,
+   "armour": 3,
+   "shield": 3,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1353",
+  "name": "Worn Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 18,
+  "stack_max": 1,
+  "description": "Tier 1 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 1,
+   "min_level": 1,
+   "evasion": 3,
+   "shield": 3,
+   "req": {}
+  }
+ },
+ {
+  "id": "itm_1354",
+  "name": "Bronze Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 21,
+   "req": {
+    "vit": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1355",
+  "name": "Bronze Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 10,
+   "min_level": 10,
+   "evasion": 21,
+   "req": {
+    "dex": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1356",
+  "name": "Bronze Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 10,
+   "min_level": 10,
+   "shield": 16,
+   "req": {
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1357",
+  "name": "Bronze Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 13,
+   "evasion": 13,
+   "req": {
+    "vit": 4,
+    "dex": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1358",
+  "name": "Bronze Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 10,
+   "min_level": 10,
+   "armour": 13,
+   "shield": 10,
+   "req": {
+    "vit": 4,
+    "int": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1359",
+  "name": "Bronze Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 66,
+  "stack_max": 1,
+  "description": "Tier 2 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 10,
+   "min_level": 10,
+   "evasion": 13,
+   "shield": 10,
+   "req": {
+    "dex": 4,
+    "int": 4
+   }
+  }
+ },
+ {
+  "id": "itm_1360",
+  "name": "Iron Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 39,
+   "req": {
+    "vit": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1361",
+  "name": "Iron Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 20,
+   "min_level": 20,
+   "evasion": 39,
+   "req": {
+    "dex": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1362",
+  "name": "Iron Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 20,
+   "min_level": 20,
+   "shield": 35,
+   "req": {
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1363",
+  "name": "Iron Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 23,
+   "evasion": 23,
+   "req": {
+    "vit": 9,
+    "dex": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1364",
+  "name": "Iron Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 20,
+   "min_level": 20,
+   "armour": 23,
+   "shield": 21,
+   "req": {
+    "vit": 9,
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1365",
+  "name": "Iron Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 120,
+  "stack_max": 1,
+  "description": "Tier 3 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 20,
+   "min_level": 20,
+   "evasion": 23,
+   "shield": 21,
+   "req": {
+    "dex": 9,
+    "int": 9
+   }
+  }
+ },
+ {
+  "id": "itm_1366",
+  "name": "Steel Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 57,
+   "req": {
+    "vit": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1367",
+  "name": "Steel Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 30,
+   "min_level": 30,
+   "evasion": 57,
+   "req": {
+    "dex": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1368",
+  "name": "Steel Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 30,
+   "min_level": 30,
+   "shield": 61,
+   "req": {
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1369",
+  "name": "Steel Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 34,
+   "evasion": 34,
+   "req": {
+    "vit": 14,
+    "dex": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1370",
+  "name": "Steel Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 30,
+   "min_level": 30,
+   "armour": 34,
+   "shield": 37,
+   "req": {
+    "vit": 14,
+    "int": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1371",
+  "name": "Steel Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 174,
+  "stack_max": 1,
+  "description": "Tier 4 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 30,
+   "min_level": 30,
+   "evasion": 34,
+   "shield": 37,
+   "req": {
+    "dex": 14,
+    "int": 14
+   }
+  }
+ },
+ {
+  "id": "itm_1372",
+  "name": "Cobalt Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 75,
+   "req": {
+    "vit": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1373",
+  "name": "Cobalt Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 40,
+   "min_level": 40,
+   "evasion": 75,
+   "req": {
+    "dex": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1374",
+  "name": "Cobalt Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 40,
+   "min_level": 40,
+   "shield": 94,
+   "req": {
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1375",
+  "name": "Cobalt Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 45,
+   "evasion": 45,
+   "req": {
+    "vit": 19,
+    "dex": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1376",
+  "name": "Cobalt Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 40,
+   "min_level": 40,
+   "armour": 45,
+   "shield": 56,
+   "req": {
+    "vit": 19,
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1377",
+  "name": "Cobalt Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 228,
+  "stack_max": 1,
+  "description": "Tier 5 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 40,
+   "min_level": 40,
+   "evasion": 45,
+   "shield": 56,
+   "req": {
+    "dex": 19,
+    "int": 19
+   }
+  }
+ },
+ {
+  "id": "itm_1378",
+  "name": "Runic Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 93,
+   "req": {
+    "vit": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1379",
+  "name": "Runic Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 50,
+   "min_level": 50,
+   "evasion": 93,
+   "req": {
+    "dex": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1380",
+  "name": "Runic Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 50,
+   "min_level": 50,
+   "shield": 133,
+   "req": {
+    "int": 49
+   }
+  }
+ },
+ {
+  "id": "itm_1381",
+  "name": "Runic Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 56,
+   "evasion": 56,
+   "req": {
+    "vit": 24,
+    "dex": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1382",
+  "name": "Runic Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 50,
+   "min_level": 50,
+   "armour": 56,
+   "shield": 80,
+   "req": {
+    "vit": 24,
+    "int": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1383",
+  "name": "Runic Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 282,
+  "stack_max": 1,
+  "description": "Tier 6 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 50,
+   "min_level": 50,
+   "evasion": 56,
+   "shield": 80,
+   "req": {
+    "dex": 24,
+    "int": 24
+   }
+  }
+ },
+ {
+  "id": "itm_1384",
+  "name": "Mythril Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 111,
+   "req": {
+    "vit": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1385",
+  "name": "Mythril Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 60,
+   "min_level": 60,
+   "evasion": 111,
+   "req": {
+    "dex": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1386",
+  "name": "Mythril Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 60,
+   "min_level": 60,
+   "shield": 180,
+   "req": {
+    "int": 59
+   }
+  }
+ },
+ {
+  "id": "itm_1387",
+  "name": "Mythril Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 67,
+   "evasion": 67,
+   "req": {
+    "vit": 29,
+    "dex": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1388",
+  "name": "Mythril Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 60,
+   "min_level": 60,
+   "armour": 67,
+   "shield": 108,
+   "req": {
+    "vit": 29,
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1389",
+  "name": "Mythril Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 336,
+  "stack_max": 1,
+  "description": "Tier 7 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 60,
+   "min_level": 60,
+   "evasion": 67,
+   "shield": 108,
+   "req": {
+    "dex": 29,
+    "int": 29
+   }
+  }
+ },
+ {
+  "id": "itm_1390",
+  "name": "Ember Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 129,
+   "req": {
+    "vit": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1391",
+  "name": "Ember Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 70,
+   "min_level": 70,
+   "evasion": 129,
+   "req": {
+    "dex": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1392",
+  "name": "Ember Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 70,
+   "min_level": 70,
+   "shield": 233,
+   "req": {
+    "int": 69
+   }
+  }
+ },
+ {
+  "id": "itm_1393",
+  "name": "Ember Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 77,
+   "evasion": 77,
+   "req": {
+    "vit": 34,
+    "dex": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1394",
+  "name": "Ember Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 70,
+   "min_level": 70,
+   "armour": 77,
+   "shield": 140,
+   "req": {
+    "vit": 34,
+    "int": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1395",
+  "name": "Ember Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 390,
+  "stack_max": 1,
+  "description": "Tier 8 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 70,
+   "min_level": 70,
+   "evasion": 77,
+   "shield": 140,
+   "req": {
+    "dex": 34,
+    "int": 34
+   }
+  }
+ },
+ {
+  "id": "itm_1396",
+  "name": "Star Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 147,
+   "req": {
+    "vit": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1397",
+  "name": "Star Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 80,
+   "min_level": 80,
+   "evasion": 147,
+   "req": {
+    "dex": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1398",
+  "name": "Star Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 80,
+   "min_level": 80,
+   "shield": 292,
+   "req": {
+    "int": 79
+   }
+  }
+ },
+ {
+  "id": "itm_1399",
+  "name": "Star Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 88,
+   "evasion": 88,
+   "req": {
+    "vit": 39,
+    "dex": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1400",
+  "name": "Star Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 80,
+   "min_level": 80,
+   "armour": 88,
+   "shield": 175,
+   "req": {
+    "vit": 39,
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1401",
+  "name": "Star Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 444,
+  "stack_max": 1,
+  "description": "Tier 9 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 80,
+   "min_level": 80,
+   "evasion": 88,
+   "shield": 175,
+   "req": {
+    "dex": 39,
+    "int": 39
+   }
+  }
+ },
+ {
+  "id": "itm_1402",
+  "name": "Sovereign Handguards",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 handwear (Armour).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 165,
+   "req": {
+    "vit": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1403",
+  "name": "Sovereign Gloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 handwear (Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 90,
+   "min_level": 90,
+   "evasion": 165,
+   "req": {
+    "dex": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1404",
+  "name": "Sovereign Wraps",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 handwear (Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "shield",
+   "item_level": 90,
+   "min_level": 90,
+   "shield": 359,
+   "req": {
+    "int": 89
+   }
+  }
+ },
+ {
+  "id": "itm_1405",
+  "name": "Sovereign Grips",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 handwear (Armour + Evasion).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_evasion",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 99,
+   "evasion": 99,
+   "req": {
+    "vit": 44,
+    "dex": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1406",
+  "name": "Sovereign Wargloves",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 handwear (Armour + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour_shield",
+   "item_level": 90,
+   "min_level": 90,
+   "armour": 99,
+   "shield": 215,
+   "req": {
+    "vit": 44,
+    "int": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1407",
+  "name": "Sovereign Mitts",
+  "category": "equipment",
+  "rarity": "common",
+  "sell_price": 498,
+  "stack_max": 1,
+  "description": "Tier 10 handwear (Evasion + Aether Shield).",
+  "drop_pool": true,
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion_shield",
+   "item_level": 90,
+   "min_level": 90,
+   "evasion": 99,
+   "shield": 215,
+   "req": {
+    "dex": 44,
+    "int": 44
+   }
+  }
+ },
+ {
+  "id": "itm_1408",
+  "name": "Bloodgrip Wraps",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 1360,
+  "stack_max": 1,
+  "description": "Every blow drinks a little of what it spills.",
+  "equip": {
+   "slot": "gloves",
+   "kind": "evasion",
+   "item_level": 35,
+   "min_level": 33,
+   "evasion": 66,
+   "req": {
+    "dex": 34
+   },
+   "implicit": [
+    [
+     "leech",
+     1.2
+    ],
+    [
+     "inc_attack_speed",
+     10
+    ]
+   ],
+   "unique": "bloodgrip"
+  }
+ },
+ {
+  "id": "itm_1409",
+  "name": "Ironclasp Handguards",
+  "category": "equipment",
+  "rarity": "epic",
+  "sell_price": 2240,
+  "stack_max": 1,
+  "description": "A grip that finds the gap in any plate.",
+  "equip": {
+   "slot": "gloves",
+   "kind": "armour",
+   "item_level": 60,
+   "min_level": 58,
+   "armour": 111,
+   "req": {
+    "vit": 59
+   },
+   "implicit": [
+    [
+     "inc_crit",
+     45
+    ],
+    [
+     "crit_mult",
+     20
+    ]
+   ],
+   "unique": "ironclasp"
   }
  }
 ]

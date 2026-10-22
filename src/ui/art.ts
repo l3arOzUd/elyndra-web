@@ -1,12 +1,12 @@
 import type { ItemDef } from '../data/schema';
 
-type Atlas = 'item' | 'skill' | 'skill3' | 'system';
-const COLUMNS: Record<Atlas, number> = { item: 6, skill: 2, skill3: 3, system: 6 };
+type Atlas = 'item' | 'skill' | 'skill3' | 'system' | 'gear';
+const COLUMNS: Record<Atlas, number> = { item: 6, skill: 2, skill3: 3, system: 6, gear: 3 };
 
 /** Original painted atlases. Cells are rendered directly; source PNGs stay intact. */
 export function paintedIcon(index: number, kind: Atlas = 'item'): HTMLElement {
   const e = document.createElement('span'), columns = COLUMNS[kind];
-  e.className = 'painted-icon ' + (kind === 'skill' ? 'skill-art' : kind === 'skill3' ? 'skill3-art' : kind === 'system' ? 'system-art' : 'item-art');
+  e.className = 'painted-icon ' + (kind === 'skill' ? 'skill-art' : kind === 'skill3' ? 'skill3-art' : kind === 'system' ? 'system-art' : kind === 'gear' ? 'gear-art' : 'item-art');
   e.setAttribute('aria-hidden', 'true');
   e.style.backgroundPosition = `${index % columns / (columns - 1) * 100}% ${Math.floor(index / columns) / (columns - 1) * 100}%`;
   e.dataset.artCell = String(index);
@@ -25,6 +25,8 @@ export const SYSTEM_ICONS: Record<string, number> = {
   prism_field: 27, aether_nova: 28, gravity_coil: 29, meridian_lance: 30, splitshot_array: 31, dash_circuit: 32, coil_mine: 33, gearstorm: 34, pulse_beacon: 35,
 };
 /** skills-v2.png: the four painted Vanguard skills. */
+/** gear-v1.png (scripts/paint-gloves.py): gloves by the primary armour kind. */
+const GLOVES_ART: Record<string, number> = { armour: 0, evasion: 1, shield: 2 };
 const SKILL_ART: Record<string, number> = { cleaving_arc: 0, iron_cyclone: 1, anchor_shout: 2, sundering_pulse: 3 };
 /** skills-v3.png (scripts/paint-skill-icons.py): the Arcanist, Strider and Machinist skills. */
 const SKILL_ART3: Record<string, number> = {
@@ -49,6 +51,7 @@ export function paintedItem(item?: ItemDef, rarity?: string): HTMLElement {
   if (material >= 1 && material <= 22) cell = material + 11;
   else if (item?.equip?.totem) cell = sys(item.equip.totem.type) ?? sys('fury');
   else if (item?.category === 'charm') cell = sys(item.equip?.unique || rarity === 'unique' ? 'unique_charm' : rarity === 'relic' ? 'relic' : 'charm');
+  else if (item?.equip?.slot === 'gloves') { atlas = 'gear'; cell = GLOVES_ART[(item.equip.kind ?? 'armour').split('_')[0]] ?? 0; }
   else if (item?.equip?.slot === 'head') cell = sys('head');
   else if (item?.equip?.slot === 'accessory') cell = sys('accessory');
   else if (item?.equip) cell = item.equip.slot === 'boots' ? 4 : item.equip.slot === 'armor' ? 3 : /bow/.test(name) ? 1 : /rod|staff/.test(name) ? 2 : /gauntlet/.test(name) ? 33 : 0;
@@ -76,7 +79,8 @@ export function gearTint(item?: ItemDef): string {
   if (lv > 50) parts.push('hue-rotate(250deg) saturate(1.2)');
   else if (lv > 20) parts.push('saturate(.5) brightness(1.1)');
   const group = eq.slot === 'weapon' ? eq.job : (eq.kind ?? 'armour').split('_')[0];
-  if (group === 'armour') parts.push('saturate(.4) brightness(1.08)');
+  if (eq.slot === 'gloves') { /* the painted gloves already show their kind */ }
+  else if (group === 'armour') parts.push('saturate(.4) brightness(1.08)');
   else if (group === 'shield') parts.push('hue-rotate(185deg)');
   else if (group === 'machinist') parts.push('hue-rotate(30deg) saturate(.8)');
   return parts.join(' ');

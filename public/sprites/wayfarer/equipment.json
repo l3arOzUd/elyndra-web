@@ -2787,6 +2787,688 @@
     "head"
    ],
    "generated": true
+  },
+  "itm_1348": {
+   "name": "Worn Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1349": {
+   "name": "Worn Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1350": {
+   "name": "Worn Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1351": {
+   "name": "Worn Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1352": {
+   "name": "Worn Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1353": {
+   "name": "Worn Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1354": {
+   "name": "Bronze Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1355": {
+   "name": "Bronze Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1356": {
+   "name": "Bronze Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1357": {
+   "name": "Bronze Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1358": {
+   "name": "Bronze Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1359": {
+   "name": "Bronze Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1360": {
+   "name": "Iron Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1361": {
+   "name": "Iron Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1362": {
+   "name": "Iron Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1363": {
+   "name": "Iron Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1364": {
+   "name": "Iron Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1365": {
+   "name": "Iron Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e1",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1366": {
+   "name": "Steel Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1367": {
+   "name": "Steel Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1368": {
+   "name": "Steel Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1369": {
+   "name": "Steel Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1370": {
+   "name": "Steel Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1371": {
+   "name": "Steel Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1372": {
+   "name": "Cobalt Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1373": {
+   "name": "Cobalt Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1374": {
+   "name": "Cobalt Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1375": {
+   "name": "Cobalt Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1376": {
+   "name": "Cobalt Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1377": {
+   "name": "Cobalt Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1378": {
+   "name": "Runic Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1379": {
+   "name": "Runic Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1380": {
+   "name": "Runic Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1381": {
+   "name": "Runic Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1382": {
+   "name": "Runic Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1383": {
+   "name": "Runic Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1384": {
+   "name": "Mythril Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1385": {
+   "name": "Mythril Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1386": {
+   "name": "Mythril Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1387": {
+   "name": "Mythril Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1388": {
+   "name": "Mythril Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1389": {
+   "name": "Mythril Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1390": {
+   "name": "Ember Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1391": {
+   "name": "Ember Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1392": {
+   "name": "Ember Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1393": {
+   "name": "Ember Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1394": {
+   "name": "Ember Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1395": {
+   "name": "Ember Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1396": {
+   "name": "Star Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1397": {
+   "name": "Star Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1398": {
+   "name": "Star Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1399": {
+   "name": "Star Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1400": {
+   "name": "Star Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1401": {
+   "name": "Star Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1402": {
+   "name": "Sovereign Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1403": {
+   "name": "Sovereign Gloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1404": {
+   "name": "Sovereign Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_shield_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1405": {
+   "name": "Sovereign Grips",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1406": {
+   "name": "Sovereign Wargloves",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1407": {
+   "name": "Sovereign Mitts",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1408": {
+   "name": "Bloodgrip Wraps",
+   "slot": "gloves",
+   "visual": "gen_gloves_evasion_e2",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
+  },
+  "itm_1409": {
+   "name": "Ironclasp Handguards",
+   "slot": "gloves",
+   "visual": "gen_gloves_armour_e3",
+   "layers": [
+    "hand_near",
+    "hand_far"
+   ],
+   "generated": true,
+   "variants": true
   }
  }
 }

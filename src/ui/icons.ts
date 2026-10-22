@@ -22,6 +22,7 @@ const paths: Record<string, string> = {
  potion:'<path d="M12 3h8v7l6 8c6 12-26 12-20 0l6-8Z"/><path d="M11 3h10M8 19h16M12 23h3"/>',
  leaf:'<path d="M27 4C7 2 1 15 9 24 18 32 30 20 27 4Z"/><path d="M5 29 23 9M12 22l-1-9M17 17h8"/>',
  armor:'<path d="m10 4 6 4 6-4 7 7-5 5-3-2v15H11V14l-3 2-5-5Z"/><path d="M12 20h8M12 25h8"/>',
+ gloves:'<path d="M9 29v-7l-4-6c-1-2 1-4 3-2l2 3V7a2 2 0 0 1 4 0v7V5a2 2 0 0 1 4 0v9V6a2 2 0 0 1 4 0v9V9a2 2 0 0 1 4 0v11c0 4-2 6-4 7v2Z"/><path d="M9 25h14"/>',
  boots:'<path d="M10 3h12l-1 17 7 3v6H5v-8l5-4Z"/><path d="M10 8h11M10 12h11M5 25h23"/>',
  coin:'<circle cx="16" cy="16" r="12"/><circle cx="16" cy="16" r="8"/><path d="m16 10 4 6-4 6-4-6Z"/>',
  wind:'<path d="M3 12h18c10 0 7-12 1-8M6 18h18c7 0 6 10 0 9M2 24h12M4 6h9"/>',

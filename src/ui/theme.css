@@ -189,6 +189,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .echo-link { margin:8px 0; padding:8px; border:1px solid #aa8c5b66; border-radius:3px; background:#cfb17d22; }.echo-link .eyebrow { margin:0 0 2px; font-size:10px; }
 :root { --ui-systems:url('/ui/painted/systems-v1.png'); }
 #view .painted-icon.system-art { background-image:var(--ui-systems); background-size:600% 600%; }
+#view .painted-icon.gear-art { background-image:url('/ui/painted/gear-v1.png'); background-size:300% 100%; }
 :root { --ui-skills3:url('/ui/painted/skills-v3.png'); }
 #view .painted-icon.skill3-art { background-image:var(--ui-skills3); background-size:300% 300%; }
 .buff-bar { position:absolute; left:16px; top:calc(100% + 6px); display:flex; flex-wrap:wrap; gap:4px; max-width:calc(100% - 32px); z-index:2; }.buff-bar:empty { display:none; }

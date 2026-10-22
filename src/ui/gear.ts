@@ -6,10 +6,10 @@ import type { GearView, SheetMsg } from '../net/protocol';
 
 export const RARITY_LABEL: Record<string, string> = { normal: 'Normal', magic: 'Magic', rare: 'Rare', relic: 'Relic', unique: 'Unique' };
 export const SLOT_LABEL: Record<string, string> = {
-  weapon: 'Weapon', head: 'Head', armor: 'Body armour', boots: 'Boots', accessory: 'Accessory', charm: 'Charm slot',
+  weapon: 'Weapon', head: 'Head', armor: 'Body armour', gloves: 'Gloves', boots: 'Boots', accessory: 'Accessory', charm: 'Charm slot',
   charm1: 'Charm 1', charm2: 'Charm 2', charm3: 'Charm 3',
 };
-export const GEAR_SLOTS = ['weapon', 'head', 'armor', 'boots', 'accessory'] as const;
+export const GEAR_SLOTS = ['weapon', 'head', 'armor', 'gloves', 'boots', 'accessory'] as const;
 export const CHARM_SLOTS = ['charm1', 'charm2', 'charm3'] as const;
 export const STAT_IDS = ['pow', 'luk', 'agi', 'dex', 'int', 'vit'] as const;
 export const STAT_INFO: Record<string, { name: string; text: string }> = {
@@ -37,7 +37,7 @@ export const gearItem = (c: ClientContent, g: GearView) => c.items.get(g.base);
 
 /** Refining (elyndra-server internal/game/refine.go): keep in step. */
 export const REFINE = { max: 10, stepPct: 5, dropFrom: 7, costMult: 2, chance: [100, 100, 100, 100, 100, 80, 70, 60, 50, 40] };
-export const refinable = (it?: ItemDef) => !!it?.equip && ['weapon', 'head', 'armor', 'boots'].includes(it.equip.slot);
+export const refinable = (it?: ItemDef) => !!it?.equip && ['weapon', 'head', 'armor', 'gloves', 'boots'].includes(it.equip.slot);
 export const refineCost = (it: ItemDef, g: GearView) => Math.max(10, it.sell_price * ((g.refine ?? 0) + 1) * REFINE.costMult);
 const refineMult = (g?: GearView) => 1 + ((g?.refine ?? 0) * REFINE.stepPct) / 100;
 /** Worn (not in the bag, not in the stash). */

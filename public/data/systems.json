@@ -255,6 +255,7 @@
    "slots": [
     "head",
     "armor",
+    "gloves",
     "boots"
    ],
    "values": [
@@ -274,6 +275,7 @@
    "slots": [
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -311,6 +313,7 @@
    "label": "{v}% of Damage leeched as HP",
    "slots": [
     "weapon",
+    "gloves",
     "accessory"
    ],
    "values": [
@@ -403,6 +406,7 @@
     "weapon",
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -424,6 +428,7 @@
     "weapon",
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -445,6 +450,7 @@
     "weapon",
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -466,6 +472,7 @@
     "weapon",
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -487,6 +494,7 @@
     "weapon",
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -508,6 +516,7 @@
     "weapon",
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -528,6 +537,7 @@
    "slots": [
     "weapon",
     "head",
+    "gloves",
     "accessory"
    ],
    "values": [
@@ -582,6 +592,7 @@
    "label": "{v}% increased Attack Speed",
    "slots": [
     "weapon",
+    "gloves",
     "accessory"
    ],
    "values": [
@@ -601,6 +612,7 @@
    "slots": [
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -621,6 +633,7 @@
    "slots": [
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -641,6 +654,7 @@
    "slots": [
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],
@@ -661,6 +675,7 @@
    "slots": [
     "head",
     "armor",
+    "gloves",
     "boots",
     "accessory"
    ],

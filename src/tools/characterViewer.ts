@@ -58,7 +58,7 @@ const restCells: HTMLCanvasElement[] = [];
 
 function rebake() {
   // Same order as the server's GearOrder, so the viewer stacks layers like the game.
-  const order = ["weapon", "armor", "boots", "head"];
+  const order = ["weapon", "armor", "boots", "head", "gloves"];
   const rank = (slot: string) => (order.includes(slot) ? order.indexOf(slot) : order.length);
   const gear = [...chosen.entries()].sort((a, b) => rank(a[0]) - rank(b[0])).map(([, id]) => id);
   sprite = bakeWayfarer(kit, gear);

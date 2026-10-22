@@ -20,7 +20,7 @@ export const TIER_LEVELS = [1, 10, 20, 30, 40, 50, 60, 70, 80, 90] as const;
 export const tierLevelFor = (level: number) => [...TIER_LEVELS].reverse().find((t) => t <= level) ?? 1;
 /** A weapon's ATK at item level L. */
 export const weaponAttack = (itemLevel: number) => Math.round(12 + 3.6 * itemLevel + 0.02 * itemLevel * itemLevel);
-/** A whole pure Armour (or Evasion) set at item level L; head 30%, body 50%, boots 20%. */
+/** A whole pure Armour (or Evasion) set at item level L; head 25%, body 45%, gloves 15%, boots 15%. */
 export const defenseSet = (itemLevel: number) => 20 + 12 * itemLevel;
 /** POW, per point: flat ATK, plus % of weapon ATK (CHARACTER_SYSTEMS.md §2.1). */
 export const POW_FLAT_ATK = 0.75;

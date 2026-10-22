@@ -24,7 +24,8 @@ export interface Rig {
   variants?: Record<string, string[]>;
   effects?: string[];
 }
-export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[]; motion?: "melee" | "shoot" | "cast" }
+/** variants: the item also has a drawing of each layer's rig variants (gloves: hand_near_open.png), used in those poses. */
+export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[]; motion?: "melee" | "shoot" | "cast"; variants?: boolean }
 export interface PaperDollKit { rig: Rig; items: Record<string, ItemLook>; img: Map<string, HTMLImageElement> }
 
 /** Generated equipment may share an existing painted weapon without a motion field. */
@@ -64,7 +65,10 @@ export async function loadPaperDoll(base = DIR, bust = ""): Promise<PaperDollKit
   for (const [view, v] of Object.entries(rig.views)) {
     for (const part of Object.keys(v.parts)) files.push(`base/${view}/${part}.png`);
     for (const [part, variants] of Object.entries(rig.variants ?? {})) for (const variant of variants) files.push(`base/${view}/${part}_${variant}.png`);
-    for (const it of Object.values(items)) for (const layer of it.layers) files.push(`items/${it.visual}/${view}/${layer}.png`);
+    for (const it of Object.values(items)) for (const layer of it.layers) {
+      files.push(`items/${it.visual}/${view}/${layer}.png`);
+      if (it.variants) for (const variant of rig.variants?.[layer] ?? []) files.push(`items/${it.visual}/${view}/${layer}_${variant}.png`);
+    }
   }
   files.push(...rig.effects ?? []);
   const img = new Map<string, HTMLImageElement>();
@@ -350,7 +354,10 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
     const m = matrixOf(bone);
     const variant=slot==="head"&&pose.unconscious?"_unconscious":pose.openHands?.includes(slot)?"_open":"";
     if (v.parts[slot] && !hidden.has(slot)) draw(`base/${view}/${slot}${variant}.png`, m);
-    for (const it of gear) if (it.layers.includes(slot)) draw(`items/${it.visual}/${view}/${slot}.png`, m);
+    for (const it of gear) if (it.layers.includes(slot)) {
+      const f = `items/${it.visual}/${view}/${slot}`;
+      draw(variant && kit.img.has(f + variant + ".png") ? f + variant + ".png" : f + ".png", m);
+    }
   }
   // Native line geometry follows the actual wrist transforms: a bowstring
   // bends to the pulling hand; it is not another stretched painted limb.

@@ -10,7 +10,7 @@ import { POW_FLAT_ATK, POW_WEAPON_PCT, TIER_LEVELS, defenseSet, materialPrice, p
 
 export const STATS: StatId[] = ["pow", "luk", "agi", "dex", "int", "vit"];
 
-const RES_SLOTS: GearSlot[] = ["head", "armor", "boots", "accessory"];
+const RES_SLOTS: GearSlot[] = ["head", "armor", "gloves", "boots", "accessory"];
 const T = (...v: number[]) => v;
 
 /** CHARACTER_SYSTEMS.md §4.6-4.7. values[i] is the top of tier i+1. */
@@ -20,19 +20,19 @@ export const AFFIXES: AffixDef[] = [
   { id: "crit_mult", kind: "prefix", label: "+{v}% Critical Damage", slots: ["weapon", "accessory"], values: T(5, 8, 11, 15, 19, 24, 30) },
   { id: "inc_area", kind: "prefix", label: "{v}% increased Area of Effect", slots: ["weapon", "head"], values: T(4, 6, 8, 11, 14, 18, 22) },
   { id: "inc_duration", kind: "prefix", label: "{v}% increased Skill Duration", slots: ["head", "accessory"], values: T(5, 8, 11, 14, 17, 21, 25) },
-  { id: "inc_local_defense", kind: "prefix", label: "{v}% increased Armour, Evasion and Shield of this item", slots: ["head", "armor", "boots"], values: T(15, 22, 30, 38, 46, 55, 65) },
-  { id: "flat_hp", kind: "prefix", label: "+{v} Max HP", slots: ["head", "armor", "boots", "accessory"], values: T(15, 40, 80, 140, 220, 320, 450) },
+  { id: "inc_local_defense", kind: "prefix", label: "{v}% increased Armour, Evasion and Shield of this item", slots: ["head", "armor", "gloves", "boots"], values: T(15, 22, 30, 38, 46, 55, 65) },
+  { id: "flat_hp", kind: "prefix", label: "+{v} Max HP", slots: ["head", "armor", "gloves", "boots", "accessory"], values: T(15, 40, 80, 140, 220, 320, 450) },
   { id: "inc_hp", kind: "prefix", label: "{v}% increased Max HP", slots: ["armor", "accessory"], values: T(3, 4, 6, 8, 10, 12, 15) },
-  { id: "leech", kind: "prefix", label: "{v}% of Damage leeched as HP", slots: ["weapon", "accessory"], values: T(0.2, 0.4, 0.6, 0.8, 1.0, 1.3, 1.6) },
+  { id: "leech", kind: "prefix", label: "{v}% of Damage leeched as HP", slots: ["weapon", "gloves", "accessory"], values: T(0.2, 0.4, 0.6, 0.8, 1.0, 1.3, 1.6) },
   // Elemental damage (§2.11): part of every hit added as an element; monsters
   // resist their own element and are weak to its opposite.
   ...(["fire", "cold", "nature", "shadow"] as const).map((g): AffixDef => ({ id: `added_${g}`, kind: "prefix", label: `Adds {v}% of Damage as ${g[0].toUpperCase() + g.slice(1)}`, slots: ["weapon", "accessory"], values: T(3, 5, 8, 11, 14, 17, 20) })),
   // suffixes
-  ...STATS.map((s): AffixDef => ({ id: `stat_${s}`, kind: "suffix", label: `+{v} ${s.toUpperCase()}`, slots: ["weapon", "head", "armor", "boots", "accessory"], values: T(2, 4, 7, 10, 13, 16, 20) })),
-  { id: "inc_crit", kind: "suffix", label: "{v}% increased Critical Chance", slots: ["weapon", "head", "accessory"], values: T(10, 20, 30, 40, 55, 70, 85) },
+  ...STATS.map((s): AffixDef => ({ id: `stat_${s}`, kind: "suffix", label: `+{v} ${s.toUpperCase()}`, slots: ["weapon", "head", "armor", "gloves", "boots", "accessory"], values: T(2, 4, 7, 10, 13, 16, 20) })),
+  { id: "inc_crit", kind: "suffix", label: "{v}% increased Critical Chance", slots: ["weapon", "head", "gloves", "accessory"], values: T(10, 20, 30, 40, 55, 70, 85) },
   { id: "inc_cdr", kind: "suffix", label: "{v}% increased Cooldown Recovery", slots: ["head", "accessory"], values: T(5, 8, 11, 14, 17, 21, 25) },
   { id: "inc_cast", kind: "suffix", label: "{v}% increased Cast Speed", slots: ["weapon", "head"], values: T(5, 8, 11, 14, 17, 21, 25) },
-  { id: "inc_attack_speed", kind: "suffix", label: "{v}% increased Attack Speed", slots: ["weapon", "accessory"], values: T(3, 5, 7, 9, 11, 13, 15) },
+  { id: "inc_attack_speed", kind: "suffix", label: "{v}% increased Attack Speed", slots: ["weapon", "gloves", "accessory"], values: T(3, 5, 7, 9, 11, 13, 15) },
   ...(["fire", "cold", "nature", "shadow"] as const).map((g): AffixDef => ({ id: `res_${g}`, kind: "suffix", label: `+{v}% ${g[0].toUpperCase() + g.slice(1)} Resistance`, slots: RES_SLOTS, values: T(8, 12, 16, 20, 25, 30, 36) })),
   { id: "res_all", kind: "suffix", label: "+{v}% to all Resistances", slots: ["accessory"], values: T(3, 5, 7, 9, 11, 13, 15), weight: 0.3 },
   { id: "hp_on_kill", kind: "suffix", label: "Kills restore {v}% of Max HP", slots: ["weapon", "armor", "accessory"], values: T(0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4) },
@@ -258,12 +258,16 @@ export const DROPS: SystemsDef["drops"] = {
 const TIER_NAMES = ["Worn", "Bronze", "Iron", "Steel", "Cobalt", "Runic", "Mythril", "Ember", "Star", "Sovereign"];
 const JOBS: Record<string, string> = { vanguard: "Saber", strider: "Bow", arcanist: "Rod", machinist: "Gauntlet" };
 const KINDS: DefenseKind[] = ["armour", "evasion", "shield", "armour_evasion", "armour_shield", "evasion_shield"];
-const NOUNS: Record<"head" | "armor" | "boots", Record<DefenseKind, string>> = {
+type ArmourSlot = "head" | "armor" | "gloves" | "boots";
+const NOUNS: Record<ArmourSlot, Record<DefenseKind, string>> = {
   armor: { armour: "Plate", evasion: "Leathers", shield: "Robe", armour_evasion: "Brigandine", armour_shield: "Runeplate", evasion_shield: "Duskcloak" },
   head: { armour: "Helm", evasion: "Hood", shield: "Circlet", armour_evasion: "Sallet", armour_shield: "Warcrown", evasion_shield: "Mask" },
   boots: { armour: "Sabatons", evasion: "Boots", shield: "Slippers", armour_evasion: "Greaves", armour_shield: "Warboots", evasion_shield: "Treads" },
+  // Not "Gauntlets": that is the Machinist weapon.
+  gloves: { armour: "Handguards", evasion: "Gloves", shield: "Wraps", armour_evasion: "Grips", armour_shield: "Wargloves", evasion_shield: "Mitts" },
 };
-const SLOT_SHARE = { head: 0.3, armor: 0.5, boots: 0.2 } as const;
+/** Each piece's share of a whole set (sums to 1, so defenseSet and the reference player stay the same). */
+const SLOT_SHARE = { head: 0.25, armor: 0.45, gloves: 0.15, boots: 0.15 } as const;
 const GRADES = ["Lesser", "Greater", "Grand"];
 export const GRADE_LEVELS = [10, 35, 60];
 
@@ -271,7 +275,7 @@ export const GRADE_LEVELS = [10, 35, 60];
 export const shieldSet = (itemLevel: number) => Math.round(playerAt(itemLevel).max_hp * 0.25);
 
 /** Base defenses of one armour piece. */
-export function pieceDefense(slot: "head" | "armor" | "boots", kind: DefenseKind, itemLevel: number) {
+export function pieceDefense(slot: ArmourSlot, kind: DefenseKind, itemLevel: number) {
   const parts = kind.split("_");
   const f = SLOT_SHARE[slot] * (parts.length === 2 ? 0.6 : 1);
   const out: { armour?: number; evasion?: number; shield?: number } = {};
@@ -398,6 +402,23 @@ export function gearItems(): ItemDef[] {
       equip: { slot: "charm", item_level: 40, min_level: 40, unique: "echo_stone" } },
   ];
   for (const u of wave2) out.push({ ...u, id: id() });
+  // Third wave: gloves (CHARACTER_SYSTEMS.md §4.1), appended so no id above moves.
+  TIER_LEVELS.forEach((il, t) => {
+    for (const kind of KINDS) out.push({
+      id: id(), name: `${TIER_NAMES[t]} ${NOUNS.gloves[kind]}`, category: "equipment", rarity: "common", sell_price: price(il, 6), stack_max: 1,
+      description: `Tier ${t + 1} handwear (${kind.split("_").map((k) => k === "shield" ? "Aether Shield" : k[0].toUpperCase() + k.slice(1)).join(" + ")}).`, drop_pool: true,
+      equip: { slot: "gloves", kind, item_level: il, min_level: il, ...pieceDefense("gloves", kind, il), req: kindRequirement(kind, il) },
+    });
+  });
+  const wave3: ItemDef[] = [
+    { id: "", name: "Bloodgrip Wraps", category: "equipment", rarity: "epic", sell_price: price(35, 40), stack_max: 1,
+      description: "Every blow drinks a little of what it spills.",
+      equip: { slot: "gloves", kind: "evasion", item_level: 35, min_level: 33, ...pieceDefense("gloves", "evasion", 35), req: kindRequirement("evasion", 35), implicit: [["leech", 1.2], ["inc_attack_speed", 10]], unique: "bloodgrip" } },
+    { id: "", name: "Ironclasp Handguards", category: "equipment", rarity: "epic", sell_price: price(60, 40), stack_max: 1,
+      description: "A grip that finds the gap in any plate.",
+      equip: { slot: "gloves", kind: "armour", item_level: 60, min_level: 58, ...pieceDefense("gloves", "armour", 60), req: kindRequirement("armour", 60), implicit: [["inc_crit", 45], ["crit_mult", 20]], unique: "ironclasp" } },
+  ];
+  for (const u of wave3) out.push({ ...u, id: id() });
   return out;
 }
 
@@ -421,6 +442,8 @@ export const UNIQUE_DROPS: { boss: string; item: string; rate_bp: number }[] = [
   { boss: "Cryocore Curator", item: "Frostwake Circlet", rate_bp: 1000 },
   { boss: "Kiln Prime", item: "Heart of Embers", rate_bp: 1000 },
   { boss: "Cryocore Curator", item: "Echo Stone", rate_bp: 600 },
+  { boss: "Heartwood Regent", item: "Bloodgrip Wraps", rate_bp: 800 },
+  { boss: "Drowned Signalmind", item: "Ironclasp Handguards", rate_bp: 800 },
 ];
 
 export function systems(): SystemsDef {
