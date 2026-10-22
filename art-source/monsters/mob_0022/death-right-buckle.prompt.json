@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-neutral-v2.png",
+  "prompt": "Edit this sprite into early knee-buckle shutdown keyframe. Strict same right-facing side profile, no camera rotation, no additional far eye or arm revealed. Keep exact body size, tank and valves. Both boots remain planted at original baseline and location; mechanical knee bends about 35 degrees and hip sinks 60 pixels lower, barrel tips forward only 8 degrees. Arm hangs slack lower, open two-jaw clamp, not bracing. All rigid segment lengths preserved; no squashing, scaling, stretching or new joints. Full body same square transparent canvas, no shadows, steam, text or effects. This is a restrained transitional pose before full collapse."
+}
