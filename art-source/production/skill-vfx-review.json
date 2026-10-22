@@ -1,0 +1,137 @@
+{
+  "scope": "13 current skill definitions; code routing plus isolated 7101 viewer smoke check, not final visual approval.",
+  "testedWebCommit": "04d73f2",
+  "runtimeUrl": "http://localhost:7101/fx-viewer.html",
+  "pageErrors": [],
+  "sourceEvidence": [
+    "src/render/fx.ts: Fx.shaped has 12 named release branches; mobility dispatch uses Fx.dash.",
+    "src/game.ts:325 calls Fx.dash during mobility cast.",
+    "src/game.ts:346 calls Fx.shaped for skill release."
+  ],
+  "records": [
+    {
+      "id": "cleaving_arc",
+      "vfxKey": "fx_cleaving_arc",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 420,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-cleaving_arc.png"
+    },
+    {
+      "id": "iron_cyclone",
+      "vfxKey": "fx_iron_cyclone",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 620,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-iron_cyclone.png"
+    },
+    {
+      "id": "anchor_shout",
+      "vfxKey": "fx_anchor_shout",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 320,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-anchor_shout.png"
+    },
+    {
+      "id": "sundering_pulse",
+      "vfxKey": "fx_sundering_pulse",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 1320,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-sundering_pulse.png"
+    },
+    {
+      "id": "prism_field",
+      "vfxKey": "fx_prism_field",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 720,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-prism_field.png"
+    },
+    {
+      "id": "aether_nova",
+      "vfxKey": "fx_aether_nova",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 720,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-aether_nova.png"
+    },
+    {
+      "id": "gravity_coil",
+      "vfxKey": "fx_gravity_coil",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 520,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-gravity_coil.png"
+    },
+    {
+      "id": "meridian_lance",
+      "vfxKey": "fx_meridian_lance",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 470,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-meridian_lance.png"
+    },
+    {
+      "id": "splitshot_array",
+      "vfxKey": "fx_splitshot",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 420,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-splitshot_array.png"
+    },
+    {
+      "id": "dash_circuit",
+      "vfxKey": "fx_dash",
+      "dispatch": "mobility cast-time dash",
+      "viewerSnapshotMs": 100,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-dash_circuit.png"
+    },
+    {
+      "id": "coil_mine",
+      "vfxKey": "fx_coil_mine",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 520,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-coil_mine.png"
+    },
+    {
+      "id": "gearstorm",
+      "vfxKey": "fx_gearstorm",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 820,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-gearstorm.png"
+    },
+    {
+      "id": "pulse_beacon",
+      "vfxKey": "fx_pulse_beacon",
+      "dispatch": "named Fx.shaped branch",
+      "viewerSnapshotMs": 620,
+      "viewerSmokePassed": true,
+      "visualApproved": false,
+      "screenshotLocal": "output/fx-audit-pulse_beacon.png"
+    }
+  ],
+  "remaining": [
+    "Review every effect visually across full cast, release, sustained ticks and cleanup.",
+    "Verify with actual player sprites and equipped weapons; viewer uses sample actor.",
+    "Check readability and performance with dense monster packs.",
+    "Check direction, authoritative area and hit timing in multiplayer.",
+    "Only Dash Circuit and Prism Field snapshots were visually inspected in this pass; remaining snapshots are captured, not approved."
+  ]
+}
