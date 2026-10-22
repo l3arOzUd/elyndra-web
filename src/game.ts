@@ -25,6 +25,8 @@ const INTERP_MS = 120;
 const UP = new THREE.Vector3(0, 1, 0);
 const tmpA = new THREE.Vector3();
 const tmpB = new THREE.Vector3();
+/** WASD as screen steps (x right, y down), by physical key so a Thai layout works. */
+const WASD: Record<string, [number, number]> = { KeyW: [0, -1], KeyS: [0, 1], KeyA: [-1, 0], KeyD: [1, 0] };
 
 // Where an entity's sprite stands. Melee monsters stack in one cell on the
 // server; each is nudged a little, always the same way for the same monster,
@@ -98,6 +100,9 @@ export class Game {
   private width = 1;
   private height = 1;
   private moveSeq = 0;
+  /** WASD keys held (physical codes), the latest last: it picks the direction. */
+  private heldDirs: string[] = [];
+  private keyWalk = { dir: "", at: 0 };
   /** Client-side prediction of our own walk. */
   private predicted: { path: Cell[]; at: THREE.Vector3 } | null = null;
   /** Our own cast in progress (until its first combat event, or a timeout):
@@ -427,10 +432,10 @@ export class Game {
     this.conn.send({ t: "cast", skill, aim: [aim.x, aim.z] });
   }
 
-  private walkTo(cell: Cell) {
+  private walkTo(cell: Cell, marker = true) {
     const me = this.self;
     if (!me || !this.grid || me.dead) return;
-    const dest = this.grid.nearestWalkable(cell[0], cell[1], 3);
+    const dest = this.grid.nearestWalkable(cell[0], cell[1], marker ? 3 : 0);
     if (!dest) return;
     this.targetId = null;
     this.pendingTalk = null;
@@ -440,9 +445,45 @@ export class Game {
     this.conn.send({ t: "move", seq: this.moveSeq, to: [dest[0] + 0.5, dest[1] + 0.5] });
     // While casting, follow the server instead: it starts this walk when the cast lands.
     if (path && path.length > 1 && performance.now() >= this.castingUntil) this.predicted = { path: path.slice(1), at: me.pos.clone() };
+    if (!marker) return;
     tmpA.set(dest[0] + 0.5, 0.06, dest[1] + 0.5);
     this.clickMarker.position.copy(tmpA);
     this.clickAge = 0;
+  }
+
+  /**
+   * WASD walks in the four screen directions while held (the latest key wins,
+   * no diagonals): the walk is re-aimed a few cells ahead every 250 ms, and
+   * letting go stops at the next cell.
+   */
+  private updateKeyWalk(now: number) {
+    const me = this.self;
+    if (!me || !this.grid || me.dead) return;
+    const code = this.heldDirs[this.heldDirs.length - 1];
+    if (!code) {
+      if (this.keyWalk.dir) {
+        const [dx, dy] = this.keyDir(this.keyWalk.dir);
+        this.keyWalk.dir = "";
+        const stop: Cell = [Math.floor(me.pos.x + dx * 0.5), Math.floor(me.pos.z + dy * 0.5)];
+        if (this.grid.walkable(stop[0], stop[1])) this.walkTo(stop, false);
+      }
+      return;
+    }
+    if (code === this.keyWalk.dir && now - this.keyWalk.at < 250) return;
+    this.keyWalk = { dir: code, at: now };
+    const [dx, dy] = this.keyDir(code);
+    const cx = Math.floor(me.pos.x), cy = Math.floor(me.pos.z);
+    let k = 0;
+    while (k < 4 && this.grid.walkable(cx + dx * (k + 1), cy + dy * (k + 1))) k++;
+    if (k > 0) this.walkTo([cx + dx * k, cy + dy * k], false);
+  }
+
+  /** A WASD key as a grid step, W being screen-up (the camera's yaw counts). */
+  private keyDir(code: string): [number, number] {
+    const [sx, sy] = WASD[code];
+    const c = Math.cos(this.cam.yaw), s = Math.sin(this.cam.yaw);
+    const x = sx * c - sy * s, y = sx * s + sy * c;
+    return Math.abs(x) >= Math.abs(y) ? [Math.sign(x), 0] : [0, Math.sign(y)];
   }
 
   private bindInput() {
@@ -487,6 +528,8 @@ export class Game {
       }
     });
     el.addEventListener("pointerup", (ev) => { if (ev.button === 2) rightDown = false; });
+    window.addEventListener("keyup", (ev) => this.releaseKey(ev.code));
+    window.addEventListener("blur", () => { this.heldDirs = []; });
     el.addEventListener("wheel", (ev) => { ev.preventDefault(); this.cam.zoom(Math.sign(ev.deltaY)); }, { passive: false });
     window.addEventListener("keydown", (ev) => {
       if (ev.key === "Escape") { this.dialog.close(); this.hud.closeWindows(); this.targetId = null; (document.activeElement as HTMLElement | null)?.blur(); return; }
@@ -494,6 +537,10 @@ export class Game {
       if (["INPUT", "SELECT", "TEXTAREA"].includes(input.tagName) || input.isContentEditable || ev.ctrlKey || ev.metaKey || ev.altKey) return;
       // Physical keys (ev.code), not characters: with a Thai layout the 1 key
       // types "ๅ" and I/Z type other letters, so ev.key would miss them.
+      if (ev.code in WASD) {
+        if (!ev.repeat) this.heldDirs = [...this.heldDirs.filter((c) => c !== ev.code), ev.code];
+        return;
+      }
       const digit = /^(?:Digit|Numpad)(\d)$/.exec(ev.code);
       const n = digit ? Number(digit[1]) : NaN;
       if (n >= 1 && n <= this.hud.hotbar.length) this.cast(this.hud.hotbar[n - 1]);
@@ -509,6 +556,10 @@ export class Game {
       else if (ev.key === "Home") this.cam.reset();
       else if (ev.key === "F3") { ev.preventDefault(); this.debugOn = !this.debugOn; this.conn.send({ t: "debug", on: this.debugOn }); document.getElementById("debug-win")!.hidden = !this.debugOn; }
     });
+  }
+
+  private releaseKey(code: string) {
+    this.heldDirs = this.heldDirs.filter((c) => c !== code);
   }
 
   private setMouse(ev: PointerEvent) {
@@ -604,6 +655,7 @@ export class Game {
     const dtMs = dt * 1000;
     const renderT = this.conn.serverNow() - INTERP_MS;
     const now = performance.now();
+    this.updateKeyWalk(now);
     for (const e of this.ents.values()) {
       const prevState = e.state;
       if (e.id === this.selfId) {
