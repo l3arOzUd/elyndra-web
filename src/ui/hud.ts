@@ -3,6 +3,7 @@ import { money } from './currency';
 import type { BuffView, GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
 import { skillIcon, systemIcon } from './art';
+import { awakenStatus, rankLines, rankNumbers } from './ranks';
 import { drawWayfarerPortrait } from '../render/paperDoll';
 import { isWorn as isWornCopy } from './gear';
 import { CHARM_SLOTS, ECHO_COUNT, gearTitle, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
@@ -71,6 +72,8 @@ export class Hud {
 
   /** The skills on keys 1-4 (JOB_SKILLS of the character's job, or the player's order). */
   hotbar: string[] = [...HOTBAR];
+  /** The skill whose rank table is unfolded in the character window. */
+  private openRank: string | null = null;
   private job = 'vanguard';
   /** Right-click menu: choose which skill a key holds. */
   private pickSkill(slot: number, at: HTMLElement) {
@@ -162,12 +165,13 @@ export class Hud {
   /** Skill tooltip: SP, cast and cooldown as they stand (rank, Cast Speed, Cooldown Recovery). */
   private skillText(id: string): string {
     const s = this.c.skills.get(id); if (!s) return '';
-    const m = this.c.systems.mastery, rank = this.sheet?.mastery[id]?.[0] ?? 1, d = this.sheet?.d;
-    const cost = rank >= m.sp_cost_rank ? s.resource_cost * (1 - m.sp_cost_cut / 100) : s.resource_cost;
+    const rank = this.sheet?.mastery[id]?.[0] ?? 1, d = this.sheet?.d, n = rankNumbers(this.c, id, rank);
+    const awake = this.sheet?.awakened?.includes(id) ? this.c.systems.mastery.awaken[id] : undefined;
+    const up5 = rank >= 5 ? this.c.systems.mastery.rank5[id] : undefined;
+    const cost = s.resource_cost * (1 - n.spCut / 100);
     const cdr = (d?.cdr ?? 0) * (s.cooldown_ms >= (this.c.systems.rules.ultimate_cooldown_ms ?? 30000) ? 0.5 : 1);
-    const cd = s.cooldown_ms * (1 - cdr) / 1000, cast = s.cast_ms * (1 - (d?.cast ?? 0)) / 1000;
-    const more = (rank - 1) * m.more_damage_per_rank;
-    return 'Rank ' + rank + (more ? ' (+' + more + '% damage)' : '') + ' · ' + Math.round(cost) + ' SP · cast ' + cast.toFixed(2) + 's · cooldown ' + cd.toFixed(1) + 's · ' + s.damage_multiplier + 'x ATK · up to ' + s.max_targets + ' targets';
+    const cd = s.cooldown_ms * (1 - cdr) * (1 - n.cdCut / 100) / 1000, cast = s.cast_ms * (1 - (d?.cast ?? 0)) * (1 - (up5?.cast_cut ?? 0) / 100) / 1000;
+    return (awake ? awake.name : 'Rank ' + rank) + (n.damage && s.damage_multiplier ? ' (+' + n.damage + '% damage)' : '') + ' · ' + Math.round(cost) + ' SP · cast ' + cast.toFixed(2) + 's · cooldown ' + cd.toFixed(1) + 's · ' + s.damage_multiplier + 'x ATK · up to ' + s.max_targets + ' targets' + (up5 ? ' · ' + up5.text : '') + (awake ? ' · ' + awake.text : '');
   }
   /** One line per number of a copy, for hover tooltips. */
   gearSummary(g: GearView): string {
@@ -610,6 +614,30 @@ export class Hud {
     d.append(foot);
   }
   /** The character window: stat points, derived numbers and skill ranks. */
+  /** Every rank of a skill (CHARACTER_SYSTEMS.md §15): reached ones lit, the next one marked, then its Awakening. */
+  private rankTable(skill: string, rank: number, awake: ReturnType<typeof awakenStatus>): HTMLElement {
+    const t = el('ol', 'rank-table');
+    for (const line of rankLines(this.c, skill)) {
+      const li = el('li', 'rank-line' + (line.rank <= rank ? ' reached' : '') + (line.rank === rank + 1 ? ' next' : '') + (line.special ? ' special' : ''));
+      li.append(el('b', '', 'R' + line.rank), el('span', '', line.text));
+      t.append(li);
+    }
+    const aw = this.c.systems.mastery.awaken[skill];
+    if (aw) {
+      const li = el('li', 'rank-line awaken' + (awake.state === 'awakened' ? ' reached' : ''));
+      const status = awake.state === 'awakened' ? 'Awakened'
+        : awake.state === 'complete' ? 'Trial complete · awaken at a Guild Registrar (Awakening Sigil + ' + this.c.systems.mastery.awaken_cost.toLocaleString() + ' A)'
+        : awake.state === 'trial' ? 'Trial ' + awake.progress.toLocaleString() + ' / ' + awake.need.toLocaleString()
+        : awake.state === 'ready' ? 'Rank 10: start the trial at a Guild Registrar'
+        : 'Needs rank 10, a trial, an Awakening Sigil and ' + this.c.systems.mastery.awaken_cost.toLocaleString() + ' A';
+      const body = el('span');
+      body.append(el('strong', '', aw.name), el('span', '', ' · ' + aw.text), el('small', 'muted', 'Trial: ' + aw.feat.text), el('small', awake.state === 'awakened' || awake.state === 'complete' ? 'good' : 'muted', status));
+      li.append(el('b', '', '★'), body);
+      t.append(li);
+    }
+    return t;
+  }
+
   renderCharacter() {
     const m = this.sheet; if (!m) return;
     $('stat-points').textContent = String(m.points);
@@ -652,9 +680,12 @@ export class Hud {
       const s = this.c.skills.get(skill), row = el('div', 'rank-row'), bar = el('div', 'objective-progress'), fill = el('span');
       const ms = this.c.systems.mastery, prev = (skill === 'basic' ? ms.basic_per_rank : ms.per_rank) * (rank - 1) * (rank - 1);
       fill.style.width = (next ? Math.min(100, (kills - prev) / Math.max(1, next - prev) * 100) : 100) + '%'; bar.append(fill);
-      const head = el('div', 'rank-head'); head.append(skillIcon(skill), el('strong', '', s?.name ?? 'Basic attack'), el('b', '', 'Rank ' + rank));
+      const awake = awakenStatus(this.c, m, skill), open = this.openRank === skill;
+      const head = el('button', 'rank-head'); head.setAttribute('aria-expanded', String(open)); head.title = 'Show what every rank gives';
+      head.append(skillIcon(skill), el('strong', '', s?.name ?? 'Basic attack'), el('b', awake.state === 'awakened' ? 'awakened' : '', awake.state === 'awakened' ? 'Awakened' : 'Rank ' + rank), el('span', 'rank-toggle', open ? '▾' : '▸'));
+      head.onclick = () => { this.openRank = open ? null : skill; this.renderCharacter(); };
       row.append(head, bar, el('small', 'muted', next ? kills.toLocaleString() + ' / ' + next.toLocaleString() + ' targets hit' : kills.toLocaleString() + ' targets hit · max rank'));
-      const perk = this.c.systems.mastery.perks[skill]; if (perk) row.append(el('small', rank >= this.c.systems.mastery.max_rank ? 'good' : 'muted', 'Rank 10: ' + perk));
+      if (open) row.append(this.rankTable(skill, rank, awake));
       ranks.append(row);
     }
   }

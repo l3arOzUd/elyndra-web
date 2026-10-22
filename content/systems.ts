@@ -210,11 +210,15 @@ export const MASTERY: SystemsDef["mastery"] = {
   level_window: 10,
   elite_weight: 5,
   boss_weight: 20,
-  more_damage_per_rank: 4,
-  sp_cost_rank: 4,
-  sp_cost_cut: 10,
-  area_rank: 7,
-  area_inc: 15,
+  /**
+   * Every rank changes the numbers (cumulative, rank 1 first): more damage %,
+   * increased area/reach %, SP cost cut %, cooldown cut %. Rank 5 adds the
+   * skill's upgrade, rank 10 its mastery perk, and Awakening its new form.
+   */
+  rank_table: [
+    [0, 0, 0, 0], [4, 2, 0, 0], [8, 4, 10, 0], [12, 6, 10, 5], [16, 8, 10, 5],
+    [20, 10, 15, 5], [24, 12, 15, 10], [28, 14, 20, 10], [32, 16, 20, 15], [40, 20, 20, 15],
+  ],
   basic_more_per_rank: 3,
   // Rank 5: basic attacks get increased attack speed (they hit one target).
   basic_speed_rank: 5,
@@ -235,6 +239,56 @@ export const MASTERY: SystemsDef["mastery"] = {
     coil_mine: "Blast radius +1 cell",
     gearstorm: "A second storm follows at once for 50% damage",
     pulse_beacon: "Heals 20% of Max HP instead of 10%",
+  },
+  /** Rank 5: each skill's upgrade. */
+  rank5: {
+    cleaving_arc: { text: "Leeches 2% of the damage it deals as HP", leech_pct: 2 },
+    iron_cyclone: { text: "Spins one more time (5 hits)", extra_hits: 1 },
+    anchor_shout: { text: "You gain 20% more Armour for 6s", self_buff: { kind: "defense", pct: 20, ms: 6000 } },
+    sundering_pulse: { text: "Radius +1 cell", extra_radius: 1 },
+    prism_field: { text: "Chills monsters in the field (30% slower)", chill: true },
+    aether_nova: { text: "30% faster cast", cast_cut: 30 },
+    gravity_coil: { text: "Pull radius +2 cells", extra_radius: 2 },
+    meridian_lance: { text: "Lance 3 cells longer", extra_length: 3 },
+    splitshot_array: { text: "One more volley (4 hits)", extra_hits: 1 },
+    dash_circuit: { text: "20% faster movement for 3s after the dash", self_buff: { kind: "move", pct: 20, ms: 3000 } },
+    coil_mine: { text: "The mine blasts once more (3 hits)", extra_hits: 1 },
+    gearstorm: { text: "Two more gear volleys (7 hits)", extra_hits: 2 },
+    pulse_beacon: { text: "Everyone reached attacks 10% faster for 8s", ally_buff: { kind: "attack_speed", pct: 10, ms: 8000 } },
+  },
+  /**
+   * Awakening, after rank 10: start the skill's trial at a Guild Registrar,
+   * complete its feat (counted only once the trial is started), then awaken
+   * with an Awakening Sigil and the fee. The skill takes its new form.
+   */
+  awaken_cost: 50000,
+  awaken: {
+    cleaving_arc: { name: "Cleaving Arc: Full Circle", text: "Cleaves all around you (360°)", angle: 360,
+      feat: { kind: "big_use", min: 25, times: 100, text: "Hit 25 or more monsters in one use, 100 times" } },
+    iron_cyclone: { name: "Iron Cyclone: Tempest", text: "Keeps spinning for 3s, following you", ticks: 6, tick_ms: 500,
+      feat: { kind: "big_use", min: 30, times: 100, text: "Hit 30 or more monsters in one use, 100 times" } },
+    anchor_shout: { name: "Anchor Shout: Undertow", text: "Drags every taunted monster to you; they take 10% more damage", pull_to_caster: true, vuln: true,
+      feat: { kind: "boss_use", times: 30, text: "Taunt a boss 30 times" } },
+    sundering_pulse: { name: "Sundering Pulse: Cataclysm", text: "40% larger and 30% more damage", radius_mult: 1.4, damage_more: 30,
+      feat: { kind: "big_use", min: 40, times: 50, text: "Hit 40 or more monsters in one use, 50 times" } },
+    prism_field: { name: "Prism Field: Cathedral", text: "The field lands 8 more times", ticks_add: 8,
+      feat: { kind: "big_use", min: 20, times: 150, text: "Hit 20 or more monsters in one use, 150 times" } },
+    aether_nova: { name: "Aether Nova: Starfall", text: "Three novas in a row", ticks: 3, tick_ms: 350,
+      feat: { kind: "big_use", min: 25, times: 100, text: "Hit 25 or more monsters in one use, 100 times" } },
+    gravity_coil: { name: "Gravity Coil: Singularity", text: "Pulls twice, 0.6s apart", ticks: 2, tick_ms: 600,
+      feat: { kind: "big_use", min: 20, times: 100, text: "Pull 20 or more monsters in one use, 100 times" } },
+    meridian_lance: { name: "Meridian Lance: Trident", text: "Three lances in a fan", fan: [-20, 20],
+      feat: { kind: "big_use", min: 15, times: 150, text: "Hit 15 or more monsters in one use, 150 times" } },
+    splitshot_array: { name: "Splitshot Array: Storm Ring", text: "Shoots all around you (360°)", angle: 360,
+      feat: { kind: "big_use", min: 20, times: 100, text: "Hit 20 or more monsters in one use, 100 times" } },
+    dash_circuit: { name: "Dash Circuit: Live Wire", text: "Monsters you dash through take 250% ATK", dash_damage: 2.5,
+      feat: { kind: "big_use", min: 15, times: 100, text: "Dash through 15 or more monsters, 100 times" } },
+    coil_mine: { name: "Coil Mine: Minefield", text: "Lays three mines in an arc", fan: [-35, 35],
+      feat: { kind: "big_use", min: 15, times: 150, text: "Hit 15 or more monsters in one use, 150 times" } },
+    gearstorm: { name: "Gearstorm: Maelstrom", text: "The storm rages for 3s, following you", ticks: 4, tick_ms: 700,
+      feat: { kind: "big_use", min: 30, times: 100, text: "Hit 30 or more monsters in one use, 100 times" } },
+    pulse_beacon: { name: "Pulse Beacon: Bastion", text: "Reaches 3 cells further; everyone reached gains 30% more Armour for 8s", extra_radius: 3, ally_buff: { kind: "defense", pct: 30, ms: 8000 },
+      feat: { kind: "heal_total", times: 200000, text: "Heal 200,000 HP with the beacon" } },
   },
 };
 
@@ -426,8 +480,16 @@ export function gearItems(): ItemDef[] {
       equip: { slot: "gloves", kind: "armour", item_level: 60, min_level: 58, ...pieceDefense("gloves", "armour", 60), req: kindRequirement("armour", 60), implicit: [["inc_crit", 45], ["crit_mult", 20]], unique: "ironclasp" } },
   ];
   for (const u of wave3) out.push({ ...u, id: id() });
+  // Fourth wave: Skill Awakening (CHARACTER_SYSTEMS.md §15). Bosses drop it.
+  out.push({
+    id: id(), name: "Awakening Sigil", category: "rare_material", rarity: "epic", sell_price: price(60, 30), stack_max: 99,
+    description: "A seal that wakes a skill's true form. Spent at a Guild Registrar once the skill's trial is complete.",
+  });
   return out;
 }
+
+/** Awakening Sigil from every boss, in basis points. */
+export const AWAKENING_SIGIL_BP = 400;
 
 /** Which boss drops which unique (rate in basis points). */
 export const UNIQUE_DROPS: { boss: string; item: string; rate_bp: number }[] = [

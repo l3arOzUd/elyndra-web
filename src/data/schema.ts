@@ -244,13 +244,32 @@ export interface TotemTypeDef {
 }
 
 /** public/data/systems.json: CHARACTER_SYSTEMS.md as numbers. */
+/** A skill's rank-5 upgrade or Awakened form (CHARACTER_SYSTEMS.md §15). */
+export interface SkillUpgrade {
+  text: string;
+  extra_hits?: number; extra_radius?: number; extra_length?: number; leech_pct?: number; cast_cut?: number; chill?: boolean;
+  self_buff?: TimedBuff; ally_buff?: TimedBuff;
+  /** Awakened forms. */
+  angle?: number; ticks?: number; ticks_add?: number; tick_ms?: number; radius_mult?: number; damage_more?: number;
+  /** extra copies aimed this many degrees off the aim */
+  fan?: number[]; dash_damage?: number; pull_to_caster?: boolean; vuln?: boolean;
+}
+export interface TimedBuff { kind: "defense" | "attack_speed" | "move"; pct: number; ms: number }
+/** An Awakening trial: big_use = `times` uses touching at least `min` monsters; boss_use = uses touching a boss; heal_total = HP healed. */
+export interface SkillFeat { kind: "big_use" | "boss_use" | "heal_total"; min?: number; times: number; text: string }
+
 export interface SystemsDef {
   rules: Record<string, number> & { caps: Record<string, [number, number]> };
   mastery: {
     max_rank: number; per_rank: number; basic_per_rank: number; use_cap: number; level_window: number; elite_weight: number; boss_weight: number;
-    more_damage_per_rank: number; sp_cost_rank: number; sp_cost_cut: number; area_rank: number; area_inc: number;
+    /** Per rank (index rank-1), cumulative: [more damage %, increased area %, SP cut %, cooldown cut %]. */
+    rank_table: [number, number, number, number][];
     basic_more_per_rank: number; basic_speed_rank: number; basic_speed_inc: number; basic_sp_rank: number; basic_sp_pct: number;
+    /** Rank 10 perk text per skill. */
     perks: Record<string, string>;
+    rank5: Record<string, SkillUpgrade>;
+    awaken_cost: number;
+    awaken: Record<string, SkillUpgrade & { name: string; feat: SkillFeat }>;
   };
   drops: Record<string, number | number[] | Record<string, number>> & {
     gear_rarity: Record<string, number>; charm_rarity: Record<string, number>; totem_rarity: Record<string, number>;

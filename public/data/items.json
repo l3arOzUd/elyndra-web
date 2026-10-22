@@ -10238,5 +10238,14 @@
    ],
    "unique": "ironclasp"
   }
+ },
+ {
+  "id": "itm_1410",
+  "name": "Awakening Sigil",
+  "category": "rare_material",
+  "rarity": "epic",
+  "sell_price": 1680,
+  "stack_max": 99,
+  "description": "A seal that wakes a skill's true form. Spent at a Guild Registrar once the skill's trial is complete."
  }
 ]

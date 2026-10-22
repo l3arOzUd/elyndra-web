@@ -4,7 +4,8 @@ import type { MsgOf } from '../net/protocol';
 import type { Hud } from './hud';
 import { icon, itemIcon } from './icons';
 import { REFINE, craftable, gearTitle, imbueCost, isWorn, nextRarity, refinable, refineCost, reforgeCost } from './gear';
-import { JOB_INFO } from './hud';
+import { JOB_INFO, JOB_SKILLS } from './hud';
+import { awakenStatus } from './ranks';
 
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: string): HTMLElementTagNameMap[K] {
   const e = document.createElement(tag); e.className = cls; if (text !== undefined) e.textContent = text; return e;
@@ -128,6 +129,25 @@ export class NpcDialog {
       for (const name of Object.keys(JOB_INFO)) {
         const card = row(name[0].toUpperCase() + name.slice(1) + (name === job ? ' (current)' : ''), JOB_INFO[name], icon(name === 'vanguard' ? 'sword' : name === 'strider' ? 'bow' : name === 'arcanist' ? 'staff' : 'gear', 'service-art'));
         card.append(button('Become ' + name, 'change_job', name, undefined, name === job || this.hud.aurel < cost)); j.append(card);
+      }
+      // Skill Awakening (CHARACTER_SYSTEMS.md §15): start a rank-10 skill's
+      // trial here, then awaken it with a Sigil and the fee.
+      const a = section('Awakening'), ms = this.c.systems.mastery;
+      const sigil = [...this.c.items.values()].find((it) => it.name === 'Awakening Sigil');
+      const sigils = sigil ? this.hud.inventory[sigil.id] ?? 0 : 0;
+      a.append(el('p', 'muted small', 'A skill at rank 10 can take its Awakened form: start its trial, complete the feat, then bring an Awakening Sigil (bosses drop it) and ' + money(ms.awaken_cost) + '. Sigils in your bag: ' + sigils + '.'));
+      for (const skill of JOB_SKILLS[job] ?? []) {
+        const s = this.c.skills.get(skill), aw = ms.awaken[skill];
+        if (!s || !aw) continue;
+        const st = awakenStatus(this.c, this.hud.sheet, skill), rank = this.hud.sheet?.mastery[skill]?.[0] ?? 1;
+        const line = st.state === 'awakened' ? 'Awakened: ' + aw.text
+          : st.state === 'locked' ? 'Rank ' + rank + ' / ' + ms.max_rank + ' · ' + aw.text
+          : 'Trial: ' + aw.feat.text + (st.state === 'trial' || st.state === 'complete' ? ' · ' + st.progress.toLocaleString() + ' / ' + st.need.toLocaleString() : '');
+        const card = row(aw.name, line, icon('crystal', 'service-art'));
+        if (st.state === 'ready') card.append(button('Start trial', 'trial', skill));
+        else if (st.state === 'complete') card.append(button('Awaken', 'awaken', skill, undefined, sigils < 1 || this.hud.aurel < ms.awaken_cost));
+        else card.append(button(st.state === 'awakened' ? 'Awakened' : st.state === 'trial' ? 'In trial' : 'Needs rank 10', 'noop', skill, undefined, true));
+        a.append(card);
       }
     }
     if (m.role === 'craftsman') {

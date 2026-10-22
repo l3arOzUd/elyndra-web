@@ -15,7 +15,7 @@ import { bakeLayout } from "./layout";
 import {
   AGGRO_RADIUS, BOSS_DROP, DROP, ELITE_DROP_MULT, LEASH_RADIUS, materialPrice, monsterStats, playerAt, rarePrice, regionPriceMult, tierLevelFor, uncommonPrice,
 } from "./model";
-import { UNIQUE_DROPS, gearItems, systems } from "./systems";
+import { AWAKENING_SIGIL_BP, UNIQUE_DROPS, gearItems, systems } from "./systems";
 import { REGIONS } from "./regions/index";
 import { skills } from "./skills";
 import type { RegionDesign } from "./types";
@@ -161,6 +161,9 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
     if (!boss || !it) throw new Error(`unique drop ${u.item} from ${u.boss}: unknown boss or item`);
     boss.drops.push({ item_id: it.id, rate_bp: u.rate_bp, min_qty: 1, max_qty: 1 });
   }
+  const sigil = byName.get("Awakening Sigil");
+  if (!sigil) throw new Error("Awakening Sigil missing from gearItems()");
+  for (const m of monsters) if (m.archetype === "boss") m.drops.push({ item_id: sigil.id, rate_bp: AWAKENING_SIGIL_BP, min_qty: 1, max_qty: 1 });
   const merchants = new Set(npcs.filter((n) => n.role === "merchant").map((n) => n.id));
   for (const r of regions) {
     const tier = tierLevelFor(r.region.level_range[0]), mult = regionPriceMult(r.region.level_range[0]);
@@ -174,6 +177,12 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
   for (const job of ["vanguard", "strider", "arcanist", "machinist"]) {
     const w = gear.find((g) => g.equip?.slot === "weapon" && g.equip.job === job && g.equip.item_level === 1);
     if (w) sys.starter_weapons[job] = w.id;
+  }
+  // Painted icons v3 (scripts/import-item-icons.py): only items whose sheet has been generated and imported.
+  const iconMap = join(dirname(fileURLToPath(import.meta.url)), "..", "art-source", "items-v3", "icon-map.json");
+  if (existsSync(iconMap)) {
+    const icons = JSON.parse(readFileSync(iconMap, "utf8")) as Record<string, string>;
+    for (const it of items) if (icons[it.id]) it.icon = icons[it.id];
   }
   items.sort((a, b) => a.id.localeCompare(b.id));
   monsters.sort((a, b) => a.id.localeCompare(b.id));

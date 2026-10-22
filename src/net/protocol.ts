@@ -94,6 +94,9 @@ export interface SheetMsg {
   free_reset: boolean;
   d: Record<string, number>;
   mastery: Record<string, [number, number, number]>;
+  /** Awakening trials started -> feat progress; skills already Awakened. */
+  trials?: Record<string, number>;
+  awakened?: string[];
   inactive?: number[];
 }
 

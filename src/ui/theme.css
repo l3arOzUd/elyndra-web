@@ -196,7 +196,12 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .buff { position:relative; width:30px; height:30px; border:1px solid #b29460; border-radius:3px; overflow:hidden; box-shadow:0 0 5px #ffcf5a66; }.buff.echo { border-color:#8fb7e8; box-shadow:none; }
 .buff .painted-icon { width:100%; height:100%; margin:0; border:0; }.buff small { position:absolute; right:1px; bottom:0; font:bold 10px/1.2 var(--ui-font-body); color:#fff; text-shadow:1px 1px #000,-1px -1px #000; }
 .stat-alloc { grid-template-columns:34px 1fr auto auto auto; }.stat-alloc > .painted-icon { width:34px; height:34px; border:1px solid #9f7f48; border-radius:3px; }
-.rank-head { align-items:center; gap:6px; }.rank-head > .painted-icon { width:22px; height:22px; border-radius:2px; }.rank-head strong { flex:1; }
+.rank-head { align-items:center; gap:6px; width:100%; background:none; border:0; padding:0; cursor:pointer; font:inherit; text-align:left; }.rank-head b.awakened { color:#8a4fc0; }.rank-toggle { width:12px; color:#8a6a40; font-size:11px; }
+.rank-table { list-style:none; margin:6px 0 2px; padding:6px 8px; display:grid; gap:3px; border:1px solid #aa8c5b55; border-radius:3px; background:#f6ead055; }
+.rank-line { display:grid; grid-template-columns:28px 1fr; gap:6px; font-size:11px; color:#8c7a62; }.rank-line b { color:#a08868; }
+.rank-line.reached { color:#3e2a16; }.rank-line.reached b { color:#7a5420; }.rank-line.next { color:#5a4630; font-weight:600; }
+.rank-line.special span { font-weight:600; }.rank-line.awaken { margin-top:4px; padding-top:5px; border-top:1px dashed #aa8c5b88; }.rank-line.awaken strong { color:#7a3fb0; }.rank-line.awaken small { display:block; }
+.rank-head.rank-head > .painted-icon { width:22px; height:22px; border-radius:2px; }.rank-head strong { flex:1; }
 .detail-action:disabled,.stat-add:disabled { opacity:.45; cursor:not-allowed; filter:grayscale(.6); }
 .job-pick { display:grid; grid-template-columns:1fr 1fr; gap:4px 10px; margin:10px 0 4px; padding:8px 10px; border:1px solid #b89b6788; border-radius:3px; text-align:left; }
 .job-pick legend { font-size:11px; color:#7a5d33; padding:0 4px; }.job-pick label { display:flex; align-items:center; gap:6px; font-size:13px; color:#4f3a20; margin:0; }
