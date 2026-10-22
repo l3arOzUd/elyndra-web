@@ -107,7 +107,7 @@ async function main() {
   const guild = baseNpc('guild_registrar'); guild.lines = ['Lumeris needs people with a little courage. I have a few tasks that might suit you.']; guild.offer = [quests[0]]; guild.ready = [quests[1].id];
   const services: Record<string, MsgOf<'npc'>> = { shop:merchant, craft, travel, healer, guild };
   const toolbar = document.createElement('nav'); toolbar.className = 'preview-toolbar'; toolbar.setAttribute('aria-label', 'Interface preview');
-  toolbar.innerHTML = '<div><strong>INTERFACE ATELIER</strong><small>Sample data · no server changes</small></div><select id="preview-mode" aria-label="Preview window"><option value="hud">HUD / In-game</option><option value="bag">Satchel</option><option value="equipment">Equipment</option><option value="character">Character</option><option value="gear">Gear detail</option><option value="journal">Quest journal</option><option value="shop">Shop / Buy & sell</option><option value="craft">Crafting</option><option value="travel">Travel</option><option value="healer">Healer</option><option value="guild">NPC quests</option><option value="menu">Camp menu</option><option value="login">Login</option><option value="disconnected">Disconnected</option><option value="inspector">Animation studio</option><option value="debug">Diagnostics</option></select><a href="/">Play ↗</a>';
+  toolbar.innerHTML = '<div><strong>INTERFACE ATELIER</strong><small>Sample data · no server changes</small></div><select id="preview-mode" aria-label="Preview window"><option value="hud">HUD / In-game</option><option value="bag">Satchel</option><option value="equipment">Equipment</option><option value="character">Status</option><option value="skills">Skills</option><option value="gear">Gear detail</option><option value="journal">Quest journal</option><option value="shop">Shop / Buy & sell</option><option value="craft">Crafting</option><option value="travel">Travel</option><option value="healer">Healer</option><option value="guild">NPC quests</option><option value="menu">Camp menu</option><option value="login">Login</option><option value="disconnected">Disconnected</option><option value="inspector">Animation studio</option><option value="debug">Diagnostics</option></select><a href="/">Play ↗</a>';
   $('view').append(toolbar);
   const open = (mode: string) => {
     ($('preview-mode') as HTMLSelectElement).value = mode;
@@ -117,6 +117,7 @@ async function main() {
     if (mode === 'bag') hud.toggle('inv-win', true);
     else if (mode === 'equipment') { hud.toggle('equip-win', true); hud.toggle('inv-win', true); }
     else if (mode === 'character') hud.toggle('char-win', true);
+    else if (mode === 'skills') hud.toggle('skill-win', true);
     else if (mode === 'gear') {
       hud.toggle('inv-win', true);
       (document.querySelector('#inventory .item-cell.rarity-rare') as HTMLButtonElement | null)?.click();
@@ -139,6 +140,7 @@ async function main() {
     if (ev.code === 'KeyE') hud.toggle('equip-win');
     if (ev.code === 'KeyQ') hud.toggle('journal-win');
     if (ev.code === 'KeyC') hud.toggle('char-win');
+    if (ev.code === 'KeyK') hud.toggle('skill-win');
   });
 
   const map = [...c.maps.values()].find(m => m.name === 'Dawnmeadow') ?? [...c.maps.values()].find(m => m.type === 'field')!;

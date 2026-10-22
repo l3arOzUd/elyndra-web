@@ -3,7 +3,7 @@ export function bindWindows() {
   const root = document.getElementById('view')!;
   const preview = location.pathname.includes('ui-preview');
   const key = 'elyndra.ui.layout.v2' + (preview ? '.preview' : '');
-  const selectors = ['#inv-win', '#equip-win', '#journal-win', '#npc-win', '#char-win', '#menu-win', '#inspector', '.status-win', '.map-win', '.quest-win', '.log-win', '.action-dock', '.menu-dock'];
+  const selectors = ['#inv-win', '#equip-win', '#journal-win', '#npc-win', '#char-win', '#skill-win', '#menu-win', '#inspector', '.status-win', '.map-win', '.quest-win', '.log-win', '.action-dock', '.menu-dock'];
   const panels = selectors.map(s => document.querySelector<HTMLElement>(s)!);
   let positions: Record<string, [number, number]> = {};
   try { const saved = JSON.parse(localStorage.getItem(key) ?? '{}'); for (const [id, xy] of Object.entries(saved)) if (Array.isArray(xy) && xy.length === 2 && xy.every(Number.isFinite)) positions[id] = xy as [number, number]; } catch { /* Defaults work without storage. */ }

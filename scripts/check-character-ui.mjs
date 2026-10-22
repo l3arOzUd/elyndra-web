@@ -31,11 +31,19 @@ for (const [w, h] of [[1440, 900], [1280, 720], [390, 844]]) {
 
   await page.evaluate(() => window.uiPreview.open('character'));
   expect(await page.locator('#stat-list .stat-alloc').count() === 6, `${w}: six stats`);
-  expect(await page.locator('#rank-list .rank-row').count() >= 4, `${w}: skill ranks`);
   expect(await page.locator('#derived-list .derived-row').count() >= 20, `${w}: derived numbers`);
   const win = await page.locator('#char-win').boundingBox();
   expect(win && win.x >= 0 && win.x + win.width <= w + 1, `${w}: character window fits the screen`);
+  expect(await page.locator('#char-win #rank-list').count() === 0, `${w}: the Status window has no skill ranks`);
   await page.screenshot({ path: `${out}/character-${w}.png` });
+
+  await page.evaluate(() => window.uiPreview.open('skills'));
+  expect(await page.locator('#skill-win #rank-list .rank-row').count() >= 4, `${w}: Skills window lists skill ranks`);
+  await page.click('#skill-win .rank-head >> nth=1');
+  expect(await page.locator('#skill-win .rank-table .rank-line').count() >= 10, `${w}: a rank unfolds its table`);
+  const sw = await page.locator('#skill-win').boundingBox();
+  expect(sw && sw.x >= 0 && sw.x + sw.width <= w + 1, `${w}: Skills window fits the screen`);
+  await page.screenshot({ path: `${out}/skills-${w}.png` });
 
   await page.evaluate(() => window.uiPreview.open('gear'));
   expect(await page.locator('#item-detail .affix-list .affix').count() >= 1, `${w}: gear detail lists affixes`);

@@ -631,6 +631,7 @@ export class Game {
       else if (n >= 5 && n < 5 + ITEM_KEYS.length) this.conn.send({ t: "use", item: ITEM_KEYS[n - 5] });
       else if (digit && TOTEM_KEYS.includes(digit[1] as typeof TOTEM_KEYS[number])) this.conn.send({ t: "totem", slot: "charm" + (TOTEM_KEYS.indexOf(digit[1] as typeof TOTEM_KEYS[number]) + 1) });
       else if (ev.code === "KeyC") this.hud.toggle("char-win");
+      else if (ev.code === "KeyK") this.hud.toggle("skill-win");
       else if (ev.code === "KeyI") this.hud.toggle("inv-win");
       else if (ev.code === "KeyE") this.hud.toggle("equip-win");
       else if (ev.code === "KeyQ") this.hud.toggle("journal-win");

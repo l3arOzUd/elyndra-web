@@ -35,7 +35,7 @@ const gearKey = (uid: number) => 'g:' + uid;
 /** Line art for an empty equipment slot. */
 const SLOT_ICON: Record<string, string> = { weapon: 'sword', head: 'shield', armor: 'armor', gloves: 'gloves', boots: 'boots', accessory: 'crystal', charm1: 'star', charm2: 'star', charm3: 'star' };
 /** Game windows: opening one closes the others, except Inventory and Equipment, which open side by side. */
-const WINDOWS = ['inv-win', 'equip-win', 'journal-win', 'menu-win', 'char-win'];
+const WINDOWS = ['inv-win', 'equip-win', 'journal-win', 'menu-win', 'char-win', 'skill-win'];
 const PAIRED = ['inv-win', 'equip-win'];
 
 /** Shared live-game and preview UI. All mutations go through server callbacks. */
@@ -138,6 +138,7 @@ export class Hud {
     $('toggle-inv').onclick = () => this.toggle('inv-win');
     $('toggle-equip').onclick = $('open-equip').onclick = () => this.toggle('equip-win');
     $('toggle-char').onclick = () => this.toggle('char-win');
+    $('toggle-skills').onclick = () => this.toggle('skill-win');
     $('reset-stats').onclick = () => this.onResetStats();
     $('clear-target').onclick = () => this.setTarget(null);
     $('toggle-journal').onclick = $('open-journal').onclick = () => this.toggle('journal-win');
@@ -233,6 +234,7 @@ export class Hud {
     }
     w.hidden = !open;
     if (open && id === 'equip-win') this.renderEquipment();
+    if (open && (id === 'char-win' || id === 'skill-win')) this.renderCharacter();
   }
   setMap(name: string, sub: string) { $('map-name').textContent = name; $('map-region').textContent = sub; $('map-heading').textContent = sub.split('·')[0].trim().toUpperCase(); }
   setStats(s: MsgOf<'stats'>) {
