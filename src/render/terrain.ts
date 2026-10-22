@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import type { BlockerKind, MapLayout, RegionDef, Shape, WarpDef } from "../data/schema";
 import { decodeWalk } from "../data/schema";
-import { buildPaintedProps, decorProps, PAINTED_KINDS } from "./paintedProps";
+import { buildPaintedProps, decorProps, HEAPED, PAINTED_KINDS } from "./paintedProps";
 import { animatedProp, propGeometry } from "./props";
 import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
 
@@ -185,8 +185,8 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
       m.position.y = 0.04;
       surfaces.push({ kind: b.kind, geometry: m.geometry, material: m.material });
       group.add(m);
-    } else if (solid && b.kind !== "rock" && b.kind !== "cliff") {
-      // Rock and cliff blockers are heaps of painted boulders (paintedProps.ts).
+    } else if (solid && !HEAPED.has(b.kind)) {
+      // Rocks, cliffs, ruin walls and machines are heaps of painted pieces (paintedProps.ts).
       const geo = track(new THREE.ExtrudeGeometry(toShape(b.shape), { depth: solid.height, bevelEnabled: false, curveSegments: 16 }).rotateX(-Math.PI / 2));
       const m = new THREE.Mesh(geo, track(new THREE.MeshLambertMaterial({ color: solid.color, flatShading: true, transparent: b.kind === "crystal", opacity: b.kind === "crystal" ? 0.8 : 1 })));
       surfaces.push({ kind: b.kind, geometry: geo, material: m.material });

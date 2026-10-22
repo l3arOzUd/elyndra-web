@@ -13,7 +13,7 @@ type Blocker = MapLayout["blockers"][number];
 // shaded footprint (the walk grid still decides where you can go).
 
 /** Kinds drawn as painted cards; the rest stay models (props.ts). */
-export const PAINTED_KINDS = new Set<PropKind>(["tree", "pine", "bush", "rock", "boulder", "dead_tree", "palm", "coral", "ice_spike", "crystal", "giant_tree"]);
+export const PAINTED_KINDS = new Set<PropKind>(["tree", "pine", "bush", "rock", "boulder", "dead_tree", "palm", "coral", "ice_spike", "crystal", "giant_tree", "crate", "brass_pipe", "gear_ruin", "rune_stone"]);
 
 type Look = "green" | "snow" | "dry" | "dark";
 interface Card { kind: string; w: number; h: number; px: number; py: number }
@@ -23,6 +23,9 @@ const SIZE: Record<string, [number, number]> = {
   palm: [3.2, 4], coral: [1.3, 1.3], ice_spike: [1.2, 2.2], crystal: [1, 1.6], giant_tree: [7, 8],
   // Ground detail (decorProps): never blocks, never in the map data.
   tuft: [0.8, 0.6], flowers: [0.9, 0.62], pebbles: [0.8, 0.45], dry_tuft: [0.8, 0.6], snow_tuft: [0.8, 0.55],
+  crate: [1, 1], brass_pipe: [2.6, 1.1], gear_ruin: [2, 1.8], rune_stone: [0.9, 1.9],
+  // Heaped over blockers: broken ruin blocks, brass scrap.
+  ruin_block: [1.6, 1.4], scrap: [1.8, 1.4],
 };
 const VARIANTS = 3;
 const PPC = 72; // atlas pixels per cell
@@ -218,7 +221,7 @@ function paintCard(g: CanvasRenderingContext2D, kind: string, W: number, H: numb
       break;
     }
     case "tuft": case "flowers": case "dry_tuft": case "snow_tuft": {
-      const blades = kind === "snow_tuft" ? 6 : 11;
+      const blades = kind === "snow_tuft" ? 6 : 16;
       const hue = kind === "dry_tuft" ? 44 : kind === "snow_tuft" ? 34 : 92, sat = kind === "dry_tuft" ? 46 : kind === "snow_tuft" ? 22 : 48;
       if (kind === "snow_tuft") {
         g.fillStyle = hsl(205, 35, 82); g.beginPath(); g.ellipse(cx, base - 4, W * 0.36, H * 0.16, 0, 0, Math.PI * 2); g.fill();
@@ -226,9 +229,9 @@ function paintCard(g: CanvasRenderingContext2D, kind: string, W: number, H: numb
       }
       for (let pass = 0; pass < 2; pass++) for (let i = 0; i < blades; i++) {
         const r2 = rng(i * 31 + 7);
-        const x0 = cx + (r2() - 0.5) * W * 0.5, len = H * (0.45 + r2() * 0.45), bend = (r2() - 0.5) * W * 0.5;
-        g.strokeStyle = pass === 0 ? hsl(hue, sat, 12, 0.9) : hsl(hue + (r2() - 0.5) * 16, sat, (kind === "dry_tuft" ? 52 : kind === "snow_tuft" ? 38 : 34) + r2() * 16);
-        g.lineWidth = pass === 0 ? 5 : 2.6; g.lineCap = "round";
+        const x0 = cx + (r2() - 0.5) * W * 0.36, len = H * (0.35 + r2() * 0.4), bend = (x0 - cx) * 1.1 + (r2() - 0.5) * W * 0.2;
+        g.strokeStyle = pass === 0 ? hsl(hue, sat, 10, 0.85) : hsl(hue + (r2() - 0.5) * 16, sat * 0.9, (kind === "dry_tuft" ? 46 : kind === "snow_tuft" ? 34 : 22) + r2() * 14);
+        g.lineWidth = pass === 0 ? 4.6 : 2.4; g.lineCap = "round";
         g.beginPath(); g.moveTo(x0, base); g.quadraticCurveTo(x0 + bend * 0.3, base - len * 0.6, x0 + bend, base - len); g.stroke();
       }
       if (kind === "flowers") for (let i = 0; i < 5; i++) {
@@ -242,7 +245,68 @@ function paintCard(g: CanvasRenderingContext2D, kind: string, W: number, H: numb
     }
     case "pebbles": {
       const hue = look === "dark" ? 20 : dry ? 34 : 38, sat = look === "dark" ? 8 : dry ? 24 : 12, light = look === "dark" ? 34 : dry ? 60 : 56;
-      for (let i = 0; i < 3; i++) stone(g, cx + (i - 1) * W * 0.26 + (rand() - 0.5) * 8, base - H * (0.24 + rand() * 0.1), W * (0.11 + rand() * 0.06), H * (0.2 + rand() * 0.08), rand, hue, sat, light, false, snow);
+      const n = 1 + Math.floor(rand() * 3);
+      for (let i = 0; i < n; i++) stone(g, cx + (rand() - 0.5) * W * 0.5, base - H * (0.2 + rand() * 0.25), W * (0.1 + rand() * 0.1), H * (0.18 + rand() * 0.12), rand, hue, sat, light, false, snow);
+      break;
+    }
+    case "crate": {
+      const s = W * 0.7, x = cx - s / 2, y = base - s * 0.9;
+      g.fillStyle = hsl(25, 40, 12); g.fillRect(x - 3, y - 3, s + 6, s * 0.9 + 6);
+      const gr = g.createLinearGradient(x, y, x + s, y + s);
+      gr.addColorStop(0, hsl(32, 48, 52)); gr.addColorStop(1, hsl(26, 44, 30));
+      g.fillStyle = gr; g.fillRect(x, y, s, s * 0.9);
+      g.fillStyle = hsl(34, 50, 62); g.fillRect(x, y, s, s * 0.22);
+      g.strokeStyle = hsl(25, 40, 18); g.lineWidth = 3;
+      for (let i = 1; i < 3; i++) { g.beginPath(); g.moveTo(x, y + s * 0.22 + (i * s * 0.68) / 3); g.lineTo(x + s, y + s * 0.22 + (i * s * 0.68) / 3); g.stroke(); }
+      g.beginPath(); g.moveTo(x + 4, y + s * 0.26); g.lineTo(x + s - 4, y + s * 0.86); g.stroke();
+      g.fillStyle = hsl(42, 70, 58); for (const [ox, oy] of [[0, 0.22], [1, 0.22], [0, 0.9], [1, 0.9]]) { g.beginPath(); g.arc(x + ox * s, y + oy * s, 4, 0, Math.PI * 2); g.fill(); }
+      break;
+    }
+    case "brass_pipe": case "scrap": {
+      const pipe = (x0: number, y0: number, x1: number, y1: number, r: number) => {
+        g.lineCap = "round";
+        g.strokeStyle = hsl(30, 50, 14); g.lineWidth = r * 2 + 6; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke();
+        g.strokeStyle = hsl(38, 62, 40); g.lineWidth = r * 2; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke();
+        g.strokeStyle = hsl(44, 80, 70); g.lineWidth = r * 0.6; g.beginPath(); g.moveTo(x0, y0 - r * 0.45); g.lineTo(x1, y1 - r * 0.45); g.stroke();
+        for (let t = 0.25; t < 1; t += 0.35) { g.strokeStyle = hsl(18, 60, 34); g.lineWidth = 5; g.beginPath(); const px = x0 + (x1 - x0) * t, py = y0 + (y1 - y0) * t; g.moveTo(px, py - r - 2); g.lineTo(px, py + r + 2); g.stroke(); }
+      };
+      if (kind === "brass_pipe") pipe(W * 0.1, base - H * 0.32, W * 0.9, base - H * 0.42, H * 0.18);
+      else { pipe(W * 0.15, base - H * 0.2, W * 0.8, base - H * 0.5, H * 0.1); pipe(W * 0.3, base - H * 0.55, W * 0.7, base - H * 0.15, H * 0.08); }
+      if (kind === "scrap" || rand() < 0.5) { const gx = cx + (rand() - 0.5) * W * 0.3, gy = base - H * 0.35; g.fillStyle = hsl(30, 40, 16); g.beginPath(); g.arc(gx, gy, H * 0.24, 0, Math.PI * 2); g.fill(); g.fillStyle = hsl(36, 55, 44); g.beginPath(); g.arc(gx, gy, H * 0.2, 0, Math.PI * 2); g.fill(); g.fillStyle = hsl(30, 40, 22); g.beginPath(); g.arc(gx, gy, H * 0.07, 0, Math.PI * 2); g.fill(); }
+      break;
+    }
+    case "gear_ruin": {
+      const gx = cx, gy = base - H * 0.5, R = W * 0.36;
+      const teeth = 12;
+      const gear = (r: number) => { g.beginPath(); for (let i = 0; i <= teeth * 2; i++) { const a = (i / (teeth * 2)) * Math.PI * 2, rr = i % 2 ? r : r * 0.86; g.lineTo(gx + Math.cos(a) * rr, gy + Math.sin(a) * rr * 0.92); } g.closePath(); };
+      g.fillStyle = hsl(28, 40, 12); gear(R + 4); g.fill();
+      const gr = g.createLinearGradient(gx - R, gy - R, gx + R, gy + R);
+      gr.addColorStop(0, hsl(40, 60, 58)); gr.addColorStop(1, hsl(30, 50, 26));
+      g.fillStyle = gr; gear(R); g.fill();
+      g.fillStyle = hsl(28, 36, 16); g.beginPath(); g.arc(gx, gy, R * 0.42, 0, Math.PI * 2); g.fill();
+      g.fillStyle = hsl(95, 35, 32, 0.8); for (let i = 0; i < 9; i++) { g.beginPath(); g.ellipse(gx + (rand() - 0.5) * R * 1.6, gy + R * (0.2 + rand() * 0.6), 7, 4, 0, 0, Math.PI * 2); g.fill(); }
+      stone(g, cx + W * 0.28, base - H * 0.12, W * 0.18, H * 0.13, rand, 38, 12, 50, true, snow);
+      break;
+    }
+    case "rune_stone": case "ruin_block": {
+      const rune = kind === "rune_stone";
+      const w = rune ? W * 0.5 : W * (0.55 + rand() * 0.2), h = rune ? H * 0.82 : H * (0.45 + rand() * 0.3), x = cx - w / 2, y = base - h;
+      const slab = () => { g.beginPath(); g.moveTo(x, base); g.lineTo(x + w * 0.04, y + h * 0.12); g.lineTo(x + w * 0.3, y + (rune ? 0 : h * (rand() * 0.25))); g.lineTo(x + w * 0.8, y + h * 0.04); g.lineTo(x + w, y + h * 0.2); g.lineTo(x + w * 0.97, base); g.closePath(); };
+      g.save(); g.lineWidth = 6; g.lineJoin = "round"; g.strokeStyle = hsl(36, 20, 16); slab(); g.stroke(); g.restore();
+      const gr = g.createLinearGradient(x, y, x + w, base);
+      gr.addColorStop(0, hsl(42, 28, 82)); gr.addColorStop(0.6, hsl(40, 24, 64)); gr.addColorStop(1, hsl(36, 20, 42));
+      g.fillStyle = gr; slab(); g.fill();
+      g.save(); slab(); g.clip();
+      g.strokeStyle = hsl(36, 20, 38, 0.7); g.lineWidth = 2.5;
+      if (!rune) for (let r = 1; r < 4; r++) { const yy = y + (h * r) / 4; g.beginPath(); g.moveTo(x, yy); g.lineTo(x + w, yy); g.stroke(); for (let c = 0; c < 3; c++) { const xx = x + ((c + (r % 2) * 0.5) * w) / 2.5; g.beginPath(); g.moveTo(xx, yy); g.lineTo(xx, yy - h / 4); g.stroke(); } }
+      g.fillStyle = hsl(95, 35, 34, 0.85); for (let i = 0; i < 10; i++) { g.beginPath(); g.ellipse(x + rand() * w, y + rand() * h * 0.4, 7, 4, 0, 0, Math.PI * 2); g.fill(); }
+      if (snow) { g.fillStyle = "rgba(240,246,252,.9)"; g.beginPath(); g.ellipse(cx, y + h * 0.08, w * 0.5, h * 0.08, 0, 0, Math.PI * 2); g.fill(); }
+      g.restore();
+      if (rune) {
+        g.strokeStyle = "rgba(110,240,250,.95)"; g.lineWidth = 4; g.shadowColor = "rgba(90,230,240,.9)"; g.shadowBlur = 10;
+        g.beginPath(); g.moveTo(cx, y + h * 0.2); g.lineTo(cx, y + h * 0.7); g.moveTo(cx - w * 0.2, y + h * 0.35); g.lineTo(cx + w * 0.2, y + h * 0.5); g.moveTo(cx + w * 0.18, y + h * 0.3); g.lineTo(cx - w * 0.15, y + h * 0.58); g.stroke();
+        g.shadowBlur = 0;
+      }
       break;
     }
     case "ice_spike": case "crystal": {
@@ -343,9 +407,13 @@ export function decorProps(l: MapLayout, walkable: (x: number, y: number) => boo
   return out;
 }
 
-/** Boulders heaped over a rock or cliff blocker's footprint, deterministic. */
+/** Blockers drawn as heaps of painted pieces instead of extruded shapes. */
+export const HEAPED = new Set<Blocker["kind"]>(["rock", "cliff", "ruin_wall", "machine"]);
+
+/** Pieces heaped over a blocker's footprint (boulders, ruin blocks or brass scrap), deterministic. */
 function heapOf(b: Blocker, contains: (x: number, y: number) => boolean, bounds: [number, number, number, number]): Prop[] {
   const cliff = b.kind === "cliff";
+  const piece = b.kind === "ruin_wall" ? "ruin_block" : b.kind === "machine" ? "scrap" : null;
   const step = cliff ? 1.5 : 1.7;
   const out: Prop[] = [];
   const [bx, by, bw, bh] = bounds;
@@ -356,7 +424,7 @@ function heapOf(b: Blocker, contains: (x: number, y: number) => boolean, bounds:
     const j = h - Math.floor(h);
     const px = x + (j - 0.5) * step * 0.7, py = y + ((h * 7) % 1 - 0.5) * step * 0.7;
     if (!contains(Math.floor(px), Math.floor(py))) continue;
-    out.push({ kind: j < 0.3 && !cliff ? "rock" : "boulder", x: px - 0.5, y: py - 0.5, block: 0, scale: (cliff ? 1.1 : 0.75) + j * (cliff ? 0.9 : 0.6), rot: i });
+    out.push({ kind: (piece ?? (j < 0.3 && !cliff ? "rock" : "boulder")) as PropKind, x: px - 0.5, y: py - 0.5, block: 0, scale: (cliff ? 1.1 : 0.75) + j * (cliff ? 0.9 : 0.6), rot: i });
   }
   return out;
 }
@@ -370,7 +438,7 @@ export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T ex
   blockerCells: (b: Blocker) => { contains: (x: number, y: number) => boolean; bounds: [number, number, number, number] }, decor: Prop[] = []): Prop[] {
   const atlas = atlasFor(lookOf(l));
   const props = [...l.props.filter((p) => PAINTED_KINDS.has(p.kind)), ...decor];
-  for (const b of l.blockers) if (b.kind === "rock" || b.kind === "cliff") { const c = blockerCells(b); props.push(...heapOf(b, c.contains, c.bounds)); }
+  for (const b of l.blockers) if (HEAPED.has(b.kind)) { const c = blockerCells(b); props.push(...heapOf(b, c.contains, c.bounds)); }
   // One instanced card mesh per (kind, variant): a unit card, feet at the origin, leaning back to face the camera.
   const groups = new Map<Card, Prop[]>();
   for (const p of props) {

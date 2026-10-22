@@ -25,7 +25,7 @@ const GROUND_PAINT: Record<Ground, Paint> = {
   grass: paint("grass"),
   moss: paint("moss", [0.96, 1, 0.94], 0, 0, 7),
   sand: paint("dirt_path", [2.2, 1.8, 1.07], 0.5, 0.35, 11),
-  snow: paint("dirt_path", [0.95, 1, 1.1], 0.95, 1.25, 12),
+  snow: paint("dirt_path", [0.95, 1, 1.1], 0.95, 1.5, 12),
   ash: paint("cave_floor", [1.35, 1.22, 1.15], 0.5, 0.16, 8),
   stone: paint("cobblestone", [1, 1, 1], 0, 0, 5),
   shore: paint("grass_dry", [2, 1.8, 1.3], 0.6, 0.3, 9),
