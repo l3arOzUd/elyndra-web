@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import type { BlockerKind, MapLayout, RegionDef, Shape, WarpDef } from "../data/schema";
 import { decodeWalk } from "../data/schema";
+import { buildPaintedProps, PAINTED_KINDS } from "./paintedProps";
 import { animatedProp, propGeometry } from "./props";
 import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
 
@@ -24,6 +25,15 @@ function inShape(s: Shape, x: number, y: number): boolean {
     if (yi > py !== yj > py && px < ((xj - xi) * (py - yi)) / (yj - yi) + xi) inside = !inside;
   }
   return inside;
+}
+
+/** A shape's bounding rect in cells. */
+function shapeBounds(s: Shape): [number, number, number, number] {
+  if ("rect" in s) return s.rect;
+  if ("ellipse" in s) { const [cx, cy, rx, ry] = s.ellipse; return [Math.floor(cx - rx), Math.floor(cy - ry), Math.ceil(rx * 2) + 1, Math.ceil(ry * 2) + 1]; }
+  const xs = s.poly.map((p) => p[0]), ys = s.poly.map((p) => p[1]);
+  const x = Math.floor(Math.min(...xs)), y = Math.floor(Math.min(...ys));
+  return [x, y, Math.ceil(Math.max(...xs)) - x + 1, Math.ceil(Math.max(...ys)) - y + 1];
 }
 
 /** The ground of every cell: the map's own, unless a patch covers it. */
@@ -175,7 +185,8 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
       m.position.y = 0.04;
       surfaces.push({ kind: b.kind, geometry: m.geometry, material: m.material });
       group.add(m);
-    } else if (solid) {
+    } else if (solid && b.kind !== "rock" && b.kind !== "cliff") {
+      // Rock and cliff blockers are heaps of painted boulders (paintedProps.ts).
       const geo = track(new THREE.ExtrudeGeometry(toShape(b.shape), { depth: solid.height, bevelEnabled: false, curveSegments: 16 }).rotateX(-Math.PI / 2));
       const m = new THREE.Mesh(geo, track(new THREE.MeshLambertMaterial({ color: solid.color, flatShading: true, transparent: b.kind === "crystal", opacity: b.kind === "crystal" ? 0.8 : 1 })));
       surfaces.push({ kind: b.kind, geometry: geo, material: m.material });
@@ -234,15 +245,16 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     group.add(deck);
   }
 
-  // Props, one InstancedMesh per kind.
-  // Soft contact shadows tie the stand-in props to the painted floor in one draw.
+  // Natural props are painted cards; the rest are models, one InstancedMesh per kind.
+  const painted = buildPaintedProps(l, group, track, (b) => ({ contains: (x, y) => inShape(b.shape, x, y), bounds: shapeBounds(b.shape) }));
+  // Soft contact shadows tie props to the painted floor in one draw.
   {
     const radius: Partial<Record<typeof l.props[number]["kind"], number>> = {
-      tree: 1.15, pine: 1, bush: 0.5, rock: 0.5, boulder: 1.1,
+      tree: 1.25, pine: 0.95, bush: 0.6, rock: 0.55, boulder: 1.05, dead_tree: 0.8, palm: 1.1, coral: 0.55, ice_spike: 0.55, crystal: 0.5, giant_tree: 3,
       aether_pylon: 0.65, rune_stone: 0.5, tent: 1.4, crate: 0.55,
       fountain: 1.7, windmill: 1.8, market_stall: 1.3, lamp_post: 0.35,
     };
-    const casters = l.props.filter(p => radius[p.kind]);
+    const casters = [...l.props.filter(p => radius[p.kind] && !PAINTED_KINDS.has(p.kind)), ...painted.filter(p => radius[p.kind])];
     const canvas = document.createElement("canvas"); canvas.width = canvas.height = 64;
     const ctx = canvas.getContext("2d")!;
     const fade = ctx.createRadialGradient(32, 32, 3, 32, 32, 31);
@@ -261,7 +273,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     group.add(shadows);
   }
   const byKind = new Map<string, typeof l.props>();
-  for (const p of l.props) byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);
+  for (const p of l.props) if (!PAINTED_KINDS.has(p.kind)) byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);
   const mat = track(new THREE.MeshLambertMaterial({ vertexColors: true, flatShading: true }));
   const glow = track(new THREE.MeshBasicMaterial({ vertexColors: true }));
   const dummy = new THREE.Object3D();

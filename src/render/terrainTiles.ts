@@ -24,12 +24,12 @@ const paint = (tex: Tile, tint: [number, number, number] = [1, 1, 1], desat = 0,
 const GROUND_PAINT: Record<Ground, Paint> = {
   grass: paint("grass"),
   moss: paint("moss", [0.96, 1, 0.94], 0, 0, 7),
-  sand: paint("dirt_path", [1.3, 1.14, 0.84], 0.4, 0.1, 11),
-  snow: paint("dirt_path", [0.88, 0.94, 1.04], 0.92, 0.56, 12),
-  ash: paint("cave_floor", [1.12, 1.02, 0.98], 0.35, 0.07, 8),
+  sand: paint("dirt_path", [2.2, 1.8, 1.07], 0.5, 0.35, 11),
+  snow: paint("dirt_path", [0.95, 1, 1.1], 0.95, 1, 12),
+  ash: paint("cave_floor", [1.35, 1.22, 1.15], 0.5, 0.16, 8),
   stone: paint("cobblestone", [1, 1, 1], 0, 0, 5),
-  shore: paint("grass_dry", [1.16, 1.08, 0.88], 0.3, 0.05, 9),
-  metal: paint("cave_floor", [0.86, 0.92, 1.06], 0.55, 0.06, 7),
+  shore: paint("grass_dry", [2, 1.8, 1.3], 0.6, 0.3, 9),
+  metal: paint("cave_floor", [1.4, 1.48, 1.7], 0.6, 0.18, 7),
   cave: paint("cave_floor"),
 };
 
@@ -37,7 +37,7 @@ const ROAD_PAINT: Partial<Record<RoadKind, Paint>> = {
   dirt: paint("dirt_path", [1, 1, 1], 0, 0, 6),
   stone: paint("cobblestone", [1, 1, 1], 0, 0, 5),
   brass: paint("cobblestone", [1.16, 0.96, 0.64], 0.35, 0.02, 5),
-  ice: paint("plaza_tile", [0.9, 1, 1.1], 0.75, 0.24, 7),
+  ice: paint("dirt_path", [0.95, 1.02, 1.12], 0.95, 0.75, 7),
   obsidian: paint("cave_floor", [0.56, 0.5, 0.62], 0.3, 0, 6),
 };
 
@@ -99,8 +99,10 @@ export function terrainBlendMask(layout: MapLayout): { data: Uint8Array; zones: 
   };
   const main = Array.from({ length: 4 }, layer), zone = Array.from({ length: 4 }, layer);
   const road = main[0].g, moss = main[1].g, stone = main[2].g, plaza = main[3].g;
+  // Moss round woods and pools only where the ground is green; elsewhere it read as mud.
+  const green = layout.ground === "grass" || layout.ground === "moss";
   for (const b of layout.blockers) {
-    if (b.kind !== "forest" && b.kind !== "water") continue;
+    if (b.kind !== "forest" && !(b.kind === "water" && green)) continue;
     moss.globalAlpha = b.kind === "forest" ? 0.85 : 0.7;
     traceShape(moss, b.shape);
     moss.fill(); moss.lineWidth = b.kind === "water" ? 2.2 : 1.5; moss.stroke();
