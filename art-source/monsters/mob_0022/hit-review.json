@@ -1,0 +1,23 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "front-neutral-v2.png",
+    "hit-front-brace.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "fps": 10,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Feet shift from neutral.",
+    "Clamp proportions and surface details drift.",
+    "Only two unique drawings; recovery needs review."
+  ]
+}
