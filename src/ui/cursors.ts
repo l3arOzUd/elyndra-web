@@ -65,9 +65,9 @@ function pickup(g: CanvasRenderingContext2D) {
     " Q25 27 18 28.5 L14 28.5 Q10 28.5 8 25 L3.8 18.5 Q2.8 16.5 4.6 15.6 Q6.4 14.8 8 16.5 Z",
   );
   paint(g, hand, "#fff2cf", "#b98b4b", 4, 2, 24, 29);
-  g.strokeStyle = "rgba(90,58,24,.55)"; g.lineWidth = 1; // knuckle creases
+  g.strokeStyle = "rgba(70,42,14,.75)"; g.lineWidth = 1.2; // gaps between the fingers
   g.beginPath();
-  for (const x of [13, 17, 21]) { g.moveTo(x, 13.5); g.lineTo(x, 17); }
+  for (const [x, top] of [[13, 7], [17, 5], [21, 8]]) { g.moveTo(x, top); g.lineTo(x, 18); }
   g.stroke();
   const cuff = new Path2D("M11 26.5 L24.5 23.5 L25.6 28 L12.6 31 Z");
   paint(g, cuff, "#f3d27a", "#8a5a1e", 11, 23, 25, 31);
