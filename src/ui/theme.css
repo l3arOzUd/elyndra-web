@@ -371,7 +371,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 
 /* Lore (LORE_BIBLE.md): NPC titles, the map-entry card and the Monster Book. */
 .tag-title { margin-top:-2px; font-size:10px; font-weight:600; letter-spacing:.04em; color:#e8d3a2; text-shadow:0 0 3px #000,0 1px 2px #000; }
-.map-card { position:fixed; z-index:14; left:50%; top:13vh; transform:translateX(-50%); display:grid; justify-items:center; gap:3px; width:min(560px,calc(100vw - 32px)); padding:12px 28px 14px; text-align:center; pointer-events:none; background:radial-gradient(ellipse at center,#1b120bd9 0,#1b120bb0 55%,#1b120b00 75%); }
+.map-card { position:fixed; z-index:4; left:50%; top:13vh; transform:translateX(-50%); display:grid; justify-items:center; gap:3px; width:min(560px,calc(100vw - 32px)); padding:12px 28px 14px; text-align:center; pointer-events:none; background:radial-gradient(ellipse at center,#1b120bd9 0,#1b120bb0 55%,#1b120b00 75%); }
 .map-card[hidden] { display:none; }
 .map-card .eyebrow { margin:0; font-size:11px; letter-spacing:.14em; color:#e2c486; }
 .map-card strong { font:700 38px/1.05 var(--ui-font-title); color:#fff1cf; -webkit-text-stroke:4px #1b1006; paint-order:stroke fill; text-shadow:0 2px 6px #000c; }
@@ -407,7 +407,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .book-text { margin:0; font-size:14px; line-height:1.5; }.book-story { font-style:italic; color:#4a3320; }
 .book-locked { clear:right; margin-top:14px; font-size:13px; }
 @media (max-width:800px) {
-  .book-layout { grid-template-columns:1fr; }
+  .book-layout { grid-template-columns:1fr; overflow:auto; min-height:0; }
   .book-list { max-height:34dvh; min-height:120px; }.book-detail { max-height:none; overflow:visible; }
   .book-portrait { width:96px; height:96px; }
   .map-card strong { font-size:30px; }.map-card span { font-size:13px; }
