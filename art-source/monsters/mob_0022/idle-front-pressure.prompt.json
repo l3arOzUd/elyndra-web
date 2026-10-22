@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "front-neutral-v2.png",
+  "prompt": "Precise minimal idle animation edit of this Brine Automaton. Change ONLY the two gauge needles by a small 15 degree clockwise rotation and close the IMAGE LEFT two-jaw clamp halfway, rotating its jaws on existing hinge pins. All other pixels and silhouettes must remain unchanged: feet, legs, torso, shoulders, arm lengths, other hand, tank, valves, patina and salt, framing and scale. This is a subtle mechanical pressure check while standing idle, NOT a new pose. No breathing squash or body movement. Transparent alpha, no steam, effects, ground, shadows, labels or text. One full robot same square canvas."
+}

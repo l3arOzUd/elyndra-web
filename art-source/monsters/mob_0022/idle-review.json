@@ -1,0 +1,16 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "front-neutral-v2.png",
+    "idle-front-pressure.png"
+  ],
+  "frames": 20,
+  "fps": 8,
+  "uniqueDrawings": 2,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Body outline and painted details still drift.",
+    "Gauge and clamp hinge continuity need visual review."
+  ]
+}
