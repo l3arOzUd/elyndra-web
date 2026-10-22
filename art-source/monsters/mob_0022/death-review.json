@@ -3,27 +3,29 @@
   "sources": [
     "front-neutral-v2.png",
     "death-front-buckle.png",
-    "death-front-settled.png"
+    "death-front-settled.png",
+    "death-front-slump.png"
   ],
   "sequence": [
     0,
     1,
-    1,
     2,
-    2,
-    2
+    3,
+    3,
+    3
   ],
   "fps": 6.25,
   "hold": true,
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
-    "Final pose resembles resting squat.",
+    "Asymmetric forward slump is clearer, but elbows remain braced rather than fully relaxed.",
     "Shell width and feet drift.",
     "Knee and wrist mechanical continuity needs refinement."
   ],
   "observed": [
     "No whole-body backward rotation.",
-    "Gauge needles drop; two clamp hands support lowered body."
+    "Gauge needles drop; two clamp hands support lowered body.",
+    "Final barrel tilts forward with lowered shoulder, keeping folded legs attached."
   ]
 }

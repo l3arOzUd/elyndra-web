@@ -1,14 +1,15 @@
 <!doctype html><meta charset="utf-8"><title>Brine Automaton shutdown study</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}button,input{margin:12px}a{color:#acf}</style>
 <h1>Brine Automaton: front shutdown study</h1>
-<p>Three drawings, six timing frames. Draft: rigid barrel lowers onto folded legs and clamps, but final pose still reads as resting. Shell width, feet and joint continuity need refinement. Final frame holds.</p>
+<p>Four drawings, six timing frames. Draft: rigid barrel lowers onto folded legs and clamps, then the barrel leans forward and one shoulder drops. Arms still look braced. Shell width, feet and joint continuity need refinement. Final frame holds.</p>
 <button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" value="0"><span id="label"></span><br><canvas id="preview" width="512" height="512"></canvas><canvas id="small" width="128" height="128"></canvas>
-<p><a href="index.html">Reference review</a></p>
+<p><a href="attack-review.html">Attack study</a> | <a href="death-review.html">Shutdown study</a> | <a href="/">Game</a></p>
 <script type="module">
-const files=['front-neutral-v2.png','death-front-buckle.png','death-front-settled.png'];
-const art=await Promise.all(files.map(src=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=src})));
-const sequence=[0,1,1,2,2,2],g=preview.getContext('2d'),s=small.getContext('2d');let timer;
-function draw(f){clearTimeout(timer);frame.value=f;label.textContent=`Frame ${f+1}: ${['neutral','buckle','shutdown'][sequence[f]]}`;g.clearRect(0,0,512,512);g.drawImage(art[sequence[f]],0,0,512,512);s.clearRect(0,0,128,128);s.drawImage(preview,0,0,128,128)}
+const files=['front-neutral-v2.png','death-front-buckle.png','death-front-settled.png','death-front-slump.png'];
+const urls=import.meta.glob('./{front-neutral-v2,attack-front-windup-v2,attack-front-impact-v2,attack-front-recovery,death-front-buckle,death-front-settled,death-front-slump}.png',{eager:true,query:'?url',import:'default'});
+const art=await Promise.all(files.map(src=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=urls[`./${src}`]})));
+const sequence=[0,1,2,3,3,3],g=preview.getContext('2d'),s=small.getContext('2d');let timer;
+function draw(f){clearTimeout(timer);frame.value=f;label.textContent=`Frame ${f+1}: ${['neutral','buckle','kneel','slump'][sequence[f]]}`;g.clearRect(0,0,512,512);g.drawImage(art[sequence[f]],0,0,512,512);s.clearRect(0,0,128,128);s.drawImage(preview,0,0,128,128)}
 function play(f=0){draw(f);if(f<5)timer=setTimeout(()=>play(f+1),160)}
 replay.onclick=()=>play();frame.oninput=()=>draw(Number(frame.value));draw(0);window.__brineDeath={ready:true,draw,sequence};
 </script>

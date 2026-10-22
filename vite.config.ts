@@ -5,6 +5,6 @@ export default defineConfig({
   build: {
     target: "es2022",
     chunkSizeWarningLimit: 1200,
-    rollupOptions: { input: { main: "index.html", uiPreview: "ui-preview.html", modelViewer: "model-viewer.html", animationViewer: "animation-viewer.html", spriteViewer: "sprite-viewer.html", spriteGallery: "sprite-gallery.html", characterViewer: "character-viewer.html", fxViewer: "fx-viewer.html", mapViewer: "map-viewer.html" } },
+    rollupOptions: { input: { main: "index.html", brineAttack: "art-source/monsters/mob_0022/attack-review.html", brineDeath: "art-source/monsters/mob_0022/death-review.html", uiPreview: "ui-preview.html", modelViewer: "model-viewer.html", animationViewer: "animation-viewer.html", spriteViewer: "sprite-viewer.html", spriteGallery: "sprite-gallery.html", characterViewer: "character-viewer.html", fxViewer: "fx-viewer.html", mapViewer: "map-viewer.html" } },
   },
 });
