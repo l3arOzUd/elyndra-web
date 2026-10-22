@@ -350,7 +350,7 @@ function itemPage(id: string): HTMLElement {
     const slot = e.slot, lvl = e.item_level ?? 1, top = maxTier(lvl);
     const pool = it.category === "totem" ? sys.totem_affixes : sys.affixes.filter((a) => a.slots.includes(slot));
     if (pool.length) parts.push(card("Random options", h("p", {}, `A Magic copy rolls 1–2 of these, a Rare 3–4 (four ${Math.round(drops.rare_four_affixes * 100)}% of the time). Item level ${lvl} reaches tier T${top}; values are the highest roll of each tier.`),
-      table(["Option", "Kind", ...Array.from({ length: top }, (_, i) => "T" + (i + 1))], pool.map((a) => [affixText(c, a.id, a.values[Math.min(top, a.values.length) - 1]).replace(/^[+]?[\d.]+/, "#"), cap(a.kind),
+      table(["Option", "Kind", ...Array.from({ length: top }, (_, i) => "T" + (i + 1))], pool.map((a) => [a.label.replace("{v}", "#"), cap(a.kind),
         ...Array.from({ length: top }, (_, i) => a.values[i] !== undefined ? String(a.values[i]) : "—")]), "options")));
   }
 
@@ -381,13 +381,13 @@ function itemPage(id: string): HTMLElement {
 function optionsPage(): HTMLElement {
   const tiers = drops.tier_min_level;
   const head = ["Option", "Kind", "Slots", ...tiers.map((l, i) => `T${i + 1} (iLv ${l})`)];
-  const rows = (list: typeof sys.affixes) => list.map((a) => [affixText(c, a.id, a.values[a.values.length - 1]).replace(/^[+]?[\d.]+/, "#"), cap(a.kind), a.slots.map((s) => SLOT_LABEL[s] ?? s).join(", "),
+  const rows = (list: typeof sys.affixes) => list.map((a) => [a.label.replace("{v}", "#"), cap(a.kind), a.slots.map((s) => SLOT_LABEL[s] ?? s).join(", "),
     ...tiers.map((_, i) => (a.values[i] !== undefined ? String(a.values[i]) : "—"))]);
   const charmRows = sys.charm_types.map((t) => [h("b", {}, t.name), t.effects.map(([id, v]) => affixText(c, id, v[2])).join(" · "), t.effects.map(([, v]) => v.join(" / ")).join(" · "), t.elements.map(cap).join(", ")]);
   const totemRows = sys.totem_types.map((t) => [h("b", {}, t.name), t.text.replace(/\{(\w+)\}/g, (_, k) => String(t.effects[k])), t.trigger ? "Echo: every " + t.charges + " " + t.trigger : t.charges + " kills", t.duration_ms ? t.duration_ms / 1000 + " s" : "—"]);
   return h("div", {}, h("h1", {}, "Options and drop rules"),
     card("Gear options (affixes)", h("p", {}, `Values are the highest roll of each tier. An item's level decides its highest tier; lower tiers roll more often (weights ${drops.tier_weight.join(" / ")}).`), table(head, rows(sys.affixes), "options")),
-    card("Totem options", table(["Option", "Kind", "Slots", "T1", "T2", "T3", "T4"], sys.totem_affixes.map((a) => [affixText(c, a.id, a.values[a.values.length - 1]).replace(/^[+]?[\d.]+/, "#"), cap(a.kind), "Totem", ...[0, 1, 2, 3].map((i) => (a.values[i] !== undefined ? String(a.values[i]) : "—"))]), "options")),
+    card("Totem options", table(["Option", "Kind", "Slots", "T1", "T2", "T3", "T4"], sys.totem_affixes.map((a) => [a.label.replace("{v}", "#"), cap(a.kind), "Totem", ...[0, 1, 2, 3].map((i) => (a.values[i] !== undefined ? String(a.values[i]) : "—"))]), "options")),
     card("Charm types", note("Effect at Grand grade; values are Lesser / Greater / Grand. Monsters of the listed elements favour that Charm."), table(["Charm", "Effect", "Lesser / Greater / Grand", "Favoured by"], charmRows)),
     card("Totem types", note("Effect at Grand grade (Lesser ×0.6, Greater ×0.8)."), table(["Totem", "Effect", "Charge", "Lasts"], totemRows)),
     card("Drop rules (every monster)", h("ul", "rules",
@@ -457,7 +457,7 @@ h1{font:600 30px var(--ui-font-title);color:#f1e2bf;margin:10px 0 12px}
 .chip.aggressive{background:#b9573f;color:#fff;border-color:#8c3a27}.chip.passive{background:#6f9a62;color:#fff;border-color:#4d7443}
 .chip.bounty{background:#e2b54e;border-color:#a87d24;margin-left:6px}.chip.level{background:#3e3022;color:#f0deb6;border-color:#3e3022}
 .columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
-@media (max-width:820px){.columns{grid-template-columns:1fr}}
+@media (max-width:820px){.columns{grid-template-columns:minmax(0,1fr)}}
 .stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .stat{background:#f6ecd5;border:1px solid #c9ad7c;border-radius:3px;padding:6px 9px;display:flex;flex-direction:column}
 .stat .label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#7c6440}.stat b{font-size:17px}
