@@ -2,9 +2,10 @@
   "id": "mob_0022",
   "sources": [
     "right-neutral-v2.png",
-    "walk-right-near-lift-v2.png"
+    "walk-right-near-lift-v2.png",
+    "walk-right-far-lift.png"
   ],
-  "status": "near-leg-lift-pose-study",
+  "status": "three-drawing-walk-draft",
   "artApproved": false,
   "publicBinding": false,
   "confirmed": [
@@ -16,9 +17,16 @@
     "Check rigid segment lengths and foot clearance throughout the eventual cycle.",
     "Torso shifts relative to neutral.",
     "Knee cap and hinge geometry still inconsistent.",
-    "Far-leg lift, contacts, weight transfer and full cycle missing."
+    "Far foot trails rather than passing forward; near arm does not counter-swing. Dedicated contact and weight-transfer poses missing."
   ],
   "superseded": [
     "walk-right-near-lift.png"
-  ]
+  ],
+  "sequence": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "frameMs": 220
 }

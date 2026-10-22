@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "walk-right-near-lift-v2.png",
+  "prompt": "Edit this right-facing Brine Automaton walking sprite into OPPOSITE leg passing pose. Near leg now planted vertically under hip supporting barrel weight; far leg passes FORWARD to image right behind near leg, knee flexed, far boot only slightly above ground and partly occluded by planted near shin. Near arm swings modestly forward. Exactly two legs. Keep knee hinges, piston lengths, boot shapes and scale constant; rotate rigid segments only. Preserve torso canvas position, tank, valves, eye gauge, patina, same right-facing camera and square composition. No mirrored character. Transparent background no shadow, text, steam or effects. Single frame."
+}
