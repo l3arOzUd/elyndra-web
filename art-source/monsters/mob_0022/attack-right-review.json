@@ -3,9 +3,10 @@
   "sources": [
     "right-neutral-v2.png",
     "attack-right-windup.png",
-    "attack-right-impact.png"
+    "attack-right-impact.png",
+    "attack-right-recovery.png"
   ],
-  "status": "three-drawing-attack-draft",
+  "status": "four-drawing-attack-draft",
   "artApproved": false,
   "publicBinding": false,
   "confirmed": [
@@ -17,7 +18,7 @@
     "Impact fist right margin is too tight for motion.",
     "Knee side has an extra front-facing plate.",
     "Far leg remains obscured; cross-view construction unverified.",
-    "Dedicated recovery and in-betweens missing; windup reused for recovery."
+    "In-betweens missing; recovery hinge and salt patterns drift from other poses."
   ],
   "next": "Register neutral and impact with fixed landmarks, preserve joint lengths; use the extended chain to inform rear projection.",
   "sequence": [
@@ -25,8 +26,9 @@
     1,
     1,
     2,
-    1,
+    3,
     0
   ],
-  "fps": 6.25
+  "fps": 6.25,
+  "uniqueDrawings": 4
 }

@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-neutral-v2.png",
+  "prompt": "Precise localized sprite edit: create a post-punch recovery pose of this right-facing Brine Automaton. Change only the visible arm. Upper arm rotated slightly forward, elbow gently bent, forearm sloping down-right about 35 degrees below horizontal, two-jaw pincer partly opening at waist height. Arm returns downward after straight punch; NOT drawn backward like windup. Keep same rigid segment lengths, double piston, hinges, two claw jaws and salt details. Keep exact body and foot positions, tank, valves, gauges, legs, square canvas and camera. No recentering or resizing. Whole claw inside frame. Transparent background, no steam, shadows, effects or text. One full body sprite."
+}
