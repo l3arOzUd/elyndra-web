@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "attack-back-impact-v3.png",
+  "prompt": "Edit only the image-right raised arm in this rear-view robot sprite. It currently looks like waving. Turn its forearm INWARD toward the robot's center and into depth away from viewer: the elbow stays at the outer right silhouette, silver piston extends diagonally UP-LEFT toward the right valve, ending in a SMALL CLOSED two-jaw pincer partially hidden behind the right shoulder/tank edge. This is a forward piston punch seen from behind. Clamp jaws must touch, not open. No hand above the head, no outward waving arm. Keep whole body, tank, left arm, both legs, feet, framing, scale, patina and lighting unchanged. Transparent square background, one full-body sprite, no effects or text."
+}

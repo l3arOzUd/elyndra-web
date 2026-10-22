@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "attack-back-impact-v2.png",
+  "prompt": "Precise localized edit. This rear-view copper automaton attack sprite has a missing-looking image-right arm. Repair ONLY that right arm so the shoulder connects visibly through a short silver piston forearm to a compact CLOSED TWO-JAW mechanical pincer, punching away from viewer slightly upward along depth. Show a small readable sliver of foreshortened piston and pincer above/right of the elbow, overlapping in depth, not a long sideways arm. Preserve shoulder armor design. No human fingers or block knuckles. Keep all other image regions exactly unchanged: same square canvas, same rear camera, fixed tank, valves, torso, hatch, left arm, legs, boot positions and scale. True transparent background. No text, motion streaks, steam or ground shadow. One sprite only."
+}

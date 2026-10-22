@@ -23,5 +23,16 @@
     "Closed clamp construction and elbow continuity still drift.",
     "Recovery clamp pivot construction differs from neutral.",
     "Surface details drift across drawings."
-  ]
+  ],
+  "rejectedVariants": [
+    {
+      "file": "attack-back-impact-v3.png",
+      "reason": "Open claw, outward waving gesture rather than punch."
+    },
+    {
+      "file": "attack-back-impact-v4.png",
+      "reason": "Folded elbow and claw beside tank read as salute; no extension."
+    }
+  ],
+  "nextCorrection": "Use side attack construction to establish extended elbow and piston projection before another rear impact edit."
 }
