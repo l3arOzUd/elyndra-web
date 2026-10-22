@@ -3,13 +3,14 @@
   "sources": [
     "right-neutral-v2.png",
     "death-right-buckle.png",
-    "death-right-slump-v2.png"
+    "death-right-slump-v2.png",
+    "death-right-inert.png"
   ],
-  "status": "three-drawing-shutdown-draft",
+  "status": "four-drawing-shutdown-draft",
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
-    "End pose still reads as kneeling/resting rather than fully inert.",
+    "Final barrel and forearm rest low; gauge face/needle and joint design drift from earlier frames.",
     "Torso proportions and feet shift across poses.",
     "Joint construction and surface continuity require correction."
   ],
@@ -17,13 +18,14 @@
   "sequence": [
     0,
     1,
-    1,
     2,
-    2,
-    2
+    3,
+    3,
+    3
   ],
   "fps": 6.25,
   "superseded": [
     "death-right-slump.png"
-  ]
+  ],
+  "uniqueDrawings": 4
 }
