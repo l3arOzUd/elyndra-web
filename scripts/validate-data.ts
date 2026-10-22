@@ -316,6 +316,9 @@ function checkSpawns(b: ContentBundle, g: Map<string, Grid>) {
 
     const grid = g.get(m.id);
     const layout = b.layouts.get(m.id);
+    // Pockets on the same rects (a zone's species, each with its own count) share the ground.
+    const sharing = new Map<string, number>();
+    for (const p of z.pockets) sharing.set(JSON.stringify(p.rects), (sharing.get(JSON.stringify(p.rects)) ?? 0) + p.target_alive);
     for (const p of z.pockets) {
       const where = `${m.id}/${p.id}`;
       if (p.species.length === 0) report("critical", "spawn.empty", where, "pocket has no species");
@@ -330,7 +333,7 @@ function checkSpawns(b: ContentBundle, g: Map<string, Grid>) {
         for (const w of warpsFrom(m.id)) if (rectsOverlap(r, w.trigger_rect, 6)) report("error", "spawn.warp_overlap", where, `rect ${r} within 6 cells of ${w.id}`);
       }
       if (area && walkable / area < 0.55) report("error", "spawn.blocked", where, `only ${((walkable / area) * 100).toFixed(0)}% of the pocket is walkable`);
-      const perMob = walkable / Math.max(1, p.target_alive);
+      const perMob = walkable / Math.max(1, sharing.get(JSON.stringify(p.rects)) ?? p.target_alive);
       if (perMob < 5) report("error", "spawn.density", where, `${perMob.toFixed(1)} walkable cells per monster: too crowded to move`);
       const lone = p.species.every((s) => ["boss", "elite"].includes(mobs.get(s.monster_id)?.archetype ?? ""));
       if (perMob > 60 && !lone) report("warning", "spawn.density", where, `${perMob.toFixed(1)} cells per monster: too sparse for a horde`);

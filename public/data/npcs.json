@@ -292,8 +292,8 @@
   "id": "npc_lum_dawnmeadow_scout",
   "name": "Dawnmeadow Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -305,8 +305,8 @@
   "id": "npc_lum_dawnmeadow_medic",
   "name": "Dawnmeadow Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -318,8 +318,8 @@
   "id": "npc_lum_dawnmeadow_transit",
   "name": "Dawnmeadow Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -337,8 +337,8 @@
   "id": "npc_lum_dawnmeadow_post",
   "name": "Dawnmeadow East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -356,8 +356,8 @@
   "id": "npc_lum_moonbrook_vale_scout",
   "name": "Moonbrook Vale Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -369,8 +369,8 @@
   "id": "npc_lum_moonbrook_vale_medic",
   "name": "Moonbrook Vale Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -382,8 +382,8 @@
   "id": "npc_lum_moonbrook_vale_transit",
   "name": "Moonbrook Vale Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -401,8 +401,8 @@
   "id": "npc_lum_moonbrook_vale_post",
   "name": "Moonbrook Vale East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -443,8 +443,8 @@
   "id": "npc_ver_graftwood_wilds_scout",
   "name": "Graftwood Wilds Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -456,8 +456,8 @@
   "id": "npc_ver_graftwood_wilds_medic",
   "name": "Graftwood Wilds Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -469,8 +469,8 @@
   "id": "npc_ver_graftwood_wilds_transit",
   "name": "Graftwood Wilds Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -488,8 +488,8 @@
   "id": "npc_ver_graftwood_wilds_post",
   "name": "Graftwood Wilds East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -507,8 +507,8 @@
   "id": "npc_ver_elderroot_expanse_scout",
   "name": "Elderroot Expanse Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -520,8 +520,8 @@
   "id": "npc_ver_elderroot_expanse_medic",
   "name": "Elderroot Expanse Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -533,8 +533,8 @@
   "id": "npc_ver_elderroot_expanse_transit",
   "name": "Elderroot Expanse Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -552,8 +552,8 @@
   "id": "npc_ver_elderroot_expanse_post",
   "name": "Elderroot Expanse East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -594,8 +594,8 @@
   "id": "npc_sol_saffron_wastes_scout",
   "name": "Saffron Wastes Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -607,8 +607,8 @@
   "id": "npc_sol_saffron_wastes_medic",
   "name": "Saffron Wastes Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -620,8 +620,8 @@
   "id": "npc_sol_saffron_wastes_transit",
   "name": "Saffron Wastes Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -639,8 +639,8 @@
   "id": "npc_sol_saffron_wastes_post",
   "name": "Saffron Wastes East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -681,8 +681,8 @@
   "id": "npc_tha_pearl_coast_scout",
   "name": "Pearl Coast Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -694,8 +694,8 @@
   "id": "npc_tha_pearl_coast_medic",
   "name": "Pearl Coast Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -707,8 +707,8 @@
   "id": "npc_tha_pearl_coast_transit",
   "name": "Pearl Coast Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -726,8 +726,8 @@
   "id": "npc_tha_pearl_coast_post",
   "name": "Pearl Coast East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -745,8 +745,8 @@
   "id": "npc_cry_frostfire_divide_scout",
   "name": "Frostfire Divide Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -758,8 +758,8 @@
   "id": "npc_cry_frostfire_divide_medic",
   "name": "Frostfire Divide Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -771,8 +771,8 @@
   "id": "npc_cry_frostfire_divide_transit",
   "name": "Frostfire Divide Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -790,8 +790,8 @@
   "id": "npc_cry_frostfire_divide_post",
   "name": "Frostfire Divide East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -832,8 +832,8 @@
   "id": "npc_emb_cinder_expanse_scout",
   "name": "Cinder Expanse Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -845,8 +845,8 @@
   "id": "npc_emb_cinder_expanse_medic",
   "name": "Cinder Expanse Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -858,8 +858,8 @@
   "id": "npc_emb_cinder_expanse_transit",
   "name": "Cinder Expanse Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -877,8 +877,8 @@
   "id": "npc_emb_cinder_expanse_post",
   "name": "Cinder Expanse East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -896,8 +896,8 @@
   "id": "npc_noc_veil_rift_scout",
   "name": "Veil Rift Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -909,8 +909,8 @@
   "id": "npc_noc_veil_rift_medic",
   "name": "Veil Rift Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -922,8 +922,8 @@
   "id": "npc_noc_veil_rift_transit",
   "name": "Veil Rift Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -941,8 +941,8 @@
   "id": "npc_noc_veil_rift_post",
   "name": "Veil Rift East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",
@@ -960,8 +960,8 @@
   "id": "npc_noc_meridian_gate_scout",
   "name": "Meridian Gate Scout",
   "position": [
-   14,
-   186
+   9,
+   91
   ],
   "facing": "E",
   "role": "scout",
@@ -973,8 +973,8 @@
   "id": "npc_noc_meridian_gate_medic",
   "name": "Meridian Gate Medic",
   "position": [
-   28,
-   198
+   19,
+   100
   ],
   "facing": "E",
   "role": "healer",
@@ -986,8 +986,8 @@
   "id": "npc_noc_meridian_gate_transit",
   "name": "Meridian Gate Transit",
   "position": [
-   14,
-   198
+   9,
+   100
   ],
   "facing": "E",
   "role": "teleporter",
@@ -1005,8 +1005,8 @@
   "id": "npc_noc_meridian_gate_post",
   "name": "Meridian Gate East Post",
   "position": [
-   372,
-   190
+   184,
+   95
   ],
   "facing": "W",
   "role": "teleporter",

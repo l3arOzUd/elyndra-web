@@ -4,7 +4,7 @@
 // recipe, quest and dialogue, and their old maps serve as theme templates
 // (ground, border, decoration). This file replaces the world itself: which
 // maps exist, how they connect, where each monster lives (zones of 2–10
-// levels inside a 384×384 field), and which NPCs remain.
+// levels inside a 192×192 field), and which NPCs remain.
 //
 // To move a monster, edit the zone lists in FIELDS (by monster name). The
 // build and validator check the rest.
@@ -14,7 +14,7 @@ import { bakeLayout, shapeContains } from "./layout";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
 
 export const HUB = "lum_town_01";
-const SIZE = 384;
+const SIZE = 192;
 
 interface ZoneSpec { name: string; species: string[]; note: string }
 interface FieldSpec {
@@ -104,27 +104,33 @@ const DUNGEON_BOSS: Record<string, string> = {
 
 // --- field geometry ------------------------------------------------------------------------
 //
-// A 384×384 field (WORLD_GDD_v3.md §2): the camp on the west edge, the zones on a horseshoe
-// round the central crossroads (west → north → east → south, rising in level), a ring road
-// joining them, the east post on the east edge and the dungeon gate beside the last zone.
+// A 192×192 field: the camp on the west edge, the zones on a horseshoe round the central
+// crossroads (west → north → east → south, rising in level), a ring road joining them, the
+// east post on the east edge and the dungeon gate beside the last zone. Each zone owns a
+// wedge of the field and its monsters spawn all over it (about three quarters of the map,
+// one monster per ~34 walkable cells), RO style: wherever you walk there are monsters.
 
-const CAMP_W: Rect = [6, 180, 28, 24];
-const CAMP_E: Rect = [350, 182, 26, 20];
-const WEST_TRIGGER: Rect = [0, 189, 3, 7];
-const EAST_TRIGGER: Rect = [SIZE - 3, 189, 3, 7];
-const WEST_LANDING: [number, number] = [22, 192];
-const EAST_LANDING: [number, number] = [362, 196];
-const CENTRE: [number, number] = [192, 192];
-const RING: [number, number] = [108, 128];
+const CAMP_W: Rect = [4, 84, 20, 20];
+const CAMP_E: Rect = [170, 86, 18, 18];
+const WEST_TRIGGER: Rect = [0, 93, 3, 7];
+const EAST_TRIGGER: Rect = [SIZE - 3, 93, 3, 7];
+const WEST_LANDING: [number, number] = [14, 96];
+const EAST_LANDING: [number, number] = [180, 98];
+const CENTRE: [number, number] = [96, 96];
+const RING: [number, number] = [56, 62];
+/** No spawns this close to the crossroads. */
+const CROSSROADS_CLEAR = 14;
+/** Spawn areas are whole blocks of this many cells a side. */
+const SPAWN_BLOCK = 8;
+/** How far (degrees) the first and last zones reach past their own angle into the
+ * south-west gap; the rest of the gap stays empty between the lowest and highest zone. */
+const GAP_REACH = 30;
 /** Angle (degrees, screen y down) of zone i of n: 180 = west, 270 = north, 360 = east, 450 = south. */
 const zoneAngle = (i: number, n: number) => 180 + (270 * i) / (n - 1);
 const onRing = (deg: number): [number, number] => {
   const a = (deg * Math.PI) / 180;
   return [Math.round(CENTRE[0] + RING[0] * Math.cos(a)), Math.round(CENTRE[1] + RING[1] * Math.sin(a))];
 };
-// Four pocket rects per zone in a 2×2 block; the gap in the middle holds the zone's elites.
-const POCKET_OFFSETS: [number, number][] = [[-42, -34], [10, -34], [-42, 8], [10, 8]];
-const POCKET_SIZE: [number, number] = [32, 26];
 const FIELD_ALIVE = { min_alive: 550, max_alive: 900 };
 const TARGET_TOTAL = 700;
 
@@ -157,7 +163,31 @@ function zoneCentres(f: FieldSpec): [number, number][] {
 /** The dungeon gate east of the last zone, with a small safe yard to land in. */
 function gateOf(f: FieldSpec): { trigger: Rect; landing: [number, number]; safe: Rect } {
   const c = zoneCentres(f), last = c[c.length - 1];
-  return { trigger: [last[0] + 60, last[1] - 2, 6, 4], landing: [last[0] + 60, last[1] + 8], safe: [last[0] + 50, last[1] - 10, 22, 24] };
+  return { trigger: [last[0] + 30, last[1] - 2, 6, 4], landing: [last[0] + 30, last[1] + 8], safe: [last[0] + 22, last[1] - 10, 18, 22] };
+}
+
+/** Zone i's wedge round the crossroads (degrees, screen y down, as zoneAngle): halfway to
+ * its neighbours, the first and last reaching GAP_REACH into the south-west gap. */
+function wedgeOf(i: number, n: number): [number, number] {
+  const step = 270 / (n - 1), a = zoneAngle(i, n);
+  return [i === 0 ? a - Math.min(GAP_REACH, step / 2) : a - step / 2, i === n - 1 ? a + Math.min(GAP_REACH, step / 2) : a + step / 2];
+}
+
+/** Is a point's angle round the crossroads inside a wedge? */
+function inWedge(x: number, y: number, [lo, hi]: [number, number]): boolean {
+  let a = (Math.atan2(y - CENTRE[1], x - CENTRE[0]) * 180) / Math.PI;
+  while (a < lo) a += 360;
+  return a < hi;
+}
+
+/** A wedge as a polygon reaching past the map edge (for ground patches). */
+function wedgePoly([lo, hi]: [number, number]): [number, number][] {
+  const pts: [number, number][] = [CENTRE];
+  for (let d = lo; d <= hi + 0.01; d += Math.min(10, hi - lo)) {
+    const a = (d * Math.PI) / 180;
+    pts.push([Math.round(CENTRE[0] + SIZE * Math.cos(a)), Math.round(CENTRE[1] + SIZE * Math.sin(a))]);
+  }
+  return pts;
 }
 
 /** Distance from a point to a polyline. */
@@ -183,65 +213,81 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
   const pockets: SpawnPocket[] = [];
   const mid = (name: string) => look.byName.get(name) ?? (() => { throw new Error(`${f.id}: unknown monster "${name}"`); })();
 
-  // Regular species share each zone's four rects; elites get a small pocket in the middle.
-  const perRect = Math.round(TARGET_TOTAL / (n * POCKET_OFFSETS.length));
+  const last = centres[n - 1];
+  // The world boss stands between the crossroads and the last zone.
+  const bossAt: [number, number] = [Math.round(CENTRE[0] + (last[0] - CENTRE[0]) * 0.45), Math.round(CENTRE[1] + (last[1] - CENTRE[1]) * 0.45)];
+  const gate = gateOf(f);
+  const wedges = f.zones.map((_, i) => wedgeOf(i, n));
+
+  // Each zone's regular species spawn over every whole block of its wedge, clear of the
+  // border, the camps, the gate yard, the crossroads and the boss arena, mixed together but
+  // each with its own count (a pocket per species on the same rects), so a dead monster
+  // respawns as its own kind and farming one species never turns the zone into another.
+  // The zone's elites hold a small pocket in the middle.
+  const noSpawn: Rect[] = [CAMP_W, CAMP_E, gate.safe, ...(f.fieldBoss ? [[bossAt[0] - 8, bossAt[1] - 7, 16, 14] as Rect] : [])];
+  const blockFree = (x: number, y: number) =>
+    x >= 6 && y >= 6 && x + SPAWN_BLOCK <= SIZE - 6 && y + SPAWN_BLOCK <= SIZE - 6 &&
+    Math.hypot(x + SPAWN_BLOCK / 2 - CENTRE[0], y + SPAWN_BLOCK / 2 - CENTRE[1]) > CROSSROADS_CLEAR + SPAWN_BLOCK / 2 &&
+    noSpawn.every(([rx, ry, rw, rh]) => x + SPAWN_BLOCK + 2 <= rx || x - 2 >= rx + rw || y + SPAWN_BLOCK + 2 <= ry || y - 2 >= ry + rh);
+  // Each field's block grid is offset its own way, so no two fields share a spawn rect.
+  const fi = FIELDS.indexOf(f), gx = fi % SPAWN_BLOCK, gy = Math.floor(fi / SPAWN_BLOCK);
+  const zoneRects: Rect[][] = f.zones.map(() => []);
+  for (let y = gy; y < SIZE; y += SPAWN_BLOCK) for (let x = gx; x < SIZE; x += SPAWN_BLOCK) {
+    if (!blockFree(x, y)) continue;
+    const zi = wedges.findIndex((w) => inWedge(x + SPAWN_BLOCK / 2, y + SPAWN_BLOCK / 2, w));
+    if (zi >= 0) zoneRects[zi].push([x, y, SPAWN_BLOCK, SPAWN_BLOCK]);
+  }
   const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
   f.zones.forEach((z, zi) => {
     const [cx, cy] = centres[zi];
     const regular = z.species.filter((s) => mid(s).archetype !== "elite");
     const elites = z.species.filter((s) => mid(s).archetype === "elite");
-    POCKET_OFFSETS.forEach(([dx, dy], pi) => {
-      const rect: Rect = [cx + dx, cy + dy, POCKET_SIZE[0], POCKET_SIZE[1]];
-      // One rect per species first, then the rest mixed.
-      const names = pi < regular.length && regular.length > 1 ? [regular[pi]] : regular;
+    for (const sp of regular) {
       pockets.push({
-        id: `${slug(z.name)}_${pi + 1}`, name: z.name, rects: [rect],
-        species: names.map((s) => ({ monster_id: mid(s).id, weight: names.length > 1 ? 50 : 1 })),
-        target_alive: perRect, respawn_sec: [6, 14], design_note: z.note,
+        id: regular.length > 1 ? `${slug(z.name)}_${slug(sp)}` : slug(z.name), name: z.name, rects: zoneRects[zi],
+        species: [{ monster_id: mid(sp).id, weight: 1 }],
+        target_alive: Math.round(TARGET_TOTAL / n / regular.length), respawn_sec: [6, 14], design_note: z.note,
       });
-    });
+    }
     for (const e of elites) {
-      pockets.push({ id: `${slug(z.name)}_${slug(e)}`, name: `${z.name} (${e})`, rects: [[cx - 8, cy - 6, 16, 12]], species: [{ monster_id: mid(e).id, weight: 1 }],
+      pockets.push({ id: `${slug(z.name)}_${slug(e)}`, name: `${z.name} (${e})`, rects: [[cx - 6, cy - 5, 12, 10]], species: [{ monster_id: mid(e).id, weight: 1 }],
         target_alive: 4, respawn_sec: [45, 90], design_note: `A few ${e} elites hold the middle of ${z.name}.` });
     }
   });
-  const last = centres[n - 1];
-  // The world boss stands between the crossroads and the last zone.
-  const bossAt: [number, number] = [Math.round(CENTRE[0] + (last[0] - CENTRE[0]) * 0.45), Math.round(CENTRE[1] + (last[1] - CENTRE[1]) * 0.45)];
   if (f.fieldBoss) {
-    pockets.push({ id: `${slug(f.fieldBoss)}_arena`, name: `${f.fieldBoss}'s Arena`, rects: [[bossAt[0] - 7, bossAt[1] - 6, 14, 12]], species: [{ monster_id: mid(f.fieldBoss).id, weight: 1 }],
+    pockets.push({ id: `${slug(f.fieldBoss)}_arena`, name: `${f.fieldBoss}'s Arena`, rects: [[bossAt[0] - 6, bossAt[1] - 5, 12, 10]], species: [{ monster_id: mid(f.fieldBoss).id, weight: 1 }],
       target_alive: 1, respawn_sec: [300, 420], design_note: `${f.fieldBoss} roams the open field here: a world boss for groups.` });
   }
-  const gate = gateOf(f);
 
   // Roads: west edge → camp → first zone, the ring through every zone, spokes from the
   // crossroads, the east zone out to the east post, and a spur to the gate.
   const ring: [number, number][] = [];
   for (let deg = angles[0]; deg <= angles[n - 1] + 0.01; deg += 15) ring.push(onRing(deg));
   const roads: MapDesign["roads"] = [
-    { points: [[0, 192], WEST_LANDING, centres[0]], width: 5, kind: roadKind },
-    { points: ring, width: 5, kind: roadKind },
+    { points: [[0, CENTRE[1]], WEST_LANDING, centres[0]], width: 4, kind: roadKind },
+    { points: ring, width: 4, kind: roadKind },
     ...centres.map((c) => ({ points: [CENTRE, c] as [number, number][], width: 3, kind: roadKind })),
-    { points: [CENTRE, WEST_LANDING], width: 4, kind: roadKind },
-    { points: [onRing(360), [EAST_LANDING[0], 192], [nextField ? SIZE - 1 : EAST_LANDING[0] + 8, 192]], width: 5, kind: roadKind },
+    { points: [CENTRE, WEST_LANDING], width: 3, kind: roadKind },
+    { points: [onRing(360), [EAST_LANDING[0], CENTRE[1]], [nextField ? SIZE - 1 : EAST_LANDING[0] + 6, CENTRE[1]]], width: 4, kind: roadKind },
   ];
   if (f.dungeon) roads.push({ points: [last, [gate.landing[0], last[1]], [gate.landing[0], gate.trigger[1] + 2]], width: 4, kind: roadKind });
 
-  // Decoration clusters between zones, never on a zone, a road, a camp, the crossroads or a gate.
+  // Decoration clusters scattered through the zones, small enough to leave the hordes room,
+  // never on a road, a camp, the crossroads, a zone's elite spot or a gate.
   const blockers: MapDesign["blockers"] = [];
-  const keepOut: Rect[] = [CAMP_W, CAMP_E, gate.safe, [bossAt[0] - 10, bossAt[1] - 10, 20, 20]];
+  const keepOut: Rect[] = [CAMP_W, CAMP_E, gate.safe, [bossAt[0] - 8, bossAt[1] - 8, 16, 16]];
   const clear = (x: number, y: number, r: number) =>
-    centres.every(([zx, zy]) => Math.max(Math.abs(zx - x) - 46, Math.abs(zy - y) - 38) > r + 4) &&
-    Math.hypot(x - CENTRE[0], y - CENTRE[1]) > r + 18 &&
-    roads.every((rd) => distToLine(x, y, rd.points) > r + rd.width + 3) &&
-    keepOut.every(([rx, ry, rw, rh]) => x + r + 10 < rx || x - r - 10 > rx + rw || y + r + 10 < ry || y - r - 10 > ry + rh) &&
-    x - r > 8 && y - r > 8 && x + r < SIZE - 8 && y + r < SIZE - 8;
+    centres.every(([zx, zy]) => Math.hypot(zx - x, zy - y) > r + 10) &&
+    Math.hypot(x - CENTRE[0], y - CENTRE[1]) > r + CROSSROADS_CLEAR &&
+    roads.every((rd) => distToLine(x, y, rd.points) > r + rd.width + 2) &&
+    keepOut.every(([rx, ry, rw, rh]) => x + r + 6 < rx || x - r - 6 > rx + rw || y + r + 6 < ry || y - r - 6 > ry + rh) &&
+    x - r > 6 && y - r > 6 && x + r < SIZE - 6 && y + r < SIZE - 6;
   // A field-specific grid offset and a hash skip, so fields differ and clusters spread over the whole map.
   const [ox, oy] = jitter(f, 99);
   let k = 0;
-  for (let y = 22 + oy; y < SIZE; y += 32) for (let x = 22 + ox + ((Math.round(y / 32) % 2) * 16); x < SIZE; x += 32) {
-    const r = 9 + ((x * 7 + y * 13) % 9);
-    if (((x * 31 + y * 17 + ox * 7) % 10) < 3 || !clear(x, y, r) || blockers.length >= 40) continue;
+  for (let y = 14 + oy; y < SIZE; y += 22) for (let x = 14 + ox + ((Math.round(y / 22) % 2) * 11); x < SIZE; x += 22) {
+    const r = 4 + ((x * 7 + y * 13) % 5);
+    if (((x * 31 + y * 17 + ox * 7) % 10) < 4 || !clear(x, y, r) || blockers.length >= 28) continue;
     blockers.push({ kind: blockerKinds[k++ % Math.max(1, blockerKinds.length)] ?? "rock", shape: { ellipse: [x, y, r, Math.round(r * 0.8)] } });
   }
 
@@ -252,25 +298,25 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
     for (const s of z.species) votes.set(mid(s).region, (votes.get(mid(s).region) ?? 0) + 1);
     const origin = [...votes].sort((a, b) => b[1] - a[1] || (a[0] === f.region ? -1 : b[0] === f.region ? 1 : 0))[0][0];
     const g = themeOf(regions, origin, mid(z.species[0]).level).ground;
-    if (g !== t.ground) ground_patches.push({ ground: g, shape: { ellipse: [centres[zi][0], centres[zi][1], 60, 50] } });
+    if (g !== t.ground) ground_patches.push({ ground: g, shape: { poly: wedgePoly(wedges[zi]) } });
   });
 
   const landmarks: MapDesign["landmarks"] = [
-    { id: `lm_${stem(f)}_camp`, name: "Wayfarer Camp", kind: "camp", x: 18, y: 192, note: "Arrival from the west and where the fallen wake; scout, medic and the transit back to Avelorn." },
+    { id: `lm_${stem(f)}_camp`, name: "Wayfarer Camp", kind: "camp", x: 12, y: CENTRE[1], note: "Arrival from the west and where the fallen wake; scout, medic and the transit back to Avelorn." },
     { id: `lm_${stem(f)}_crossroads`, name: `${f.name} Crossroads`, kind: "crossroads", x: CENTRE[0], y: CENTRE[1], note: "Roads to every zone meet here." },
     ...f.zones.map((z, i) => {
       const lv = z.species.map((s) => mid(s).level);
       return { id: `lm_${stem(f)}_${z.name.toLowerCase().replace(/[^a-z]+/g, "_")}`, name: z.name, kind: "farm" as const, x: centres[i][0], y: centres[i][1], note: `Lv ${Math.min(...lv)}-${Math.max(...lv)}: ${z.species.filter((s, j, a) => a.indexOf(s) === j).join(", ")}.` };
     }),
-    { id: `lm_${stem(f)}_east_camp`, name: "East Post", kind: "camp", x: 362, y: 192, note: nextField ? `The road east to ${nextField.name}.` : "The end of the road." },
+    { id: `lm_${stem(f)}_east_camp`, name: "East Post", kind: "camp", x: 180, y: CENTRE[1], note: nextField ? `The road east to ${nextField.name}.` : "The end of the road." },
   ];
   if (f.dungeon) landmarks.push({ id: `lm_${stem(f)}_dungeon_gate`, name: "Dungeon Gate", kind: "gate", x: gate.trigger[0] + 3, y: gate.trigger[1], note: `The way down to the ${DUNGEON_BOSS[f.dungeon.id]}'s dungeon.` });
   if (f.fieldBoss) landmarks.push({ id: `lm_${stem(f)}_boss`, name: `${f.fieldBoss}'s Arena`, kind: "boss_arena", x: bossAt[0], y: bossAt[1], note: "World boss." });
 
   const props: MapDesign["props"] = [
-    { kind: "tent", x: 10, y: 184, block: 2 }, { kind: "lamp_post", x: 28, y: 185, block: 1 }, { kind: "crate", x: 30, y: 200, block: 1 },
-    { kind: "rune_stone", x: CENTRE[0] + 6, y: CENTRE[1] + 6, block: 1 },
-    { kind: "tent", x: 370, y: 184, block: 2 }, { kind: "lamp_post", x: 354, y: 185, block: 1 },
+    { kind: "tent", x: 7, y: 88, block: 2 }, { kind: "lamp_post", x: 21, y: 89, block: 1 }, { kind: "crate", x: 22, y: 101, block: 1 },
+    { kind: "rune_stone", x: CENTRE[0] + 5, y: CENTRE[1] + 5, block: 1 },
+    { kind: "tent", x: 185, y: 89, block: 2 }, { kind: "lamp_post", x: 173, y: 89, block: 1 },
   ];
   if (f.dungeon) props.push({ kind: "cave_mouth", x: gate.trigger[0] + 3, y: gate.trigger[1] - 3, block: 0, scale: 1.4 });
 
@@ -282,13 +328,13 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
     ...(ground_patches.length ? { ground_patches } : {}),
     border: t.border ? { width: 4, kind: t.border.kind } : { width: 4, kind: "forest" },
     roads, blockers, props,
-    scatter: t.scatter.map((s) => ({ kind: s.kind, count: Math.min(560, s.count * 7), block: s.block, scale: s.scale })),
+    scatter: t.scatter.map((s) => ({ kind: s.kind, count: Math.min(240, s.count * 3), block: s.block, scale: s.scale })),
     landmarks, safe_areas: f.dungeon ? [CAMP_W, CAMP_E, gate.safe] : [CAMP_W, CAMP_E], horde: FIELD_ALIVE, pockets,
     npcs: [
-      { id: `npc_${stem(f)}_scout`, name: `${f.name} Scout`, position: [14, 186], facing: "E", role: "scout", dialogue_id: `dlg_${stem(f)}_scout`, shop_id: null },
-      { id: `npc_${stem(f)}_medic`, name: `${f.name} Medic`, position: [28, 198], facing: "E", role: "healer", dialogue_id: `dlg_${stem(f)}_medic`, shop_id: null },
-      { id: `npc_${stem(f)}_transit`, name: `${f.name} Transit`, position: [14, 198], facing: "E", role: "teleporter", dialogue_id: `dlg_${stem(f)}_transit`, shop_id: null, destinations: [[HUB, 0]] },
-      { id: `npc_${stem(f)}_post`, name: `${f.name} East Post`, position: [372, 190], facing: "W", role: "teleporter", dialogue_id: `dlg_${stem(f)}_post`, shop_id: null, destinations: [[HUB, 0]] },
+      { id: `npc_${stem(f)}_scout`, name: `${f.name} Scout`, position: [9, 91], facing: "E", role: "scout", dialogue_id: `dlg_${stem(f)}_scout`, shop_id: null },
+      { id: `npc_${stem(f)}_medic`, name: `${f.name} Medic`, position: [19, 100], facing: "E", role: "healer", dialogue_id: `dlg_${stem(f)}_medic`, shop_id: null },
+      { id: `npc_${stem(f)}_transit`, name: `${f.name} Transit`, position: [9, 100], facing: "E", role: "teleporter", dialogue_id: `dlg_${stem(f)}_transit`, shop_id: null, destinations: [[HUB, 0]] },
+      { id: `npc_${stem(f)}_post`, name: `${f.name} East Post`, position: [184, 95], facing: "W", role: "teleporter", dialogue_id: `dlg_${stem(f)}_post`, shop_id: null, destinations: [[HUB, 0]] },
     ],
   };
 }
