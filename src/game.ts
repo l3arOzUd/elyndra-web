@@ -16,7 +16,7 @@ import type { Cell } from "./shared/path";
 import { ITEM_KEYS, TOTEM_KEYS, type Hud } from "./ui/hud";
 import { Minimap } from "./ui/minimap";
 import type { NpcDialog } from "./ui/npcDialog";
-import { Overlay, project, type Label } from "./ui/overlay";
+import { Overlay, type Label } from "./ui/overlay";
 import { WalkGrid } from "./world/grid";
 import { findPath } from "./world/pathfinding";
 
@@ -166,7 +166,19 @@ export class Game {
       case "loot": for (const p of m.piles) this.addPile(p); break;
       case "loot_gone": for (const id of m.ids) this.removePile(id); break;
       case "inv": this.hud.setInventory(m); if (this.dialog.current) this.conn.send({ t: "npc", npc: this.dialog.current, op: "talk" }); break;
-      case "stats": this.hud.setStats(m); { const me = this.self; if (me) { me.hp = m.hp; me.mhp = m.mhp; me.label?.setHp(m.hp, m.mhp); } } break;
+      case "stats": {
+        const prev = this.hud.stats;
+        this.hud.setStats(m);
+        const me = this.self;
+        if (me) {
+          me.hp = m.hp; me.mhp = m.mhp; me.label?.setHp(m.hp, m.mhp);
+          // EXP gained (kills, quests) floats over our head; a level up says so.
+          const at = tmpA.copy(me.pos).addScaledVector(UP, me.actor.height + 0.6);
+          if (prev && m.lv > prev.lv) this.overlay.text("LEVEL UP!", at, "total");
+          else if (prev && m.lv === prev.lv && m.exp > prev.exp) this.overlay.text(`+${(m.exp - prev.exp).toLocaleString()} EXP`, at, "exp");
+        }
+        break;
+      }
       case "quests": this.hud.setQuests(m.quests); break;
       case "sheet": this.hud.setSheet(m); break;
       case "npc": this.dialog.show(m); break;
@@ -507,13 +519,16 @@ export class Game {
   private pick(): Ent | null {
     const cam = this.cam.camera;
     let best: Ent | null = null, bestD = Infinity;
+    // The box is the sprite as drawn (its card on screen), at least 36 px
+    // each way; among overlapping monsters the one whose centre is nearest wins.
     for (const e of this.ents.values()) {
       if (e.dead || e.id === this.selfId || e.kind === "p") continue;
-      const [fx, fy] = project(tmpA.copy(e.pos), cam, this.width, this.height);
-      const [, hy] = project(tmpB.copy(e.pos).addScaledVector(UP, e.actor.height * 1.15), cam, this.width, this.height);
-      const half = Math.max(14, (fy - hy) * 0.45);
-      if (this.mouse.x < fx - half || this.mouse.x > fx + half || this.mouse.y < hy || this.mouse.y > fy + 6) continue;
-      const d = Math.hypot(this.mouse.x - fx, this.mouse.y - (fy + hy) / 2);
+      let [x0, y0, x1, y1] = e.actor.screenRect(cam, this.width, this.height);
+      const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+      if (x1 - x0 < 36) { x0 = cx - 18; x1 = cx + 18; }
+      if (y1 - y0 < 36) { y0 = cy - 18; y1 = cy + 18; }
+      if (this.mouse.x < x0 || this.mouse.x > x1 || this.mouse.y < y0 || this.mouse.y > y1) continue;
+      const d = Math.hypot(this.mouse.x - cx, this.mouse.y - cy);
       if (d < bestD) { bestD = d; best = e; }
     }
     return best;

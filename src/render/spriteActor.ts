@@ -29,6 +29,8 @@ const fragmentShader = /* glsl */ `
 `;
 
 const tmpRight = new THREE.Vector3();
+const tmpUp = new THREE.Vector3();
+const tmpCorner = new THREE.Vector3();
 let shadowTexture: THREE.Texture | null = null;
 function softShadow(): THREE.Texture {
   if (shadowTexture) return shadowTexture;
@@ -96,6 +98,27 @@ export class SpriteActor {
       shadow.renderOrder = -1;
       this.root.add(shadow);
     }
+  }
+
+  /** The sprite's frame on screen as drawn (camera-facing card, at rest, not
+   * the animated squash), trimmed to its middle 70% across where the art is:
+   * [left, top, right, bottom] in pixels. For clicking. */
+  screenRect(camera: THREE.Camera, w: number, h: number): [number, number, number, number] {
+    const { json } = this.sprite;
+    const px = json.pivot.x / json.frame.w, py = json.pivot.y / json.frame.h;
+    const W = this.baseScale.x, H = this.baseScale.y;
+    const right = tmpRight.set(1, 0, 0).applyQuaternion(camera.quaternion);
+    const up = tmpUp.set(0, 1, 0).applyQuaternion(camera.quaternion);
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    for (const cx of [-px * W, (1 - px) * W]) {
+      for (const cy of [(py - 1) * H, py * H]) {
+        tmpCorner.copy(this.root.position).addScaledVector(right, cx).addScaledVector(up, cy).project(camera);
+        const sx = ((tmpCorner.x + 1) / 2) * w, sy = ((1 - tmpCorner.y) / 2) * h;
+        x0 = Math.min(x0, sx); x1 = Math.max(x1, sx); y0 = Math.min(y0, sy); y1 = Math.max(y1, sy);
+      }
+    }
+    const trim = (x1 - x0) * 0.15;
+    return [x0 + trim, y0 + (y1 - y0) * 0.08, x1 - trim, y1];
   }
 
   /** On-screen height in world units, for labels above the head. */
