@@ -110,7 +110,7 @@ export class Game {
   private heldDirs: string[] = [];
   private keyWalk = { dir: "", at: 0 };
   /** Left button held after a ground click: keep walking toward the cursor. */
-  private holdWalk = { on: false, at: 0, cell: "" };
+  private holdWalk = { on: false, at: 0 };
   /** Client-side prediction of our own walk. */
   private predicted: { path: Cell[]; at: THREE.Vector3 } | null = null;
   /** Our own cast in progress (until its first combat event, or a timeout):
@@ -473,17 +473,13 @@ export class Game {
    * no diagonals): the walk is re-aimed a few cells ahead every 250 ms, and
    * letting go stops at the next cell.
    */
-  /** Click and hold on the ground: re-aim at the cell under the cursor when
-   * it changes (checked every 150 ms), so the walk follows the mouse. */
+  /** Click and hold on the ground repeats the click every 200 ms at the cell
+   * under the cursor (marker included), so the walk follows the mouse. */
   private updateHoldWalk(now: number) {
-    if (!this.holdWalk.on || this.heldDirs.length || now - this.holdWalk.at < 150) return;
+    if (!this.holdWalk.on || this.heldDirs.length || now - this.holdWalk.at < 200) return;
     this.holdWalk.at = now;
     const p = this.groundPoint();
-    if (!p) return;
-    const cell: Cell = [Math.floor(p.x), Math.floor(p.z)], key = cell.join(",");
-    if (key === this.holdWalk.cell) return;
-    this.holdWalk.cell = key;
-    this.walkTo(cell, false, 3);
+    if (p) this.walkTo([Math.floor(p.x), Math.floor(p.z)]);
   }
 
   private updateKeyWalk(now: number) {
@@ -556,7 +552,7 @@ export class Game {
       const p = this.groundPoint();
       if (p) {
         this.walkTo([Math.floor(p.x), Math.floor(p.z)]);
-        this.holdWalk = { on: true, at: performance.now(), cell: Math.floor(p.x) + "," + Math.floor(p.z) };
+        this.holdWalk = { on: true, at: performance.now() };
         el.setPointerCapture(ev.pointerId);
       }
     });
