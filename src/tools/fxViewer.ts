@@ -60,9 +60,20 @@ function inArea(s: SkillDef, p: THREE.Vector3) {
   }
 }
 
-function castNow(id: string) {
+// The viewer's own clock, so a cast can stop at an exact moment for a
+// screenshot: castNow(id, freezeMs) freezes it freezeMs after the cast.
+let clock = 0, castAt = 0, freezeAt = Infinity;
+let queue: { at: number; fn: () => void }[] = [];
+const later = (ms: number, fn: () => void) => queue.push({ at: clock + ms, fn });
+
+function castNow(id: string, freezeMs?: number) {
   const s = skills.find((k) => k.id === id);
   if (!s) return;
+  fx.clear();
+  queue = [];
+  castAt = clock;
+  freezeAt = freezeMs === undefined ? Infinity : clock + freezeMs;
+  Object.assign(window, { frozen: false });
   const castMs = Math.max(150, s.cast_ms);
   hero.heading = headingOf(aim.x, aim.z);
   fx.telegraph(s, 0, 0, aim.x, aim.z, castMs);
@@ -72,12 +83,12 @@ function castNow(id: string) {
   const hits = targets.filter((t) => inArea(s, t.position));
   const step = s.hits && s.hits > 1 ? s.hit_ms ?? 180 : 0;
   for (let tick = 0; tick < (s.ticks ?? 1); tick++) {
-    setTimeout(() => {
+    later(castMs + tick * (s.tick_ms ?? 0), () => {
       fx.shaped(s, 0, 0, aim.x, aim.z);
       for (let k = 0; k < (step ? s.hits! : 1); k++) {
-        setTimeout(() => { for (const t of hits) fx.impact(t.position.clone().setY(0.4), COLORS[s.id] ?? 0xffffff); }, k * step);
+        later(k * step, () => { for (const t of hits) fx.impact(t.position.clone().setY(0.4), COLORS[s.id] ?? 0xffffff); });
       }
-    }, castMs + tick * (s.tick_ms ?? 0));
+    });
   }
 }
 Object.assign(window, { castNow });
@@ -106,7 +117,17 @@ renderer.setAnimationLoop((now) => {
   cam.camera.updateProjectionMatrix();
   cam.update(dtMs / 1000, hero.root.position);
   hero.update(dtMs, cam.camera, cam.yaw);
-  fx.update(dtMs);
+  const step = Math.max(0, Math.min(dtMs, freezeAt - clock));
+  clock += step;
+  const due = queue.filter((q) => q.at <= clock);
+  queue = queue.filter((q) => q.at > clock);
+  for (const q of due) q.fn();
+  fx.update(step);
+  if (clock >= freezeAt && !(window as { frozen?: boolean }).frozen) {
+    // Stop the cast bar where the cast is, too.
+    for (const a of document.getAnimations()) { a.pause(); a.currentTime = clock - castAt; }
+    Object.assign(window, { frozen: true });
+  }
   label.place(new THREE.Vector3(0, hero.height + 0.35, 0), cam.camera, w, h);
   overlay.update(dtMs, cam.camera, w, h);
   renderer.render(scene, cam.camera);

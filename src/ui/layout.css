@@ -243,7 +243,7 @@ button.on { background:#426c55; color:#f8efd6; }
 .tag-target .tag-name { color:#ffd36b; }.tag-dead { opacity:0; transition:opacity .4s; }
 /* Cast bar over the name: a gilt frame filling with molten gold, flaring as the skill goes off. */
 .tag-cast { position:absolute; bottom:calc(100% + 3px); left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:2px; pointer-events:none; animation:cast-in .14s ease-out; }
-.tag-cast-name { font:700 12.5px/1 var(--ui-font-title); letter-spacing:.05em; color:#ffe7a8; text-shadow:0 0 3px #000,0 1px 1px #000,0 0 8px #000a; }
+.tag-cast-name { font:700 14px/1 var(--ui-font-title); letter-spacing:.04em; color:#fff0c4; -webkit-text-stroke:3px #1b1006; paint-order:stroke fill; text-shadow:0 1px 2px #000,0 0 8px #000a; }
 .tag-cast-bar { position:relative; width:74px; height:8px; border-radius:3px; overflow:hidden; background:linear-gradient(#0f0a06,#2b1e12); border:1px solid #140c05; box-shadow:0 0 0 1px #b98a4a,0 0 0 2px #2a1a0c,inset 0 1px 2px #000,0 2px 5px #0009; }
 .tag-cast-bar > div { position:relative; height:100%; width:0; background:linear-gradient(#fff6cf,#f3cf7a 45%,#c48a34); box-shadow:0 0 6px #ffd98a; animation:cast-fill var(--cast-ms) linear forwards; }
 .tag-cast-bar > div::after { content:""; position:absolute; right:-2px; top:-2px; width:5px; height:12px; border-radius:50%; background:radial-gradient(#fff,#fff0 70%); }

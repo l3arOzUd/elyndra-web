@@ -138,12 +138,13 @@ export class Fx {
     }
   }
 
-  /** A column of light: a bright core inside a wide soft one. */
-  private pillar(x: number, z: number, color: number, r: number, h: number, life: number, delay = 0) {
-    for (const [k, o] of [[0.32, 0.9], [1, 0.35]] as const) {
-      const beam = new THREE.Mesh(new THREE.CylinderGeometry(r * k, r * k * 1.3, h, 24, 1, true).translate(0, h / 2, 0), glowMat(k < 1 ? 0xffffff : color, o));
+  /** A column of light: a bright core inside a wide soft one. A skill's core is tinted and softer than a level-up's white one. */
+  private pillar(x: number, z: number, color: number, r: number, h: number, life: number, o: { delay?: number; white?: boolean } = {}) {
+    const core = o.white ? 0xffffff : new THREE.Color(color).lerp(new THREE.Color(0xffffff), 0.45).getHex();
+    for (const [k, a] of [[0.32, o.white ? 0.9 : 0.55], [1, 0.35]] as const) {
+      const beam = new THREE.Mesh(new THREE.CylinderGeometry(r * k, r * k * 1.3, h, 24, 1, true).translate(0, h / 2, 0), glowMat(k < 1 ? core : color, a));
       beam.position.set(x, 0.02, z);
-      this.push(beam, "beam", life, { delay });
+      this.push(beam, "beam", life, { delay: o.delay });
     }
   }
 
@@ -304,7 +305,6 @@ export class Fx {
           this.glow(x, z, color, 2.4 + k * 0.3, { delay: d, life: 260 });
           this.sparks(x, z, color, 10, { r: r * 0.5, speed: 3, up: 4, g: 12, life: 700, delay: d, size: 0.1 });
         });
-        this.pillar(x, z, color, 0.9, 5, 700);
         return true;
       case "aether_nova":
         this.glow(x, z, color, r * 0.6, { life: 420 });
@@ -490,7 +490,7 @@ export class Fx {
    * up; skill ranks use about 0.6. About 30 meshes, once, so cheap enough.
    */
   celebrate(x: number, z: number, color: number, power = 1) {
-    this.pillar(x, z, color, 1.1 * power, 9 * power, 1600 * Math.max(0.7, power));
+    this.pillar(x, z, color, 1.1 * power, 9 * power, 1600 * Math.max(0.7, power), { white: true });
     // Rings rolling out.
     for (let i = 0; i < 3; i++) {
       const ring = new THREE.Mesh(new THREE.RingGeometry(0.85, 1, 48).rotateX(-Math.PI / 2), glowMat(i === 1 ? 0xffffff : color, 0.95));
