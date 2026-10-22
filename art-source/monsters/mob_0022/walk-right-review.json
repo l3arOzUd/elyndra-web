@@ -1,0 +1,20 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "right-neutral-v2.png",
+    "walk-right-near-lift.png"
+  ],
+  "status": "near-leg-lift-pose-study",
+  "artApproved": false,
+  "publicBinding": false,
+  "confirmed": [
+    "Two distinct legs visible.",
+    "Near boot visibly clears floor; opposite leg supports body."
+  ],
+  "remaining": [
+    "Stride reads as high marching step rather than heavy mechanical walk.",
+    "Torso shifts relative to neutral.",
+    "Knee cap and hinge geometry still inconsistent.",
+    "Far-leg lift, contacts, weight transfer and full cycle missing."
+  ]
+}

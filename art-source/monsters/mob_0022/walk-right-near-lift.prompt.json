@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-neutral-v2.png",
+  "prompt": "Edit this right-facing mechanical Brine Automaton into ONE walking passing-pose sprite. Near leg lifts: hip rotates forward to image right, knee bends, near boot raised clearly above floor with toe pointing right. Far leg is visible behind and remains planted beneath body supporting weight. Exactly TWO legs, mechanical segment lengths unchanged, no stretching or rubber deformation. Near arm swings modestly backward to counter near leg. Preserve rigid barrel torso, tank, valves, copper patina, salt, gauge, same square framing and body scale. Eye-level orthographic right profile, full body centered at same torso position. Real transparent background, no text, ground, cast shadow or steam. Single frame, not a sheet."
+}
