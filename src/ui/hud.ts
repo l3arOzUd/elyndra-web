@@ -32,7 +32,7 @@ export const ITEM_KEYS = ['itm_0075', 'itm_0076', 'itm_0077'] as const;
 export const TOTEM_KEYS = ['8', '9', '0'] as const;
 const gearKey = (uid: number) => 'g:' + uid;
 /** Line art for an empty equipment slot. */
-const SLOT_ICON: Record<string, string> = { weapon: 'sword', head: 'shield', armor: 'armor', boots: 'boots', accessory: 'crystal', charm1: 'star', charm2: 'star', charm3: 'star' };
+const SLOT_ICON: Record<string, string> = { weapon: 'sword', head: 'shield', armor: 'armor', gloves: 'gloves', boots: 'boots', accessory: 'crystal', charm1: 'star', charm2: 'star', charm3: 'star' };
 /** Game windows: opening one closes the others, except Inventory and Equipment, which open side by side. */
 const WINDOWS = ['inv-win', 'equip-win', 'journal-win', 'menu-win', 'char-win'];
 const PAIRED = ['inv-win', 'equip-win'];
@@ -266,6 +266,8 @@ export class Hud {
   }
   /** ms: the cooldown the server applied (after Cooldown Recovery). */
   startCooldown(skill: string, ms?: number) { const s = this.c.skills.get(skill); if (s) this.cooldownUntil[skill] = performance.now() + (ms ?? s.cooldown_ms); }
+  /** The SP bar blinks when a skill was refused for lack of SP. */
+  flashSp() { const bar = $('sp-fill').parentElement!; bar.classList.remove('flash'); void bar.offsetWidth; bar.classList.add('flash'); }
   canCast(skill: string) { return (this.cooldownUntil[skill] ?? 0) <= performance.now(); }
   refreshHotbar() {
     const lv = this.stats?.lv ?? 1, now = performance.now();
@@ -276,7 +278,7 @@ export class Hud {
         const nosp = !!s && !!this.stats && this.stats.sp < s.resource_cost;
         b.classList.toggle('locked', locked); b.classList.toggle('cooling', left > 0); b.classList.toggle('nosp', nosp);
         b.querySelector('.cd')!.textContent = locked ? 'Lv ' + s!.unlock_level : left > 0 ? (left / 1000).toFixed(1) : '';
-        b.disabled = locked || left > 0 || nosp;
+        b.disabled = false; // a refused click says why, over the player (game.cast)
       } else if (b.dataset.item) {
         const qty = this.inventory[b.dataset.item] ?? 0;
         b.querySelector('.qty')!.textContent = String(qty); b.classList.toggle('locked', !qty); b.disabled = !qty;
@@ -423,8 +425,8 @@ export class Hud {
       if (g && it) this.bindTooltip(b, () => gearTitle(it, g), () => this.gearSummary(g));
       return b;
     };
-    // Three rows each side: head / weapon / (free) on the left, accessory / body / boots on the right.
-    $('doll-left').replaceChildren(...['head', 'weapon'].map(slotButton));
+    // Three rows each side: head / weapon / gloves on the left, accessory / body / boots on the right.
+    $('doll-left').replaceChildren(...['head', 'weapon', 'gloves'].map(slotButton));
     $('doll-right').replaceChildren(...['accessory', 'armor', 'boots'].map(slotButton));
     $('doll-charms').replaceChildren(...CHARM_SLOTS.map(slotButton));
     $('equipment-job').textContent = this.stats ? this.stats.job[0].toUpperCase() + this.stats.job.slice(1) + ' · Lv ' + lv : '';

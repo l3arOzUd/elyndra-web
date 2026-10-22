@@ -17,7 +17,7 @@ const MERGE_MS = 150;
 /** Limits on the zoom scale, so numbers stay readable at both ends. */
 const MIN_ZOOM_SCALE = 0.5, MAX_ZOOM_SCALE = 2;
 
-type FloatKind = "dmg" | "crit" | "taken" | "heal" | "exp" | "info" | "part" | "part-crit" | "total";
+type FloatKind = "dmg" | "crit" | "taken" | "heal" | "exp" | "info" | "part" | "part-crit" | "total" | "warn-sp" | "warn";
 
 interface Float {
   el: HTMLElement; pos: THREE.Vector3; age: number; life: number; busy: boolean;
@@ -90,6 +90,19 @@ export class Overlay {
 
   text(text: string, pos: THREE.Vector3, kind: FloatKind) {
     this.spawn(text, pos, kind);
+  }
+
+  /**
+   * A warning over the player (not enough SP, not ready, locked): drifts up
+   * slowly and fades, so it reads where the player is looking. The same
+   * warning again restarts it instead of stacking copies.
+   */
+  warn(text: string, pos: THREE.Vector3, kind: "warn-sp" | "warn") {
+    const live = this.pool.find((f) => f.busy && f.key === "warn");
+    if (live && live.el.textContent === text) { live.age = 0; live.pop = 0; live.pos.copy(pos); return; }
+    if (live) { live.busy = false; live.el.style.display = "none"; }
+    const f = this.spawn(text, pos, kind, { dx: 0, rise: 34, life: 1700 });
+    f.key = "warn";
   }
 
   private spawn(text: string, pos: THREE.Vector3, kind: FloatKind,

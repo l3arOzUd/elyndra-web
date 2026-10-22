@@ -469,8 +469,13 @@ export class Game {
   private cast(skill: string) {
     const s = this.c.skills.get(skill);
     const me = this.self;
-    if (!s || !me || me.dead || !this.hud.canCast(skill)) return;
-    if ((this.hud.stats?.lv ?? 1) < s.unlock_level) { this.hud.log(`${s.name} unlocks at Lv${s.unlock_level}`, "bad"); return; }
+    if (!s || !me || me.dead) return;
+    // Why a skill key did nothing, over the player's head where they are looking.
+    const head = () => tmpA.copy(me.pos).addScaledVector(UP, me.actor.height + 0.35);
+    if ((this.hud.stats?.lv ?? 1) < s.unlock_level) { this.overlay.warn(`${s.name}: unlocks at Lv ${s.unlock_level}`, head(), "warn"); this.hud.log(`${s.name} unlocks at Lv${s.unlock_level}`, "bad"); return; }
+    if (!this.hud.canCast(skill)) { this.overlay.warn(`${s.name} not ready`, head(), "warn"); return; }
+    const sp = this.hud.stats?.sp ?? 0;
+    if (sp < s.resource_cost) { this.overlay.warn(`Not enough SP  ${sp} / ${s.resource_cost}`, head(), "warn-sp"); this.hud.flashSp(); return; }
     const aim = this.groundPoint() ?? new THREE.Vector3(me.pos.x + Math.sin(me.actor.heading), 0, me.pos.z - Math.cos(me.actor.heading));
     this.conn.send({ t: "cast", skill, aim: [aim.x, aim.z] });
   }
