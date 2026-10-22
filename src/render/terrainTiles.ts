@@ -27,6 +27,8 @@ interface Paint { tex: Tile; tint: [number, number, number]; desat: number; lift
 const paint = (tex: Tile, tint: [number, number, number] = [1, 1, 1], desat = 0, lift = 0, scale = 8, art?: string): Paint => ({ tex, tint, desat, lift, scale, art });
 /** Cells a made-for-purpose ground texture spans per repeat. */
 const ART_SCALE = 10;
+/** Lifts a made-for-purpose texture back to its painted brightness under the ground's grey and the lights. */
+const ART_GAIN = 2.2;
 
 const GROUND_PAINT: Record<Ground, Paint> = {
   grass: paint("grass", [1, 1, 1], 0, 0, 8, "grass"),
@@ -213,7 +215,7 @@ export async function applyPaintedTerrain(
   const road = ROAD_PAINT[roadKindOf(layout)] ?? ROAD_PAINT.dirt!, stoneRoad = ROAD_PAINT.stone!;
   const trampled = layout.ground === "snow" || layout.ground === "sand" ? GROUND_PAINT[layout.ground] : ROAD_PAINT.dirt!;
   // A made-for-purpose texture is used as painted: no tint, its own scale.
-  const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled].map((r) => (r.art && envArt.textures.has(r.art) ? paint(r.tex, [1, 1, 1], 0, 0, ART_SCALE, r.art) : r));
+  const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled].map((r) => (r.art && envArt.textures.has(r.art) ? paint(r.tex, [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, ART_SCALE, r.art) : r));
   const maps = recipes.map((r) => tile(r.art && envArt.textures.has(r.art) ? r.art : r.tex));
   const dry = tile(envArt.textures.has("grass_alt") ? "grass_alt" : "grass_dry"), moss = tile("moss"), plaza = tile("plaza_tile");
   if (maps.every(Boolean) && dry && moss && plaza) {
@@ -234,7 +236,8 @@ export async function applyPaintedTerrain(
         terrainZoneA: { value: maps[1] }, terrainZoneB: { value: maps[2] }, terrainRoad: { value: maps[3] }, terrainStone: { value: maps[4] }, terrainTrampled: { value: maps[5] },
         terrainDry: { value: dry }, terrainMoss: { value: moss }, terrainPlaza: { value: plaza },
         terrainRecipes: { value: recipes.map(recipe) }, terrainTints: { value: recipes.map(tint) },
-        terrainMeadow: { value: MEADOW[layout.ground] ?? 0 },
+        // The old dry grass reads as olive mud on a painted ground; only its own alt mixes in.
+        terrainMeadow: { value: envArt.textures.has(recipes[0].art ?? "") && !envArt.textures.has("grass_alt") ? 0 : MEADOW[layout.ground] ?? 0 },
       });
       shader.vertexShader = `varying vec2 vTerrainUv;\n${shader.vertexShader}`.replace("#include <uv_vertex>", "#include <uv_vertex>\nvTerrainUv = uv;");
       shader.fragmentShader = `
