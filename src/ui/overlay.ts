@@ -17,6 +17,8 @@ const MERGE_MS = 150;
 /** Limits on the zoom scale, so numbers stay readable at both ends. */
 const MIN_ZOOM_SCALE = 0.5, MAX_ZOOM_SCALE = 2;
 
+/** The same skill warning repeats at most this often while a key is held. */
+const WARN_REPEAT_MS = 500;
 type FloatKind = "dmg" | "crit" | "taken" | "heal" | "exp" | "info" | "part" | "part-crit" | "total" | "warn-sp" | "warn";
 
 interface Float {
@@ -97,13 +99,21 @@ export class Overlay {
    * slowly and fades, so it reads where the player is looking. The same
    * warning again restarts it instead of stacking copies.
    */
-  warn(text: string, pos: THREE.Vector3, kind: "warn-sp" | "warn") {
+  warn(text: string, pos: THREE.Vector3, kind: "warn-sp" | "warn"): boolean {
+    // A held key repeats ~30 times a second: the same warning shows again at
+    // most every WARN_REPEAT_MS, so holding reads as a steady pulse, not a flicker.
+    const now = performance.now();
+    if (text === this.lastWarn.text && now - this.lastWarn.at < WARN_REPEAT_MS) return false;
+    this.lastWarn = { text, at: now };
     const live = this.pool.find((f) => f.busy && f.key === "warn");
-    if (live && live.el.textContent === text) { live.age = 0; live.pop = 0; live.pos.copy(pos); return; }
+    if (live && live.el.textContent === text) { live.age = 0; live.pop = 0; live.pos.copy(pos); return true; }
     if (live) { live.busy = false; live.el.style.display = "none"; }
     const f = this.spawn(text, pos, kind, { dx: 0, rise: 34, life: 1700 });
     f.key = "warn";
+    return true;
   }
+
+  private lastWarn = { text: "", at: -Infinity };
 
   private spawn(text: string, pos: THREE.Vector3, kind: FloatKind,
     o: { dx?: number; dy?: number; rise?: number; life?: number; hold?: boolean } = {}): Float {
