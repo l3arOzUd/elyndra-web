@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-neutral-v3.png",
+  "prompt": "Same rear Brine Automaton walking AWAY from camera. Localized gait key: IMAGE LEFT leg bends at knee and lifts boot, heel raised about 70px from neutral baseline, sole partly visible from behind as lower leg folds back. IMAGE RIGHT boot remains planted exactly at original location supporting weight. Same two rigid legs, no stretching. Arms counter-swing slightly with two-jaw clamp backs unchanged. Preserve rear hatch, tank and straps, valves, barrel width and camera/scale/framing. No face or front gauges on rear. Keep all limbs attached, mechanical knee axes plausible. Single full-body frame transparent alpha, no floor/shadow/steam/text. Same painted copper brass verdigris."
+}

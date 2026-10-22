@@ -1,0 +1,22 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "back-neutral-v3.png",
+    "walk-back-right-lift.png",
+    "walk-back-left-lift.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "frameMs": 220,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Ankle hinges and sole patterns differ between lifted feet.",
+    "Body and foot landmarks drift.",
+    "Weight transfer uses neutral instead of authored contact poses."
+  ]
+}
