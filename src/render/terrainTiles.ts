@@ -25,7 +25,7 @@ const GROUND_PAINT: Record<Ground, Paint> = {
   grass: paint("grass"),
   moss: paint("moss", [0.96, 1, 0.94], 0, 0, 7),
   sand: paint("dirt_path", [2.2, 1.8, 1.07], 0.5, 0.35, 11),
-  snow: paint("dirt_path", [0.95, 1, 1.1], 0.95, 1, 12),
+  snow: paint("dirt_path", [0.95, 1, 1.1], 0.95, 1.25, 12),
   ash: paint("cave_floor", [1.35, 1.22, 1.15], 0.5, 0.16, 8),
   stone: paint("cobblestone", [1, 1, 1], 0, 0, 5),
   shore: paint("grass_dry", [2, 1.8, 1.3], 0.6, 0.3, 9),
@@ -37,7 +37,7 @@ const ROAD_PAINT: Partial<Record<RoadKind, Paint>> = {
   dirt: paint("dirt_path", [1, 1, 1], 0, 0, 6),
   stone: paint("cobblestone", [1, 1, 1], 0, 0, 5),
   brass: paint("cobblestone", [1.16, 0.96, 0.64], 0.35, 0.02, 5),
-  ice: paint("dirt_path", [0.95, 1.02, 1.12], 0.95, 0.75, 7),
+  ice: paint("dirt_path", [0.92, 1.0, 1.12], 0.95, 1.0, 7),
   obsidian: paint("cave_floor", [0.56, 0.5, 0.62], 0.3, 0, 6),
 };
 

@@ -21,6 +21,8 @@ interface Card { kind: string; w: number; h: number; px: number; py: number }
 const SIZE: Record<string, [number, number]> = {
   tree: [3, 3.6], pine: [2.2, 3.8], bush: [1.4, 1.1], rock: [1.1, 0.9], boulder: [2.2, 1.8], dead_tree: [2.6, 3.2],
   palm: [3.2, 4], coral: [1.3, 1.3], ice_spike: [1.2, 2.2], crystal: [1, 1.6], giant_tree: [7, 8],
+  // Ground detail (decorProps): never blocks, never in the map data.
+  tuft: [0.8, 0.6], flowers: [0.9, 0.62], pebbles: [0.8, 0.45], dry_tuft: [0.8, 0.6], snow_tuft: [0.8, 0.55],
 };
 const VARIANTS = 3;
 const PPC = 72; // atlas pixels per cell
@@ -215,6 +217,34 @@ function paintCard(g: CanvasRenderingContext2D, kind: string, W: number, H: numb
       arm(cx, base, -Math.PI / 2, H * 0.3, W * 0.1, 2);
       break;
     }
+    case "tuft": case "flowers": case "dry_tuft": case "snow_tuft": {
+      const blades = kind === "snow_tuft" ? 6 : 11;
+      const hue = kind === "dry_tuft" ? 44 : kind === "snow_tuft" ? 34 : 92, sat = kind === "dry_tuft" ? 46 : kind === "snow_tuft" ? 22 : 48;
+      if (kind === "snow_tuft") {
+        g.fillStyle = hsl(205, 35, 82); g.beginPath(); g.ellipse(cx, base - 4, W * 0.36, H * 0.16, 0, 0, Math.PI * 2); g.fill();
+        g.fillStyle = hsl(210, 40, 96); g.beginPath(); g.ellipse(cx - W * 0.05, base - 7, W * 0.3, H * 0.12, 0, 0, Math.PI * 2); g.fill();
+      }
+      for (let pass = 0; pass < 2; pass++) for (let i = 0; i < blades; i++) {
+        const r2 = rng(i * 31 + 7);
+        const x0 = cx + (r2() - 0.5) * W * 0.5, len = H * (0.45 + r2() * 0.45), bend = (r2() - 0.5) * W * 0.5;
+        g.strokeStyle = pass === 0 ? hsl(hue, sat, 12, 0.9) : hsl(hue + (r2() - 0.5) * 16, sat, (kind === "dry_tuft" ? 52 : kind === "snow_tuft" ? 38 : 34) + r2() * 16);
+        g.lineWidth = pass === 0 ? 5 : 2.6; g.lineCap = "round";
+        g.beginPath(); g.moveTo(x0, base); g.quadraticCurveTo(x0 + bend * 0.3, base - len * 0.6, x0 + bend, base - len); g.stroke();
+      }
+      if (kind === "flowers") for (let i = 0; i < 5; i++) {
+        const fx = cx + (rand() - 0.5) * W * 0.6, fy = base - H * (0.45 + rand() * 0.4);
+        g.fillStyle = hsl(0, 0, 10, 0.8); g.beginPath(); g.arc(fx, fy, 6, 0, Math.PI * 2); g.fill();
+        g.fillStyle = ["#ffe066", "#fff6e8", "#f29bb8", "#b9a2f0", "#ff9f5a"][Math.floor(rand() * 5)];
+        g.beginPath(); g.arc(fx, fy, 4.4, 0, Math.PI * 2); g.fill();
+        g.fillStyle = "rgba(255,255,255,.7)"; g.beginPath(); g.arc(fx - 1.2, fy - 1.2, 1.5, 0, Math.PI * 2); g.fill();
+      }
+      break;
+    }
+    case "pebbles": {
+      const hue = look === "dark" ? 20 : dry ? 34 : 38, sat = look === "dark" ? 8 : dry ? 24 : 12, light = look === "dark" ? 34 : dry ? 60 : 56;
+      for (let i = 0; i < 3; i++) stone(g, cx + (i - 1) * W * 0.26 + (rand() - 0.5) * 8, base - H * (0.24 + rand() * 0.1), W * (0.11 + rand() * 0.06), H * (0.2 + rand() * 0.08), rand, hue, sat, light, false, snow);
+      break;
+    }
     case "ice_spike": case "crystal": {
       const ice = kind === "ice_spike";
       const n = ice ? 3 : 4;
@@ -282,6 +312,37 @@ function lookOf(l: MapLayout): Look {
   return "green";
 }
 
+/** Ground detail by look: kinds with weights, and one detail per this many cells. */
+const DECOR: Record<Look, { kinds: [string, number][]; every: number }> = {
+  green: { kinds: [["tuft", 0.55], ["flowers", 0.27], ["pebbles", 0.18]], every: 4 },
+  dry: { kinds: [["dry_tuft", 0.55], ["pebbles", 0.45]], every: 7 },
+  snow: { kinds: [["snow_tuft", 0.6], ["pebbles", 0.4]], every: 7 },
+  dark: { kinds: [["pebbles", 0.7], ["dry_tuft", 0.3]], every: 6 },
+};
+
+/**
+ * Small painted ground detail scattered over open ground (not roads, water
+ * or anything blocked), the same every time for a map. walkable(x, y) and
+ * road(x, y) come from the walk grid and a road raster.
+ */
+export function decorProps(l: MapLayout, walkable: (x: number, y: number) => boolean, road: (x: number, y: number) => boolean): Prop[] {
+  const d = DECOR[lookOf(l)];
+  const rand = rng([...l.id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7));
+  const out: Prop[] = [];
+  const n = Math.round((l.width * l.height) / d.every);
+  for (let i = 0; i < n; i++) {
+    const x = rand() * l.width, y = rand() * l.height, pick = rand();
+    const cx = Math.floor(x), cy = Math.floor(y);
+    if (!walkable(cx, cy) || road(cx, cy)) continue;
+    // Clumps: detail thins out where a slow wave says so, so meadows have bare and lush patches.
+    if (Math.sin(x * 0.21) * Math.cos(y * 0.17) + Math.sin((x + y) * 0.09) < -0.6 && rand() < 0.7) continue;
+    let acc = 0, kind = d.kinds[0][0];
+    for (const [k, w] of d.kinds) { acc += w; if (pick < acc) { kind = k; break; } }
+    out.push({ kind: kind as PropKind, x: x - 0.5, y: y - 0.5, block: 0, scale: 0.8 + rand() * 0.5 });
+  }
+  return out;
+}
+
 /** Boulders heaped over a rock or cliff blocker's footprint, deterministic. */
 function heapOf(b: Blocker, contains: (x: number, y: number) => boolean, bounds: [number, number, number, number]): Prop[] {
   const cliff = b.kind === "cliff";
@@ -306,9 +367,9 @@ function heapOf(b: Blocker, contains: (x: number, y: number) => boolean, bounds:
  * caller can skip their models and give them contact shadows.
  */
 export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T extends { dispose(): void }>(x: T) => T,
-  blockerCells: (b: Blocker) => { contains: (x: number, y: number) => boolean; bounds: [number, number, number, number] }): Prop[] {
+  blockerCells: (b: Blocker) => { contains: (x: number, y: number) => boolean; bounds: [number, number, number, number] }, decor: Prop[] = []): Prop[] {
   const atlas = atlasFor(lookOf(l));
-  const props = l.props.filter((p) => PAINTED_KINDS.has(p.kind));
+  const props = [...l.props.filter((p) => PAINTED_KINDS.has(p.kind)), ...decor];
   for (const b of l.blockers) if (b.kind === "rock" || b.kind === "cliff") { const c = blockerCells(b); props.push(...heapOf(b, c.contains, c.bounds)); }
   // One instanced card mesh per (kind, variant): a unit card, feet at the origin, leaning back to face the camera.
   const groups = new Map<Card, Prop[]>();

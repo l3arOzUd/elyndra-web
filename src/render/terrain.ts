@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import type { BlockerKind, MapLayout, RegionDef, Shape, WarpDef } from "../data/schema";
 import { decodeWalk } from "../data/schema";
-import { buildPaintedProps, PAINTED_KINDS } from "./paintedProps";
+import { buildPaintedProps, decorProps, PAINTED_KINDS } from "./paintedProps";
 import { animatedProp, propGeometry } from "./props";
 import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
 
@@ -246,7 +246,25 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   }
 
   // Natural props are painted cards; the rest are models, one InstancedMesh per kind.
-  const painted = buildPaintedProps(l, group, track, (b) => ({ contains: (x, y) => inShape(b.shape, x, y), bounds: shapeBounds(b.shape) }));
+  const walkCells = decodeWalk(l.walk_rle, l.width * l.height);
+  const roadCells = new Uint8Array(l.width * l.height);
+  for (const r of l.roads) {
+    const half = r.width / 2 + 0.8;
+    for (let i = 1; i < r.points.length; i++) {
+      const [ax, ay] = r.points[i - 1], [bx, by] = r.points[i];
+      const len = Math.hypot(bx - ax, by - ay) || 1;
+      for (let t = 0; t <= len; t += 0.5) {
+        const px = ax + ((bx - ax) * t) / len, py = ay + ((by - ay) * t) / len;
+        for (let dy = -Math.ceil(half); dy <= half; dy++) for (let dx = -Math.ceil(half); dx <= half; dx++) {
+          const x = Math.floor(px + dx), y = Math.floor(py + dy);
+          if (x >= 0 && y >= 0 && x < l.width && y < l.height && dx * dx + dy * dy <= half * half) roadCells[y * l.width + x] = 1;
+        }
+      }
+    }
+  }
+  const inMap = (x: number, y: number) => x >= 0 && y >= 0 && x < l.width && y < l.height;
+  const decor = decorProps(l, (x, y) => inMap(x, y) && walkCells[y * l.width + x] === 1, (x, y) => inMap(x, y) && roadCells[y * l.width + x] === 1);
+  const painted = buildPaintedProps(l, group, track, (b) => ({ contains: (x, y) => inShape(b.shape, x, y), bounds: shapeBounds(b.shape) }), decor);
   // Soft contact shadows tie props to the painted floor in one draw.
   {
     const radius: Partial<Record<typeof l.props[number]["kind"], number>> = {
