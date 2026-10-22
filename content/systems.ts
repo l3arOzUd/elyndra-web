@@ -175,9 +175,9 @@ export const SYSTEMS_RULES: SystemsDef["rules"] = {
   vit_poise_k: 100,
   basic_attack_ms: 800,
   basic_attack_min_ms: 400,
-  basic_targets: 3,
-  basic_cone_deg: 90,
   basic_range: 1.5,
+  // Basic attacks hit one target, so that hit is worth more.
+  basic_more_pct: 50,
   basic_sp_pct: 2,
   cast_pushback_pct: 10,
   cast_pushback_max_pct: 50,
@@ -209,7 +209,9 @@ export const MASTERY: SystemsDef["mastery"] = {
   area_rank: 7,
   area_inc: 15,
   basic_more_per_rank: 3,
-  basic_extra_target_rank: 5,
+  // Rank 5: basic attacks get increased attack speed (they hit one target).
+  basic_speed_rank: 5,
+  basic_speed_inc: 10,
   basic_sp_rank: 10,
   basic_sp_pct: 3,
   perks: {

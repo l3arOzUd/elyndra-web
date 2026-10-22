@@ -30,15 +30,29 @@ const tmpB = new THREE.Vector3();
 /** WASD as screen steps (x right, y down), by physical key so a Thai layout works. */
 const WASD: Record<string, [number, number]> = { KeyW: [0, -1], KeyS: [0, 1], KeyA: [-1, 0], KeyD: [1, 0] };
 
+/** How far from our character monster sprites are drawn at least (cells). */
+const CLEAR_RADIUS = 0.95;
+
 // Where an entity's sprite stands. Melee monsters stack in one cell on the
 // server; each is nudged a little, always the same way for the same monster,
 // so a pile reads as a pile (and its damage numbers sit over each sprite).
-function drawnAt(e: { id: number; kind: string; pos: THREE.Vector3 }, out: THREE.Vector3): THREE.Vector3 {
+function drawnAt(e: { id: number; kind: string; pos: THREE.Vector3 }, out: THREE.Vector3, self?: THREE.Vector3 | null): THREE.Vector3 {
   out.copy(e.pos);
   if (e.kind === "m") {
     const a = e.id * 2.39996, r = 0.12 + (e.id % 7) * 0.035;
     out.x += Math.cos(a) * r;
     out.z += Math.sin(a) * r;
+    // Melee monsters pile into the player's own cell on the server (one spot
+    // a swing hits); draw them on a ring around our character, not on it.
+    if (self) {
+      let dx = out.x - self.x, dz = out.z - self.z;
+      const d = Math.hypot(dx, dz);
+      if (d < CLEAR_RADIUS) {
+        if (d < 1e-3) { dx = Math.cos(a); dz = Math.sin(a); } else { dx /= d; dz /= d; }
+        out.x = self.x + dx * CLEAR_RADIUS;
+        out.z = self.z + dz * CLEAR_RADIUS;
+      }
+    }
   }
   return out;
 }
@@ -382,7 +396,7 @@ export class Game {
     if (flags & 4) { this.overlay.text("◈ " + dmg, at, "taken"); return; } // the Aether Shield took it all
     // A combo's numbers sit over the sprite as drawn (a pile's members are nudged apart).
     // Each monster's own numbers, over its own sprite.
-    if (combo) this.overlay.part(combo, id, dmg, (flags & 1) === 1, drawnAt(t, tmpB).addScaledVector(UP, t.actor.height + 0.3));
+    if (combo) this.overlay.part(combo, id, dmg, (flags & 1) === 1, drawnAt(t, tmpB, this.self?.pos).addScaledVector(UP, t.actor.height + 0.3));
     else this.overlay.damage(id, dmg, (flags & 1) === 1, id === this.selfId ? "taken" : "dmg", at);
     if (id === this.selfId && dmg > t.mhp * 0.1) this.cam.kick(0.25);
   }
@@ -757,7 +771,7 @@ export class Game {
         if (e.state === EntState.Dead && !e.dead) this.die(e);
         if (prevState === EntState.Dead && e.state !== EntState.Dead) { e.dead = false; e.actor.revive(); e.label?.el.classList.remove("tag-dead"); }
       }
-      drawnAt(e, e.actor.root.position);
+      drawnAt(e, e.actor.root.position, this.self?.pos);
     }
     // Monsters whose death has played out leave.
     for (const e of [...this.ents.values()]) {

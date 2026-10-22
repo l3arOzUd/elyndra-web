@@ -249,7 +249,7 @@ export interface SystemsDef {
   mastery: {
     max_rank: number; per_rank: number; level_window: number; elite_kills: number; boss_kills: number;
     more_damage_per_rank: number; sp_cost_rank: number; sp_cost_cut: number; area_rank: number; area_inc: number;
-    basic_more_per_rank: number; basic_extra_target_rank: number; basic_sp_rank: number; basic_sp_pct: number;
+    basic_more_per_rank: number; basic_speed_rank: number; basic_speed_inc: number; basic_sp_rank: number; basic_sp_pct: number;
     perks: Record<string, string>;
   };
   drops: Record<string, number | number[] | Record<string, number>> & {
