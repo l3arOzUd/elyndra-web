@@ -47,12 +47,12 @@ for (const [w, h] of [[1440, 900], [1280, 720], [390, 844]]) {
 
   await page.evaluate(() => window.uiPreview.open('gear'));
   expect(await page.locator('#item-detail .affix-list .affix').count() >= 1, `${w}: gear detail lists affixes`);
-  expect(await page.locator('#item-detail .item-reqs').count() === 1, `${w}: gear detail shows requirements`);
+  expect(await page.locator('#item-detail .req-chips .req').count() >= 1, `${w}: gear detail shows requirements`);
   await page.screenshot({ path: `${out}/gear-${w}.png` });
 
   await page.evaluate(() => window.uiPreview.open('equipment'));
-  expect(await page.locator('#equip .eq-row').count() === 8, `${w}: 5 gear + 3 Charm rows`);
-  expect((await page.locator('#equip').textContent()).includes('+4 '), `${w}: refined item shows +N`);
+  expect(await page.locator('#equip-win .doll-slot').count() === 9, `${w}: 6 gear + 3 Charm slots on the doll`);
+  expect((await page.locator('#equip-win').textContent()).includes('+4'), `${w}: refined item shows +N`);
   await page.screenshot({ path: `${out}/equipment-${w}.png` });
 
   if (w >= 1280) {
