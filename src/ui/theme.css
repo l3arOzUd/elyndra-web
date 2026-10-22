@@ -370,6 +370,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 @media (prefers-reduced-motion:reduce) { .painted-icon.refined::before,.painted-icon.graded::after { animation:none; } }
 
 /* Lore (LORE_BIBLE.md): NPC titles, the map-entry card and the Monster Book. */
+.npc-title { margin:2px 0 0; font-size:13px; font-style:italic; color:#7a5a2c; }
 .tag-title { margin-top:-2px; font-size:10px; font-weight:600; letter-spacing:.04em; color:#e8d3a2; text-shadow:0 0 3px #000,0 1px 2px #000; }
 .map-card { position:fixed; z-index:4; left:50%; top:13vh; transform:translateX(-50%); display:grid; justify-items:center; gap:3px; width:min(560px,calc(100vw - 32px)); padding:12px 28px 14px; text-align:center; pointer-events:none; background:radial-gradient(ellipse at center,#1b120bd9 0,#1b120bb0 55%,#1b120b00 75%); }
 .map-card[hidden] { display:none; }
