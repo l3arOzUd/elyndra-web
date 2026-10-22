@@ -320,7 +320,7 @@ export class Game {
       if (s?.shape === "mobility") {
         // Where the dash ends: the aim, or as far towards it as the skill reaches.
         const dx = m.aim[0] - e.pos.x, dz = m.aim[1] - e.pos.z, k = Math.min(1, s.range / (Math.hypot(dx, dz) || 1));
-        this.fx.dash(e.pos.x, e.pos.z, e.pos.x + dx * k, e.pos.z + dz * k, SKILL_COLORS[s.id] ?? 0x5adcb4, () => e.actor.ghost([0.55, 1.25, 1.15]));
+        this.fx.dash(e.pos.x, e.pos.z, e.pos.x + dx * k, e.pos.z + dz * k, SKILL_COLORS[s.id] ?? 0x5adcb4, () => e.actor.ghost([0.45, 1.35, 1.25]));
       }
       if (s?.ticks && s.tick_ms) this.fx.field(s, m.aim[0], m.aim[1], s.ticks * s.tick_ms + castMs);
       if (s) { this.lastAim.set(m.cast, [m.aim[0], m.aim[1]]); if (this.lastAim.size > 64) this.lastAim.delete(this.lastAim.keys().next().value!); }

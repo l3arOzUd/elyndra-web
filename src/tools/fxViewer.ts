@@ -78,7 +78,7 @@ function castNow(id: string, freezeMs?: number) {
   hero.heading = headingOf(aim.x, aim.z);
   fx.telegraph(s, 0, 0, aim.x, aim.z, castMs);
   if (s.cast_ms > 0) label.cast(s.name, castMs);
-  if (s.shape === "mobility") fx.dash(0, 0, aim.x, aim.z, COLORS[s.id] ?? 0x5adcb4, () => hero.ghost([0.55, 1.25, 1.15]));
+  if (s.shape === "mobility") fx.dash(0, 0, aim.x, aim.z, COLORS[s.id] ?? 0x5adcb4, () => hero.ghost([0.45, 1.35, 1.25]));
   if (s.ticks && s.tick_ms) fx.field(s, aim.x, aim.z, s.ticks * s.tick_ms + castMs);
   const hits = targets.filter((t) => inArea(s, t.position));
   const step = s.hits && s.hits > 1 ? s.hit_ms ?? 180 : 0;

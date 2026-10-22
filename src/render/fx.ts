@@ -448,7 +448,7 @@ export class Fx {
         g.position.z += dz * f;
         const u = (g.material as THREE.ShaderMaterial).uniforms;
         u.opacity.value = 0;
-        this.push(g, "fn", 360, { delay: i * 28, step: (t) => { u.opacity.value = 0.6 * (1 - t) * (0.5 + 0.5 * f); } });
+        this.push(g, "fn", 420, { delay: i * 28, step: (t) => { u.opacity.value = 0.85 * (1 - t * t) * (0.45 + 0.55 * f); } });
       }
     }
     // Speed lines in the air, racing the dasher.
@@ -489,13 +489,13 @@ export class Fx {
     };
     const flash = sprite(0xfff3c0, 0, true);
     flash.position.set(x, 0.8 * size, z);
-    this.push(flash, "fn", 240, { delay, step: (t) => { flash.scale.setScalar(size * (1 + 3.2 * easeOut(Math.min(1, t * 3)))); flash.material.opacity = (1 - t) ** 1.5; } });
+    this.push(flash, "fn", 320, { delay, step: (t) => { flash.scale.setScalar(size * (1.2 + 4 * easeOut(Math.min(1, t * 3)))); flash.material.opacity = (1 - t) ** 1.5; } });
     this.glow(x, z, 0xffc070, radius * 0.8 * size, { life: 320, delay });
     // Fire, cooling to soot as it rises.
-    for (let i = 0; i < Math.round(8 * size); i++) {
-      const a = Math.random() * Math.PI * 2, d = Math.random() * 0.55 * size;
+    for (let i = 0; i < Math.round(12 * size); i++) {
+      const a = Math.random() * Math.PI * 2, d = Math.random() * 0.7 * size;
       const x0 = x + Math.cos(a) * d, z0 = z + Math.sin(a) * d, y0 = rand(0.35, 0.9) * size;
-      const rise = rand(0.9, 1.6), spin = rand(-1.5, 1.5), grow = rand(1.8, 2.6) * size;
+      const rise = rand(1.6, 2.6), spin = rand(-1.5, 1.5), grow = rand(2.4, 3.4) * size;
       const fire = sprite(0xffffff, 0);
       fire.position.set(x0, y0, z0);
       this.push(fire, "fn", rand(650, 900), { delay: delay + i * 12, step: (t, age) => {
@@ -703,11 +703,11 @@ function painted(name: string, w: number, h: number, draw: (g: CanvasRenderingCo
 
 /** A soft cloudy blob, white: tinted for fire, smoke, dust and scorch marks. */
 const puffTexture = () => painted("puff", 128, 128, (g) => {
-  const blobs = [[64, 64, 52, 0.9], [46, 54, 30, 0.5], [82, 50, 28, 0.5], [70, 80, 32, 0.45], [44, 78, 24, 0.4], [86, 76, 22, 0.4]];
+  const blobs = [[64, 64, 50, 1], [44, 52, 30, 0.7], [84, 50, 28, 0.7], [72, 82, 30, 0.6], [44, 80, 24, 0.6], [88, 78, 22, 0.55]];
   for (const [x, y, r, a] of blobs) {
     const grad = g.createRadialGradient(x, y, 0, x, y, r);
     grad.addColorStop(0, `rgba(255,255,255,${a})`);
-    grad.addColorStop(0.55, `rgba(255,255,255,${a * 0.55})`);
+    grad.addColorStop(0.7, `rgba(255,255,255,${a * 0.85})`);
     grad.addColorStop(1, "rgba(255,255,255,0)");
     g.fillStyle = grad;
     g.fillRect(0, 0, 128, 128);
