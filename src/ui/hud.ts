@@ -650,10 +650,10 @@ export class Hud {
     const ranks = $('rank-list'); ranks.replaceChildren();
     for (const [skill, [rank, kills, next]] of Object.entries(m.mastery).sort(([a], [b]) => (a === 'basic' ? -1 : b === 'basic' ? 1 : a.localeCompare(b)))) {
       const s = this.c.skills.get(skill), row = el('div', 'rank-row'), bar = el('div', 'objective-progress'), fill = el('span');
-      const prev = this.c.systems.mastery.per_rank * (rank - 1) * (rank - 1);
+      const ms = this.c.systems.mastery, prev = (skill === 'basic' ? ms.basic_per_rank : ms.per_rank) * (rank - 1) * (rank - 1);
       fill.style.width = (next ? Math.min(100, (kills - prev) / Math.max(1, next - prev) * 100) : 100) + '%'; bar.append(fill);
       const head = el('div', 'rank-head'); head.append(skillIcon(skill), el('strong', '', s?.name ?? 'Basic attack'), el('b', '', 'Rank ' + rank));
-      row.append(head, bar, el('small', 'muted', next ? kills.toLocaleString() + ' / ' + next.toLocaleString() + ' kills' : kills.toLocaleString() + ' kills · max rank'));
+      row.append(head, bar, el('small', 'muted', next ? kills.toLocaleString() + ' / ' + next.toLocaleString() + ' targets hit' : kills.toLocaleString() + ' targets hit · max rank'));
       const perk = this.c.systems.mastery.perks[skill]; if (perk) row.append(el('small', rank >= this.c.systems.mastery.max_rank ? 'good' : 'muted', 'Rank 10: ' + perk));
       ranks.append(row);
     }

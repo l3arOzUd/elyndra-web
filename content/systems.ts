@@ -198,11 +198,18 @@ export const SYSTEMS_RULES: SystemsDef["rules"] = {
 
 export const MASTERY: SystemsDef["mastery"] = {
   max_rank: 10,
-  /** Kills to reach rank r: per_rank * (r-1)^2. */
+  /**
+   * Points to reach rank r: per_rank * (r-1)^2. A use earns a point per
+   * monster it hit, taunted or dashed through and per player it buffed
+   * (elites and bosses weigh more), at most use_cap a use.
+   */
   per_rank: 200,
+  /** Basic attacks hit far more often: their points per rank. */
+  basic_per_rank: 600,
+  use_cap: 10,
   level_window: 10,
-  elite_kills: 5,
-  boss_kills: 20,
+  elite_weight: 5,
+  boss_weight: 20,
   more_damage_per_rank: 4,
   sp_cost_rank: 4,
   sp_cost_cut: 10,

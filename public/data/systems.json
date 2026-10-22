@@ -82,9 +82,11 @@
  "mastery": {
   "max_rank": 10,
   "per_rank": 200,
+  "basic_per_rank": 600,
+  "use_cap": 10,
   "level_window": 10,
-  "elite_kills": 5,
-  "boss_kills": 20,
+  "elite_weight": 5,
+  "boss_weight": 20,
   "more_damage_per_rank": 4,
   "sp_cost_rank": 4,
   "sp_cost_cut": 10,

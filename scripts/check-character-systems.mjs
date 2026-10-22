@@ -253,8 +253,8 @@ ws.onopen = async () => {
   const ranks = state.sheet.mastery;
   const window = systems.mastery.level_window;
   const eligible = state.killLevels.filter((l) => l >= state.stats.lv - window).length;
-  const counted = Object.values(ranks).reduce((n, [, kills]) => n + kills, 0);
-  check(`skill ranks count kills of monsters at most ${window} levels below`, eligible === 0 ? counted === 0 : counted > 0,
+  const counted = Object.values(ranks).reduce((n, [, points]) => n + points, 0);
+  check(`skill ranks count targets hit, monsters at most ${window} levels below`, eligible === 0 ? counted === 0 : counted > 0,
     `${eligible} of ${state.killLevels.length} kills eligible (levels ${[...new Set(state.killLevels)].sort((a, b) => a - b).join('/')}); counted ${counted}: ` + Object.entries(ranks).map(([k, v]) => k + ' r' + v[0] + ' ' + v[1]).join(', '));
 
   // Reset: above Lv20 it takes a Reset Scroll (the dev kit gives 3).
