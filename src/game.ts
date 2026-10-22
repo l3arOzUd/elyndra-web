@@ -11,6 +11,8 @@ import { skillAnimation } from "./render/combatAnimation";
 import { SpriteActor } from "./render/spriteActor";
 import type { SpriteDef } from "./render/spriteDef";
 import { animate, buildMap, makeCellMarker, type BuiltMap } from "./render/terrain";
+import { ClickMarker, makeHoverCell } from "./render/markers";
+import { gameCursor } from "./ui/cursors";
 import { headingOf } from "./shared/dir";
 import type { Cell } from "./shared/path";
 import { ITEM_KEYS, TOTEM_KEYS, type Hud } from "./ui/hud";
@@ -92,9 +94,11 @@ export class Game {
   private targetId: number | null = null;
   private hoverId: number | null = null;
   private pendingTalk: string | null = null;
-  private hoverMarker = makeCellMarker(0xffffff);
+  /** A loot pile clicked from afar: picked up once we reach it. */
+  private pendingPickup: number | null = null;
+  private hoverMarker = makeHoverCell();
   private targetMarker = makeCellMarker(0xffd36b);
-  private clickMarker = makeCellMarker(0x9be7ff);
+  private clickMarker = new ClickMarker(0x9be7ff);
   private clickAge = 1;
   private raycaster = new THREE.Raycaster();
   private groundPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
@@ -141,7 +145,7 @@ export class Game {
     const sun = new THREE.DirectionalLight(0xfff0d0, 1.8);
     sun.position.set(-40, 80, 30);
     this.scene.add(sun);
-    this.scene.add(this.hoverMarker, this.targetMarker, this.clickMarker);
+    this.scene.add(this.hoverMarker, this.targetMarker, this.clickMarker.group);
     conn.onMessage((m) => this.onMessage(m));
     hud.onSkill = (s) => this.cast(s);
     hud.onUse = (i) => conn.send({ t: "use", item: i });
@@ -451,6 +455,7 @@ export class Game {
     if (!dest) return;
     this.targetId = null;
     this.pendingTalk = null;
+    this.pendingPickup = null;
     const from: Cell = [Math.floor(me.pos.x), Math.floor(me.pos.z)];
     const path = findPath(this.grid, from, dest, { maxNodes: 20000 });
     this.moveSeq++;
@@ -459,7 +464,7 @@ export class Game {
     if (path && path.length > 1 && performance.now() >= this.castingUntil) this.predicted = { path: path.slice(1), at: me.pos.clone() };
     if (!marker) return;
     tmpA.set(dest[0] + 0.5, 0.06, dest[1] + 0.5);
-    this.clickMarker.position.copy(tmpA);
+    this.clickMarker.group.position.copy(tmpA);
     this.clickAge = 0;
   }
 
@@ -541,6 +546,13 @@ export class Game {
         }
         return;
       }
+      const pile = this.pickPile();
+      if (pile) {
+        const me = this.self;
+        if (me && Math.hypot(pile.x - me.pos.x, pile.y - me.pos.z) > 2.5) this.walkTo([Math.floor(pile.x), Math.floor(pile.y)]);
+        this.pendingPickup = pile.id;
+        return;
+      }
       const p = this.groundPoint();
       if (p) {
         this.walkTo([Math.floor(p.x), Math.floor(p.z)]);
@@ -611,6 +623,17 @@ export class Game {
       if (this.mouse.x < x0 || this.mouse.x > x1 || this.mouse.y < y0 || this.mouse.y > y1) continue;
       const d = Math.hypot(this.mouse.x - cx, this.mouse.y - cy);
       if (d < bestD) { bestD = d; best = e; }
+    }
+    return best;
+  }
+
+  /** The loot pile under the cursor (within 26 px of it on screen). */
+  private pickPile(): Pile | null {
+    let best: Pile | null = null, bestD = 26;
+    for (const p of this.piles.values()) {
+      tmpB.set(p.x, 0.25, p.y).project(this.cam.camera);
+      const d = Math.hypot((tmpB.x + 1) / 2 * this.width - this.mouse.x, (1 - tmpB.y) / 2 * this.height - this.mouse.y);
+      if (d < bestD) { bestD = d; best = p; }
     }
     return best;
   }
@@ -746,11 +769,23 @@ export class Game {
     }
     if (this.autoLoot && Math.floor(now / 250) !== Math.floor((now - dtMs) / 250)) this.pickupNearby();
 
-    // Cursor feedback.
+    if (this.pendingPickup !== null && me) {
+      const p = this.piles.get(this.pendingPickup);
+      if (!p) this.pendingPickup = null;
+      else if (Math.hypot(p.x - me.pos.x, p.y - me.pos.z) <= 2.5) {
+        this.conn.send({ t: "pickup", req: crypto.randomUUID(), loot: [p.id] });
+        p.requestedAt = now;
+        this.pendingPickup = null;
+      }
+    }
+
+    // Cursor feedback: sword over monsters, speech over NPCs, hand over loot.
     const hover = this.pick();
+    const pile = hover ? null : this.pickPile();
     this.hoverId = hover?.id ?? null;
-    this.renderer.domElement.style.cursor = hover ? (hover.kind === "m" ? "crosshair" : "help") : "pointer";
-    const gp = hover ? null : this.groundPoint();
+    const cursor = gameCursor(hover ? (hover.kind === "m" ? "attack" : "talk") : pile ? "pickup" : "walk");
+    if (this.renderer.domElement.style.cursor !== cursor) this.renderer.domElement.style.cursor = cursor;
+    const gp = hover || pile ? null : this.groundPoint();
     this.hoverMarker.visible = !!gp && !!this.grid;
     if (gp && this.grid) {
       const cx = Math.floor(gp.x), cz = Math.floor(gp.z);
@@ -761,10 +796,8 @@ export class Game {
     this.hud.setTarget(target && !target.dead ? target : null);
     this.targetMarker.visible = !!target;
     if (target) { this.targetMarker.position.set(target.pos.x, 0.06, target.pos.z); this.targetMarker.scale.setScalar(1.6 + Math.sin(now / 150) * 0.12); }
-    this.clickAge = Math.min(1, this.clickAge + dt * 1.8);
-    this.clickMarker.visible = this.clickAge < 1;
-    this.clickMarker.scale.setScalar(1 + this.clickAge);
-    (this.clickMarker.material as THREE.MeshBasicMaterial).opacity = 1 - this.clickAge;
+    this.clickAge = Math.min(1, this.clickAge + dt * 1.4);
+    this.clickMarker.update(this.clickAge);
 
     this.overlay.update(dtMs, cam, this.width, this.height);
     if (Math.floor(now / 100) !== Math.floor((now - dtMs) / 100)) {
