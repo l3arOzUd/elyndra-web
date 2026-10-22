@@ -3,7 +3,7 @@
   "sources": [
     "right-neutral-v2.png",
     "walk-right-near-lift-v2.png",
-    "walk-right-far-lift-v2.png"
+    "walk-right-far-lift-v3.png"
   ],
   "status": "three-drawing-walk-draft",
   "artApproved": false,
@@ -17,11 +17,12 @@
     "Check rigid segment lengths and foot clearance throughout the eventual cycle.",
     "Torso shifts relative to neutral.",
     "Knee cap and hinge geometry still inconsistent.",
-    "Far leg now passes forward but foot clearance is too high relative to near-leg pose. Arm counter-swing remains weak. Contact and weight-transfer poses missing."
+    "V3 lowers far step and adds arm counter-swing but shifts support leg inward. Register body and verify segment lengths. Contact and weight-transfer poses missing."
   ],
   "superseded": [
     "walk-right-near-lift.png",
-    "walk-right-far-lift.png"
+    "walk-right-far-lift.png",
+    "walk-right-far-lift-v2.png"
   ],
   "sequence": [
     0,

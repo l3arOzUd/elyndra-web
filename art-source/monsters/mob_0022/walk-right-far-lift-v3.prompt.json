@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "walk-right-far-lift-v2.png",
+  "prompt": "Localized edit of this right-facing robot walking sprite. Preserve planted near leg and boot, torso, tank, valves, gauge, all canvas positions and scale. Lower far lifted boot: its sole should be nearly horizontal only 35 pixels above planted sole, short low step forward partly hidden behind near shin. Maintain rigid limb lengths by rotating hip, knee, ankle; no stretching. Swing near arm forward toward image RIGHT about 20 degrees from vertical, keeping original double piston and TWO-JAW pincer, no new joints. Heavy measured walk, not marching. Exactly two legs and two arms. Same square transparent background no text, ground shadow or effects."
+}
