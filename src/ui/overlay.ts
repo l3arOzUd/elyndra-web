@@ -7,9 +7,9 @@ import { DEFAULT_DISTANCE } from "../render/camera";
 // combo streams upward, while the target's own counter above it counts the
 // sum up hit by hit, then floats off. A target keeps a small sideways offset
 // (from its id) so piled monsters' numbers don't sit exactly on each other.
-// At most MAX_FLOATS numbers exist at once, from a pool. Numbers scale with
-// the camera like the sprites do: bigger zoomed in, smaller zoomed out
-// (CSS sizes are for the default zoom).
+// At most MAX_FLOATS numbers exist at once, from a pool. Numbers, names and
+// HP bars scale with the camera like the sprites do: bigger zoomed in,
+// smaller zoomed out (CSS sizes are for the default zoom).
 
 const tmp = new THREE.Vector3();
 const MAX_FLOATS = 300;
@@ -182,9 +182,12 @@ export class Label {
   }
 
   place(pos: THREE.Vector3, camera: THREE.Camera, w: number, h: number) {
+    // Names and HP bars scale with the camera like the sprites and the
+    // floating numbers, pinned at their bottom centre just over the head.
+    const zoom = THREE.MathUtils.clamp(DEFAULT_DISTANCE / camera.position.distanceTo(pos), MIN_ZOOM_SCALE, MAX_ZOOM_SCALE);
     const [x, y, behind] = project(tmp.copy(pos), camera, w, h);
     this.el.style.display = behind ? "none" : "";
-    this.el.style.transform = `translate(${x}px, ${y}px) translate(-50%, -100%)`;
+    this.el.style.transform = `translate(${x}px, ${y}px) scale(${zoom}) translate(-50%, -100%)`;
   }
 
   set targeted(on: boolean) { this.el.classList.toggle("tag-target", on); }
