@@ -60,5 +60,12 @@
       26,
       20
     ]
-  }
+  },
+  "rejectedVariants": [
+    {
+      "file": "walk-right-near-lift-v3.png",
+      "reason": "Two-reference edit still changes body; lifted boot pitches upward and regresses low heavy step.",
+      "selected": false
+    }
+  ]
 }

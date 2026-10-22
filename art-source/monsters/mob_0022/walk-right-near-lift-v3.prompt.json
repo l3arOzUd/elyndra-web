@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "right-neutral-v2.png",
+    "walk-right-near-lift-v2.png"
+  ],
+  "prompt": "Precise object edit. IMAGE 1 is the edit target and mandatory source of exact body proportions, framing, tank, valves, gauge and surface details. IMAGE 2 is ONLY a pose reference for legs/arm, do not copy its larger body or valves. Modify image 1 only below hip and near shoulder to show short forward near-leg step like image 2: near knee flexed, near boot slightly lifted, far leg planted, near arm back. Preserve all upper torso pixels and valve size/position from image 1 as closely as possible. Same rigid mechanical segment lengths, no stretched legs. Exactly two legs. Square transparent canvas same scale and margins as image 1. Full body right-facing sprite, no shadow, steam, labels or effects."
+}
