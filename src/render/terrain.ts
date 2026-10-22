@@ -2,7 +2,7 @@ import * as THREE from "three";
 import type { BlockerKind, MapLayout, RegionDef, Shape, WarpDef } from "../data/schema";
 import { decodeWalk } from "../data/schema";
 import { animatedProp, propGeometry } from "./props";
-import { applyLumerisTiles, type TerrainSurface } from "./terrainTiles";
+import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
 
 // Builds a map from its layout JSON: painted ground and roads, flat
 // water/lava, extruded cliffs, walls and buildings, instanced props, cave
@@ -236,7 +236,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
 
   // Props, one InstancedMesh per kind.
   // Soft contact shadows tie the stand-in props to the painted floor in one draw.
-  if (region?.id === "lum") {
+  {
     const radius: Partial<Record<typeof l.props[number]["kind"], number>> = {
       tree: 1.15, pine: 1, bush: 0.5, rock: 0.5, boulder: 1.1,
       aether_pylon: 0.65, rune_stone: 0.5, tent: 1.4, crate: 0.55,
@@ -306,10 +306,8 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     animated.push(portal);
     portals.push({ warp: w, mesh: portal });
   }
-  const ready = region?.id === "lum"
-    ? applyLumerisTiles(l, ground.material, surfaces, track, () => disposed, tileTime)
-      .catch(error => { console.warn("Painted terrain unavailable; keeping fallback", error); })
-    : Promise.resolve();
+  const ready = applyPaintedTerrain(l, ground.material, surfaces, track, () => disposed, tileTime)
+    .catch(error => { console.warn("Painted terrain unavailable; keeping fallback", error); });
   return { group, animated, portals, ready, tileTime, dispose: () => {
     if (disposed) return;
     disposed = true;
