@@ -299,6 +299,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 @media (max-width:800px) {
  .equip-body { grid-template-columns:1fr; }
  .item-detail { max-height:none; }
+ .detail-foot { position:static; margin:8px 0 0; padding:8px 0 0; background:none; }
 }
 @media (max-width:600px) {
  .paper-doll { grid-template-columns:minmax(0,1fr) 104px minmax(0,1fr); padding:8px; gap:8px 4px; }
