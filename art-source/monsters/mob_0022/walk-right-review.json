@@ -15,7 +15,7 @@
   ],
   "remaining": [
     "Check rigid segment lengths and foot clearance throughout the eventual cycle.",
-    "Torso shifts relative to neutral.",
+    "Valve anchors aligned by translation; valve width still changes from 121 to 136/143 source pixels and body geometry needs redrawing.",
     "Knee cap and hinge geometry still inconsistent.",
     "V3 lowers far step and adds arm counter-swing but shifts support leg inward. Register body and verify segment lengths. Contact and weight-transfer poses missing."
   ],
@@ -30,5 +30,35 @@
     0,
     2
   ],
-  "frameMs": 220
+  "frameMs": 220,
+  "registration": {
+    "method": "Whole-image translation only; same uniform scale for every pose. Anchor: center of alpha>128 silhouette in top 60 pixels and top opaque row.",
+    "sourceOffsets": [
+      [
+        0,
+        0
+      ],
+      [
+        -35.5,
+        19
+      ],
+      [
+        -35,
+        24
+      ]
+    ],
+    "sourceSize": 1254,
+    "valveWidths": [
+      121,
+      136,
+      143
+    ],
+    "limitation": "Valve widths differ: registration does not fix anatomical or scale drift.",
+    "displaySize": 460,
+    "canvasSize": 512,
+    "origin": [
+      26,
+      20
+    ]
+  }
 }

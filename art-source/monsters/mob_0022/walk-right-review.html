@@ -1,15 +1,16 @@
 <!doctype html><meta charset="utf-8"><title>Brine Automaton walk study</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}button,input{margin:12px}a{color:#acf}</style>
 <h1>Brine Automaton: right walk study</h1>
-<p>Three drawings, four timing frames. Draft only: far foot is lower and arm counter-swings; support-foot position, limb geometry and body registration still drift. Neutral is reused as contact; this is not an approved cycle.</p>
-<button id="replay">Replay</button><input id="frame" type="range" min="0" max="3" value="0"><span id="label"></span><br><canvas id="preview" width="512" height="512"></canvas><canvas id="small" width="128" height="128"></canvas>
+<p>Three drawings, four timing frames. Draft only: far foot is lower and arm counter-swings; support-foot position, limb geometry and body proportions still drift. Neutral is reused as contact; this is not an approved cycle.</p>
+<label><input id="registered" type="checkbox" checked>Align valve anchor</label><label><input id="overlay" type="checkbox">Overlay neutral</label><br><button id="replay">Replay</button><input id="frame" type="range" min="0" max="3" value="0"><span id="label"></span><br><canvas id="preview" width="512" height="512"></canvas><canvas id="small" width="128" height="128"></canvas>
 <p><a href="attack-review.html">Attack study</a> | <a href="death-review.html">Shutdown study</a> | <a href="idle-review.html">Idle study</a> | <a href="walk-back-review.html">Rear walk</a> | <a href="/">Game</a></p>
 <script type="module">
 const files=['right-neutral-v2.png','walk-right-near-lift-v2.png','walk-right-far-lift-v3.png'];
 const urls=import.meta.glob('./{right-neutral-v2,walk-right-near-lift-v2,walk-right-far-lift-v3}.png',{eager:true,query:'?url',import:'default'});
 const art=await Promise.all(files.map(src=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=urls[`./${src}`]})));
 const sequence=[0,1,0,2],g=preview.getContext('2d'),s=small.getContext('2d');let timer;
-function draw(f){clearTimeout(timer);frame.value=f;label.textContent=`Frame ${f+1}: ${['neutral','near lift','far passing lift'][sequence[f]]}`;g.clearRect(0,0,512,512);g.drawImage(art[sequence[f]],0,0,512,512);s.clearRect(0,0,128,128);s.drawImage(preview,0,0,128,128)}
+const offsets=[[0,0],[-35.5,19],[-35,24]];
+function draw(f){clearTimeout(timer);frame.value=f;label.textContent=`Frame ${f+1}: ${['neutral','near lift','far passing lift'][sequence[f]]}`;g.clearRect(0,0,512,512);const [dx,dy]=registered.checked?offsets[sequence[f]]:[0,0];const k=460/1254;g.drawImage(art[sequence[f]],26+dx*k,20+dy*k,460,460);if(overlay.checked&&sequence[f]!==0){g.globalAlpha=0.3;g.drawImage(art[0],26,20,460,460);g.globalAlpha=1;}s.clearRect(0,0,128,128);s.drawImage(preview,0,0,128,128)}
 function play(f=0){draw(f);timer=setTimeout(()=>play((f+1)%4),220)}
-replay.onclick=()=>play();frame.oninput=()=>draw(Number(frame.value));draw(0);window.__brineRightWalk={ready:true,draw,sequence};
+registered.onchange=overlay.onchange=()=>draw(Number(frame.value));replay.onclick=()=>play();frame.oninput=()=>draw(Number(frame.value));draw(0);window.__brineRightWalk={ready:true,draw,sequence};
 </script>
