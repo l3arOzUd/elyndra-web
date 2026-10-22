@@ -100,6 +100,11 @@ export class Game {
   private moveSeq = 0;
   /** Client-side prediction of our own walk. */
   private predicted: { path: Cell[]; at: THREE.Vector3 } | null = null;
+  /** Our own cast in progress (until its first combat event, or a timeout):
+   * the server holds a walk ordered meanwhile until the cast lands, so we do
+   * not walk ahead of it (that used to snap us back). */
+  private castingUntil = 0;
+  private castingId = 0;
   private loading = false;
   private debugOn = false;
   private debugInfo: MsgOf<"debug"> | null = null;
@@ -289,10 +294,13 @@ export class Game {
     if (m.actor === this.selfId && !m.echo) {
       this.hud.startCooldown(m.skill, m.cd);
       this.predicted = null;
+      this.castingId = m.cast;
+      this.castingUntil = performance.now() + Math.max(0, m.hit_at - m.time) * 1.6 + 400; // cast pushback can stretch it
     }
   }
 
   private onCombat(ev: CombatEvent) {
+    if (ev.cast && ev.cast === this.castingId) this.castingUntil = 0;
     const src = this.ents.get(ev.src);
     const s = ev.skill ? this.c.skills.get(ev.skill) : undefined;
     if (s && src) {
@@ -418,7 +426,8 @@ export class Game {
     const path = findPath(this.grid, from, dest, { maxNodes: 20000 });
     this.moveSeq++;
     this.conn.send({ t: "move", seq: this.moveSeq, to: [dest[0] + 0.5, dest[1] + 0.5] });
-    if (path && path.length > 1) this.predicted = { path: path.slice(1), at: me.pos.clone() };
+    // While casting, follow the server instead: it starts this walk when the cast lands.
+    if (path && path.length > 1 && performance.now() >= this.castingUntil) this.predicted = { path: path.slice(1), at: me.pos.clone() };
     tmpA.set(dest[0] + 0.5, 0.06, dest[1] + 0.5);
     this.clickMarker.position.copy(tmpA);
     this.clickAge = 0;
