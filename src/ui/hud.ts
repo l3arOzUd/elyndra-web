@@ -37,7 +37,7 @@ export class Hud {
   equip: Record<string, string> = {};
   /** Every copy of gear, Charm and Totem the character owns, by uid. */
   gear = new Map<number, GearView>();
-  zeny = 0;
+  aurel = 0;
   stats: MsgOf<'stats'> | null = null;
   sheet: SheetMsg | null = null;
   private totems: TotemView[] = [];
@@ -289,14 +289,14 @@ export class Hud {
     for (const [id, q] of Object.entries(m.items)) { if (q > 0) this.inventory[id] = q; else delete this.inventory[id]; }
     for (const g of m.gear ?? []) this.gear.set(g.uid, g);
     for (const uid of m.gear_gone ?? []) this.gear.delete(uid);
-    this.zeny = m.zeny; if (m.equip) this.equip = m.equip;
+    this.aurel = m.aurel; if (m.equip) this.equip = m.equip;
     this.renderInventory(); this.refreshHotbar(); this.renderBuffs();
   }
   /** The worn copy in a slot. */
   worn(slot: string) { return [...this.gear.values()].find((g) => g.slot === slot); }
   setSheet(m: SheetMsg) { this.sheet = m; this.renderCharacter(); this.renderInventory(); }
   renderInventory() {
-    $('zeny').textContent = money(this.zeny);
+    $('aurel').textContent = money(this.aurel);
     const eq = $('equip'); eq.replaceChildren();
     const lv = this.stats?.lv ?? 1, inactive = new Set(this.sheet?.inactive ?? []);
     for (const slot of [...GEAR_SLOTS, ...CHARM_SLOTS]) {

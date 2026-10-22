@@ -49,7 +49,7 @@ const table = (head: string[], rows: (string | number)[][]) => {
 const sources = new Map<string, string[]>();
 const add = (id: string, s: string) => sources.set(id, [...(sources.get(id) ?? []), s]);
 for (const m of monsters) for (const d of m.drops) add(d.item_id, `${m.name} ${pct(d.rate_bp)}`);
-for (const s of shops) for (const i of s.items) add(i.item_id, `shop ${npc.get(s.npc_id)?.name ?? s.npc_id} ${i.price}z`);
+for (const s of shops) for (const i of s.items) add(i.item_id, `shop ${npc.get(s.npc_id)?.name ?? s.npc_id} ${i.price} A`);
 for (const q of quests) for (const i of q.rewards.items) add(i.item_id, `quest ${q.title}`);
 for (const r of recipes) add(r.output.item_id, `craft @ ${npc.get(r.npc_id)?.name ?? r.npc_id}`);
 
@@ -82,7 +82,7 @@ p(
   "",
   "### ทดสอบจริงแล้ว",
   "- **Validator** (`npm run validate:data`): critical 0 · error 0 · warning 0 กับข้อมูลทั้ง 7 ภูมิภาค มี test 12 ชุดที่ใส่ข้อมูลผิดโดยเจตนา (warp ทับกัน, NPC เรียงแถว, ไอเทมไม่มีที่มา, มอนสเตอร์ไม่ spawn, สเตตัสก๊อปปี้, arbitrage ฯลฯ) เพื่อยืนยันว่าจับได้จริง และคืน exit code ที่ถูกต้อง",
-  "- **Lumeris end-to-end** ใน Chrome จริงกับ server จริง: login ที่ Avelorn → รับเควสต์จาก Registrar → warp ไป Dawnmeadow → ฆ่า Mosskin 30 ตัว (~90 วินาที ที่ Lv1) → เก็บของอัตโนมัติ → warp กลับ → ส่งเควสต์ (Lv1 → Lv2) → reload แล้ว login ใหม่ → inventory, zeny และ level ตรงกันทุกค่า ไม่มี console error",
+  "- **Lumeris end-to-end** ใน Chrome จริงกับ server จริง: login ที่ Avelorn → รับเควสต์จาก Registrar → warp ไป Dawnmeadow → ฆ่า Mosskin 30 ตัว (~90 วินาที ที่ Lv1) → เก็บของอัตโนมัติ → warp กลับ → ส่งเควสต์ (Lv1 → Lv2) → reload แล้ว login ใหม่ → inventory, Aurel และ level ตรงกันทุกค่า ไม่มี console error",
   "- **Server tests** (Go): spawn director เติม Dawnmeadow ครบ 130 ตัวบนช่องที่ถูกต้อง",
   "  - AoE ตีได้สูงสุด 50 เป้าหมายพอดี จาก 90 ตัวในระยะ เรียงตามระยะแล้วตาม id ไม่มีใครโดนซ้ำ",
   "  - kill และ EXP เกิดครั้งเดียว, pickup ซ้ำด้วย request id เดิมไม่ได้ของเพิ่ม และคนที่ไม่ใช่เจ้าของเก็บไม่ได้",
@@ -275,18 +275,18 @@ for (const r of regions) {
         pk.target_alive, `${pk.respawn_sec[0]}–${pk.respawn_sec[1]}`, pk.design_note]));
     }
     const ns = npcs.filter((n) => n.map_id === m.id);
-    if (ns.length) p("**NPC:** " + ns.map((n) => `${n.name} (${n.role}, [${n.position.join(",")}]${n.destinations?.length ? `, ส่งไป ${n.destinations.map(([d, c]) => `${map.get(d)?.name ?? d} ${c}z`).join("/")}` : ""})`).join(" · "), "");
+    if (ns.length) p("**NPC:** " + ns.map((n) => `${n.name} (${n.role}, [${n.position.join(",")}]${n.destinations?.length ? `, ส่งไป ${n.destinations.map(([d, c]) => `${map.get(d)?.name ?? d} ${c} A`).join("/")}` : ""})`).join(" · "), "");
   }
   const rq = quests.filter((q) => q.region_id === r.id);
   p(`#### เควสต์ ${r.name}`, "");
   table(["ID", "ชื่อ", "Lv", "ผู้ให้ → ส่งที่", "เป้าหมาย", "รางวัล", "สรุป"], rq.map((q) => [
     `\`${q.id}\``, q.title, q.min_level, `${npc.get(q.giver_npc_id)?.name} → ${npc.get(q.turn_in_npc_id)?.name}`,
     q.objectives.map((o) => o.type === "kill" ? `ฆ่า ${mob.get(o.monster_id)?.name} ×${o.count}` : o.type === "collect" ? `เก็บ ${item.get(o.item_id)?.name} ×${o.count}` : `ไป ${map.get(o.map_id)?.name}`).join(", "),
-    `${q.rewards.base_exp} EXP, ${q.rewards.currency}z${q.rewards.items.map((i) => `, ${item.get(i.item_id)?.name} ×${i.qty}`).join("")}`, q.summary]));
+    `${q.rewards.base_exp} EXP, ${q.rewards.currency} A${q.rewards.items.map((i) => `, ${item.get(i.item_id)?.name} ×${i.qty}`).join("")}`, q.summary]));
   const rs = shops.filter((s) => npc.get(s.npc_id)?.map_id && map.get(npc.get(s.npc_id)!.map_id)?.region_id === r.id);
   const rr = recipes.filter((x) => map.get(npc.get(x.npc_id)?.map_id ?? "")?.region_id === r.id);
-  if (rs.length) p("**ร้านค้า:** " + rs.map((s) => s.items.map((i) => `${item.get(i.item_id)?.name} ${i.price}z`).join(", ")).join(" · "), "");
-  if (rr.length) p("**สูตรคราฟต์:** " + rr.map((x) => `${item.get(x.output.item_id)?.name}${x.output.qty > 1 ? ` ×${x.output.qty}` : ""} ← ${x.inputs.map((i) => `${item.get(i.item_id)?.name} ×${i.qty}`).join(" + ")}${x.currency ? ` + ${x.currency}z` : ""}`).join(" · "), "");
+  if (rs.length) p("**ร้านค้า:** " + rs.map((s) => s.items.map((i) => `${item.get(i.item_id)?.name} ${i.price} A`).join(", ")).join(" · "), "");
+  if (rr.length) p("**สูตรคราฟต์:** " + rr.map((x) => `${item.get(x.output.item_id)?.name}${x.output.qty > 1 ? ` ×${x.output.qty}` : ""} ← ${x.inputs.map((i) => `${item.get(i.item_id)?.name} ×${i.qty}`).join(" + ")}${x.currency ? ` + ${x.currency} A` : ""}`).join(" · "), "");
 }
 
 // Monsters.

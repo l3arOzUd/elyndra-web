@@ -89,19 +89,19 @@ try {
  if(!await page.locator('#inspector').isVisible())throw Error('Inspector failed');
  await page.keyboard.press('Escape');
  // A test character walks to the real merchant; buy/sell are actual server transactions.
- const startingCurrency=await page.evaluate(()=>window.elyndra.hud.zeny);
+ const startingCurrency=await page.evaluate(()=>window.elyndra.hud.aurel);
  await page.evaluate(()=>window.elyndra.game.walkTo([83,64]));
  await page.waitForFunction(()=>{const g=window.elyndra.game,p=g.ents.get(g.selfId);return p&&Math.hypot(p.pos.x-84,p.pos.z-64)<2;},null,{timeout:30000});
  await page.evaluate(()=>window.elyndra.conn.send({t:'npc',npc:'npc_lum_merchant',op:'talk'}));
  await page.locator('#npc-win').waitFor({state:'visible'});
  await page.getByRole('button',{name:'Buy 1',exact:true}).first().click();
  await page.waitForFunction(()=>window.elyndra.hud.inventory.itm_0075>0);
- const afterBuy=await page.evaluate(()=>window.elyndra.hud.zeny);
+ const afterBuy=await page.evaluate(()=>window.elyndra.hud.aurel);
  if(afterBuy!==startingCurrency-9)throw Error('Server purchase price mismatch');
  await page.screenshot({path:out+'/live-shop.png'});
  await page.getByRole('button',{name:'Sell',exact:true}).click();
  await page.getByRole('button',{name:'Sell 1',exact:true}).first().click();
- await page.waitForFunction(expected=>window.elyndra.hud.zeny===expected,afterBuy+3);
+ await page.waitForFunction(expected=>window.elyndra.hud.aurel===expected,afterBuy+3);
  await page.keyboard.press('Escape');
  // Crowded visual review uses client-only creatures; the server world is unchanged.
  await page.evaluate(()=>{

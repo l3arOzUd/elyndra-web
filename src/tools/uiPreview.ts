@@ -57,7 +57,7 @@ async function main() {
   for (const it of items.filter(it => it.use)) bag[it.id] = 24;
   const equip: Record<string, string> = {};
   for (const g of sampleGear) if (g.slot) equip[g.slot] = g.base;
-  hud.setInventory({ t:'inv', ver:1, full:true, items:bag, zeny:2480, equip, gear:sampleGear });
+  hud.setInventory({ t:'inv', ver:1, full:true, items:bag, aurel:2480, equip, gear:sampleGear });
   hud.setSheet({ t:'sheet', stats:{ pow:40, luk:20, agi:12, dex:0, int:0, vit:15 }, bonus:{ pow:9, luk:4, vit:4 }, points:0, free_reset:false,
     d:{ atk:412, atk_base:343, weapon:138, inc_damage:0.11, more_damage:1, crit:0.2, crit_mult:1.69, cdr:0.074, cast:0, attack_ms:748, max_hp:2240, max_sp:300, max_shield:410,
       armour:268, evasion:41, poise:0.159, leech:0, leech_cap:0.1, hp_on_kill:0, sp_on_kill:0, hp_regen:0, sp_regen_inc:0, move:0.09, grip:0, magnet:0, area:0.08, area_more:1,

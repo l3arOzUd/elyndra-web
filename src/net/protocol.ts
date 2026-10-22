@@ -120,7 +120,7 @@ export type ServerMsg =
   | { t: "combat"; time: number; ev: CombatEvent[] }
   | { t: "loot"; piles: { id: number; x: number; y: number; items: [string, number, string?][] }[] }
   | { t: "loot_gone"; ids: number[] }
-  | { t: "inv"; ver: number; items: Record<string, number>; full?: boolean; zeny: number; equip?: Record<string, string>; gear?: GearView[]; gear_gone?: number[] }
+  | { t: "inv"; ver: number; items: Record<string, number>; full?: boolean; aurel: number; equip?: Record<string, string>; gear?: GearView[]; gear_gone?: number[] }
   | { t: "stats"; lv: number; exp: number; next: number; hp: number; mhp: number; sp: number; msp: number; sh?: number; msh?: number; atk: number; def: number; job: string; tot?: TotemView[]; ail?: { kind: "burn" | "shock" | "chill"; left: number }[]; buffs?: BuffView[] }
   | SheetMsg
   | { t: "quests"; quests: QuestView[] }

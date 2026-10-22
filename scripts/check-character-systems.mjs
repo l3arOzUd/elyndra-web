@@ -18,7 +18,7 @@ const results = [];
 const check = (name, ok, detail = '') => { results.push({ name, ok, detail }); console.log((ok ? 'PASS ' : 'FAIL ') + name + (detail ? ' · ' + detail : '')); };
 
 const ws = new WebSocket(url);
-const state = { stats: null, sheet: null, gear: new Map(), inv: {}, equip: {}, zeny: 0, you: 0, map: '', ents: new Map(), notices: [], casts: [], combat: 0, hits: 0, deaths: 0, piles: new Map(), evades: 0, shieldHits: 0, killLevels: [] };
+const state = { stats: null, sheet: null, gear: new Map(), inv: {}, equip: {}, aurel: 0, you: 0, map: '', ents: new Map(), notices: [], casts: [], combat: 0, hits: 0, deaths: 0, piles: new Map(), evades: 0, shieldHits: 0, killLevels: [] };
 const waiters = [];
 const send = (m) => ws.send(JSON.stringify(m));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -43,7 +43,7 @@ ws.onmessage = (ev) => {
       for (const [id, q] of Object.entries(m.items)) { if (q > 0) state.inv[id] = q; else delete state.inv[id]; }
       for (const g of m.gear ?? []) state.gear.set(g.uid, g);
       for (const u of m.gear_gone ?? []) state.gear.delete(u);
-      state.zeny = m.zeny; if (m.equip) state.equip = m.equip;
+      state.aurel = m.aurel; if (m.equip) state.equip = m.equip;
       break;
     case 'snap':
       for (const a of m.add ?? []) state.ents.set(a.id, { ...a });
@@ -143,40 +143,40 @@ ws.onopen = async () => {
   if (merchant && await walkTo(merchant.position[0], merchant.position[1] + 1)) {
     const shop = data('shops').find((s) => s.npc_id === merchant.id);
     const sell = [...state.gear.values()].find((x) => !x.slot && x.rarity === 'magic');
-    const z1 = state.zeny;
+    const z1 = state.aurel;
     send({ t: 'npc', npc: merchant.id, op: 'sell_gear', arg: String(sell.uid) });
     await until(() => !state.gear.has(sell.uid), 3000);
-    check('shop: selling a magic copy pays 1.5x', !state.gear.has(sell.uid) && state.zeny === z1 + Math.round(items.get(sell.base).sell_price * 1.5), `+${state.zeny - z1}z`);
+    check('shop: selling a magic copy pays 1.5x', !state.gear.has(sell.uid) && state.aurel === z1 + Math.round(items.get(sell.base).sell_price * 1.5), `+${state.aurel - z1} A`);
     const buy = shop.items.filter((i) => items.get(i.item_id)?.equip && items.get(i.item_id).equip.slot !== 'charm').sort((a, b) => a.price - b.price)[0];
-    const count = state.gear.size, z2 = state.zeny;
+    const count = state.gear.size, z2 = state.aurel;
     send({ t: 'npc', npc: merchant.id, op: 'buy', arg: buy.item_id, qty: 1 });
     await until(() => state.gear.size > count, 3000);
     const bought = [...state.gear.values()].find((x) => x.base === buy.item_id && x.rarity === 'normal');
-    check('shop: buying gear gives a plain copy and costs its price', z2 >= buy.price && state.gear.size === count + 1 && state.zeny === z2 - buy.price && !!bought, `${items.get(buy.item_id).name} for ${buy.price}z (had ${z2}z)`);
+    check('shop: buying gear gives a plain copy and costs its price', z2 >= buy.price && state.gear.size === count + 1 && state.aurel === z2 - buy.price && !!bought, `${items.get(buy.item_id).name} for ${buy.price} A (had ${z2} A)`);
   } else check('shop: reach the merchant', false, state.map);
 
-  // Refining at the craftsman: +1 on the worn weapon, paid in zeny.
+  // Refining at the craftsman: +1 on the worn weapon, paid in aurel.
   const smith = npcs.find((n) => n.map_id === state.map && n.role === 'craftsman');
   // The cheapest weapon copy (the starter saber), worn so its ATK shows on the sheet.
   const weapon = [...state.gear.values()].filter((g) => items.get(g.base)?.equip?.slot === 'weapon' && items.get(g.base).equip.job === 'vanguard')
     .sort((a, b) => items.get(a.base).sell_price - items.get(b.base).sell_price)[0];
   if (weapon && weapon.slot !== 'weapon') { send({ t: 'equip', gear: weapon.uid }); await until(() => state.gear.get(weapon.uid)?.slot === 'weapon', 3000); await sleep(300); }
   if (smith && weapon && await walkTo(smith.position[0], smith.position[1] + 1)) {
-    const z = state.zeny, atk = state.sheet.d.weapon;
+    const z = state.aurel, atk = state.sheet.d.weapon;
     send({ t: 'npc', npc: smith.id, op: 'refine', arg: String(weapon.uid) });
     await until(() => (state.gear.get(weapon.uid)?.refine ?? 0) === 1, 3000);
     await sleep(300);
     const cost = Math.max(10, items.get(weapon.base).sell_price * 2);
-    check('refine: +1 costs zeny and raises weapon ATK 5%', state.gear.get(weapon.uid)?.refine === 1 && state.zeny === z - cost && Math.abs(state.sheet.d.weapon - atk * 1.05) < 0.01,
-      `+${state.gear.get(weapon.uid)?.refine}, paid ${z - state.zeny}z (cost ${cost}), weapon ATK ${atk} -> ${state.sheet.d.weapon}`);
+    check('refine: +1 costs aurel and raises weapon ATK 5%', state.gear.get(weapon.uid)?.refine === 1 && state.aurel === z - cost && Math.abs(state.sheet.d.weapon - atk * 1.05) < 0.01,
+      `+${state.gear.get(weapon.uid)?.refine}, paid ${z - state.aurel} A (cost ${cost}), weapon ATK ${atk} -> ${state.sheet.d.weapon}`);
     // Reforge a rare (affixes change, rarity stays) and imbue a normal to magic.
     const rare = [...state.gear.values()].find((g) => g.rarity === 'rare' && !g.slot && items.get(g.base)?.equip?.slot !== 'charm');
     if (rare) {
-      const before = JSON.stringify(rare.affixes), z1 = state.zeny;
+      const before = JSON.stringify(rare.affixes), z1 = state.aurel;
       send({ t: 'npc', npc: smith.id, op: 'reforge', arg: String(rare.uid) });
-      await until(() => JSON.stringify(state.gear.get(rare.uid)?.affixes) !== before || state.zeny !== z1, 3000);
+      await until(() => JSON.stringify(state.gear.get(rare.uid)?.affixes) !== before || state.aurel !== z1, 3000);
       const after = state.gear.get(rare.uid);
-      check('reforge: a rare keeps its rarity and gets new affixes for zeny', after?.rarity === 'rare' && state.zeny < z1 && after.affixes.length >= 3, `${z1 - state.zeny}z, ${after?.affixes.map((a) => a[0]).join(', ')}`);
+      check('reforge: a rare keeps its rarity and gets new affixes for Aurel', after?.rarity === 'rare' && state.aurel < z1 && after.affixes.length >= 3, `${z1 - state.aurel} A, ${after?.affixes.map((a) => a[0]).join(', ')}`);
     }
     const plain = [...state.gear.values()].find((g) => g.rarity === 'normal' && !g.slot && items.get(g.base)?.equip?.slot !== 'charm');
     if (plain) {
@@ -199,12 +199,12 @@ ws.onopen = async () => {
 
   // Job change at the Guild Registrar (paid above the free level).
   if (guild && await walkTo(guild.position[0], guild.position[1] + 1)) {
-    const z = state.zeny, cost = state.stats.lv <= systems.crafting.job_change_free_level ? 0 : systems.crafting.job_change_per_level * state.stats.lv;
+    const z = state.aurel, cost = state.stats.lv <= systems.crafting.job_change_free_level ? 0 : systems.crafting.job_change_per_level * state.stats.lv;
     if (z >= cost) {
       send({ t: 'npc', npc: guild.id, op: 'change_job', arg: 'strider' });
       await until(() => state.stats.job === 'strider', 3000);
-      check('job change: Vanguard -> Strider, paid, Vanguard weapon off', state.stats.job === 'strider' && state.zeny === z - cost && !Object.values(state.equip).includes(state.equip.weapon ?? '__') , `paid ${z - state.zeny}z (cost ${cost}), weapon ${state.equip.weapon ?? 'none'}`);
-    } else check('job change: enough zeny', true, `skipped: ${z}z < ${cost}z`);
+      check('job change: Vanguard -> Strider, paid, Vanguard weapon off', state.stats.job === 'strider' && state.aurel === z - cost && !Object.values(state.equip).includes(state.equip.weapon ?? '__') , `paid ${z - state.aurel} A (cost ${cost}), weapon ${state.equip.weapon ?? 'none'}`);
+    } else check('job change: enough Aurel', true, `skipped: ${z} A < ${cost} A`);
     send({ t: 'npc', npc: guild.id, op: 'change_job', arg: 'vanguard' });
     await until(() => state.stats.job === 'vanguard', 3000);
     const saber = [...state.gear.values()].find((g) => g.uid === weapon?.uid);
