@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "walk-right-near-lift.png",
+  "prompt": "Precise localized edit of this right-facing robot walk sprite. Change ONLY the raised image-right leg. Lower its knee and bring its boot closer to supporting leg to make a SHORT HEAVY WALK STEP, not a high marching kick. Raised sole nearly horizontal, just 35 pixels above planted sole level in this square image. Bend knee naturally with shin closer to vertical. Preserve rigid segment lengths; rotate hip/knee/ankle only, no stretching. Keep exactly two legs. Do not change planted leg or boot, torso, arm, tank, valves, gauge, copper patina, canvas placement or scale. Transparent background, no floor/shadow/text. Full body one frame."
+}
