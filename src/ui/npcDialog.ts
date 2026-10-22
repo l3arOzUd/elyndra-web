@@ -1,4 +1,5 @@
 import type { ClientContent } from '../data/content';
+import { money } from './currency';
 import type { MsgOf } from '../net/protocol';
 import type { Hud } from './hud';
 import { icon, itemIcon } from './icons';
@@ -51,7 +52,7 @@ export class NpcDialog {
       const s = section('Quests');
       for (const id of m.ready ?? []) {
         const q = this.c.quests.get(id);
-        const reward = q ? q.rewards.base_exp + ' EXP · ' + q.rewards.currency + ' z' + q.rewards.items.map(i => ' · ' + (this.c.items.get(i.item_id)?.name ?? i.item_id) + ' ×' + i.qty).join('') : '';
+        const reward = q ? q.rewards.base_exp + ' EXP · ' + money(q.rewards.currency) + q.rewards.items.map(i => ' · ' + (this.c.items.get(i.item_id)?.name ?? i.item_id) + ' ×' + i.qty).join('') : '';
         const card = row(q?.title ?? id, 'Your work is done. Rewards: ' + reward, icon('star', 'service-art'));
         card.append(button('Claim reward', 'turnin', id)); s.append(card);
       }
@@ -67,7 +68,7 @@ export class NpcDialog {
     if (m.shop?.length) {
       const s = section('Buy');
       for (const [id, price] of m.shop) {
-        const it = this.c.items.get(id), card = row(it?.name ?? id, (it?.description ?? '') + ' · ' + price.toLocaleString() + ' z each', itemIcon(it));
+        const it = this.c.items.get(id), card = row(it?.name ?? id, (it?.description ?? '') + ' · ' + money(price) + ' each', itemIcon(it));
         const actions = el('div', 'service-actions');
         for (const qty of [1, 10]) actions.append(button('Buy ' + qty, 'buy', id, qty, this.hud.zeny < price * qty));
         card.append(actions); s.append(card);
@@ -82,17 +83,17 @@ export class NpcDialog {
       const junk = sellable.filter(([id]) => this.c.items.get(id)!.category === 'material');
       if (junk.length) {
         const n = junk.reduce((a, [, q]) => a + q, 0), z = junk.reduce((a, [id, q]) => a + q * this.c.items.get(id)!.sell_price, 0);
-        const card = row('All materials', n.toLocaleString() + ' common and uncommon materials (' + junk.length + ' kinds) · about ' + z.toLocaleString() + ' z. Rare materials and items an active quest needs are kept.', icon('crystal', 'service-art'));
+        const card = row('All materials', n.toLocaleString() + ' common and uncommon materials (' + junk.length + ' kinds) · about ' + money(z) + '. Rare materials and items an active quest needs are kept.', icon('crystal', 'service-art'));
         const actions = el('div', 'service-actions'); actions.append(button('Sell all materials', 'sell_junk')); card.append(actions); s.append(card);
       }
       for (const g of gear) {
         const it = this.c.items.get(g.base); if (!it) continue;
         const price = Math.round(it.sell_price * ({ normal: 1, magic: 1.5, rare: 2.5, relic: 5, unique: 4 }[g.rarity] ?? 1));
-        const card = row(it.name, g.rarity[0].toUpperCase() + g.rarity.slice(1) + ' · item level ' + g.ilvl + ' · ' + price.toLocaleString() + ' z', itemIcon(it));
+        const card = row(it.name, g.rarity[0].toUpperCase() + g.rarity.slice(1) + ' · item level ' + g.ilvl + ' · ' + money(price), itemIcon(it));
         const actions = el('div', 'service-actions'); actions.append(button('Sell', 'sell_gear', String(g.uid), 1)); card.append(actions); s.append(card);
       }
       for (const [id, n] of sellable) {
-        const it = this.c.items.get(id)!, card = row(it.name, 'Owned ' + n + ' · ' + it.sell_price.toLocaleString() + ' z each', itemIcon(it));
+        const it = this.c.items.get(id)!, card = row(it.name, 'Owned ' + n + ' · ' + money(it.sell_price) + ' each', itemIcon(it));
         const actions = el('div', 'service-actions');
         actions.append(button('Sell 1', 'sell', id, 1), button('Sell all (' + n + ')', 'sell', id, n)); card.append(actions); s.append(card);
       }
@@ -100,7 +101,7 @@ export class NpcDialog {
     if (m.dest?.length) {
       const s = section('Travel');
       for (const [id, cost] of m.dest) {
-        const map = this.c.maps.get(id), card = row(map?.name ?? id, (map ? 'Recommended level ' + map.recommended_level_min + '–' + map.recommended_level_max + ' · ' : '') + (cost ? cost.toLocaleString() + ' z' : 'Free passage'), icon('portal', 'service-art'));
+        const map = this.c.maps.get(id), card = row(map?.name ?? id, (map ? 'Recommended level ' + map.recommended_level_min + '–' + map.recommended_level_max + ' · ' : '') + (cost ? money(cost) : 'Free passage'), icon('portal', 'service-art'));
         card.append(button('Travel →', 'teleport', id, undefined, this.hud.zeny < cost)); s.append(card);
       }
     }
@@ -119,11 +120,11 @@ export class NpcDialog {
         const it = this.c.items.get(g.base), card = row(gearTitle(it, g), 'In your bag · ' + g.rarity + ' · item level ' + g.ilvl, itemIcon(it, g.rarity));
         card.append(button('Store', 'stash_put', String(g.uid), undefined, stash.length >= cr.stash_max)); s.append(card);
       }
-      // Job change: free up to a level, then zeny a level.
+      // Job change: free up to a level, then Aurel a level.
       const j = section('Job');
       const lv = this.hud.stats?.lv ?? 1, job = this.hud.stats?.job ?? 'vanguard';
       const cost = lv <= cr.job_change_free_level ? 0 : cr.job_change_per_level * lv;
-      j.append(el('p', 'muted small', (cost ? 'Changing job costs ' + cost.toLocaleString() + ' z at Lv ' + lv : 'Free until Lv ' + cr.job_change_free_level) + '. Weapons of another job come off; Echo Totems forget its skills.'));
+      j.append(el('p', 'muted small', (cost ? 'Changing job costs ' + money(cost) + ' at Lv ' + lv : 'Free until Lv ' + cr.job_change_free_level) + '. Weapons of another job come off; Echo Totems forget its skills.'));
       for (const name of Object.keys(JOB_INFO)) {
         const card = row(name[0].toUpperCase() + name.slice(1) + (name === job ? ' (current)' : ''), JOB_INFO[name], icon(name === 'vanguard' ? 'sword' : name === 'strider' ? 'bow' : name === 'arcanist' ? 'staff' : 'gear', 'service-art'));
         card.append(button('Become ' + name, 'change_job', name, undefined, name === job || this.hud.zeny < cost)); j.append(card);
@@ -137,12 +138,12 @@ export class NpcDialog {
       if (!own.length) f.append(el('p', 'empty-state', 'No gear that can be reworked.'));
       for (const g of reforgeable) {
         const it = this.c.items.get(g.base)!, cost = reforgeCost(this.c, it, g);
-        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Reroll every affix (' + g.rarity + (g.rarity === 'relic' ? ', the cap stays' : '') + ') · ' + cost.toLocaleString() + ' z', itemIcon(it, g.rarity));
+        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Reroll every affix (' + g.rarity + (g.rarity === 'relic' ? ', the cap stays' : '') + ') · ' + money(cost), itemIcon(it, g.rarity));
         card.append(button('Reforge', 'reforge', String(g.uid), undefined, this.hud.zeny < cost)); f.append(card);
       }
       for (const g of imbueable) {
         const it = this.c.items.get(g.base)!, cost = imbueCost(this.c, it, g);
-        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Imbue ' + g.rarity + ' → ' + nextRarity(g) + ' with fresh affixes · ' + cost.toLocaleString() + ' z', itemIcon(it, g.rarity));
+        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Imbue ' + g.rarity + ' → ' + nextRarity(g) + ' with fresh affixes · ' + money(cost), itemIcon(it, g.rarity));
         card.append(button('Imbue', 'imbue', String(g.uid), undefined, this.hud.zeny < cost)); f.append(card);
       }
       // Refining: weapons and armour, +1 at a time to +10 (refine.go).
@@ -151,7 +152,7 @@ export class NpcDialog {
       if (!list.length) s.append(el('p', 'empty-state', 'No weapons or armour to refine.'));
       for (const g of list) {
         const it = this.c.items.get(g.base)!, lvl = g.refine ?? 0, cost = refineCost(it, g);
-        const risk = lvl >= REFINE.max ? 'At the +' + REFINE.max + ' maximum' : REFINE.chance[lvl] + '% to reach +' + (lvl + 1) + ' · ' + cost.toLocaleString() + ' z' + (lvl >= REFINE.dropFrom ? ' · failure drops to +' + (lvl - 1) : REFINE.chance[lvl] < 100 ? ' · failure keeps +' + lvl : '');
+        const risk = lvl >= REFINE.max ? 'At the +' + REFINE.max + ' maximum' : REFINE.chance[lvl] + '% to reach +' + (lvl + 1) + ' · ' + money(cost) + (lvl >= REFINE.dropFrom ? ' · failure drops to +' + (lvl - 1) : REFINE.chance[lvl] < 100 ? ' · failure keeps +' + lvl : '');
         const card = row(gearTitle(it, g) + (g.slot ? ' (worn)' : ''), '+' + REFINE.stepPct + '% base numbers a level · ' + risk, itemIcon(it, g.rarity));
         card.append(button('Refine', 'refine', String(g.uid), undefined, lvl >= REFINE.max || this.hud.zeny < cost)); s.append(card);
       }
@@ -165,7 +166,7 @@ export class NpcDialog {
           const have = this.hud.inventory[i.item_id] ?? 0;
           needs.append(el('span', have >= i.qty ? 'ingredient good' : 'ingredient bad', (this.c.items.get(i.item_id)?.name ?? i.item_id) + ' ' + have + '/' + i.qty));
         }
-        needs.append(el('span', this.hud.zeny >= rc.currency ? 'ingredient' : 'ingredient bad', rc.currency.toLocaleString() + ' z')); copy.append(needs);
+        needs.append(el('span', this.hud.zeny >= rc.currency ? 'ingredient' : 'ingredient bad', money(rc.currency))); copy.append(needs);
         const ok = rc.inputs.every(i => (this.hud.inventory[i.item_id] ?? 0) >= i.qty) && this.hud.zeny >= rc.currency;
         card.append(button('Craft item', 'craft', rc.id, undefined, !ok)); s.append(card);
       }
@@ -173,7 +174,7 @@ export class NpcDialog {
     if (sections.length) activate(sections.some(s => s.name === this.tab) ? this.tab : sections[0].name);
     else { tabs.hidden = true; body.append(el('p', 'empty-state', 'Safe travels, adventurer.')); }
     const footer = el('footer', 'window-footer');
-    footer.append(el('span', 'muted', 'Your purse'), icon('coin'), el('strong', 'currency', this.hud.zeny.toLocaleString() + ' z'));
+    footer.append(el('span', 'muted', 'Your purse'), icon('coin'), el('strong', 'currency', money(this.hud.zeny)));
     r.append(footer); r.hidden = false;
   }
 }

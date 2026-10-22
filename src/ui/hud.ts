@@ -1,4 +1,5 @@
 import type { ClientContent } from '../data/content';
+import { money } from './currency';
 import type { BuffView, GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
 import { skillIcon, systemIcon } from './art';
@@ -295,7 +296,7 @@ export class Hud {
   worn(slot: string) { return [...this.gear.values()].find((g) => g.slot === slot); }
   setSheet(m: SheetMsg) { this.sheet = m; this.renderCharacter(); this.renderInventory(); }
   renderInventory() {
-    $('zeny').textContent = this.zeny.toLocaleString() + ' z';
+    $('zeny').textContent = money(this.zeny);
     const eq = $('equip'); eq.replaceChildren();
     const lv = this.stats?.lv ?? 1, inactive = new Set(this.sheet?.inactive ?? []);
     for (const slot of [...GEAR_SLOTS, ...CHARM_SLOTS]) {
@@ -411,7 +412,7 @@ export class Hud {
       x.onclick = () => { if (x.dataset.confirm) this.onDiscard(g.uid); else { x.dataset.confirm = '1'; x.textContent = 'Discard: click again'; } };
       actions.append(x);
     }
-    d.append(el('p', 'sell-value', 'Sells for about ' + Math.round(it.sell_price * ({ normal: 1, magic: 1.5, rare: 2.5, relic: 5, unique: 4 }[g.rarity] ?? 1)).toLocaleString() + ' z'), actions);
+    d.append(el('p', 'sell-value', 'Sells for about ' + money(Math.round(it.sell_price * ({ normal: 1, magic: 1.5, rare: 2.5, relic: 5, unique: 4 }[g.rarity] ?? 1)))), actions);
   }
   private renderDetail() {
     const d = $('item-detail'); d.replaceChildren();
@@ -440,7 +441,7 @@ export class Hud {
       }
       if (wearing && wearing.id !== id) d.append(el('p', 'muted small', 'Compared with ' + wearing.name));
     }
-    d.append(el('p', 'sell-value', 'Sell value ' + it.sell_price.toLocaleString() + ' z · Owned ' + this.inventory[id]));
+    d.append(el('p', 'sell-value', 'Sell value ' + money(it.sell_price) + ' · Owned ' + this.inventory[id]));
     const equipped = Object.values(this.equip).includes(id);
     if (it.use || it.equip) {
       const b = el('button', 'primary detail-action', it.use ? 'Use item' : equipped ? 'Unequip' : 'Equip item');
@@ -546,7 +547,7 @@ export class Hud {
           if (full) { const bar = el('div', 'objective-progress'), fill = el('span'); fill.style.width = Math.min(100, (q.progress[i] ?? 0) / (q.goals[i] || 1) * 100) + '%'; bar.append(fill); d.append(bar); }
         });
         if (q.state === 'ready') d.append(el('p', 'good small', 'Report to ' + (this.c.npcs.get(q.turn_in)?.name ?? q.turn_in)));
-        if (full && def) d.append(el('div', 'quest-rewards', 'REWARDS · ' + def.rewards.base_exp.toLocaleString() + ' EXP · ' + def.rewards.currency.toLocaleString() + ' z' + def.rewards.items.map(i => ' · ' + (this.c.items.get(i.item_id)?.name ?? i.item_id) + ' ×' + i.qty).join('')));
+        if (full && def) d.append(el('div', 'quest-rewards', 'REWARDS · ' + def.rewards.base_exp.toLocaleString() + ' EXP · ' + money(def.rewards.currency) + def.rewards.items.map(i => ' · ' + (this.c.items.get(i.item_id)?.name ?? i.item_id) + ' ×' + i.qty).join('')));
         return d;
       };
       if (tracker.childElementCount < 3) tracker.append(card(false));

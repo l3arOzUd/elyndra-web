@@ -265,7 +265,7 @@ export interface SystemsDef {
   charm_slot_levels: number[];
   /**
    * Reforge (reroll affixes) and imbue (raise rarity) cost the base's sell
-   * price x these; job change is free up to a level then zeny a level;
+   * price x these; job change is free up to a level then Aurel a level;
    * stash and bag sizes; monsters' resistance to their own element and
    * weakness to its opposite (%).
    */
