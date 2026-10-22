@@ -114,11 +114,11 @@ export class NpcDialog {
       s.append(el('p', 'muted small', 'Stash ' + stash.length + ' / ' + cr.stash_max + ' · Bag ' + gear.filter((g) => g.slot !== 'stash').length + ' / ' + cr.bag_max));
       if (!stash.length && !bag.length) s.append(el('p', 'empty-state', 'No gear to store.'));
       for (const g of stash) {
-        const it = this.c.items.get(g.base), card = row(gearTitle(it, g), 'In your stash · ' + g.rarity + ' · item level ' + g.ilvl, itemIcon(it, g.rarity));
+        const it = this.c.items.get(g.base), card = row(gearTitle(it, g), 'In your stash · ' + g.rarity + ' · item level ' + g.ilvl, itemIcon(it, g.rarity, g.refine));
         card.append(button('Take', 'stash_take', String(g.uid))); s.append(card);
       }
       for (const g of bag) {
-        const it = this.c.items.get(g.base), card = row(gearTitle(it, g), 'In your bag · ' + g.rarity + ' · item level ' + g.ilvl, itemIcon(it, g.rarity));
+        const it = this.c.items.get(g.base), card = row(gearTitle(it, g), 'In your bag · ' + g.rarity + ' · item level ' + g.ilvl, itemIcon(it, g.rarity, g.refine));
         card.append(button('Store', 'stash_put', String(g.uid), undefined, stash.length >= cr.stash_max)); s.append(card);
       }
       // Job change: free up to a level, then Aurel a level.
@@ -158,12 +158,12 @@ export class NpcDialog {
       if (!own.length) f.append(el('p', 'empty-state', 'No gear that can be reworked.'));
       for (const g of reforgeable) {
         const it = this.c.items.get(g.base)!, cost = reforgeCost(this.c, it, g);
-        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Reroll every affix (' + g.rarity + (g.rarity === 'relic' ? ', the cap stays' : '') + ') · ' + money(cost), itemIcon(it, g.rarity));
+        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Reroll every affix (' + g.rarity + (g.rarity === 'relic' ? ', the cap stays' : '') + ') · ' + money(cost), itemIcon(it, g.rarity, g.refine));
         card.append(button('Reforge', 'reforge', String(g.uid), undefined, this.hud.aurel < cost)); f.append(card);
       }
       for (const g of imbueable) {
         const it = this.c.items.get(g.base)!, cost = imbueCost(this.c, it, g);
-        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Imbue ' + g.rarity + ' → ' + nextRarity(g) + ' with fresh affixes · ' + money(cost), itemIcon(it, g.rarity));
+        const card = row(gearTitle(it, g) + (isWorn(g) ? ' (worn)' : ''), 'Imbue ' + g.rarity + ' → ' + nextRarity(g) + ' with fresh affixes · ' + money(cost), itemIcon(it, g.rarity, g.refine));
         card.append(button('Imbue', 'imbue', String(g.uid), undefined, this.hud.aurel < cost)); f.append(card);
       }
       // Refining: weapons and armour, +1 at a time to +10 (refine.go).
@@ -173,7 +173,7 @@ export class NpcDialog {
       for (const g of list) {
         const it = this.c.items.get(g.base)!, lvl = g.refine ?? 0, cost = refineCost(it, g);
         const risk = lvl >= REFINE.max ? 'At the +' + REFINE.max + ' maximum' : REFINE.chance[lvl] + '% to reach +' + (lvl + 1) + ' · ' + money(cost) + (lvl >= REFINE.dropFrom ? ' · failure drops to +' + (lvl - 1) : REFINE.chance[lvl] < 100 ? ' · failure keeps +' + lvl : '');
-        const card = row(gearTitle(it, g) + (g.slot ? ' (worn)' : ''), '+' + REFINE.stepPct + '% base numbers a level · ' + risk, itemIcon(it, g.rarity));
+        const card = row(gearTitle(it, g) + (g.slot ? ' (worn)' : ''), '+' + REFINE.stepPct + '% base numbers a level · ' + risk, itemIcon(it, g.rarity, g.refine));
         card.append(button('Refine', 'refine', String(g.uid), undefined, lvl >= REFINE.max || this.hud.aurel < cost)); s.append(card);
       }
     }

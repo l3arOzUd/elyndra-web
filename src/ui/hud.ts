@@ -381,7 +381,7 @@ export class Hud {
       const g = id.startsWith('g:') ? this.gear.get(Number(id.slice(2))) : undefined;
       const it = itemOf(id), li = el('li'), b = el('button', 'item-cell rarity-' + (g ? g.rarity : it?.rarity ?? 'common') + (id === this.selected ? ' selected' : ''));
       b.title = nameOf(id) + (g ? ' · ' + RARITY_LABEL[g.rarity] : ''); b.setAttribute('aria-label', g ? nameOf(id) + ', ' + RARITY_LABEL[g.rarity] + ', item level ' + g.ilvl : (it?.name ?? id) + ', quantity ' + this.inventory[id]); b.setAttribute('aria-pressed', String(id === this.selected)); b.dataset.item = id;
-      b.append(itemIcon(it, g?.rarity), el('span', 'item-quantity', g ? (g.refine ? '+' + g.refine + ' ' : '') + (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
+      b.append(itemIcon(it, g?.rarity, g?.refine), el('span', 'item-quantity', g ? (g.refine ? '+' + g.refine + ' ' : '') + (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
       // Selecting only restyles the cells, so a double-click lands on the same button.
       b.onclick = () => {
         this.selected = id;
@@ -413,7 +413,7 @@ export class Hud {
       const b = el('button', 'doll-slot' + (g ? ' filled rarity-' + g.rarity : '') + (locked ? ' locked' : '') + (off ? ' inactive' : '') + (slot === this.equipSel ? ' selected' : ''));
       b.dataset.slot = slot; b.setAttribute('aria-pressed', String(slot === this.equipSel));
       const socket = el('span', 'doll-socket');
-      socket.append(it ? itemIcon(it, g!.rarity) : icon(SLOT_ICON[slot] ?? 'crystal', 'empty-equip'));
+      socket.append(it ? itemIcon(it, g!.rarity, g!.refine) : icon(SLOT_ICON[slot] ?? 'crystal', 'empty-equip'));
       if (g?.refine) socket.append(el('span', 'item-quantity', '+' + g.refine));
       if (ci >= 0 && it?.equip?.totem) socket.append(el('span', 'slot-key', TOTEM_KEYS[ci]));
       const text = el('span', 'doll-text');
@@ -434,7 +434,7 @@ export class Hud {
     $('doll-right').replaceChildren(...['accessory', 'armor', 'boots'].map(slotButton));
     $('doll-charms').replaceChildren(...CHARM_SLOTS.map(slotButton));
     $('equipment-job').textContent = this.stats ? this.stats.job[0].toUpperCase() + this.stats.job.slice(1) + ' · Lv ' + lv : '';
-    const outfit = [...this.gear.values()].filter(isWornCopy).map((g) => g.base).sort();
+    const outfit = [...this.gear.values()].filter(isWornCopy).map((g) => g.base + (g.slot === 'weapon' && g.refine ? '+' + g.refine : '')).sort();
     const canvas = $('doll-canvas') as HTMLCanvasElement;
     if (canvas.dataset.outfit !== outfit.join('+')) {
       const drawn = drawWayfarerPortrait(canvas, outfit);
@@ -459,7 +459,7 @@ export class Hud {
       const it = gearItem(this.c, x)!, met = requirements(it, this.stats?.lv ?? 1, this.stats?.job, this.sheet).every(([, ok]) => ok);
       const b = el('button', 'candidate rarity-' + x.rarity), text = el('span');
       text.append(el('strong', 'rarity-text-' + x.rarity, gearTitle(it, x)), el('small', met ? 'muted' : 'bad', met ? RARITY_LABEL[x.rarity] + ' · item level ' + x.ilvl : '✗ Requirements not met'));
-      b.append(itemIcon(it, x.rarity), text, el('span', 'candidate-action', 'Equip'));
+      b.append(itemIcon(it, x.rarity, x.refine), text, el('span', 'candidate-action', 'Equip'));
       b.disabled = !met; b.onclick = () => this.onEquip(x.uid, ci >= 0 ? slot : undefined);
       s.append(b);
     }
@@ -491,7 +491,7 @@ export class Hud {
     const it = gearItem(this.c, g);
     if (!it?.equip) { d.append(el('p', 'muted', g.base)); return; }
     const e = it.equip;
-    this.detailHead(d, itemIcon(it, g.rarity), RARITY_LABEL[g.rarity] + ' · item level ' + g.ilvl, gearTitle(it, g), 'rarity-text-' + g.rarity,
+    this.detailHead(d, itemIcon(it, g.rarity, g.refine), RARITY_LABEL[g.rarity] + ' · item level ' + g.ilvl, gearTitle(it, g), 'rarity-text-' + g.rarity,
       kindLabel(it) + (g.slot === 'stash' ? ' · in stash' : isWornCopy(g) ? ' · worn' : ''));
     if (e.unique || it.category === 'totem' || it.description) d.append(el('p', 'item-description', it.description));
     const lines = baseLines(this.c, it, g);

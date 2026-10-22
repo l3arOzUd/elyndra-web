@@ -1,22 +1,15 @@
-"""Paints the gloves (CHARACTER_SYSTEMS.md §4.1):
-
-1. public/ui/painted/gear-v1.png: a 3x1 atlas of painted gloves icons in the
-   style of systems-v1.png, one per primary armour kind (src/ui/art.ts
-   GLOVES_ART): Armour steel handguards, Evasion leather gloves, Aether
-   Shield cloth wraps.
-2. The paper-doll layers: public/sprites/wayfarer/items/gen_gloves_<kind>_e<era>/
-   <view>/hand_near.png, hand_far.png and their _open variants. Each is the
-   Wayfarer's own hand recoloured as the glove (shading kept), with a cuff
-   at the wrist; eras as in paint-gear-variants.py (bronze/leather, steel,
-   mythic with a gold rim). content/build.ts maps the gloves bases to them.
+"""Paints public/ui/painted/gear-v1.png: a 3x1 atlas of gloves icons in the
+style of systems-v1.png, one per primary armour kind (src/ui/art.ts
+GLOVES_ART): Armour steel handguards, Evasion leather gloves, Aether Shield
+cloth wraps. A stopgap until the painted v3 sheets (ITEM_ART.md) cover
+gloves; the paper doll gets real glove art from scripts/import-doll-art.py.
 
     python scripts/paint-gloves.py
 """
 import importlib.util
 import os
 
-import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image
 
 HERE = os.path.dirname(__file__)
 spec = importlib.util.spec_from_file_location("system_icons", os.path.join(HERE, "paint-system-icons.py"))
@@ -25,7 +18,6 @@ spec.loader.exec_module(si)
 Cell, P, E, gleam = si.Cell, si.P, si.E, si.gleam
 
 ICONS = os.path.join(HERE, "..", "public", "ui", "painted", "gear-v1.png")
-WAYFARER = os.path.join(HERE, "..", "public", "sprites", "wayfarer")
 
 
 # --- icons -----------------------------------------------------------------------------
@@ -68,75 +60,5 @@ def icons():
     print("wrote", ICONS)
 
 
-# --- paper-doll layers -----------------------------------------------------------------
-
-# Glove colour ramps (shadow -> light) per kind, and the cuff colour.
-KIND = {
-    "armour": ((46, 52, 64), (214, 222, 236), (150, 120, 70)),
-    "evasion": ((52, 30, 16), (204, 142, 86), (110, 70, 36)),
-    "shield": ((24, 36, 92), (150, 190, 250), (200, 168, 96)),
-}
-# Era: value scale, saturation scale, and a gold rim for mythic.
-ERA = {1: (0.92, 0.85, False), 2: (1.05, 1.0, False), 3: (0.8, 1.2, True)}
-VIEWS = ("front", "side", "back")
-PARTS = ("hand_near", "hand_far", "hand_near_open", "hand_far_open")
-
-
-def recolour(src, kind, era):
-    a = np.asarray(src.convert("RGBA")).astype(np.float32)
-    alpha = a[..., 3]
-    lum = (a[..., 0] * 0.3 + a[..., 1] * 0.59 + a[..., 2] * 0.11) / 255.0
-    lum = np.clip((lum - 0.15) / 0.75, 0, 1)
-    lo, hi, cuff = (np.array(x, np.float32) for x in KIND[kind])
-    value, sat, gold = ERA[era]
-    rgb = lo + (hi - lo) * lum[..., None]
-    grey = rgb.mean(axis=2, keepdims=True)
-    rgb = np.clip((grey + (rgb - grey) * sat) * value, 0, 255)
-    # Cuff: the top rows of the hand (the wrist), a little wider than the hand.
-    ys = np.where(alpha.max(axis=1) > 0)[0]
-    if len(ys):
-        top = ys[0]
-        band = np.zeros_like(alpha, dtype=bool)
-        band[top:top + 7] = True
-        solid = Image.fromarray((alpha > 40).astype(np.uint8) * 255).filter(ImageFilter.MaxFilter(3))
-        widened = np.asarray(solid) > 0
-        cuff_mask = band & widened
-        shade = 0.75 + 0.35 * lum[..., None]
-        rgb = np.where(cuff_mask[..., None], np.clip(cuff * shade * value, 0, 255), rgb)
-        alpha = np.where(cuff_mask, 255, alpha)
-    out = np.dstack([rgb, alpha]).astype(np.uint8)
-    img = Image.fromarray(out, "RGBA")
-    # Dark outline, and a gold one outside it for mythic gloves.
-    m = img.getchannel("A").point(lambda v: 255 if v > 40 else 0)
-    ring = Image.eval(m.filter(ImageFilter.MaxFilter(3)), lambda v: v)
-    edge = Image.fromarray(np.clip(np.asarray(ring).astype(int) - np.asarray(m).astype(int), 0, 255).astype(np.uint8))
-    base = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    if gold:
-        outer = m.filter(ImageFilter.MaxFilter(5))
-        gold_edge = Image.fromarray(np.clip(np.asarray(outer).astype(int) - np.asarray(ring).astype(int), 0, 255).astype(np.uint8))
-        g = Image.new("RGBA", img.size, (232, 190, 92, 255))
-        g.putalpha(gold_edge)
-        base = Image.alpha_composite(base, g)
-    line = Image.new("RGBA", img.size, (24, 16, 10, 255))
-    line.putalpha(edge)
-    base = Image.alpha_composite(base, line)
-    return Image.alpha_composite(base, img)
-
-
-def layers():
-    n = 0
-    for kind in KIND:
-        for era in ERA:
-            for view in VIEWS:
-                folder = os.path.join(WAYFARER, "items", f"gen_gloves_{kind}_e{era}", view)
-                os.makedirs(folder, exist_ok=True)
-                for part in PARTS:
-                    src = Image.open(os.path.join(WAYFARER, "base", view, part + ".png"))
-                    recolour(src, kind, era).save(os.path.join(folder, part + ".png"))
-                    n += 1
-    print("wrote", n, "glove layers")
-
-
 if __name__ == "__main__":
     icons()
-    layers()

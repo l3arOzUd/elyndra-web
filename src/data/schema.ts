@@ -169,6 +169,8 @@ export interface ItemDef {
   description: string;
   /** Generated gear base: drops from any monster of its item level or above (systems.json drops). */
   drop_pool?: boolean;
+  /** Painted icon v3, "sheet:cell:cols:rows" in public/ui/painted/items-v3-<sheet>.png (scripts/import-item-icons.py). */
+  icon?: string;
   /** Consumables: what using one does. */
   use?: {
     heal_hp_pct?: number; heal_sp_pct?: number; reset_stats?: boolean; cooldown_ms: number;

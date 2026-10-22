@@ -61,31 +61,41 @@ const ELEMENT_TINT: Record<string, [number, number, number]> = {
  */
 function writePaperDollLooks(gear: ItemDef[], path: string) {
   if (!existsSync(path)) return;
-  type Look = { name?: string; slot?: string; visual?: string; layers?: string[]; hides?: string[]; variants?: boolean; generated?: boolean };
+  type Look = { name?: string; slot?: string; visual?: string; layers?: string[]; hides?: string[]; variants?: boolean; motion?: "melee" | "shoot" | "cast"; generated?: boolean };
   const file = JSON.parse(readFileSync(path, "utf8")) as { items: Record<string, Look> };
   for (const [id, look] of Object.entries(file.items)) if (look.generated) delete file.items[id];
-  // Borrow the hand-drawn look of the same visual whole (layers, hides), so
-  // art changes there reach every generated base on the next build.
+  // Paper-doll art v3 (ITEM_ART.md §4, scripts/import-doll-art.py): one painted
+  // set per gear type and per unique, worn by every tier of that type.
+  const v3 = join(dirname(fileURLToPath(import.meta.url)), "..", "art-source", "doll-v3");
+  const sets = existsSync(join(v3, "manifest.json")) ? (JSON.parse(readFileSync(join(v3, "manifest.json"), "utf8")).sets as { visual: string; slot: string; items: string[] }[]) : [];
+  const imported = existsSync(join(v3, "imported.json")) ? (JSON.parse(readFileSync(join(v3, "imported.json"), "utf8")) as Record<string, string[]>) : {};
+  const setOf = new Map(sets.flatMap((st) => st.items.map((id) => [id, st] as const)));
+  const HIDES: Record<string, string[]> = { armor: ["torso", "arm_near", "arm_far"], gloves: ["hand_near", "hand_far"] };
+  const MOTION: Record<string, "melee" | "shoot" | "cast"> = { vanguard: "melee", strider: "shoot", arcanist: "cast", machinist: "melee" };
+  // Until a set is painted, borrow the hand-drawn look of the slot (never a recolour).
   const byVisual = new Map(Object.values(file.items).filter((l) => l.visual).map((l) => [l.visual!, l]));
   const weapon: Record<string, string> = { vanguard: "copper_saber", strider: "surveyor_bow", arcanist: "aether_rod", machinist: "copper_saber" };
   for (const g of gear) {
     const e = g.equip;
     if (!e || file.items[g.id] || !["weapon", "armor", "gloves", "boots", "head"].includes(e.slot)) continue;
-    // Heads (scripts/paint-head-gear.py): Armour helm, Evasion hood, Aether Shield circlet.
+    const st = setOf.get(g.id), layers = st && imported[st.visual]?.filter((l) => !l.endsWith("_open"));
+    if (st && layers?.length) {
+      const look: Look = { name: g.name, slot: e.slot, visual: st.visual, layers, generated: true };
+      const hides = HIDES[e.slot]?.filter((h) => layers.includes(h));
+      if (hides?.length) look.hides = hides;
+      if (e.slot === "gloves") look.variants = true; // open-hand drawings too
+      if (e.slot === "weapon") look.motion = MOTION[e.job ?? "vanguard"];
+      file.items[g.id] = look;
+      continue;
+    }
+    // Heads (scripts/paint-head-gear.py): Armour helm, Evasion hood, Aether Shield circlet. Gloves: none yet.
     const head = e.kind?.includes("armour") ? "iron_helm" : e.kind?.includes("evasion") ? "leather_hood" : "aether_circlet";
     const source = e.slot === "weapon" ? weapon[e.job ?? "vanguard"] : e.slot === "armor" ? "leafweave_coat" : e.slot === "boots" ? "traveler_boots" : e.slot === "gloves" ? "" : head;
-    // Recoloured variants (scripts/paint-gear-variants.py): era by item level
-    // (bronze / steel / mythic), group by job (weapons) or primary kind.
-    const era = (e.item_level ?? 1) <= 20 ? 1 : (e.item_level ?? 1) <= 50 ? 2 : 3;
-    const group = e.slot === "weapon" ? e.job ?? "vanguard" : (e.kind ?? "armour").split("_")[0];
-    const variant = `gen_${e.slot}_${group}_e${era}`;
-    const visual = existsSync(join(dirname(path), "items", variant)) ? variant : source;
+    if (!source) continue;
     const src = byVisual.get(source);
-    // Gloves (scripts/paint-gloves.py) are drawn over both hands; they have no hand-drawn source.
-    const own = e.slot === "head" ? ["head"] : e.slot === "gloves" ? ["hand_near", "hand_far"] : [];
-    const look: Look = { name: g.name, slot: e.slot, visual, layers: [...(src?.layers ?? own)], generated: true };
+    const look: Look = { name: g.name, slot: e.slot, visual: source, layers: [...(src?.layers ?? (e.slot === "head" ? ["head"] : []))], generated: true };
     if (src?.hides) look.hides = [...src.hides];
-    if (e.slot === "gloves") look.variants = true; // open-hand drawings too
+    if (src?.motion) look.motion = src.motion;
     file.items[g.id] = look;
   }
   writeFileSync(path, `${JSON.stringify(file, null, 1)}\n`);

@@ -320,3 +320,48 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .slot .sp { position:absolute; right:2px; bottom:0; z-index:2; font:bold 12px/1.3 var(--ui-font-body); color:#9fd4ff; text-shadow:1px 1px #000,-1px -1px #000,1px -1px #000,-1px 1px #000; }
 .slot .sp::after { content:' SP'; font-size:8px; color:#c9e6ff; }.slot .sp:empty { display:none; }
 .slot.nosp .sp { color:#ff8f7a; }.slot.nosp .sp::after { color:#ffc2b5; }
+
+/*
+ * Item grade, refine and rarity (ITEM_ART.md): three separate signals.
+ * Grade/tier = the colour of the icon's frame (tiers 8-10 add a light running
+ * round it). Refine +N = the item itself glows, N-age style (src/shared/refine.ts,
+ * keep in step). Rarity = the cell border and its letter.
+ */
+@property --sheen { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+.painted-icon.graded,.painted-icon.refined { position:relative; isolation:isolate; }
+.painted-icon.graded { box-shadow:inset 0 0 0 2px var(--grade),inset 0 0 0 3px #000a; }
+.painted-icon[data-grade="1"] { --grade:#6f5a44; }.painted-icon[data-grade="2"] { --grade:#b0783c; }
+.painted-icon[data-grade="3"] { --grade:#8d949c; }.painted-icon[data-grade="4"] { --grade:#d6dde6; }
+.painted-icon[data-grade="5"] { --grade:#4f7ee0; }.painted-icon[data-grade="6"] { --grade:#36c2ad; }
+.painted-icon[data-grade="7"] { --grade:#a8ecf7; }.painted-icon[data-grade="8"] { --grade:#ff7d33; }
+.painted-icon[data-grade="9"] { --grade:#ffe37f; }.painted-icon[data-grade="10"] { --grade:#c27cff; }
+.painted-icon.graded[data-grade="8"]::after,.painted-icon.graded[data-grade="9"]::after,.painted-icon.graded[data-grade="10"]::after {
+ content:''; position:absolute; inset:0; padding:2px; pointer-events:none; z-index:2;
+ background:conic-gradient(from var(--sheen),transparent 0deg 290deg,#fffbe6 325deg,transparent 360deg);
+ -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude;
+ animation:grade-sheen 3.2s linear infinite;
+}
+.painted-icon.graded[data-grade="10"]::after { background:conic-gradient(from var(--sheen),transparent 0deg 130deg,#ffe9a8 160deg,transparent 180deg 310deg,#ffe9a8 340deg,transparent 360deg); animation-duration:2.2s; }
+@keyframes grade-sheen { to { --sheen:360deg; } }
+.painted-icon.refined::before {
+ content:''; position:absolute; inset:0; pointer-events:none; z-index:1; mix-blend-mode:screen;
+ background:radial-gradient(1.6px 1.6px at 22% 30%,var(--spark) 99%,transparent),radial-gradient(1.4px 1.4px at 72% 22%,var(--spark) 99%,transparent),
+  radial-gradient(2px 2px at 80% 68%,var(--spark) 99%,transparent),radial-gradient(1.4px 1.4px at 34% 78%,var(--spark) 99%,transparent),
+  radial-gradient(circle at 50% 55%,var(--glow) 0,transparent 66%);
+ animation:refine-pulse var(--pulse,2.6s) ease-in-out infinite,refine-drift 3s linear infinite;
+}
+.painted-icon[data-refine="1"] { --glow:#7dff9a40; --spark:transparent; --pulse:3.2s; }
+.painted-icon[data-refine="2"] { --glow:#3fe0b066; --spark:transparent; --pulse:2.8s; }
+.painted-icon[data-refine="3"] { --glow:#3fa9ff70; --spark:#d8f3ff; }
+.painted-icon[data-refine="4"] { --glow:#b46cff78; --spark:#f0dcff; }
+.painted-icon[data-refine="5"] { --glow:#ffc83d88; --spark:#fff4c2; }
+.painted-icon[data-refine="6"] { --glow:#ff3b3b88; --spark:#ffd0c0; --pulse:2.2s; }
+.painted-icon[data-refine="7"] { --glow:#ff2a2aaa; --spark:#fff; --pulse:1.4s; }
+.painted-icon[data-refine="8"] { --glow:#ffffffaa; --spark:#fff; --pulse:1.8s; }
+.painted-icon[data-refine="9"],.painted-icon[data-refine="10"] { --glow:#ff5af0aa; --spark:#fff; --pulse:1.6s; }
+.painted-icon[data-refine="9"]::before { animation:refine-pulse 1.6s ease-in-out infinite,refine-drift 3s linear infinite,refine-hue 4s linear infinite; }
+.painted-icon[data-refine="10"]::before { animation:refine-pulse 1.1s ease-in-out infinite,refine-drift 2s linear infinite,refine-hue 2.5s linear infinite; }
+@keyframes refine-pulse { 0%,100% { opacity:.5; } 50% { opacity:1; } }
+@keyframes refine-drift { from { background-position:0 0,0 0,0 0,0 0,center; } to { background-position:0 -10px,0 -14px,0 -8px,0 -12px,center; } }
+@keyframes refine-hue { to { filter:hue-rotate(360deg); } }
+@media (prefers-reduced-motion:reduce) { .painted-icon.refined::before,.painted-icon.graded::after { animation:none; } }

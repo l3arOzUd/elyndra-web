@@ -1,4 +1,5 @@
 import type { Dir } from "../shared/dir";
+import { refineGlow } from "../shared/refine";
 import { spriteFromImages, type AnimName, type SpriteDef, type SpriteDefJson } from "./spriteDef";
 
 // The Wayfarer as a paper doll: body parts and equipment layers are separate
@@ -25,7 +26,7 @@ export interface Rig {
   effects?: string[];
 }
 /** variants: the item also has a drawing of each layer's rig variants (gloves: hand_near_open.png), used in those poses. */
-export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[]; motion?: "melee" | "shoot" | "cast"; variants?: boolean }
+export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[]; motion?: "melee" | "shoot" | "cast"; variants?: boolean; refine?: number }
 export interface PaperDollKit { rig: Rig; items: Record<string, ItemLook>; img: Map<string, HTMLImageElement> }
 
 /** Generated equipment may share an existing painted weapon without a motion field. */
@@ -316,7 +317,60 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
 
 const ROWS: Dir[] = ["S", "SW", "W", "NW", "N"];
 
-function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, pose: Pose, gear: ItemLook[]) {
+/**
+ * Worn items from a look: "itm_1001+5" is an item and its refine (the server
+ * marks the weapon's), which makes it glow (ITEM_ART.md §3).
+ */
+export function looksOf(kit: PaperDollKit, gear: readonly string[]): ItemLook[] {
+  return gear.map((entry) => {
+    const [id, plus] = entry.split("+"), it = kit.items[id];
+    return it && plus ? { ...it, refine: Number(plus) } : it;
+  }).filter((it): it is ItemLook => !!it);
+}
+
+const boxes = new WeakMap<HTMLImageElement, [number, number, number, number]>();
+/** The painted area of a layer (x, y, w, h), for placing sparkles on it. */
+function paintedBox(im: HTMLImageElement): [number, number, number, number] {
+  let box = boxes.get(im);
+  if (!box) {
+    const c = document.createElement("canvas"); c.width = im.width; c.height = im.height;
+    const g = c.getContext("2d", { willReadFrequently: true })!; g.drawImage(im, 0, 0);
+    const a = g.getImageData(0, 0, c.width, c.height).data;
+    let l = c.width, t = c.height, r = 0, b = 0;
+    for (let y = 0; y < c.height; y += 2) for (let x = 0; x < c.width; x += 2) if (a[(y * c.width + x) * 4 + 3] > 40) { l = Math.min(l, x); t = Math.min(t, y); r = Math.max(r, x); b = Math.max(b, y); }
+    box = r < l ? [0, 0, 0, 0] : [l, t, r - l, b - t];
+    boxes.set(im, box);
+  }
+  return box;
+}
+
+/** A refined item's layer: the glow of its +N round it, and sparkles that move from frame to frame. */
+function drawGlowing(g: CanvasRenderingContext2D, im: HTMLImageElement, m: DOMMatrix, refine: number, seed: number) {
+  const glow = refineGlow(refine)!;
+  const color = glow.prism ? `hsl(${(seed * 47) % 360} 100% 72%)` : glow.color;
+  const r = 3 + refine * 0.9, pulse = 0.65 + 0.35 * Math.abs(Math.sin(seed * 0.9));
+  g.setTransform(m);
+  g.save();
+  g.globalAlpha = pulse;
+  g.filter = `drop-shadow(0 0 ${r}px ${color}) drop-shadow(0 0 ${r / 2}px ${color})`;
+  g.drawImage(im, 0, 0);
+  g.restore();
+  g.drawImage(im, 0, 0);
+  if (!glow.spark) return;
+  const [bx, by, bw, bh] = paintedBox(im);
+  let s = (seed * 2654435761 + refine * 97) >>> 0;
+  const rand = () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296);
+  g.fillStyle = "#ffffff";
+  for (let i = 0; i < 2 + Math.floor(refine / 2); i++) {
+    const x = bx + rand() * bw, y = by + rand() * bh, size = 3 + rand() * (2 + refine * 0.4);
+    g.save(); g.shadowColor = color; g.shadowBlur = 6; g.globalAlpha = 0.6 + rand() * 0.4;
+    g.beginPath(); g.moveTo(x, y - size); g.lineTo(x + size * 0.28, y); g.lineTo(x, y + size); g.lineTo(x - size * 0.28, y); g.closePath(); g.fill();
+    g.beginPath(); g.moveTo(x - size, y); g.lineTo(x, y + size * 0.28); g.lineTo(x + size, y); g.lineTo(x, y - size * 0.28); g.closePath(); g.fill();
+    g.restore();
+  }
+}
+
+function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, pose: Pose, gear: ItemLook[], seed = 0) {
   const { rig } = kit;
   const v = rig.views[view];
   const k = rig.frame / rig.canvas;
@@ -355,8 +409,9 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
     const variant=slot==="head"&&pose.unconscious?"_unconscious":pose.openHands?.includes(slot)?"_open":"";
     if (v.parts[slot] && !hidden.has(slot)) draw(`base/${view}/${slot}${variant}.png`, m);
     for (const it of gear) if (it.layers.includes(slot)) {
-      const f = `items/${it.visual}/${view}/${slot}`;
-      draw(variant && kit.img.has(f + variant + ".png") ? f + variant + ".png" : f + ".png", m);
+      const f = `items/${it.visual}/${view}/${slot}`, file = variant && kit.img.has(f + variant + ".png") ? f + variant + ".png" : f + ".png";
+      const im = it.refine ? kit.img.get(file) : undefined;
+      if (im) drawGlowing(g, im, m, it.refine!, seed); else draw(file, m);
     }
   }
   // Native line geometry follows the actual wrist transforms: a bowstring
@@ -399,10 +454,10 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
 
 /** Same renderer for the artist's pose preview and the live sprite sheets. */
 export function renderWayfarerPose(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, gear: readonly string[], anim: AnimName="idle", frame=0) {
-  const looks=gear.map(id=>kit.items[id]).filter((it):it is ItemLook=>!!it);
+  const looks=looksOf(kit,gear);
   const motion=weaponMotion(looks);
   const action=anim==="attack"&&(motion==="shoot"||motion==="cast")?motion:anim;
-  return drawCell(g,kit,view,actionPose(kit.rig,view,action,frame,DOLL_ANIMS[action]!.frames,motion),looks);
+  return drawCell(g,kit,view,actionPose(kit.rig,view,action,frame,DOLL_ANIMS[action]!.frames,motion),looks,frame);
 }
 
 /** The sprite definition every baked outfit shares. */
@@ -421,7 +476,7 @@ export function dollJson(rig: Rig, id = "wayfarer"): SpriteDefJson {
 
 /** Bakes the sheets for one outfit (equipped item ids; unknown ids are ignored). */
 export function bakeWayfarer(kit: PaperDollKit, gear: readonly string[] = []): SpriteDef {
-  const looks = gear.map((id) => kit.items[id]).filter((x): x is ItemLook => !!x);
+  const looks = looksOf(kit, gear);
   const motion=weaponMotion(looks);
   const json = dollJson(kit.rig, gear.length ? `wayfarer+${gear.join("+")}` : "wayfarer");
   json.animations={...json.animations};
@@ -440,7 +495,7 @@ export function bakeWayfarer(kit: PaperDollKit, gear: readonly string[] = []): S
         const cell = document.createElement("canvas");
         cell.width = cell.height = F;
         const action=name==="attack"&&(motion==="shoot"||motion==="cast")?motion:name;
-        drawCell(cell.getContext("2d")!, kit, view, actionPose(kit.rig, view, action, f, def.frames, motion), looks);
+        drawCell(cell.getContext("2d")!, kit, view, actionPose(kit.rig, view, action, f, def.frames, motion), looks, f + row * 7);
         g.drawImage(cell, f * F, row * F);
       }
     });

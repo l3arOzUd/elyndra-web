@@ -1,0 +1,2680 @@
+{
+ "about": "Painted item icons v3. scripts/plan-item-icons.py writes this; scripts/import-item-icons.py packs sheet-NN.png.",
+ "kept_v2": [
+  {
+   "cell": "12",
+   "items": [
+    "itm_0001"
+   ]
+  },
+  {
+   "cell": "13",
+   "items": [
+    "itm_0002"
+   ]
+  },
+  {
+   "cell": "14",
+   "items": [
+    "itm_0003"
+   ]
+  },
+  {
+   "cell": "15",
+   "items": [
+    "itm_0004"
+   ]
+  },
+  {
+   "cell": "16",
+   "items": [
+    "itm_0005"
+   ]
+  },
+  {
+   "cell": "17",
+   "items": [
+    "itm_0006"
+   ]
+  },
+  {
+   "cell": "18",
+   "items": [
+    "itm_0007"
+   ]
+  },
+  {
+   "cell": "19",
+   "items": [
+    "itm_0008"
+   ]
+  },
+  {
+   "cell": "20",
+   "items": [
+    "itm_0009"
+   ]
+  },
+  {
+   "cell": "21",
+   "items": [
+    "itm_0010"
+   ]
+  },
+  {
+   "cell": "22",
+   "items": [
+    "itm_0011"
+   ]
+  },
+  {
+   "cell": "23",
+   "items": [
+    "itm_0012"
+   ]
+  },
+  {
+   "cell": "24",
+   "items": [
+    "itm_0013"
+   ]
+  },
+  {
+   "cell": "25",
+   "items": [
+    "itm_0014"
+   ]
+  },
+  {
+   "cell": "26",
+   "items": [
+    "itm_0015"
+   ]
+  },
+  {
+   "cell": "27",
+   "items": [
+    "itm_0016"
+   ]
+  },
+  {
+   "cell": "28",
+   "items": [
+    "itm_0017"
+   ]
+  },
+  {
+   "cell": "29",
+   "items": [
+    "itm_0018"
+   ]
+  },
+  {
+   "cell": "30",
+   "items": [
+    "itm_0019"
+   ]
+  },
+  {
+   "cell": "31",
+   "items": [
+    "itm_0020"
+   ]
+  },
+  {
+   "cell": "32",
+   "items": [
+    "itm_0021"
+   ]
+  },
+  {
+   "cell": "33",
+   "items": [
+    "itm_0022"
+   ]
+  },
+  {
+   "cell": "9",
+   "items": [
+    "itm_0075"
+   ]
+  },
+  {
+   "cell": "6",
+   "items": [
+    "itm_0076"
+   ]
+  },
+  {
+   "cell": "7",
+   "items": [
+    "itm_0077"
+   ]
+  },
+  {
+   "cell": "4",
+   "items": [
+    "itm_0078"
+   ]
+  },
+  {
+   "cell": "3",
+   "items": [
+    "itm_0079"
+   ]
+  },
+  {
+   "cell": "0",
+   "items": [
+    "itm_0080"
+   ]
+  },
+  {
+   "cell": "1",
+   "items": [
+    "itm_0081"
+   ]
+  },
+  {
+   "cell": "2",
+   "items": [
+    "itm_0082"
+   ]
+  }
+ ],
+ "sheets": [
+  {
+   "sheet": 1,
+   "cols": 6,
+   "rows": 6,
+   "cells": [
+    {
+     "cell": 0,
+     "key": "gear/weapon/Saber",
+     "brief": "a curved single-edged steel saber with a brass cog-shaped guard and wrapped leather grip, Vanguard sword",
+     "items": [
+      "itm_1001",
+      "itm_1024",
+      "itm_1047",
+      "itm_1070",
+      "itm_1093",
+      "itm_1116",
+      "itm_1139",
+      "itm_1162",
+      "itm_1185",
+      "itm_1208"
+     ]
+    },
+    {
+     "cell": 1,
+     "key": "gear/weapon/Bow",
+     "brief": "a recurve hunting bow of dark briar wood with brass tips and an ivory string, Strider bow",
+     "items": [
+      "itm_1002",
+      "itm_1025",
+      "itm_1048",
+      "itm_1071",
+      "itm_1094",
+      "itm_1117",
+      "itm_1140",
+      "itm_1163",
+      "itm_1186",
+      "itm_1209"
+     ]
+    },
+    {
+     "cell": 2,
+     "key": "gear/weapon/Rod",
+     "brief": "a slender mage rod of pale blue scaled wood topped with a glowing teal Aetherite crystal in a brass claw",
+     "items": [
+      "itm_1003",
+      "itm_1026",
+      "itm_1049",
+      "itm_1072",
+      "itm_1095",
+      "itm_1118",
+      "itm_1141",
+      "itm_1164",
+      "itm_1187",
+      "itm_1210"
+     ]
+    },
+    {
+     "cell": 3,
+     "key": "gear/weapon/Gauntlet",
+     "brief": "a single mechanical battle gauntlet of brass and riveted steel plates with exposed gears and a small piston on the wrist, Machinist weapon",
+     "items": [
+      "itm_1004",
+      "itm_1027",
+      "itm_1050",
+      "itm_1073",
+      "itm_1096",
+      "itm_1119",
+      "itm_1142",
+      "itm_1165",
+      "itm_1188",
+      "itm_1211"
+     ]
+    },
+    {
+     "cell": 4,
+     "key": "gear/head/Helm",
+     "brief": "a heavy steel great helm with a rounded dome, cheek guards and a small teal crest gem",
+     "items": [
+      "itm_1005",
+      "itm_1028",
+      "itm_1051",
+      "itm_1074",
+      "itm_1097",
+      "itm_1120",
+      "itm_1143",
+      "itm_1166",
+      "itm_1189",
+      "itm_1212"
+     ]
+    },
+    {
+     "cell": 5,
+     "key": "gear/head/Hood",
+     "brief": "a dark green leather ranger hood with a stitched edge and a short cowl",
+     "items": [
+      "itm_1006",
+      "itm_1029",
+      "itm_1052",
+      "itm_1075",
+      "itm_1098",
+      "itm_1121",
+      "itm_1144",
+      "itm_1167",
+      "itm_1190",
+      "itm_1213"
+     ]
+    },
+    {
+     "cell": 6,
+     "key": "gear/head/Circlet",
+     "brief": "a thin gold circlet set with a glowing blue Aether gem at the brow",
+     "items": [
+      "itm_1007",
+      "itm_1030",
+      "itm_1053",
+      "itm_1076",
+      "itm_1099",
+      "itm_1122",
+      "itm_1145",
+      "itm_1168",
+      "itm_1191",
+      "itm_1214"
+     ]
+    },
+    {
+     "cell": 7,
+     "key": "gear/head/Sallet",
+     "brief": "a steel sallet helmet with a swept back neck guard and a leather chin strap",
+     "items": [
+      "itm_1008",
+      "itm_1031",
+      "itm_1054",
+      "itm_1077",
+      "itm_1100",
+      "itm_1123",
+      "itm_1146",
+      "itm_1169",
+      "itm_1192",
+      "itm_1215"
+     ]
+    },
+    {
+     "cell": 8,
+     "key": "gear/head/Warcrown",
+     "brief": "a battle crown of steel plates with a runic gold band and blue Aether gems",
+     "items": [
+      "itm_1009",
+      "itm_1032",
+      "itm_1055",
+      "itm_1078",
+      "itm_1101",
+      "itm_1124",
+      "itm_1147",
+      "itm_1170",
+      "itm_1193",
+      "itm_1216"
+     ]
+    },
+    {
+     "cell": 9,
+     "key": "gear/head/Mask",
+     "brief": "a dark half-face mask of leather with silver filigree and violet Aether eyes",
+     "items": [
+      "itm_1010",
+      "itm_1033",
+      "itm_1056",
+      "itm_1079",
+      "itm_1102",
+      "itm_1125",
+      "itm_1148",
+      "itm_1171",
+      "itm_1194",
+      "itm_1217"
+     ]
+    },
+    {
+     "cell": 10,
+     "key": "gear/armor/Plate",
+     "brief": "a full steel breastplate cuirass with pauldrons and a brass trim",
+     "items": [
+      "itm_1011",
+      "itm_1034",
+      "itm_1057",
+      "itm_1080",
+      "itm_1103",
+      "itm_1126",
+      "itm_1149",
+      "itm_1172",
+      "itm_1195",
+      "itm_1218"
+     ]
+    },
+    {
+     "cell": 11,
+     "key": "gear/armor/Leathers",
+     "brief": "a brown studded leather jerkin with buckled straps and a hood folded at the collar",
+     "items": [
+      "itm_1012",
+      "itm_1035",
+      "itm_1058",
+      "itm_1081",
+      "itm_1104",
+      "itm_1127",
+      "itm_1150",
+      "itm_1173",
+      "itm_1196",
+      "itm_1219"
+     ]
+    },
+    {
+     "cell": 12,
+     "key": "gear/armor/Robe",
+     "brief": "a long deep-blue mage robe with gold embroidered hems and a glowing Aether clasp",
+     "items": [
+      "itm_1013",
+      "itm_1036",
+      "itm_1059",
+      "itm_1082",
+      "itm_1105",
+      "itm_1128",
+      "itm_1151",
+      "itm_1174",
+      "itm_1197",
+      "itm_1220"
+     ]
+    },
+    {
+     "cell": 13,
+     "key": "gear/armor/Brigandine",
+     "brief": "a brigandine coat of riveted steel plates under red-brown cloth with leather straps",
+     "items": [
+      "itm_1014",
+      "itm_1037",
+      "itm_1060",
+      "itm_1083",
+      "itm_1106",
+      "itm_1129",
+      "itm_1152",
+      "itm_1175",
+      "itm_1198",
+      "itm_1221"
+     ]
+    },
+    {
+     "cell": 14,
+     "key": "gear/armor/Runeplate",
+     "brief": "a steel breastplate engraved with glowing blue runes and gold trim",
+     "items": [
+      "itm_1015",
+      "itm_1038",
+      "itm_1061",
+      "itm_1084",
+      "itm_1107",
+      "itm_1130",
+      "itm_1153",
+      "itm_1176",
+      "itm_1199",
+      "itm_1222"
+     ]
+    },
+    {
+     "cell": 15,
+     "key": "gear/armor/Duskcloak",
+     "brief": "a dark violet hooded cloak over light leather, with silver clasps and faint Aether glow",
+     "items": [
+      "itm_1016",
+      "itm_1039",
+      "itm_1062",
+      "itm_1085",
+      "itm_1108",
+      "itm_1131",
+      "itm_1154",
+      "itm_1177",
+      "itm_1200",
+      "itm_1223"
+     ]
+    },
+    {
+     "cell": 16,
+     "key": "gear/boots/Sabatons",
+     "brief": "armored steel sabatons with layered toe plates and greaves to the knee",
+     "items": [
+      "itm_1017",
+      "itm_1040",
+      "itm_1063",
+      "itm_1086",
+      "itm_1109",
+      "itm_1132",
+      "itm_1155",
+      "itm_1178",
+      "itm_1201",
+      "itm_1224"
+     ]
+    },
+    {
+     "cell": 17,
+     "key": "gear/boots/Boots",
+     "brief": "tall brown leather travel boots with laced fronts and folded cuffs",
+     "items": [
+      "itm_1018",
+      "itm_1041",
+      "itm_1064",
+      "itm_1087",
+      "itm_1110",
+      "itm_1133",
+      "itm_1156",
+      "itm_1179",
+      "itm_1202",
+      "itm_1225"
+     ]
+    },
+    {
+     "cell": 18,
+     "key": "gear/boots/Slippers",
+     "brief": "elegant blue cloth mage slippers with gold embroidery and curled toes",
+     "items": [
+      "itm_1019",
+      "itm_1042",
+      "itm_1065",
+      "itm_1088",
+      "itm_1111",
+      "itm_1134",
+      "itm_1157",
+      "itm_1180",
+      "itm_1203",
+      "itm_1226"
+     ]
+    },
+    {
+     "cell": 19,
+     "key": "gear/boots/Greaves",
+     "brief": "leather boots with steel shin greaves and knee guards",
+     "items": [
+      "itm_1020",
+      "itm_1043",
+      "itm_1066",
+      "itm_1089",
+      "itm_1112",
+      "itm_1135",
+      "itm_1158",
+      "itm_1181",
+      "itm_1204",
+      "itm_1227"
+     ]
+    },
+    {
+     "cell": 20,
+     "key": "gear/boots/Warboots",
+     "brief": "heavy steel war boots with runic gold bands and a blue gem at the ankle",
+     "items": [
+      "itm_1021",
+      "itm_1044",
+      "itm_1067",
+      "itm_1090",
+      "itm_1113",
+      "itm_1136",
+      "itm_1159",
+      "itm_1182",
+      "itm_1205",
+      "itm_1228"
+     ]
+    },
+    {
+     "cell": 21,
+     "key": "gear/boots/Treads",
+     "brief": "soft dark leather treads wrapped with violet cloth bands, light and silent",
+     "items": [
+      "itm_1022",
+      "itm_1045",
+      "itm_1068",
+      "itm_1091",
+      "itm_1114",
+      "itm_1137",
+      "itm_1160",
+      "itm_1183",
+      "itm_1206",
+      "itm_1229"
+     ]
+    },
+    {
+     "cell": 22,
+     "key": "gear/accessory/Talisman",
+     "brief": "a bronze diamond talisman on a cord with a teal Aether gem in the centre",
+     "items": [
+      "itm_1023",
+      "itm_1046",
+      "itm_1069",
+      "itm_1092",
+      "itm_1115",
+      "itm_1138",
+      "itm_1161",
+      "itm_1184",
+      "itm_1207",
+      "itm_1230"
+     ]
+    },
+    {
+     "cell": 23,
+     "key": "gear/gloves/Handguards",
+     "brief": "a pair of steel plate handguards with articulated finger plates and brass knuckle rivets",
+     "items": [
+      "itm_1348",
+      "itm_1354",
+      "itm_1360",
+      "itm_1366",
+      "itm_1372",
+      "itm_1378",
+      "itm_1384",
+      "itm_1390",
+      "itm_1396",
+      "itm_1402"
+     ]
+    },
+    {
+     "cell": 24,
+     "key": "gear/gloves/Gloves",
+     "brief": "a pair of supple brown leather gloves with stitched cuffs and a buckle strap",
+     "items": [
+      "itm_1349",
+      "itm_1355",
+      "itm_1361",
+      "itm_1367",
+      "itm_1373",
+      "itm_1379",
+      "itm_1385",
+      "itm_1391",
+      "itm_1397",
+      "itm_1403"
+     ]
+    },
+    {
+     "cell": 25,
+     "key": "gear/gloves/Wraps",
+     "brief": "blue cloth hand wraps bound with gold thread and a small glowing Aether stone on the back of the hand",
+     "items": [
+      "itm_1350",
+      "itm_1356",
+      "itm_1362",
+      "itm_1368",
+      "itm_1374",
+      "itm_1380",
+      "itm_1386",
+      "itm_1392",
+      "itm_1398",
+      "itm_1404"
+     ]
+    },
+    {
+     "cell": 26,
+     "key": "gear/gloves/Grips",
+     "brief": "leather gloves reinforced with steel knuckle plates and studded fingers",
+     "items": [
+      "itm_1351",
+      "itm_1357",
+      "itm_1363",
+      "itm_1369",
+      "itm_1375",
+      "itm_1381",
+      "itm_1387",
+      "itm_1393",
+      "itm_1399",
+      "itm_1405"
+     ]
+    },
+    {
+     "cell": 27,
+     "key": "gear/gloves/Wargloves",
+     "brief": "heavy steel gauntlet gloves with runic gold inlay and a blue gem on each cuff",
+     "items": [
+      "itm_1352",
+      "itm_1358",
+      "itm_1364",
+      "itm_1370",
+      "itm_1376",
+      "itm_1382",
+      "itm_1388",
+      "itm_1394",
+      "itm_1400",
+      "itm_1406"
+     ]
+    },
+    {
+     "cell": 28,
+     "key": "gear/gloves/Mitts",
+     "brief": "fingerless dark leather mitts with violet cloth wrapping and silver studs",
+     "items": [
+      "itm_1353",
+      "itm_1359",
+      "itm_1365",
+      "itm_1371",
+      "itm_1377",
+      "itm_1383",
+      "itm_1389",
+      "itm_1395",
+      "itm_1401",
+      "itm_1407"
+     ]
+    },
+    {
+     "cell": 29,
+     "key": "consumable/Lure Bell",
+     "brief": "a large brass hand bell with a red ribbon",
+     "items": [
+      "itm_0900"
+     ]
+    },
+    {
+     "cell": 30,
+     "key": "consumable/Return Feather",
+     "brief": "a white courier feather with a blue Guild ribbon",
+     "items": [
+      "itm_0901"
+     ]
+    },
+    {
+     "cell": 31,
+     "key": "consumable/Camp Feather",
+     "brief": "a brown feather tied to a tiny campfire charm",
+     "items": [
+      "itm_0902"
+     ]
+    },
+    {
+     "cell": 32,
+     "key": "consumable/Haste Draught",
+     "brief": "a green bubbling potion in a tall thin bottle with a wing-shaped stopper",
+     "items": [
+      "itm_0903"
+     ]
+    },
+    {
+     "cell": 33,
+     "key": "consumable/Scholar's Tea",
+     "brief": "a steaming porcelain teacup with tea leaves on a saucer",
+     "items": [
+      "itm_0904"
+     ]
+    },
+    {
+     "cell": 34,
+     "key": "consumable/Fortune Incense",
+     "brief": "a smoking stick of incense in a small gold holder with golden smoke",
+     "items": [
+      "itm_0905"
+     ]
+    },
+    {
+     "cell": 35,
+     "key": "consumable/Reset Scroll",
+     "brief": "a rolled parchment scroll with a glowing blue wax seal of six stat runes",
+     "items": [
+      "itm_1000"
+     ]
+    }
+   ]
+  },
+  {
+   "sheet": 2,
+   "cols": 6,
+   "rows": 6,
+   "cells": [
+    {
+     "cell": 0,
+     "key": "unique/Hollowroot Crown",
+     "brief": "a crown of living twisted roots and bark with glowing green sap gems",
+     "items": [
+      "itm_1321"
+     ]
+    },
+    {
+     "cell": 1,
+     "key": "unique/Emberwake Treads",
+     "brief": "light leather boots with glowing ember-orange soles trailing small flames",
+     "items": [
+      "itm_1322"
+     ]
+    },
+    {
+     "cell": 2,
+     "key": "unique/Lattice Heart",
+     "brief": "a violet crystal heart inside a lattice cage of silver wire, softly glowing",
+     "items": [
+      "itm_1323"
+     ]
+    },
+    {
+     "cell": 3,
+     "key": "unique/Harvester's Knot",
+     "brief": "a charm of braided golden wheat stalks tied in a knot with a sickle-shaped bronze pin",
+     "items": [
+      "itm_1324"
+     ]
+    },
+    {
+     "cell": 4,
+     "key": "unique/Brawler's Oath",
+     "brief": "a charm of a clenched bronze fist wrapped in red cloth bandage",
+     "items": [
+      "itm_1325"
+     ]
+    },
+    {
+     "cell": 5,
+     "key": "unique/Aether Conduit",
+     "brief": "a charm of a glass tube full of swirling cyan Aether energy capped with brass",
+     "items": [
+      "itm_1326"
+     ]
+    },
+    {
+     "cell": 6,
+     "key": "unique/Blood Pact",
+     "brief": "a charm of a dark red droplet gem in a black iron thorned setting",
+     "items": [
+      "itm_1327"
+     ]
+    },
+    {
+     "cell": 7,
+     "key": "unique/Lodestone",
+     "brief": "a charm of a heavy dark magnetic stone with iron filings standing up like spikes",
+     "items": [
+      "itm_1328"
+     ]
+    },
+    {
+     "cell": 8,
+     "key": "unique/Glass Ember",
+     "brief": "a charm of a cracked glass sphere holding a fierce orange ember",
+     "items": [
+      "itm_1329"
+     ]
+    },
+    {
+     "cell": 9,
+     "key": "unique/Stormcaller Rod",
+     "brief": "a mage rod of silver metal crowned with a crackling blue storm crystal and small lightning arcs",
+     "items": [
+      "itm_1339"
+     ]
+    },
+    {
+     "cell": 10,
+     "key": "unique/Wildwood Longbow",
+     "brief": "a living green longbow grown from wildwood with leaves sprouting along the limbs",
+     "items": [
+      "itm_1340"
+     ]
+    },
+    {
+     "cell": 11,
+     "key": "unique/Gearheart Gauntlet",
+     "brief": "a brass mechanical gauntlet with a glowing red gear heart turning in the palm",
+     "items": [
+      "itm_1341"
+     ]
+    },
+    {
+     "cell": 12,
+     "key": "unique/Executioner's Edge",
+     "brief": "a huge black steel greatsword with a blood-red edge and a skull pommel",
+     "items": [
+      "itm_1342"
+     ]
+    },
+    {
+     "cell": 13,
+     "key": "unique/Bastion Plate",
+     "brief": "a massive tower-like steel breastplate with a lion crest and gold rivets",
+     "items": [
+      "itm_1343"
+     ]
+    },
+    {
+     "cell": 14,
+     "key": "unique/Windrunner Boots",
+     "brief": "light pale green boots with small feathered wings at the heels",
+     "items": [
+      "itm_1344"
+     ]
+    },
+    {
+     "cell": 15,
+     "key": "unique/Frostwake Circlet",
+     "brief": "a silver circlet of ice crystals with a frost-blue gem breathing cold mist",
+     "items": [
+      "itm_1345"
+     ]
+    },
+    {
+     "cell": 16,
+     "key": "unique/Heart of Embers",
+     "brief": "an amulet of a glowing coal-red heart stone in a blackened bronze frame",
+     "items": [
+      "itm_1346"
+     ]
+    },
+    {
+     "cell": 17,
+     "key": "unique/Echo Stone",
+     "brief": "a smooth grey river stone with concentric glowing blue ripples carved into it",
+     "items": [
+      "itm_1347"
+     ]
+    },
+    {
+     "cell": 18,
+     "key": "unique/Bloodgrip Wraps",
+     "brief": "crimson cloth hand wraps soaked dark red with a black thorn clasp",
+     "items": [
+      "itm_1408"
+     ]
+    },
+    {
+     "cell": 19,
+     "key": "unique/Ironclasp Handguards",
+     "brief": "black iron handguards with clawed fingertips and a gold clasp at the wrist",
+     "items": [
+      "itm_1409"
+     ]
+    },
+    {
+     "cell": 20,
+     "key": "quest/Guild Pass",
+     "brief": "a stamped leather Guild warrant card on a cord, with a brass Guild seal",
+     "items": [
+      "itm_0083"
+     ]
+    },
+    {
+     "cell": 21,
+     "key": "quest/Heliostat Key Prism",
+     "brief": "a cut golden prism key that focuses a beam of sunlight",
+     "items": [
+      "itm_0150"
+     ]
+    },
+    {
+     "cell": 22,
+     "key": "quest/Meridian Keysigil",
+     "brief": "a violet glyph key carved from a mask fragment, glowing lines",
+     "items": [
+      "itm_0268"
+     ]
+    },
+    {
+     "cell": 23,
+     "key": "charm/fang",
+     "brief": "a charm of a large curved beast fang bound with red thread to a bronze ring",
+     "items": [
+      "itm_1231",
+      "itm_1232",
+      "itm_1233"
+     ]
+    },
+    {
+     "cell": 24,
+     "key": "charm/clover",
+     "brief": "a charm of a four-leaf clover pressed in amber in a gold ring",
+     "items": [
+      "itm_1234",
+      "itm_1235",
+      "itm_1236"
+     ]
+    },
+    {
+     "cell": 25,
+     "key": "charm/razor",
+     "brief": "a charm of a tiny razor-sharp obsidian blade on a silver chain loop",
+     "items": [
+      "itm_1237",
+      "itm_1238",
+      "itm_1239"
+     ]
+    },
+    {
+     "cell": 26,
+     "key": "charm/hourglass",
+     "brief": "a charm of a small brass hourglass with glowing sand",
+     "items": [
+      "itm_1240",
+      "itm_1241",
+      "itm_1242"
+     ]
+    },
+    {
+     "cell": 27,
+     "key": "charm/quill",
+     "brief": "a charm of a blue feather quill with an ink-dark tip on a silver ring",
+     "items": [
+      "itm_1243",
+      "itm_1244",
+      "itm_1245"
+     ]
+    },
+    {
+     "cell": 28,
+     "key": "charm/tempo",
+     "brief": "a charm of a brass metronome pendulum with a small bell",
+     "items": [
+      "itm_1246",
+      "itm_1247",
+      "itm_1248"
+     ]
+    },
+    {
+     "cell": 29,
+     "key": "charm/expanse",
+     "brief": "a charm of a round compass rose disc of bronze with an earth-brown gem",
+     "items": [
+      "itm_1249",
+      "itm_1250",
+      "itm_1251"
+     ]
+    },
+    {
+     "cell": 30,
+     "key": "charm/viper",
+     "brief": "a charm of a coiled green viper biting its tail in jade",
+     "items": [
+      "itm_1252",
+      "itm_1253",
+      "itm_1254"
+     ]
+    },
+    {
+     "cell": 31,
+     "key": "charm/wellspring",
+     "brief": "a charm of a small silver vial of clear spring water with a blue glow",
+     "items": [
+      "itm_1255",
+      "itm_1256",
+      "itm_1257"
+     ]
+    },
+    {
+     "cell": 32,
+     "key": "charm/heart",
+     "brief": "a charm of a red heart-shaped garnet in a leaf-wrapped bronze frame",
+     "items": [
+      "itm_1258",
+      "itm_1259",
+      "itm_1260"
+     ]
+    },
+    {
+     "cell": 33,
+     "key": "charm/bastion",
+     "brief": "a charm of a tiny steel tower shield with a stone-grey gem",
+     "items": [
+      "itm_1261",
+      "itm_1262",
+      "itm_1263"
+     ]
+    },
+    {
+     "cell": 34,
+     "key": "charm/prism",
+     "brief": "a charm of a clear triangular prism splitting light into a rainbow",
+     "items": [
+      "itm_1264",
+      "itm_1265",
+      "itm_1266"
+     ]
+    },
+    {
+     "cell": 35,
+     "key": "charm/sigil_pow",
+     "brief": "a round bronze sigil token embossed with a flaming fist",
+     "items": [
+      "itm_1267",
+      "itm_1268",
+      "itm_1269"
+     ]
+    }
+   ]
+  },
+  {
+   "sheet": 3,
+   "cols": 6,
+   "rows": 6,
+   "cells": [
+    {
+     "cell": 0,
+     "key": "charm/sigil_luk",
+     "brief": "a round bronze sigil token embossed with a four-leaf clover",
+     "items": [
+      "itm_1270",
+      "itm_1271",
+      "itm_1272"
+     ]
+    },
+    {
+     "cell": 1,
+     "key": "charm/sigil_agi",
+     "brief": "a round bronze sigil token embossed with a winged feather",
+     "items": [
+      "itm_1273",
+      "itm_1274",
+      "itm_1275"
+     ]
+    },
+    {
+     "cell": 2,
+     "key": "charm/sigil_dex",
+     "brief": "a round bronze sigil token embossed with an arrow through a target",
+     "items": [
+      "itm_1276",
+      "itm_1277",
+      "itm_1278"
+     ]
+    },
+    {
+     "cell": 3,
+     "key": "charm/sigil_int",
+     "brief": "a round bronze sigil token embossed with a glowing orb",
+     "items": [
+      "itm_1279",
+      "itm_1280",
+      "itm_1281"
+     ]
+    },
+    {
+     "cell": 4,
+     "key": "charm/sigil_vit",
+     "brief": "a round bronze sigil token embossed with a heart and leaves",
+     "items": [
+      "itm_1282",
+      "itm_1283",
+      "itm_1284"
+     ]
+    },
+    {
+     "cell": 5,
+     "key": "totem/fury",
+     "brief": "a small carved wooden totem post with a red flame gem and an angry face",
+     "items": [
+      "itm_1285",
+      "itm_1286",
+      "itm_1287"
+     ]
+    },
+    {
+     "cell": 6,
+     "key": "totem/haste",
+     "brief": "a small carved wooden totem post with a spinning brass wing and a green gem",
+     "items": [
+      "itm_1288",
+      "itm_1289",
+      "itm_1290"
+     ]
+    },
+    {
+     "cell": 7,
+     "key": "totem/focus",
+     "brief": "a small carved wooden totem post with a single blue eye gem",
+     "items": [
+      "itm_1291",
+      "itm_1292",
+      "itm_1293"
+     ]
+    },
+    {
+     "cell": 8,
+     "key": "totem/precision",
+     "brief": "a small carved wooden totem post topped with a gold crosshair ring",
+     "items": [
+      "itm_1294",
+      "itm_1295",
+      "itm_1296"
+     ]
+    },
+    {
+     "cell": 9,
+     "key": "totem/wildfire",
+     "brief": "a small carved wooden totem post wreathed in orange wildfire",
+     "items": [
+      "itm_1297",
+      "itm_1298",
+      "itm_1299"
+     ]
+    },
+    {
+     "cell": 10,
+     "key": "totem/bloodrush",
+     "brief": "a small carved wooden totem post dripping with a crimson blood gem",
+     "items": [
+      "itm_1300",
+      "itm_1301",
+      "itm_1302"
+     ]
+    },
+    {
+     "cell": 11,
+     "key": "totem/surge",
+     "brief": "a small carved wooden totem post crackling with a cyan energy crystal",
+     "items": [
+      "itm_1303",
+      "itm_1304",
+      "itm_1305"
+     ]
+    },
+    {
+     "cell": 12,
+     "key": "totem/bulwark",
+     "brief": "a small carved stone totem post shaped like a shield with iron bands",
+     "items": [
+      "itm_1306",
+      "itm_1307",
+      "itm_1308"
+     ]
+    },
+    {
+     "cell": 13,
+     "key": "totem/aegis",
+     "brief": "a small carved wooden totem post inside a translucent blue shield bubble",
+     "items": [
+      "itm_1309",
+      "itm_1310",
+      "itm_1311"
+     ]
+    },
+    {
+     "cell": 14,
+     "key": "totem/mending",
+     "brief": "a small carved wooden totem post wrapped in healing green vines with a white blossom",
+     "items": [
+      "itm_1312",
+      "itm_1313",
+      "itm_1314"
+     ]
+    },
+    {
+     "cell": 15,
+     "key": "totem/gale",
+     "brief": "a small carved wooden totem post with swirling wind ribbons",
+     "items": [
+      "itm_1315",
+      "itm_1316",
+      "itm_1317"
+     ]
+    },
+    {
+     "cell": 16,
+     "key": "totem/hunt",
+     "brief": "a small carved wooden totem post with antlers and a hunting horn",
+     "items": [
+      "itm_1318",
+      "itm_1319",
+      "itm_1320"
+     ]
+    },
+    {
+     "cell": 17,
+     "key": "totem/echo_slaughter",
+     "brief": "a dark carved totem post with a crimson skull gem and echo rings",
+     "items": [
+      "itm_1330",
+      "itm_1331",
+      "itm_1332"
+     ]
+    },
+    {
+     "cell": 18,
+     "key": "totem/echo_fury",
+     "brief": "a dark carved totem post with a yellow lightning bolt gem and echo rings",
+     "items": [
+      "itm_1333",
+      "itm_1334",
+      "itm_1335"
+     ]
+    },
+    {
+     "cell": 19,
+     "key": "totem/echo_spite",
+     "brief": "a dark carved totem post with a green thorn gem and echo rings",
+     "items": [
+      "itm_1336",
+      "itm_1337",
+      "itm_1338"
+     ]
+    },
+    {
+     "cell": 20,
+     "key": "material/Graftling Fragment",
+     "brief": "Graftling Fragment: a hinged twig from a Graftling",
+     "items": [
+      "itm_0023"
+     ]
+    },
+    {
+     "cell": 21,
+     "key": "material/Graftling Core",
+     "brief": "Graftling Core: the brass hinge at a Graftling's heart, still oiled with sap",
+     "items": [
+      "itm_0024"
+     ]
+    },
+    {
+     "cell": 22,
+     "key": "material/Sapdrone Fragment",
+     "brief": "Sapdrone Fragment: a glassy wing panel from a Sapdrone",
+     "items": [
+      "itm_0025"
+     ]
+    },
+    {
+     "cell": 23,
+     "key": "material/Sapdrone Core",
+     "brief": "Sapdrone Core: a Sapdrone's sap tank, half full and still warm",
+     "items": [
+      "itm_0026"
+     ]
+    },
+    {
+     "cell": 24,
+     "key": "material/Vinecrawler Fragment",
+     "brief": "Vinecrawler Fragment: a length of vine wound round a brass gear",
+     "items": [
+      "itm_0027"
+     ]
+    },
+    {
+     "cell": 25,
+     "key": "material/Vinecrawler Core",
+     "brief": "Vinecrawler Core: the cracked jade lens that steered a Vinecrawler",
+     "items": [
+      "itm_0028"
+     ]
+    },
+    {
+     "cell": 26,
+     "key": "material/Root Sentinel Fragment",
+     "brief": "Root Sentinel Fragment: a root-laced stone plate from a Root Sentinel",
+     "items": [
+      "itm_0029"
+     ]
+    },
+    {
+     "cell": 27,
+     "key": "material/Root Sentinel Core",
+     "brief": "Root Sentinel Core: a Root Sentinel's lantern eye, jade light still flickering",
+     "items": [
+      "itm_0030"
+     ]
+    },
+    {
+     "cell": 28,
+     "key": "material/Sandcoil Fragment",
+     "brief": "Sandcoil Fragment: a gritty scale from a Sandcoil, warm to the touch",
+     "items": [
+      "itm_0031"
+     ]
+    },
+    {
+     "cell": 29,
+     "key": "material/Sandcoil Core",
+     "brief": "Sandcoil Core: the ember-bright gland that keeps a Sandcoil warm at night",
+     "items": [
+      "itm_0032"
+     ]
+    },
+    {
+     "cell": 30,
+     "key": "material/Glass Scarab Fragment",
+     "brief": "Glass Scarab Fragment: a chip of amber-glass shell",
+     "items": [
+      "itm_0033"
+     ]
+    },
+    {
+     "cell": 31,
+     "key": "material/Glass Scarab Core",
+     "brief": "Glass Scarab Core: the glowing ember a Glass Scarab rolls its glass around",
+     "items": [
+      "itm_0034"
+     ]
+    },
+    {
+     "cell": 32,
+     "key": "material/Dune Sentry Fragment",
+     "brief": "Dune Sentry Fragment: a carved sandstone block, brass band still attached",
+     "items": [
+      "itm_0035"
+     ]
+    },
+    {
+     "cell": 33,
+     "key": "material/Dune Sentry Core",
+     "brief": "Dune Sentry Core: a Sentry's visor-lamp, still glowing orange",
+     "items": [
+      "itm_0036"
+     ]
+    },
+    {
+     "cell": 34,
+     "key": "material/Sun Warden Fragment",
+     "brief": "Sun Warden Fragment: a bronze plate from a Sun Warden, sun-hot",
+     "items": [
+      "itm_0037"
+     ]
+    },
+    {
+     "cell": 35,
+     "key": "material/Sun Warden Core",
+     "brief": "Sun Warden Core: one mirror from a Warden's solar ring",
+     "items": [
+      "itm_0038"
+     ]
+    }
+   ]
+  },
+  {
+   "sheet": 4,
+   "cols": 6,
+   "rows": 6,
+   "cells": [
+    {
+     "cell": 0,
+     "key": "material/Tidehopper Fragment",
+     "brief": "Tidehopper Fragment: a chip of a Tidehopper's back-plate, sea-smoothed",
+     "items": [
+      "itm_0039"
+     ]
+    },
+    {
+     "cell": 1,
+     "key": "material/Tidehopper Core",
+     "brief": "Tidehopper Core: the springy tendon-knot from a Tidehopper's hind leg; it still twitches",
+     "items": [
+      "itm_0040"
+     ]
+    },
+    {
+     "cell": 2,
+     "key": "material/Coral Claw Fragment",
+     "brief": "Coral Claw Fragment: a broken branch of the coral a Coral Claw wears",
+     "items": [
+      "itm_0041"
+     ]
+    },
+    {
+     "cell": 3,
+     "key": "material/Coral Claw Core",
+     "brief": "Coral Claw Core: an intact crusher claw, coral and shell grown together",
+     "items": [
+      "itm_0042"
+     ]
+    },
+    {
+     "cell": 4,
+     "key": "material/Brine Automaton Fragment",
+     "brief": "Brine Automaton Fragment: a verdigrised copper panel from a Brine Automaton",
+     "items": [
+      "itm_0043"
+     ]
+    },
+    {
+     "cell": 5,
+     "key": "material/Brine Automaton Core",
+     "brief": "Brine Automaton Core: a working pressure valve, still holding brine",
+     "items": [
+      "itm_0044"
+     ]
+    },
+    {
+     "cell": 6,
+     "key": "material/Relay Guardian Fragment",
+     "brief": "Relay Guardian Fragment: a ribbed hose section from a Relay Guardian",
+     "items": [
+      "itm_0045"
+     ]
+    },
+    {
+     "cell": 7,
+     "key": "material/Relay Guardian Core",
+     "brief": "Relay Guardian Core: a sonar crystal that hums when held near water",
+     "items": [
+      "itm_0046"
+     ]
+    },
+    {
+     "cell": 8,
+     "key": "material/Frost Mite Fragment",
+     "brief": "Frost Mite Fragment: a crystal splinter from a Frost Mite's shell",
+     "items": [
+      "itm_0047"
+     ]
+    },
+    {
+     "cell": 9,
+     "key": "material/Frost Mite Core",
+     "brief": "Frost Mite Core: a mite's glowing core, full of a slow-thawing gel",
+     "items": [
+      "itm_0048"
+     ]
+    },
+    {
+     "cell": 10,
+     "key": "material/Prism Wisp Fragment",
+     "brief": "Prism Wisp Fragment: a shard of a wisp's crystal frame; it splits light",
+     "items": [
+      "itm_0049"
+     ]
+    },
+    {
+     "cell": 11,
+     "key": "material/Prism Wisp Core",
+     "brief": "Prism Wisp Core: a wisp's caught light, still warm in its frame",
+     "items": [
+      "itm_0050"
+     ]
+    },
+    {
+     "cell": 12,
+     "key": "material/Icegear Fragment",
+     "brief": "Icegear Fragment: a frozen cog from an Icegear's body",
+     "items": [
+      "itm_0051"
+     ]
+    },
+    {
+     "cell": 13,
+     "key": "material/Icegear Core",
+     "brief": "Icegear Core: an Icegear's drive gear-train, still meshing",
+     "items": [
+      "itm_0052"
+     ]
+    },
+    {
+     "cell": 14,
+     "key": "material/Archive Keeper Fragment",
+     "brief": "Archive Keeper Fragment: a facet of a keeper's crystal armour",
+     "items": [
+      "itm_0053"
+     ]
+    },
+    {
+     "cell": 15,
+     "key": "material/Archive Keeper Core",
+     "brief": "Archive Keeper Core: a keeper's data-slate; glyphs still scroll across it",
+     "items": [
+      "itm_0054"
+     ]
+    },
+    {
+     "cell": 16,
+     "key": "material/Ashcrawler Fragment",
+     "brief": "Ashcrawler Fragment: a plate of ash-crusted Ashcrawler shell, still warm",
+     "items": [
+      "itm_0055"
+     ]
+    },
+    {
+     "cell": 17,
+     "key": "material/Ashcrawler Core",
+     "brief": "Ashcrawler Core: the ember that glows between an Ashcrawler's plates; it never quite goes out",
+     "items": [
+      "itm_0056"
+     ]
+    },
+    {
+     "cell": 18,
+     "key": "material/Cinder Imp Fragment",
+     "brief": "Cinder Imp Fragment: a chunk of charcoal body from a Cinder Imp",
+     "items": [
+      "itm_0057"
+     ]
+    },
+    {
+     "cell": 19,
+     "key": "material/Cinder Imp Core",
+     "brief": "Cinder Imp Core: the hot coal at a Cinder Imp's heart",
+     "items": [
+      "itm_0058"
+     ]
+    },
+    {
+     "cell": 20,
+     "key": "material/Smelt Hound Fragment",
+     "brief": "Smelt Hound Fragment: a riveted iron plate from a Smelt Hound's flank",
+     "items": [
+      "itm_0059"
+     ]
+    },
+    {
+     "cell": 21,
+     "key": "material/Smelt Hound Core",
+     "brief": "Smelt Hound Core: a Smelt Hound's molten core in its ceramic housing",
+     "items": [
+      "itm_0060"
+     ]
+    },
+    {
+     "cell": 22,
+     "key": "material/Furnace Knight Fragment",
+     "brief": "Furnace Knight Fragment: a scorched plate of Furnace Knight armour",
+     "items": [
+      "itm_0061"
+     ]
+    },
+    {
+     "cell": 23,
+     "key": "material/Furnace Knight Core",
+     "brief": "Furnace Knight Core: the firebox regulator from a Furnace Knight's breastplate",
+     "items": [
+      "itm_0062"
+     ]
+    },
+    {
+     "cell": 24,
+     "key": "material/Null Wisp Fragment",
+     "brief": "Null Wisp Fragment: a dim shard of condensed null light",
+     "items": [
+      "itm_0063"
+     ]
+    },
+    {
+     "cell": 25,
+     "key": "material/Null Wisp Core",
+     "brief": "Null Wisp Core: the hollow white heart of a Null Wisp, still drinking the light around it",
+     "items": [
+      "itm_0064"
+     ]
+    },
+    {
+     "cell": 26,
+     "key": "material/Shade Carrier Fragment",
+     "brief": "Shade Carrier Fragment: a dented panel from a Shade Carrier's cargo hull",
+     "items": [
+      "itm_0065"
+     ]
+    },
+    {
+     "cell": 27,
+     "key": "material/Shade Carrier Core",
+     "brief": "Shade Carrier Core: a hauler's route computer, still murmuring stop names",
+     "items": [
+      "itm_0066"
+     ]
+    },
+    {
+     "cell": 28,
+     "key": "material/Lattice Drone Fragment",
+     "brief": "Lattice Drone Fragment: a hexagonal frame segment from a Lattice Drone",
+     "items": [
+      "itm_0067"
+     ]
+    },
+    {
+     "cell": 29,
+     "key": "material/Lattice Drone Core",
+     "brief": "Lattice Drone Core: a drone's lattice core, faintly humming",
+     "items": [
+      "itm_0068"
+     ]
+    },
+    {
+     "cell": 30,
+     "key": "material/Meridian Executor Fragment",
+     "brief": "Meridian Executor Fragment: a shard of an Executor's black ceramic shell",
+     "items": [
+      "itm_0069"
+     ]
+    },
+    {
+     "cell": 31,
+     "key": "material/Meridian Executor Core",
+     "brief": "Meridian Executor Core: the slit-mask lens of an Executor, its light gone out",
+     "items": [
+      "itm_0070"
+     ]
+    },
+    {
+     "cell": 32,
+     "key": "material/Dew Pearl",
+     "brief": "Dew Pearl: a pearl of condensed aether dew, found in one Mosskin in hundreds",
+     "items": [
+      "itm_0071"
+     ]
+    },
+    {
+     "cell": 33,
+     "key": "material/Fungal Core",
+     "brief": "Fungal Core: the dense heart of an old Sporeling colony",
+     "items": [
+      "itm_0072"
+     ]
+    },
+    {
+     "cell": 34,
+     "key": "material/Aetherite Shard",
+     "brief": "Aetherite Shard: a splinter of Aetherite, the crystal that ran Aethrion",
+     "items": [
+      "itm_0073"
+     ]
+    },
+    {
+     "cell": 35,
+     "key": "material/Copper Gear",
+     "brief": "Copper Gear: a small Aethrion gear, still true",
+     "items": [
+      "itm_0074"
+     ]
+    }
+   ]
+  },
+  {
+   "sheet": 5,
+   "cols": 6,
+   "rows": 6,
+   "cells": [
+    {
+     "cell": 0,
+     "key": "material/Resin Heart",
+     "brief": "Resin Heart: a perfect amber bead from the core of an Ambermite colony",
+     "items": [
+      "itm_0084"
+     ]
+    },
+    {
+     "cell": 1,
+     "key": "material/Hollowroot Heartwood",
+     "brief": "Hollowroot Heartwood: wood from the Warden's core, still pulsing with aether",
+     "items": [
+      "itm_0085"
+     ]
+    },
+    {
+     "cell": 2,
+     "key": "material/Newt Slick",
+     "brief": "Newt Slick: slippery skin-oil from a Mossback Newt",
+     "items": [
+      "itm_0100"
+     ]
+    },
+    {
+     "cell": 3,
+     "key": "material/Moss Mantle",
+     "brief": "Moss Mantle: an intact moss pelt from a Newt's back; it never dries out",
+     "items": [
+      "itm_0101"
+     ]
+    },
+    {
+     "cell": 4,
+     "key": "material/Jadewing Scale",
+     "brief": "Jadewing Scale: a scale of jade wing-dust that glows for days",
+     "items": [
+      "itm_0102"
+     ]
+    },
+    {
+     "cell": 5,
+     "key": "material/Glowdust Sac",
+     "brief": "Glowdust Sac: the gland a Jadewing Moth fires its bolts from",
+     "items": [
+      "itm_0103"
+     ]
+    },
+    {
+     "cell": 6,
+     "key": "material/Barkhound Plate",
+     "brief": "Barkhound Plate: a bark plate shed from a Barkhound's shoulder",
+     "items": [
+      "itm_0104"
+     ]
+    },
+    {
+     "cell": 7,
+     "key": "material/Ironbark Fang",
+     "brief": "Ironbark Fang: a wooden fang as hard as iron",
+     "items": [
+      "itm_0105"
+     ]
+    },
+    {
+     "cell": 8,
+     "key": "material/Pruning Blade",
+     "brief": "Pruning Blade: a worn shear-blade from a Pruning Tender",
+     "items": [
+      "itm_0106"
+     ]
+    },
+    {
+     "cell": 9,
+     "key": "material/Graft Spindle",
+     "brief": "Graft Spindle: the spindle that winds a Tender's grafting tape; precise Aethrion work",
+     "items": [
+      "itm_0107"
+     ]
+    },
+    {
+     "cell": 10,
+     "key": "material/Thistle Fur",
+     "brief": "Thistle Fur: a tuft of burr-studded Thistlehare fur",
+     "items": [
+      "itm_0108"
+     ]
+    },
+    {
+     "cell": 11,
+     "key": "material/Cottontail Burr",
+     "brief": "Cottontail Burr: a Thistlehare's tail burr, packed with seeds",
+     "items": [
+      "itm_0109"
+     ]
+    },
+    {
+     "cell": 12,
+     "key": "material/Antler Coil",
+     "brief": "Antler Coil: a copper coil grown through a branch of antler",
+     "items": [
+      "itm_0110"
+     ]
+    },
+    {
+     "cell": 13,
+     "key": "material/Engine Antler",
+     "brief": "Engine Antler: a whole antler tine, coils intact; it hums when held",
+     "items": [
+      "itm_0111"
+     ]
+    },
+    {
+     "cell": 14,
+     "key": "material/Bloat Membrane",
+     "brief": "Bloat Membrane: violet skin from a burst Sporebloat",
+     "items": [
+      "itm_0112"
+     ]
+    },
+    {
+     "cell": 15,
+     "key": "material/Spore Bladder",
+     "brief": "Spore Bladder: a sealed Sporebloat bladder",
+     "items": [
+      "itm_0113"
+     ]
+    },
+    {
+     "cell": 16,
+     "key": "material/Matron Mycelium",
+     "brief": "Matron Mycelium: a felt of threads from a Spore Matron's stalk",
+     "items": [
+      "itm_0114"
+     ]
+    },
+    {
+     "cell": 17,
+     "key": "material/Spore Lantern",
+     "brief": "Spore Lantern: one of the jade lanterns that hang under a Matron's cap",
+     "items": [
+      "itm_0115"
+     ]
+    },
+    {
+     "cell": 18,
+     "key": "material/Piston Bark",
+     "brief": "Piston Bark: polished heartwood plate from a Pistonguard",
+     "items": [
+      "itm_0116"
+     ]
+    },
+    {
+     "cell": 19,
+     "key": "material/Heartwood Piston",
+     "brief": "Heartwood Piston: a working piston, sleeved in heartwood",
+     "items": [
+      "itm_0117"
+     ]
+    },
+    {
+     "cell": 20,
+     "key": "material/Living Jade",
+     "brief": "Living Jade: sap that has set into glowing jade around a thread of aether",
+     "items": [
+      "itm_0118"
+     ]
+    },
+    {
+     "cell": 21,
+     "key": "material/Regent's Heartspring",
+     "brief": "Regent's Heartspring: the mainspring of the Heartwood Engine's pump, grown through with living wood",
+     "items": [
+      "itm_0119"
+     ]
+    },
+    {
+     "cell": 22,
+     "key": "material/Ochre Pelt",
+     "brief": "Ochre Pelt: a dusty jackal pelt",
+     "items": [
+      "itm_0130"
+     ]
+    },
+    {
+     "cell": 23,
+     "key": "material/Caravan Tag",
+     "brief": "Caravan Tag: a brass tag from a long-lost caravan, worn by a jackal",
+     "items": [
+      "itm_0131"
+     ]
+    },
+    {
+     "cell": 24,
+     "key": "material/Kite Foil",
+     "brief": "Kite Foil: a sheet of brass foil from a Brass Kite's wing",
+     "items": [
+      "itm_0132"
+     ]
+    },
+    {
+     "cell": 25,
+     "key": "material/Survey Lens",
+     "brief": "Survey Lens: a Brass Kite's nose lens, still focused",
+     "items": [
+      "itm_0133"
+     ]
+    },
+    {
+     "cell": 26,
+     "key": "material/Basilisk Scale",
+     "brief": "Basilisk Scale: a ridged, sun-baked basilisk scale",
+     "items": [
+      "itm_0134"
+     ]
+    },
+    {
+     "cell": 27,
+     "key": "material/Glasstail Club",
+     "brief": "Glasstail Club: the glowing glass club from a basilisk's tail",
+     "items": [
+      "itm_0135"
+     ]
+    },
+    {
+     "cell": 28,
+     "key": "material/Gnomon Wire",
+     "brief": "Gnomon Wire: fine brass wire from an Acolyte's calibrating arms",
+     "items": [
+      "itm_0136"
+     ]
+    },
+    {
+     "cell": 29,
+     "key": "material/Mirror Palm",
+     "brief": "Mirror Palm: an Acolyte's mirror-plate hand",
+     "items": [
+      "itm_0137"
+     ]
+    },
+    {
+     "cell": 30,
+     "key": "material/Strider Leg",
+     "brief": "Strider Leg: a long, hollow Canal Strider leg",
+     "items": [
+      "itm_0138"
+     ]
+    },
+    {
+     "cell": 31,
+     "key": "material/Silt Pearl",
+     "brief": "Silt Pearl: a pearl a Strider grows from canal silt",
+     "items": [
+      "itm_0139"
+     ]
+    },
+    {
+     "cell": 32,
+     "key": "material/Grave Wrap",
+     "brief": "Grave Wrap: a strip of a Revenant's burial wrapping",
+     "items": [
+      "itm_0140"
+     ]
+    },
+    {
+     "cell": 33,
+     "key": "material/Surveyor's Lamp",
+     "brief": "Surveyor's Lamp: the dim lamp a Dust Revenant carries",
+     "items": [
+      "itm_0141"
+     ]
+    },
+    {
+     "cell": 34,
+     "key": "material/Colossus Sandstone",
+     "brief": "Colossus Sandstone: a slab of the Colossus's body, carved with causeway marks",
+     "items": [
+      "itm_0142"
+     ]
+    },
+    {
+     "cell": 35,
+     "key": "material/Colossus Gear-Heart",
+     "brief": "Colossus Gear-Heart: the gear that drives a Colossus, big as a shield",
+     "items": [
+      "itm_0143"
+     ]
+    }
+   ]
+  },
+  {
+   "sheet": 6,
+   "cols": 6,
+   "rows": 6,
+   "cells": [
+    {
+     "cell": 0,
+     "key": "material/Prism Shard",
+     "brief": "Prism Shard: a splinter of a Lens-drone's prism",
+     "items": [
+      "itm_0144"
+     ]
+    },
+    {
+     "cell": 1,
+     "key": "material/Focusing Lens",
+     "brief": "Focusing Lens: a whole Lens-drone prism, focused to a pinpoint",
+     "items": [
+      "itm_0145"
+     ]
+    },
+    {
+     "cell": 2,
+     "key": "material/Mirror Plate",
+     "brief": "Mirror Plate: a polished mirror-bronze plate from a Mirrorguard",
+     "items": [
+      "itm_0146"
+     ]
+    },
+    {
+     "cell": 3,
+     "key": "material/Mirrorguard Gimbal",
+     "brief": "Mirrorguard Gimbal: the gimbal that aims a Mirrorguard's shield-mirror",
+     "items": [
+      "itm_0147"
+     ]
+    },
+    {
+     "cell": 4,
+     "key": "material/Sunfire Glass",
+     "brief": "Sunfire Glass: desert glass that trapped a bolt of focused sunlight; it glows by itself",
+     "items": [
+      "itm_0148"
+     ]
+    },
+    {
+     "cell": 5,
+     "key": "material/Sovereign's Crown Lens",
+     "brief": "Sovereign's Crown Lens: the master lens from the Heliostat Sovereign's crown",
+     "items": [
+      "itm_0149"
+     ]
+    },
+    {
+     "cell": 6,
+     "key": "material/Skimmer Plume",
+     "brief": "Skimmer Plume: a brass-tinted flight feather from a Gullwing Skimmer",
+     "items": [
+      "itm_0160"
+     ]
+    },
+    {
+     "cell": 7,
+     "key": "material/Storm Quill",
+     "brief": "Storm Quill: a crest feather that stiffens before a storm",
+     "items": [
+      "itm_0161"
+     ]
+    },
+    {
+     "cell": 8,
+     "key": "material/Polyp Barb",
+     "brief": "Polyp Barb: a spent stinging barb; handle by the base",
+     "items": [
+      "itm_0162"
+     ]
+    },
+    {
+     "cell": 9,
+     "key": "material/Stinging Polyp Sac",
+     "brief": "Stinging Polyp Sac: a full venom sac from a Polyp Spitter's crown",
+     "items": [
+      "itm_0163"
+     ]
+    },
+    {
+     "cell": 10,
+     "key": "material/Kelp Frond",
+     "brief": "Kelp Frond: a broad frond from a Kelp Tender",
+     "items": [
+      "itm_0164"
+     ]
+    },
+    {
+     "cell": 11,
+     "key": "material/Tender Bulb",
+     "brief": "Tender Bulb: the glowing float bulb of a Kelp Tender's head",
+     "items": [
+      "itm_0165"
+     ]
+    },
+    {
+     "cell": 12,
+     "key": "material/Borer Shell",
+     "brief": "Borer Shell: the drill-shell from a Hullborer's head",
+     "items": [
+      "itm_0166"
+     ]
+    },
+    {
+     "cell": 13,
+     "key": "material/Borer Rasp",
+     "brief": "Borer Rasp: a Hullborer's rasping tooth-ribbon; it files copper",
+     "items": [
+      "itm_0167"
+     ]
+    },
+    {
+     "cell": 14,
+     "key": "material/Skate Leather",
+     "brief": "Skate Leather: pearlescent skin from a Pearl Skate's back",
+     "items": [
+      "itm_0168"
+     ]
+    },
+    {
+     "cell": 15,
+     "key": "material/Skate Barb",
+     "brief": "Skate Barb: the serrated tail barb of a Pearl Skate",
+     "items": [
+      "itm_0169"
+     ]
+    },
+    {
+     "cell": 16,
+     "key": "material/Hull Scute",
+     "brief": "Hull Scute: a shell scute with a rivet grown into it",
+     "items": [
+      "itm_0170"
+     ]
+    },
+    {
+     "cell": 17,
+     "key": "material/Stormshell Plate",
+     "brief": "Stormshell Plate: a whole shell plate fused with Aethrion hull copper",
+     "items": [
+      "itm_0171"
+     ]
+    },
+    {
+     "cell": 18,
+     "key": "material/Ray Wing Hide",
+     "brief": "Ray Wing Hide: a strip of Squall Ray wing that holds a static charge",
+     "items": [
+      "itm_0172"
+     ]
+    },
+    {
+     "cell": 19,
+     "key": "material/Charged Stinger",
+     "brief": "Charged Stinger: a copper-tipped stinger that sparks when tapped",
+     "items": [
+      "itm_0173"
+     ]
+    },
+    {
+     "cell": 20,
+     "key": "material/Drone Valve",
+     "brief": "Drone Valve: a brass vent valve from a Pressure Drone",
+     "items": [
+      "itm_0174"
+     ]
+    },
+    {
+     "cell": 21,
+     "key": "material/Pressure Gauge Core",
+     "brief": "Pressure Gauge Core: a drone's sealed gauge, its needle still twitching with the relay's pressure",
+     "items": [
+      "itm_0175"
+     ]
+    },
+    {
+     "cell": 22,
+     "key": "material/Gloom Jelly",
+     "brief": "Gloom Jelly: a lump of Gloom Medusa bell that glows faintly in the dark",
+     "items": [
+      "itm_0176"
+     ]
+    },
+    {
+     "cell": 23,
+     "key": "material/Medusa Bell",
+     "brief": "Medusa Bell: an unbroken medusa bell, aether still pulsing in its nucleus",
+     "items": [
+      "itm_0177"
+     ]
+    },
+    {
+     "cell": 24,
+     "key": "material/Abyssal Pearl",
+     "brief": "Abyssal Pearl: a black pearl with a blue fire inside",
+     "items": [
+      "itm_0178"
+     ]
+    },
+    {
+     "cell": 25,
+     "key": "material/Signalmind Lens",
+     "brief": "Signalmind Lens: the Drowned Signalmind's eye-lens, still focusing a signal no one sends any more",
+     "items": [
+      "itm_0179"
+     ]
+    },
+    {
+     "cell": 26,
+     "key": "material/Rimehare Haunch",
+     "brief": "Rimehare Haunch: lean frozen meat",
+     "items": [
+      "itm_0190"
+     ]
+    },
+    {
+     "cell": 27,
+     "key": "material/Frost Whisker",
+     "brief": "Frost Whisker: a Rimehare whisker rimed with ice that never melts",
+     "items": [
+      "itm_0191"
+     ]
+    },
+    {
+     "cell": 28,
+     "key": "material/Glassback Fleece",
+     "brief": "Glassback Fleece: coarse ram wool, glass chips caught in it",
+     "items": [
+      "itm_0192"
+     ]
+    },
+    {
+     "cell": 29,
+     "key": "material/Blueglass Horn",
+     "brief": "Blueglass Horn: a ram's horn grown of clear blue volcanic glass",
+     "items": [
+      "itm_0193"
+     ]
+    },
+    {
+     "cell": 30,
+     "key": "material/Coilscale",
+     "brief": "Coilscale: a frost-ridged serpent scale, cold to the touch",
+     "items": [
+      "itm_0194"
+     ]
+    },
+    {
+     "cell": 31,
+     "key": "material/Coolant Gland",
+     "brief": "Coolant Gland: a serpent gland full of Aethrion coolant",
+     "items": [
+      "itm_0195"
+     ]
+    },
+    {
+     "cell": 32,
+     "key": "material/Plough Plate",
+     "brief": "Plough Plate: a dented armour plate from a Glacier Juggernaut",
+     "items": [
+      "itm_0196"
+     ]
+    },
+    {
+     "cell": 33,
+     "key": "material/Juggernaut Drive Coil",
+     "brief": "Juggernaut Drive Coil: the furnace coil that drives a plough mech's tracks",
+     "items": [
+      "itm_0197"
+     ]
+    },
+    {
+     "cell": 34,
+     "key": "material/Silvered Shard",
+     "brief": "Silvered Shard: a splinter of a Mirrorshade; it reflects things that are not there",
+     "items": [
+      "itm_0198"
+     ]
+    },
+    {
+     "cell": 35,
+     "key": "material/Shade Mirror",
+     "brief": "Shade Mirror: an unbroken palm of mirror-glass from a Mirrorshade's heart",
+     "items": [
+      "itm_0199"
+     ]
+    }
+   ]
+  },
+  {
+   "sheet": 7,
+   "cols": 6,
+   "rows": 6,
+   "cells": [
+    {
+     "cell": 0,
+     "key": "material/Hoarfrost Wool",
+     "brief": "Hoarfrost Wool: frost-matted wool from a Behemoth's hump",
+     "items": [
+      "itm_0200"
+     ]
+    },
+    {
+     "cell": 1,
+     "key": "material/Behemoth Tusk",
+     "brief": "Behemoth Tusk: a curling tusk, ivory veined with ice",
+     "items": [
+      "itm_0201"
+     ]
+    },
+    {
+     "cell": 2,
+     "key": "material/Sentry Casing",
+     "brief": "Sentry Casing: white enamel casing from a Cryo Sentry",
+     "items": [
+      "itm_0202"
+     ]
+    },
+    {
+     "cell": 3,
+     "key": "material/Cryo Cell",
+     "brief": "Cryo Cell: a sentry's power cell, frost forming on it in warm air",
+     "items": [
+      "itm_0203"
+     ]
+    },
+    {
+     "cell": 4,
+     "key": "material/Data Strand",
+     "brief": "Data Strand: a thread of glyph-light that an Archive Specter left behind",
+     "items": [
+      "itm_0204"
+     ]
+    },
+    {
+     "cell": 5,
+     "key": "material/Specter Memory Core",
+     "brief": "Specter Memory Core: a tiny crystal holding someone's recorded memory",
+     "items": [
+      "itm_0205"
+     ]
+    },
+    {
+     "cell": 6,
+     "key": "material/Lancer Icetip",
+     "brief": "Lancer Icetip: a spent ice lance, sharp as glass",
+     "items": [
+      "itm_0206"
+     ]
+    },
+    {
+     "cell": 7,
+     "key": "material/Focus Prism",
+     "brief": "Focus Prism: a Cryo Lancer's aiming prism",
+     "items": [
+      "itm_0207"
+     ]
+    },
+    {
+     "cell": 8,
+     "key": "material/Everfrost Prism",
+     "brief": "Everfrost Prism: a prism of ice that never melts",
+     "items": [
+      "itm_0208"
+     ]
+    },
+    {
+     "cell": 9,
+     "key": "material/Cryocore Heart",
+     "brief": "Cryocore Heart: a shard of the Archive's cryocore, holding a cold no furnace can touch",
+     "items": [
+      "itm_0209"
+     ]
+    },
+    {
+     "cell": 10,
+     "key": "material/Slagback Wart",
+     "brief": "Slagback Wart: a knob of slag broken off a Slagback Toad's back",
+     "items": [
+      "itm_0220"
+     ]
+    },
+    {
+     "cell": 11,
+     "key": "material/Slagback Furnace-Gland",
+     "brief": "Slagback Furnace-Gland: the heat gland in a Slagback's throat; herbalists brew it into tonics",
+     "items": [
+      "itm_0221"
+     ]
+    },
+    {
+     "cell": 12,
+     "key": "material/Tender Weld-Bead",
+     "brief": "Tender Weld-Bead: a bead of weld metal from a Crucible Tender's arc arm",
+     "items": [
+      "itm_0222"
+     ]
+    },
+    {
+     "cell": 13,
+     "key": "material/Tender Arc Nozzle",
+     "brief": "Tender Arc Nozzle: a working Aethrion welding nozzle",
+     "items": [
+      "itm_0223"
+     ]
+    },
+    {
+     "cell": 14,
+     "key": "material/Skink Basalt Scale",
+     "brief": "Skink Basalt Scale: a glossy black scale from a Vent Skink",
+     "items": [
+      "itm_0224"
+     ]
+    },
+    {
+     "cell": 15,
+     "key": "material/Skink Vent Bladder",
+     "brief": "Skink Vent Bladder: the gas bladder a Vent Skink uses to dive into lava",
+     "items": [
+      "itm_0225"
+     ]
+    },
+    {
+     "cell": 16,
+     "key": "material/Spitter Pumice",
+     "brief": "Spitter Pumice: light frothy stone a Magma Spitter coughs up",
+     "items": [
+      "itm_0226"
+     ]
+    },
+    {
+     "cell": 17,
+     "key": "material/Spitter Magma Crop",
+     "brief": "Spitter Magma Crop: the heat-proof crop where a Spitter stores its magma",
+     "items": [
+      "itm_0227"
+     ]
+    },
+    {
+     "cell": 18,
+     "key": "material/Scrapling Rivet",
+     "brief": "Scrapling Rivet: an Aethrion bridge rivet, carried off by a Rivet Scrapling",
+     "items": [
+      "itm_0228"
+     ]
+    },
+    {
+     "cell": 19,
+     "key": "material/Scrapling Gear-Eye",
+     "brief": "Scrapling Gear-Eye: the single glowing gear that serves a Scrapling as an eye",
+     "items": [
+      "itm_0229"
+     ]
+    },
+    {
+     "cell": 20,
+     "key": "material/Brute Slag Plate",
+     "brief": "Brute Slag Plate: a slab of set slag from a Slagforged Brute",
+     "items": [
+      "itm_0230"
+     ]
+    },
+    {
+     "cell": 21,
+     "key": "material/Brute Mould Seam",
+     "brief": "Brute Mould Seam: the seam line where a Brute left its mould, dense as iron",
+     "items": [
+      "itm_0231"
+     ]
+    },
+    {
+     "cell": 22,
+     "key": "material/Wraith Cooled Pour",
+     "brief": "Wraith Cooled Pour: metal that cooled the moment a Pour Wraith died",
+     "items": [
+      "itm_0232"
+     ]
+    },
+    {
+     "cell": 23,
+     "key": "material/Wraith Mould-Core",
+     "brief": "Wraith Mould-Core: the still-liquid centre of a Pour Wraith, sealed in its own skin",
+     "items": [
+      "itm_0233"
+     ]
+    },
+    {
+     "cell": 24,
+     "key": "material/Stoker Coal",
+     "brief": "Stoker Coal: dense Aethrion coke from a Zero Stoker's hopper",
+     "items": [
+      "itm_0234"
+     ]
+    },
+    {
+     "cell": 25,
+     "key": "material/Stoker Firebox",
+     "brief": "Stoker Firebox: a Zero Stoker's grille-faced firebox",
+     "items": [
+      "itm_0235"
+     ]
+    },
+    {
+     "cell": 26,
+     "key": "material/Living Ember",
+     "brief": "Living Ember: an ember that keeps itself alight, born where Furnace Zero's fire runs through Emberfall",
+     "items": [
+      "itm_0236"
+     ]
+    },
+    {
+     "cell": 27,
+     "key": "material/Zero Heartcore",
+     "brief": "Zero Heartcore: a shard of Kiln Prime's Aetherite heart, still white-hot",
+     "items": [
+      "itm_0237"
+     ]
+    },
+    {
+     "cell": 28,
+     "key": "material/Lurk Bristle",
+     "brief": "Lurk Bristle: a violet-lit spine bristle from a Gutter Lurk",
+     "items": [
+      "itm_0250"
+     ]
+    },
+    {
+     "cell": 29,
+     "key": "material/Lurk Eye-Lens",
+     "brief": "Lurk Eye-Lens: the reflective lens from a Gutter Lurk's eye; it sees in the dark",
+     "items": [
+      "itm_0251"
+     ]
+    },
+    {
+     "cell": 30,
+     "key": "material/Nullbloom Petal",
+     "brief": "Nullbloom Petal: a black glass petal that dims anything held behind it",
+     "items": [
+      "itm_0252"
+     ]
+    },
+    {
+     "cell": 31,
+     "key": "material/Nullbloom Bulb",
+     "brief": "Nullbloom Bulb: the light-drinking bulb of a Nullbloom",
+     "items": [
+      "itm_0253"
+     ]
+    },
+    {
+     "cell": 32,
+     "key": "material/Mite Coupler Pin",
+     "brief": "Mite Coupler Pin: a rail-steel pin from a Coupler Mite's jaw",
+     "items": [
+      "itm_0254"
+     ]
+    },
+    {
+     "cell": 33,
+     "key": "material/Mite Signal Chip",
+     "brief": "Mite Signal Chip: the status-light chip from a Coupler Mite's back",
+     "items": [
+      "itm_0255"
+     ]
+    },
+    {
+     "cell": 34,
+     "key": "material/Riftling Shadowhide",
+     "brief": "Riftling Shadowhide: a scrap of Riftling outline",
+     "items": [
+      "itm_0256"
+     ]
+    },
+    {
+     "cell": 35,
+     "key": "material/Riftling Veil-Eye",
+     "brief": "Riftling Veil-Eye: a Riftling's pinpoint eye; looking through it shows the Veil",
+     "items": [
+      "itm_0257"
+     ]
+    }
+   ]
+  },
+  {
+   "sheet": 8,
+   "cols": 6,
+   "rows": 2,
+   "cells": [
+    {
+     "cell": 0,
+     "key": "material/Sparkwing Quill",
+     "brief": "Sparkwing Quill: a copper-foil feather that crackles with static",
+     "items": [
+      "itm_0258"
+     ]
+    },
+    {
+     "cell": 1,
+     "key": "material/Sparkwing Arc Gland",
+     "brief": "Sparkwing Arc Gland: the organ that stores a Sparkwing's charge",
+     "items": [
+      "itm_0259"
+     ]
+    },
+    {
+     "cell": 2,
+     "key": "material/Sentinel Lattice Plate",
+     "brief": "Sentinel Lattice Plate: a layered plate of sentinel armour",
+     "items": [
+      "itm_0260"
+     ]
+    },
+    {
+     "cell": 3,
+     "key": "material/Sentinel Halo Relay",
+     "brief": "Sentinel Halo Relay: the rotating ring from behind a sentinel's head",
+     "items": [
+      "itm_0261"
+     ]
+    },
+    {
+     "cell": 4,
+     "key": "material/Glyph Shard",
+     "brief": "Glyph Shard: one glyph of the Lattice's language, fixed in crystal when its swarm broke",
+     "items": [
+      "itm_0262"
+     ]
+    },
+    {
+     "cell": 5,
+     "key": "material/Glyph Seal",
+     "brief": "Glyph Seal: a whole sigil, intact",
+     "items": [
+      "itm_0263"
+     ]
+    },
+    {
+     "cell": 6,
+     "key": "material/Weaver Filament",
+     "brief": "Weaver Filament: a thread of solid lattice light from a Weaver's spinneret",
+     "items": [
+      "itm_0264"
+     ]
+    },
+    {
+     "cell": 7,
+     "key": "material/Weaver Spinneret",
+     "brief": "Weaver Spinneret: a Lattice Weaver's spinneret, still warm with violet light",
+     "items": [
+      "itm_0265"
+     ]
+    },
+    {
+     "cell": 8,
+     "key": "material/Violet Lattice Node",
+     "brief": "Violet Lattice Node: a junction of the Meridian Lattice, cut free and still carrying current",
+     "items": [
+      "itm_0266"
+     ]
+    },
+    {
+     "cell": 9,
+     "key": "material/Sovereign Heart",
+     "brief": "Sovereign Heart: a shard of the Lattice Sovereign's crystalline core, the rarest thing a Wayfarer can carry out of Nocthaven",
+     "items": [
+      "itm_0267"
+     ]
+    },
+    {
+     "cell": 10,
+     "key": "material/Awakening Sigil",
+     "brief": "Awakening Sigil: a seal that wakes a skill's true form",
+     "items": [
+      "itm_1410"
+     ]
+    },
+    {
+     "cell": 11,
+     "key": "spare",
+     "brief": "a small brass Guild medallion engraved with a compass rose",
+     "items": []
+    }
+   ]
+  }
+ ]
+}
