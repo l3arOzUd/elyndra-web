@@ -1,0 +1,24 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "right-neutral-v2.png",
+    "hit-right-brace.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "fps": 10,
+  "uniqueDrawings": 2,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Backward lean stronger than intended.",
+    "Foot placement and hinge geometry drift.",
+    "Dedicated recovery and cross-view timing matching remain."
+  ]
+}
