@@ -12,6 +12,7 @@ import type {
 } from "../src/data/schema";
 import { SCHEMA_VERSION } from "../src/data/schema";
 import { bakeLayout } from "./layout";
+import { BOSS_STORY, MAP_INTRO } from "./lore";
 import {
   AGGRO_RADIUS, BOSS_DROP, DROP, ELITE_DROP_MULT, LEASH_RADIUS, materialPrice, monsterStats, PLAYER_MS_PER_CELL, playerAt, rarePrice, regionPriceMult, tierLevelFor, uncommonPrice,
 } from "./model";
@@ -144,7 +145,7 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
         id: d.id, region_id: r.region.id, name: d.name, type: d.type, role: d.role,
         recommended_level_min: d.levels[0], recommended_level_max: d.levels[1],
         width_cells: d.size[0], height_cells: d.size[1], safe_zone: d.type === "town",
-        layout: `maps/${d.id}.json`, arrival: d.arrival, horde: d.horde ?? null,
+        layout: `maps/${d.id}.json`, arrival: d.arrival, horde: d.horde ?? null, ...(MAP_INTRO[d.id] ? { intro: MAP_INTRO[d.id] } : {}),
       });
       for (const n of d.npcs) npcs.push({ ...n, map_id: d.id });
       if (d.type !== "town") zones.push({ map_id: d.id, instance_rules: d.horde ?? { min_alive: 0, max_alive: 0 }, pockets: d.pockets });
@@ -155,6 +156,7 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
         id: m.id, name: m.name, region_id: r.region.id, level: m.level, archetype: m.archetype, family: m.family, element: m.element,
         behavior: m.behavior, ...s, aggro_radius: AGGRO_RADIUS[m.behavior], leash_radius: LEASH_RADIUS,
         drops: dropsFor(m), ecology: m.ecology, art_brief: m.art_brief, sprite: m.sprite ?? m.id, ...(m.bounty ? { bounty: true } : {}),
+        ...(BOSS_STORY[m.name] ? { story: BOSS_STORY[m.name] } : {}),
       });
       // Size on screen: the archetype's scale times the painting's own size (ART_SIZE).
       const archetypeScale = m.archetype === "boss" ? 2.4 : m.archetype === "elite" ? 1.6 : m.archetype === "bruiser" || m.archetype === "construct" ? 1.25 : 1;
@@ -203,6 +205,12 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
   if (existsSync(iconMap)) {
     const icons = JSON.parse(readFileSync(iconMap, "utf8")) as Record<string, string>;
     for (const it of items) if (icons[it.id]) it.icon = icons[it.id];
+  }
+  // Where each monster lives, by map and zone, for the Monster Book.
+  for (const z of zones) for (const p of z.pockets) for (const sp of p.species) {
+    const m = monsters.find((x) => x.id === sp.monster_id);
+    const zone = p.name.replace(/ \(.*\)$/, "");
+    if (m && !m.habitat?.some((h) => h.map_id === z.map_id && h.zone === zone)) (m.habitat ??= []).push({ map_id: z.map_id, zone });
   }
   items.sort((a, b) => a.id.localeCompare(b.id));
   monsters.sort((a, b) => a.id.localeCompare(b.id));

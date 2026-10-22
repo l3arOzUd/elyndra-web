@@ -24,7 +24,7 @@
     }
    ]
   },
-  "summary": "Thin the Mosskin herds in Dawnmeadow. Teaches movement and basic attacks."
+  "summary": "The Mosskin of Dawnmeadow have turned on travellers since the Quickening. Thin the herds and learn to fight."
  },
  {
   "id": "q_lum_registration",
@@ -60,7 +60,7 @@
     }
    ]
   },
-  "summary": "Bring field samples to earn the Guild Pass (needed for Hollowroot). Teaches looting and inventory."
+  "summary": "Bring Wenna Lark field samples to earn your Guild Pass, the warrant that opens Hollowroot's lift. Loot what you kill."
  },
  {
   "id": "q_lum_amber_trail",
@@ -92,7 +92,7 @@
     }
    ]
   },
-  "summary": "Clear the aggressive Ambermite swarms. First quest that expects a train of 20+."
+  "summary": "Walk to Moonbrook Vale's edge, then clear the Ambermite swarms in Sporeling Hollow. Your first train of twenty or more."
  },
  {
   "id": "q_lum_scree",
@@ -124,7 +124,7 @@
     }
    ]
   },
-  "summary": "Craglets swallow Aethrion gears; recover three. Points the player at the Copper Saber recipe."
+  "summary": "Craglets swallow Aethrion gears as gizzard stones. Recover three for the Artificer's Copper Saber."
  },
  {
   "id": "q_lum_windmill",
@@ -151,7 +151,7 @@
     }
    ]
   },
-  "summary": "The Dustwing swarm is the region's first real horde: 120 kills is two or three full trains."
+  "summary": "The Dustwing swarm at Bramble Mill is Dawnmeadow's first real horde. Two or three full trains should do it."
  },
  {
   "id": "q_lum_moonbrook",
@@ -183,7 +183,7 @@
     }
    ]
   },
-  "summary": "Mixed packs: ranged Reedstalkers among passive Brookfin. Teaches pulling ranged mobs into the pack."
+  "summary": "Reedstalkers spit from range among the Brookfin on the banks. Pull the spitters into the pack, then clear both."
  },
  {
   "id": "q_lum_orchard",
@@ -215,7 +215,7 @@
     }
    ]
   },
-  "summary": "Find where the rot comes from. Leads to the pump-house cave."
+  "summary": "The southern orchard is rotting from the roots. Clear the Rotroot and bring back rotwood: the rot leads down to the pump-house cave."
  },
  {
   "id": "q_lum_hollowroot",
@@ -246,7 +246,7 @@
     }
    ]
   },
-  "summary": "Destroy the Hollowroot Warden and report to Avelorn. Opens the road to Verdantis."
+  "summary": "Chapter 1. Something below Hollowroot pulls the water the wrong way. Silence the Hollowroot Warden and carry what you find to Wenna Lark."
  },
  {
   "id": "q_ver_intro",
@@ -273,7 +273,7 @@
     }
    ]
   },
-  "summary": "Herd and clear the Graftlings in Moonbrook Vale's Reed Marsh. A gentle first horde after Hollowroot."
+  "summary": "Bounty: the Gorged Graftlings rooting in Reed Marsh are slow, tough and full of aether. Bring down forty."
  },
  {
   "id": "q_ver_mossbridge",
@@ -310,7 +310,7 @@
     }
    ]
   },
-  "summary": "Mossback Newts call their whole bank: learn to pull a pack. Newt Slick is the Artificer's tonic base."
+  "summary": "Visit Elderroot Expanse, then thin the Mossback Newts that croak whole banks into a fight. Newt Slick makes the Sylvaran tonic."
  },
  {
   "id": "q_ver_canopy",
@@ -342,7 +342,7 @@
     }
    ]
   },
-  "summary": "Ranged moths over bruiser hound packs: pull the moths into the melee, then cleave the den."
+  "summary": "Jadewing Moths shoot from above while Barkhound packs rush in. Pull the moths into the melee and cleave the lot."
  },
  {
   "id": "q_ver_graftwood",
@@ -374,7 +374,7 @@
     }
    ]
   },
-  "summary": "The first construct horde: trains of Vinecrawlers down the trellis rows."
+  "summary": "Vine-driven Vinecrawlers still tend the Trellis Dunes. Your first construct horde: train them down the rows and bring back their fragments."
  },
  {
   "id": "q_ver_vineworks",
@@ -406,7 +406,7 @@
     }
    ]
   },
-  "summary": "Pruning Tenders work the presses in packs: pull them together and clear them. Then corner the fleeing Thistlehares on the terraces."
+  "summary": "The Pruning Tenders mend everything around them. Kill them first, then the Thistlehares that rush the terraces."
  },
  {
   "id": "q_ver_elderroot",
@@ -438,7 +438,7 @@
     }
    ]
   },
-  "summary": "Root Sentinel trains on the ridges, then two Antlered Engines in the glade: the region's first elite fight."
+  "summary": "Root Sentinel trains on the ridges, then two Antlered Engines in the glade: Verdantis's first elite fight."
  },
  {
   "id": "q_ver_spore_basin",
@@ -474,7 +474,7 @@
     }
    ]
   },
-  "summary": "The Basin's spores come from the Engine's vents. Thin the Sporebloats and bring back their membranes to prove it."
+  "summary": "The Drift's spores come from the Heartwood Engine's vents. Thin the Sporebloats and bring their membranes as proof."
  },
  {
   "id": "q_ver_heartwood",
@@ -505,7 +505,7 @@
     }
    ]
   },
-  "summary": "Stop the Heartwood Regent in the dungeon under Elderroot Expanse and report back. The road east to the Saffron Wastes opens."
+  "summary": "Chapter 2. The Heartwood Regent breathes spores where it once breathed light. Silence it beneath Elderroot and report to Wenna Lark."
  },
  {
   "id": "q_sol_intro",
@@ -532,7 +532,7 @@
     }
    ]
   },
-  "summary": "Clear the Sandcoils basking on Graftwood Wilds' Trellis Dunes. A gentle first horde in the heat."
+  "summary": "Bounty: the Gorged Sandcoils basking on the Trellis Dunes barely notice you, until struck. Bring down forty."
  },
  {
   "id": "q_sol_caravan",
@@ -569,7 +569,7 @@
     }
    ]
   },
-  "summary": "Brass Kites shoot from range over the caravan road. Pull them into the scarab packs."
+  "summary": "Visit Graftwood Wilds, then clear the Brass Kites shooting from Elderroot's Root Ridge and the Glass Scarabs of Graftwood's Glass Burrows."
  },
  {
   "id": "q_sol_glass_flats",
@@ -601,7 +601,7 @@
     }
    ]
   },
-  "summary": "The first construct horde, then the basilisk packs: big slow trains and bruisers that answer each other."
+  "summary": "A big, slow construct train of Dune Sentries, then the Glasstail Basilisk packs: Elderroot's hardest pulls."
  },
  {
   "id": "q_sol_sun_dial",
@@ -633,7 +633,7 @@
     }
    ]
   },
-  "summary": "Acolytes keep the Wardens running. Kill the supports first, then the Wardens on the Dial's face."
+  "summary": "Gnomon Acolytes on Elderroot's Coral Steps keep the old machines running; Sun Wardens hold the Saffron causeway. Kill the acolytes first."
  },
  {
   "id": "q_sol_aqueduct",
@@ -669,7 +669,7 @@
     }
    ]
   },
-  "summary": "A fleeing swarm along the canal: herd the Striders against the channel walls before they scatter."
+  "summary": "Canal Striders skate the last water in the Wastes and dart at anything on the banks. Clear the shallows and bring back their legs."
  },
  {
   "id": "q_sol_causeway",
@@ -705,7 +705,7 @@
     }
    ]
   },
-  "summary": "Clear the Revenants off the causeway and bring down two Colossi. The Guild hands over the Key Prism that opens the Vault."
+  "summary": "Clear the Dust Revenants, the surveyors who died sealing the Vault, and bring down two Colossi. The Guild hands over the Key Prism."
  },
  {
   "id": "q_sol_heliostat",
@@ -736,7 +736,7 @@
     }
    ]
   },
-  "summary": "Shut down the Heliostat Sovereign in the Vault beneath Pearl Coast and report back. The way east to Frostfire Divide opens."
+  "summary": "Chapter 3. Every mirror in Solenia points east. Silence the Heliostat Sovereign in the Vault beneath Pearl Coast and report to Wenna Lark."
  },
  {
   "id": "q_tha_intro",
@@ -767,7 +767,7 @@
     }
    ]
   },
-  "summary": "Clear the Tidehopper herd in Saltwind's tidepools: a passive warm-up that shows a Wayfarer arriving from Solenia how dense Thalassian packs are."
+  "summary": "Bounty: the Gorged Tidehoppers of the Spore Drift sit fat on sap and aether. Bring down sixty."
  },
  {
   "id": "q_tha_saltwind",
@@ -799,7 +799,7 @@
     }
    ]
   },
-  "summary": "Aggressive gull flocks on the cliffs and coral-armoured crabs on the wrack line: the region's first swarm-plus-bruiser lesson."
+  "summary": "Gullwing Skimmers dive from the cliffs and Coral Claws hold the flats. Pull the flocks into the crabs and clear both."
  },
  {
   "id": "q_tha_coral_reach",
@@ -836,7 +836,7 @@
     }
    ]
   },
-  "summary": "Cross the reef boardwalks, silence the Polyp Spitters and bring back their barbs as proof of the survey."
+  "summary": "Visit Elderroot Expanse, then silence the Polyp Spitters on the causeway and bring back their barbs."
  },
  {
   "id": "q_tha_tidewheel",
@@ -873,7 +873,7 @@
     }
    ]
   },
-  "summary": "Brine Automatons at the pumpworks and pilings, and the Kelp Tenders that mend each other in the kelp beds and on the paddles. Teaches focusing the support monster first."
+  "summary": "Brine Automatons pump at Frost Seep and Kelp Tenders mend each other in the Canal Shallows. Kill the tenders first, and recover three automaton cores."
  },
  {
   "id": "q_tha_wreck_shoal",
@@ -900,7 +900,7 @@
     }
    ]
   },
-  "summary": "The Hullborer horde is the region's signature pull: assist behaviour empties a whole wreck at once. 150 kills is three or four full trains."
+  "summary": "The Hullborer horde fills Prism Reach. Three or four full trains of borers."
  },
  {
   "id": "q_tha_pearl_flats",
@@ -936,7 +936,7 @@
     }
    ]
   },
-  "summary": "Break the Relay Guardians' sonar line at the mast and herd the fleeing skates on the pearl beds. The guardians' pings point toward the drowned relay."
+  "summary": "Break the Relay Guardians' sonar line, then claim the bounty on the Gorged Pearl Skates of the pearl beds. Their pings point to the drowned relay."
  },
  {
   "id": "q_tha_stormbreak",
@@ -968,7 +968,7 @@
     }
    ]
   },
-  "summary": "Clear the Squall Rays from the lightning masts and the turtles from the breakwater so the hatch crew can reach the intake shaft."
+  "summary": "Clear the Squall Rays from the point and the Thunderhull Turtles from the coils so a crew can reach the intake shaft."
  },
  {
   "id": "q_tha_drowned_relay",
@@ -999,7 +999,7 @@
     }
    ]
   },
-  "summary": "Silence the Drowned Signalmind where it surfaces at Frostfire Divide's Sentry Vents and report back. Its pulses kept the constructs hostile."
+  "summary": "Chapter 4. The Signalmind's song is the Quickening itself. Silence it where it surfaces at Frostfire Divide's Sentry Vents and report to Wenna Lark."
  },
  {
   "id": "q_cry_intro",
@@ -1030,7 +1030,7 @@
     }
    ]
   },
-  "summary": "Thin the Frost Mites at the Saffron Wastes' Frost Seep: a passive warm-up that shows how the cold changes a fight."
+  "summary": "Bounty: the Gorged Frost Mites at Frost Seep feed and ignore you, until struck. Bring down sixty."
  },
  {
   "id": "q_cry_frostline",
@@ -1062,7 +1062,7 @@
     }
    ]
   },
-  "summary": "Herd the fleeing Rimehares on the snowfield and break the Prism Wisps' beams over the frozen lake: flee and ranged in one field."
+  "summary": "Rimehares charge out of the drifts in Colossus Sands and Prism Wisps beam from the mirrors of Prism Reach. Clear both."
  },
  {
   "id": "q_cry_blueglass",
@@ -1099,7 +1099,7 @@
     }
    ]
   },
-  "summary": "Climb the ridge and take on the assisting ram flocks; the fleece is the researchers' insulation."
+  "summary": "Visit the Saffron Wastes, then take on the Glassback Ram flocks. Their fleece insulates the Vaelspire labs."
  },
  {
   "id": "q_cry_snowcoil",
@@ -1135,7 +1135,7 @@
     }
    ]
   },
-  "summary": "The Frostcoil Serpent horde is the region's signature train: 150 kills is three or four full pulls through the coil trenches."
+  "summary": "The Frostcoil Serpent horde is Pearl Coast's signature train. Three or four full pulls, and the Icegears with them."
  },
  {
   "id": "q_cry_prism_pass",
@@ -1167,7 +1167,7 @@
     }
    ]
   },
-  "summary": "Break the keepers' alarm at the vault doors and stop the plough mechs that crush caravans: the region's elite fight."
+  "summary": "Break the Archive Keepers' alarm in the Drowned Archive and stop the Glacier Juggernauts of Squall Point that crush caravans."
  },
  {
   "id": "q_cry_mirror_ice",
@@ -1204,7 +1204,7 @@
     }
    ]
   },
-  "summary": "Kill the Mirrorshades that heal everything around them, then the passive Behemoths they protect. Silvered shards go to the lens researchers."
+  "summary": "Kill the Mirrorshades that mend everything round them, then claim the bounty on the Gorged Hoarfrost Behemoths. Silvered shards go to the lens researchers."
  },
  {
   "id": "q_cry_white_circuit",
@@ -1240,7 +1240,7 @@
     }
    ]
   },
-  "summary": "Clear the conduit sentries and the specters seeping from the vent breach. The breach leads to the Archive door."
+  "summary": "Clear the Cryo Sentries and the specters seeping from the vents. The breach leads to the Archive door."
  },
  {
   "id": "q_cry_cryocore",
@@ -1271,7 +1271,7 @@
     }
    ]
   },
-  "summary": "Shut down the Cryocore Curator in the Archive beneath Cinder Expanse and report back. The thaw opens the way to the Veil Rift."
+  "summary": "Chapter 5. Archon Ysra Callow's warnings lie frozen in the Archive. Silence the Cryocore Curator beneath Cinder Expanse and report to Wenna Lark."
  },
  {
   "id": "q_emb_intro",
@@ -1298,7 +1298,7 @@
     }
    ]
   },
-  "summary": "Thin the Ashcrawler herds on Frostfire Divide's Ash Flats. A gentle first train."
+  "summary": "The Ashcrawler herds of Frostfire Divide's Ash Flats charge anyone on the ash since the Quickening. Thin them."
  },
  {
   "id": "q_emb_slag_pools",
@@ -1330,7 +1330,7 @@
     }
    ]
   },
-  "summary": "Break the assisting Slagback pools; the warts point the player at the Artificer's tonic recipe."
+  "summary": "Break the Slagback Toad pools; their warts are the base of the Cindervale tonic."
  },
  {
   "id": "q_emb_cinder_track",
@@ -1362,7 +1362,7 @@
     }
    ]
   },
-  "summary": "The first aggressive horde of the region: 150 imps is three full trains through the hollows."
+  "summary": "Visit Frostfire Divide, then clear the Cinder Imp horde: three full trains through the hollows."
  },
  {
   "id": "q_emb_forge_approach",
@@ -1394,7 +1394,7 @@
     }
    ]
   },
-  "summary": "Hounds are fast and Tenders flee to keep welding them: teaches killing the support first."
+  "summary": "Smelt Hounds run the Sentry Vents; the Crucible Tenders of Cinder Expanse weld their kind back together. Clear both."
  },
  {
   "id": "q_emb_magma_vents",
@@ -1426,7 +1426,7 @@
     }
    ]
   },
-  "summary": "Skink trains round the vent pool, then pull the ranged Spitters off the fissure edge."
+  "summary": "Skink trains along the lava channels, then pull the ranged Magma Spitters off the vent edges."
  },
  {
   "id": "q_emb_ironfall",
@@ -1490,7 +1490,7 @@
     }
    ]
   },
-  "summary": "Clear the pour channels and the mould yard. Leads on to Kiln Prime's heights in the Veil Rift."
+  "summary": "Clear the pour channels and the brute pens. The stokers' tracks lead up to Kiln Prime's heights."
  },
  {
   "id": "q_emb_furnace_zero",
@@ -1521,7 +1521,7 @@
     }
    ]
   },
-  "summary": "Shut down Kiln Prime on the Veil Rift's Stoker Heights and report back. Opens the road to Meridian Gate."
+  "summary": "Chapter 6. Kiln Prime forged the Keysigil, then walked out of the ground. Silence it on the Veil Rift's Stoker Heights and report to Wenna Lark."
  },
  {
   "id": "q_noc_intro",
@@ -1548,7 +1548,7 @@
     }
    ]
   },
-  "summary": "Put out the Null Wisps drifting through Cinder Expanse's Spitter Vents."
+  "summary": "Bounty: the Gorged Null Wisps of Cinder Expanse drift and drink the light. Put out sixty."
  },
  {
   "id": "q_noc_dusk_verge",
@@ -1580,7 +1580,7 @@
     }
    ]
   },
-  "summary": "Assisting lurk packs pull the whole underpass; the wisp fragments point at the Artificer's tonic recipe."
+  "summary": "Gutter Lurk packs rush out from under the old road. Clear them and bring back Null Wisp fragments for the Umbracrest tonic."
  },
  {
   "id": "q_noc_nullgarden",
@@ -1617,7 +1617,7 @@
     }
    ]
   },
-  "summary": "Burn the Nullbloom beds and stop the haulers on the promenade."
+  "summary": "Visit Meridian Gate, then burn the Nullbloom beds and stop the Shade Carriers on the moraine."
  },
  {
   "id": "q_noc_silent_tracks",
@@ -1649,7 +1649,7 @@
     }
    ]
   },
-  "summary": "Mite crews in the sidings, drones on the gantries: pull the ranged drones into the mite packs."
+  "summary": "Coupler Mite crews in the yards, Lattice Drones on the gantries: pull the drones into the mite packs."
  },
  {
   "id": "q_noc_veil_rift",
@@ -1681,7 +1681,7 @@
     }
    ]
   },
-  "summary": "Riftling trains on both sides of the chasm; the Veil-Eyes go to the Guild's scholars."
+  "summary": "Riftling trains along the tear. The Veil-Eyes go to the Guild's scholars, who want to know how wide the Rift has grown."
  },
  {
   "id": "q_noc_black_array",
@@ -1713,7 +1713,7 @@
     }
    ]
   },
-  "summary": "Break the sentinel ring round the great dish and scatter the Sparkwing flocks."
+  "summary": "Claim the bounty on the Gorged Array Sentinels half asleep in the colonnade and the Gorged Sparkwings on Stoker Heights."
  },
  {
   "id": "q_noc_meridian_gate",
@@ -1749,7 +1749,7 @@
     }
    ]
   },
-  "summary": "Clear the Executor court and the glyph plaza; the Keysigil cut from their masks opens the Lattice Heart."
+  "summary": "Clear the Executor court and the glyph plaza. The Keysigil cut from their masks opens the Lattice Heart."
  },
  {
   "id": "q_noc_lattice_heart",
@@ -1780,6 +1780,6 @@
     }
    ]
   },
-  "summary": "Silence the Lattice Sovereign below Meridian Gate and report back. The end of the Wayfarer's road through Elyndra."
+  "summary": "Final chapter. Ilvane Thorne went down to finish the Ascension; Aldric Venn went after her. Silence the Lattice Sovereign and bring the last page home to Wenna Lark."
  }
 ]

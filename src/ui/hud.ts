@@ -6,6 +6,7 @@ import { skillIcon, systemIcon } from './art';
 import { awakenStatus, rankLines, rankNumbers } from './ranks';
 import { drawWayfarerPortrait } from '../render/paperDoll';
 import { isWorn as isWornCopy } from './gear';
+import { MonsterBook } from './book';
 import { CHARM_SLOTS, ECHO_COUNT, gearTitle, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
 
 const $ = (id: string) => document.getElementById(id)!;
@@ -35,7 +36,7 @@ const gearKey = (uid: number) => 'g:' + uid;
 /** Line art for an empty equipment slot. */
 const SLOT_ICON: Record<string, string> = { weapon: 'sword', head: 'shield', armor: 'armor', gloves: 'gloves', boots: 'boots', accessory: 'crystal', charm1: 'star', charm2: 'star', charm3: 'star' };
 /** Game windows: opening one closes the others, except Inventory and Equipment, which open side by side. */
-const WINDOWS = ['inv-win', 'equip-win', 'journal-win', 'menu-win', 'char-win', 'skill-win'];
+const WINDOWS = ['inv-win', 'equip-win', 'journal-win', 'menu-win', 'char-win', 'skill-win', 'book-win'];
 const PAIRED = ['inv-win', 'equip-win'];
 
 /** Shared live-game and preview UI. All mutations go through server callbacks. */
@@ -55,6 +56,9 @@ export class Hud {
   private filter = 'all';
   private equipSel = 'weapon';
   private toastTimer = 0;
+  private mapCardTimer = 0;
+  /** The Monster Book window (B). */
+  readonly book: MonsterBook;
   onUse: (item: string) => void = () => {};
   onEquip: (uid: number, slot?: string) => void = () => {};
   onUnequip: (slot: string) => void = () => {};
@@ -106,6 +110,7 @@ export class Hud {
   }
 
   constructor(private readonly c: ClientContent) {
+    this.book = new MonsterBook(c);
     const bar = $('hotbar'); bar.replaceChildren();
     HOTBAR.forEach((_, i) => {
       const b = el('button', 'slot');
@@ -139,6 +144,7 @@ export class Hud {
     $('toggle-equip').onclick = $('open-equip').onclick = () => this.toggle('equip-win');
     $('toggle-char').onclick = () => this.toggle('char-win');
     $('toggle-skills').onclick = () => this.toggle('skill-win');
+    $('toggle-book').onclick = () => this.toggle('book-win');
     $('reset-stats').onclick = () => this.onResetStats();
     $('clear-target').onclick = () => this.setTarget(null);
     $('toggle-journal').onclick = $('open-journal').onclick = () => this.toggle('journal-win');
@@ -235,6 +241,15 @@ export class Hud {
     w.hidden = !open;
     if (open && id === 'equip-win') this.renderEquipment();
     if (open && (id === 'char-win' || id === 'skill-win')) this.renderCharacter();
+    if (open && id === 'book-win') this.book.render();
+  }
+  /** The card shown on entering a map: its name, level band and what the place is now. */
+  showMapCard(name: string, sub: string, intro: string) {
+    const card = $('map-card');
+    $('map-card-name').textContent = name; $('map-card-sub').textContent = sub; $('map-card-intro').textContent = intro;
+    card.hidden = false; card.classList.remove('leaving'); void card.offsetWidth; card.classList.add('showing');
+    clearTimeout(this.mapCardTimer);
+    this.mapCardTimer = window.setTimeout(() => { card.classList.add('leaving'); this.mapCardTimer = window.setTimeout(() => { card.hidden = true; card.classList.remove('showing', 'leaving'); }, 700); }, 6000);
   }
   setMap(name: string, sub: string) { $('map-name').textContent = name; $('map-region').textContent = sub; $('map-heading').textContent = sub.split('·')[0].trim().toUpperCase(); }
   setStats(s: MsgOf<'stats'>) {

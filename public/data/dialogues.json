@@ -3,15 +3,16 @@
   "id": "dlg_lum_guild_registrar",
   "npc_id": "npc_lum_guild_registrar",
   "lines": [
-   "Welcome to the Wayfarer Guild, Avelorn chapter. The Sundering left machines running wild out there; we survey, we clear, we report.",
-   "Start in Dawnmeadow through the East Gate. Come back when the Mosskin herds are thinner."
+   "Welcome to the Wayfarer Guild, Avelorn chapter. Survey, clear, report. I keep the reports.",
+   "I walked with Aldric Venn's survey until my knee gave out. If you find his pages out east, bring them to me. All of them.",
+   "Start in Dawnmeadow through the East Gate. The Mosskin there have turned mean since the Quickening."
   ]
  },
  {
   "id": "dlg_lum_merchant",
   "npc_id": "npc_lum_merchant",
   "lines": [
-   "Rations, tonics, feathers, all fresh. Prices are Guild-fixed, so don't haggle.",
+   "Rations, tonics, feathers, all fresh. Prices are Guild-fixed, more's the pity, so don't haggle.",
    "Sell me your field materials, one by one or the whole bag at once."
   ]
  },
@@ -19,16 +20,16 @@
   "id": "dlg_lum_healer",
   "npc_id": "npc_lum_healer",
   "lines": [
-   "Sit down, let me look at you. There, good as new.",
-   "The tonics I can't give you away, but the Merchant sells them."
+   "Sit down, let me look at you. There. Good as new, and don't make me do it again today.",
+   "Every camp on the road has one of my Hospice lanterns. Come back to one breathing."
   ]
  },
  {
   "id": "dlg_lum_teleporter",
   "npc_id": "npc_lum_teleporter",
   "lines": [
-   "The transit lattice runs to the camp of every field. A little coin keeps the crystals charged.",
-   "The further the field, the more it costs."
+   "The transit crystals are the only piece of the Lattice we ever tamed. Treat them kindly. They run to the camp of every field.",
+   "A little coin keeps them charged. The further the field, the more it costs."
   ]
  },
  {
@@ -36,7 +37,7 @@
   "npc_id": "npc_lum_craftsman",
   "lines": [
    "Bring me materials and I'll make you something that keeps you alive.",
-   "Copper gears? Craglets swallow them. Don't ask me why."
+   "Copper gears? Craglets swallow them. And mind who you talk to in the Collegium. Not everyone with a lamp is on our side."
   ]
  },
  {
@@ -51,22 +52,25 @@
   "id": "dlg_lum_north_gate_guard",
   "npc_id": "npc_lum_north_gate_guard",
   "lines": [
-   "The North Gate is closed: the road north runs through the fields now.",
-   "Take the East Gate, or the transit by the square."
+   "The North Gate's been shut since the Long Retreat. Every road runs east through the fields now.",
+   "One day I'll open it again. Take the East Gate, or the transit by the square."
   ]
  },
  {
   "id": "dlg_lum_hollowroot_lift",
   "npc_id": "npc_lum_hollowroot_lift",
   "lines": [
-   "Going up? The lift reaches Avelorn or the orchard.",
-   "Mind your head on the roots."
+   "My orchard's up there, rotting. I came down to find out why and stayed to run the lift.",
+   "Going up? Avelorn or the orchard. Mind your head on the roots."
   ]
  },
  {
   "id": "dlg_lum_dawnmeadow_scout",
   "npc_id": "npc_lum_dawnmeadow_scout",
   "lines": [
+   "First camp I've ever run, so humour me: survey, clear, report. That's the whole Guild in three words.",
+   "The Mosskin used to graze round your boots. Since the Quickening they charge anything on two legs. Pull them into a heap and swing.",
+   "See a fat, slow Lunari that doesn't come at you? A Gorged one. The Guild pays well for those, and you'll feel why when it drops.",
    "Dawnmeadow runs from Lv 1 by this camp to Lv 10 in the east.",
    "Mosskin Meadow (Lv 1-1): Mosskin. Sporeling Hollow (Lv 2-3): Sporeling, Ambermite. Glider Rise (Lv 3-5): Lunari, Craglet. Bramble Mill (Lv 8-9): Thornback, Dustwing."
   ]
@@ -75,29 +79,32 @@
   "id": "dlg_lum_dawnmeadow_medic",
   "npc_id": "npc_lum_dawnmeadow_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
-   "Drag them as far as you like, but come back breathing."
+   "Lantern Hospice, Dawnmeadow post. Sit, sit. I patch quickly and I talk quicker.",
+   "Nothing out here stops at the camp fence any more. Keep your blade where you can reach it."
   ]
  },
  {
   "id": "dlg_lum_dawnmeadow_transit",
   "npc_id": "npc_lum_dawnmeadow_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Oh! A traveller. The crystal's warm, it's always warm, it likes being used. Avelorn whenever you want it, the Guild pays."
   ]
  },
  {
   "id": "dlg_lum_dawnmeadow_post",
   "npc_id": "npc_lum_dawnmeadow_post",
   "lines": [
-   "East is Moonbrook Vale, Lv 11 and up.",
-   "I can send you back to Avelorn."
+   "Aldric Venn stood right where you're standing, seven years back, and asked me which way the wind was blowing. East, I said. It always is, out here.",
+   "Moonbrook Vale's past me, Lv 11 and up. Or I can send you home."
   ]
  },
  {
   "id": "dlg_lum_moonbrook_vale_scout",
   "npc_id": "npc_lum_moonbrook_vale_scout",
   "lines": [
+   "Listen to the frogs. When they go quiet, the Reedstalkers are close.",
+   "The southern orchard is rotting from the roots up, and the water from the pump-house smells of copper. Something down there is pulling the water the wrong way.",
+   "The Graftlings in the marsh that just stand there rooting are Gorged. Leave them for last, or first. They're worth it either way.",
    "Moonbrook Vale runs from Lv 11 by this camp to Lv 20 in the east.",
    "Brookbed (Lv 12-12): Brookfin. Reed Marsh (Lv 14-16): Reedstalker, Graftling. Rotting Rows (Lv 17-18): Rotroot, Mossback Newt. Sap Groves (Lv 20-20): Sapdrone."
   ]
@@ -106,7 +113,7 @@
   "id": "dlg_lum_moonbrook_vale_medic",
   "npc_id": "npc_lum_moonbrook_vale_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
+   "Wash the marsh off before I look at you. Rot gets into cuts.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -114,22 +121,22 @@
   "id": "dlg_lum_moonbrook_vale_transit",
   "npc_id": "npc_lum_moonbrook_vale_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Avelorn on the Guild's coin. Mind the step, the crystal kicks."
   ]
  },
  {
   "id": "dlg_lum_moonbrook_vale_post",
   "npc_id": "npc_lum_moonbrook_vale_post",
   "lines": [
-   "East is Graftwood Wilds, Lv 21 and up.",
-   "I can send you back to Avelorn."
+   "My aunt runs the Hospice in Avelorn, so if you die out east, she'll hear about it from me.",
+   "East is Graftwood Wilds, Lv 21 and up. Sylvara's woods, what's left of them."
   ]
  },
  {
   "id": "dlg_ver_merchant",
   "npc_id": "npc_ver_merchant",
   "lines": [
-   "Rations and tonics, marked up for the long road.",
+   "I sold sap candles under the Eldest once. Now I sell rations in a stall. Marked up for the long road, sorry.",
    "Bring me sap and scales; the alchemists pay well for anything green."
   ]
  },
@@ -137,22 +144,25 @@
   "id": "dlg_ver_craftsman",
   "npc_id": "npc_ver_craftsman",
   "lines": [
-   "Field drops make better supplies than the merchant's, if you bring enough of them.",
-   "Newt slick for vital tonic, moth scale for focus. Graftling twigs make decent bread ovens, too."
+   "The forest isn't dying on its own. The Heartwood Engine is breathing spores into it. I grafted that wood; I know its sickness.",
+   "Newt slick for vital tonic, moth scale for focus. Field drops make better supplies than the merchant's, if you bring enough."
   ]
  },
  {
   "id": "dlg_ver_heartwood_keeper",
   "npc_id": "npc_ver_heartwood_keeper",
   "lines": [
-   "Root lift's working. Avelorn, or back up to Elderroot Expanse?",
-   "Don't touch the sap lines; they bite."
+   "Ten generations of my family tended this Engine. It's sick, not wicked. Put it to sleep gently, if you can.",
+   "Root lift's working. Avelorn, or back up to Elderroot Expanse? Don't touch the sap lines; they bite."
   ]
  },
  {
   "id": "dlg_ver_graftwood_wilds_scout",
   "npc_id": "npc_ver_graftwood_wilds_scout",
   "lines": [
+   "I was born in Sylvara. We left these woods two years ago and the machines kept gardening without us. They still prune. They prune people now.",
+   "The gardeners mend each other: drop the Pruning Tenders first or the whole press keeps getting back up.",
+   "Sandcoils that just bask and don't strike are Gorged. Thirty of them on the dunes at most. The Guild has a bounty on every one.",
    "Graftwood Wilds runs from Lv 21 by this camp to Lv 30 in the east.",
    "Jadewing Glade (Lv 22-23): Jadewing Moth, Barkhound. Trellis Dunes (Lv 25-26): Vinecrawler, Sandcoil. Press Terraces (Lv 27-28): Pruning Tender, Ochre Jackal. Glass Burrows (Lv 29-30): Thistlehare, Glass Scarab."
   ]
@@ -161,29 +171,32 @@
   "id": "dlg_ver_graftwood_wilds_medic",
   "npc_id": "npc_ver_graftwood_wilds_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
-   "Drag them as far as you like, but come back breathing."
+   "Thorns, moth dust, jackal bites. Graftwood has a little of everything. Hold still.",
+   "Come back breathing. That's the only rule I care about."
   ]
  },
  {
   "id": "dlg_ver_graftwood_wilds_transit",
   "npc_id": "npc_ver_graftwood_wilds_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Avelorn, on the Guild. The Sylvarans all went through this crystal once. It remembers them, I think."
   ]
  },
  {
   "id": "dlg_ver_graftwood_wilds_post",
   "npc_id": "npc_ver_graftwood_wilds_post",
   "lines": [
-   "East is Elderroot Expanse, Lv 31 and up.",
-   "I can send you back to Avelorn."
+   "Elderroot Expanse is east of here, Lv 31 and up. The spores get thick past the ridge. Breathe through cloth.",
+   "Or I can send you back to Avelorn."
   ]
  },
  {
   "id": "dlg_ver_elderroot_expanse_scout",
   "npc_id": "npc_ver_elderroot_expanse_scout",
   "lines": [
+   "Look at an Antlered Engine some time before it charges you. Aethrion built that to look like our stags. It is beautiful. It will also kill you.",
+   "The spores in the Drift come from the Heartwood Engine below us. Its Regent has started breathing them out instead of sap.",
+   "The Tidehoppers that never jump at you are Gorged on sap and aether. Slow, tough, and worth more than a dozen of anything else here.",
    "Elderroot Expanse runs from Lv 31 by this camp to Lv 40 in the east.",
    "Root Ridge (Lv 32-32): Root Sentinel, Brass Kite. Antler Glade (Lv 34-35): Dune Sentry, Antlered Engine. Spore Drift (Lv 35-36): Sporebloat, Tidehopper. Basilisk Flats (Lv 37-38): Glasstail Basilisk, Gullwing Skimmer. Coral Steps (Lv 39-40): Gnomon Acolyte, Coral Claw."
   ]
@@ -192,7 +205,7 @@
   "id": "dlg_ver_elderroot_expanse_medic",
   "npc_id": "npc_ver_elderroot_expanse_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
+   "Spore cough? Drink this. Don't ask what's in it.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -200,30 +213,30 @@
   "id": "dlg_ver_elderroot_expanse_transit",
   "npc_id": "npc_ver_elderroot_expanse_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Back to Avelorn, free. The Rootwardens send their thanks for every Wayfarer who comes this far."
   ]
  },
  {
   "id": "dlg_ver_elderroot_expanse_post",
   "npc_id": "npc_ver_elderroot_expanse_post",
   "lines": [
-   "East is Saffron Wastes, Lv 41 and up.",
-   "I can send you back to Avelorn."
+   "Saffron Wastes are east, Lv 41 and up. Fill every waterskin you own.",
+   "Or home to Avelorn. No shame in it."
   ]
  },
  {
   "id": "dlg_sol_merchant",
   "npc_id": "npc_sol_merchant",
   "lines": [
-   "Water's dear out in the Wastes, and everything else costs too.",
-   "Rations and tonics at Guild prices. Sell me your glass; the observatory buys it all."
+   "Water's dear out in the Wastes, and everything else costs too. Duskhar taught me to bargain; the Guild won't let me.",
+   "Rations and tonics at Guild prices. Sell me your glass; the old observatory buyers still want it."
   ]
  },
  {
   "id": "dlg_sol_craftsman",
   "npc_id": "npc_sol_craftsman",
   "lines": [
-   "Sand and glass make good supplies if you know what to do with them.",
+   "I polished lenses for the Duskhar observatory. Every mirror out there points east now. Someone turned them.",
    "Jackal pelts render down for vital tonic. Scarab glass makes a decent focus draught."
   ]
  },
@@ -231,14 +244,17 @@
   "id": "dlg_sol_vault_keeper",
   "npc_id": "npc_sol_vault_keeper",
   "lines": [
-   "The lift runs to Avelorn or back up to Pearl Coast.",
-   "Don't look straight into the mirrors."
+   "I wear these dark lenses for a reason. Don't look straight into the mirrors.",
+   "The lift runs to Avelorn or back up to Pearl Coast."
   ]
  },
  {
   "id": "dlg_sol_saffron_wastes_scout",
   "npc_id": "npc_sol_saffron_wastes_scout",
   "lines": [
+   "I tell time by shadows. Out here the shadows are wrong: the mirrors throw sunlight at night too. The Heliostat never sleeps.",
+   "The wrapped ones on the causeway were surveyors once. They sealed the Vault and died in it. Now they guard the road they built.",
+   "Frost Mites that sit on the seep and ignore you are Gorged. Crack them. Thirty on the whole map and the Guild pays for each.",
    "Saffron Wastes runs from Lv 41 by this camp to Lv 50 in the east.",
    "Warden Causeway (Lv 42-42): Sun Warden, Polyp Spitter. Canal Shallows (Lv 44-44): Canal Strider, Kelp Tender. Frost Seep (Lv 45-47): Brine Automaton, Frost Mite, Dust Revenant. Colossus Sands (Lv 48-49): Rimehare, Sand-buried Colossus. Prism Reach (Lv 49-50): Hullborer, Prism Wisp."
   ]
@@ -247,22 +263,22 @@
   "id": "dlg_sol_saffron_wastes_medic",
   "npc_id": "npc_sol_saffron_wastes_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
-   "Drag them as far as you like, but come back breathing."
+   "Heatstroke first, wounds second. Drink.",
+   "Come back breathing, Wayfarer. The desert keeps what it kills."
   ]
  },
  {
   "id": "dlg_sol_saffron_wastes_transit",
   "npc_id": "npc_sol_saffron_wastes_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Avelorn? Gladly. Anywhere cooler than this."
   ]
  },
  {
   "id": "dlg_sol_saffron_wastes_post",
   "npc_id": "npc_sol_saffron_wastes_post",
   "lines": [
-   "East is Pearl Coast, Lv 51 and up.",
+   "Pearl Coast is east, Lv 51 and up. The Heliostat Vault opens under its cliffs, if you ever find the Key Prism.",
    "I can send you back to Avelorn."
   ]
  },
@@ -270,7 +286,7 @@
   "id": "dlg_tha_merchant",
   "npc_id": "npc_tha_merchant",
   "lines": [
-   "Rations, tonics, the same Guild prices as everywhere, plus the cost of shipping them.",
+   "My ship went down with the harbour. Now I sell tonics at Guild prices, plus the cost of shipping them.",
    "Bring me what the reef gives you. Inland buyers pay well for anything from the sea."
   ]
  },
@@ -279,13 +295,16 @@
   "npc_id": "npc_tha_craftsman",
   "lines": [
    "Kelp, hopper tendon, medusa jelly: all useful, once you know how to boil it.",
-   "I make rations and tonics from what you bring. Cheaper than the merchant, if you do the gathering."
+   "We heard the Signalmind singing every night before we left. It sang louder the week before the Retreat."
   ]
  },
  {
   "id": "dlg_tha_pearl_coast_scout",
   "npc_id": "npc_tha_pearl_coast_scout",
   "lines": [
+   "Put your ear to the water at night. You'll hear it singing. The Drowned Signalmind. Every time the song changes, the constructs get worse.",
+   "Relay Guardians ping the mast; the rams answer anyone who touches the terraces. Pull both into the surf and hit hard.",
+   "The Pearl Skates lying still in the mud are Gorged. Big as doors. The Guild pays a bounty on every one.",
    "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
    "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
   ]
@@ -294,7 +313,7 @@
   "id": "dlg_tha_pearl_coast_medic",
   "npc_id": "npc_tha_pearl_coast_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
+   "Salt water cleans a wound, but it stings like a Squall Ray. Here, let me.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -302,45 +321,48 @@
   "id": "dlg_tha_pearl_coast_transit",
   "npc_id": "npc_tha_pearl_coast_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "The crystal's damp, but it works. Avelorn, on the Guild."
   ]
  },
  {
   "id": "dlg_tha_pearl_coast_post",
   "npc_id": "npc_tha_pearl_coast_post",
   "lines": [
-   "East is Frostfire Divide, Lv 61 and up.",
-   "I can send you back to Avelorn."
+   "Frostfire Divide's east, Lv 61 and up. Ice on one side, fire on the other, and the Signalmind surfaces in the vents.",
+   "Or I send you home. Your choice, lad, lass, whoever you are."
   ]
  },
  {
   "id": "dlg_cry_merchant",
   "npc_id": "npc_cry_merchant",
   "lines": [
-   "Rations and tonics, Guild prices plus the cost of hauling them up the mountain.",
-   "Anything crystal sells well here. The labs buy everything."
+   "Rations and tonics, Guild prices plus the cost of hauling them down a mountain.",
+   "Anything crystal sells. Vaelspire found the first Aetherite, and we still can't leave it alone."
   ]
  },
  {
   "id": "dlg_cry_craftsman",
   "npc_id": "npc_cry_craftsman",
   "lines": [
-   "Hare haunch, mite gel, wisp dust. The mountain feeds you if you know what to boil.",
-   "I'll make rations and tonics from your materials, cheaper than the merchant."
+   "Archon Ysra Callow warned them not to open the Gate. Her warnings are in the Cryocore Archive, and the Curator won't let anyone read them.",
+   "Hare haunch, mite gel, wisp dust. I'll make rations and tonics from your materials, cheaper than the merchant."
   ]
  },
  {
   "id": "dlg_cry_archive_lift_keeper",
   "npc_id": "npc_cry_archive_lift_keeper",
   "lines": [
-   "Going up? Back to Cinder Expanse or all the way to Avelorn.",
-   "The vault is past the index gallery. The lancers there shoot far."
+   "I still catalogue the books no one can read. Somebody should.",
+   "Going up? Back to Cinder Expanse or all the way to Avelorn. The lancers past the index gallery shoot far."
   ]
  },
  {
   "id": "dlg_cry_frostfire_divide_scout",
   "npc_id": "npc_cry_frostfire_divide_scout",
   "lines": [
+   "My brother went into the Archive with the Vaelspire researchers. He didn't come out. If you go down there, look for a blue scarf.",
+   "The Drowned Signalmind surfaces at the Sentry Vents. Its song is what turned everything hostile. Silence it and the whole coast goes quiet for a while.",
+   "Hoarfrost Behemoths that keep grazing while you walk past are Gorged. They hit back like avalanches. The Guild pays for them anyway.",
    "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
    "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
   ]
@@ -349,23 +371,23 @@
   "id": "dlg_cry_frostfire_divide_medic",
   "npc_id": "npc_cry_frostfire_divide_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
-   "Drag them as far as you like, but come back breathing."
+   "Frostbite on one hand, burns on the other. Only on the Divide.",
+   "Come back breathing."
   ]
  },
  {
   "id": "dlg_cry_frostfire_divide_transit",
   "npc_id": "npc_cry_frostfire_divide_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Avelorn. The crystal hums louder out here; it doesn't like the cold either."
   ]
  },
  {
   "id": "dlg_cry_frostfire_divide_post",
   "npc_id": "npc_cry_frostfire_divide_post",
   "lines": [
-   "East is Cinder Expanse, Lv 71 and up.",
-   "I can send you back to Avelorn."
+   "Cinder Expanse is east, Lv 71 and up. The Cryocore Archive lies under it, under the ash.",
+   "Or back to Avelorn."
   ]
  },
  {
@@ -373,7 +395,7 @@
   "npc_id": "npc_emb_merchant",
   "lines": [
    "Rations and tonics, hauled a long way. Heat spoils everything, so I charge what it costs to keep them cool.",
-   "Bring me Emberfall scrap; the foundries buy all I can ship."
+   "Bring me Emberfall scrap; somebody always wants it."
   ]
  },
  {
@@ -381,13 +403,16 @@
   "npc_id": "npc_emb_craftsman",
   "lines": [
    "Slag glands, vent bladders, cheap ash meat: I can turn your surplus into tonics for less than the shop asks.",
-   "Don't sell me Living Embers. Keep them. You'll know why soon enough."
+   "Don't sell me your Living Embers. Keep them. Kiln Prime is coming up out of the ground, and you'll want every one."
   ]
  },
  {
   "id": "dlg_emb_cinder_expanse_scout",
   "npc_id": "npc_emb_cinder_expanse_scout",
   "lines": [
+   "I worked the foundries in Cindervale. Kiln Prime used to answer us. Now it answers someone else, and it's walking.",
+   "Crucible Tenders weld the hounds and knights back together. Kill the tenders first or you'll fight the same knight three times.",
+   "Null Wisps that just drift and drink the light are Gorged. Pop them. The Guild pays.",
    "Cinder Expanse runs from Lv 71 by this camp to Lv 80 in the east.",
    "Tender Yards (Lv 71-71): Crucible Tender. Skink Flow (Lv 74-74): Vent Skink. Spitter Vents (Lv 75-76): Magma Spitter, Null Wisp. Knight's Road (Lv 77-77): Furnace Knight, Gutter Lurk. Rivet Moraine (Lv 79-80): Rivet Scrapling, Shade Carrier, Nullbloom."
   ]
@@ -396,7 +421,7 @@
   "id": "dlg_emb_cinder_expanse_medic",
   "npc_id": "npc_emb_cinder_expanse_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
+   "Burn salve, burn salve, more burn salve. Hold out your arm.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -404,45 +429,48 @@
   "id": "dlg_emb_cinder_expanse_transit",
   "npc_id": "npc_emb_cinder_expanse_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Avelorn on the Guild. Shake the ash off first, the crystal sneezes."
   ]
  },
  {
   "id": "dlg_emb_cinder_expanse_post",
   "npc_id": "npc_emb_cinder_expanse_post",
   "lines": [
-   "East is Veil Rift, Lv 81 and up.",
-   "I can send you back to Avelorn."
+   "East is the Veil Rift, Lv 81 and up. Don't look into the tear for long. Idris did, and he still sees violet.",
+   "Or home. I would."
   ]
  },
  {
   "id": "dlg_noc_merchant",
   "npc_id": "npc_noc_merchant",
   "lines": [
-   "Rations and tonics, brought in on the transit. Nothing grows past the Rift any more, so nothing's cheap.",
-   "Bring me lattice scrap. The scholars pay in coin they don't need."
+   "I was the last one out of Umbracrest. Locked the gate behind me. Funny thing to do in a dead city.",
+   "Rations and tonics, brought in on the transit. Bring me lattice scrap."
   ]
  },
  {
   "id": "dlg_noc_craftsman",
   "npc_id": "npc_noc_craftsman",
   "lines": [
-   "Blooms, wisp cores, lurk bristles: I make tonics from what the city leaves us.",
-   "Lattice Nodes are the real treasure. Hold on to them."
+   "I studied under Ilvane Thorne. She was the best of us. If she's done what I think she's done, it's partly my fault for not seeing it.",
+   "Blooms, wisp cores, lurk bristles: I make tonics from what the city leaves us. Hold on to your Lattice Nodes."
   ]
  },
  {
   "id": "dlg_noc_heart_lift",
   "npc_id": "npc_noc_heart_lift",
   "lines": [
-   "Back up? Avelorn or the Gate.",
-   "Don't look at the lattice too long. It looks back."
+   "Aldric Venn went down this lift three years ago. Alone. He told me to keep it running for whoever came next. That's you.",
+   "Back up? Avelorn or the Gate. Don't look at the lattice too long. It looks back."
   ]
  },
  {
   "id": "dlg_noc_veil_rift_scout",
   "npc_id": "npc_noc_veil_rift_scout",
   "lines": [
+   "I fell into the Rift once. Halfway. Everything has been a little violet since.",
+   "Kiln Prime walks the Stoker Heights. The stokers still shovel for it. Someone made it forge a key, and I think I know who.",
+   "The Sparkwings that won't lift off the dishes are Gorged with static. Bring one down and you'll feel it in your teeth. Bounty's posted.",
    "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
    "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
   ]
@@ -451,29 +479,32 @@
   "id": "dlg_noc_veil_rift_medic",
   "npc_id": "npc_noc_veil_rift_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
-   "Drag them as far as you like, but come back breathing."
+   "Lie down. If you see violet at the edge of your eyes, tell me. Don't tell Idris; he gets excited.",
+   "Come back breathing."
   ]
  },
  {
   "id": "dlg_noc_veil_rift_transit",
   "npc_id": "npc_noc_veil_rift_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Avelorn. The crystal won't hold a line any further east than this one. The Lattice drowns it out."
   ]
  },
  {
   "id": "dlg_noc_veil_rift_post",
   "npc_id": "npc_noc_veil_rift_post",
   "lines": [
-   "East is Meridian Gate, Lv 91 and up.",
-   "I can send you back to Avelorn."
+   "Meridian Gate is east, Lv 91 and up. The end of the road.",
+   "Or I send you home."
   ]
  },
  {
   "id": "dlg_noc_meridian_gate_scout",
   "npc_id": "npc_noc_meridian_gate_scout",
   "lines": [
+   "My father is the Guildmaster. I asked to hold this camp so someone would be here when a Wayfarer finally went down after Aldric.",
+   "The Executors guard the plaza. Their masks are pieces of the Keysigil. Take enough of them and the Lattice Heart opens.",
+   "The Array Sentinels standing idle in the colonnade are Gorged and half asleep. They wake when struck. The bounty is the richest on the road.",
    "Meridian Gate runs from Lv 91 by this camp to Lv 99 in the east.",
    "Sentinel Colonnade (Lv 91-95): Array Sentinel, Glyph Swarm. Glyph Plaza (Lv 92-95): Glyph Swarm, Meridian Executor. Lattice Verge (Lv 95-95): Glyph Swarm."
   ]
@@ -482,22 +513,22 @@
   "id": "dlg_noc_meridian_gate_medic",
   "npc_id": "npc_noc_meridian_gate_medic",
   "lines": [
-   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
-   "Drag them as far as you like, but come back breathing."
+   "This is the last Hospice lantern on the road. I keep it lit so you can find your way back to it.",
+   "Come back breathing. Please."
   ]
  },
  {
   "id": "dlg_noc_meridian_gate_transit",
   "npc_id": "npc_noc_meridian_gate_transit",
   "lines": [
-   "Back to Avelorn whenever you want it. The ride is on the Guild."
+   "Avelorn. It's a long way. The crystal manages, just."
   ]
  },
  {
   "id": "dlg_noc_meridian_gate_post",
   "npc_id": "npc_noc_meridian_gate_post",
   "lines": [
-   "This is as far as the road goes.",
+   "They call me the Last Lantern. Nothing is east of me but the Lattice.",
    "I can send you back to Avelorn."
   ]
  }

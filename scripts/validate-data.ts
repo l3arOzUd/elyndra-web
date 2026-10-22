@@ -627,6 +627,24 @@ function checkSystems(b: ContentBundle) {
   if (!sys.starter_weapons.vanguard) report("error", "systems.starter", "vanguard", "no starter weapon");
 }
 
+/** LORE_BIBLE.md §10: named people, a card for every map, a story for every boss, and
+ * ecology that agrees with how the monster behaves. */
+function checkLore(b: ContentBundle) {
+  const roleWords = /(scout|medic|transit|post|merchant|artificer|registrar|warden|operator|keeper)$/i;
+  for (const n of b.npcs) {
+    if (!n.title) report("error", "lore.npc_name", n.id, `${n.name} has no title`);
+    if (n.name === n.title || roleWords.test(n.name) || b.maps.some((m) => n.name.startsWith(m.name + " "))) report("error", "lore.npc_name", n.id, `"${n.name}" is a role, not a person's name`);
+  }
+  for (const m of b.maps) if (!m.intro) report("error", "lore.map_intro", m.id, "no intro shown on entering the map");
+  for (const m of b.monsters) {
+    if ((m.archetype === "boss" || m.archetype === "elite") && !m.story) report("error", "lore.boss_story", m.id, `${m.name} has no story`);
+    if (m.behavior === "aggressive" && /ignores? (travellers|anyone|everything|you)|leaves? them (alone|be)|until (struck|hit)|scatter|bolts? from|skims? away|only bites?/i.test(m.ecology))
+      report("error", "lore.behaviour", m.id, `${m.name} attacks on sight, but its ecology says otherwise: "${m.ecology}"`);
+    if (m.behavior === "passive" && !/struck|dug up|disturbed/i.test(m.ecology))
+      report("error", "lore.behaviour", m.id, `${m.name} is passive: its ecology must say it fights back only when struck`);
+  }
+}
+
 function checkSkills(b: ContentBundle) {
   for (const s of b.skills) {
     if (s.cooldown_ms < s.cast_ms) report("error", "skill.cooldown", s.id, "cooldown shorter than cast");
@@ -651,6 +669,7 @@ function main() {
       checkQuests(bundle);
       checkBalance(bundle);
       checkSkills(bundle);
+      checkLore(bundle);
       checkSystems(bundle);
     }
   }

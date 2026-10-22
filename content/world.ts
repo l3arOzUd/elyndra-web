@@ -12,6 +12,7 @@
 import { decodeWalk, type DialogueDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
 import { bakeLayout, shapeContains } from "./layout";
 import { BOUNTY } from "./model";
+import { ECOLOGY, FIELD_CAST, QUEST_SUMMARY, TOWN_CAST } from "./lore";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
 
 export const HUB = "lum_town_01";
@@ -342,10 +343,10 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
     scatter: t.scatter.map((s) => ({ kind: s.kind, count: Math.min(240, s.count * 3), block: s.block, scale: s.scale })),
     landmarks, safe_areas: [], camps: f.dungeon ? [CAMP_W, CAMP_E, gate.safe] : [CAMP_W, CAMP_E], horde: FIELD_ALIVE, pockets,
     npcs: [
-      { id: `npc_${stem(f)}_scout`, name: `${f.name} Scout`, position: [9, 91], facing: "E", role: "scout", dialogue_id: `dlg_${stem(f)}_scout`, shop_id: null },
-      { id: `npc_${stem(f)}_medic`, name: `${f.name} Medic`, position: [19, 100], facing: "E", role: "healer", dialogue_id: `dlg_${stem(f)}_medic`, shop_id: null },
-      { id: `npc_${stem(f)}_transit`, name: `${f.name} Transit`, position: [9, 100], facing: "E", role: "teleporter", dialogue_id: `dlg_${stem(f)}_transit`, shop_id: null, destinations: [[HUB, 0]] },
-      { id: `npc_${stem(f)}_post`, name: `${f.name} East Post`, position: [184, 95], facing: "W", role: "teleporter", dialogue_id: `dlg_${stem(f)}_post`, shop_id: null, destinations: [[HUB, 0]] },
+      { id: `npc_${stem(f)}_scout`, name: FIELD_CAST[f.id].scout.name, title: `${f.name} Scout`, position: [9, 91], facing: "E", role: "scout", dialogue_id: `dlg_${stem(f)}_scout`, shop_id: null },
+      { id: `npc_${stem(f)}_medic`, name: FIELD_CAST[f.id].medic.name, title: `${f.name} Medic`, position: [19, 100], facing: "E", role: "healer", dialogue_id: `dlg_${stem(f)}_medic`, shop_id: null },
+      { id: `npc_${stem(f)}_transit`, name: FIELD_CAST[f.id].transit.name, title: `${f.name} Transit`, position: [9, 100], facing: "E", role: "teleporter", dialogue_id: `dlg_${stem(f)}_transit`, shop_id: null, destinations: [[HUB, 0]] },
+      { id: `npc_${stem(f)}_post`, name: FIELD_CAST[f.id].post.name, title: `${f.name} East Post`, position: [184, 95], facing: "W", role: "teleporter", dialogue_id: `dlg_${stem(f)}_post`, shop_id: null, destinations: [[HUB, 0]] },
     ],
   };
 }
@@ -356,48 +357,17 @@ function fieldDialogues(f: FieldSpec, look: Lookup, next?: FieldSpec): DialogueD
     const lv = z.species.map((n) => look.byName.get(n)!.level);
     return `${z.name} (Lv ${Math.min(...lv)}-${Math.max(...lv)}): ${[...new Set(z.species)].join(", ")}`;
   }).join(". ");
+  const cast = FIELD_CAST[f.id];
+  if (!cast) throw new Error(`${f.id}: no camp cast in lore.ts`);
+  if (next && !cast.post.lines.some((l) => l.includes(next.name))) throw new Error(`${f.id}: the east post must name ${next.name}`);
   return [
-    { id: `dlg_${stem(f)}_scout`, npc_id: `npc_${stem(f)}_scout`, lines: [`${f.name} runs from Lv ${f.levels[0]} by this camp to Lv ${f.levels[1]} in the east.`, `${zoneLine}.`] },
-    { id: `dlg_${stem(f)}_medic`, npc_id: `npc_${stem(f)}_medic`, lines: ["Sit a while, but keep your blade close. Nothing out here stops at the camp fence.", "Drag them as far as you like, but come back breathing."] },
-    { id: `dlg_${stem(f)}_transit`, npc_id: `npc_${stem(f)}_transit`, lines: ["Back to Avelorn whenever you want it. The ride is on the Guild."] },
-    { id: `dlg_${stem(f)}_post`, npc_id: `npc_${stem(f)}_post`, lines: [next ? `East is ${next.name}, Lv ${next.levels[0]} and up.` : "This is as far as the road goes.", "I can send you back to Avelorn."] },
+    { id: `dlg_${stem(f)}_scout`, npc_id: `npc_${stem(f)}_scout`, lines: [...cast.scout.lines, `${f.name} runs from Lv ${f.levels[0]} by this camp to Lv ${f.levels[1]} in the east.`, `${zoneLine}.`] },
+    { id: `dlg_${stem(f)}_medic`, npc_id: `npc_${stem(f)}_medic`, lines: cast.medic.lines },
+    { id: `dlg_${stem(f)}_transit`, npc_id: `npc_${stem(f)}_transit`, lines: cast.transit.lines },
+    { id: `dlg_${stem(f)}_post`, npc_id: `npc_${stem(f)}_post`, lines: cast.post.lines },
   ];
 }
 
-// --- text that named the v2 towns and fields --------------------------------------------
-
-/** Quest summaries that sent players to maps that no longer exist. */
-const QUEST_SUMMARY: Record<string, string> = {
-  q_ver_intro: "Herd and clear the Graftlings in Moonbrook Vale's Reed Marsh. A gentle first horde after Hollowroot.",
-  q_ver_heartwood: "Stop the Heartwood Regent in the dungeon under Elderroot Expanse and report back. The road east to the Saffron Wastes opens.",
-  q_sol_intro: "Clear the Sandcoils basking on Graftwood Wilds' Trellis Dunes. A gentle first horde in the heat.",
-  q_sol_heliostat: "Shut down the Heliostat Sovereign in the Vault beneath Pearl Coast and report back. The way east to Frostfire Divide opens.",
-  q_tha_drowned_relay: "Silence the Drowned Signalmind where it surfaces at Frostfire Divide's Sentry Vents and report back. Its pulses kept the constructs hostile.",
-  q_cry_intro: "Thin the Frost Mites at the Saffron Wastes' Frost Seep: a passive warm-up that shows how the cold changes a fight.",
-  q_cry_cryocore: "Shut down the Cryocore Curator in the Archive beneath Cinder Expanse and report back. The thaw opens the way to the Veil Rift.",
-  q_emb_intro: "Thin the Ashcrawler herds on Frostfire Divide's Ash Flats. A gentle first train.",
-  q_emb_red_crucible: "Clear the pour channels and the mould yard. Leads on to Kiln Prime's heights in the Veil Rift.",
-  q_emb_furnace_zero: "Shut down Kiln Prime on the Veil Rift's Stoker Heights and report back. Opens the road to Meridian Gate.",
-  q_noc_intro: "Put out the Null Wisps drifting through Cinder Expanse's Spitter Vents.",
-  q_noc_lattice_heart: "Silence the Lattice Sovereign below Meridian Gate and report back. The end of the Wayfarer's road through Elyndra.",
-};
-
-/** Dialogue lines that named the v2 towns, gates and lifts. */
-const DIALOGUE_LINES: Record<string, string[]> = {
-  dlg_lum_merchant: ["Rations, tonics, feathers, all fresh. Prices are Guild-fixed, so don't haggle.", "Sell me your field materials, one by one or the whole bag at once."],
-  dlg_lum_teleporter: ["The transit lattice runs to the camp of every field. A little coin keeps the crystals charged.", "The further the field, the more it costs."],
-  dlg_lum_east_gate_guard: ["East Gate. Dawnmeadow lies beyond, and past it every field in turn, each ten levels harder.", "If you see three dozen of anything chasing you, run for the town. The camps will not save you."],
-  dlg_lum_north_gate_guard: ["The North Gate is closed: the road north runs through the fields now.", "Take the East Gate, or the transit by the square."],
-  dlg_ver_merchant: ["Rations and tonics, marked up for the long road.", "Bring me sap and scales; the alchemists pay well for anything green."],
-  dlg_ver_heartwood_keeper: ["Root lift's working. Avelorn, or back up to Elderroot Expanse?", "Don't touch the sap lines; they bite."],
-  dlg_sol_merchant: ["Water's dear out in the Wastes, and everything else costs too.", "Rations and tonics at Guild prices. Sell me your glass; the observatory buys it all."],
-  dlg_sol_vault_keeper: ["The lift runs to Avelorn or back up to Pearl Coast.", "Don't look straight into the mirrors."],
-  dlg_tha_merchant: ["Rations, tonics, the same Guild prices as everywhere, plus the cost of shipping them.", "Bring me what the reef gives you. Inland buyers pay well for anything from the sea."],
-  dlg_cry_archive_lift_keeper: ["Going up? Back to Cinder Expanse or all the way to Avelorn.", "The vault is past the index gallery. The lancers there shoot far."],
-  dlg_emb_merchant: ["Rations and tonics, hauled a long way. Heat spoils everything, so I charge what it costs to keep them cool.", "Bring me Emberfall scrap; the foundries buy all I can ship."],
-  dlg_noc_merchant: ["Rations and tonics, brought in on the transit. Nothing grows past the Rift any more, so nothing's cheap.", "Bring me lattice scrap. The scholars pay in coin they don't need."],
-  dlg_noc_heart_lift: ["Back up? Avelorn or the Gate.", "Don't look at the lattice too long. It looks back."],
-};
 
 // --- the world ----------------------------------------------------------------------------
 
@@ -443,6 +413,12 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
     if (lm.id === "lm_avelorn_east_gate") lm.note = `To ${FIELDS[0].name} (Lv${FIELDS[0].levels[0]}-${FIELDS[0].levels[1]}) and on east to every field.`;
     if (lm.id === "lm_avelorn_north_gate") lm.note = "Closed: the north road now runs through the fields.";
     if (lm.id === "lm_avelorn_transit") lm.note = "Paid travel to the camp of any field.";
+  }
+
+  // Named people (lore.ts): Avelorn, the market stalls and the dungeon lift keepers.
+  for (const { design } of newMaps.values()) for (const n of design.npcs) {
+    const who = TOWN_CAST[n.id];
+    if (who) Object.assign(n, { name: who.name, title: who.title });
   }
 
   // Links: Avelorn east gate -> field 1 -> ... -> field 10, and each dungeon from its field.
@@ -491,7 +467,7 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       const moveGiver = !kept.has(q.giver_npc_id) || (collect && npcMap.get(q.giver_npc_id) !== target && newMaps.get(npcMap.get(q.giver_npc_id)!)?.design.type !== "town");
       const giver = moveGiver ? npcOn(target) : q.giver_npc_id;
       const turnIn = q.turn_in_npc_id === q0.giver_npc_id ? giver : kept.has(q.turn_in_npc_id) ? q.turn_in_npc_id : "npc_lum_guild_registrar";
-      if (QUEST_SUMMARY[q.id]) q.summary = QUEST_SUMMARY[q.id];
+      q.summary = QUEST_SUMMARY[q.id] ?? (() => { throw new Error(`${q.id}: no summary in lore.ts`); })();
       q.giver_npc_id = giver;
       q.turn_in_npc_id = turnIn;
       return q;
@@ -506,12 +482,16 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
     const fieldsHere = FIELDS.filter((f) => f.region === r.region.id);
     const generated = new Set(FIELDS.flatMap((f) => fieldDialogues(f, look).map((d) => d.id)));
     const dialogues = [
-      ...r.dialogues.filter((d) => kept.has(d.npc_id) && !generated.has(d.id)).map((d) => (DIALOGUE_LINES[d.id] ? { ...d, lines: DIALOGUE_LINES[d.id] } : d)),
+      ...r.dialogues.filter((d) => kept.has(d.npc_id) && !generated.has(d.id)).map((d) => (TOWN_CAST[d.npc_id] ? { ...d, lines: TOWN_CAST[d.npc_id].lines } : d)),
       ...fieldsHere.flatMap((f) => fieldDialogues(f, look, FIELDS[FIELDS.indexOf(f) + 1])),
     ];
     // Each field's bounty is passive; every other monster attacks on sight.
     const bounties = new Set(FIELDS.map((f) => f.bounty));
-    const monsters = r.monsters.map((m) => bounties.has(m.name) ? { ...m, behavior: "passive" as const, bounty: true } : { ...m, behavior: "aggressive" as const });
+    // Their ecology follows (lore.ts ECOLOGY), and the bounties are Gorged.
+    const monsters = r.monsters.map((m) => ({
+      ...m, ecology: ECOLOGY[m.name] ?? m.ecology,
+      ...(bounties.has(m.name) ? { behavior: "passive" as const, bounty: true } : { behavior: "aggressive" as const }),
+    }));
     return {
       ...r,
       region: { ...r.region, town_map_id: HUB, dungeon_map_id: dungeonOf },

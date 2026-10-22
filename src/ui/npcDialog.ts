@@ -24,7 +24,7 @@ export class NpcDialog {
     this.current = m.npc;
     const r = this.root; r.replaceChildren();
     const head = el('header', 'window-heading'), title = el('div');
-    title.append(el('p', 'eyebrow', m.role.replaceAll('_', ' ')), el('h2', '', m.name));
+    title.append(el('p', 'eyebrow', this.c.npcs.get(m.npc)?.title ?? m.role.replaceAll('_', ' ')), el('h2', '', m.name));
     const x = el('button', 'close', '×'); x.setAttribute('aria-label', 'Close NPC services'); x.onclick = () => this.close();
     head.append(title, x); r.append(head);
     const greeting = el('div', 'npc-greeting');

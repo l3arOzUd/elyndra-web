@@ -15,7 +15,8 @@
    60,
    66
   ],
-  "horde": null
+  "horde": null,
+  "intro": "The last city with people in it. Seven markets crowd the square where the Aether Fountain still runs clean."
  },
  {
   "id": "lum_fld_01",
@@ -36,7 +37,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "Aethrion irrigation still seeps under the grass. Since the Quickening, even the Mosskin herds charge travellers."
  },
  {
   "id": "lum_fld_02",
@@ -57,7 +59,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "Brooks, reeds and a dying orchard. Something below the pump-house is pulling the water the wrong way."
  },
  {
   "id": "lum_dun_01",
@@ -78,7 +81,8 @@
   "horde": {
    "min_alive": 60,
    "max_alive": 120
-  }
+  },
+  "intro": "Root-choked tunnels round a buried pump. The Hollowroot Warden waters nothing but itself now."
  },
  {
   "id": "ver_fld_01",
@@ -99,7 +103,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "Sylvara's grafted woods, abandoned two years ago. The garden machines kept working without their gardeners."
  },
  {
   "id": "ver_fld_02",
@@ -120,7 +125,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "Under the elder trees, spores drift up from the Heartwood Engine below. The forest is choking."
  },
  {
   "id": "ver_dun_01",
@@ -141,7 +147,8 @@
   "horde": {
    "min_alive": 60,
    "max_alive": 120
-  }
+  },
+  "intro": "Sap conduits and the Engine's spore lung. Its Regent breathes rot where it once breathed light."
  },
  {
   "id": "sol_fld_01",
@@ -162,7 +169,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "A desert that was farmland before the mirrors turned. The dead surveyors still walk the causeway they built."
  },
  {
   "id": "sol_dun_01",
@@ -183,7 +191,8 @@
   "horde": {
    "min_alive": 60,
    "max_alive": 120
-  }
+  },
+  "intro": "A sealed vault of mirrors. Every beam in Solenia ends here, and from here it is sent east."
  },
  {
   "id": "tha_fld_01",
@@ -204,7 +213,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "Terraces, pearl beds and lightning masts. At night the Drowned Signalmind sings under the water."
  },
  {
   "id": "cry_fld_01",
@@ -225,7 +235,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "Where the snowline meets the first lava. The Signalmind has grown a body and surfaces at the vents."
  },
  {
   "id": "cry_dun_01",
@@ -246,7 +257,8 @@
   "horde": {
    "min_alive": 60,
    "max_alive": 120
-  }
+  },
+  "intro": "Aethrion's memory, frozen solid. The Curator guards Archon Ysra Callow's warnings from everyone."
  },
  {
   "id": "emb_fld_01",
@@ -267,7 +279,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "Ash and rivets over Emberfall's buried foundries. The Cryocore Archive lies beneath."
  },
  {
   "id": "noc_fld_01",
@@ -288,7 +301,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "The edge of the tear in the Veil. Kiln Prime walks the heights, and its stokers still feed it."
  },
  {
   "id": "noc_fld_02",
@@ -309,7 +323,8 @@
   "horde": {
    "min_alive": 550,
    "max_alive": 900
-  }
+  },
+  "intro": "The plazas before the Meridian Gate, thick with the Lattice's glyphs. The Heart lies below."
  },
  {
   "id": "noc_dun_01",
@@ -330,6 +345,7 @@
   "horde": {
    "min_alive": 60,
    "max_alive": 120
-  }
+  },
+  "intro": "The Lattice Heart. The Sovereign waits behind its last door, and Aldric Venn's ward is failing."
  }
 ]

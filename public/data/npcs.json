@@ -1,7 +1,7 @@
 [
  {
   "id": "npc_lum_guild_registrar",
-  "name": "Avelorn Guild Registrar",
+  "name": "Wenna Lark",
   "position": [
    77,
    45
@@ -10,11 +10,12 @@
   "role": "guild_registrar",
   "dialogue_id": "dlg_lum_guild_registrar",
   "shop_id": null,
+  "title": "Guild Registrar",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_lum_merchant",
-  "name": "Avelorn Supply Merchant",
+  "name": "Dobbin Reyes",
   "position": [
    84,
    64
@@ -23,11 +24,12 @@
   "role": "merchant",
   "dialogue_id": "dlg_lum_merchant",
   "shop_id": "shop_lum_supply",
+  "title": "Avelorn Supply Merchant",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_lum_healer",
-  "name": "Avelorn Field Medic",
+  "name": "Sister Maren Holloway",
   "position": [
    47,
    56
@@ -36,11 +38,12 @@
   "role": "healer",
   "dialogue_id": "dlg_lum_healer",
   "shop_id": null,
+  "title": "Lantern Hospice",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_lum_teleporter",
-  "name": "Avelorn Transit Operator",
+  "name": "Pell Ostrander",
   "position": [
    43,
    83
@@ -91,11 +94,12 @@
     374
    ]
   ],
+  "title": "Collegium Transit Warden",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_lum_craftsman",
-  "name": "Avelorn Artificer",
+  "name": "Master Tobias Fenn",
   "position": [
    73,
    72
@@ -104,11 +108,12 @@
   "role": "craftsman",
   "dialogue_id": "dlg_lum_craftsman",
   "shop_id": null,
+  "title": "Avelorn Artificer",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_lum_east_gate_guard",
-  "name": "East Gate Warden",
+  "name": "Garrick Stone",
   "position": [
    110,
    55
@@ -117,11 +122,12 @@
   "role": "guard",
   "dialogue_id": "dlg_lum_east_gate_guard",
   "shop_id": null,
+  "title": "East Gate Warden",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_lum_north_gate_guard",
-  "name": "North Gate Warden",
+  "name": "Ottilie Brand",
   "position": [
    55,
    9
@@ -130,11 +136,12 @@
   "role": "guard",
   "dialogue_id": "dlg_lum_north_gate_guard",
   "shop_id": null,
+  "title": "North Gate Warden",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_ver_merchant",
-  "name": "Sylvara Supply Merchant",
+  "name": "Fennick Ivyhand",
   "position": [
    83,
    69
@@ -143,11 +150,12 @@
   "role": "merchant",
   "dialogue_id": "dlg_ver_merchant",
   "shop_id": "shop_ver",
+  "title": "Sylvara Supply Merchant",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_ver_craftsman",
-  "name": "Sylvara Artificer",
+  "name": "Liesl Thornquist",
   "position": [
    74,
    78
@@ -156,11 +164,12 @@
   "role": "craftsman",
   "dialogue_id": "dlg_ver_craftsman",
   "shop_id": null,
+  "title": "Sylvara Artificer",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_sol_merchant",
-  "name": "Duskhar Supply Merchant",
+  "name": "Rasha al-Duun",
   "position": [
    65,
    83
@@ -169,11 +178,12 @@
   "role": "merchant",
   "dialogue_id": "dlg_sol_merchant",
   "shop_id": "shop_sol",
+  "title": "Duskhar Supply Merchant",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_sol_craftsman",
-  "name": "Duskhar Artificer",
+  "name": "Khalid Sandmere",
   "position": [
    53,
    83
@@ -182,11 +192,12 @@
   "role": "craftsman",
   "dialogue_id": "dlg_sol_craftsman",
   "shop_id": null,
+  "title": "Duskhar Artificer",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_tha_merchant",
-  "name": "Port Merrow Supply Merchant",
+  "name": "Captain Odo Brine",
   "position": [
    42,
    76
@@ -195,11 +206,12 @@
   "role": "merchant",
   "dialogue_id": "dlg_tha_merchant",
   "shop_id": "shop_tha_supply",
+  "title": "Port Merrow Supply Merchant",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_tha_craftsman",
-  "name": "Port Merrow Artificer",
+  "name": "Nessa Kelpwright",
   "position": [
    37,
    65
@@ -208,11 +220,12 @@
   "role": "craftsman",
   "dialogue_id": "dlg_tha_craftsman",
   "shop_id": null,
+  "title": "Port Merrow Artificer",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_cry_merchant",
-  "name": "Vaelspire Supply Merchant",
+  "name": "Ingrid Frostmantle",
   "position": [
    37,
    47
@@ -221,11 +234,12 @@
   "role": "merchant",
   "dialogue_id": "dlg_cry_merchant",
   "shop_id": "shop_cry_supply",
+  "title": "Vaelspire Supply Merchant",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_cry_craftsman",
-  "name": "Vaelspire Artificer",
+  "name": "Corin Glassbrook",
   "position": [
    44,
    42
@@ -234,11 +248,12 @@
   "role": "craftsman",
   "dialogue_id": "dlg_cry_craftsman",
   "shop_id": null,
+  "title": "Vaelspire Artificer",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_emb_merchant",
-  "name": "Cindervale Supply Merchant",
+  "name": "Brannoc Ashby",
   "position": [
    55,
    37
@@ -247,11 +262,12 @@
   "role": "merchant",
   "dialogue_id": "dlg_emb_merchant",
   "shop_id": "shop_emb_supply",
+  "title": "Cindervale Supply Merchant",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_emb_craftsman",
-  "name": "Cindervale Artificer",
+  "name": "Vala Embersmith",
   "position": [
    64,
    37
@@ -260,11 +276,12 @@
   "role": "craftsman",
   "dialogue_id": "dlg_emb_craftsman",
   "shop_id": null,
+  "title": "Cindervale Artificer",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_noc_merchant",
-  "name": "Umbracrest Supply Merchant",
+  "name": "Silas Nightway",
   "position": [
    80,
    44
@@ -273,11 +290,12 @@
   "role": "merchant",
   "dialogue_id": "dlg_noc_merchant",
   "shop_id": "shop_noc_supply",
+  "title": "Umbracrest Supply Merchant",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_noc_craftsman",
-  "name": "Umbracrest Artificer",
+  "name": "Mirela Voss",
   "position": [
    83,
    55
@@ -286,11 +304,13 @@
   "role": "craftsman",
   "dialogue_id": "dlg_noc_craftsman",
   "shop_id": null,
+  "title": "Umbracrest Artificer",
   "map_id": "lum_town_01"
  },
  {
   "id": "npc_lum_dawnmeadow_scout",
-  "name": "Dawnmeadow Scout",
+  "name": "Tamsin Reed",
+  "title": "Dawnmeadow Scout",
   "position": [
    9,
    91
@@ -303,7 +323,8 @@
  },
  {
   "id": "npc_lum_dawnmeadow_medic",
-  "name": "Dawnmeadow Medic",
+  "name": "Brother Aled",
+  "title": "Dawnmeadow Medic",
   "position": [
    19,
    100
@@ -316,7 +337,8 @@
  },
  {
   "id": "npc_lum_dawnmeadow_transit",
-  "name": "Dawnmeadow Transit",
+  "name": "Nim Calloway",
+  "title": "Dawnmeadow Transit",
   "position": [
    9,
    100
@@ -335,7 +357,8 @@
  },
  {
   "id": "npc_lum_dawnmeadow_post",
-  "name": "Dawnmeadow East Post",
+  "name": "Hobb Marlow",
+  "title": "Dawnmeadow East Post",
   "position": [
    184,
    95
@@ -354,7 +377,8 @@
  },
  {
   "id": "npc_lum_moonbrook_vale_scout",
-  "name": "Moonbrook Vale Scout",
+  "name": "Orla Fenwick",
+  "title": "Moonbrook Vale Scout",
   "position": [
    9,
    91
@@ -367,7 +391,8 @@
  },
  {
   "id": "npc_lum_moonbrook_vale_medic",
-  "name": "Moonbrook Vale Medic",
+  "name": "Sister Ivy Ames",
+  "title": "Moonbrook Vale Medic",
   "position": [
    19,
    100
@@ -380,7 +405,8 @@
  },
  {
   "id": "npc_lum_moonbrook_vale_transit",
-  "name": "Moonbrook Vale Transit",
+  "name": "Teodor Pike",
+  "title": "Moonbrook Vale Transit",
   "position": [
    9,
    100
@@ -399,7 +425,8 @@
  },
  {
   "id": "npc_lum_moonbrook_vale_post",
-  "name": "Moonbrook Vale East Post",
+  "name": "Wren Halloway",
+  "title": "Moonbrook Vale East Post",
   "position": [
    184,
    95
@@ -418,7 +445,7 @@
  },
  {
   "id": "npc_lum_hollowroot_lift",
-  "name": "Hollowroot Lift Keeper",
+  "name": "Mabry Rootfoot",
   "position": [
    18,
    55
@@ -437,11 +464,13 @@
     0
    ]
   ],
+  "title": "Hollowroot Lift Keeper",
   "map_id": "lum_dun_01"
  },
  {
   "id": "npc_ver_graftwood_wilds_scout",
-  "name": "Graftwood Wilds Scout",
+  "name": "Cassius Vale",
+  "title": "Graftwood Wilds Scout",
   "position": [
    9,
    91
@@ -454,7 +483,8 @@
  },
  {
   "id": "npc_ver_graftwood_wilds_medic",
-  "name": "Graftwood Wilds Medic",
+  "name": "Brother Joss",
+  "title": "Graftwood Wilds Medic",
   "position": [
    19,
    100
@@ -467,7 +497,8 @@
  },
  {
   "id": "npc_ver_graftwood_wilds_transit",
-  "name": "Graftwood Wilds Transit",
+  "name": "Elsabet Moor",
+  "title": "Graftwood Wilds Transit",
   "position": [
    9,
    100
@@ -486,7 +517,8 @@
  },
  {
   "id": "npc_ver_graftwood_wilds_post",
-  "name": "Graftwood Wilds East Post",
+  "name": "Dunstan Kerr",
+  "title": "Graftwood Wilds East Post",
   "position": [
    184,
    95
@@ -505,7 +537,8 @@
  },
  {
   "id": "npc_ver_elderroot_expanse_scout",
-  "name": "Elderroot Expanse Scout",
+  "name": "Rhosyn Ap-Tarr",
+  "title": "Elderroot Expanse Scout",
   "position": [
    9,
    91
@@ -518,7 +551,8 @@
  },
  {
   "id": "npc_ver_elderroot_expanse_medic",
-  "name": "Elderroot Expanse Medic",
+  "name": "Sister Hale Corrin",
+  "title": "Elderroot Expanse Medic",
   "position": [
    19,
    100
@@ -531,7 +565,8 @@
  },
  {
   "id": "npc_ver_elderroot_expanse_transit",
-  "name": "Elderroot Expanse Transit",
+  "name": "Pim Wexley",
+  "title": "Elderroot Expanse Transit",
   "position": [
    9,
    100
@@ -550,7 +585,8 @@
  },
  {
   "id": "npc_ver_elderroot_expanse_post",
-  "name": "Elderroot Expanse East Post",
+  "name": "Ansel Rook",
+  "title": "Elderroot Expanse East Post",
   "position": [
    184,
    95
@@ -569,7 +605,7 @@
  },
  {
   "id": "npc_ver_heartwood_keeper",
-  "name": "Heartwood Root-Keeper",
+  "name": "Rootwarden Sorrel",
   "position": [
    16,
    56
@@ -588,11 +624,13 @@
     0
    ]
   ],
+  "title": "Heartwood Root-Keeper",
   "map_id": "ver_dun_01"
  },
  {
   "id": "npc_sol_saffron_wastes_scout",
-  "name": "Saffron Wastes Scout",
+  "name": "Yusuf Qarim",
+  "title": "Saffron Wastes Scout",
   "position": [
    9,
    91
@@ -605,7 +643,8 @@
  },
  {
   "id": "npc_sol_saffron_wastes_medic",
-  "name": "Saffron Wastes Medic",
+  "name": "Sister Noor Elzari",
+  "title": "Saffron Wastes Medic",
   "position": [
    19,
    100
@@ -618,7 +657,8 @@
  },
  {
   "id": "npc_sol_saffron_wastes_transit",
-  "name": "Saffron Wastes Transit",
+  "name": "Bastian Coil",
+  "title": "Saffron Wastes Transit",
   "position": [
    9,
    100
@@ -637,7 +677,8 @@
  },
  {
   "id": "npc_sol_saffron_wastes_post",
-  "name": "Saffron Wastes East Post",
+  "name": "Leda Sunmarch",
+  "title": "Saffron Wastes East Post",
   "position": [
    184,
    95
@@ -656,7 +697,7 @@
  },
  {
   "id": "npc_sol_vault_keeper",
-  "name": "Heliostat Vault Keeper",
+  "name": "Vault Keeper Amon Reth",
   "position": [
    65,
    8
@@ -675,11 +716,13 @@
     0
    ]
   ],
+  "title": "Heliostat Vault Keeper",
   "map_id": "sol_dun_01"
  },
  {
   "id": "npc_tha_pearl_coast_scout",
-  "name": "Pearl Coast Scout",
+  "name": "Marisol Tidewell",
+  "title": "Pearl Coast Scout",
   "position": [
    9,
    91
@@ -692,7 +735,8 @@
  },
  {
   "id": "npc_tha_pearl_coast_medic",
-  "name": "Pearl Coast Medic",
+  "name": "Brother Finn Salter",
+  "title": "Pearl Coast Medic",
   "position": [
    19,
    100
@@ -705,7 +749,8 @@
  },
  {
   "id": "npc_tha_pearl_coast_transit",
-  "name": "Pearl Coast Transit",
+  "name": "Gwyn Harrow",
+  "title": "Pearl Coast Transit",
   "position": [
    9,
    100
@@ -724,7 +769,8 @@
  },
  {
   "id": "npc_tha_pearl_coast_post",
-  "name": "Pearl Coast East Post",
+  "name": "Old Pellam",
+  "title": "Pearl Coast East Post",
   "position": [
    184,
    95
@@ -743,7 +789,8 @@
  },
  {
   "id": "npc_cry_frostfire_divide_scout",
-  "name": "Frostfire Divide Scout",
+  "name": "Sigrun Vale",
+  "title": "Frostfire Divide Scout",
   "position": [
    9,
    91
@@ -756,7 +803,8 @@
  },
  {
   "id": "npc_cry_frostfire_divide_medic",
-  "name": "Frostfire Divide Medic",
+  "name": "Sister Agathe Lind",
+  "title": "Frostfire Divide Medic",
   "position": [
    19,
    100
@@ -769,7 +817,8 @@
  },
  {
   "id": "npc_cry_frostfire_divide_transit",
-  "name": "Frostfire Divide Transit",
+  "name": "Corvin Ashgrove",
+  "title": "Frostfire Divide Transit",
   "position": [
    9,
    100
@@ -788,7 +837,8 @@
  },
  {
   "id": "npc_cry_frostfire_divide_post",
-  "name": "Frostfire Divide East Post",
+  "name": "Torvald Ice",
+  "title": "Frostfire Divide East Post",
   "position": [
    184,
    95
@@ -807,7 +857,7 @@
  },
  {
   "id": "npc_cry_archive_lift_keeper",
-  "name": "Archive Lift Keeper",
+  "name": "Archivist Hesper Quill",
   "position": [
    16,
    100
@@ -826,11 +876,13 @@
     0
    ]
   ],
+  "title": "Archive Lift Keeper",
   "map_id": "cry_dun_01"
  },
  {
   "id": "npc_emb_cinder_expanse_scout",
-  "name": "Cinder Expanse Scout",
+  "name": "Branwen Coalridge",
+  "title": "Cinder Expanse Scout",
   "position": [
    9,
    91
@@ -843,7 +895,8 @@
  },
  {
   "id": "npc_emb_cinder_expanse_medic",
-  "name": "Cinder Expanse Medic",
+  "name": "Brother Emrys",
+  "title": "Cinder Expanse Medic",
   "position": [
    19,
    100
@@ -856,7 +909,8 @@
  },
  {
   "id": "npc_emb_cinder_expanse_transit",
-  "name": "Cinder Expanse Transit",
+  "name": "Fen Ashcombe",
+  "title": "Cinder Expanse Transit",
   "position": [
    9,
    100
@@ -875,7 +929,8 @@
  },
  {
   "id": "npc_emb_cinder_expanse_post",
-  "name": "Cinder Expanse East Post",
+  "name": "Magda Cinder",
+  "title": "Cinder Expanse East Post",
   "position": [
    184,
    95
@@ -894,7 +949,8 @@
  },
  {
   "id": "npc_noc_veil_rift_scout",
-  "name": "Veil Rift Scout",
+  "name": "Idris Lowe",
+  "title": "Veil Rift Scout",
   "position": [
    9,
    91
@@ -907,7 +963,8 @@
  },
  {
   "id": "npc_noc_veil_rift_medic",
-  "name": "Veil Rift Medic",
+  "name": "Sister Celeste Morrow",
+  "title": "Veil Rift Medic",
   "position": [
    19,
    100
@@ -920,7 +977,8 @@
  },
  {
   "id": "npc_noc_veil_rift_transit",
-  "name": "Veil Rift Transit",
+  "name": "Quill Hadley",
+  "title": "Veil Rift Transit",
   "position": [
    9,
    100
@@ -939,7 +997,8 @@
  },
  {
   "id": "npc_noc_veil_rift_post",
-  "name": "Veil Rift East Post",
+  "name": "Harlan Grey",
+  "title": "Veil Rift East Post",
   "position": [
    184,
    95
@@ -958,7 +1017,8 @@
  },
  {
   "id": "npc_noc_meridian_gate_scout",
-  "name": "Meridian Gate Scout",
+  "name": "Ser Aveline Crow",
+  "title": "Meridian Gate Scout",
   "position": [
    9,
    91
@@ -971,7 +1031,8 @@
  },
  {
   "id": "npc_noc_meridian_gate_medic",
-  "name": "Meridian Gate Medic",
+  "name": "Brother Tomas Vey",
+  "title": "Meridian Gate Medic",
   "position": [
    19,
    100
@@ -984,7 +1045,8 @@
  },
  {
   "id": "npc_noc_meridian_gate_transit",
-  "name": "Meridian Gate Transit",
+  "name": "Ilse Marrow",
+  "title": "Meridian Gate Transit",
   "position": [
    9,
    100
@@ -1003,7 +1065,8 @@
  },
  {
   "id": "npc_noc_meridian_gate_post",
-  "name": "Meridian Gate East Post",
+  "name": "Jory Penn",
+  "title": "Meridian Gate East Post",
   "position": [
    184,
    95
@@ -1022,7 +1085,7 @@
  },
  {
   "id": "npc_noc_heart_lift",
-  "name": "Lattice Heart Lift Keeper",
+  "name": "Ferrin Hask",
   "position": [
    61,
    8
@@ -1041,6 +1104,7 @@
     0
    ]
   ],
+  "title": "Lattice Heart Lift Keeper",
   "map_id": "noc_dun_01"
  }
 ]

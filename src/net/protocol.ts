@@ -129,6 +129,7 @@ export type ServerMsg =
   | { t: "stats"; lv: number; exp: number; next: number; hp: number; mhp: number; sp: number; msp: number; sh?: number; msh?: number; atk: number; def: number; job: string; tot?: TotemView[]; ail?: { kind: "burn" | "shock" | "chill"; left: number }[]; buffs?: BuffView[] }
   | SheetMsg
   | { t: "quests"; quests: QuestView[] }
+  | { t: "book"; kills: Record<string, number> }
   | { t: "npc"; npc: string; name: string; role: string; lines: string[]; shop?: [string, number][]; recipes?: RecipeView[]; dest?: [string, number][]; offer?: QuestView[]; ready?: string[] }
   | { t: "notice"; text: string; kind: "info" | "good" | "bad" }
   | { t: "correct"; seq: number; pos: [number, number] }

@@ -39,13 +39,20 @@ export class Overlay {
 
   constructor(private readonly root: HTMLElement) {}
 
-  label(name: string, cls: string, showBar: boolean): Label {
+  label(name: string, cls: string, showBar: boolean, title?: string): Label {
     const el = document.createElement("div");
     el.className = `tag ${cls}`;
     const nameEl = document.createElement("div");
     nameEl.className = "tag-name";
     nameEl.textContent = name;
     el.append(nameEl);
+    if (title) {
+      // An NPC's role under its name ("Dawnmeadow Scout").
+      const titleEl = document.createElement("div");
+      titleEl.className = "tag-title";
+      titleEl.textContent = title;
+      el.append(titleEl);
+    }
     let fill: HTMLElement | null = null;
     if (showBar) {
       const bar = document.createElement("div");

@@ -56,6 +56,8 @@ export interface MapDef {
   arrival: Point;
   /** Live monster population rules; null where nothing spawns. */
   horde: { min_alive: number; max_alive: number } | null;
+  /** Shown on entering the map (content/lore.ts MAP_INTRO). */
+  intro?: string;
 }
 
 export type BlockerKind = "forest" | "cliff" | "rock" | "ruin_wall" | "building" | "fence" | "water" | "lava" | "chasm" | "ice" | "crystal" | "machine";
@@ -154,6 +156,10 @@ export interface MonsterDef {
   sprite: string;
   /** The field's passive bounty species: more HP and EXP, few on the map. */
   bounty?: boolean;
+  /** A boss's or elite's story (content/lore.ts BOSS_STORY), shown in the Monster Book. */
+  story?: string;
+  /** Where it spawns: map and zone (spawn pocket) names, for the Monster Book. */
+  habitat?: { map_id: string; zone: string }[];
 }
 
 export type ItemCategory = "material" | "rare_material" | "consumable" | "equipment" | "charm" | "totem" | "quest";
@@ -304,7 +310,10 @@ export interface SystemsDef {
 
 export interface NpcDef {
   id: string;
+  /** A personal name (content/lore.ts). */
   name: string;
+  /** What they do, shown under the name ("Dawnmeadow Scout"). */
+  title?: string;
   map_id: string;
   position: Point;
   facing: "N" | "NE" | "E" | "SE" | "S" | "SW" | "W" | "NW";

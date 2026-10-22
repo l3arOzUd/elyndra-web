@@ -197,6 +197,7 @@ export class Game {
         break;
       }
       case "quests": this.hud.setQuests(m.quests); break;
+      case "book": this.hud.book.setKills(m.kills); break;
       case "sheet": this.hud.setSheet(m); break;
       case "npc": this.dialog.show(m); break;
       case "notice": this.hud.log(m.text, m.kind); break;
@@ -245,6 +246,7 @@ export class Game {
     const lv = `${def.type.toUpperCase()} · Lv ${def.recommended_level_min}-${def.recommended_level_max}`;
     this.hud.setMap(def.name, `${region?.name ?? ""} · ${lv}`);
     this.hud.log(`Entered ${def.name}`, "info");
+    if (def.intro) { this.hud.log(def.intro, "info"); this.hud.showMapCard(def.name, `${region?.name ?? ""} · Lv ${def.recommended_level_min}–${def.recommended_level_max}`, def.intro); }
     this.loading = false;
   }
 
@@ -290,7 +292,7 @@ export class Game {
       state: a.st, dead: a.st === EntState.Dead, hurtAt: 0, leaving: false,
     };
     if (a.k !== "m") {
-      e.label = this.overlay.label(a.k === "n" ? a.name : `${a.name}`, isSelf ? "tag-self" : a.k === "n" ? "tag-npc" : "tag-player", a.k === "p");
+      e.label = this.overlay.label(a.k === "n" ? a.name : `${a.name}`, isSelf ? "tag-self" : a.k === "n" ? "tag-npc" : "tag-player", a.k === "p", a.k === "n" && a.ref ? this.c.npcs.get(a.ref)?.title : undefined);
       e.label.setHp(a.hp, a.mhp);
     }
     this.ents.set(a.id, e);
@@ -635,6 +637,7 @@ export class Game {
       else if (ev.code === "KeyI") this.hud.toggle("inv-win");
       else if (ev.code === "KeyE") this.hud.toggle("equip-win");
       else if (ev.code === "KeyQ") this.hud.toggle("journal-win");
+      else if (ev.code === "KeyB") this.hud.toggle("book-win");
       else if (ev.code === "KeyZ") this.pickupNearby(true);
       // World v3 horde tools: R rings a Lure Bell, T crushes a Camp Feather.
       else if (ev.code === "KeyR") this.conn.send({ t: "use", item: "itm_0900" });

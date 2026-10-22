@@ -368,3 +368,47 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 @keyframes refine-drift { from { background-position:0 0,0 0,0 0,0 0,center; } to { background-position:0 -10px,0 -14px,0 -8px,0 -12px,center; } }
 @keyframes refine-hue { to { filter:hue-rotate(360deg); } }
 @media (prefers-reduced-motion:reduce) { .painted-icon.refined::before,.painted-icon.graded::after { animation:none; } }
+
+/* Lore (LORE_BIBLE.md): NPC titles, the map-entry card and the Monster Book. */
+.tag-title { margin-top:-2px; font-size:10px; font-weight:600; letter-spacing:.04em; color:#e8d3a2; text-shadow:0 0 3px #000,0 1px 2px #000; }
+.map-card { position:fixed; z-index:14; left:50%; top:13vh; transform:translateX(-50%); display:grid; justify-items:center; gap:3px; width:min(560px,calc(100vw - 32px)); padding:12px 28px 14px; text-align:center; pointer-events:none; background:radial-gradient(ellipse at center,#1b120bd9 0,#1b120bb0 55%,#1b120b00 75%); }
+.map-card[hidden] { display:none; }
+.map-card .eyebrow { margin:0; font-size:11px; letter-spacing:.14em; color:#e2c486; }
+.map-card strong { font:700 38px/1.05 var(--ui-font-title); color:#fff1cf; -webkit-text-stroke:4px #1b1006; paint-order:stroke fill; text-shadow:0 2px 6px #000c; }
+.map-card span { max-width:470px; font-size:14px; line-height:1.4; color:#f0e2c3; text-shadow:0 1px 3px #000,0 0 8px #000c; }
+.map-card.showing { animation:map-card-in .8s ease-out both; }
+.map-card.leaving { animation:map-card-out .7s ease-in forwards; }
+@keyframes map-card-in { from { opacity:0; transform:translate(-50%,8px); } to { opacity:1; transform:translate(-50%,0); } }
+@keyframes map-card-out { to { opacity:0; transform:translate(-50%,-6px); } }
+#book-win { width:min(860px,calc(100vw - 36px)); left:50%; top:50%; transform:translate(-50%,-50%); z-index:5; }
+#book-win[hidden] { display:none; }
+.book-count { margin-left:auto; margin-right:10px; align-self:center; font-size:12px; }
+.book-filters { display:flex; gap:8px; padding:0 8px 8px; }
+.book-filters select,.book-filters input { font-size:13px; padding:6px 8px; border:1px solid #a98a58; border-radius:3px; background:#f3e6c6; color:#3f2a16; }
+.book-filters select { flex:1 1 55%; min-width:0; }.book-filters input { flex:1 1 45%; min-width:0; }
+.book-layout { display:grid; grid-template-columns:minmax(0,300px) minmax(0,1fr); gap:14px; min-height:0; flex:1 1 auto; padding:0 8px 10px; }
+.book-list { display:flex; flex-direction:column; gap:3px; overflow:auto; max-height:calc(100dvh - 330px); min-height:200px; padding-right:4px; scrollbar-color:#9e7a43 #b8a17644; }
+.book-row { display:grid; grid-template-columns:44px minmax(0,1fr) auto; align-items:center; gap:8px; padding:3px 8px 3px 3px; text-align:left; border:1px solid #b2956544; border-radius:3px; background:#e9d9b366; color:#3f2a16; }
+.book-row:hover { background:#f1e2bd; border-color:#a98a58; }
+.book-row.selected { background:#f6e9c8; border-color:#8a6a3a; box-shadow:inset 3px 0 #9c6b2e; }
+.book-row-text { display:grid; min-width:0; }.book-row-text strong { font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }.book-row-text small { font-size:12px; color:#7a6142; }
+.book-row.unknown strong { color:#7b6a52; }
+.book-kills { font-size:12px; color:#6a4b25; }
+.book-thumb { width:44px; height:44px; border-radius:2px; background:#d8c497; }
+.book-detail { overflow:auto; max-height:calc(100dvh - 330px); min-height:200px; padding:4px 6px 0 2px; color:#3f2a16; }
+.book-portrait { float:right; width:150px; height:150px; margin:0 0 8px 12px; border:1px solid #a98a58; border-radius:3px; background:radial-gradient(circle at 50% 60%,#f4e6c4,#d3bd8c); }
+.book-detail .eyebrow { margin:0; font-size:11px; color:#8a6a3a; }
+.book-detail h3 { margin:2px 0 8px; font:700 26px var(--ui-font-title); color:#4b301a; }
+.book-detail h4 { clear:right; margin:12px 0 4px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#7a5a2c; }
+.book-facts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px 12px; font-size:13px; }
+.book-facts div { display:flex; justify-content:space-between; gap:6px; border-bottom:1px dotted #a98a5888; }.book-facts span { color:#6f5a3d; }
+.book-behaviour { margin:8px 0 0; font-size:13px; font-weight:600; }.book-behaviour.good { color:#4f6a2c; }.book-behaviour.bad { color:#8a3324; }
+.book-habitat,.book-drops { margin:0; padding-left:18px; font-size:13px; line-height:1.5; }
+.book-text { margin:0; font-size:14px; line-height:1.5; }.book-story { font-style:italic; color:#4a3320; }
+.book-locked { clear:right; margin-top:14px; font-size:13px; }
+@media (max-width:800px) {
+  .book-layout { grid-template-columns:1fr; }
+  .book-list { max-height:34dvh; min-height:120px; }.book-detail { max-height:none; overflow:visible; }
+  .book-portrait { width:96px; height:96px; }
+  .map-card strong { font-size:30px; }.map-card span { font-size:13px; }
+}
