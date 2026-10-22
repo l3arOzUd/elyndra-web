@@ -8,7 +8,8 @@ import * as THREE from "three";
 // or Home puts it back). Distances are in cells.
 
 const DEFAULT_PITCH = 50;
-const DEFAULT_DISTANCE = 72;
+/** Camera distance at the default zoom (floating numbers are sized for it). */
+export const DEFAULT_DISTANCE = 72;
 const MIN_DISTANCE = 36;
 const MAX_DISTANCE = 160;
 

@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { DEFAULT_DISTANCE } from "../render/camera";
 
 // DOM over the 3D view: names, HP bars and floating numbers. Damage on one
 // target is summed over 150 ms into one number (HORDE_SPEC §3). Multi-hit
@@ -6,11 +7,15 @@ import * as THREE from "three";
 // combo streams upward, while the target's own counter above it counts the
 // sum up hit by hit, then floats off. A target keeps a small sideways offset
 // (from its id) so piled monsters' numbers don't sit exactly on each other.
-// At most MAX_FLOATS numbers exist at once, from a pool.
+// At most MAX_FLOATS numbers exist at once, from a pool. Numbers scale with
+// the camera like the sprites do: bigger zoomed in, smaller zoomed out
+// (CSS sizes are for the default zoom).
 
 const tmp = new THREE.Vector3();
 const MAX_FLOATS = 300;
 const MERGE_MS = 150;
+/** Limits on the zoom scale, so numbers stay readable at both ends. */
+const MIN_ZOOM_SCALE = 0.5, MAX_ZOOM_SCALE = 2;
 
 type FloatKind = "dmg" | "crit" | "taken" | "heal" | "exp" | "info" | "part" | "part-crit" | "total";
 
@@ -129,10 +134,11 @@ export class Overlay {
       if (!f.hold) f.age += dtMs;
       if (f.age >= f.life) { f.busy = false; f.el.style.display = "none"; continue; }
       const t = Math.max(0, f.age) / f.life;
+      const zoom = THREE.MathUtils.clamp(DEFAULT_DISTANCE / camera.position.distanceTo(f.pos), MIN_ZOOM_SCALE, MAX_ZOOM_SCALE);
       const [x, y] = project(tmp.copy(f.pos), camera, w, h);
       // A pop when it appears or counts up: RO parts land big and settle.
-      const scale = f.el.className.includes("part") ? 1 + 0.8 * Math.max(0, 1 - f.pop / 140) : 1 + 0.35 * Math.max(0, 1 - f.pop / 160);
-      f.el.style.transform = `translate(${x + f.dx}px, ${y - f.dy - f.rise * easeOut(t)}px) translate(-50%, -100%) scale(${scale})`;
+      const pop = f.el.className.includes("part") ? 1 + 0.8 * Math.max(0, 1 - f.pop / 140) : 1 + 0.35 * Math.max(0, 1 - f.pop / 160);
+      f.el.style.transform = `translate(${x + f.dx * zoom}px, ${y - (f.dy + f.rise * easeOut(t)) * zoom}px) translate(-50%, -100%) scale(${pop * zoom})`;
       f.el.style.opacity = String(t < 0.6 ? 1 : 1 - (t - 0.6) / 0.4);
     }
   }
