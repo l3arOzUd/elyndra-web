@@ -311,3 +311,6 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
  #open-equip { display:none; }
  #inventory { grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:auto; max-height:250px; }
 }
+.slot .sp { position:absolute; right:2px; bottom:0; z-index:2; font:bold 12px/1.3 var(--ui-font-body); color:#9fd4ff; text-shadow:1px 1px #000,-1px -1px #000,1px -1px #000,-1px 1px #000; }
+.slot .sp::after { content:' SP'; font-size:8px; color:#c9e6ff; }.slot .sp:empty { display:none; }
+.slot.nosp .sp { color:#ff8f7a; }.slot.nosp .sp::after { color:#ffc2b5; }

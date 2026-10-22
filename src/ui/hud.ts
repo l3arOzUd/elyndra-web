@@ -106,7 +106,7 @@ export class Hud {
     const bar = $('hotbar'); bar.replaceChildren();
     HOTBAR.forEach((_, i) => {
       const b = el('button', 'slot');
-      b.append(el('span', 'key', String(i + 1)), skillIcon(HOTBAR[i]), el('span', 'name'), el('span', 'cd'));
+      b.append(el('span', 'key', String(i + 1)), skillIcon(HOTBAR[i]), el('span', 'name'), el('span', 'sp'), el('span', 'cd'));
       this.bindTooltip(b, () => c.skills.get(b.dataset.skill!)?.name ?? '', () => this.skillText(b.dataset.skill!) + ' · right-click to change');
       b.onclick = () => this.onSkill(b.dataset.skill!);
       b.oncontextmenu = (ev) => { ev.preventDefault(); this.pickSkill(i, b); };
@@ -195,6 +195,8 @@ export class Hud {
       b.dataset.skill = id;
       b.querySelector('.painted-icon')?.replaceWith(skillIcon(id));
       b.querySelector('.name')!.textContent = s?.name ?? id;
+      // SP cost in the corner, like the item counts on keys 5-7.
+      b.querySelector('.sp')!.textContent = s ? String(s.resource_cost) : '';
       b.title = s ? s.name + ' · ' + s.resource_cost + ' SP · ' + s.cooldown_ms / 1000 + 's' : id;
       b.setAttribute('aria-label', b.title);
     });
