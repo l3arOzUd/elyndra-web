@@ -1,0 +1,16 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "right-neutral-v2.png",
+    "death-right-slump.png"
+  ],
+  "status": "shutdown-pose-study-not-registered",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Camera turns three-quarter instead of exact profile.",
+    "Barrel scale grows relative to neutral.",
+    "Arms still appear actively braced.",
+    "Knee buckle transition and inert settled end pose required."
+  ]
+}
