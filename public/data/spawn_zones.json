@@ -2579,12 +2579,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 88,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Upland grass: fleeing gliders and the first assisting bruisers."
+    "design_note": "Lunari: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "glider_rise_craglet",
@@ -3251,7 +3251,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 88,
+    "target_alive": 145,
     "respawn_sec": [
      6,
      14
@@ -5492,7 +5492,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 88,
+    "target_alive": 145,
     "respawn_sec": [
      6,
      14
@@ -6212,12 +6212,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 88,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Ranged reeds among passive grafted twigs: pull the spitters into the herd."
+    "design_note": "Graftling: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "rotting_rows_rotroot",
@@ -9872,7 +9872,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 88,
+    "target_alive": 145,
     "respawn_sec": [
      6,
      14
@@ -10592,12 +10592,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 88,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Where the grafted woods run into sand: vine constructs and basking coils."
+    "design_note": "Sandcoil: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "press_terraces_pruning_tender",
@@ -14759,7 +14759,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 70,
+    "target_alive": 110,
     "respawn_sec": [
      6,
      14
@@ -15299,12 +15299,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 70,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Spores drift down to a tidal pool: aggressive bloats and passive hoppers."
+    "design_note": "Tidehopper: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "basilisk_flats_glasstail_basilisk",
@@ -19421,7 +19421,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 47,
+    "target_alive": 55,
     "respawn_sec": [
      6,
      14
@@ -19973,12 +19973,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 47,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "A cold seep in the desert: pump constructs, passive mites and dust revenants."
+    "design_note": "Frost Mite: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "frost_seep_dust_revenant",
@@ -20525,7 +20525,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 47,
+    "target_alive": 55,
     "respawn_sec": [
      6,
      14
@@ -23393,12 +23393,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 70,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Fleeing skates on the pearl beds, gear walkers at the frozen pumps."
+    "design_note": "Pearl Skate: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "pearl_beds_icegear",
@@ -23957,7 +23957,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 70,
+    "target_alive": 110,
     "respawn_sec": [
      6,
      14
@@ -28856,7 +28856,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 70,
+    "target_alive": 110,
     "respawn_sec": [
      6,
      14
@@ -29330,12 +29330,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 70,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Aggressive imps among passive behemoths."
+    "design_note": "Hoarfrost Behemoth: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "sentry_vents_cryo_sentry",
@@ -31622,7 +31622,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 70,
+    "target_alive": 110,
     "respawn_sec": [
      6,
      14
@@ -32198,12 +32198,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 70,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Ranged spitters at the vents, passive wisps drifting through."
+    "design_note": "Null Wisp: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "knight_s_road_furnace_knight",
@@ -38033,7 +38033,7 @@
       "weight": 1
      }
     ],
-    "target_alive": 88,
+    "target_alive": 145,
     "respawn_sec": [
      6,
      14
@@ -38537,12 +38537,12 @@
       "weight": 1
      }
     ],
-    "target_alive": 88,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Stokers and fleeing sparkwings; Kiln Prime walks the heights."
+    "design_note": "Sparkwing: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
    },
    {
     "id": "kiln_prime_arena",
@@ -38578,7 +38578,7 @@
   },
   "pockets": [
    {
-    "id": "sentinel_colonnade",
+    "id": "sentinel_colonnade_array_sentinel",
     "name": "Sentinel Colonnade",
     "rects": [
      [
@@ -39260,12 +39260,702 @@
       "weight": 1
      }
     ],
-    "target_alive": 233,
+    "target_alive": 30,
     "respawn_sec": [
      6,
      14
     ],
-    "design_note": "Assisting sentinels between the columns."
+    "design_note": "Array Sentinel: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+   },
+   {
+    "id": "sentinel_colonnade_glyph_swarm",
+    "name": "Sentinel Colonnade",
+    "rects": [
+     [
+      9,
+      9,
+      8,
+      8
+     ],
+     [
+      17,
+      9,
+      8,
+      8
+     ],
+     [
+      25,
+      9,
+      8,
+      8
+     ],
+     [
+      33,
+      9,
+      8,
+      8
+     ],
+     [
+      41,
+      9,
+      8,
+      8
+     ],
+     [
+      49,
+      9,
+      8,
+      8
+     ],
+     [
+      57,
+      9,
+      8,
+      8
+     ],
+     [
+      9,
+      17,
+      8,
+      8
+     ],
+     [
+      17,
+      17,
+      8,
+      8
+     ],
+     [
+      25,
+      17,
+      8,
+      8
+     ],
+     [
+      33,
+      17,
+      8,
+      8
+     ],
+     [
+      41,
+      17,
+      8,
+      8
+     ],
+     [
+      49,
+      17,
+      8,
+      8
+     ],
+     [
+      57,
+      17,
+      8,
+      8
+     ],
+     [
+      9,
+      25,
+      8,
+      8
+     ],
+     [
+      17,
+      25,
+      8,
+      8
+     ],
+     [
+      25,
+      25,
+      8,
+      8
+     ],
+     [
+      33,
+      25,
+      8,
+      8
+     ],
+     [
+      41,
+      25,
+      8,
+      8
+     ],
+     [
+      49,
+      25,
+      8,
+      8
+     ],
+     [
+      57,
+      25,
+      8,
+      8
+     ],
+     [
+      9,
+      33,
+      8,
+      8
+     ],
+     [
+      17,
+      33,
+      8,
+      8
+     ],
+     [
+      25,
+      33,
+      8,
+      8
+     ],
+     [
+      33,
+      33,
+      8,
+      8
+     ],
+     [
+      41,
+      33,
+      8,
+      8
+     ],
+     [
+      49,
+      33,
+      8,
+      8
+     ],
+     [
+      57,
+      33,
+      8,
+      8
+     ],
+     [
+      65,
+      33,
+      8,
+      8
+     ],
+     [
+      9,
+      41,
+      8,
+      8
+     ],
+     [
+      17,
+      41,
+      8,
+      8
+     ],
+     [
+      25,
+      41,
+      8,
+      8
+     ],
+     [
+      33,
+      41,
+      8,
+      8
+     ],
+     [
+      41,
+      41,
+      8,
+      8
+     ],
+     [
+      49,
+      41,
+      8,
+      8
+     ],
+     [
+      57,
+      41,
+      8,
+      8
+     ],
+     [
+      65,
+      41,
+      8,
+      8
+     ],
+     [
+      9,
+      49,
+      8,
+      8
+     ],
+     [
+      17,
+      49,
+      8,
+      8
+     ],
+     [
+      25,
+      49,
+      8,
+      8
+     ],
+     [
+      33,
+      49,
+      8,
+      8
+     ],
+     [
+      41,
+      49,
+      8,
+      8
+     ],
+     [
+      49,
+      49,
+      8,
+      8
+     ],
+     [
+      57,
+      49,
+      8,
+      8
+     ],
+     [
+      65,
+      49,
+      8,
+      8
+     ],
+     [
+      73,
+      49,
+      8,
+      8
+     ],
+     [
+      9,
+      57,
+      8,
+      8
+     ],
+     [
+      17,
+      57,
+      8,
+      8
+     ],
+     [
+      25,
+      57,
+      8,
+      8
+     ],
+     [
+      33,
+      57,
+      8,
+      8
+     ],
+     [
+      41,
+      57,
+      8,
+      8
+     ],
+     [
+      49,
+      57,
+      8,
+      8
+     ],
+     [
+      57,
+      57,
+      8,
+      8
+     ],
+     [
+      65,
+      57,
+      8,
+      8
+     ],
+     [
+      73,
+      57,
+      8,
+      8
+     ],
+     [
+      9,
+      65,
+      8,
+      8
+     ],
+     [
+      17,
+      65,
+      8,
+      8
+     ],
+     [
+      25,
+      65,
+      8,
+      8
+     ],
+     [
+      33,
+      65,
+      8,
+      8
+     ],
+     [
+      41,
+      65,
+      8,
+      8
+     ],
+     [
+      49,
+      65,
+      8,
+      8
+     ],
+     [
+      57,
+      65,
+      8,
+      8
+     ],
+     [
+      65,
+      65,
+      8,
+      8
+     ],
+     [
+      73,
+      65,
+      8,
+      8
+     ],
+     [
+      9,
+      73,
+      8,
+      8
+     ],
+     [
+      17,
+      73,
+      8,
+      8
+     ],
+     [
+      25,
+      73,
+      8,
+      8
+     ],
+     [
+      33,
+      73,
+      8,
+      8
+     ],
+     [
+      41,
+      73,
+      8,
+      8
+     ],
+     [
+      49,
+      73,
+      8,
+      8
+     ],
+     [
+      57,
+      73,
+      8,
+      8
+     ],
+     [
+      65,
+      73,
+      8,
+      8
+     ],
+     [
+      73,
+      73,
+      8,
+      8
+     ],
+     [
+      81,
+      73,
+      8,
+      8
+     ],
+     [
+      33,
+      81,
+      8,
+      8
+     ],
+     [
+      41,
+      81,
+      8,
+      8
+     ],
+     [
+      49,
+      81,
+      8,
+      8
+     ],
+     [
+      57,
+      81,
+      8,
+      8
+     ],
+     [
+      65,
+      81,
+      8,
+      8
+     ],
+     [
+      73,
+      81,
+      8,
+      8
+     ],
+     [
+      33,
+      89,
+      8,
+      8
+     ],
+     [
+      41,
+      89,
+      8,
+      8
+     ],
+     [
+      49,
+      89,
+      8,
+      8
+     ],
+     [
+      57,
+      89,
+      8,
+      8
+     ],
+     [
+      65,
+      89,
+      8,
+      8
+     ],
+     [
+      73,
+      89,
+      8,
+      8
+     ],
+     [
+      33,
+      97,
+      8,
+      8
+     ],
+     [
+      41,
+      97,
+      8,
+      8
+     ],
+     [
+      49,
+      97,
+      8,
+      8
+     ],
+     [
+      57,
+      97,
+      8,
+      8
+     ],
+     [
+      65,
+      97,
+      8,
+      8
+     ],
+     [
+      73,
+      97,
+      8,
+      8
+     ],
+     [
+      33,
+      105,
+      8,
+      8
+     ],
+     [
+      41,
+      105,
+      8,
+      8
+     ],
+     [
+      49,
+      105,
+      8,
+      8
+     ],
+     [
+      57,
+      105,
+      8,
+      8
+     ],
+     [
+      65,
+      105,
+      8,
+      8
+     ],
+     [
+      9,
+      113,
+      8,
+      8
+     ],
+     [
+      17,
+      113,
+      8,
+      8
+     ],
+     [
+      25,
+      113,
+      8,
+      8
+     ],
+     [
+      33,
+      113,
+      8,
+      8
+     ],
+     [
+      41,
+      113,
+      8,
+      8
+     ],
+     [
+      49,
+      113,
+      8,
+      8
+     ],
+     [
+      9,
+      121,
+      8,
+      8
+     ],
+     [
+      17,
+      121,
+      8,
+      8
+     ],
+     [
+      25,
+      121,
+      8,
+      8
+     ],
+     [
+      33,
+      121,
+      8,
+      8
+     ],
+     [
+      41,
+      121,
+      8,
+      8
+     ],
+     [
+      9,
+      129,
+      8,
+      8
+     ],
+     [
+      17,
+      129,
+      8,
+      8
+     ],
+     [
+      25,
+      129,
+      8,
+      8
+     ],
+     [
+      9,
+      137,
+      8,
+      8
+     ]
+    ],
+    "species": [
+     {
+      "monster_id": "mob_0096",
+      "weight": 1
+     }
+    ],
+    "target_alive": 203,
+    "respawn_sec": [
+     6,
+     14
+    ],
+    "design_note": "Glyph swarms drift between the columns, round a few sentinels still standing guard."
    },
    {
     "id": "glyph_plaza",

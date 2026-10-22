@@ -11,6 +11,7 @@
 
 import { decodeWalk, type DialogueDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
 import { bakeLayout, shapeContains } from "./layout";
+import { BOUNTY } from "./model";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
 
 export const HUB = "lum_town_01";
@@ -27,71 +28,73 @@ interface FieldSpec {
   dungeon?: { id: string; minions: string[] };
   /** A boss that lives in the open, in the highest zone. */
   fieldBoss?: string;
+  /** The field's one passive species (model.ts BOUNTY); it must share its zone with a horde. */
+  bounty: string;
 }
 
 // Zones run from the camp (west edge) round the field: lowest levels nearest the camp.
 export const FIELDS: FieldSpec[] = [
-  { id: "lum_fld_01", region: "lum", name: "Dawnmeadow", levels: [1, 10], zones: [
+  { id: "lum_fld_01", bounty: "Lunari", region: "lum", name: "Dawnmeadow", levels: [1, 10], zones: [
     { name: "Mosskin Meadow", species: ["Mosskin"], note: "Open grass by the camp: passive herds to learn movement and the first pull." },
     { name: "Sporeling Hollow", species: ["Sporeling", "Ambermite"], note: "Damp hollow where assisting spores and aggressive mites meet: the first mixed pack." },
     { name: "Glider Rise", species: ["Lunari", "Craglet"], note: "Upland grass: fleeing gliders and the first assisting bruisers." },
     { name: "Bramble Mill", species: ["Thornback", "Dustwing"], note: "Brambles round an old mill: boar herds and the dust-moth horde, the field's hardest pulls." },
   ] },
-  { id: "lum_fld_02", region: "lum", name: "Moonbrook Vale", levels: [11, 20], zones: [
+  { id: "lum_fld_02", bounty: "Graftling", region: "lum", name: "Moonbrook Vale", levels: [11, 20], zones: [
     { name: "Brookbed", species: ["Brookfin"], note: "Passive fish on the shallow banks next to camp: an easy first horde." },
     { name: "Reed Marsh", species: ["Reedstalker", "Graftling"], note: "Ranged reeds among passive grafted twigs: pull the spitters into the herd." },
     { name: "Rotting Rows", species: ["Rotroot", "Mossback Newt"], note: "Rot creeps into the orchard rows; newts call their whole bank." },
     { name: "Sap Groves", species: ["Sapdrone"], note: "Tapped trunks above Hollowroot: aggressive drones dive at anyone near the taps." },
   ], dungeon: { id: "lum_dun_01", minions: ["Barkwarden"] } },
-  { id: "ver_fld_01", region: "ver", name: "Graftwood Wilds", levels: [21, 30], zones: [
+  { id: "ver_fld_01", bounty: "Sandcoil", region: "ver", name: "Graftwood Wilds", levels: [21, 30], zones: [
     { name: "Jadewing Glade", species: ["Jadewing Moth", "Barkhound"], note: "Ranged moths over assisting hound packs." },
     { name: "Trellis Dunes", species: ["Vinecrawler", "Sandcoil"], note: "Where the grafted woods run into sand: vine constructs and basking coils." },
     { name: "Press Terraces", species: ["Pruning Tender", "Ochre Jackal"], note: "Gardener constructs mend each other; jackal packs hunt the terraces." },
     { name: "Glass Burrows", species: ["Thistlehare", "Glass Scarab"], note: "Fleeing hares and aggressive glass scarabs on fused sand." },
   ] },
-  { id: "ver_fld_02", region: "ver", name: "Elderroot Expanse", levels: [31, 40], zones: [
+  { id: "ver_fld_02", bounty: "Tidehopper", region: "ver", name: "Elderroot Expanse", levels: [31, 40], zones: [
     { name: "Root Ridge", species: ["Root Sentinel", "Brass Kite"], note: "Slow sentinels on the ridges, brass kites shooting from above." },
     { name: "Antler Glade", species: ["Dune Sentry", "Antlered Engine"], note: "Sandstone sentries under the elder trees; a few Antlered Engines graze the glade." },
     { name: "Spore Drift", species: ["Sporebloat", "Tidehopper"], note: "Spores drift down to a tidal pool: aggressive bloats and passive hoppers." },
     { name: "Basilisk Flats", species: ["Glasstail Basilisk", "Gullwing Skimmer"], note: "Assisting basilisks on the flats, skimmers diving from the cliffs." },
     { name: "Coral Steps", species: ["Gnomon Acolyte", "Coral Claw"], note: "Acolytes heal the crab packs on the old coral steps; the Heartwood Engine's vents are close." },
   ], dungeon: { id: "ver_dun_01", minions: ["Spore Matron", "Heartwood Pistonguard"] } },
-  { id: "sol_fld_01", region: "sol", name: "Saffron Wastes", levels: [41, 50], zones: [
+  { id: "sol_fld_01", bounty: "Frost Mite", region: "sol", name: "Saffron Wastes", levels: [41, 50], zones: [
     { name: "Warden Causeway", species: ["Sun Warden", "Polyp Spitter"], note: "Bronze wardens on the causeway, polyps spitting from the old canal." },
     { name: "Canal Shallows", species: ["Canal Strider", "Kelp Tender"], note: "Fleeing striders and kelp tenders that knit the packs back together." },
     { name: "Frost Seep", species: ["Brine Automaton", "Frost Mite", "Dust Revenant"], note: "A cold seep in the desert: pump constructs, passive mites and dust revenants." },
     { name: "Colossus Sands", species: ["Rimehare", "Sand-buried Colossus"], note: "Hares herd round three half-buried colossi." },
     { name: "Prism Reach", species: ["Hullborer", "Prism Wisp"], note: "Borers in the old hulls, prism wisps beaming from the mirrors near the Vault." },
   ] },
-  { id: "tha_fld_01", region: "tha", name: "Pearl Coast", levels: [51, 60], zones: [
+  { id: "tha_fld_01", bounty: "Pearl Skate", region: "tha", name: "Pearl Coast", levels: [51, 60], zones: [
     { name: "Relay Strand", species: ["Relay Guardian"], note: "Assisting guardians on the buoy cables by the camp." },
     { name: "Ram Terraces", species: ["Glassback Ram"], note: "Glass-backed ram flocks on the terraces." },
     { name: "Pearl Beds", species: ["Pearl Skate", "Icegear"], note: "Fleeing skates on the pearl beds, gear walkers at the frozen pumps." },
     { name: "Turtle Coils", species: ["Thunderhull Turtle", "Frostcoil Serpent"], note: "Turtle herds and the serpent horde in the coil trenches." },
     { name: "Squall Point", species: ["Squall Ray", "Glacier Juggernaut"], note: "Ranged rays on the point; a Glacier Juggernaut guards the way to the Heliostat Vault." },
   ], dungeon: { id: "sol_dun_01", minions: ["Vault Mirrorguard", "Prism Lens-drone"] } },
-  { id: "cry_fld_01", region: "cry", name: "Frostfire Divide", levels: [61, 70], zones: [
+  { id: "cry_fld_01", bounty: "Hoarfrost Behemoth", region: "cry", name: "Frostfire Divide", levels: [61, 70], zones: [
     { name: "Ash Flats", species: ["Ashcrawler", "Pressure Drone"], note: "Passive ash grazers and drone swarms where ice meets the first lava." },
     { name: "Drowned Archive", species: ["Archive Keeper", "Gloom Medusa"], note: "Keepers in a flooded archive wing; medusas heal them." },
     { name: "Slag Mirrors", species: ["Slagback Toad", "Mirrorshade"], note: "Toads in the slag pools under mirror ice; mirrorshades mend them." },
     { name: "Behemoth Ice", species: ["Cinder Imp", "Hoarfrost Behemoth"], note: "Aggressive imps among passive behemoths." },
     { name: "Sentry Vents", species: ["Cryo Sentry", "Smelt Hound"], note: "Sentries and hound packs at the vents; the Drowned Signalmind surfaces here." },
   ], fieldBoss: "Drowned Signalmind" },
-  { id: "emb_fld_01", region: "emb", name: "Cinder Expanse", levels: [71, 80], zones: [
+  { id: "emb_fld_01", bounty: "Null Wisp", region: "emb", name: "Cinder Expanse", levels: [71, 80], zones: [
     { name: "Tender Yards", species: ["Crucible Tender"], note: "Gardener constructs scavenging the yards by the camp." },
     { name: "Skink Flow", species: ["Vent Skink"], note: "Skinks along the lava channels." },
     { name: "Spitter Vents", species: ["Magma Spitter", "Null Wisp"], note: "Ranged spitters at the vents, passive wisps drifting through." },
     { name: "Knight's Road", species: ["Furnace Knight", "Gutter Lurk"], note: "Knight patrols and lurk packs on the old road." },
     { name: "Rivet Moraine", species: ["Rivet Scrapling", "Shade Carrier", "Nullbloom"], note: "Scraplings, haulers and blooms on the rivet heaps by the Cryocore Archive." },
   ], dungeon: { id: "cry_dun_01", minions: ["Archive Specter", "Cryo Lancer"] } },
-  { id: "noc_fld_01", region: "noc", name: "Veil Rift", levels: [81, 90], zones: [
+  { id: "noc_fld_01", bounty: "Sparkwing", region: "noc", name: "Veil Rift", levels: [81, 90], zones: [
     { name: "Brute Pens", species: ["Slagforged Brute"], note: "Assisting brutes in the pens by the camp." },
     { name: "Coupler Yards", species: ["Coupler Mite", "Lattice Drone"], note: "Mite crews and ranged drones in the rail yards." },
     { name: "Wraith Pour", species: ["Pour Wraith", "Riftling"], note: "Wraiths and the riftling horde along the tear." },
     { name: "Stoker Heights", species: ["Zero Stoker", "Sparkwing"], note: "Stokers and fleeing sparkwings; Kiln Prime walks the heights." },
   ], fieldBoss: "Kiln Prime" },
-  { id: "noc_fld_02", region: "noc", name: "Meridian Gate", levels: [91, 99], zones: [
-    { name: "Sentinel Colonnade", species: ["Array Sentinel"], note: "Assisting sentinels between the columns." },
+  { id: "noc_fld_02", bounty: "Array Sentinel", region: "noc", name: "Meridian Gate", levels: [91, 99], zones: [
+    { name: "Sentinel Colonnade", species: ["Array Sentinel", "Glyph Swarm"], note: "Glyph swarms drift between the columns, round a few sentinels still standing guard." },
     { name: "Glyph Plaza", species: ["Glyph Swarm", "Meridian Executor"], note: "The glyph swarm horde; a court of Executors stands at the plaza's heart." },
     { name: "Lattice Verge", species: ["Glyph Swarm"], note: "A second glyph farm by the sealed descent to the Lattice Heart." },
   ], dungeon: { id: "noc_dun_01", minions: ["Lattice Weaver"] } },
@@ -206,6 +209,9 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
   const t = themeFrom(regions, f);
   const n = f.zones.length;
   if (n < 3 || n > 6) throw new Error(`${f.id}: ${n} zones (3-6 supported)`);
+  const bountyZone = f.zones.filter((z) => z.species.includes(f.bounty));
+  if (bountyZone.length !== 1 || bountyZone[0].species.filter((s) => s !== f.bounty && look.byName.get(s)?.archetype !== "elite").length === 0)
+    throw new Error(`${f.id}: bounty ${f.bounty} must live in exactly one zone, beside a horde species`);
   const angles = f.zones.map((_, i) => zoneAngle(i, n));
   const centres = zoneCentres(f);
   const roadKind = t.roads[0]?.kind ?? "dirt";
@@ -242,11 +248,16 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
     const [cx, cy] = centres[zi];
     const regular = z.species.filter((s) => mid(s).archetype !== "elite");
     const elites = z.species.filter((s) => mid(s).archetype === "elite");
+    // The bounty keeps a small count; the zone's hordes share the rest of its quota.
+    const hasBounty = regular.includes(f.bounty);
+    const hordes = regular.length - (hasBounty ? 1 : 0);
+    const hordeAlive = Math.round((TARGET_TOTAL / n - (hasBounty ? BOUNTY.alive : 0)) / hordes);
     for (const sp of regular) {
       pockets.push({
         id: regular.length > 1 ? `${slug(z.name)}_${slug(sp)}` : slug(z.name), name: z.name, rects: zoneRects[zi],
         species: [{ monster_id: mid(sp).id, weight: 1 }],
-        target_alive: Math.round(TARGET_TOTAL / n / regular.length), respawn_sec: [6, 14], design_note: z.note,
+        target_alive: sp === f.bounty ? BOUNTY.alive : hordeAlive, respawn_sec: [6, 14],
+        design_note: sp === f.bounty ? `${sp}: the field's bounty, passive, ${BOUNTY.hp}x HP and ${BOUNTY.exp}x EXP, only ${BOUNTY.alive} on the map.` : z.note,
       });
     }
     for (const e of elites) {
@@ -498,9 +509,13 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       ...r.dialogues.filter((d) => kept.has(d.npc_id) && !generated.has(d.id)).map((d) => (DIALOGUE_LINES[d.id] ? { ...d, lines: DIALOGUE_LINES[d.id] } : d)),
       ...fieldsHere.flatMap((f) => fieldDialogues(f, look, FIELDS[FIELDS.indexOf(f) + 1])),
     ];
+    // Each field's bounty is passive; every other monster attacks on sight.
+    const bounties = new Set(FIELDS.map((f) => f.bounty));
+    const monsters = r.monsters.map((m) => bounties.has(m.name) ? { ...m, behavior: "passive" as const, bounty: true } : { ...m, behavior: "aggressive" as const });
     return {
       ...r,
       region: { ...r.region, town_map_id: HUB, dungeon_map_id: dungeonOf },
+      monsters,
       maps,
       links: r.region.id === "lum" ? links : [],
       quests,

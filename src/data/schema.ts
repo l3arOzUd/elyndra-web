@@ -150,6 +150,8 @@ export interface MonsterDef {
   art_brief: string;
   /** Key into public/sprites/index.json monsters. */
   sprite: string;
+  /** The field's passive bounty species: more HP and EXP, few on the map. */
+  bounty?: boolean;
 }
 
 export type ItemCategory = "material" | "rare_material" | "consumable" | "equipment" | "charm" | "totem" | "quest";

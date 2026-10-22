@@ -13,7 +13,7 @@ import type {
 import { SCHEMA_VERSION } from "../src/data/schema";
 import { bakeLayout } from "./layout";
 import {
-  AGGRO_RADIUS, BOSS_DROP, DROP, ELITE_DROP_MULT, LEASH_RADIUS, materialPrice, monsterStats, playerAt, rarePrice, regionPriceMult, tierLevelFor, uncommonPrice,
+  AGGRO_RADIUS, BOSS_DROP, DROP, ELITE_DROP_MULT, LEASH_RADIUS, materialPrice, monsterStats, PLAYER_MS_PER_CELL, playerAt, rarePrice, regionPriceMult, tierLevelFor, uncommonPrice,
 } from "./model";
 import { AWAKENING_SIGIL_BP, UNIQUE_DROPS, gearItems, systems } from "./systems";
 import { REGIONS } from "./regions/index";
@@ -141,11 +141,11 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
       if (d.type !== "town") zones.push({ map_id: d.id, instance_rules: d.horde ?? { min_alive: 0, max_alive: 0 }, pockets: d.pockets });
     }
     for (const m of r.monsters) {
-      const s = monsterStats(m.level, m.archetype, m.mods);
+      const s = monsterStats(m.level, m.archetype, m.mods, m.bounty);
       monsters.push({
         id: m.id, name: m.name, region_id: r.region.id, level: m.level, archetype: m.archetype, family: m.family, element: m.element,
         behavior: m.behavior, ...s, aggro_radius: AGGRO_RADIUS[m.behavior], leash_radius: LEASH_RADIUS,
-        drops: dropsFor(m), ecology: m.ecology, art_brief: m.art_brief, sprite: m.sprite ?? m.id,
+        drops: dropsFor(m), ecology: m.ecology, art_brief: m.art_brief, sprite: m.sprite ?? m.id, ...(m.bounty ? { bounty: true } : {}),
       });
       // Size on screen follows the archetype for painted sprites and placeholders alike.
       const scale = m.archetype === "boss" ? 2.4 : m.archetype === "elite" ? 1.6 : m.archetype === "bruiser" || m.archetype === "construct" ? 1.25 : 1;
@@ -199,7 +199,7 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
 
   const constants: Constants = {
     schema_version: SCHEMA_VERSION, drop_rate_denominator: 10000, server_tick_ms: 50, snapshot_ms: 100, coordinates: "grid_cells",
-    player_base_ms_per_cell: 150, pickup_radius_cells: 3, npc_interact_radius_cells: 4, loot_expire_sec: 90,
+    player_base_ms_per_cell: PLAYER_MS_PER_CELL, pickup_radius_cells: 3, npc_interact_radius_cells: 4, loot_expire_sec: 90,
     respawn_town_by_region: Object.fromEntries(regions.map((r) => [r.region.id, r.region.town_map_id])),
   };
   const write = (name: string, value: unknown) => writeFileSync(join(OUT, `${name}.json`), JSON.stringify(value, null, 1));

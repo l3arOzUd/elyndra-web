@@ -18,6 +18,8 @@ export interface MonsterDesign {
   /** Departures from the archetype, with the reason in `why`. */
   mods?: StatMods;
   why?: string;
+  /** Set by the world build: this field's passive bounty species (model.ts BOUNTY). */
+  bounty?: boolean;
   /** Item ids: [common, uncommon, rare?]; rates come from the model. */
   drops: { common: string; uncommon: string; rare?: string; extra?: { item_id: string; rate_bp: number; qty?: [number, number] }[] };
   ecology: string;

@@ -14,6 +14,7 @@ import {
   DATA_FILES, SCHEMA_VERSION, decodeWalk,
   type ContentBundle, type MapLayout, type Rect,
 } from "../src/data/schema";
+import { BOUNTY } from "../content/model";
 
 type Severity = "critical" | "error" | "warning";
 interface Finding { severity: Severity; rule: string; where: string; message: string }
@@ -509,7 +510,8 @@ function checkBalance(b: ContentBundle) {
     const dmg = (m.attack * (1 - armourCut(p.ref_armour, m.attack))) / p.max_hp;
     const bnd = band[m.archetype];
     if (!bnd) { report("error", "balance.archetype", m.id, `unknown archetype ${m.archetype}`); continue; }
-    if (hits < bnd.hits[0] || hits > bnd.hits[1]) report("error", "balance.ttk", m.id, `${m.name} (${m.archetype}) takes ${hits.toFixed(1)} basic hits at Lv${m.level}; band ${bnd.hits.join("-")}`);
+    const hitBand = m.bounty ? bnd.hits.map((h) => h * BOUNTY.hp) : bnd.hits;
+    if (hits < hitBand[0] || hits > hitBand[1]) report("error", "balance.ttk", m.id, `${m.name} (${m.archetype}) takes ${hits.toFixed(1)} basic hits at Lv${m.level}; band ${hitBand.join("-")}`);
     if (dmg < bnd.dmg[0] || dmg > bnd.dmg[1]) report("error", "balance.damage", m.id, `${m.name} hits for ${(dmg * 100).toFixed(1)}% of a Lv${m.level} player's HP; band ${bnd.dmg.map((x) => x * 100).join("-")}%`);
     if (armourCut(m.defense, p.ref_attack) >= 0.85) report("critical", "balance.immune", m.id, `${m.name} Armour ${m.defense} stops 85%+ of a reference hit (${p.ref_attack})`);
     if (m.attack_ms < 600 || m.attack_ms > 4000) report("error", "balance.attack_speed", m.id, `attack every ${m.attack_ms}ms`);
@@ -555,7 +557,7 @@ function checkBalance(b: ContentBundle) {
   if (b.monsters.length > 10 && speeds.size === 1) report("error", "anomaly.flat_speed", "monsters", "every monster moves at the same speed");
   // Monsters within an archetype and region should get tougher with level.
   for (const r of b.regions) {
-    const list = b.monsters.filter((m) => m.region_id === r.id && m.archetype === "swarm").sort((a, c) => a.level - c.level);
+    const list = b.monsters.filter((m) => m.region_id === r.id && m.archetype === "swarm" && !m.bounty).sort((a, c) => a.level - c.level);
     for (let i = 1; i < list.length; i++) if (list[i].level > list[i - 1].level && list[i].hp < list[i - 1].hp * 0.9)
       report("warning", "balance.progression", list[i].id, `${list[i].name} Lv${list[i].level} has less HP than ${list[i - 1].name} Lv${list[i - 1].level}`);
   }
