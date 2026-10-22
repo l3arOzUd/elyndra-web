@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "walk-right-far-lift.png",
+  "prompt": "Localized edit to this right-facing robot walking sprite. Keep near supporting leg and planted boot EXACTLY where they are, same torso tank valves gauge and framing. Move ONLY the far leg currently trailing left: rotate at hip so far knee passes forward toward image RIGHT behind planted near shin; bend knee and show far boot emerging to RIGHT of planted shin, sole 35 pixels above planted sole, partially occluded. Remove the old trailing-left leg position. Exactly TWO legs total, unchanged segment lengths and boots. Also swing near arm slightly FORWARD toward image RIGHT as counterbalance, keeping two-jaw pincer and piston construction. No stretching, no extra limbs, no mirror. Same square transparent canvas, no shadows, text or effects."
+}
