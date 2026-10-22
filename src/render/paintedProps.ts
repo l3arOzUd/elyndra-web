@@ -376,12 +376,16 @@ function lookOf(l: MapLayout): Look {
   return "green";
 }
 
-/** Ground detail by look: kinds with weights, and one detail per this many cells. */
-const DECOR: Record<Look, { kinds: [string, number][]; every: number }> = {
-  green: { kinds: [["tuft", 0.55], ["flowers", 0.27], ["pebbles", 0.18]], every: 4 },
-  dry: { kinds: [["dry_tuft", 0.55], ["pebbles", 0.45]], every: 7 },
-  snow: { kinds: [["snow_tuft", 0.6], ["pebbles", 0.4]], every: 7 },
-  dark: { kinds: [["pebbles", 0.7], ["dry_tuft", 0.3]], every: 6 },
+/** Ground detail by ground: kinds with weights, and one detail per this many cells (none on paving). */
+const DECOR: Partial<Record<MapLayout["ground"], { kinds: [string, number][]; every: number }>> = {
+  grass: { kinds: [["tuft", 0.55], ["flowers", 0.27], ["pebbles", 0.18]], every: 4 },
+  moss: { kinds: [["tuft", 0.6], ["flowers", 0.2], ["pebbles", 0.2]], every: 4 },
+  sand: { kinds: [["dry_tuft", 0.55], ["pebbles", 0.45]], every: 8 },
+  shore: { kinds: [["dry_tuft", 0.5], ["pebbles", 0.5]], every: 8 },
+  snow: { kinds: [["snow_tuft", 0.6], ["pebbles", 0.4]], every: 8 },
+  ash: { kinds: [["pebbles", 0.7], ["dry_tuft", 0.3]], every: 11 },
+  metal: { kinds: [["pebbles", 1]], every: 16 },
+  cave: { kinds: [["pebbles", 1]], every: 12 },
 };
 
 /**
@@ -390,7 +394,8 @@ const DECOR: Record<Look, { kinds: [string, number][]; every: number }> = {
  * road(x, y) come from the walk grid and a road raster.
  */
 export function decorProps(l: MapLayout, walkable: (x: number, y: number) => boolean, road: (x: number, y: number) => boolean): Prop[] {
-  const d = DECOR[lookOf(l)];
+  const d = DECOR[l.ground];
+  if (!d) return [];
   const rand = rng([...l.id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7));
   const out: Prop[] = [];
   const n = Math.round((l.width * l.height) / d.every);
@@ -414,7 +419,8 @@ export const HEAPED = new Set<Blocker["kind"]>(["rock", "cliff", "ruin_wall", "m
 function heapOf(b: Blocker, contains: (x: number, y: number) => boolean, bounds: [number, number, number, number]): Prop[] {
   const cliff = b.kind === "cliff";
   const piece = b.kind === "ruin_wall" ? "ruin_block" : b.kind === "machine" ? "scrap" : null;
-  const step = cliff ? 1.5 : 1.7;
+  // Built heaps (ruins, scrap) are sparser and half rubble, so they read as fallen, not stacked.
+  const step = cliff ? 1.5 : piece ? 2.1 : 1.7;
   const out: Prop[] = [];
   const [bx, by, bw, bh] = bounds;
   let i = 0;
@@ -424,7 +430,9 @@ function heapOf(b: Blocker, contains: (x: number, y: number) => boolean, bounds:
     const j = h - Math.floor(h);
     const px = x + (j - 0.5) * step * 0.7, py = y + ((h * 7) % 1 - 0.5) * step * 0.7;
     if (!contains(Math.floor(px), Math.floor(py))) continue;
-    out.push({ kind: (piece ?? (j < 0.3 && !cliff ? "rock" : "boulder")) as PropKind, x: px - 0.5, y: py - 0.5, block: 0, scale: (cliff ? 1.1 : 0.75) + j * (cliff ? 0.9 : 0.6), rot: i });
+    if (piece && ((h * 13) % 1) < 0.35) continue;
+    const k = piece && ((h * 3) % 1) < 0.5 ? (j < 0.5 ? "rock" : "boulder") : piece;
+    out.push({ kind: (k ?? (j < 0.3 && !cliff ? "rock" : "boulder")) as PropKind, x: px - 0.5, y: py - 0.5, block: 0, scale: (cliff ? 1.1 : 0.75) + j * (cliff ? 0.9 : 0.6), rot: i });
   }
   return out;
 }
