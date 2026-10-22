@@ -164,7 +164,7 @@ export const SYSTEMS_RULES: SystemsDef["rules"] = {
   base_crit_mult: 150,
   agi_cdr_k: 150,
   agi_attack_speed: 0.4,
-  ultimate_cooldown_ms: 30000,
+  ultimate_cooldown_ms: 10500,
   dex_cast_k: 150,
   dex_evasion: 2,
   int_sp: 2,
