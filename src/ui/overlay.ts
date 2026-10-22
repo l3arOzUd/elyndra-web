@@ -174,7 +174,32 @@ export class Overlay {
 }
 
 export class Label {
+  private castEl: HTMLElement | null = null;
+  private castTimer = 0;
+
   constructor(readonly el: HTMLElement, private readonly fill: HTMLElement | null) {}
+
+  /** A cast bar over the name (RO style): fills over `ms`, flares as the skill goes off, then fades. */
+  cast(skill: string, ms: number) {
+    this.castEl?.remove();
+    clearTimeout(this.castTimer);
+    const el = document.createElement("div");
+    el.className = "tag-cast";
+    el.style.setProperty("--cast-ms", `${ms}ms`);
+    const name = document.createElement("div");
+    name.className = "tag-cast-name";
+    name.textContent = skill;
+    const bar = document.createElement("div");
+    bar.className = "tag-cast-bar";
+    bar.append(document.createElement("div"));
+    el.append(name, bar);
+    this.el.append(el);
+    this.castEl = el;
+    this.castTimer = window.setTimeout(() => {
+      el.classList.add("tag-cast-done");
+      this.castTimer = window.setTimeout(() => { el.remove(); if (this.castEl === el) this.castEl = null; }, 320);
+    }, ms);
+  }
 
   setHp(hp: number, max: number) {
     if (this.fill) this.fill.style.width = `${Math.max(0, Math.min(1, hp / max)) * 100}%`;

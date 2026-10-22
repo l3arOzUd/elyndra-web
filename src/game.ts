@@ -316,6 +316,7 @@ export class Game {
       e.actor.heading = headingOf(m.aim[0] - e.pos.x, m.aim[1] - e.pos.z);
       e.actor.play(e.kind === "p" ? skillAnimation(s) : "attack", { impactMs: castMs });
       if (s) this.fx.telegraph(s, e.pos.x, e.pos.z, m.aim[0], m.aim[1], castMs);
+      if (s && s.cast_ms > 0 && e.kind === "p") e.label?.cast(s.name, castMs);
       if (s?.shape === "mobility") this.fx.trail(e.pos.x, e.pos.z, m.aim[0], m.aim[1]);
       if (s?.ticks && s.tick_ms) this.fx.field(s, m.aim[0], m.aim[1], s.ticks * s.tick_ms + castMs);
       if (s) { this.lastAim.set(m.cast, [m.aim[0], m.aim[1]]); if (this.lastAim.size > 64) this.lastAim.delete(this.lastAim.keys().next().value!); }
@@ -395,6 +396,7 @@ export class Game {
     // Numbers sit over the sprite as drawn (a pile's members are nudged apart).
     const at = tmpA.copy(t.actor.root.position).setY(0).addScaledVector(UP, t.actor.height + 0.3);
     if (flags & 2) { this.overlay.text("Evade", at, "taken"); return; } // evaded: no damage
+    if (ev.skill) this.fx.impact(tmpB.copy(t.actor.root.position).setY(t.actor.height * 0.5), SKILL_COLORS[ev.skill] ?? 0xffffff);
     // Ailments landing (8 burn, 16 shock, 32 chill): a word above the target.
     if (flags & 56 && dmg > 0 && (flags & 8 ? ev.src !== id : true)) this.overlay.text(flags & 16 ? "Shock" : flags & 32 ? "Chill" : "Burn", at.clone().addScaledVector(UP, 0.4), "info");
     if (flags & 4) { this.overlay.text("◈ " + dmg, at, "taken"); return; } // the Aether Shield took it all

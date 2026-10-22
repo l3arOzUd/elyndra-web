@@ -241,6 +241,17 @@ button.on { background:#426c55; color:#f8efd6; }
 .tag-mob .tag-name,.tag-mob .tag-bar { visibility:hidden; }
 .tag-mob.tag-hover .tag-name,.tag-mob.tag-target .tag-name,.tag-mob.tag-hurt .tag-name,.tag-mob.tag-target .tag-bar,.tag-mob.tag-hurt .tag-bar { visibility:visible; }
 .tag-target .tag-name { color:#ffd36b; }.tag-dead { opacity:0; transition:opacity .4s; }
+/* Cast bar over the name: a gilt frame filling with molten gold, flaring as the skill goes off. */
+.tag-cast { position:absolute; bottom:calc(100% + 3px); left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:2px; pointer-events:none; animation:cast-in .14s ease-out; }
+.tag-cast-name { font:700 12.5px/1 var(--ui-font-title); letter-spacing:.05em; color:#ffe7a8; text-shadow:0 0 3px #000,0 1px 1px #000,0 0 8px #000a; }
+.tag-cast-bar { position:relative; width:74px; height:8px; border-radius:3px; overflow:hidden; background:linear-gradient(#0f0a06,#2b1e12); border:1px solid #140c05; box-shadow:0 0 0 1px #b98a4a,0 0 0 2px #2a1a0c,inset 0 1px 2px #000,0 2px 5px #0009; }
+.tag-cast-bar > div { position:relative; height:100%; width:0; background:linear-gradient(#fff6cf,#f3cf7a 45%,#c48a34); box-shadow:0 0 6px #ffd98a; animation:cast-fill var(--cast-ms) linear forwards; }
+.tag-cast-bar > div::after { content:""; position:absolute; right:-2px; top:-2px; width:5px; height:12px; border-radius:50%; background:radial-gradient(#fff,#fff0 70%); }
+.tag-cast-done { animation:cast-out .32s ease-out forwards; }
+.tag-cast-done .tag-cast-bar > div { width:100%; animation:none; background:#fffbe8; box-shadow:0 0 12px 4px #ffe39a; }
+@keyframes cast-fill { from { width:0; } to { width:100%; } }
+@keyframes cast-in { from { opacity:0; transform:translate(-50%,5px); } }
+@keyframes cast-out { 30% { opacity:1; transform:translateX(-50%) scale(1.12); } to { opacity:0; transform:translateX(-50%) scale(1.04) translateY(-6px); } }
 .float { position:absolute; left:0; top:0; font:800 20px Georgia,serif; color:#fff; text-shadow:0 0 3px #000,0 2px 0 #000; white-space:nowrap; will-change:transform; }
 .float-dmg { color:#fff7e0; }.float-taken { color:#ff7b6e; }.float-miss { color:#b9c7d0; font-size:16px; }.float-exp { font:900 19px "Arial Black",Impact,"Segoe UI",sans-serif; color:#b9f27c; letter-spacing:.5px; -webkit-text-stroke:2px #14200c; paint-order:stroke fill; text-shadow:0 2px 0 #14200c; }.float-crit { color:#ffd34a; font-size:26px; }.float-part,.float-part-crit,.float-total { font:900 30px "Arial Black",Impact,"Segoe UI",sans-serif; color:#fff; letter-spacing:1px; -webkit-text-stroke:2px #15131c; paint-order:stroke fill; text-shadow:0 3px 0 #15131c,0 0 6px rgba(0,0,0,.6); }.float-part-crit { color:#ffe766; font-size:34px; }.float-total { color:#ffd21f; font-size:40px; letter-spacing:2px; -webkit-text-stroke:3px #3b2200; text-shadow:0 4px 0 #3b2200,0 0 14px rgba(255,190,40,.55); }
 
