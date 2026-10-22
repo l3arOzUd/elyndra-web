@@ -1,4 +1,13 @@
 {
- "sprites": {},
- "textures": []
+ "sprites": {
+  "any": {
+   "tree": [
+    "tree_1.png"
+   ]
+  }
+ },
+ "textures": [
+  "grass",
+  "path"
+ ]
 }
