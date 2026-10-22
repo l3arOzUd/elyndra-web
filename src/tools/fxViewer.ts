@@ -54,7 +54,7 @@ function inArea(s: SkillDef, p: THREE.Vector3) {
   switch (s.shape) {
     case "cone": return d <= (s.radius ?? 1) && Math.abs(Math.atan2(Math.sin(Math.atan2(p.z, p.x) - heading), Math.cos(Math.atan2(p.z, p.x) - heading))) <= ((s.angle_deg ?? 90) * Math.PI) / 360;
     case "line": { const along = p.x * Math.cos(heading) + p.z * Math.sin(heading), side = -p.x * Math.sin(heading) + p.z * Math.cos(heading); return along >= 0 && along <= (s.length ?? 8) && Math.abs(side) <= (s.width ?? 2) / 2; }
-    case "ground": case "pull": return p.distanceTo(aim) <= (s.radius ?? 1);
+    case "ground": case "pull": return Math.hypot(p.x - aim.x, p.z - aim.z) <= (s.radius ?? 1);
     case "circle": return d <= (s.radius ?? 1);
     default: return false;
   }
@@ -78,7 +78,11 @@ function castNow(id: string, freezeMs?: number) {
   hero.heading = headingOf(aim.x, aim.z);
   fx.telegraph(s, 0, 0, aim.x, aim.z, castMs);
   if (s.cast_ms > 0) label.cast(s.name, castMs);
-  if (s.shape === "mobility") fx.dash(0, 0, aim.x, aim.z, COLORS[s.id] ?? 0x5adcb4, () => hero.ghost([0.45, 1.35, 1.25]));
+  if (s.shape === "mobility") {
+    // Match Game.onCast: clamp the preview destination to the skill range.
+    const k = Math.min(1, s.range / (Math.hypot(aim.x, aim.z) || 1));
+    fx.dash(0, 0, aim.x * k, aim.z * k, COLORS[s.id] ?? 0x5adcb4, () => hero.ghost([0.45, 1.35, 1.25]));
+  }
   if (s.ticks && s.tick_ms) fx.field(s, aim.x, aim.z, s.ticks * s.tick_ms + castMs);
   const hits = targets.filter((t) => inArea(s, t.position));
   const step = s.hits && s.hits > 1 ? s.hit_ms ?? 180 : 0;
