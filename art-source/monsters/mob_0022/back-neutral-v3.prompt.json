@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-neutral-v2.png",
+  "prompt": "Localized correction to this rear robot. Restore one rectangular copper maintenance hatch centered on the lower back between the two horizontal brass belly bands: rounded brass rim, four corner bolts, hinge on image right. Keep EVERY other part unchanged including rear heel hinges, clamp backs, tank and straps, two valves and body proportions. Then uniformly reframe the whole intact robot smaller to leave ten percent clear space on all canvas edges. Do not remove or add anything else. Same rear view, no face, transparent alpha, no text/shadow/ground."
+}

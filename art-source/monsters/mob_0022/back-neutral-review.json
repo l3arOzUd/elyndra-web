@@ -1,0 +1,19 @@
+{
+  "id": "mob_0022",
+  "selectedDraft": "back-neutral-v3.png",
+  "artApproved": false,
+  "publicBinding": false,
+  "observed": [
+    "Rear heel plates and Achilles hinges now face camera.",
+    "Maintenance hatch restored after v2 omitted it.",
+    "Full valve wheels and wider margins."
+  ],
+  "remaining": [
+    "Clamp construction differs from front; articulation unverified.",
+    "Salt and rivet landmarks vary.",
+    "Cross-view body proportions require registration."
+  ],
+  "unselected": {
+    "back-neutral-v2.png": "Missing maintenance hatch."
+  }
+}
