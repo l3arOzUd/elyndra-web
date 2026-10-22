@@ -1,21 +1,24 @@
 {
   "id": "mob_0022",
-  "source": "death-back-slump.png",
+  "source": "death-back-slump-v2.png",
   "size": [
-    1133,
-    1388
+    1254,
+    1254
   ],
   "status": "endpoint-study-not-sequenced",
   "artApproved": false,
   "publicBinding": false,
   "observed": [
     "Hatch and tank retained.",
-    "Folded legs and attached heel plates remain visible."
+    "Folded legs and attached heel plates remain visible.",
+    "Image-left shoulder now lower, matching the reverse of front lean.",
+    "Hatch hinge remains image-right; artwork was not mirrored."
   ],
   "remaining": [
-    "Portrait framing differs from neutral; requires uniform-scale registration, never aspect stretching.",
-    "Arms remain braced.",
-    "Body leans to same image side as front; opposite-view pose consistency requires correction.",
-    "Intermediate buckle missing."
-  ]
+    "Square framing restored, but body width still needs matching to neutral.",
+    "Arms still appear weight-bearing.",
+    "Intermediate buckle missing.",
+    "Cross-view folded leg and clamp geometry not approved."
+  ],
+  "previousSource": "death-back-slump.png"
 }

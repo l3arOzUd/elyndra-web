@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "death-back-slump.png",
+  "prompt": "Edit rear Brine Automaton shutdown pose. Correct lateral lean: IMAGE LEFT shoulder and LEFT valve must be LOWER than image right, opposite the current lean. Do not mirror texture/hatch: maintenance hatch hinge stays IMAGE RIGHT. Bend BOTH elbows more deeply, forearms lying low diagonally beside folded legs, relaxed clamp hands on their sides, not straight load-bearing arms. Keep two attached folded legs, rear heel hinges, rigid barrel, tank and two valves intact. Recompose on SQUARE 1254x1254 canvas with character entirely inside, ground-contact line y1120, empty space above, barrel width about480px matching neutral. Same copper brass verdigris painted art. No gauge eyes, front wheel, extra limbs, ground/shadow/steam/text. Transparent alpha."
+}
