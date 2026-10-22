@@ -15,6 +15,7 @@ import {
   type ContentBundle, type MapLayout, type Rect,
 } from "../src/data/schema";
 import { BOUNTY } from "../content/model";
+import { RETIRED_PLACES } from "../content/lore";
 
 type Severity = "critical" | "error" | "warning";
 interface Finding { severity: Severity; rule: string; where: string; message: string }
@@ -636,6 +637,15 @@ function checkLore(b: ContentBundle) {
     if (n.name === n.title || roleWords.test(n.name) || b.maps.some((m) => n.name.startsWith(m.name + " "))) report("error", "lore.npc_name", n.id, `"${n.name}" is a role, not a person's name`);
   }
   for (const m of b.maps) if (!m.intro) report("error", "lore.map_intro", m.id, "no intro shown on entering the map");
+  // Nothing the player reads may send them to a map that no longer exists.
+  const said: [string, string][] = [
+    ...b.monsters.flatMap((m): [string, string][] => [[`monsters/${m.id}`, m.ecology], [`monsters/${m.id}`, m.story ?? ""], ...(m.habitat ?? []).map((h): [string, string] => [`monsters/${m.id}`, h.note])]),
+    ...b.quests.map((q): [string, string] => [`quests/${q.id}`, q.summary]),
+    ...b.dialogues.map((d): [string, string] => [`dialogues/${d.id}`, d.lines.join(" ")]),
+    ...b.maps.map((m): [string, string] => [`maps/${m.id}`, m.intro ?? ""]),
+    ...b.items.map((i): [string, string] => [`items/${i.id}`, i.description ?? ""]),
+  ];
+  for (const [where, text] of said) for (const place of RETIRED_PLACES) if (text.includes(place)) report("error", "lore.places", where, `names "${place}", a map that no longer exists`);
   // Zone notes reach players through the Monster Book: no behaviour the game no longer has.
   for (const z of b.spawn_zones) for (const p of z.pockets)
     if (/(passive|assist(s|ing)?|flee(s|ing)?|fleeing)/i.test(p.design_note)) report("error", "lore.behaviour", `${z.map_id}/${p.id}`, `zone note describes old behaviour: "${p.design_note}"`);

@@ -182,7 +182,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Leaf-eared gliders nesting in the hollows of Amber Trail. The Gorged ones have soaked up so much leaked aether they hardly fly; they ignore travellers but fight back hard when struck.",
+  "ecology": "Leaf-eared gliders nesting in the hollows of Dawnmeadow's Glider Rise. The Gorged ones have soaked up so much leaked aether they hardly fly; they ignore travellers but fight back hard when struck.",
   "art_brief": "A sugar-glider-like beast with leaf-shaped ears and a banded tail, membrane glide flaps; moonlit silver-green.",
   "sprite": "lunari_2d",
   "bounty": true,
@@ -283,7 +283,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Hedgehog-boars that root in the brambles of Whispergrass, north of Avelorn.",
+  "ecology": "Hedgehog-boars that root in the brambles round Dawnmeadow's old mill and charge anything that walks into the thicket.",
   "art_brief": "A stocky boar with a back of woody thorns and bark-like hide; mossy tusks.",
   "sprite": "thornback_2d",
   "habitat": [
@@ -371,7 +371,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Amphibious fish that crawl up Moonbrook's banks and out onto its dry flats to sun their clear fins.",
+  "ecology": "Amphibious fish that crawl up the banks of Moonbrook Vale's Brookbed to sun their clear fins, and rush anything on two legs.",
   "art_brief": "A fat fish on stubby fin-legs, glass-clear fins showing faint aether veins; blue-green.",
   "sprite": "brookfin_2d",
   "habitat": [
@@ -415,7 +415,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Reed-camouflaged hunters of the Moonbrook marsh and its moonlit banks.",
+  "ecology": "Reed-camouflaged hunters of Moonbrook Vale's Reed Marsh; they spit from the reeds at anything on the banks.",
   "art_brief": "A lanky stalk-creature woven from reeds, a seed-pod head that opens to spit darts; marsh green and brown.",
   "sprite": "reedstalker_2d",
   "habitat": [
@@ -620,7 +620,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Aethrion harvesting drones that still tap the giant trunks for sap; they hang in clouds round the tapped trunks of Mossbridge, north of the creek and on the north-west slope, and dive on anything that comes near the taps. A drone that drank too long sometimes carries a bead of Living Jade.",
+  "ecology": "Aethrion harvesting drones that still tap the giant trunks of Moonbrook Vale's Sap Groves, and dive on anything that comes near the taps. A drone that drank too long sometimes carries a bead of Living Jade.",
   "art_brief": "A fist-sized brass beetle-drone with four glassy wings and a long needle proboscis, its belly tank sloshing with glowing jade sap.",
   "sprite": "sapdrone_2d",
   "habitat": [
@@ -664,7 +664,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Vines that strangled a crawling Aethrion maintenance frame and now drive it; they tend the trellises, grafting yard and wild woods of Graftwood and attack anything that cuts a vine.",
+  "ecology": "Vines that strangled a crawling Aethrion maintenance frame and now drive it; they tend the trellises of Graftwood Wilds' Trellis Dunes and attack anything that comes near a vine.",
   "art_brief": "A spider-shaped brass gear-frame wrapped and pulled by thick green vines, leaves sprouting from the gear teeth, a cracked jade lens at the core.",
   "sprite": "mob_0014",
   "habitat": [
@@ -714,7 +714,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Aethrion guard frames that the elder trees' roots grew through; they walk the root ridges, old warrens and Basin slope of Elderroot. Their core is jade-stained, sometimes solid Living Jade.",
+  "ecology": "Aethrion guard frames that the elder trees' roots grew through; they walk Elderroot Expanse's Root Ridge. Their core is jade-stained, sometimes solid Living Jade.",
   "art_brief": "A three-metre humanoid guard of brass and stone, completely laced with thick roots, a lantern-like jade eye under a hood of bark.",
   "sprite": "mob_0015",
   "habitat": [
@@ -809,7 +809,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Beetles that roll lightning-glass into their shells; they swarm the dry washes of Caravan Verge and the broken walls of its caravanserai. Old shells sometimes set into Sunfire Glass.",
+  "ecology": "Beetles that roll lightning-glass into their shells; they swarm the fused sand of Graftwood Wilds' Glass Burrows. Old shells sometimes set into Sunfire Glass.",
   "art_brief": "A dog-sized scarab whose shell is clear amber glass with a glowing ember core showing through, legs of dark chitin.",
   "sprite": "mob_0017",
   "habitat": [
@@ -853,7 +853,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Sandstone sentries that guarded the glass works and the heliograph towers; they still walk their old lines across the Glass Flats, from the glass works to the fused scar.",
+  "ecology": "Sandstone sentries that once guarded Solenia's glass works; they walked east with the sand and now hold Elderroot Expanse's Antler Glade.",
   "art_brief": "A blocky humanoid of carved sandstone with brass bands at the joints, a slit visor glowing orange, sand pouring from its cracks.",
   "sprite": "mob_0018",
   "habitat": [
@@ -897,7 +897,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Guardians of the solar ring network; they patrol the face of the Sun Dial and the causeway on its eastern approach.",
+  "ecology": "Guardians of the solar ring network; they patrol the Saffron Wastes' Warden Causeway.",
   "art_brief": "A tall bronze guardian with a halo-ring of sun mirrors on its back, a faceless polished face, a long spear-gnomon.",
   "sprite": "mob_0019",
   "habitat": [
@@ -1042,7 +1042,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Copper pressure-maintenance frames that still service the tidewheel pumps and patch the old quay pilings of Tidewheel Bay; they treat every visitor as a fault to clear.",
+  "ecology": "Copper pressure-maintenance frames that still service the pumps at the Saffron Wastes' Frost Seep; they treat every visitor as a fault to clear.",
   "art_brief": "A barrel-chested copper automaton with piston arms, brine-crusted gauges for eyes and a tank on its back hissing steam; verdigris green and brass.",
   "sprite": "mob_0022",
   "habitat": [
@@ -1092,7 +1092,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Sonar sentries bolted to the Drowned Relay's surface buoys; they walk the relay mast and the buoy cables on the south strand of Pearl Flats.",
+  "ecology": "Sonar sentries bolted to the Drowned Relay's surface buoys; they walk the buoy cables of Pearl Coast's Relay Strand and answer anything that comes close.",
   "art_brief": "A tall diving-suit construct with a dish-shaped sonar head, ribbed hoses and lead boots; dark bronze with pulsing cyan rings.",
   "sprite": "mob_0023",
   "habitat": [
@@ -1187,7 +1187,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Floating lights that gather where ice refracts the most sun: over Frostline's frozen lake. Their frames sometimes set into a flawless prism.",
+  "ecology": "Floating lights that gather where glass refracts the most sun: over the mirrors of the Saffron Wastes' Prism Reach. Their frames sometimes set into a flawless prism.",
   "art_brief": "A glowing orb inside an open lattice of hexagonal crystal, casting rainbow beams; white core, prismatic edges.",
   "sprite": "mob_0025",
   "habitat": [
@@ -1237,7 +1237,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Many-legged gear walkers that maintained Snowcoil's pumps and coolant huts; frozen joints made them hostile, and they cluster round the pump yard and wander the valley's lower slopes.",
+  "ecology": "Many-legged gear walkers that maintained the coolant pumps; frozen joints made them hostile, and they stalk the frozen pumps of Pearl Coast's Pearl Beds.",
   "art_brief": "A spider-like walker with a body of stacked frozen gears and eight jointed brass legs, icicles hanging from the cogs; steel blue and brass.",
   "sprite": "mob_0026",
   "habitat": [
@@ -1287,7 +1287,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Data-keeping automatons that tend the Archive's outlying vaults on Prism Pass: the sealed doors, the hollow below the road and the plough route itself.",
+  "ecology": "Data-keeping automatons of the Cryocore Archive's outlying vaults; they guard the flooded wing of Frostfire Divide's Drowned Archive.",
   "art_brief": "A tall slender construct in faceted crystal armour, a glowing data-slate for a face, long fingers made for handling cores; ice-blue and silver.",
   "sprite": "mob_0027",
   "habitat": [
@@ -1425,7 +1425,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Aethrion foundry hounds still loose from their kennels on the Forge Approach; packs range from the kennel yard along the causeway's lava channels hunting heat.",
+  "ecology": "Aethrion foundry hounds still loose from their kennels; packs hunt heat round Frostfire Divide's Sentry Vents.",
   "art_brief": "A lean hound of riveted iron plates over a molten core, glowing slag dripping from the jaw, bellows-ribs that pump sparks when it runs.",
   "sprite": "mob_0030",
   "habitat": [
@@ -1481,7 +1481,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "The foundry guard of Aethrion, still marching patrols across Ironfall's fallen trusses and its eastern lava banks. A live furnace burns in each breastplate.",
+  "ecology": "The foundry guard of Aethrion, still marching patrols along Cinder Expanse's Knight's Road. A live furnace burns in each breastplate.",
   "art_brief": "A tall armoured automaton whose chest is an open furnace door, riveted iron plate, a long blade glowing at the edge, smoke from the helm vents.",
   "sprite": "mob_0031",
   "habitat": [
@@ -1828,7 +1828,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Large moths that live in the canopy galleries where the jade light is strongest; they drift down to the middle and upper terraces of Canopy Steps to hunt.",
+  "ecology": "Large moths that live in the canopy where the jade light is strongest; they drift down into Graftwood Wilds' Jadewing Glade to hunt.",
   "art_brief": "A moth the size of a hawk with translucent jade wings veined like circuitry, glowing eyespots and trailing luminous dust.",
   "sprite": "mob_0041",
   "habitat": [
@@ -1872,7 +1872,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Wolf-like beasts whose hides grow bark plates; they den on the lower terrace of Canopy Steps and range up to the top terrace by the Graftwood road.",
+  "ecology": "Wolf-like beasts whose hides grow bark plates; their packs den in Graftwood Wilds' Jadewing Glade and run down anything on the road.",
   "art_brief": "A lean wolf with overlapping bark plates on its back and shoulders, moss on its tail, jade-green eyes; heavy jaws with wooden fangs.",
   "sprite": "mob_0042",
   "habitat": [
@@ -1922,7 +1922,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "The Aethrion gardener machines that grafted Verdantis; they still prune and seal cuts on the Vineworks terraces and conduits, and rush to any machine in trouble. Their sap tanks sometimes set into Living Jade.",
+  "ecology": "The Aethrion gardener machines that grafted Verdantis; they still prune and seal cuts on Graftwood Wilds' Press Terraces, and rush to any machine in trouble. Their sap tanks sometimes set into Living Jade.",
   "art_brief": "A barrel-bodied brass gardener on three spindly legs with shear-arms and a sap nozzle, a glass tank of jade sap on its back, moss on the lid.",
   "sprite": "mob_0043",
   "habitat": [
@@ -1966,7 +1966,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Hares that graze the vine terraces of Vineworks and burrow round its old water pump; their thistle coats spread seed wherever they run.",
+  "ecology": "Hares that burrow in Graftwood Wilds' Glass Burrows; their thistle coats spread seed wherever they run, and since the Quickening they run at people.",
   "art_brief": "A long-eared hare whose fur is a mass of purple-green thistle burrs, a white cotton tail, huge dark eyes; mid-leap pose.",
   "sprite": "mob_0044",
   "habitat": [
@@ -2061,7 +2061,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Fungal sacs that grow in the Heartwood Engine's exhaust; they drift out of the vents and fill the Spore Basin from rim to pool.",
+  "ecology": "Fungal sacs that grow in the Heartwood Engine's exhaust; they drift out of the vents and fill Elderroot Expanse's Spore Drift from rim to pool.",
   "art_brief": "A floating puffball the size of a barrel, dark violet with glowing jade spore-vents, short root tendrils hanging below.",
   "sprite": "mob_0046",
   "habitat": [
@@ -2335,7 +2335,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Survey kites that still map the caravan routes; they circle the heights and the old checkpoint of Caravan Verge, firing on anything that crosses their survey lines.",
+  "ecology": "Survey kites that still map the old routes; they circle Elderroot Expanse's Root Ridge, firing on anything that crosses their survey lines.",
   "art_brief": "A diamond-shaped kite of brass foil and cloth on a gear-driven frame, a single focusing lens in its nose, ribbon tails streaming.",
   "sprite": "mob_0051",
   "habitat": [
@@ -2385,7 +2385,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Lizards that lick lightning-glass and grow it along their tails; they bask in packs on the open glass of the Glass Flats, round its mirrors and in its fused scar. The tail tip sometimes hardens into Sunfire Glass.",
+  "ecology": "Lizards that lick lightning-glass and grow it along their tails; they bask in packs on Elderroot Expanse's Basilisk Flats. The tail tip sometimes hardens into Sunfire Glass.",
   "art_brief": "A low, heavy basilisk with a tail ending in a club of glowing glass, ridged sandy scales, a frilled crest that flares orange.",
   "sprite": "mob_0052",
   "habitat": [
@@ -2429,7 +2429,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Robed brass automata that recalibrate the Sun Dial and tend the broken sentries in its graveyard; they move with the machines they tend and rush to any that are attacked.",
+  "ecology": "Robed brass automata that once recalibrated Solenia's sun dials; they tend the crab packs and broken machines on Elderroot Expanse's Coral Steps and rush to any that are attacked.",
   "art_brief": "A slim brass automaton in sun-bleached robes, a gnomon-shaped crest on its head, mirror-plate hands that catch the light.",
   "sprite": "mob_0053",
   "habitat": [
@@ -2473,7 +2473,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Skaters that live on the last water in the Dust Aqueduct: its channel, its sluices and its cistern. Since the Quickening they dart at anything on the banks.",
+  "ecology": "Skaters that live on the last water in the Saffron Wastes, along the Canal Shallows' channel and sluices. Since the Quickening they dart at anything on the banks.",
   "art_brief": "A water-strider the size of a pony, stilt legs tipped with silver pads, a slim teal body and silt-pearl eyes.",
   "sprite": "mob_0054",
   "habitat": [
@@ -2567,7 +2567,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Causeway builders, buried to the chest when the dunes moved; three still dig themselves free in the Colossus Bed beside the Buried Causeway. Their gear-hearts run on Aetherite.",
+  "ecology": "Causeway builders, buried to the chest when the dunes moved; three still dig themselves free in the Saffron Wastes' Colossus Sands. Their gear-hearts run on Aetherite.",
   "art_brief": "A giant sandstone-and-brass figure buried to the waist, one arm free and dragging, a cracked sun-disc face glowing orange.",
   "sprite": "mob_0056",
   "story": "Road-builders buried to the chest when the dunes moved. They still try to dig themselves free and go back to work.",
@@ -2618,7 +2618,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Focusing drones from the Heliostat Vault; they guard the lens array outside its door and hover over the Buried Causeway's seep sinks. Their lenses can fuse sand into Sunfire Glass.",
+  "ecology": "Focusing drones of the Heliostat Vault; they guard the Lens Foundry where Solenia's light is gathered and sent east. Their lenses can fuse sand into Sunfire Glass.",
   "art_brief": "A floating ring of brass holding a large prism, three small fins, a beam of orange light idling from its centre.",
   "sprite": "mob_0057",
   "habitat": [
@@ -2842,7 +2842,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Walking coral colonies that root on Coral Reach's reef heads, kelp shallows and dead coral, spitting barbs at anything that disturbs the water.",
+  "ecology": "Walking coral colonies that root along the old canal of the Saffron Wastes' Warden Causeway, spitting barbs at anything that comes near the water.",
   "art_brief": "A squat lump of polyps on stubby root-legs, a ring of open tube mouths on top glowing magenta; pink-violet with white tips.",
   "sprite": "mob_0061",
   "habitat": [
@@ -2892,7 +2892,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Kelp creatures that tend the kelp beds of Tidewheel Bay and the weed on its tidewheels' barnacled paddles; they answer any of their bed's distress and pearl oysters grow on their fronds.",
+  "ecology": "Kelp creatures that tend the weed of the Saffron Wastes' Canal Shallows; they answer any of their bed's distress, and pearl oysters grow on their fronds.",
   "art_brief": "A tall swaying figure of braided kelp with a bulb head glowing soft green, frond arms trailing; small oysters clinging to its stalk.",
   "sprite": "mob_0062",
   "habitat": [
@@ -2936,7 +2936,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Ship-worms grown huge on Aethrion hull-timber; they infest the wrecks, the sunken freighter, the buoy floats and the driftwood bars of Wreck Shoal.",
+  "ecology": "Ship-worms grown huge on Aethrion hull-timber; they infest the old hulls of the Saffron Wastes' Prism Reach.",
   "art_brief": "A pale segmented worm with a drill-bit shell at its head, wood shavings stuck to its slime; bone-white with rust-red rasp.",
   "sprite": "mob_0063",
   "habitat": [
@@ -3031,7 +3031,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Great turtles that bask in the warm outflow of Stormbreak's intake vents and shelter behind its ruined breakwater; they wear salvaged hull plating grown into their shells and defend the herd.",
+  "ecology": "Great turtles that bask in the warm outflow of Pearl Coast's Turtle Coils; they wear salvaged hull plating grown into their shells and defend the herd.",
   "art_brief": "A huge turtle whose shell is fused with riveted copper hull plates and a broken porthole; storm-grey skin, barnacles, glowing amber eyes.",
   "sprite": "mob_0065",
   "habitat": [
@@ -3075,7 +3075,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Manta rays that leave the sea in a gale and ride the updraft round Stormbreak's lightning masts, charging their wings on the Aethrion conductors.",
+  "ecology": "Manta rays that leave the sea in a gale and ride the updraft round the lightning masts of Pearl Coast's Squall Point, charging their wings on the Aethrion conductors.",
   "art_brief": "A manta ray with wing edges crackling blue, a long stinger tail with a copper tip; indigo back, white belly, floating above the ground.",
   "sprite": "mob_0066",
   "habitat": [
@@ -3125,7 +3125,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Maintenance drones of the Drowned Relay; they keep the pressure halls sealed and crowd round the pump ring when the pumps surge.",
+  "ecology": "Maintenance drones of the Drowned Relay that followed the Signalmind's song inland; they swarm Frostfire Divide's Ash Flats.",
   "art_brief": "A football-sized brass sphere with three propeller fins and a single red lamp eye, valves venting bubbles; pitted copper and red.",
   "sprite": "mob_0067",
   "habitat": [
@@ -3356,7 +3356,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Mountain rams that graze lichen on Blueglass Ridge's terraces, spines and drifts; their horns grow volcanic glass, and old rams carry prisms in their horn cores.",
+  "ecology": "Mountain rams that graze lichen on Pearl Coast's Ram Terraces; their horns grow volcanic glass, and old rams carry prisms in their horn cores.",
   "art_brief": "A shaggy grey ram with curled horns of translucent blue glass and a back of glassy plates; breath steaming.",
   "sprite": "mob_0071",
   "habitat": [
@@ -3400,7 +3400,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Serpents that drank leaking coolant from Snowcoil's frozen coils and grew cold-blooded beyond nature; they nest in Snowcoil's coil trenches and its abandoned research huts.",
+  "ecology": "Serpents that drank leaking coolant and grew cold-blooded beyond nature; they nest in the coil trenches of Pearl Coast's Turtle Coils.",
   "art_brief": "A long pale-blue serpent with frost-ridged scales and a hood of thin ice fins, glowing coolant-cyan veins along its belly.",
   "sprite": "mob_0072",
   "habitat": [
@@ -3450,10 +3450,10 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Aethrion plough mechs that still clear Prism Pass on their old schedule, crushing anything on the road; they rest in the plough shed at the pass's east end.",
+  "ecology": "Aethrion plough mechs that still clear the road on their old schedule, crushing anything on it; they hold Pearl Coast's Squall Point, by the way to the Heliostat Vault.",
   "art_brief": "A tracked mech twice a man's height with a huge wedge plough blade, a furnace glowing in its chest and frost-crusted armour; rust-red and steel.",
   "sprite": "mob_0073",
-  "story": "Snow ploughs that still run their old timetable over Prism Pass, crushing whatever stands on the road.",
+  "story": "Snow ploughs that still run their old timetable over the coast road, crushing whatever stands on it.",
   "habitat": [
    {
     "map_id": "tha_fld_01",
@@ -3501,7 +3501,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Reflections that stepped out of Mirror Ice's polished surface where the lens array focused aether; they drift over the lake and its lens islands and defend whatever stands near them.",
+  "ecology": "Reflections that stepped out of polished ice where the lens array focused aether; they drift over Frostfire Divide's Slag Mirrors and defend whatever stands near them.",
   "art_brief": "A humanoid silhouette of dark mirror glass, reflecting its surroundings warped, edges smoking into shadow; one bright eye-glint.",
   "sprite": "mob_0074",
   "habitat": [
@@ -3596,7 +3596,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Security frames of the White Circuit, the ring conduit that powers the Archive; they patrol its pylons and arcs and chase whatever leaks from the vent breach.",
+  "ecology": "Security frames of the ring conduit that powers the Archive; they patrol Frostfire Divide's Sentry Vents and chase whatever leaks from them.",
   "art_brief": "A tripod construct with a long frost lance for a head, a cryo cell glowing in its chest, frost venting from its joints; white enamel and cyan.",
   "sprite": "mob_0076",
   "habitat": [
@@ -3640,7 +3640,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Fragments of recorded minds that leaked out of the Archive's cracked data-cores; they seep out through the White Circuit's vent breach and swarm the warm snowdrifts over the conduit.",
+  "ecology": "Fragments of recorded minds that leaked out of the Cryocore Archive's cracked data-cores; they drift between its data stacks and index shelves.",
   "art_brief": "A flickering translucent figure made of scrolling glyph-light, trailing like smoke, face a blank of static; violet and cold white.",
   "sprite": "mob_0077",
   "habitat": [
@@ -3820,7 +3820,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Toads that soak in cooling slag pools; the slag sets on their backs as armour. They crowd the pools of Ashfield and the warm vents round its toppled heat-sink.",
+  "ecology": "Toads that soak in cooling slag; the slag sets on their backs as armour. They crowd the pools of Frostfire Divide's Slag Mirrors.",
   "art_brief": "A boulder-sized toad with a cracked black slag shell on its back, orange heat in the cracks, wide throat sac glowing like a bellows.",
   "sprite": "mob_0080",
   "habitat": [
@@ -3996,7 +3996,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Scrap-built drones that strip the collapsed bridges of Ironfall for rivets and hoard them in heaps; they swarm the girder fields and the Lower Span approach.",
+  "ecology": "Scrap-built drones that strip the collapsed bridges for rivets and hoard them in heaps on Cinder Expanse's Rivet Moraine.",
   "art_brief": "A fist-sized rattling bundle of rivets, bolts and a single glowing gear-eye on wire legs; moves in jittering hops.",
   "sprite": "mob_0084",
   "habitat": [
@@ -4040,7 +4040,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Slag that set in the Red Crucible's moulds and walked off; brutes stand in the mould yard where they were first cast and roam the scrap moraine and the Crucible rim.",
+  "ecology": "Slag that set in the crucible moulds and walked off; brutes stand in the Veil Rift's Brute Pens where they were first cast.",
   "art_brief": "A hulking ogre-shape of rough black slag with mould seams down its sides, a molten core showing through cracks, iron bands still on its fists.",
   "sprite": "mob_0085",
   "habitat": [
@@ -4084,7 +4084,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Molten metal that kept its shape after the last pour; wraiths drift along the pour channels of the Red Crucible and spill over its rim.",
+  "ecology": "Molten metal that kept its shape after the last pour; wraiths drift along the Veil Rift's Wraith Pour, beside the tear.",
   "art_brief": "A dripping humanoid of white-hot liquid metal with no face, trailing a cooling grey skin that cracks and re-melts; a mould seam down its middle.",
   "sprite": "mob_0086",
   "habitat": [
@@ -4140,7 +4140,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "The stokers of the first Aethrion furnace, still shovelling into a fire that no longer needs feeding. They work Furnace Zero's stoker halls, coal pens and pour gallery.",
+  "ecology": "The stokers of Furnace Zero, the first Aethrion furnace, still shovelling into a fire that no longer needs feeding. They followed Kiln Prime up onto the Veil Rift's Stoker Heights.",
   "art_brief": "A broad-shouldered iron automaton with a shovel for one arm and a coal hopper on its back, firebox glow behind a grille face.",
   "sprite": "mob_0087",
   "habitat": [
@@ -4226,7 +4226,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "The governing intelligence of Furnace Zero, the first furnace of Aethrion. Since the Sundering it has run the whole of Emberfall's foundry as one body: every hound, knight and stoker answers to it from the Zero Core.",
+  "ecology": "The governing intelligence of Furnace Zero, the first furnace of Aethrion. It runs the whole of Emberfall's foundry as one body, and now walks the Veil Rift's Stoker Heights itself.",
   "art_brief": "A colossal kiln-shaped automaton rising from the core floor, crucible arms that pour molten metal, a white-hot Aetherite heart behind a lattice grille.",
   "sprite": "mob_0088",
   "story": "Emberfall's Heart: the mind of Furnace Zero, the first furnace of Aethrion, which runs every hound, knight and stoker in the province as one body. The Choir set it to forge the Keysigil that opens the Lattice Heart, then it climbed to the Stoker Heights on its own. Aldric wrote: \"The key is forged. She is two days ahead of me.\"",
