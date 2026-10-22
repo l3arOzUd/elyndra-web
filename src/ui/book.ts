@@ -91,6 +91,11 @@ export class MonsterBook {
       const search = win.querySelector<HTMLInputElement>('#book-search')!;
       search.oninput = () => { this.search = search.value.trim().toLowerCase(); this.render(); };
     }
+    // Filtering by a map shows what the place is: its intro and its region's theme.
+    const place = win.querySelector('#book-place')!; place.replaceChildren();
+    const map = this.where === 'all' ? null : this.c.maps.get(this.where);
+    place.toggleAttribute('hidden', !map);
+    if (map) { const region = this.c.regions.get(map.region_id); place.append(el('p', '', map.intro ?? ''), el('p', 'muted small', `${region?.name ?? ''}: ${region?.theme ?? ''}`)); }
     const shown = all.filter(m => (this.where === 'all' || m.habitat?.some(h => h.map_id === this.where)) && (!this.search || m.name.toLowerCase().includes(this.search)));
     if (!this.selected || !shown.some(m => m.id === this.selected)) this.selected = shown[0]?.id ?? null;
 
@@ -124,8 +129,12 @@ export class MonsterBook {
     fact('Defeated', n.toLocaleString());
     detail.append(facts);
     detail.append(el('p', 'book-behaviour ' + (m.behavior === 'passive' ? 'good' : 'bad'), m.behavior === 'passive' ? 'Passive: ignores you until struck, then fights back.' : 'Hostile: attacks on sight.'));
-    const homes = (m.habitat ?? []).map(h => `${this.c.maps.get(h.map_id)?.name ?? h.map_id} · ${h.zone}`);
-    if (homes.length) { detail.append(el('h4', '', 'Found in')); const ul = el('ul', 'book-habitat'); for (const h of homes) ul.append(el('li', '', h)); detail.append(ul); }
+    if (m.habitat?.length) {
+      detail.append(el('h4', '', 'Found in'));
+      const ul = el('ul', 'book-habitat');
+      for (const h of m.habitat) { const li = el('li'); li.append(el('b', '', `${this.c.maps.get(h.map_id)?.name ?? h.map_id} · ${h.zone}`), el('span', '', h.note)); ul.append(li); }
+      detail.append(ul);
+    }
     if (!known) { detail.append(el('p', 'muted book-locked', 'Defeat one to record what the Guild knows of it.')); return; }
     detail.append(el('h4', '', 'Field notes'), el('p', 'book-text', m.ecology));
     if (m.story) detail.append(el('h4', '', 'Story'), el('p', 'book-text book-story', m.story));

@@ -44,7 +44,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_01",
-    "zone": "Mosskin Meadow"
+    "zone": "Mosskin Meadow",
+    "note": "Open grass by the camp. The Mosskin herds charge since the Quickening: learn to pull them into one heap."
    }
   ]
  },
@@ -93,7 +94,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_01",
-    "zone": "Sporeling Hollow"
+    "zone": "Sporeling Hollow",
+    "note": "A damp hollow where spore clouds and resin mites rush anyone together: the first mixed pack."
    }
   ]
  },
@@ -142,7 +144,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_01",
-    "zone": "Sporeling Hollow"
+    "zone": "Sporeling Hollow",
+    "note": "A damp hollow where spore clouds and resin mites rush anyone together: the first mixed pack."
    }
   ]
  },
@@ -186,7 +189,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_01",
-    "zone": "Glider Rise"
+    "zone": "Glider Rise",
+    "note": "Upland grass where rock lizards hunt and a few Gorged gliders sit too heavy to fly. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -241,7 +245,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_01",
-    "zone": "Glider Rise"
+    "zone": "Glider Rise",
+    "note": "Upland grass where rock lizards hunt and a few Gorged gliders sit too heavy to fly."
    }
   ]
  },
@@ -284,7 +289,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_01",
-    "zone": "Bramble Mill"
+    "zone": "Bramble Mill",
+    "note": "Brambles round an old mill: boar herds and the dust-moth horde, the field's hardest pulls."
    }
   ]
  },
@@ -327,7 +333,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_01",
-    "zone": "Bramble Mill"
+    "zone": "Bramble Mill",
+    "note": "Brambles round an old mill: boar herds and the dust-moth horde, the field's hardest pulls."
    }
   ]
  },
@@ -370,7 +377,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_02",
-    "zone": "Brookbed"
+    "zone": "Brookbed",
+    "note": "Amphibious fish crawl the shallow banks next to camp and rush anything on two legs: an easy first horde."
    }
   ]
  },
@@ -413,7 +421,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_02",
-    "zone": "Reed Marsh"
+    "zone": "Reed Marsh",
+    "note": "Reedstalkers spit from the reeds; Gorged Graftlings root among them, slow and rich."
    }
   ]
  },
@@ -456,7 +465,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_02",
-    "zone": "Rotting Rows"
+    "zone": "Rotting Rows",
+    "note": "Rot creeps into the orchard rows from the pump-house below; newts croak their whole bank into a fight."
    }
   ]
  },
@@ -511,15 +521,18 @@
   "habitat": [
    {
     "map_id": "lum_dun_01",
-    "zone": "Root Tunnels"
+    "zone": "Root Tunnels",
+    "note": "The largest Barkwarden patrol under Lumeris, in a cavern you can circle while they close in as one wall."
    },
    {
     "map_id": "lum_dun_01",
-    "zone": "Pump Hall"
+    "zone": "Pump Hall",
+    "note": "The buried Aethrion pump hall; the Barkwardens still guard it, and one pull empties the hall."
    },
    {
     "map_id": "lum_dun_01",
-    "zone": "Root Burrows"
+    "zone": "Root Burrows",
+    "note": "A quieter side cavern of Barkwardens among the roots."
    }
   ]
  },
@@ -563,7 +576,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_02",
-    "zone": "Reed Marsh"
+    "zone": "Reed Marsh",
+    "note": "Reedstalkers spit from the reeds; Gorged Graftlings root among them, slow and rich. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -612,7 +626,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_02",
-    "zone": "Sap Groves"
+    "zone": "Sap Groves",
+    "note": "Tapped trunks above Hollowroot: drones dive at anyone near the taps."
    }
   ]
  },
@@ -655,7 +670,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_01",
-    "zone": "Trellis Dunes"
+    "zone": "Trellis Dunes",
+    "note": "Where the grafted woods run into sand: vine constructs on the trellises, Gorged Sandcoils basking on the crests."
    }
   ]
  },
@@ -704,7 +720,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Root Ridge"
+    "zone": "Root Ridge",
+    "note": "Slow root-laced sentinels on the ridges, brass kites shooting from above."
    }
   ]
  },
@@ -748,7 +765,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_01",
-    "zone": "Trellis Dunes"
+    "zone": "Trellis Dunes",
+    "note": "Where the grafted woods run into sand: vine constructs on the trellises, Gorged Sandcoils basking on the crests. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -797,7 +815,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_01",
-    "zone": "Glass Burrows"
+    "zone": "Glass Burrows",
+    "note": "Thistle hares and glass scarabs swarm the fused sand."
    }
   ]
  },
@@ -840,7 +859,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Antler Glade"
+    "zone": "Antler Glade",
+    "note": "Sandstone sentries under the elder trees; a few Antlered Engines hold the glade."
    }
   ]
  },
@@ -883,7 +903,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Warden Causeway"
+    "zone": "Warden Causeway",
+    "note": "Bronze wardens hold the causeway; polyps spit from the old canal."
    }
   ]
  },
@@ -927,7 +948,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Spore Drift"
+    "zone": "Spore Drift",
+    "note": "The Heartwood Engine's spores drift down to a tidal pool: bloated spore-sacs, and Gorged Tidehoppers too full to move. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -976,7 +998,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Coral Steps"
+    "zone": "Coral Steps",
+    "note": "Brass acolytes mend the crab packs on the old coral steps; the Heartwood Engine's vents are close."
    }
   ]
  },
@@ -1025,7 +1048,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Frost Seep"
+    "zone": "Frost Seep",
+    "note": "A cold seep in the desert: pump constructs, dust revenants, and Gorged Frost Mites feeding on the thaw."
    }
   ]
  },
@@ -1074,7 +1098,8 @@
   "habitat": [
    {
     "map_id": "tha_fld_01",
-    "zone": "Relay Strand"
+    "zone": "Relay Strand",
+    "note": "Relay Guardians ping the buoy cables by the camp and answer anything that comes close."
    }
   ]
  },
@@ -1118,7 +1143,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Frost Seep"
+    "zone": "Frost Seep",
+    "note": "A cold seep in the desert: pump constructs, dust revenants, and Gorged Frost Mites feeding on the thaw. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -1167,7 +1193,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Prism Reach"
+    "zone": "Prism Reach",
+    "note": "Borers in the old hulls, prism wisps beaming from the mirrors near the Vault."
    }
   ]
  },
@@ -1216,7 +1243,8 @@
   "habitat": [
    {
     "map_id": "tha_fld_01",
-    "zone": "Pearl Beds"
+    "zone": "Pearl Beds",
+    "note": "Gorged Pearl Skates lie heavy in the pearl mud; gear walkers stalk the frozen pumps."
    }
   ]
  },
@@ -1265,7 +1293,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Drowned Archive"
+    "zone": "Drowned Archive",
+    "note": "Keepers in a flooded archive wing; medusas heal them."
    }
   ]
  },
@@ -1308,7 +1337,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Ash Flats"
+    "zone": "Ash Flats",
+    "note": "Ash grazers and drone swarms where ice meets the first lava, all of them hostile since the Quickening."
    }
   ]
  },
@@ -1357,7 +1387,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Behemoth Ice"
+    "zone": "Behemoth Ice",
+    "note": "Cinder imps swarm round Gorged Hoarfrost Behemoths that keep on grazing."
    }
   ]
  },
@@ -1400,7 +1431,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Sentry Vents"
+    "zone": "Sentry Vents",
+    "note": "Sentries and hound packs at the vents; the Drowned Signalmind surfaces here."
    }
   ]
  },
@@ -1455,7 +1487,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Knight's Road"
+    "zone": "Knight's Road",
+    "note": "Knight patrols and lurk packs on the old road."
    }
   ]
  },
@@ -1499,7 +1532,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Spitter Vents"
+    "zone": "Spitter Vents",
+    "note": "Ranged spitters at the vents; Gorged Null Wisps drift through, drinking the light. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -1542,7 +1576,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Rivet Moraine"
+    "zone": "Rivet Moraine",
+    "note": "Scraplings, haulers and blooms on the rivet heaps above the Cryocore Archive."
    }
   ]
  },
@@ -1591,7 +1626,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_01",
-    "zone": "Coupler Yards"
+    "zone": "Coupler Yards",
+    "note": "Mite crews and ranged drones in the rail yards."
    }
   ]
  },
@@ -1641,7 +1677,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_02",
-    "zone": "Glyph Plaza"
+    "zone": "Glyph Plaza",
+    "note": "A few Meridian Executor elites hold the middle of Glyph Plaza."
    }
   ]
  },
@@ -1709,7 +1746,8 @@
   "habitat": [
    {
     "map_id": "lum_dun_01",
-    "zone": "Heart Chamber"
+    "zone": "Heart Chamber",
+    "note": "Where the Hollowroot Warden sits fused with the roots, pulling the water east. It wakes again minutes after it is silenced."
    }
   ]
  },
@@ -1752,7 +1790,8 @@
   "habitat": [
    {
     "map_id": "lum_fld_02",
-    "zone": "Rotting Rows"
+    "zone": "Rotting Rows",
+    "note": "Rot creeps into the orchard rows from the pump-house below; newts croak their whole bank into a fight."
    }
   ]
  },
@@ -1795,7 +1834,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_01",
-    "zone": "Jadewing Glade"
+    "zone": "Jadewing Glade",
+    "note": "Moths shoot from the canopy while bark-plated hound packs rush in."
    }
   ]
  },
@@ -1838,7 +1878,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_01",
-    "zone": "Jadewing Glade"
+    "zone": "Jadewing Glade",
+    "note": "Moths shoot from the canopy while bark-plated hound packs rush in."
    }
   ]
  },
@@ -1887,7 +1928,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_01",
-    "zone": "Press Terraces"
+    "zone": "Press Terraces",
+    "note": "Gardener machines mend each other at the old presses; jackal packs hunt the terraces."
    }
   ]
  },
@@ -1930,7 +1972,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_01",
-    "zone": "Glass Burrows"
+    "zone": "Glass Burrows",
+    "note": "Thistle hares and glass scarabs swarm the fused sand."
    }
   ]
  },
@@ -1980,7 +2023,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Antler Glade"
+    "zone": "Antler Glade",
+    "note": "A few Antlered Engine elites hold the middle of Antler Glade."
    }
   ]
  },
@@ -2023,7 +2067,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Spore Drift"
+    "zone": "Spore Drift",
+    "note": "The Heartwood Engine's spores drift down to a tidal pool: bloated spore-sacs, and Gorged Tidehoppers too full to move."
    }
   ]
  },
@@ -2066,11 +2111,13 @@
   "habitat": [
    {
     "map_id": "ver_dun_01",
-    "zone": "Sap Conduits"
+    "zone": "Sap Conduits",
+    "note": "Spore Matrons stand in rings along the Engine's sap conduits, spitting from range. Pull them into a stack."
    },
    {
     "map_id": "ver_dun_01",
-    "zone": "Spore Lung"
+    "zone": "Spore Lung",
+    "note": "A smaller nest of Matrons in the Engine's spore lung, close to the root lift."
    }
   ]
  },
@@ -2113,7 +2160,8 @@
   "habitat": [
    {
     "map_id": "ver_dun_01",
-    "zone": "Piston Hall"
+    "zone": "Piston Hall",
+    "note": "Pistonguards hold the hall round the main piston: one pull brings thirty of them."
    }
   ]
  },
@@ -2205,7 +2253,8 @@
   "habitat": [
    {
     "map_id": "ver_dun_01",
-    "zone": "Heart Chamber"
+    "zone": "Heart Chamber",
+    "note": "The Heartwood Regent's chamber, alone at the Engine's heart. It wakes again minutes after it is silenced."
    }
   ]
  },
@@ -2248,7 +2297,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_01",
-    "zone": "Press Terraces"
+    "zone": "Press Terraces",
+    "note": "Gardener machines mend each other at the old presses; jackal packs hunt the terraces."
    }
   ]
  },
@@ -2291,7 +2341,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Root Ridge"
+    "zone": "Root Ridge",
+    "note": "Slow root-laced sentinels on the ridges, brass kites shooting from above."
    }
   ]
  },
@@ -2340,7 +2391,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Basilisk Flats"
+    "zone": "Basilisk Flats",
+    "note": "Glass-tailed basilisks bask in packs on the flats; skimmers dive from the cliffs."
    }
   ]
  },
@@ -2383,7 +2435,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Coral Steps"
+    "zone": "Coral Steps",
+    "note": "Brass acolytes mend the crab packs on the old coral steps; the Heartwood Engine's vents are close."
    }
   ]
  },
@@ -2426,7 +2479,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Canal Shallows"
+    "zone": "Canal Shallows",
+    "note": "Striders dart along the last water; kelp tenders knit the packs back together."
    }
   ]
  },
@@ -2469,7 +2523,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Frost Seep"
+    "zone": "Frost Seep",
+    "note": "A cold seep in the desert: pump constructs, dust revenants, and Gorged Frost Mites feeding on the thaw."
    }
   ]
  },
@@ -2519,7 +2574,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Colossus Sands"
+    "zone": "Colossus Sands",
+    "note": "A few Sand-buried Colossus elites hold the middle of Colossus Sands."
    }
   ]
  },
@@ -2568,7 +2624,8 @@
   "habitat": [
    {
     "map_id": "sol_dun_01",
-    "zone": "Lens Foundry"
+    "zone": "Lens Foundry",
+    "note": "Lens-drones round the focusing engine that sends Solenia's light east."
    }
   ]
  },
@@ -2611,11 +2668,13 @@
   "habitat": [
    {
     "map_id": "sol_dun_01",
-    "zone": "Mirror Gallery"
+    "zone": "Mirror Gallery",
+    "note": "Mirrorguards shoulder to shoulder among the mirrors they keep aligned; a round hall to circle."
    },
    {
     "map_id": "sol_dun_01",
-    "zone": "Shaft of Noon"
+    "zone": "Shaft of Noon",
+    "note": "Mirrorguards in the light-shaft; drag them into the corridor where they bunch up."
    }
   ]
  },
@@ -2701,7 +2760,8 @@
   "habitat": [
    {
     "map_id": "sol_dun_01",
-    "zone": "Heliostat Core"
+    "zone": "Heliostat Core",
+    "note": "The Heliostat Sovereign, alone under the great mirror. It wakes again minutes after it is silenced."
    }
   ]
  },
@@ -2744,7 +2804,8 @@
   "habitat": [
    {
     "map_id": "ver_fld_02",
-    "zone": "Basilisk Flats"
+    "zone": "Basilisk Flats",
+    "note": "Glass-tailed basilisks bask in packs on the flats; skimmers dive from the cliffs."
    }
   ]
  },
@@ -2787,7 +2848,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Warden Causeway"
+    "zone": "Warden Causeway",
+    "note": "Bronze wardens hold the causeway; polyps spit from the old canal."
    }
   ]
  },
@@ -2836,7 +2898,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Canal Shallows"
+    "zone": "Canal Shallows",
+    "note": "Striders dart along the last water; kelp tenders knit the packs back together."
    }
   ]
  },
@@ -2879,7 +2942,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Prism Reach"
+    "zone": "Prism Reach",
+    "note": "Borers in the old hulls, prism wisps beaming from the mirrors near the Vault."
    }
   ]
  },
@@ -2929,7 +2993,8 @@
   "habitat": [
    {
     "map_id": "tha_fld_01",
-    "zone": "Pearl Beds"
+    "zone": "Pearl Beds",
+    "note": "Gorged Pearl Skates lie heavy in the pearl mud; gear walkers stalk the frozen pumps. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -2972,7 +3037,8 @@
   "habitat": [
    {
     "map_id": "tha_fld_01",
-    "zone": "Turtle Coils"
+    "zone": "Turtle Coils",
+    "note": "Turtle herds and the serpent horde in the coil trenches."
    }
   ]
  },
@@ -3015,7 +3081,8 @@
   "habitat": [
    {
     "map_id": "tha_fld_01",
-    "zone": "Squall Point"
+    "zone": "Squall Point",
+    "note": "Rays ride the gale round the lightning masts; a Glacier Juggernaut guards the way to the Heliostat Vault."
    }
   ]
  },
@@ -3064,7 +3131,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Ash Flats"
+    "zone": "Ash Flats",
+    "note": "Ash grazers and drone swarms where ice meets the first lava, all of them hostile since the Quickening."
    }
   ]
  },
@@ -3113,7 +3181,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Drowned Archive"
+    "zone": "Drowned Archive",
+    "note": "Keepers in a flooded archive wing; medusas heal them."
    }
   ]
  },
@@ -3199,7 +3268,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Drowned Signalmind's Arena"
+    "zone": "Drowned Signalmind's Arena",
+    "note": "Drowned Signalmind roams the open field here: a world boss for groups."
    }
   ]
  },
@@ -3242,7 +3312,8 @@
   "habitat": [
    {
     "map_id": "sol_fld_01",
-    "zone": "Colossus Sands"
+    "zone": "Colossus Sands",
+    "note": "Rimehares burst from the drifts round three half-buried colossi."
    }
   ]
  },
@@ -3291,7 +3362,8 @@
   "habitat": [
    {
     "map_id": "tha_fld_01",
-    "zone": "Ram Terraces"
+    "zone": "Ram Terraces",
+    "note": "Glass-backed ram flocks on the terraces."
    }
   ]
  },
@@ -3334,7 +3406,8 @@
   "habitat": [
    {
     "map_id": "tha_fld_01",
-    "zone": "Turtle Coils"
+    "zone": "Turtle Coils",
+    "note": "Turtle herds and the serpent horde in the coil trenches."
    }
   ]
  },
@@ -3384,7 +3457,8 @@
   "habitat": [
    {
     "map_id": "tha_fld_01",
-    "zone": "Squall Point"
+    "zone": "Squall Point",
+    "note": "A few Glacier Juggernaut elites hold the middle of Squall Point."
    }
   ]
  },
@@ -3433,7 +3507,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Slag Mirrors"
+    "zone": "Slag Mirrors",
+    "note": "Toads in the slag pools under mirror ice; mirrorshades mend them."
    }
   ]
  },
@@ -3477,7 +3552,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Behemoth Ice"
+    "zone": "Behemoth Ice",
+    "note": "Cinder imps swarm round Gorged Hoarfrost Behemoths that keep on grazing. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -3526,7 +3602,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Sentry Vents"
+    "zone": "Sentry Vents",
+    "note": "Sentries and hound packs at the vents; the Drowned Signalmind surfaces here."
    }
   ]
  },
@@ -3569,11 +3646,13 @@
   "habitat": [
    {
     "map_id": "cry_dun_01",
-    "zone": "Cold Stacks"
+    "zone": "Cold Stacks",
+    "note": "Archive Specters drift between the data-stack rows; the rows make lanes for line skills."
    },
    {
     "map_id": "cry_dun_01",
-    "zone": "Index Gallery"
+    "zone": "Index Gallery",
+    "note": "Specters among the index shelves on the way to the vault, taken shelf by shelf."
    }
   ]
  },
@@ -3616,7 +3695,8 @@
   "habitat": [
    {
     "map_id": "cry_dun_01",
-    "zone": "Cryo Wards"
+    "zone": "Cryo Wards",
+    "note": "Cryo Lancers shoot across a round ward; pillars and crystal give cover, so close in."
    }
   ]
  },
@@ -3702,7 +3782,8 @@
   "habitat": [
    {
     "map_id": "cry_dun_01",
-    "zone": "Curator's Vault"
+    "zone": "Curator's Vault",
+    "note": "The Cryocore Curator guards Archon Ysra Callow's warnings here. It wakes again minutes after it is silenced."
    }
   ]
  },
@@ -3745,7 +3826,8 @@
   "habitat": [
    {
     "map_id": "cry_fld_01",
-    "zone": "Slag Mirrors"
+    "zone": "Slag Mirrors",
+    "note": "Toads in the slag pools under mirror ice; mirrorshades mend them."
    }
   ]
  },
@@ -3788,7 +3870,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Tender Yards"
+    "zone": "Tender Yards",
+    "note": "Repair automata scavenge the yards by the camp and weld anything they find."
    }
   ]
  },
@@ -3831,7 +3914,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Skink Flow"
+    "zone": "Skink Flow",
+    "note": "Skinks along the lava channels."
    }
   ]
  },
@@ -3874,7 +3958,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Spitter Vents"
+    "zone": "Spitter Vents",
+    "note": "Ranged spitters at the vents; Gorged Null Wisps drift through, drinking the light."
    }
   ]
  },
@@ -3917,7 +4002,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Rivet Moraine"
+    "zone": "Rivet Moraine",
+    "note": "Scraplings, haulers and blooms on the rivet heaps above the Cryocore Archive."
    }
   ]
  },
@@ -3960,7 +4046,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_01",
-    "zone": "Brute Pens"
+    "zone": "Brute Pens",
+    "note": "Slag-forged brutes in the pens by the camp."
    }
   ]
  },
@@ -4003,7 +4090,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_01",
-    "zone": "Wraith Pour"
+    "zone": "Wraith Pour",
+    "note": "Wraiths and the riftling horde along the tear in the Veil."
    }
   ]
  },
@@ -4058,7 +4146,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_01",
-    "zone": "Stoker Heights"
+    "zone": "Stoker Heights",
+    "note": "Stokers still feed the fire; Gorged Sparkwings sit charged on the dishes. Kiln Prime walks the heights."
    }
   ]
  },
@@ -4144,7 +4233,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_01",
-    "zone": "Kiln Prime's Arena"
+    "zone": "Kiln Prime's Arena",
+    "note": "Kiln Prime roams the open field here: a world boss for groups."
    }
   ]
  },
@@ -4187,7 +4277,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Knight's Road"
+    "zone": "Knight's Road",
+    "note": "Knight patrols and lurk packs on the old road."
    }
   ]
  },
@@ -4230,7 +4321,8 @@
   "habitat": [
    {
     "map_id": "emb_fld_01",
-    "zone": "Rivet Moraine"
+    "zone": "Rivet Moraine",
+    "note": "Scraplings, haulers and blooms on the rivet heaps above the Cryocore Archive."
    }
   ]
  },
@@ -4273,7 +4365,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_01",
-    "zone": "Coupler Yards"
+    "zone": "Coupler Yards",
+    "note": "Mite crews and ranged drones in the rail yards."
    }
   ]
  },
@@ -4316,7 +4409,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_01",
-    "zone": "Wraith Pour"
+    "zone": "Wraith Pour",
+    "note": "Wraiths and the riftling horde along the tear in the Veil."
    }
   ]
  },
@@ -4360,7 +4454,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_01",
-    "zone": "Stoker Heights"
+    "zone": "Stoker Heights",
+    "note": "Stokers still feed the fire; Gorged Sparkwings sit charged on the dishes. Kiln Prime walks the heights. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -4416,7 +4511,8 @@
   "habitat": [
    {
     "map_id": "noc_fld_02",
-    "zone": "Sentinel Colonnade"
+    "zone": "Sentinel Colonnade",
+    "note": "Glyph swarms drift between the columns round Gorged sentinels, half asleep on their posts. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    }
   ]
  },
@@ -4459,15 +4555,18 @@
   "habitat": [
    {
     "map_id": "noc_fld_02",
-    "zone": "Sentinel Colonnade"
+    "zone": "Sentinel Colonnade",
+    "note": "Glyph swarms drift between the columns round Gorged sentinels, half asleep on their posts."
    },
    {
     "map_id": "noc_fld_02",
-    "zone": "Glyph Plaza"
+    "zone": "Glyph Plaza",
+    "note": "The glyph swarm horde; a court of Executors stands at the plaza's heart."
    },
    {
     "map_id": "noc_fld_02",
-    "zone": "Lattice Verge"
+    "zone": "Lattice Verge",
+    "note": "Glyphs thicken by the sealed descent to the Lattice Heart."
    }
   ]
  },
@@ -4516,15 +4615,18 @@
   "habitat": [
    {
     "map_id": "noc_dun_01",
-    "zone": "Lattice Conduits"
+    "zone": "Lattice Conduits",
+    "note": "Lattice Weavers string new lines round a crystal; circle it to break their line of fire."
    },
    {
     "map_id": "noc_dun_01",
-    "zone": "The Loom"
+    "zone": "The Loom",
+    "note": "Weavers at work on the short route to the Sovereign; pull them back into the corridor."
    },
    {
     "map_id": "noc_dun_01",
-    "zone": "Spindle Hall"
+    "zone": "Spindle Hall",
+    "note": "Weavers in the long machine hall on the far route; the best Lattice Node farm."
    }
   ]
  },
@@ -4610,7 +4712,8 @@
   "habitat": [
    {
     "map_id": "noc_dun_01",
-    "zone": "Sovereign's Chamber"
+    "zone": "Sovereign's Chamber",
+    "note": "The Lattice Sovereign, speaking with Ilvane Thorne's voice, and Aldric Venn's failing ward. The Long Watch keeps it silenced."
    }
   ]
  }

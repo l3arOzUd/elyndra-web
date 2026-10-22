@@ -472,7 +472,7 @@
      6,
      14
     ],
-    "design_note": "Open grass by the camp: passive herds to learn movement and the first pull."
+    "design_note": "Open grass by the camp. The Mosskin herds charge since the Quickening: learn to pull them into one heap."
    },
    {
     "id": "sporeling_hollow_sporeling",
@@ -1192,7 +1192,7 @@
      6,
      14
     ],
-    "design_note": "Damp hollow where assisting spores and aggressive mites meet: the first mixed pack."
+    "design_note": "A damp hollow where spore clouds and resin mites rush anyone together: the first mixed pack."
    },
    {
     "id": "sporeling_hollow_ambermite",
@@ -1912,7 +1912,7 @@
      6,
      14
     ],
-    "design_note": "Damp hollow where assisting spores and aggressive mites meet: the first mixed pack."
+    "design_note": "A damp hollow where spore clouds and resin mites rush anyone together: the first mixed pack."
    },
    {
     "id": "glider_rise_lunari",
@@ -2584,7 +2584,7 @@
      6,
      14
     ],
-    "design_note": "Lunari: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "Upland grass where rock lizards hunt and a few Gorged gliders sit too heavy to fly. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "glider_rise_craglet",
@@ -3256,7 +3256,7 @@
      6,
      14
     ],
-    "design_note": "Upland grass: fleeing gliders and the first assisting bruisers."
+    "design_note": "Upland grass where rock lizards hunt and a few Gorged gliders sit too heavy to fly."
    },
    {
     "id": "bramble_mill_thornback",
@@ -4777,7 +4777,7 @@
      6,
      14
     ],
-    "design_note": "Passive fish on the shallow banks next to camp: an easy first horde."
+    "design_note": "Amphibious fish crawl the shallow banks next to camp and rush anything on two legs: an easy first horde."
    },
    {
     "id": "reed_marsh_reedstalker",
@@ -5497,7 +5497,7 @@
      6,
      14
     ],
-    "design_note": "Ranged reeds among passive grafted twigs: pull the spitters into the herd."
+    "design_note": "Reedstalkers spit from the reeds; Gorged Graftlings root among them, slow and rich."
    },
    {
     "id": "reed_marsh_graftling",
@@ -6217,7 +6217,7 @@
      6,
      14
     ],
-    "design_note": "Graftling: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "Reedstalkers spit from the reeds; Gorged Graftlings root among them, slow and rich. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "rotting_rows_rotroot",
@@ -6913,7 +6913,7 @@
      6,
      14
     ],
-    "design_note": "Rot creeps into the orchard rows; newts call their whole bank."
+    "design_note": "Rot creeps into the orchard rows from the pump-house below; newts croak their whole bank into a fight."
    },
    {
     "id": "rotting_rows_mossback_newt",
@@ -7609,7 +7609,7 @@
      6,
      14
     ],
-    "design_note": "Rot creeps into the orchard rows; newts call their whole bank."
+    "design_note": "Rot creeps into the orchard rows from the pump-house below; newts croak their whole bank into a fight."
    },
    {
     "id": "sap_groves",
@@ -8071,7 +8071,7 @@
      6,
      14
     ],
-    "design_note": "Tapped trunks above Hollowroot: aggressive drones dive at anyone near the taps."
+    "design_note": "Tapped trunks above Hollowroot: drones dive at anyone near the taps."
    }
   ]
  },
@@ -8104,7 +8104,7 @@
      6,
      14
     ],
-    "design_note": "The largest Barkwarden patrol in the region, in a cavern you can circle; assist behaviour brings them in as one wall."
+    "design_note": "The largest Barkwarden patrol under Lumeris, in a cavern you can circle while they close in as one wall."
    },
    {
     "id": "pump_hall",
@@ -8128,7 +8128,7 @@
      12,
      24
     ],
-    "design_note": "Construct hall at the cap level; assist behaviour means one pull is the whole hall."
+    "design_note": "The buried Aethrion pump hall; the Barkwardens still guard it, and one pull empties the hall."
    },
    {
     "id": "root_burrows",
@@ -8152,7 +8152,7 @@
      8,
      18
     ],
-    "design_note": "Barkwarden side cavern, a quieter construct farm."
+    "design_note": "A quieter side cavern of Barkwardens among the roots."
    },
    {
     "id": "heart_chamber",
@@ -8176,7 +8176,7 @@
      300,
      420
     ],
-    "design_note": "Region boss, 5-7 minute respawn."
+    "design_note": "Where the Hollowroot Warden sits fused with the roots, pulling the water east. It wakes again minutes after it is silenced."
    }
   ]
  },
@@ -8671,7 +8671,7 @@
      6,
      14
     ],
-    "design_note": "Ranged moths over assisting hound packs."
+    "design_note": "Moths shoot from the canopy while bark-plated hound packs rush in."
    },
    {
     "id": "jadewing_glade_barkhound",
@@ -9157,7 +9157,7 @@
      6,
      14
     ],
-    "design_note": "Ranged moths over assisting hound packs."
+    "design_note": "Moths shoot from the canopy while bark-plated hound packs rush in."
    },
    {
     "id": "trellis_dunes_vinecrawler",
@@ -9877,7 +9877,7 @@
      6,
      14
     ],
-    "design_note": "Where the grafted woods run into sand: vine constructs and basking coils."
+    "design_note": "Where the grafted woods run into sand: vine constructs on the trellises, Gorged Sandcoils basking on the crests."
    },
    {
     "id": "trellis_dunes_sandcoil",
@@ -10597,7 +10597,7 @@
      6,
      14
     ],
-    "design_note": "Sandcoil: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "Where the grafted woods run into sand: vine constructs on the trellises, Gorged Sandcoils basking on the crests. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "press_terraces_pruning_tender",
@@ -11311,7 +11311,7 @@
      6,
      14
     ],
-    "design_note": "Gardener constructs mend each other; jackal packs hunt the terraces."
+    "design_note": "Gardener machines mend each other at the old presses; jackal packs hunt the terraces."
    },
    {
     "id": "press_terraces_ochre_jackal",
@@ -12025,7 +12025,7 @@
      6,
      14
     ],
-    "design_note": "Gardener constructs mend each other; jackal packs hunt the terraces."
+    "design_note": "Gardener machines mend each other at the old presses; jackal packs hunt the terraces."
    },
    {
     "id": "glass_burrows_thistlehare",
@@ -12463,7 +12463,7 @@
      6,
      14
     ],
-    "design_note": "Fleeing hares and aggressive glass scarabs on fused sand."
+    "design_note": "Thistle hares and glass scarabs swarm the fused sand."
    },
    {
     "id": "glass_burrows_glass_scarab",
@@ -12901,7 +12901,7 @@
      6,
      14
     ],
-    "design_note": "Fleeing hares and aggressive glass scarabs on fused sand."
+    "design_note": "Thistle hares and glass scarabs swarm the fused sand."
    }
   ]
  },
@@ -13276,7 +13276,7 @@
      6,
      14
     ],
-    "design_note": "Slow sentinels on the ridges, brass kites shooting from above."
+    "design_note": "Slow root-laced sentinels on the ridges, brass kites shooting from above."
    },
    {
     "id": "root_ridge_brass_kite",
@@ -13642,7 +13642,7 @@
      6,
      14
     ],
-    "design_note": "Slow sentinels on the ridges, brass kites shooting from above."
+    "design_note": "Slow root-laced sentinels on the ridges, brass kites shooting from above."
    },
    {
     "id": "antler_glade",
@@ -14200,7 +14200,7 @@
      6,
      14
     ],
-    "design_note": "Sandstone sentries under the elder trees; a few Antlered Engines graze the glade."
+    "design_note": "Sandstone sentries under the elder trees; a few Antlered Engines hold the glade."
    },
    {
     "id": "antler_glade_antlered_engine",
@@ -14764,7 +14764,7 @@
      6,
      14
     ],
-    "design_note": "Spores drift down to a tidal pool: aggressive bloats and passive hoppers."
+    "design_note": "The Heartwood Engine's spores drift down to a tidal pool: bloated spore-sacs, and Gorged Tidehoppers too full to move."
    },
    {
     "id": "spore_drift_tidehopper",
@@ -15304,7 +15304,7 @@
      6,
      14
     ],
-    "design_note": "Tidehopper: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "The Heartwood Engine's spores drift down to a tidal pool: bloated spore-sacs, and Gorged Tidehoppers too full to move. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "basilisk_flats_glasstail_basilisk",
@@ -15742,7 +15742,7 @@
      6,
      14
     ],
-    "design_note": "Assisting basilisks on the flats, skimmers diving from the cliffs."
+    "design_note": "Glass-tailed basilisks bask in packs on the flats; skimmers dive from the cliffs."
    },
    {
     "id": "basilisk_flats_gullwing_skimmer",
@@ -16180,7 +16180,7 @@
      6,
      14
     ],
-    "design_note": "Assisting basilisks on the flats, skimmers diving from the cliffs."
+    "design_note": "Glass-tailed basilisks bask in packs on the flats; skimmers dive from the cliffs."
    },
    {
     "id": "coral_steps_gnomon_acolyte",
@@ -16564,7 +16564,7 @@
      6,
      14
     ],
-    "design_note": "Acolytes heal the crab packs on the old coral steps; the Heartwood Engine's vents are close."
+    "design_note": "Brass acolytes mend the crab packs on the old coral steps; the Heartwood Engine's vents are close."
    },
    {
     "id": "coral_steps_coral_claw",
@@ -16948,7 +16948,7 @@
      6,
      14
     ],
-    "design_note": "Acolytes heal the crab packs on the old coral steps; the Heartwood Engine's vents are close."
+    "design_note": "Brass acolytes mend the crab packs on the old coral steps; the Heartwood Engine's vents are close."
    }
   ]
  },
@@ -16981,7 +16981,7 @@
      6,
      14
     ],
-    "design_note": "The densest Matron nest in the region (~12 cells each) in a round cavern you can circle; assist supports spitting from 5 cells, so pull them into a stack."
+    "design_note": "Spore Matrons stand in rings along the Engine's sap conduits, spitting from range. Pull them into a stack."
    },
    {
     "id": "piston_hall",
@@ -17005,7 +17005,7 @@
      10,
      22
     ],
-    "design_note": "Assist constructs round the central piston: one pull is the hall, a 30-construct fight at mid-band."
+    "design_note": "Pistonguards hold the hall round the main piston: one pull brings thirty of them."
    },
    {
     "id": "spore_lung",
@@ -17029,7 +17029,7 @@
      8,
      16
     ],
-    "design_note": "Matrons in a side cavern off the main hall: a smaller assist pull, quieter and closer to the landing."
+    "design_note": "A smaller nest of Matrons in the Engine's spore lung, close to the root lift."
    },
    {
     "id": "heart_chamber",
@@ -17053,7 +17053,7 @@
      300,
      420
     ],
-    "design_note": "Region boss, 5-7 minute respawn, alone in its chamber."
+    "design_note": "The Heartwood Regent's chamber, alone at the Engine's heart. It wakes again minutes after it is silenced."
    }
   ]
  },
@@ -17422,7 +17422,7 @@
      6,
      14
     ],
-    "design_note": "Bronze wardens on the causeway, polyps spitting from the old canal."
+    "design_note": "Bronze wardens hold the causeway; polyps spit from the old canal."
    },
    {
     "id": "warden_causeway_polyp_spitter",
@@ -17782,7 +17782,7 @@
      6,
      14
     ],
-    "design_note": "Bronze wardens on the causeway, polyps spitting from the old canal."
+    "design_note": "Bronze wardens hold the causeway; polyps spit from the old canal."
    },
    {
     "id": "canal_shallows_canal_strider",
@@ -18328,7 +18328,7 @@
      6,
      14
     ],
-    "design_note": "Fleeing striders and kelp tenders that knit the packs back together."
+    "design_note": "Striders dart along the last water; kelp tenders knit the packs back together."
    },
    {
     "id": "canal_shallows_kelp_tender",
@@ -18874,7 +18874,7 @@
      6,
      14
     ],
-    "design_note": "Fleeing striders and kelp tenders that knit the packs back together."
+    "design_note": "Striders dart along the last water; kelp tenders knit the packs back together."
    },
    {
     "id": "frost_seep_brine_automaton",
@@ -19426,7 +19426,7 @@
      6,
      14
     ],
-    "design_note": "A cold seep in the desert: pump constructs, passive mites and dust revenants."
+    "design_note": "A cold seep in the desert: pump constructs, dust revenants, and Gorged Frost Mites feeding on the thaw."
    },
    {
     "id": "frost_seep_frost_mite",
@@ -19978,7 +19978,7 @@
      6,
      14
     ],
-    "design_note": "Frost Mite: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "A cold seep in the desert: pump constructs, dust revenants, and Gorged Frost Mites feeding on the thaw. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "frost_seep_dust_revenant",
@@ -20530,7 +20530,7 @@
      6,
      14
     ],
-    "design_note": "A cold seep in the desert: pump constructs, passive mites and dust revenants."
+    "design_note": "A cold seep in the desert: pump constructs, dust revenants, and Gorged Frost Mites feeding on the thaw."
    },
    {
     "id": "colossus_sands",
@@ -20974,7 +20974,7 @@
      6,
      14
     ],
-    "design_note": "Hares herd round three half-buried colossi."
+    "design_note": "Rimehares burst from the drifts round three half-buried colossi."
    },
    {
     "id": "colossus_sands_sand_buried_colossus",
@@ -21859,7 +21859,7 @@
      6,
      14
     ],
-    "design_note": "The densest pocket (~10 cells each): assist Mirrorguards shoulder to shoulder among the mirrors; a round hall to circle while AoE does the work."
+    "design_note": "Mirrorguards shoulder to shoulder among the mirrors they keep aligned; a round hall to circle."
    },
    {
     "id": "lens_foundry",
@@ -21883,7 +21883,7 @@
      10,
      22
     ],
-    "design_note": "Assist constructs round the focusing engine: one pull is the foundry, a 30-construct fight at the top of the band."
+    "design_note": "Lens-drones round the focusing engine that sends Solenia's light east."
    },
    {
     "id": "shaft_of_noon",
@@ -21907,7 +21907,7 @@
      8,
      16
     ],
-    "design_note": "Assist Mirrorguards in the light-shaft: one pull brings the whole shaft, so drag them into the corridor where they bunch up."
+    "design_note": "Mirrorguards in the light-shaft; drag them into the corridor where they bunch up."
    },
    {
     "id": "heliostat_core",
@@ -21931,7 +21931,7 @@
      300,
      420
     ],
-    "design_note": "Region boss, 5-7 minute respawn, alone under the heliostat."
+    "design_note": "The Heliostat Sovereign, alone under the great mirror. It wakes again minutes after it is silenced."
    }
   ]
  },
@@ -22300,7 +22300,7 @@
      6,
      14
     ],
-    "design_note": "Assisting guardians on the buoy cables by the camp."
+    "design_note": "Relay Guardians ping the buoy cables by the camp and answer anything that comes close."
    },
    {
     "id": "ram_terraces",
@@ -23398,7 +23398,7 @@
      6,
      14
     ],
-    "design_note": "Pearl Skate: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "Gorged Pearl Skates lie heavy in the pearl mud; gear walkers stalk the frozen pumps. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "pearl_beds_icegear",
@@ -23962,7 +23962,7 @@
      6,
      14
     ],
-    "design_note": "Fleeing skates on the pearl beds, gear walkers at the frozen pumps."
+    "design_note": "Gorged Pearl Skates lie heavy in the pearl mud; gear walkers stalk the frozen pumps."
    },
    {
     "id": "turtle_coils_thunderhull_turtle",
@@ -25282,7 +25282,7 @@
      6,
      14
     ],
-    "design_note": "Ranged rays on the point; a Glacier Juggernaut guards the way to the Heliostat Vault."
+    "design_note": "Rays ride the gale round the lightning masts; a Glacier Juggernaut guards the way to the Heliostat Vault."
    },
    {
     "id": "squall_point_glacier_juggernaut",
@@ -25723,7 +25723,7 @@
      6,
      14
     ],
-    "design_note": "Passive ash grazers and drone swarms where ice meets the first lava."
+    "design_note": "Ash grazers and drone swarms where ice meets the first lava, all of them hostile since the Quickening."
    },
    {
     "id": "ash_flats_pressure_drone",
@@ -26131,7 +26131,7 @@
      6,
      14
     ],
-    "design_note": "Passive ash grazers and drone swarms where ice meets the first lava."
+    "design_note": "Ash grazers and drone swarms where ice meets the first lava, all of them hostile since the Quickening."
    },
    {
     "id": "drowned_archive_archive_keeper",
@@ -28861,7 +28861,7 @@
      6,
      14
     ],
-    "design_note": "Aggressive imps among passive behemoths."
+    "design_note": "Cinder imps swarm round Gorged Hoarfrost Behemoths that keep on grazing."
    },
    {
     "id": "behemoth_ice_hoarfrost_behemoth",
@@ -29335,7 +29335,7 @@
      6,
      14
     ],
-    "design_note": "Hoarfrost Behemoth: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "Cinder imps swarm round Gorged Hoarfrost Behemoths that keep on grazing. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "sentry_vents_cryo_sentry",
@@ -30016,7 +30016,7 @@
      5,
      12
     ],
-    "design_note": "The Archive's main horde: 40 lancers between data-stack rows, ~18 cells each. The rows break their lines of fire and make lanes for line skills."
+    "design_note": "Archive Specters drift between the data-stack rows; the rows make lanes for line skills."
    },
    {
     "id": "cryo_wards",
@@ -30040,7 +30040,7 @@
      8,
      16
     ],
-    "design_note": "Long-range lancers in a round ward: pillars and crystal give cover, so players close in rather than trade shots."
+    "design_note": "Cryo Lancers shoot across a round ward; pillars and crystal give cover, so close in."
    },
    {
     "id": "index_gallery",
@@ -30064,7 +30064,7 @@
      8,
      16
     ],
-    "design_note": "Lancers between index shelves on the way to the vault: the shelves block their shots, a ranged gauntlet taken shelf by shelf."
+    "design_note": "Specters among the index shelves on the way to the vault, taken shelf by shelf."
    },
    {
     "id": "curators_vault",
@@ -30088,7 +30088,7 @@
      300,
      420
     ],
-    "design_note": "Region boss, 5-7 minute respawn, alone in the vault."
+    "design_note": "The Cryocore Curator guards Archon Ysra Callow's warnings here. It wakes again minutes after it is silenced."
    }
   ]
  },
@@ -30487,7 +30487,7 @@
      6,
      14
     ],
-    "design_note": "Gardener constructs scavenging the yards by the camp."
+    "design_note": "Repair automata scavenge the yards by the camp and weld anything they find."
    },
    {
     "id": "skink_flow",
@@ -31627,7 +31627,7 @@
      6,
      14
     ],
-    "design_note": "Ranged spitters at the vents, passive wisps drifting through."
+    "design_note": "Ranged spitters at the vents; Gorged Null Wisps drift through, drinking the light."
    },
    {
     "id": "spitter_vents_null_wisp",
@@ -32203,7 +32203,7 @@
      6,
      14
     ],
-    "design_note": "Null Wisp: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "Ranged spitters at the vents; Gorged Null Wisps drift through, drinking the light. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "knight_s_road_furnace_knight",
@@ -33565,7 +33565,7 @@
      6,
      14
     ],
-    "design_note": "Scraplings, haulers and blooms on the rivet heaps by the Cryocore Archive."
+    "design_note": "Scraplings, haulers and blooms on the rivet heaps above the Cryocore Archive."
    },
    {
     "id": "rivet_moraine_shade_carrier",
@@ -33955,7 +33955,7 @@
      6,
      14
     ],
-    "design_note": "Scraplings, haulers and blooms on the rivet heaps by the Cryocore Archive."
+    "design_note": "Scraplings, haulers and blooms on the rivet heaps above the Cryocore Archive."
    },
    {
     "id": "rivet_moraine_nullbloom",
@@ -34345,7 +34345,7 @@
      6,
      14
     ],
-    "design_note": "Scraplings, haulers and blooms on the rivet heaps by the Cryocore Archive."
+    "design_note": "Scraplings, haulers and blooms on the rivet heaps above the Cryocore Archive."
    }
   ]
  },
@@ -34870,7 +34870,7 @@
      6,
      14
     ],
-    "design_note": "Assisting brutes in the pens by the camp."
+    "design_note": "Slag-forged brutes in the pens by the camp."
    },
    {
     "id": "coupler_yards_coupler_mite",
@@ -36868,7 +36868,7 @@
      6,
      14
     ],
-    "design_note": "Wraiths and the riftling horde along the tear."
+    "design_note": "Wraiths and the riftling horde along the tear in the Veil."
    },
    {
     "id": "wraith_pour_riftling",
@@ -37534,7 +37534,7 @@
      6,
      14
     ],
-    "design_note": "Wraiths and the riftling horde along the tear."
+    "design_note": "Wraiths and the riftling horde along the tear in the Veil."
    },
    {
     "id": "stoker_heights_zero_stoker",
@@ -38038,7 +38038,7 @@
      6,
      14
     ],
-    "design_note": "Stokers and fleeing sparkwings; Kiln Prime walks the heights."
+    "design_note": "Stokers still feed the fire; Gorged Sparkwings sit charged on the dishes. Kiln Prime walks the heights."
    },
    {
     "id": "stoker_heights_sparkwing",
@@ -38542,7 +38542,7 @@
      6,
      14
     ],
-    "design_note": "Sparkwing: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "Stokers still feed the fire; Gorged Sparkwings sit charged on the dishes. Kiln Prime walks the heights. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "kiln_prime_arena",
@@ -39265,7 +39265,7 @@
      6,
      14
     ],
-    "design_note": "Array Sentinel: the field's bounty, passive, 4x HP and 6x EXP, only 30 on the map."
+    "design_note": "Glyph swarms drift between the columns round Gorged sentinels, half asleep on their posts. Gorged bounty: 30 on the map, 4x HP, 6x EXP."
    },
    {
     "id": "sentinel_colonnade_glyph_swarm",
@@ -39955,7 +39955,7 @@
      6,
      14
     ],
-    "design_note": "Glyph swarms drift between the columns, round a few sentinels still standing guard."
+    "design_note": "Glyph swarms drift between the columns round Gorged sentinels, half asleep on their posts."
    },
    {
     "id": "glyph_plaza",
@@ -41623,7 +41623,7 @@
      6,
      14
     ],
-    "design_note": "A second glyph farm by the sealed descent to the Lattice Heart."
+    "design_note": "Glyphs thicken by the sealed descent to the Lattice Heart."
    }
   ]
  },
@@ -41656,7 +41656,7 @@
      5,
      12
     ],
-    "design_note": "The dungeon's main farm: 40 ranged Weavers in an oval chamber; circle the crystal to break their line of fire and pull them together."
+    "design_note": "Lattice Weavers string new lines round a crystal; circle it to break their line of fire."
    },
    {
     "id": "weaver_loom",
@@ -41680,7 +41680,7 @@
      7,
      15
     ],
-    "design_note": "A hall of ranged Weavers on the short route to the chamber: line of sight is long, so players pull them back into the corridor."
+    "design_note": "Weavers at work on the short route to the Sovereign; pull them back into the corridor."
    },
    {
     "id": "spindle_hall",
@@ -41704,7 +41704,7 @@
      8,
      16
     ],
-    "design_note": "Weavers in a long machine hall on the far route to the chamber: pull them round the machines to close the range. The best Lattice Node farm."
+    "design_note": "Weavers in the long machine hall on the far route; the best Lattice Node farm."
    },
    {
     "id": "sovereign_chamber",
@@ -41728,7 +41728,7 @@
      300,
      420
     ],
-    "design_note": "The final boss, 5-7 minute respawn; reached from the loom or the hall."
+    "design_note": "The Lattice Sovereign, speaking with Ilvane Thorne's voice, and Aldric Venn's failing ward. The Long Watch keeps it silenced."
    }
   ]
  }

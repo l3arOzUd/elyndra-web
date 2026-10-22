@@ -158,8 +158,8 @@ export interface MonsterDef {
   bounty?: boolean;
   /** A boss's or elite's story (content/lore.ts BOSS_STORY), shown in the Monster Book. */
   story?: string;
-  /** Where it spawns: map and zone (spawn pocket) names, for the Monster Book. */
-  habitat?: { map_id: string; zone: string }[];
+  /** Where it spawns: map, zone (spawn pocket) and the zone's note, for the Monster Book. */
+  habitat?: { map_id: string; zone: string; note: string }[];
 }
 
 export type ItemCategory = "material" | "rare_material" | "consumable" | "equipment" | "charm" | "totem" | "quest";

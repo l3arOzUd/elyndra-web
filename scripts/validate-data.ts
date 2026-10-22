@@ -636,6 +636,9 @@ function checkLore(b: ContentBundle) {
     if (n.name === n.title || roleWords.test(n.name) || b.maps.some((m) => n.name.startsWith(m.name + " "))) report("error", "lore.npc_name", n.id, `"${n.name}" is a role, not a person's name`);
   }
   for (const m of b.maps) if (!m.intro) report("error", "lore.map_intro", m.id, "no intro shown on entering the map");
+  // Zone notes reach players through the Monster Book: no behaviour the game no longer has.
+  for (const z of b.spawn_zones) for (const p of z.pockets)
+    if (/(passive|assist(s|ing)?|flee(s|ing)?|fleeing)/i.test(p.design_note)) report("error", "lore.behaviour", `${z.map_id}/${p.id}`, `zone note describes old behaviour: "${p.design_note}"`);
   for (const m of b.monsters) {
     if ((m.archetype === "boss" || m.archetype === "elite") && !m.story) report("error", "lore.boss_story", m.id, `${m.name} has no story`);
     if (m.behavior === "aggressive" && /ignores? (travellers|anyone|everything|you)|leaves? them (alone|be)|until (struck|hit)|scatter|bolts? from|skims? away|only bites?/i.test(m.ecology))

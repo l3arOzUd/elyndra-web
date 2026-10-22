@@ -210,7 +210,7 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
   for (const z of zones) for (const p of z.pockets) for (const sp of p.species) {
     const m = monsters.find((x) => x.id === sp.monster_id);
     const zone = p.name.replace(/ \(.*\)$/, "");
-    if (m && !m.habitat?.some((h) => h.map_id === z.map_id && h.zone === zone)) (m.habitat ??= []).push({ map_id: z.map_id, zone });
+    if (m && !m.habitat?.some((h) => h.map_id === z.map_id && h.zone === zone)) (m.habitat ??= []).push({ map_id: z.map_id, zone, note: p.design_note });
   }
   items.sort((a, b) => a.id.localeCompare(b.id));
   monsters.sort((a, b) => a.id.localeCompare(b.id));

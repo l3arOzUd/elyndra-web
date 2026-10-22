@@ -408,3 +408,27 @@ export const ECOLOGY: Record<string, string> = {
   Sparkwing: "Birds that roost on the receiver dishes and feed on the static arcing between the masts. The Gorged ones are too charged to lift off and fight back only when struck.",
   "Array Sentinel": "Umbracrest's guard automatons. The Gorged ones stand idle in rings round the colonnade, drowsy with stored aether; they wake and fight only when struck.",
 };
+
+/** Dungeon zones as the Monster Book shows them ("Found in"), by "map id/zone name". */
+export const DUNGEON_ZONE_NOTE: Record<string, string> = {
+  "lum_dun_01/Root Tunnels": "The largest Barkwarden patrol under Lumeris, in a cavern you can circle while they close in as one wall.",
+  "lum_dun_01/Pump Hall": "The buried Aethrion pump hall; the Barkwardens still guard it, and one pull empties the hall.",
+  "lum_dun_01/Root Burrows": "A quieter side cavern of Barkwardens among the roots.",
+  "lum_dun_01/Heart Chamber": "Where the Hollowroot Warden sits fused with the roots, pulling the water east. It wakes again minutes after it is silenced.",
+  "ver_dun_01/Sap Conduits": "Spore Matrons stand in rings along the Engine's sap conduits, spitting from range. Pull them into a stack.",
+  "ver_dun_01/Piston Hall": "Pistonguards hold the hall round the main piston: one pull brings thirty of them.",
+  "ver_dun_01/Spore Lung": "A smaller nest of Matrons in the Engine's spore lung, close to the root lift.",
+  "ver_dun_01/Heart Chamber": "The Heartwood Regent's chamber, alone at the Engine's heart. It wakes again minutes after it is silenced.",
+  "sol_dun_01/Mirror Gallery": "Mirrorguards shoulder to shoulder among the mirrors they keep aligned; a round hall to circle.",
+  "sol_dun_01/Lens Foundry": "Lens-drones round the focusing engine that sends Solenia's light east.",
+  "sol_dun_01/Shaft of Noon": "Mirrorguards in the light-shaft; drag them into the corridor where they bunch up.",
+  "sol_dun_01/Heliostat Core": "The Heliostat Sovereign, alone under the great mirror. It wakes again minutes after it is silenced.",
+  "cry_dun_01/Cold Stacks": "Archive Specters drift between the data-stack rows; the rows make lanes for line skills.",
+  "cry_dun_01/Cryo Wards": "Cryo Lancers shoot across a round ward; pillars and crystal give cover, so close in.",
+  "cry_dun_01/Index Gallery": "Specters among the index shelves on the way to the vault, taken shelf by shelf.",
+  "cry_dun_01/Curator's Vault": "The Cryocore Curator guards Archon Ysra Callow's warnings here. It wakes again minutes after it is silenced.",
+  "noc_dun_01/Lattice Conduits": "Lattice Weavers string new lines round a crystal; circle it to break their line of fire.",
+  "noc_dun_01/The Loom": "Weavers at work on the short route to the Sovereign; pull them back into the corridor.",
+  "noc_dun_01/Spindle Hall": "Weavers in the long machine hall on the far route; the best Lattice Node farm.",
+  "noc_dun_01/Sovereign's Chamber": "The Lattice Sovereign, speaking with Ilvane Thorne's voice, and Aldric Venn's failing ward. The Long Watch keeps it silenced.",
+};
