@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-neutral-v3.png",
+  "prompt": "Precise object edit for a 2D animation sprite. Use supplied rear neutral as EDIT TARGET. Keep all pixels outside the anatomical RIGHT arm (image RIGHT) as unchanged as possible. Exact same square framing, scale, top valve height, feet positions and ground line. Change ONLY image-right arm into forward punch away from camera: elbow raised to shoulder level, forearm extends into depth behind torso, hand occluded by torso, only back of elbow and narrow shoulder outline visible on right. Do not swing laterally. Left arm remains lowered unchanged. Preserve tank, straps, copper patina, hatch hinge, all rivets, knees, heel plates. No body enlargement or repositioning. Transparent background, no steam, shadows, text or effects. Single full body rear sprite."
+}

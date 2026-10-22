@@ -3,24 +3,25 @@
   "sources": [
     "back-neutral-v3.png",
     "attack-back-windup.png",
-    "attack-back-impact.png"
+    "attack-back-impact-v2.png",
+    "attack-back-recovery.png"
   ],
   "sequence": [
     0,
     1,
     1,
     2,
-    1,
+    3,
     0
   ],
   "fps": 6.25,
-  "uniqueDrawings": 3,
+  "uniqueDrawings": 4,
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
-    "Impact body grows taller and feet shift.",
-    "Punch angles outward instead of directly away.",
-    "Closed clamp construction and elbow continuity need correction.",
-    "Dedicated recovery drawing missing; windup reused."
+    "Occluded impact arm reads as missing limb; depth cue needs work.",
+    "Closed clamp construction and elbow continuity still drift.",
+    "Recovery clamp pivot construction differs from neutral.",
+    "Surface details drift across drawings."
   ]
 }

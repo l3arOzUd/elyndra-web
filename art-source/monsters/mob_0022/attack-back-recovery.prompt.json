@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-neutral-v3.png",
+  "prompt": "Precise object edit of this rear neutral sprite. Create one recovery keyframe after a right-arm piston punch. Keep exact same square canvas, body scale, fixed feet, valves, tank, hatch, left arm, lighting and painted copper texture. ONLY image-RIGHT arm changes: upper arm angled down, elbow bent about 40 degrees, forearm lowering beside hip, TWO curved pincer jaws partly opening at hip height. The clamp is lower than the windup but higher than resting neutral. Retain original mechanical hinges and two-jaw claw; no human fist or fingers. Viewed straight from behind, face invisible. No extra joints. Full body transparent background no shadow, steam or text. Do not enlarge or reposition torso or legs."
+}

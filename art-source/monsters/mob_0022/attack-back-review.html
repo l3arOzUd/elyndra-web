@@ -1,14 +1,14 @@
 <!doctype html><meta charset="utf-8"><title>Brine Automaton attack study</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}canvas{background:#697a80;max-width:100%}button,input{margin:12px}a{color:#acf}</style>
 <h1>Brine Automaton: rear piston punch study</h1>
-<p>Three drawings, six timing frames. Unapproved draft: impact grows taller, the punch angles outward, and the closed clamp needs hinge continuity review. Recovery currently reuses windup. Fixed whole-image scale; no per-frame warping.</p>
+<p>Four drawings, six timing frames. Unapproved draft: impact scale is closer to neutral, but arm occlusion reads as a missing limb; closed clamp and recovery hinges still drift. Dedicated recovery is now included. Fixed whole-image scale; no per-frame warping.</p>
 <button id="replay">Replay</button><input id="frame" type="range" min="0" max="5" value="0"><span id="label"></span><br><canvas id="preview" width="512" height="512"></canvas><canvas id="small" width="128" height="128"></canvas>
 <p><a href="attack-review.html">Attack study</a> | <a href="death-review.html">Shutdown study</a> | <a href="hit-review.html">Hit study</a> | <a href="walk-review.html">Walk study</a> | <a href="idle-review.html">Idle study</a> | <a href="/">Game</a></p>
 <script type="module">
-const files=['back-neutral-v3.png','attack-back-windup.png','attack-back-impact.png'];
-const urls=import.meta.glob('./{back-neutral-v3,attack-back-windup,attack-back-impact}.png',{eager:true,query:'?url',import:'default'});
+const files=['back-neutral-v3.png','attack-back-windup.png','attack-back-impact-v2.png','attack-back-recovery.png'];
+const urls=import.meta.glob('./{back-neutral-v3,attack-back-windup,attack-back-impact-v2,attack-back-recovery}.png',{eager:true,query:'?url',import:'default'});
 const art=await Promise.all(files.map(src=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=urls[`./${src}`]})));
-const sequence=[0,1,1,2,1,0],g=preview.getContext('2d'),s=small.getContext('2d');let timer;
+const sequence=[0,1,1,2,3,0],g=preview.getContext('2d'),s=small.getContext('2d');let timer;
 function draw(f){clearTimeout(timer);frame.value=f;label.textContent=`Frame ${f+1}: ${['neutral','windup','impact','recovery'][sequence[f]]}`;g.clearRect(0,0,512,512);g.drawImage(art[sequence[f]],0,0,512,512);s.clearRect(0,0,128,128);s.drawImage(preview,0,0,128,128)}
 function play(f=0){draw(f);if(f<5)timer=setTimeout(()=>play(f+1),160)}
 replay.onclick=()=>play();frame.oninput=()=>draw(Number(frame.value));draw(0);window.__brineRearAttack={ready:true,draw,sequence};
