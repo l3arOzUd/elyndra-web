@@ -210,12 +210,12 @@ export class Fx {
       geo = new THREE.PlaneGeometry(len, w).translate(len / 2, 0, 0).rotateX(-Math.PI / 2);
       Object.assign(extra, { uMode: 2, uLen: len, uWid: w });
     } else geo = new THREE.CircleGeometry(r, 64).rotateX(-Math.PI / 2);
-    const tail = 200;
+    const tail = 160;
     this.ground("telegraph", color, targeted ? aimX : x, targeted ? aimZ : z, 0.07, castMs + tail, (_t, u, _m, age) => {
       const p = age / castMs;
       u.uProgress.value = Math.min(1, p);
       u.uFlash.value = p < 1 ? 0 : 1 - (age - castMs) / tail;
-      u.uOpacity.value = p < 1 ? Math.min(1, age / 120) : u.uFlash.value;
+      u.uOpacity.value = p < 1 ? Math.min(1, age / 120) : u.uFlash.value ** 2;
     }, { geo, heading: Math.atan2(aimZ - z, aimX - x), extra });
     if (s.cast_ms > 0) this.channel(x, z, color, castMs);
   }
@@ -316,7 +316,7 @@ export class Fx {
           u.uOpacity.value = Math.min(1, age / 100) * (1 - t * t);
         });
         for (let i = 0; i < 3; i++) {
-          const ring = new THREE.Mesh(new THREE.RingGeometry(0.85, 1, 48).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color, transparent: true, depthWrite: false }));
+          const ring = new THREE.Mesh(new THREE.RingGeometry(0.93, 1, 64).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color, transparent: true, depthWrite: false }));
           ring.position.set(aimX, 0.1 + i * 0.01, aimZ);
           ring.scale.setScalar(r * (1 + i * 0.25));
           this.push(ring, "shrink", 500 + i * 120, { grow: r * (1 + i * 0.25) });
@@ -518,7 +518,7 @@ export class Fx {
       if (l.kind === "fn") l.step!(t, l.age);
       else if (l.kind === "shrink") {
         l.obj.scale.setScalar(Math.max(0.2, l.grow * (1 - t)));
-        mat.opacity = 0.8 * (1 - t * 0.6);
+        mat.opacity = 0.6 * (1 - t * 0.6);
       } else if (l.kind === "flash") {
         mat.opacity = 0.95 * (1 - t);
       } else if (l.kind === "beam") {

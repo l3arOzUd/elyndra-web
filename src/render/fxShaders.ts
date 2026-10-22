@@ -98,7 +98,7 @@ const waveFrag = /* glsl */ `
     float w = uWidth * (1.0 - uT * 0.6);
     float ring = exp(-pow((d - 0.92) / w, 2.0));
     float wash = smoothstep(0.2, 0.92, d) * 0.12 * (1.0 - uT);
-    vec3 col = mix(uColor, vec3(1.0), ring * 0.55 * (1.0 - uT));
+    vec3 col = mix(uColor, vec3(1.0), ring * 0.25 * (1.0 - uT));
     emit(col, (ring + wash) * uOpacity);
   }
 `;
