@@ -714,10 +714,12 @@ export class Game {
     const ox = e.pos.x, oz = e.pos.z;
     e.pos.x += (latest.x - e.pos.x) * k;
     e.pos.z += (latest.y - e.pos.z) * k;
-    const moving = Math.hypot(e.pos.x - ox, e.pos.z - oz) > dt * 0.8;
-    if (moving) e.actor.heading = headingOf(e.pos.x - ox, e.pos.z - oz);
-    else if (latest.st === EntState.Attack || latest.st === EntState.Cast) e.actor.heading = latest.h;
-    if (!e.dead) e.actor.setBase(moving ? "walk" : "idle", e.msPerCell);
+    // Face the server's heading, never the glide: after a short key tap our
+    // prediction is a little ahead of the newest sample, and settling back onto
+    // it would turn us around.
+    const walking = latest.st === EntState.Walk && Math.hypot(e.pos.x - ox, e.pos.z - oz) > dt * 0.8;
+    if (walking || latest.st === EntState.Attack || latest.st === EntState.Cast) e.actor.heading = latest.h;
+    if (!e.dead) e.actor.setBase(walking ? "walk" : "idle", e.msPerCell);
   }
 
   frame(dt: number) {
