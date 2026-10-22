@@ -105,3 +105,41 @@ export class ClickMarker {
     (this.bead.material as THREE.MeshBasicMaterial).opacity = fade;
   }
 }
+
+const TARGET_TEX = () => texture(256, (g, s) => {
+  const c = s / 2, r = s * 0.34;
+  // Soft inner glow, then a thin double ring with a dark edge.
+  const glow = g.createRadialGradient(c, c, r * 0.55, c, c, r * 1.05);
+  glow.addColorStop(0, "rgba(255,255,255,0)");
+  glow.addColorStop(0.8, "rgba(255,255,255,.16)");
+  glow.addColorStop(1, "rgba(255,255,255,0)");
+  g.fillStyle = glow; g.fillRect(0, 0, s, s);
+  for (const [stroke, w, rr] of [["rgba(20,12,4,.6)", 10, r], ["#ffffff", 5, r], ["rgba(255,255,255,.45)", 2, r * 0.84]] as const) {
+    g.strokeStyle = stroke; g.lineWidth = w;
+    g.beginPath(); g.arc(c, c, rr, 0, Math.PI * 2); g.stroke();
+  }
+  // Four arrowheads outside the ring, pointing in.
+  for (let i = 0; i < 4; i++) {
+    g.save(); g.translate(c, c); g.rotate((i * Math.PI) / 2);
+    g.beginPath(); g.moveTo(0, -r - 6); g.lineTo(15, -r - 34); g.lineTo(-15, -r - 34); g.closePath();
+    g.lineJoin = "round"; g.strokeStyle = "rgba(20,12,4,.65)"; g.lineWidth = 7; g.stroke();
+    g.fillStyle = "#ffffff"; g.fill();
+    g.restore();
+  }
+});
+
+/** The selected target: a gold ring with four arrowheads, turning slowly. */
+export class TargetMarker {
+  readonly mesh: THREE.Mesh;
+  constructor(color: number) {
+    this.mesh = flat(TARGET_TEX(), 1, 1, color, 0.95);
+    this.mesh.visible = false;
+  }
+
+  /** Follow a target at (x, z); `now` in ms drives the turn and a soft pulse. */
+  place(x: number, z: number, now: number) {
+    this.mesh.position.set(x, 0.07, z);
+    this.mesh.rotation.y = now / 2400;
+    this.mesh.scale.setScalar(1.45 + Math.sin(now / 260) * 0.05);
+  }
+}

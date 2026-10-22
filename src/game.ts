@@ -10,8 +10,8 @@ import { wayfarerSprite } from "./render/paperDoll";
 import { skillAnimation } from "./render/combatAnimation";
 import { SpriteActor } from "./render/spriteActor";
 import type { SpriteDef } from "./render/spriteDef";
-import { animate, buildMap, makeCellMarker, type BuiltMap } from "./render/terrain";
-import { ClickMarker, makeHoverCell } from "./render/markers";
+import { animate, buildMap, type BuiltMap } from "./render/terrain";
+import { ClickMarker, TargetMarker, makeHoverCell } from "./render/markers";
 import { gameCursor } from "./ui/cursors";
 import { headingOf } from "./shared/dir";
 import type { Cell } from "./shared/path";
@@ -97,7 +97,7 @@ export class Game {
   /** A loot pile clicked from afar: picked up once we reach it. */
   private pendingPickup: number | null = null;
   private hoverMarker = makeHoverCell();
-  private targetMarker = makeCellMarker(0xffd36b);
+  private targetMarker = new TargetMarker(0xffd36b);
   private clickMarker = new ClickMarker(0x9be7ff);
   private clickAge = 1;
   private raycaster = new THREE.Raycaster();
@@ -146,7 +146,7 @@ export class Game {
     const sun = new THREE.DirectionalLight(0xfff0d0, 1.8);
     sun.position.set(-40, 80, 30);
     this.scene.add(sun);
-    this.scene.add(this.hoverMarker, this.targetMarker, this.clickMarker.group);
+    this.scene.add(this.hoverMarker, this.targetMarker.mesh, this.clickMarker.group);
     conn.onMessage((m) => this.onMessage(m));
     hud.onSkill = (s) => this.cast(s);
     hud.onUse = (i) => conn.send({ t: "use", item: i });
@@ -811,8 +811,8 @@ export class Game {
     }
     const target = this.targetId !== null ? this.ents.get(this.targetId) : undefined;
     this.hud.setTarget(target && !target.dead ? target : null);
-    this.targetMarker.visible = !!target;
-    if (target) { this.targetMarker.position.set(target.pos.x, 0.06, target.pos.z); this.targetMarker.scale.setScalar(1.6 + Math.sin(now / 150) * 0.12); }
+    this.targetMarker.mesh.visible = !!target;
+    if (target) this.targetMarker.place(target.pos.x, target.pos.z, now);
     this.clickAge = Math.min(1, this.clickAge + dt * 1.4);
     this.clickMarker.update(this.clickAge);
 

@@ -324,9 +324,3 @@ export function animate(built: BuiltMap, dt: number) {
     if (s) o.rotation[s.axis] += s.speed * dt;
   }
 }
-
-export function makeCellMarker(color: number): THREE.Mesh {
-  const m = new THREE.Mesh(new THREE.RingGeometry(0.32, 0.45, 32).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.8, depthWrite: false }));
-  m.position.y = 0.06;
-  return m;
-}
