@@ -117,7 +117,7 @@ p(
   "",
   "### v2.0 → v2.1 (" + today + ")",
   "- **มอนหนึ่งชนิดอยู่แผนที่เดียว**: เดิม 71 จาก 94 ชนิดออกซ้ำ 2–3 แผนที่ ตอนนี้ทุกชนิดมีแผนที่บ้านแผนที่เดียว (ตารางต้นหัวข้อ 6) เลือกตามเควสต์ที่ผูกมอนกับแผนที่ก่อน แล้วจึงตามเลเวล ตำแหน่ง ขนาด และจำนวนของ pocket เดิมไม่เปลี่ยน เปลี่ยนเฉพาะชนิดมอนและข้อความที่อ้างถึง Validator ตรวจด้วยกฎ `spawn.one_map`",
-  "- **ลากมอนได้ทั้งแผนที่**: เลิกใช้ leash 35 ช่อง มอนไล่ไม่จำกัดระยะจนกว่าเป้าหมายตาย ออกจากแผนที่ หรือเข้าแคมป์ (`elyndra-server/internal/game/ai.go`) ค่า `leash_radius` ในข้อมูลยังอยู่ แต่เซิร์ฟเวอร์ไม่ใช้ตอนไล่แล้ว",
+  "- **ลากมอนได้ทั้งแผนที่**: เลิกใช้ leash 35 ช่อง มอนไล่ไม่จำกัดระยะจนกว่าเป้าหมายตาย หรือออกจากแผนที่ แคมป์ในฟิลด์ไม่กันมอนแล้ว (`elyndra-server/internal/game/ai.go`) ค่า `leash_radius` ในข้อมูลยังอยู่ แต่เซิร์ฟเวอร์ไม่ใช้ตอนไล่แล้ว",
   "- **มอนระยะประชิดกองรวมจุดเดียว**: มอนที่ระยะโจมตี ≤ 1.5 ช่องเดินเข้าช่องเดียวกับผู้เล่นโดยไม่สนว่าช่องเต็ม ฝูงที่ลากมาจึงรวมเป็นกองเดียวให้ AoE โดนทั้งหมด มอนระยะไกลยังรักษาระยะเหมือนเดิม ฝั่ง client เลื่อนตำแหน่งวาดแต่ละตัวไม่เกิน 0.35 ช่องให้เห็นเป็นกอง",
   "- **Pocket ที่เปลี่ยนจาก elite เป็นมอนฝูง** 3 จุด (Old Pump House, Executor Court, Executor Walk) เพิ่มจำนวนเป็น 25–30 ตัว respawn 7–16 วินาที",
   "- **กล้องล็อกมุม 50°** สำหรับตัวละคร 2D หมุนและเอียงไม่ได้ ซูมได้ (`?freecam` ใน URL ปลดล็อกสำหรับ debug)",
@@ -194,7 +194,7 @@ p(
   "- **Spatial hash** สำหรับ AoE และ interest management (ส่งเฉพาะ entity ในรัศมี 30 ช่อง และส่งแค่ส่วนที่เปลี่ยน)",
   "- **Flow field** ต่อผู้เล่นที่ถูกไล่ (Dijkstra รัศมี 40 ช่อง) ทำให้มอน 60 ตัวไม่ต้องคำนวณ A* แยกกัน",
   "- **กองมอน (stacking)**: มอนระยะประชิด (ระยะโจมตี ≤ `StackRange` 1.5) เดินเข้าช่องของผู้เล่นและกองรวมกัน ไม่จำกัดจำนวนต่อช่อง ส่วนมอนระยะไกลยังจองช่อง (ไม่เกิน 2 ตัวต่อช่อง และช่องที่มีมอนแล้วมี penalty)",
-  "- **AI**: IDLE → CHASE → ATTACK → RETURN ไล่ได้ทั้งแผนที่ (ไม่มี leash) กลับบ้านเมื่อเป้าหมายตาย ออกจากแผนที่ หรือเข้าแคมป์ ความถี่การตัดสินใจขึ้นกับระยะ: 10 Hz ภายใน 12 ช่อง, 5 Hz ถึง 30 ช่อง, 1–2 Hz ไกลกว่านั้น แคมป์เป็นกำแพงสำหรับมอน",
+  "- **AI**: IDLE → CHASE → ATTACK → RETURN ไล่ได้ทั้งแผนที่ (ไม่มี leash) กลับบ้านเมื่อเป้าหมายตาย หรือออกจากแผนที่ (แคมป์ในฟิลด์ไม่กันมอน ตามเข้าไปตีได้) ความถี่การตัดสินใจขึ้นกับระยะ: 10 Hz ภายใน 12 ช่อง, 5 Hz ถึง 30 ช่อง, 1–2 Hz ไกลกว่านั้น",
   "- **AoE**: query → กรองตามรูปทรง → เรียงตามระยะแล้วตาม id ไม่มีลิมิตจำนวนเป้า ตีทุกตัวในพื้นที่ ใช้ HP ครั้งเดียวต่อ hit การตายและรางวัลเป็น idempotent",
   "- **Spawn director**: รักษา target ของแต่ละ pocket ด้วย respawn queue + jitter 2–8 วินาที, ห่างผู้เล่น ≥6 ช่อง, ห้ามเกิดในแคมป์ ถ้าต่ำกว่า min_alive จะดึง respawn ให้เร็วขึ้น",
   "- **Loot**: personal loot รวมกองในรัศมี 1.5 ช่อง, pickup ใช้ request id + transaction ใน SQLite จึงไม่ซ้ำ",
@@ -209,7 +209,7 @@ p(
   "| ฝูงใหญ่พอให้ลาก | field มีมอนรวม 80–150 ตัว และ AoE ตีทุกตัวในพื้นที่ ไม่มีลิมิตเป้า | Validator `spawn.population`, `spawn.horde_band` |",
   "| ความหนาแน่น | ทุก pocket มีพื้นที่เดิน ≥ 5 ช่องต่อมอน และไม่ห่างเกิน 60 ช่องต่อมอน (ยกเว้น pocket ของ elite/boss) | Validator `spawn.density` |",
   "| เกิดทั่วแผนที่ | ทุ่ง 192×192 แต่ละโซนครองลิ่มรอบลานกลาง มอนเกิดทั่วลิ่ม ราว 62% ของแผนที่ ~33 ช่องต่อมอน แต่ละชนิดมีจำนวนของตัวเอง | `content/world.ts`, Validator `spawn.density` |",
-  "| ลากได้ทั้งแผนที่ | ไม่มี leash ไล่จนเป้าหมายตาย ออกจากแผนที่ หรือเข้าแคมป์ | `ai.go` (`validTarget`) |",
+  "| ลากได้ทั้งแผนที่ | ไม่มี leash ไล่จนเป้าหมายตายหรือออกจากแผนที่ แคมป์ไม่ใช่ safe zone | `ai.go` (`validTarget`) |",
   "| กองรวมจุดเดียว | มอนระยะประชิดตีจาก 8 ช่องรอบผู้เล่น ไม่เข้าช่องผู้เล่น รวมเป็นกองเดียวในช่องข้างตัวที่มีมอนมากที่สุด | `ai.go` (`stacks`, `inReach`, `joinPile`), test `TestHordeChaseStacks` |",
   "| เลิกไล่ | มอนอยู่ตรงนั้น HP เท่าเดิม นอกเขตเกิดเดินสุ่มต่อ ตายแล้วจึงเกิดใหม่ในเขต | `ai.go` (`endChase`, `roam`), test `TestWorldDragAcrossFieldStaysWhereLeft` |",
   "",
@@ -266,7 +266,7 @@ for (const r of regions) {
   for (const m of rm) {
     const l = layout(m);
     p(`#### ${m.name} (\`${m.id}\`)`, "");
-    p(`*${l.theme}* · arrival [${m.arrival.join(", ")}] · ถนน ${l.roads.length} เส้น · สิ่งกีดขวาง ${l.blockers.length} · props ${l.props.length} · safe areas ${l.safe_areas.length}`, "");
+    p(`*${l.theme}* · arrival [${m.arrival.join(", ")}] · ถนน ${l.roads.length} เส้น · สิ่งกีดขวาง ${l.blockers.length} · props ${l.props.length} · safe areas ${l.safe_areas.length} · camps ${l.camps?.length ?? 0}`, "");
     if (l.landmarks.length) p("**Landmarks:** " + l.landmarks.map((x) => `${x.name} [${x.x},${x.y}] — ${x.note}`).join(" · "), "");
     const out = warps.filter((w) => w.from_map === m.id);
     if (out.length) p("**ทางออก:** " + out.map((w) => `→ ${map.get(w.to_map)?.name} (trigger [${w.trigger_rect.join(",")}], ลงที่ [${w.spawn_point.join(",")}]${w.requirements.length ? `, ต้องมี ${w.requirements.map((q) => { const [k, v] = q.split(":"); return k === "item" ? item.get(v)?.name ?? v : q; }).join(", ")}` : ""})`).join(" · "), "");
@@ -314,7 +314,7 @@ table(["ID", "ชื่อ", "ประเภท", "Rarity", "ราคาขา
   (sources.get(i.id) ?? []).join("; ")]));
 
 // Warps.
-p("## 9. Warp ทั้งหมด", "", "ทุก warp มีคู่ขากลับ (`pair_id`), trigger ไม่ทับกันในแผนที่เดียวกัน และจุดลงอยู่ใน safe area ห่าง trigger ขากลับอย่างน้อย 7 ช่อง", "");
+p("## 9. Warp ทั้งหมด", "", "ทุก warp มีคู่ขากลับ (`pair_id`), trigger ไม่ทับกันในแผนที่เดียวกัน และจุดลงอยู่ใน safe area หรือแคมป์ ห่าง trigger ขากลับอย่างน้อย 7 ช่อง", "");
 table(["ID", "จาก", "ไป", "Trigger", "จุดลง", "คู่", "เงื่อนไข"], warps.map((w) => [w.id, map.get(w.from_map)?.name ?? w.from_map, map.get(w.to_map)?.name ?? w.to_map, `[${w.trigger_rect.join(",")}]`, `[${w.spawn_point.join(",")}]`, w.pair_id, w.requirements.join(", ") || "—"]));
 
 // Skills.

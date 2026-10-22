@@ -123,7 +123,7 @@ export function terrainBlendMask(layout: MapLayout): { data: Uint8Array; zones: 
     traceShape(zone[i].g, p.shape);
     zone[i].g.fill();
   }
-  for (const [x, y, w, h] of layout.safe_areas) {
+  for (const [x, y, w, h] of [...layout.safe_areas, ...(layout.camps ?? [])]) {
     if (w >= layout.width && h >= layout.height || layout.ground === "stone") continue;
     const g = zone[2].g;
     g.globalAlpha = 0.55;

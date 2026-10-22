@@ -6,7 +6,7 @@
 import type {
   DefenseKind, GearSlot, ItemDef, StatId, SystemsDef, AffixDef, CharmTypeDef, TotemTypeDef,
 } from "../src/data/schema";
-import { POW_FLAT_ATK, POW_WEAPON_PCT, TIER_LEVELS, defenseSet, materialPrice, playerAt, weaponAttack } from "./model";
+import { POW_FLAT_ATK, POW_WEAPON_PCT, TIER_LEVELS, basicRankPoints, defenseSet, materialPrice, playerAt, weaponAttack } from "./model";
 
 export const STATS: StatId[] = ["pow", "luk", "agi", "dex", "int", "vit"];
 
@@ -199,13 +199,12 @@ export const SYSTEMS_RULES: SystemsDef["rules"] = {
 export const MASTERY: SystemsDef["mastery"] = {
   max_rank: 10,
   /**
-   * Points to reach rank r: per_rank * (r-1)^2. A use earns a point per
-   * monster it hit, taunted or dashed through and per player it buffed
-   * (elites and bosses weigh more), at most use_cap a use.
+   * Points to reach rank r: the skill's rank_points * (r-1)^2 (model.ts
+   * rankPoints: rank 10 at about Lv80). A use earns a point per monster it
+   * hit, taunted or dashed through and per player it buffed (elites and
+   * bosses weigh more), at most use_cap a use; a basic attack a point a hit.
    */
-  per_rank: 200,
-  /** Basic attacks hit far more often: their points per rank. */
-  basic_per_rank: 600,
+  basic_per_rank: basicRankPoints(SYSTEMS_RULES.basic_attack_ms),
   use_cap: 10,
   level_window: 10,
   elite_weight: 5,

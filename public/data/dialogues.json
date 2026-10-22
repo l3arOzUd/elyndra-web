@@ -44,7 +44,7 @@
   "npc_id": "npc_lum_east_gate_guard",
   "lines": [
    "East Gate. Dawnmeadow lies beyond, and past it every field in turn, each ten levels harder.",
-   "If you see three dozen of anything chasing you, run for a camp."
+   "If you see three dozen of anything chasing you, run for the town. The camps will not save you."
   ]
  },
  {
@@ -75,7 +75,7 @@
   "id": "dlg_lum_dawnmeadow_medic",
   "npc_id": "npc_lum_dawnmeadow_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -106,7 +106,7 @@
   "id": "dlg_lum_moonbrook_vale_medic",
   "npc_id": "npc_lum_moonbrook_vale_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -161,7 +161,7 @@
   "id": "dlg_ver_graftwood_wilds_medic",
   "npc_id": "npc_ver_graftwood_wilds_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -192,7 +192,7 @@
   "id": "dlg_ver_elderroot_expanse_medic",
   "npc_id": "npc_ver_elderroot_expanse_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -247,7 +247,7 @@
   "id": "dlg_sol_saffron_wastes_medic",
   "npc_id": "npc_sol_saffron_wastes_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -294,7 +294,7 @@
   "id": "dlg_tha_pearl_coast_medic",
   "npc_id": "npc_tha_pearl_coast_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -349,7 +349,7 @@
   "id": "dlg_cry_frostfire_divide_medic",
   "npc_id": "npc_cry_frostfire_divide_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -396,7 +396,7 @@
   "id": "dlg_emb_cinder_expanse_medic",
   "npc_id": "npc_emb_cinder_expanse_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -451,7 +451,7 @@
   "id": "dlg_noc_veil_rift_medic",
   "npc_id": "npc_noc_veil_rift_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },
@@ -482,7 +482,7 @@
   "id": "dlg_noc_meridian_gate_medic",
   "npc_id": "npc_noc_meridian_gate_medic",
   "lines": [
-   "Sit a while. Nothing follows you into the camp.",
+   "Sit a while, but keep your blade close. Nothing out here stops at the camp fence.",
    "Drag them as far as you like, but come back breathing."
   ]
  },

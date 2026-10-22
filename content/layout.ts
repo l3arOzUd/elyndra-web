@@ -92,7 +92,7 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
       if (nx >= 0 && ny >= 0 && nx < w && ny < h && isRoad[ny * w + nx]) return true;
     }
     // In a town the whole map is safe; only keep scatter off small safe areas (camps).
-    if (d.safe_areas.some((r) => (d.type !== "town" || r[2] * r[3] < w * h) && x >= r[0] - 1 && y >= r[1] - 1 && x < r[0] + r[2] + 1 && y < r[1] + r[3] + 1)) return true;
+    if ([...d.safe_areas, ...(d.camps ?? [])].some((r) => (d.type !== "town" || r[2] * r[3] < w * h) && x >= r[0] - 1 && y >= r[1] - 1 && x < r[0] + r[2] + 1 && y < r[1] + r[3] + 1)) return true;
     if (keepClear.some(([cx, cy, cr]) => Math.max(Math.abs(cx - x), Math.abs(cy - y)) <= cr)) return true;
     return false;
   };
@@ -145,6 +145,7 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
     props,
     landmarks: d.landmarks,
     safe_areas: d.safe_areas,
+    ...(d.camps?.length ? { camps: d.camps } : {}),
     walk_rle: encodeWalk(walk),
   };
 }

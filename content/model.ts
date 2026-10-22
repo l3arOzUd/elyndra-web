@@ -64,6 +64,40 @@ export function expToNext(level: number): number {
   return Math.round(minutesPerLevel(level) * killsPerMinute(level) * swarmExp(level));
 }
 
+/** Farming minutes from reaching level `from` to reaching level `to`. */
+export function minutesBetween(from: number, to: number): number {
+  let m = 0;
+  for (let l = from; l < to; l++) m += minutesPerLevel(l);
+  return m;
+}
+
+// --- skill ranks ----------------------------------------------------------
+// A skill used all along reaches rank 10 at about character Lv RANK_MAX_LEVEL.
+// Rank r needs rankPoints * (r-1)^2, so rank 10 needs 81x. The player fights
+// RANK_COMBAT_SHARE of the time and casts each skill on cooldown, with
+// RANK_SLACK_S between casts for the other skills and the pulling. A big pull
+// fills use_cap every cast; a dash crosses a few monsters; a solo beacon buffs
+// one player. Basic attacks swing half the fighting time.
+
+export const RANK_MAX_LEVEL = 80;
+const RANK_COMBAT_SHARE = 0.6;
+const RANK_SLACK_S = 1;
+const RANK_BASIC_SHARE = 0.5;
+
+/** Points a typical use earns, before use_cap. */
+const rankPointsPerUse = (shape: string, useCap: number) => (shape === "ally" ? 1 : shape === "mobility" ? 4 : useCap);
+
+export function rankPoints(s: { shape: string; cast_ms: number; cooldown_ms: number; unlock_level: number }, useCap: number): number {
+  const usesPerMin = 60 / (s.cooldown_ms / 1000 + s.cast_ms / 1000 + RANK_SLACK_S) * RANK_COMBAT_SHARE;
+  const total = usesPerMin * rankPointsPerUse(s.shape, useCap) * minutesBetween(s.unlock_level, RANK_MAX_LEVEL);
+  return Math.max(10, Math.round(total / 81 / 10) * 10);
+}
+
+export function basicRankPoints(attackMs: number): number {
+  const hitsPerMin = 60000 / attackMs * RANK_COMBAT_SHARE * RANK_BASIC_SHARE;
+  return Math.round(hitsPerMin * minutesBetween(1, RANK_MAX_LEVEL) / 81 / 10) * 10;
+}
+
 // --- monster archetypes ---------------------------------------------------
 // hits:  basic attacks a same-level reference player needs (the AoE skills,
 //        at 1.7x-4x, clear a swarm pack in two casts)

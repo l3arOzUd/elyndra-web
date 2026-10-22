@@ -81,8 +81,7 @@
  },
  "mastery": {
   "max_rank": 10,
-  "per_rank": 200,
-  "basic_per_rank": 600,
+  "basic_per_rank": 340,
   "use_cap": 10,
   "level_window": 10,
   "elite_weight": 5,

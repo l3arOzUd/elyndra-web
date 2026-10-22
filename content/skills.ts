@@ -11,10 +11,12 @@
 // multi-hit numbers); the server meets Armour and ailment rolls as one hit.
 
 import type { SkillDef } from "../src/data/schema";
+import { rankPoints } from "./model";
+import { MASTERY } from "./systems";
 
-const base = { target_sort: "distance_then_entity_id" as const };
+const base = { target_sort: "distance_then_entity_id" as const, rank_points: 0 };
 
-export const skills: SkillDef[] = [
+const defs: SkillDef[] = [
   { ...base, id: "cleaving_arc", name: "Cleaving Arc", job: "vanguard", shape: "cone", angle_deg: 100, radius: 6, range: 6, cast_ms: 300, cooldown_ms: 1750, resource_cost: 7, damage_multiplier: 0.68, hits: 2, hit_ms: 180, unlock_level: 1, vfx: "fx_cleaving_arc", implemented: true },
   { ...base, id: "iron_cyclone", name: "Iron Cyclone", job: "vanguard", shape: "circle", radius: 5, range: 0, cast_ms: 500, cooldown_ms: 4200, resource_cost: 13, damage_multiplier: 1.15, hits: 4, hit_ms: 180, unlock_level: 5, vfx: "fx_iron_cyclone", implemented: true },
   { ...base, id: "anchor_shout", name: "Anchor Shout", job: "vanguard", shape: "taunt", radius: 8, range: 0, cast_ms: 200, cooldown_ms: 6300, resource_cost: 9, damage_multiplier: 0, unlock_level: 8, vfx: "fx_anchor_shout", implemented: true },
@@ -29,3 +31,6 @@ export const skills: SkillDef[] = [
   { ...base, id: "gearstorm", name: "Gearstorm", job: "machinist", shape: "circle", radius: 5, range: 0, cast_ms: 700, cooldown_ms: 5600, resource_cost: 17, damage_multiplier: 1.46, hits: 5, hit_ms: 170, unlock_level: 5, vfx: "fx_gearstorm", implemented: true },
   { ...base, id: "pulse_beacon", name: "Pulse Beacon", job: "machinist", shape: "ally", radius: 8, range: 0, cast_ms: 500, cooldown_ms: 8400, resource_cost: 18, damage_multiplier: 0, unlock_level: 8, vfx: "fx_pulse_beacon", implemented: true },
 ];
+
+// Points to rank 2 (rank r needs rank_points * (r-1)^2): rank 10 at about Lv80.
+export const skills: SkillDef[] = defs.map((s) => ({ ...s, rank_points: rankPoints(s, MASTERY.use_cap) }));

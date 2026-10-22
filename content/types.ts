@@ -60,6 +60,8 @@ export interface MapDesign {
   scatter: { kind: PropKind; count: number; area?: Rect; block: number; scale?: [number, number] }[];
   landmarks: Landmark[];
   safe_areas: Rect[];
+  /** Field camps: trampled ground, NPCs and the arrival, but no protection (monsters follow you in). */
+  camps?: Rect[];
   horde?: { min_alive: number; max_alive: number };
   pockets: SpawnPocket[];
   npcs: Omit<NpcDef, "map_id">[];

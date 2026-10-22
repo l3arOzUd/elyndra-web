@@ -52,6 +52,8 @@ const armourCut = (armour: number, damage: number) => Math.min(0.9, armour / (ar
 
 const rectsOverlap = (a: Rect, b: Rect, pad = 0) =>
   a[0] - pad < b[0] + b[2] && b[0] - pad < a[0] + a[2] && a[1] - pad < b[1] + b[3] && b[1] - pad < a[1] + a[3];
+/** Where arrivals, warp landings and NPCs belong: safe areas (towns) and field camps. */
+const restAreas = (l: { safe_areas: Rect[]; camps?: Rect[] }) => [...l.safe_areas, ...(l.camps ?? [])];
 const inRect = (x: number, y: number, r: Rect, pad = 0) => x >= r[0] - pad && y >= r[1] - pad && x < r[0] + r[2] + pad && y < r[1] + r[3] + pad;
 
 class Grid {
@@ -246,8 +248,8 @@ function checkWarps(b: ContentBundle, g: Map<string, Grid>) {
       }
       const dest = b.maps.find((m) => m.id === w.to_map);
       const destLayout = b.layouts.get(w.to_map);
-      if (dest && destLayout && !dest.safe_zone && !destLayout.safe_areas.some((r) => inRect(sx, sy, r)))
-        report("error", "warp.landing_unsafe", where, `lands outside any safe area on ${w.to_map}`);
+      if (dest && destLayout && !dest.safe_zone && !restAreas(destLayout).some((r) => inRect(sx, sy, r)))
+        report("error", "warp.landing_unsafe", where, `lands outside any safe area or camp on ${w.to_map}`);
     }
   }
   for (const [mapId, list] of byMap) {
@@ -330,7 +332,7 @@ function checkSpawns(b: ContentBundle, g: Map<string, Grid>) {
         area += r[2] * r[3];
         if (r[0] < 0 || r[1] < 0 || r[0] + r[2] > m.width_cells || r[1] + r[3] > m.height_cells) report("error", "spawn.bounds", where, `rect ${r} outside map`);
         if (grid) walkable += grid.walkableIn(r);
-        for (const s of layout?.safe_areas ?? []) if (rectsOverlap(r, s)) report("error", "spawn.safe_overlap", where, `rect ${r} overlaps safe area ${s}`);
+        for (const s of layout ? restAreas(layout) : []) if (rectsOverlap(r, s)) report("error", "spawn.safe_overlap", where, `rect ${r} overlaps safe area or camp ${s}`);
         for (const w of warpsFrom(m.id)) if (rectsOverlap(r, w.trigger_rect, 6)) report("error", "spawn.warp_overlap", where, `rect ${r} within 6 cells of ${w.id}`);
       }
       if (area && walkable / area < 0.55) report("error", "spawn.blocked", where, `only ${((walkable / area) * 100).toFixed(0)}% of the pocket is walkable`);
@@ -376,7 +378,7 @@ function checkNpcs(b: ContentBundle, g: Map<string, Grid>) {
     if (!m || !grid) continue;
     if (!grid.walk(x, y)) report("error", "npc.position", n.id, `[${x},${y}] is not walkable`);
     if (m.type !== "town" && !["guard", "scout", "teleporter", "healer"].includes(n.role)) report("warning", "npc.placement", n.id, `${n.role} outside a town`);
-    if (!(layout?.safe_areas ?? []).some((s) => inRect(x, y, s)) && !m.safe_zone) report("error", "npc.unsafe", n.id, "not inside a safe area: monsters could reach it");
+    if (!(layout ? restAreas(layout) : []).some((s) => inRect(x, y, s)) && !m.safe_zone) report("error", "npc.unsafe", n.id, "not inside a safe area or camp");
     for (const o of b.npcs) if (o !== n && o.map_id === n.map_id && Math.max(Math.abs(o.position[0] - x), Math.abs(o.position[1] - y)) < 2 && o.id > n.id)
       report("error", "npc.crowded", n.id, `stands within 1 cell of ${o.id}`);
     for (const w of b.warps.filter((w) => w.from_map === n.map_id)) if (inRect(x, y, w.trigger_rect, 2)) report("error", "npc.warp", n.id, `stands on/next to ${w.id}`);
@@ -573,13 +575,14 @@ function checkMaps(b: ContentBundle) {
     if (r && m.type !== "town" && (m.recommended_level_min < r.level_range[0] - 2 || m.recommended_level_max > r.level_range[1] + 2))
       report("error", "map.region_levels", m.id, `Lv${m.recommended_level_min}-${m.recommended_level_max} outside ${r.name} ${r.level_range.join("-")}`);
     if (m.type === "town" && !m.safe_zone) report("error", "map.town_safe", m.id, "town is not a safe zone");
-    if (m.type !== "town" && !(b.layouts.get(m.id)?.safe_areas.length)) report("warning", "map.no_safe_area", m.id, "no safe area to rest or land in");
+    const lm = b.layouts.get(m.id);
+    if (m.type !== "town" && lm && !restAreas(lm).length) report("warning", "map.no_camp", m.id, "no camp to land in");
     const l = b.layouts.get(m.id);
     if (l) {
       const [ax, ay] = m.arrival;
       const grid = new Grid(l.width, l.height, l.walk_rle);
       if (!grid.walk(ax, ay)) report("critical", "map.arrival", m.id, `arrival [${ax},${ay}] is not walkable`);
-      if (!m.safe_zone && !l.safe_areas.some((r) => inRect(ax, ay, r))) report("error", "map.arrival_safe", m.id, "arrival is not inside a safe area");
+      if (!m.safe_zone && !restAreas(l).some((r) => inRect(ax, ay, r))) report("error", "map.arrival_safe", m.id, "arrival is not inside a safe area or camp");
     }
     if (!b.npcs.some((n) => n.map_id === m.id)) report("error", "map.no_npc", m.id, `${m.type} has no NPC`);
   }

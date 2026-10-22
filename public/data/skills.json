@@ -1,6 +1,7 @@
 [
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 1800,
   "id": "cleaving_arc",
   "name": "Cleaving Arc",
   "job": "vanguard",
@@ -20,6 +21,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 950,
   "id": "iron_cyclone",
   "name": "Iron Cyclone",
   "job": "vanguard",
@@ -38,6 +40,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 720,
   "id": "anchor_shout",
   "name": "Anchor Shout",
   "job": "vanguard",
@@ -54,6 +57,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 290,
   "id": "sundering_pulse",
   "name": "Sundering Pulse",
   "job": "all",
@@ -72,6 +76,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 840,
   "id": "prism_field",
   "name": "Prism Field",
   "job": "arcanist",
@@ -90,6 +95,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 1070,
   "id": "aether_nova",
   "name": "Aether Nova",
   "job": "arcanist",
@@ -108,6 +114,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 640,
   "id": "gravity_coil",
   "name": "Gravity Coil",
   "job": "arcanist",
@@ -124,6 +131,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 1320,
   "id": "meridian_lance",
   "name": "Meridian Lance",
   "job": "strider",
@@ -143,6 +151,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 1450,
   "id": "splitshot_array",
   "name": "Splitshot Array",
   "job": "strider",
@@ -162,6 +171,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 420,
   "id": "dash_circuit",
   "name": "Dash Circuit",
   "job": "strider",
@@ -177,6 +187,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 1120,
   "id": "coil_mine",
   "name": "Coil Mine",
   "job": "machinist",
@@ -195,6 +206,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 750,
   "id": "gearstorm",
   "name": "Gearstorm",
   "job": "machinist",
@@ -213,6 +225,7 @@
  },
  {
   "target_sort": "distance_then_entity_id",
+  "rank_points": 50,
   "id": "pulse_beacon",
   "name": "Pulse Beacon",
   "job": "machinist",

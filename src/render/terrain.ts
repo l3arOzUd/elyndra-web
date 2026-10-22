@@ -122,8 +122,8 @@ function paintGround(l: MapLayout, region: RegionDef | undefined): HTMLCanvasEle
     g.fillStyle = colour;
     g.fillRect(x, y, 1.6, 1.6);
   }
-  // Safe areas (camps, plazas): trampled ground.
-  for (const [x, y, w, h] of l.safe_areas) {
+  // Safe areas and camps: trampled ground.
+  for (const [x, y, w, h] of [...l.safe_areas, ...(l.camps ?? [])]) {
     if (w >= l.width && h >= l.height) continue;
     g.fillStyle = "rgba(210,190,140,0.25)";
     g.fillRect(x * T, y * T, w * T, h * T);

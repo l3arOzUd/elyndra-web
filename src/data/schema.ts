@@ -109,8 +109,10 @@ export interface MapLayout {
   blockers: { kind: BlockerKind; shape: Shape }[];
   props: Prop[];
   landmarks: Landmark[];
-  /** No-combat, no-spawn areas: town plazas, field camps, warp landings. */
+  /** No-combat areas monsters stay out of: towns. */
   safe_areas: Rect[];
+  /** Field camps: drawn as trampled ground, but monsters follow you in and you can fight there. */
+  camps?: Rect[];
   /** Run-length walk grid, row-major: [value, count, value, count, ...]; 1 = walkable. */
   walk_rle: number[];
 }
@@ -265,7 +267,7 @@ export interface SkillFeat { kind: "big_use" | "boss_use" | "heal_total"; min?: 
 export interface SystemsDef {
   rules: Record<string, number> & { caps: Record<string, [number, number]> };
   mastery: {
-    max_rank: number; per_rank: number; basic_per_rank: number; use_cap: number; level_window: number; elite_weight: number; boss_weight: number;
+    max_rank: number; basic_per_rank: number; use_cap: number; level_window: number; elite_weight: number; boss_weight: number;
     /** Per rank (index rank-1), cumulative: [more damage %, increased area %, SP cut %, cooldown cut %]. */
     rank_table: [number, number, number, number][];
     basic_more_per_rank: number; basic_speed_rank: number; basic_speed_inc: number; basic_sp_rank: number; basic_sp_pct: number;
@@ -406,6 +408,8 @@ export interface SkillDef {
   hits?: number;
   hit_ms?: number;
   unlock_level: number;
+  /** Skill rank r needs rank_points * (r-1)^2 points (content/model.ts rankPoints). */
+  rank_points: number;
   target_sort: "distance_then_entity_id";
   vfx: string;
   /** Wired into server + client and played; false = data only. */

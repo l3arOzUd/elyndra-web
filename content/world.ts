@@ -340,7 +340,7 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
     border: t.border ? { width: 4, kind: t.border.kind } : { width: 4, kind: "forest" },
     roads, blockers, props,
     scatter: t.scatter.map((s) => ({ kind: s.kind, count: Math.min(240, s.count * 3), block: s.block, scale: s.scale })),
-    landmarks, safe_areas: f.dungeon ? [CAMP_W, CAMP_E, gate.safe] : [CAMP_W, CAMP_E], horde: FIELD_ALIVE, pockets,
+    landmarks, safe_areas: [], camps: f.dungeon ? [CAMP_W, CAMP_E, gate.safe] : [CAMP_W, CAMP_E], horde: FIELD_ALIVE, pockets,
     npcs: [
       { id: `npc_${stem(f)}_scout`, name: `${f.name} Scout`, position: [9, 91], facing: "E", role: "scout", dialogue_id: `dlg_${stem(f)}_scout`, shop_id: null },
       { id: `npc_${stem(f)}_medic`, name: `${f.name} Medic`, position: [19, 100], facing: "E", role: "healer", dialogue_id: `dlg_${stem(f)}_medic`, shop_id: null },
@@ -358,7 +358,7 @@ function fieldDialogues(f: FieldSpec, look: Lookup, next?: FieldSpec): DialogueD
   }).join(". ");
   return [
     { id: `dlg_${stem(f)}_scout`, npc_id: `npc_${stem(f)}_scout`, lines: [`${f.name} runs from Lv ${f.levels[0]} by this camp to Lv ${f.levels[1]} in the east.`, `${zoneLine}.`] },
-    { id: `dlg_${stem(f)}_medic`, npc_id: `npc_${stem(f)}_medic`, lines: ["Sit a while. Nothing follows you into the camp.", "Drag them as far as you like, but come back breathing."] },
+    { id: `dlg_${stem(f)}_medic`, npc_id: `npc_${stem(f)}_medic`, lines: ["Sit a while, but keep your blade close. Nothing out here stops at the camp fence.", "Drag them as far as you like, but come back breathing."] },
     { id: `dlg_${stem(f)}_transit`, npc_id: `npc_${stem(f)}_transit`, lines: ["Back to Avelorn whenever you want it. The ride is on the Guild."] },
     { id: `dlg_${stem(f)}_post`, npc_id: `npc_${stem(f)}_post`, lines: [next ? `East is ${next.name}, Lv ${next.levels[0]} and up.` : "This is as far as the road goes.", "I can send you back to Avelorn."] },
   ];
@@ -386,7 +386,7 @@ const QUEST_SUMMARY: Record<string, string> = {
 const DIALOGUE_LINES: Record<string, string[]> = {
   dlg_lum_merchant: ["Rations, tonics, feathers, all fresh. Prices are Guild-fixed, so don't haggle.", "Sell me your field materials, one by one or the whole bag at once."],
   dlg_lum_teleporter: ["The transit lattice runs to the camp of every field. A little coin keeps the crystals charged.", "The further the field, the more it costs."],
-  dlg_lum_east_gate_guard: ["East Gate. Dawnmeadow lies beyond, and past it every field in turn, each ten levels harder.", "If you see three dozen of anything chasing you, run for a camp."],
+  dlg_lum_east_gate_guard: ["East Gate. Dawnmeadow lies beyond, and past it every field in turn, each ten levels harder.", "If you see three dozen of anything chasing you, run for the town. The camps will not save you."],
   dlg_lum_north_gate_guard: ["The North Gate is closed: the road north runs through the fields now.", "Take the East Gate, or the transit by the square."],
   dlg_ver_merchant: ["Rations and tonics, marked up for the long road.", "Bring me sap and scales; the alchemists pay well for anything green."],
   dlg_ver_heartwood_keeper: ["Root lift's working. Avelorn, or back up to Elderroot Expanse?", "Don't touch the sap lines; they bite."],

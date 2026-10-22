@@ -680,13 +680,14 @@ export class Hud {
     const ranks = $('rank-list'); ranks.replaceChildren();
     for (const [skill, [rank, kills, next]] of Object.entries(m.mastery).sort(([a], [b]) => (a === 'basic' ? -1 : b === 'basic' ? 1 : a.localeCompare(b)))) {
       const s = this.c.skills.get(skill), row = el('div', 'rank-row'), bar = el('div', 'objective-progress'), fill = el('span');
-      const ms = this.c.systems.mastery, prev = (skill === 'basic' ? ms.basic_per_rank : ms.per_rank) * (rank - 1) * (rank - 1);
+      const ms = this.c.systems.mastery, prev = (skill === 'basic' ? ms.basic_per_rank : s?.rank_points ?? 0) * (rank - 1) * (rank - 1);
       fill.style.width = (next ? Math.min(100, (kills - prev) / Math.max(1, next - prev) * 100) : 100) + '%'; bar.append(fill);
       const awake = awakenStatus(this.c, m, skill), open = this.openRank === skill;
       const head = el('button', 'rank-head'); head.setAttribute('aria-expanded', String(open)); head.title = 'Show what every rank gives';
       head.append(skillIcon(skill), el('strong', '', s?.name ?? 'Basic attack'), el('b', awake.state === 'awakened' ? 'awakened' : '', awake.state === 'awakened' ? 'Awakened' : 'Rank ' + rank), el('span', 'rank-toggle', open ? '▾' : '▸'));
       head.onclick = () => { this.openRank = open ? null : skill; this.renderCharacter(); };
-      row.append(head, bar, el('small', 'muted', next ? kills.toLocaleString() + ' / ' + next.toLocaleString() + ' targets hit' : kills.toLocaleString() + ' targets hit · max rank'));
+      const per = skill === 'basic' ? '1 point per hit' : '1 point per target · max ' + ms.use_cap + ' per use';
+      row.append(head, bar, el('small', 'muted', (next ? kills.toLocaleString() + ' / ' + next.toLocaleString() + ' points' : kills.toLocaleString() + ' points · max rank') + ' · ' + per));
       if (open) row.append(this.rankTable(skill, rank, awake));
       ranks.append(row);
     }
