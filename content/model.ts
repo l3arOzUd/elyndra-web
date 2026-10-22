@@ -99,11 +99,6 @@ export const AGGRO_RADIUS: Record<Behavior, number> = { passive: 0, flee: 0, ass
 export const LEASH_RADIUS = 35;
 
 export const PLAYER_MS_PER_CELL = 150;
-/** Monsters run at 0.9 of a player's base speed, so a player without move speed
- * only just outruns a chase. Elites and bosses keep their archetype's slower pace. */
-export const MONSTER_SPEED_RATIO = 0.9;
-export const MONSTER_MS_PER_CELL = Math.round(PLAYER_MS_PER_CELL / MONSTER_SPEED_RATIO);
-
 /** One species per field is a bounty: passive, a few on the map, slow to kill and
  * worth far more EXP. Every other monster attacks on sight. */
 export const BOUNTY = { hp: 4, exp: 6, alive: 30 } as const;
@@ -138,7 +133,7 @@ export function monsterStats(level: number, archetype: Archetype, mods: StatMods
     defense,
     attack_range: mods.range ?? a.range,
     attack_ms: Math.round(a.attack_ms * (mods.attack_speed ?? 1)),
-    move_speed_ms: archetype === "elite" || archetype === "boss" ? Math.round(a.move_ms * (mods.speed ?? 1)) : MONSTER_MS_PER_CELL,
+    move_speed_ms: Math.round(a.move_ms * (mods.speed ?? 1)),
     base_exp,
     job_exp: Math.max(1, Math.round(base_exp * 0.62)),
   };

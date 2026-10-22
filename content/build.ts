@@ -49,6 +49,15 @@ function dropsFor(m: RegionDesign["monsters"][number]): DropDef[] {
 }
 
 /** Client sprite bindings: real art where it exists, tinted stand-ins elsewhere. */
+/** Per-sprite size on top of the archetype scale, so each painting stands at the size of
+ * its creature beside an ~80 px player (measured in game at the default zoom): bugs and
+ * critters at half to two-thirds of the player, the heron and the treant about as tall. */
+const ART_SIZE: Record<string, number> = {
+  dustwing_2d: 1.7, sapdrone_2d: 1.8, ambermite_2d: 1.35, graftling_2d: 1.35, brookfin_2d: 1.3, lunari_2d: 1.3,
+  rotroot_2d: 1.35, mosskin_2d: 1.3, sporeling_2d: 1.3, craglet_2d: 1.25, thornback_2d: 1.35,
+  reedstalker_2d: 1.6, barkwarden_2d: 1.6, mosskin: 1.3,
+};
+
 const ELEMENT_TINT: Record<string, [number, number, number]> = {
   earth: [1.1, 0.95, 0.7], nature: [0.8, 1.1, 0.75], wind: [0.9, 1.05, 1.15], water: [0.7, 0.95, 1.25], fire: [1.3, 0.75, 0.55],
   ice: [0.85, 1.05, 1.35], shadow: [0.75, 0.6, 1.05],
@@ -147,8 +156,9 @@ export function buildContent(regions: RegionDesign[], OUT: string, spriteIndexPa
         behavior: m.behavior, ...s, aggro_radius: AGGRO_RADIUS[m.behavior], leash_radius: LEASH_RADIUS,
         drops: dropsFor(m), ecology: m.ecology, art_brief: m.art_brief, sprite: m.sprite ?? m.id, ...(m.bounty ? { bounty: true } : {}),
       });
-      // Size on screen follows the archetype for painted sprites and placeholders alike.
-      const scale = m.archetype === "boss" ? 2.4 : m.archetype === "elite" ? 1.6 : m.archetype === "bruiser" || m.archetype === "construct" ? 1.25 : 1;
+      // Size on screen: the archetype's scale times the painting's own size (ART_SIZE).
+      const archetypeScale = m.archetype === "boss" ? 2.4 : m.archetype === "elite" ? 1.6 : m.archetype === "bruiser" || m.archetype === "construct" ? 1.25 : 1;
+      const scale = Math.round(archetypeScale * (ART_SIZE[m.sprite ?? "mosskin"] ?? 1) * 100) / 100;
       spriteIndex[m.id] = m.sprite
         ? (scale === 1 ? { sprite: m.sprite } : { sprite: m.sprite, scale })
         : { sprite: "mosskin", tint: ELEMENT_TINT[m.element] ?? [0.8, 0.8, 0.8], scale, placeholder: true };
