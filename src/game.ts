@@ -108,7 +108,8 @@ export class Game {
   private moveSeq = 0;
   /** WASD keys held (physical codes), the latest last: it picks the direction. */
   private heldDirs: string[] = [];
-  private keyWalk = { dir: "", at: 0 };
+  /** The WASD direction last sent to the server (map axes, unit length or zero). */
+  private steerDir: [number, number] = [0, 0];
   /** Left button held after a ground click: keep walking toward the cursor. */
   private holdWalk = { on: false, at: 0 };
   /** Client-side prediction of our own walk. */
@@ -468,11 +469,6 @@ export class Game {
     this.clickAge = 0;
   }
 
-  /**
-   * WASD walks in the four screen directions while held (the latest key wins,
-   * no diagonals): the walk is re-aimed a few cells ahead every 250 ms, and
-   * letting go stops at the next cell.
-   */
   /** Click and hold on the ground repeats the click every 200 ms at the cell
    * under the cursor (marker included), so the walk follows the mouse. */
   private updateHoldWalk(now: number) {
@@ -482,34 +478,52 @@ export class Game {
     if (p) this.walkTo([Math.floor(p.x), Math.floor(p.z)]);
   }
 
-  private updateKeyWalk(now: number) {
+  /**
+   * WASD steers: the held keys add up to one of 8 screen directions (W+D is
+   * up-right, A+D cancel out), sent to the server only when it changes. The
+   * server moves us freely in it at our own speed; updateSelf predicts the
+   * same steps so the walk is smooth, not cell by cell.
+   */
+  private updateKeyWalk() {
     const me = this.self;
-    if (!me || !this.grid || me.dead) return;
-    const code = this.heldDirs[this.heldDirs.length - 1];
-    if (!code) {
-      if (this.keyWalk.dir) {
-        const [dx, dy] = this.keyDir(this.keyWalk.dir);
-        this.keyWalk.dir = "";
-        const stop: Cell = [Math.floor(me.pos.x + dx * 0.5), Math.floor(me.pos.z + dy * 0.5)];
-        if (this.grid.walkable(stop[0], stop[1])) this.walkTo(stop, false);
-      }
-      return;
+    let sx = 0, sy = 0;
+    for (const code of this.heldDirs) { sx += WASD[code][0]; sy += WASD[code][1]; }
+    // Screen to map axes (the camera's yaw counts), at unit length.
+    const c = Math.cos(this.cam.yaw), s = Math.sin(this.cam.yaw);
+    let x = sx * c - sy * s, y = sx * s + sy * c;
+    const l = Math.hypot(x, y);
+    if (l < 1e-6 || !me || me.dead) x = y = 0;
+    else { x = Math.round((x / l) * 1e4) / 1e4; y = Math.round((y / l) * 1e4) / 1e4; }
+    if (x === this.steerDir[0] && y === this.steerDir[1]) return;
+    this.steerDir = [x, y];
+    this.conn.send({ t: "steer", dir: [x, y] });
+    if (x || y) {
+      this.predicted = null;
+      this.targetId = null;
+      this.pendingTalk = null;
+      this.pendingPickup = null;
+      this.holdWalk.on = false;
     }
-    if (code === this.keyWalk.dir && now - this.keyWalk.at < 250) return;
-    this.keyWalk = { dir: code, at: now };
-    const [dx, dy] = this.keyDir(code);
-    const cx = Math.floor(me.pos.x), cy = Math.floor(me.pos.z);
-    let k = 0;
-    while (k < 4 && this.grid.walkable(cx + dx * (k + 1), cy + dy * (k + 1))) k++;
-    if (k > 0) this.walkTo([cx + dx * k, cy + dy * k], false);
   }
 
-  /** A WASD key as a grid step, W being screen-up (the camera's yaw counts). */
-  private keyDir(code: string): [number, number] {
-    const [sx, sy] = WASD[code];
-    const c = Math.cos(this.cam.yaw), s = Math.sin(this.cam.yaw);
-    const x = sx * c - sy * s, y = sx * s + sy * c;
-    return Math.abs(x) >= Math.abs(y) ? [Math.sign(x), 0] : [0, Math.sign(y)];
+  /** Our own steering step, the server's rule: slide along walls, no squeezing
+   * between two blocked corner cells. */
+  private steerStep(e: Ent, dt: number) {
+    const grid = this.grid!;
+    const [ux, uy] = this.steerDir;
+    const budget = (dt * 1000) / e.msPerCell;
+    const free = (x: number, z: number) => {
+      const cx = Math.floor(x), cz = Math.floor(z), ox = Math.floor(e.pos.x), oz = Math.floor(e.pos.z);
+      return grid.walkable(cx, cz) && (cx === ox || cz === oz || grid.walkable(cx, oz) || grid.walkable(ox, cz));
+    };
+    const dx = ux * budget, dz = uy * budget;
+    let moved = true;
+    if (free(e.pos.x + dx, e.pos.z + dz)) { e.pos.x += dx; e.pos.z += dz; }
+    else if (dx && free(e.pos.x + dx, e.pos.z)) e.pos.x += dx;
+    else if (dz && free(e.pos.x, e.pos.z + dz)) e.pos.z += dz;
+    else moved = false;
+    e.actor.heading = headingOf(ux, uy);
+    e.actor.setBase(moved ? "walk" : "idle", e.msPerCell);
   }
 
   private bindInput() {
@@ -542,6 +556,7 @@ export class Game {
         }
         return;
       }
+      if (this.steerDir[0] || this.steerDir[1]) return; // WASD is walking us
       const pile = this.pickPile();
       if (pile) {
         const me = this.self;
@@ -668,6 +683,12 @@ export class Game {
 
   private updateSelf(e: Ent, dt: number) {
     const latest = e.samples[e.samples.length - 1];
+    if ((this.steerDir[0] || this.steerDir[1]) && !e.dead && this.grid && performance.now() >= this.castingUntil) {
+      this.steerStep(e, dt);
+      // Reconcile: if the server disagrees by more than 2.5 cells, trust it.
+      if (Math.hypot(latest.x - e.pos.x, latest.y - e.pos.z) > 2.5 && this.conn.serverNow() - latest.t < 300) e.pos.set(latest.x, 0, latest.y);
+      return;
+    }
     if (this.predicted && !e.dead) {
       // Walk our own path now; the server follows ~1 RTT later.
       const p = this.predicted;
@@ -704,7 +725,7 @@ export class Game {
     const dtMs = dt * 1000;
     const renderT = this.conn.serverNow() - INTERP_MS;
     const now = performance.now();
-    this.updateKeyWalk(now);
+    this.updateKeyWalk();
     this.updateHoldWalk(now);
     for (const e of this.ents.values()) {
       const prevState = e.state;

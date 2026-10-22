@@ -13,6 +13,8 @@ export const enum EntState {
 export type ClientMsg =
   | { t: "hello"; v: number; name: string; job?: string }
   | { t: "move"; seq: number; to: [number, number] }
+  /** WASD: walk freely in this direction (map axes, unit length); [0, 0] stops. */
+  | { t: "steer"; dir: [number, number] }
   | { t: "attack"; target: number }
   | { t: "cast"; skill: string; aim: [number, number] }
   | { t: "pickup"; req: string; loot: number[] }
