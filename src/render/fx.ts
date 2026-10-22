@@ -30,7 +30,7 @@ export const RARITY_COLORS: Record<string, number> = { normal: 0xd9b46a, magic: 
 type Uniforms = Record<string, THREE.IUniform>;
 
 interface Live {
-  obj: THREE.Mesh; age: number; life: number; grow: number;
+  obj: THREE.Mesh | THREE.Sprite; age: number; life: number; grow: number;
   kind: "burst" | "aura" | "shrink" | "flash" | "beam" | "spark" | "bolt" | "fn";
   /** ms before it shows (staggered rings). */
   delay?: number;
@@ -86,7 +86,7 @@ export class Fx {
     }
   }
 
-  private push(mesh: THREE.Mesh, kind: Live["kind"], life: number, o: Partial<Live> = {}) {
+  private push<T extends THREE.Mesh | THREE.Sprite>(mesh: T, kind: Live["kind"], life: number, o: Partial<Live> = {}): T {
     mesh.visible = !(o.delay && o.delay > 0);
     this.scene.add(mesh);
     this.live.push({ obj: mesh, age: 0, life, grow: 0, kind, ...o });
@@ -169,22 +169,31 @@ export class Fx {
     }, { geo, heading, delay: o.delay, extra: { uLen: len, uWid: wid, uGrow: 0, uTail: o.tail ? 1 : 0 } });
   }
 
-  /** An arrow streak flying out to `len`. */
+  /**
+   * A painted arrow loosed along `angle`: it flies out to `len` through the
+   * air, dipping as it goes with its streak of light behind it, and kicks
+   * up sparks where it lands.
+   */
   private arrow(x: number, z: number, color: number, angle: number, len: number, delay: number) {
-    const shape = new THREE.Shape();
-    shape.moveTo(0.8, -0.045);
-    shape.lineTo(len - 0.5, -0.045);
-    shape.lineTo(len - 0.5, -0.18);
-    shape.lineTo(len, 0);
-    shape.lineTo(len - 0.5, 0.18);
-    shape.lineTo(len - 0.5, 0.045);
-    shape.lineTo(0.8, 0.045);
-    shape.closePath();
-    const mat = glowMat(color, 0.95);
-    const m = new THREE.Mesh(new THREE.ShapeGeometry(shape).rotateX(-Math.PI / 2), mat);
-    m.position.set(x, 0.16, z);
+    const L = 2.4, flight = 230;
+    const map = arrowTexture();
+    const mat = new THREE.MeshBasicMaterial({ map, color: map ? 0xffffff : color, transparent: true, opacity: 0, depthWrite: false, side: THREE.DoubleSide });
+    // Tip at the mesh's origin, so its position is where the arrow has reached.
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(L, L / 8).translate(-L / 2, 0, 0).rotateX(-Math.PI / 2), mat);
+    m.name = "arrow";
     m.rotation.y = -angle;
-    this.push(m, "fn", 320, { delay, step: (t) => { m.scale.set(0.15 + 0.85 * easeOut(Math.min(1, t * 3)), 1, 1); mat.opacity = 0.95 * (1 - t * t); } });
+    const c = Math.cos(angle), sn = Math.sin(angle);
+    const at = (t: number) => {
+      const d = 0.9 + (len - 0.9) * t;
+      m.position.set(x + c * d, 0.95 - 0.55 * t + Math.sin(t * Math.PI) * 0.2, z + sn * d);
+    };
+    at(0);
+    this.push(m, "fn", flight + 120, { delay, step: (_t, age) => {
+      at(Math.min(1, age / flight));
+      // Then it fades where it stuck.
+      mat.opacity = age < flight ? Math.min(1, age / 40) : 1 - (age - flight) / 120;
+    } });
+    this.sparks(x + c * len, z + sn * len, color, 3, { r: 0.05, y: 0.3, speed: 1.4, up: 1.6, g: 7, life: 360, delay: delay + flight, size: 0.06 });
   }
 
   // --- casting ----------------------------------------------------------------------
@@ -218,6 +227,7 @@ export class Fx {
       u.uOpacity.value = p < 1 ? Math.min(1, age / 120) : u.uFlash.value ** 2;
     }, { geo, heading: Math.atan2(aimZ - z, aimX - x), extra });
     if (s.cast_ms > 0) this.channel(x, z, color, castMs);
+    if (s.id === "coil_mine") this.mine(aimX, aimZ, castMs);
   }
 
   /** The caster channelling: a magic circle turning under them, motes drifting up into it. */
@@ -255,14 +265,11 @@ export class Fx {
         this.glow(x, z, color, 1.4, { life: 220 });
         return true;
       case "splitshot_array":
+        // A volley of five arrows per part, fanned across the cone.
         each((k, d) => {
-          for (let i = 0; i < 5; i++) this.arrow(x, z, color, heading + spread * 0.8 * (i / 4 - 0.5) + (k ? rand(-0.05, 0.05) : 0), r, d + i * 12);
-          this.glow(x, z, color, 1, { delay: d, life: 200 });
+          for (let i = 0; i < 5; i++) this.arrow(x, z, color, heading + spread * 0.8 * (i / 4 - 0.5) + (k ? rand(-0.05, 0.05) : 0), r, d + i * 14);
+          this.glow(x + Math.cos(heading) * 0.6, z + Math.sin(heading) * 0.6, color, 0.8, { delay: d, life: 160 });
         });
-        for (let i = 0; i < 5; i++) {
-          const a = heading + spread * 0.8 * (i / 4 - 0.5);
-          this.sparks(x + Math.cos(a) * r, z + Math.sin(a) * r, color, 3, { r: 0.1, speed: 1.5, up: 1.5, g: 6, delay: 110, life: 400 });
-        }
         return true;
       case "meridian_lance": {
         const len = s.length ?? 10, w = s.width ?? 2;
@@ -332,12 +339,9 @@ export class Fx {
         this.sparks(aimX, aimZ, color, 6, { r: r * 0.8, speed: 0.3, up: 3, life: 700, size: 0.1 });
         return true;
       case "coil_mine":
-        this.glow(aimX, aimZ, 0xffc070, r * 0.9, { life: 380 });
-        each((k, d) => {
-          this.wave(aimX, aimZ, color, r * 1.1, { delay: d, life: 460, width: 0.08 });
-          if (k) this.glow(aimX, aimZ, color, r * 0.7, { delay: d, life: 300 });
-        });
-        this.sparks(aimX, aimZ, color, 18, { r: 0.4, speed: 4, up: 5, g: 14, life: 750, size: 0.1 });
+        // The mine goes up in a fireball; the second part is a smaller blast.
+        each((k, d) => this.explosion(aimX, aimZ, k ? 0.65 : 1, r, d));
+        this.scorch(aimX, aimZ, r * 0.55);
         return true;
       case "gearstorm": {
         const life = step * ((s.hits ?? 1) - 1) + 420;
@@ -430,13 +434,129 @@ export class Fx {
     });
   }
 
-  /** A dash: a fading streak from where the player was to where it is going. */
-  trail(x: number, z: number, toX: number, toZ: number, color = 0x5adcb4) {
-    const dx = toX - x, dz = toZ - z;
-    this.beam(x, z, color, Math.atan2(dz, dx), Math.hypot(dx, dz) || 0.5, 1.1, { life: 480, grow: 120, tail: true });
-    this.glow(x, z, color, 1.2, { life: 300 });
-    this.glow(toX, toZ, color, 1.4, { delay: 120, life: 360 });
-    for (let i = 0; i < 10; i++) this.sparks(x + (dx * i) / 9, z + (dz * i) / 9, color, 1, { r: 0, speed: 0.8, up: 1.2, delay: (i / 9) * 120, life: 500 });
+  /**
+   * A dash: afterimages of the dasher strung along the path (`ghost` gives
+   * a copy of their sprite as drawn), speed lines racing ahead, dust kicked
+   * up where they pushed off and a ring of light where they land.
+   */
+  dash(x: number, z: number, toX: number, toZ: number, color: number, ghost?: () => THREE.Mesh) {
+    const dx = toX - x, dz = toZ - z, len = Math.hypot(dx, dz) || 0.5, heading = Math.atan2(dz, dx);
+    if (ghost) {
+      for (let i = 0; i < 5; i++) {
+        const g = ghost(), f = i / 5;
+        g.position.x += dx * f;
+        g.position.z += dz * f;
+        const u = (g.material as THREE.ShaderMaterial).uniforms;
+        u.opacity.value = 0;
+        this.push(g, "fn", 360, { delay: i * 28, step: (t) => { u.opacity.value = 0.6 * (1 - t) * (0.5 + 0.5 * f); } });
+      }
+    }
+    // Speed lines in the air, racing the dasher.
+    for (let i = 0; i < 8; i++) {
+      const l = rand(1.2, 2.2), side = rand(-0.45, 0.45), y = rand(0.25, 1.4);
+      const mat = new THREE.MeshBasicMaterial({ color: i % 3 ? color : 0xffffff, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide });
+      const line = new THREE.Mesh(new THREE.PlaneGeometry(l, 0.05).translate(-l / 2, 0, 0).rotateX(-Math.PI / 2), mat);
+      line.rotation.y = -heading;
+      const sx = -Math.sin(heading) * side, sz = Math.cos(heading) * side;
+      this.push(line, "fn", 260, { delay: i * 14, step: (t) => {
+        const d = (len + 0.8) * easeOut(t);
+        line.position.set(x + sx + Math.cos(heading) * d, y, z + sz + Math.sin(heading) * d);
+        mat.opacity = 0.85 * (1 - t);
+      } });
+    }
+    // Dust where they pushed off.
+    for (let i = 0; i < 4; i++) {
+      const dust = new THREE.Sprite(new THREE.SpriteMaterial({ map: puffTexture(), color: 0xb89c74, transparent: true, opacity: 0, depthWrite: false }));
+      const a = heading + Math.PI + rand(-0.9, 0.9), x0 = x + Math.cos(a) * 0.2, z0 = z + Math.sin(a) * 0.2;
+      dust.position.set(x0, 0.3, z0);
+      this.push(dust, "fn", rand(450, 650), { delay: i * 20, step: (t) => {
+        dust.position.set(x0 + Math.cos(a) * t * 0.7, 0.3 + t * 0.3, z0 + Math.sin(a) * t * 0.7);
+        dust.scale.setScalar(0.5 + 1.1 * easeOut(t));
+        dust.material.opacity = 0.6 * (1 - t);
+      } });
+    }
+    this.wave(toX, toZ, color, 1.6, { delay: 110, life: 380, width: 0.08 });
+    this.glow(toX, toZ, color, 1, { delay: 110, life: 260 });
+  }
+
+  /** A fireball at (x, z): a white flash, fire puffs that billow up and cool to smoke, debris, a shockwave. */
+  private explosion(x: number, z: number, size: number, radius: number, delay: number) {
+    const puff = puffTexture();
+    const sprite = (color: number, opacity: number, additive = false) => {
+      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: puff, color, transparent: true, opacity, depthWrite: false, blending: additive ? THREE.AdditiveBlending : THREE.NormalBlending }));
+      sp.material.rotation = Math.random() * Math.PI * 2;
+      return sp;
+    };
+    const flash = sprite(0xfff3c0, 0, true);
+    flash.position.set(x, 0.8 * size, z);
+    this.push(flash, "fn", 240, { delay, step: (t) => { flash.scale.setScalar(size * (1 + 3.2 * easeOut(Math.min(1, t * 3)))); flash.material.opacity = (1 - t) ** 1.5; } });
+    this.glow(x, z, 0xffc070, radius * 0.8 * size, { life: 320, delay });
+    // Fire, cooling to soot as it rises.
+    for (let i = 0; i < Math.round(8 * size); i++) {
+      const a = Math.random() * Math.PI * 2, d = Math.random() * 0.55 * size;
+      const x0 = x + Math.cos(a) * d, z0 = z + Math.sin(a) * d, y0 = rand(0.35, 0.9) * size;
+      const rise = rand(0.9, 1.6), spin = rand(-1.5, 1.5), grow = rand(1.8, 2.6) * size;
+      const fire = sprite(0xffffff, 0);
+      fire.position.set(x0, y0, z0);
+      this.push(fire, "fn", rand(650, 900), { delay: delay + i * 12, step: (t, age) => {
+        fire.position.set(x0 + Math.cos(a) * t * 0.5 * size, y0 + rise * (age / 1000), z0 + Math.sin(a) * t * 0.5 * size);
+        fire.scale.setScalar(0.7 * size + grow * easeOut(t));
+        fire.material.rotation = spin * (age / 1000);
+        fireColor(t, fire.material.color);
+        fire.material.opacity = t < 0.55 ? 1 : 1 - (t - 0.55) / 0.45;
+      } });
+    }
+    // Smoke left hanging.
+    for (let i = 0; i < Math.round(5 * size); i++) {
+      const x0 = x + rand(-0.6, 0.6) * size, z0 = z + rand(-0.6, 0.6) * size, y0 = rand(0.8, 1.4) * size;
+      const smoke = sprite(0x3a332e, 0);
+      smoke.position.set(x0, y0, z0);
+      this.push(smoke, "fn", rand(1100, 1500), { delay: delay + 160 + i * 40, step: (t, age) => {
+        smoke.position.y = y0 + 0.7 * (age / 1000);
+        smoke.scale.setScalar(size * (1.4 + 2 * easeOut(t)));
+        smoke.material.color.setHex(0x3a332e).lerp(SMOKE_LIGHT, t);
+        smoke.material.opacity = 0.55 * Math.min(1, t * 5) * (1 - t);
+      } });
+    }
+    this.wave(x, z, 0xff8a3c, radius * 1.1 * size, { delay, life: 460, width: 0.08 });
+    this.sparks(x, z, 0xffa040, Math.round(16 * size), { r: 0.3, speed: 4.5, up: 5, g: 14, life: 750, size: 0.09, delay });
+    // Clods of earth.
+    for (let i = 0; i < Math.round(8 * size); i++) {
+      const a = Math.random() * Math.PI * 2, sp = rand(2, 4) * size;
+      const clod = new THREE.Mesh(new THREE.OctahedronGeometry(rand(0.06, 0.12)), new THREE.MeshBasicMaterial({ color: 0x3b2a1c, transparent: true }));
+      clod.position.set(x, 0.3, z);
+      this.push(clod, "spark", rand(600, 850), { delay, v: [Math.cos(a) * sp, rand(4, 6.5) * size, Math.sin(a) * sp], g: 16 });
+    }
+  }
+
+  /** A burnt patch left on the ground, fading slowly. */
+  private scorch(x: number, z: number, radius: number) {
+    const mat = new THREE.MeshBasicMaterial({ map: puffTexture(), color: 0x1c130c, transparent: true, opacity: 0, depthWrite: false });
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(2, 2).rotateX(-Math.PI / 2), mat);
+    m.position.set(x, 0.05, z);
+    m.scale.setScalar(radius);
+    m.rotation.y = Math.random() * Math.PI * 2;
+    this.push(m, "fn", 2600, { step: (t) => { mat.opacity = 0.6 * Math.min(1, t * 12) * (t < 0.6 ? 1 : 1 - (t - 0.6) / 0.4); } });
+  }
+
+  /** Coil Mine being laid: a bronze mine with a copper coil drops on the aim, its light blinking faster until it blows. */
+  private mine(x: number, z: number, castMs: number) {
+    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.34, 0.4, 0.16, 20), new THREE.MeshBasicMaterial({ color: 0x6e5030 }));
+    const top = new THREE.Mesh(new THREE.CylinderGeometry(0.26, 0.3, 0.06, 20), new THREE.MeshBasicMaterial({ color: 0xb08850 }));
+    top.position.y = 0.1;
+    const coil = new THREE.Mesh(new THREE.TorusGeometry(0.3, 0.045, 6, 24).rotateX(Math.PI / 2), new THREE.MeshBasicMaterial({ color: 0xd88a40 }));
+    coil.position.y = 0.04;
+    const lightMat = new THREE.MeshBasicMaterial({ color: 0xff3a20, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false });
+    const light = new THREE.Mesh(new THREE.SphereGeometry(0.08, 10, 8), lightMat);
+    light.position.y = 0.17;
+    body.add(top, coil, light);
+    body.position.set(x, 1.5, z);
+    this.push(body, "fn", castMs, { step: (_t, age) => {
+      body.position.y = 0.08 + 1.4 * (1 - Math.min(1, age / 140)) ** 2;
+      const on = Math.sin((age / 1000) * (4 + 18 * (age / castMs)) * Math.PI * 2) > 0;
+      lightMat.opacity = on ? 1 : 0.25;
+      light.scale.setScalar(on ? 1.4 : 1);
+    } });
   }
 
   /**
@@ -560,5 +680,82 @@ export class Fx {
 
 function dispose(obj: THREE.Object3D) {
   obj.removeFromParent();
-  obj.traverse((o) => { if (o instanceof THREE.Mesh) { o.geometry.dispose(); (o.material as THREE.Material).dispose(); } });
+  obj.traverse((o) => {
+    if (o instanceof THREE.Mesh) { o.geometry.dispose(); (o.material as THREE.Material).dispose(); }
+    else if (o instanceof THREE.Sprite) o.material.dispose(); // sprites share one geometry
+  });
+}
+
+// --- painted textures (made once, on first use; none without a DOM, as in tests) ---
+
+const textures: Record<string, THREE.Texture | undefined> = {};
+function painted(name: string, w: number, h: number, draw: (g: CanvasRenderingContext2D) => void): THREE.Texture | undefined {
+  if (typeof document === "undefined") return undefined;
+  if (textures[name]) return textures[name];
+  const c = document.createElement("canvas");
+  c.width = w;
+  c.height = h;
+  draw(c.getContext("2d")!);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return (textures[name] = t);
+}
+
+/** A soft cloudy blob, white: tinted for fire, smoke, dust and scorch marks. */
+const puffTexture = () => painted("puff", 128, 128, (g) => {
+  const blobs = [[64, 64, 52, 0.9], [46, 54, 30, 0.5], [82, 50, 28, 0.5], [70, 80, 32, 0.45], [44, 78, 24, 0.4], [86, 76, 22, 0.4]];
+  for (const [x, y, r, a] of blobs) {
+    const grad = g.createRadialGradient(x, y, 0, x, y, r);
+    grad.addColorStop(0, `rgba(255,255,255,${a})`);
+    grad.addColorStop(0.55, `rgba(255,255,255,${a * 0.55})`);
+    grad.addColorStop(1, "rgba(255,255,255,0)");
+    g.fillStyle = grad;
+    g.fillRect(0, 0, 128, 128);
+  }
+});
+
+/**
+ * A painted arrow lying along +x, tip at the right edge: a golden streak
+ * of light behind it, red-and-cream fletching, an ash shaft, a steel head.
+ */
+const arrowTexture = () => painted("arrow", 512, 64, (g) => {
+  const trail = g.createLinearGradient(0, 0, 240, 0);
+  trail.addColorStop(0, "rgba(255,214,120,0)");
+  trail.addColorStop(1, "rgba(255,236,170,0.75)");
+  g.fillStyle = trail;
+  g.beginPath(); g.moveTo(0, 32); g.lineTo(240, 22); g.lineTo(240, 42); g.closePath(); g.fill();
+  g.fillStyle = "rgba(255,250,225,0.9)";
+  g.beginPath(); g.moveTo(60, 32); g.lineTo(240, 29); g.lineTo(240, 35); g.closePath(); g.fill();
+  // Fletching: two vanes, each a red feather with a cream stripe.
+  for (const side of [-1, 1]) {
+    g.fillStyle = "#b8322a";
+    g.beginPath(); g.moveTo(206, 32); g.quadraticCurveTo(222, 32 + side * 24, 236, 32 + side * 26); g.lineTo(298, 32 + side * 4); g.lineTo(290, 32); g.closePath(); g.fill();
+    g.fillStyle = "#f3e2bd";
+    g.beginPath(); g.moveTo(240, 32 + side * 6); g.lineTo(252, 32 + side * 20); g.lineTo(262, 32 + side * 17); g.lineTo(254, 32 + side * 4); g.closePath(); g.fill();
+    g.strokeStyle = "#4a1712"; g.lineWidth = 2;
+    g.beginPath(); g.moveTo(206, 32); g.quadraticCurveTo(222, 32 + side * 24, 236, 32 + side * 26); g.lineTo(298, 32 + side * 4); g.stroke();
+  }
+  // Shaft.
+  g.fillStyle = "#3a2414"; g.fillRect(204, 27, 252, 10);
+  const wood = g.createLinearGradient(0, 28, 0, 36);
+  wood.addColorStop(0, "#e2b878"); wood.addColorStop(1, "#8a5a2c");
+  g.fillStyle = wood; g.fillRect(206, 28, 248, 8);
+  // Head.
+  g.fillStyle = "#2b2b30";
+  g.beginPath(); g.moveTo(436, 14); g.lineTo(512, 32); g.lineTo(436, 50); g.lineTo(448, 32); g.closePath(); g.fill();
+  const steel = g.createLinearGradient(0, 16, 0, 48);
+  steel.addColorStop(0, "#ffffff"); steel.addColorStop(0.45, "#c9d3dc"); steel.addColorStop(1, "#6d7882");
+  g.fillStyle = steel;
+  g.beginPath(); g.moveTo(440, 18); g.lineTo(506, 32); g.lineTo(440, 46); g.lineTo(450, 32); g.closePath(); g.fill();
+});
+
+const SMOKE_LIGHT = new THREE.Color(0x77706a);
+
+/** Fire cooling as it rises: white-hot, gold, orange, ember red, then soot. */
+const FIRE: [number, THREE.Color][] = [[0, new THREE.Color(0xfff6cc)], [0.18, new THREE.Color(0xffc24a)], [0.42, new THREE.Color(0xf06a24)], [0.68, new THREE.Color(0x9a2c16)], [1, new THREE.Color(0x2e2622)]];
+function fireColor(t: number, out: THREE.Color) {
+  let i = 1;
+  while (i < FIRE.length - 1 && FIRE[i][0] < t) i++;
+  const [a, ca] = FIRE[i - 1], [b, cb] = FIRE[i];
+  return out.lerpColors(ca, cb, THREE.MathUtils.clamp((t - a) / (b - a), 0, 1));
 }

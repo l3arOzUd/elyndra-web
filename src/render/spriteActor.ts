@@ -272,6 +272,22 @@ export class SpriteActor {
     this.card.quaternion.copy(camera.quaternion);
   }
 
+  /** A still copy of the card as drawn now, tinted: a dash's afterimage. The caller owns (and disposes) it. */
+  ghost(tint: [number, number, number]): THREE.Mesh {
+    const u = this.material.uniforms;
+    const material = new THREE.ShaderMaterial({
+      vertexShader, fragmentShader, transparent: true, depthWrite: false, side: THREE.DoubleSide,
+      uniforms: {
+        map: { value: u.map.value }, uvOffset: { value: u.uvOffset.value.clone() }, uvScale: { value: u.uvScale.value.clone() },
+        tint: { value: new THREE.Color(...tint) }, flash: { value: 0 }, opacity: { value: 0.6 },
+      },
+    });
+    const m = new THREE.Mesh(this.card.geometry.clone(), material);
+    this.card.updateWorldMatrix(true, false);
+    this.card.matrixWorld.decompose(m.position, m.quaternion, m.scale);
+    return m;
+  }
+
   revive() {
     this.animator.reset();
     this.fade = null;

@@ -317,7 +317,11 @@ export class Game {
       e.actor.play(e.kind === "p" ? skillAnimation(s) : "attack", { impactMs: castMs });
       if (s) this.fx.telegraph(s, e.pos.x, e.pos.z, m.aim[0], m.aim[1], castMs);
       if (s && s.cast_ms > 0 && e.kind === "p") e.label?.cast(s.name, castMs);
-      if (s?.shape === "mobility") this.fx.trail(e.pos.x, e.pos.z, m.aim[0], m.aim[1]);
+      if (s?.shape === "mobility") {
+        // Where the dash ends: the aim, or as far towards it as the skill reaches.
+        const dx = m.aim[0] - e.pos.x, dz = m.aim[1] - e.pos.z, k = Math.min(1, s.range / (Math.hypot(dx, dz) || 1));
+        this.fx.dash(e.pos.x, e.pos.z, e.pos.x + dx * k, e.pos.z + dz * k, SKILL_COLORS[s.id] ?? 0x5adcb4, () => e.actor.ghost([0.55, 1.25, 1.15]));
+      }
       if (s?.ticks && s.tick_ms) this.fx.field(s, m.aim[0], m.aim[1], s.ticks * s.tick_ms + castMs);
       if (s) { this.lastAim.set(m.cast, [m.aim[0], m.aim[1]]); if (this.lastAim.size > 64) this.lastAim.delete(this.lastAim.keys().next().value!); }
     }
@@ -338,6 +342,7 @@ export class Game {
     if (s && src) {
       const aim = (ev.cast && this.lastAim.get(ev.cast)) || [src.pos.x, src.pos.z];
       if (!this.fx.shaped(s, src.pos.x, src.pos.z, aim[0], aim[1])) this.fx.burst(s, src.pos.x, src.pos.z);
+      if (s.id === "coil_mine" && ev.src === this.selfId) this.cam.kick(0.3);
     }
     // Multi-hit skills (RO style): part k of a hit shows k × hit_ms after the
     // first (index in flags bits 8+), and deaths wait for the last part.

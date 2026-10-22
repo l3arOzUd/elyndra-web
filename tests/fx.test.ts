@@ -29,8 +29,19 @@ describe("skill effect placement", () => {
       const scene = new THREE.Scene(), fx = new Fx(scene), s = skill(id);
       expect(fx.shaped(s, 3, 4, 3, 12)).toBe(true);
       scene.updateMatrixWorld(true);
-      const blades = scene.children.filter(o => "uHead" in uniforms(o) || (o as THREE.Mesh).geometry.type === "ShapeGeometry");
-      expect(blades).toHaveLength(id === "cleaving_arc" ? s.hits! : 5 * s.hits!);
+      const blades = scene.children.filter(o => "uHead" in uniforms(o));
+      const arrows = scene.children.filter(o => o.name === "arrow");
+      expect(id === "cleaving_arc" ? blades : arrows).toHaveLength(id === "cleaving_arc" ? s.hits! : 5 * s.hits!);
+      // Arrows fly inside the cone, their tips never past its reach.
+      for (let ms = 0; ms < 700; ms += 50) {
+        for (const a of arrows.filter(a => a.visible)) {
+          const dx = a.position.x - 3, dz = a.position.z - 4;
+          expect(dz).toBeGreaterThan(0);
+          expect(Math.hypot(dx, dz)).toBeLessThanOrEqual(s.radius! + 0.001);
+          expect(Math.abs(Math.atan2(dx, dz))).toBeLessThan(s.angle_deg! * Math.PI / 360 + 0.06);
+        }
+        fx.update(50);
+      }
       for (const obj of blades) {
         const vertices = (obj as THREE.Mesh).geometry.getAttribute("position");
         for (let i = 0; i < vertices.count; i++) {
