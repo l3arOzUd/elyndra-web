@@ -1,0 +1,22 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "front-neutral-v2.png",
+    "walk-front-right-lift.png",
+    "walk-front-left-lift.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "frameMs": 220,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Support feet drift.",
+    "Body and limb proportions vary.",
+    "Neutral reused for both contacts; no dedicated weight-transfer keys."
+  ]
+}

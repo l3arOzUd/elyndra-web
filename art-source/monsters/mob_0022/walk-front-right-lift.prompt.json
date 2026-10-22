@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "front-neutral-v2.png",
+  "prompt": "Same exact front Brine Automaton, localized WALK passing pose. Robot RIGHT leg IMAGE LEFT lifts its broad boot visibly off ground by 70 pixels, knee bends through metal hinge and thigh advances toward viewer. Opposite boot IMAGE RIGHT stays flat at original baseline supporting weight. Opposite arm swings subtly forward while image-left arm goes slightly back, preserve two-jaw clamps. Keep barrel rigid identical width and scale, gauges, tank and two valves, all painted copper/verdigris landmarks. No extra legs, no stretching or disconnected feet. Same square canvas, original character top around130 and standing sole1120 of1254. Full body, transparent alpha, no floor/shadow/steam/text. One single frame."
+}
