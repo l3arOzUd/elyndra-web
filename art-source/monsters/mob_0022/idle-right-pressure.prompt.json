@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "right-neutral-v2.png",
+  "prompt": "Precise minimal edit for idle animation. Keep this right-facing copper automaton sprite unchanged everywhere except TWO small details: close the existing two pincer jaws at the lowered hand so their tips almost touch, and rotate gauge needle slightly clockwise. Do not move arm, shoulder, legs, boots, torso, tank, valves or camera. Preserve all silhouettes outside claw tips, same body scale and square canvas position, all patina and salt markings. No new joints, no fingers, no body breathing/stretch. One full-body transparent sprite, no text, shadow, steam or effects."
+}
