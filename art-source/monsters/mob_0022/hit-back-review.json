@@ -1,0 +1,23 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "back-neutral-v3.png",
+    "hit-back-brace.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "fps": 10,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Planted heels and barrel landmarks drift.",
+    "Occluded wrists need cross-view construction review.",
+    "Rear recoil is subtle; impact readability unapproved."
+  ]
+}
