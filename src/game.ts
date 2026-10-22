@@ -295,6 +295,17 @@ export class Game {
       else this.showHit(ev, id, dmg, flags, step ? 0 : undefined);
     }
     const dieAfter = step * ((s?.hits ?? 1) - 1);
+    // After the last part, the sum per target in one big number (RO style).
+    if (step) {
+      const sums = new Map<number, number>();
+      for (const [id, dmg, flags] of ev.hits) if (!(flags & 6)) sums.set(id, (sums.get(id) ?? 0) + dmg);
+      setTimeout(() => {
+        for (const [id, sum] of sums) {
+          const t = this.ents.get(id);
+          if (t) this.overlay.total(sum, tmpA.copy(t.pos).addScaledVector(UP, t.actor.height + 0.3), s!.hits!);
+        }
+      }, dieAfter + 90);
+    }
     for (const id of ev.deaths ?? []) {
       const t = this.ents.get(id);
       if (!t || t.dead) continue;

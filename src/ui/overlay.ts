@@ -11,7 +11,7 @@ const tmp = new THREE.Vector3();
 const MAX_FLOATS = 300;
 const MERGE_MS = 150;
 
-type FloatKind = "dmg" | "crit" | "taken" | "heal" | "exp" | "info";
+type FloatKind = "dmg" | "crit" | "taken" | "heal" | "exp" | "info" | "total";
 
 interface Float { el: HTMLElement; pos: THREE.Vector3; age: number; life: number; busy: boolean; dx: number; dy: number }
 
@@ -49,6 +49,11 @@ export class Overlay {
     this.pending.set(target, { amount, crit, kind, pos: pos.clone(), at: performance.now() });
   }
 
+  /** A multi-hit skill's sum on one target, big, above its ladder of parts. */
+  total(amount: number, pos: THREE.Vector3, parts: number) {
+    this.spawn(String(amount), pos, "total", parts * 16 + 12);
+  }
+
   text(text: string, pos: THREE.Vector3, kind: FloatKind) {
     this.spawn(text, pos, kind);
   }
@@ -67,7 +72,8 @@ export class Overlay {
     }
     f.busy = true;
     f.age = 0;
-    f.dx = kind === "info" ? 0 : (Math.random() - 0.5) * (rise ? 16 : 36);
+    f.life = kind === "total" ? 1400 : 900;
+    f.dx = kind === "total" ? 0 : kind === "info" ? 0 : (Math.random() - 0.5) * (rise ? 16 : 36);
     f.dy = rise;
     f.pos.copy(pos);
     f.el.className = `float float-${kind}`;
