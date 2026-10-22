@@ -208,8 +208,10 @@ p(
   "| เลเวลตรงแผนที่ | เลเวลมอนอยู่ในช่วงเลเวลของแผนที่ ±2 (elite/boss ±4) | Validator `spawn.level` |",
   "| ฝูงใหญ่พอให้ลาก | field มีมอนรวม 80–150 ตัว และ AoE ตีได้สูงสุด 50 ตัวต่อครั้ง | Validator `spawn.population`, `spawn.horde_band`, `skill.targets` |",
   "| ความหนาแน่น | ทุก pocket มีพื้นที่เดิน ≥ 5 ช่องต่อมอน และไม่ห่างเกิน 60 ช่องต่อมอน (ยกเว้น pocket ของ elite/boss) | Validator `spawn.density` |",
+  "| เกิดทั่วแผนที่ | ทุ่ง 192×192 แต่ละโซนครองลิ่มรอบลานกลาง มอนเกิดทั่วลิ่ม ราว 62% ของแผนที่ ~33 ช่องต่อมอน แต่ละชนิดมีจำนวนของตัวเอง | `content/world.ts`, Validator `spawn.density` |",
   "| ลากได้ทั้งแผนที่ | ไม่มี leash ไล่จนเป้าหมายตาย ออกจากแผนที่ หรือเข้าแคมป์ | `ai.go` (`validTarget`) |",
-  "| กองรวมจุดเดียว | มอนระยะประชิดกองในช่องของผู้เล่น | `ai.go` (`stacks`, `inReach`), test `TestHordeChaseStacks` |",
+  "| กองรวมจุดเดียว | มอนระยะประชิดตีจาก 8 ช่องรอบผู้เล่น ไม่เข้าช่องผู้เล่น รวมเป็นกองเดียวในช่องข้างตัวที่มีมอนมากที่สุด | `ai.go` (`stacks`, `inReach`, `joinPile`), test `TestHordeChaseStacks` |",
+  "| เลิกไล่ | มอนอยู่ตรงนั้น HP เท่าเดิม นอกเขตเกิดเดินสุ่มต่อ ตายแล้วจึงเกิดใหม่ในเขต | `ai.go` (`endChase`, `roam`), test `TestWorldDragAcrossFieldStaysWhereLeft` |",
   "",
   "**เพิ่มหรือย้ายมอน:** แก้ `species` ใน pocket ของ `elyndra-web/content/regions/<รหัส>.ts` แล้วแก้ข้อความที่อ้างถึง (ชื่อ pocket, design_note, landmark, บทบาทแผนที่, บทพูด NPC, สรุปเควสต์) ให้ตรงกัน จากนั้นรัน `npm run build:content`, `npm run validate:data` และ `npm run bible` ตามลำดับ",
   "",
@@ -271,7 +273,7 @@ for (const r of regions) {
     const z = zones.find((x) => x.map_id === m.id);
     if (z?.pockets.length) {
       table(["Pocket", "พื้นที่ (rects)", "มอนสเตอร์", "Alive", "Respawn s", "เหตุผลการออกแบบ"], z.pockets.map((pk) => [
-        pk.name, pk.rects.map((x) => `[${x.join(",")}]`).join(" "), pk.species.map((s) => `${mob.get(s.monster_id)?.name} Lv${mob.get(s.monster_id)?.level}${pk.species.length > 1 ? ` ×${s.weight}` : ""}`).join(", "),
+        pk.name, pk.rects.length > 4 ? `${pk.rects.length} blocks, ${pk.rects.reduce((n, r) => n + r[2] * r[3], 0)} cells` : pk.rects.map((x) => `[${x.join(",")}]`).join(" "), pk.species.map((s) => `${mob.get(s.monster_id)?.name} Lv${mob.get(s.monster_id)?.level}${pk.species.length > 1 ? ` ×${s.weight}` : ""}`).join(", "),
         pk.target_alive, `${pk.respawn_sec[0]}–${pk.respawn_sec[1]}`, pk.design_note]));
     }
     const ns = npcs.filter((n) => n.map_id === m.id);
