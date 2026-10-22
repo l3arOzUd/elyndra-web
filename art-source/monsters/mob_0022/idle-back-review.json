@@ -1,0 +1,16 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "back-neutral-v3.png",
+    "idle-back-clamp.png"
+  ],
+  "frames": 20,
+  "fps": 8,
+  "uniqueDrawings": 2,
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Surface and outline drift persist despite localized edit.",
+    "Clamp hinge consistency with front remains unapproved."
+  ]
+}

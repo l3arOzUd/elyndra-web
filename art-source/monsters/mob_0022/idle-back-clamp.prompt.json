@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "back-neutral-v3.png",
+  "prompt": "Minimal localized idle animation edit of exact rear Brine Automaton. Change ONLY IMAGE RIGHT two-jaw clamp: close jaws halfway by rotating them on their existing hinge pins. This is the anatomical right hand, matching image-left hand in front view. Do not change arm pose, wrist, legs, feet, barrel, hatch, tank, valves, framing, scale, patina or rivets. Everything except the two moving jaws remains fixed. Rear view, no eyes. Same square transparent alpha image, no ground/shadow/steam/effects/text. One full robot."
+}
