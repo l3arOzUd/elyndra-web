@@ -3,8 +3,9 @@ import * as THREE from "three";
 // Procedural ground materials for skill effects. Nothing to load, and every
 // effect of one kind shares a shader program however many are live. All of
 // them draw on geometry laid flat (rotated into XZ), read as vP = (x, z).
-// They blend normally, not additively: added light washes to white on bright
-// grass, and each skill should keep its own colour on any ground.
+// They blend as premultiplied light that covers the ground only partly
+// (uCover): between plain alpha and additive, so an effect glows yet keeps
+// its colour on bright grass, where added light alone washes to white.
 
 const vertexShader = /* glsl */ `
   varying vec2 vP;
@@ -19,8 +20,10 @@ const common = /* glsl */ `
   uniform vec3 uColor;
   uniform float uOpacity;
   uniform float uTime;
+  uniform float uCover;
   varying vec2 vP;
   float band(float x, float c, float w) { return 1.0 - smoothstep(0.0, w, abs(x - c)); }
+  void emit(vec3 col, float a) { a = clamp(a, 0.0, 1.0); gl_FragColor = vec4(col * a, a * uCover); }
 `;
 
 const out = /* glsl */ `
@@ -64,7 +67,7 @@ const telegraphFrag = /* glsl */ `
     }
     float a = body + filled + front * 0.75 + rim * 0.8 + marks * 0.4 + uFlash * (0.06 + 0.4 * rim);
     vec3 col = mix(uColor, vec3(1.0), clamp(front * 0.75 + rim * (0.3 + 0.4 * uFlash), 0.0, 1.0));
-    gl_FragColor = vec4(col, a * uOpacity);
+    emit(col, a * uOpacity);
     ${out}
   }
 `;
@@ -85,7 +88,7 @@ const sigilFrag = /* glsl */ `
     a += (band(t1, 0.4, 0.025) + band(t2, 0.4, 0.025)) * step(d, 0.8);
     a += pow(1.0 - d, 2.5) * 0.45;
     vec3 col = mix(uColor, vec3(1.0), pow(1.0 - d, 3.0) * 0.6);
-    gl_FragColor = vec4(col, a * uOpacity);
+    emit(col, a * uOpacity);
     ${out}
   }
 `;
@@ -101,7 +104,7 @@ const waveFrag = /* glsl */ `
     float ring = exp(-pow((d - 0.92) / w, 2.0));
     float wash = smoothstep(0.2, 0.92, d) * 0.12 * (1.0 - uT);
     vec3 col = mix(uColor, vec3(1.0), ring * 0.55 * (1.0 - uT));
-    gl_FragColor = vec4(col, (ring + wash) * uOpacity);
+    emit(col, (ring + wash) * uOpacity);
     ${out}
   }
 `;
@@ -113,7 +116,7 @@ const glowFrag = /* glsl */ `
     float d = length(vP);
     if (d > 1.0) discard;
     float a = pow(1.0 - d, 1.8);
-    gl_FragColor = vec4(mix(uColor, vec3(1.0), pow(1.0 - d, 4.0)), a * uOpacity);
+    emit(mix(uColor, vec3(1.0), pow(1.0 - d, 4.0)), a * uOpacity);
     ${out}
   }
 `;
@@ -136,7 +139,7 @@ const sweepFrag = /* glsl */ `
     float edge = smoothstep(0.0, 0.06, s) * smoothstep(1.0, 0.94, s);
     float a = trail * prof * edge;
     vec3 col = mix(uColor, vec3(1.0), clamp(trail * prof * 1.2 - 0.3, 0.0, 1.0));
-    gl_FragColor = vec4(col, a * uOpacity);
+    emit(col, a * uOpacity);
     ${out}
   }
 `;
@@ -159,7 +162,7 @@ const beamFrag = /* glsl */ `
     float tip = exp(-pow((along - uGrow) / 0.02, 2.0)) * (1.0 - side);
     float ends = smoothstep(0.0, 0.05, along) * mix(1.0, along, uTail);
     float a = (core + glow + streak + tip) * ends;
-    gl_FragColor = vec4(mix(uColor, vec3(1.0), clamp(core * 0.8 + tip, 0.0, 1.0)), a * uOpacity);
+    emit(mix(uColor, vec3(1.0), clamp(core * 0.8 + tip, 0.0, 1.0)), a * uOpacity);
     ${out}
   }
 `;
@@ -173,7 +176,7 @@ const swirlFrag = /* glsl */ `
     float ang = atan(vP.y, vP.x);
     float arms = smoothstep(0.55, 1.0, sin(ang * 3.0 + d * 11.0 + uTime * 9.0));
     float a = arms * smoothstep(1.0, 0.75, d) * smoothstep(0.0, 0.25, d) + pow(1.0 - d, 4.0) * 0.8;
-    gl_FragColor = vec4(mix(uColor, vec3(1.0), pow(1.0 - d, 5.0)), a * uOpacity);
+    emit(mix(uColor, vec3(1.0), pow(1.0 - d, 5.0)), a * uOpacity);
     ${out}
   }
 `;
@@ -188,7 +191,7 @@ const gearFrag = /* glsl */ `
     float tooth = step(0.5, fract(ang / (2.0 * PI) * 16.0));
     float a = step(0.74, d) * step(d, 0.86) + step(0.86, d) * step(d, 0.97) * tooth;
     a += band(d, 0.32, 0.05) + step(d, 0.74) * step(0.32, d) * band(fract(ang / (2.0 * PI) * 6.0), 0.5, 0.05);
-    gl_FragColor = vec4(mix(uColor, vec3(1.0), 0.25), a * uOpacity);
+    emit(mix(uColor, vec3(1.0), 0.25), a * uOpacity);
     ${out}
   }
 `;
@@ -198,10 +201,12 @@ export type FxShader = keyof typeof shaders;
 
 /** A material for one effect, with its own uniforms (uColor, uOpacity, uTime and the extras). */
 export function fxMaterial(kind: FxShader, color: number, extra: Record<string, number> = {}) {
-  const uniforms: Record<string, THREE.IUniform> = { uColor: { value: new THREE.Color(color) }, uOpacity: { value: 0 }, uTime: { value: 0 } };
+  // A warning stays opaque enough to read; the rest is light.
+  const uniforms: Record<string, THREE.IUniform> = { uColor: { value: new THREE.Color(color) }, uOpacity: { value: 0 }, uTime: { value: 0 }, uCover: { value: kind === "telegraph" ? 1 : 0.5 } };
   for (const [k, v] of Object.entries(extra)) uniforms[k] = { value: v };
   return new THREE.ShaderMaterial({
     vertexShader, fragmentShader: shaders[kind], uniforms,
-    transparent: true, depthWrite: false, side: THREE.DoubleSide,
+    transparent: true, depthWrite: false, side: THREE.DoubleSide, premultipliedAlpha: true,
+    blending: THREE.CustomBlending, blendSrc: THREE.OneFactor, blendDst: THREE.OneMinusSrcAlphaFactor,
   });
 }
