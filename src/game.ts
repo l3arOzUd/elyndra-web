@@ -105,6 +105,8 @@ export class Game {
   /** WASD keys held (physical codes), the latest last: it picks the direction. */
   private heldDirs: string[] = [];
   private keyWalk = { dir: "", at: 0 };
+  /** Left button held after a ground click: keep walking toward the cursor. */
+  private holdWalk = { on: false, at: 0, cell: "" };
   /** Client-side prediction of our own walk. */
   private predicted: { path: Cell[]; at: THREE.Vector3 } | null = null;
   /** Our own cast in progress (until its first combat event, or a timeout):
@@ -442,10 +444,10 @@ export class Game {
     this.conn.send({ t: "cast", skill, aim: [aim.x, aim.z] });
   }
 
-  private walkTo(cell: Cell, marker = true) {
+  private walkTo(cell: Cell, marker = true, reach = marker ? 3 : 0) {
     const me = this.self;
     if (!me || !this.grid || me.dead) return;
-    const dest = this.grid.nearestWalkable(cell[0], cell[1], marker ? 3 : 0);
+    const dest = this.grid.nearestWalkable(cell[0], cell[1], reach);
     if (!dest) return;
     this.targetId = null;
     this.pendingTalk = null;
@@ -466,6 +468,19 @@ export class Game {
    * no diagonals): the walk is re-aimed a few cells ahead every 250 ms, and
    * letting go stops at the next cell.
    */
+  /** Click and hold on the ground: re-aim at the cell under the cursor when
+   * it changes (checked every 150 ms), so the walk follows the mouse. */
+  private updateHoldWalk(now: number) {
+    if (!this.holdWalk.on || this.heldDirs.length || now - this.holdWalk.at < 150) return;
+    this.holdWalk.at = now;
+    const p = this.groundPoint();
+    if (!p) return;
+    const cell: Cell = [Math.floor(p.x), Math.floor(p.z)], key = cell.join(",");
+    if (key === this.holdWalk.cell) return;
+    this.holdWalk.cell = key;
+    this.walkTo(cell, false, 3);
+  }
+
   private updateKeyWalk(now: number) {
     const me = this.self;
     if (!me || !this.grid || me.dead) return;
@@ -527,7 +542,11 @@ export class Game {
         return;
       }
       const p = this.groundPoint();
-      if (p) this.walkTo([Math.floor(p.x), Math.floor(p.z)]);
+      if (p) {
+        this.walkTo([Math.floor(p.x), Math.floor(p.z)]);
+        this.holdWalk = { on: true, at: performance.now(), cell: Math.floor(p.x) + "," + Math.floor(p.z) };
+        el.setPointerCapture(ev.pointerId);
+      }
     });
     el.addEventListener("pointermove", (ev) => {
       this.setMouse(ev);
@@ -537,9 +556,10 @@ export class Game {
         lastX = ev.clientX; lastY = ev.clientY;
       }
     });
-    el.addEventListener("pointerup", (ev) => { if (ev.button === 2) rightDown = false; });
+    el.addEventListener("pointerup", (ev) => { if (ev.button === 2) rightDown = false; if (ev.button === 0) this.holdWalk.on = false; });
+    el.addEventListener("pointercancel", () => { rightDown = false; this.holdWalk.on = false; });
     window.addEventListener("keyup", (ev) => this.releaseKey(ev.code));
-    window.addEventListener("blur", () => { this.heldDirs = []; });
+    window.addEventListener("blur", () => { this.heldDirs = []; this.holdWalk.on = false; });
     el.addEventListener("wheel", (ev) => { ev.preventDefault(); this.cam.zoom(Math.sign(ev.deltaY)); }, { passive: false });
     window.addEventListener("keydown", (ev) => {
       if (ev.key === "Escape") { this.dialog.close(); this.hud.closeWindows(); this.targetId = null; (document.activeElement as HTMLElement | null)?.blur(); return; }
@@ -666,6 +686,7 @@ export class Game {
     const renderT = this.conn.serverNow() - INTERP_MS;
     const now = performance.now();
     this.updateKeyWalk(now);
+    this.updateHoldWalk(now);
     for (const e of this.ents.values()) {
       const prevState = e.state;
       if (e.id === this.selfId) {
