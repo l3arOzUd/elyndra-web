@@ -815,7 +815,8 @@ export class Game {
     const target = this.targetId !== null ? this.ents.get(this.targetId) : undefined;
     this.hud.setTarget(target && !target.dead ? target : null);
     this.targetMarker.mesh.visible = !!target;
-    if (target) this.targetMarker.place(target.pos.x, target.pos.z, now);
+    // Under the sprite as drawn (its crowd offset included), not its logical spot.
+    if (target) this.targetMarker.place(target.actor.root.position.x, target.actor.root.position.z, now);
     this.clickAge = Math.min(1, this.clickAge + dt * 1.4);
     this.clickMarker.update(this.clickAge);
 
