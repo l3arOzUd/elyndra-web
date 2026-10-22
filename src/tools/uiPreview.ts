@@ -113,13 +113,11 @@ async function main() {
     notice.hidden = true; $('ui-toast').hidden = true;
     hud.closeWindows(); dialog.close();
     $('login').hidden = mode !== 'login'; $('hud').hidden = mode === 'login'; $('disconnected').hidden = mode !== 'disconnected'; $('debug-win').hidden = mode !== 'debug';
-    if (mode === 'bag' || mode === 'equipment') {
-      hud.toggle('inv-win', true);
-      (document.querySelector('[data-bag-tab="' + (mode === 'bag' ? 'items' : 'equipment') + '"]') as HTMLButtonElement).click();
-    } else if (mode === 'character') hud.toggle('char-win', true);
+    if (mode === 'bag') hud.toggle('inv-win', true);
+    else if (mode === 'equipment') { hud.toggle('equip-win', true); hud.toggle('inv-win', true); }
+    else if (mode === 'character') hud.toggle('char-win', true);
     else if (mode === 'gear') {
       hud.toggle('inv-win', true);
-      (document.querySelector('[data-bag-tab="items"]') as HTMLButtonElement).click();
       (document.querySelector('#inventory .item-cell.rarity-rare') as HTMLButtonElement | null)?.click();
     } else if (mode === 'journal') hud.toggle('journal-win', true);
     else if (mode === 'menu') hud.toggle('menu-win', true);
@@ -137,6 +135,7 @@ async function main() {
     const target = ev.target as HTMLElement;
     if (['INPUT', 'SELECT', 'TEXTAREA'].includes(target.tagName) || target.isContentEditable) return;
     if (ev.code === 'KeyI') hud.toggle('inv-win');
+    if (ev.code === 'KeyE') hud.toggle('equip-win');
     if (ev.code === 'KeyQ') hud.toggle('journal-win');
     if (ev.code === 'KeyC') hud.toggle('char-win');
   });

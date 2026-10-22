@@ -16,7 +16,7 @@ try {
   await page.screenshot({path:out+'/'+mode+'.png'});
  }
  await page.selectOption('#preview-mode','bag');
- if(await page.locator('#item-detail > .painted-icon').evaluate(e=>getComputedStyle(e).backgroundImage==='none'))throw Error('Selected item illustration missing');
+ if(await page.locator('#item-detail .detail-head .painted-icon').evaluate(e=>getComputedStyle(e).backgroundImage==='none'))throw Error('Selected item illustration missing');
  const beforeDrag=await page.locator('#inv-win').boundingBox();
  await page.mouse.move(beforeDrag.x+110,beforeDrag.y+29); await page.mouse.down();
  await page.mouse.move(beforeDrag.x-180,beforeDrag.y+39,{steps:6}); await page.mouse.up();
@@ -36,15 +36,15 @@ try {
  await page.click('#reset-layout');
  await page.evaluate(()=>window.uiPreview.open('bag'));
  await page.fill('#item-search','zzzz');
- if(await page.locator('#inventory li').count()!==0)throw Error('Search mismatch');
+ if(await page.locator('#inventory li:not(.empty-slot)').count()!==0)throw Error('Search mismatch');
  if(!await page.locator('#inv-empty').isVisible())throw Error('Missing empty state');
  await page.fill('#item-search','');
- await page.selectOption('#item-filter','consumable');
- const consumables=await page.locator('#inventory li').count();
+ await page.click('[data-filter="consumable"]');
+ const consumables=await page.locator('#inventory li:not(.empty-slot)').count();
  if(!consumables)throw Error('No consumables');
  await page.locator('.detail-action').click();
  if(!await page.locator('.preview-notice').isVisible())throw Error('Use callback missing');
- await page.selectOption('#item-filter','all');
+ await page.click('[data-filter="all"]');
  await page.evaluate(()=>{window.uiPreview.hud.setStats({...window.uiPreview.hud.stats,hp:80,sp:0});window.uiPreview.open('hud');});
  if(!await page.locator('[data-skill="cleaving_arc"]').isDisabled())throw Error('Insufficient SP state failed');
  await page.screenshot({path:out+'/low-hp-no-sp.png'});

@@ -94,12 +94,10 @@ kbd { display:inline-block; border:1px solid currentColor; border-radius:3px; pa
 .quest-goal { display:flex; justify-content:space-between; gap:12px; color:var(--muted); font-size:10px; margin-top:4px; }
 .quest-goal b { white-space:nowrap; color:inherit; }
 .quest.ready .quest-title { color:#99d7b7; }
-#inv-win { left:32px; top:50%; transform:translateY(-50%); width:min(694px,calc(100vw - 64px)); }
 .bag-tools { display:flex; align-items:center; gap:12px; padding:19px 24px; }
 .search-field { display:flex; align-items:center; gap:8px; border:1px solid #cfbea0; border-radius:5px; background:#fffdf5a8; padding-left:11px; flex:1; min-width:0; }
 .search-field .ui-icon { width:17px; height:17px; color:#778575; }
 .search-field input { border:0; background:transparent; width:100%; outline-offset:0; }
-.bag-tools select { width:145px; padding:10px 8px; font-size:11px; }
 .bag-layout { display:grid; grid-template-columns:minmax(0,1fr) 234px; padding:0 24px 24px; gap:23px; min-height:310px; }
 .bag-storage { min-width:0; }
 #inventory { list-style:none; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin:0; padding:0; align-content:start; max-height:306px; overflow-y:auto; padding-right:3px; }
@@ -129,22 +127,6 @@ kbd { display:inline-block; border:1px solid currentColor; border-radius:3px; pa
 .detail-action { width:100%; }
 .compare-row { display:flex; gap:12px; font-size:11px; padding:5px 0; border-top:1px solid #caba9a55; }
 .compare-row b { margin-left:auto; }
-.equipment-layout { display:grid; grid-template-columns:190px 1fr; gap:23px; padding:25px; }
-.hero-emblem { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:25px 15px; border:1px solid #bfad8666; border-radius:100px 100px 6px 6px; background:radial-gradient(ellipse at 50% 30%,#fef8dc,#e0ddc4); }
-.hero-emblem .ui-icon { width:70px; height:80px; margin:0 0 17px; color:#69806a; }
-.hero-emblem h3 { margin:6px 0; overflow-wrap:anywhere; }
-.hero-emblem p.muted { font-size:10px; }
-.eq-row { display:flex; align-items:center; gap:12px; padding:17px 0; border-bottom:1px solid #c6b18b66; }
-.eq-row > .ui-icon { width:40px; height:40px; padding:7px; border:1px solid #bfad8666; border-radius:5px; }
-.eq-label { flex:1; min-width:0; }
-.eq-label .eyebrow { display:block; font-size:8px; margin-bottom:5px; }
-.eq-label strong { display:block; font-size:11px; }
-.eq-row button { padding:4px 7px; font-size:9px; }
-.empty-equip { color:#a7a890; opacity:.7; }
-.equipment-stats { display:grid; grid-template-columns:repeat(4,1fr); text-align:center; padding:0 25px 25px; }
-.equipment-stats > div { display:flex; flex-direction:column; gap:4px; border-right:1px solid #c6b18b66; }
-.equipment-stats > div:last-child { border:0; }
-.equipment-stats strong { font:600 28px var(--serif); color:#416c53; }
 #journal-win { width:590px; left:50%; top:50%; transform:translate(-50%,-50%); }
 .journal-list { padding:5px 25px 24px; }
 .journal-card { padding:20px 0; border-bottom:1px solid #c6b18b88; }
@@ -279,7 +261,7 @@ button.on { background:#426c55; color:#f8efd6; }
   .log-win,.help { display:none; }
   .action-dock { left:14px; bottom:20px; transform:none; padding:8px; }
   .menu-dock { bottom:36px; right:14px; }
-  #inv-win,#journal-win,#npc-win { left:50%; width:min(644px,calc(100vw - 28px)); transform:translate(-50%,-50%); }
+  #inv-win,#equip-win,#journal-win,#npc-win { left:50%; width:min(644px,calc(100vw - 28px)); transform:translate(-50%,-50%); }
   .large-window { max-height:calc(100dvh - 145px); }
   .bag-layout { grid-template-columns:minmax(0,1fr) 218px; gap:16px; }
 }
@@ -298,12 +280,10 @@ button.on { background:#426c55; color:#f8efd6; }
   .large-window { max-height:calc(100dvh - 180px); top:calc(50% - 22px)!important; }
   .window-heading { padding:18px; gap:8px; }h2 { font-size:25px; }.window-heading .eyebrow { font-size:7px; }
   .window-tabs { padding:0 14px; }.window-tabs button { font-size:11px; padding:12px 10px; }.window-tabs .currency { font-size:10px; gap:3px; }
-  .bag-tools { padding:14px; gap:8px; }.bag-tools select { width:119px; font-size:10px; }.search-field { padding-left:7px; }.search-field input { padding:9px 6px; font-size:10px; }
+  .bag-tools { padding:14px; gap:8px; }.search-field { padding-left:7px; }.search-field input { padding:9px 6px; font-size:10px; }
   .bag-layout { grid-template-columns:1fr; padding:0 14px 16px; gap:15px; }
   #inventory { grid-template-columns:repeat(5,minmax(0,1fr)); max-height:148px; gap:6px; }.item-cell { max-height:58px; }.item-cell .item-art { width:30px; height:30px; }
   .item-detail { padding:15px; }.item-detail > .item-art { float:right; width:49px; height:49px; margin:0 0 10px 12px; }.item-detail h3 { font-size:21px; }.item-description { font-size:11px; }.bag-count { padding-top:8px; }
-  .equipment-layout { grid-template-columns:1fr; padding:14px; gap:8px; }.hero-emblem { display:none; }.eq-row { padding:12px 0; }
-  .equipment-stats { padding:14px; }.equipment-stats strong { font-size:24px; }
   .window-footer { padding:10px 16px; font-size:9px; }
   .npc-greeting { padding:0 18px 16px; gap:12px; }.npc-line { font-size:11px; }.npc-seal { width:40px; height:50px; padding:9px; }
   .service-body { padding:0 16px 14px; }.service-card { flex-wrap:wrap; gap:10px; }.service-card > .ui-icon { width:35px; height:40px; padding:6px; }.service-copy { min-width:calc(100% - 52px); }.service-actions,.service-card > .service-action { margin-left:45px; }.service-copy h3 { font-size:12px; }

@@ -602,6 +602,7 @@ export class Game {
       else if (digit && TOTEM_KEYS.includes(digit[1] as typeof TOTEM_KEYS[number])) this.conn.send({ t: "totem", slot: "charm" + (TOTEM_KEYS.indexOf(digit[1] as typeof TOTEM_KEYS[number]) + 1) });
       else if (ev.code === "KeyC") this.hud.toggle("char-win");
       else if (ev.code === "KeyI") this.hud.toggle("inv-win");
+      else if (ev.code === "KeyE") this.hud.toggle("equip-win");
       else if (ev.code === "KeyQ") this.hud.toggle("journal-win");
       else if (ev.code === "KeyZ") this.pickupNearby(true);
       // World v3 horde tools: R rings a Lure Bell, T crushes a Camp Feather.

@@ -3,8 +3,9 @@ import { money } from './currency';
 import type { BuffView, GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
 import { skillIcon, systemIcon } from './art';
+import { drawWayfarerPortrait } from '../render/paperDoll';
 import { isWorn as isWornCopy } from './gear';
-import { CHARM_SLOTS, ECHO_COUNT, gearTitle, GEAR_SLOTS, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
+import { CHARM_SLOTS, ECHO_COUNT, gearTitle, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
 
 const $ = (id: string) => document.getElementById(id)!;
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: string): HTMLElementTagNameMap[K] {
@@ -30,6 +31,11 @@ export const ITEM_KEYS = ['itm_0075', 'itm_0076', 'itm_0077'] as const;
 /** Totems worn in the Charm slots fire from keys 8, 9 and 0. */
 export const TOTEM_KEYS = ['8', '9', '0'] as const;
 const gearKey = (uid: number) => 'g:' + uid;
+/** Line art for an empty equipment slot. */
+const SLOT_ICON: Record<string, string> = { weapon: 'sword', head: 'shield', armor: 'armor', boots: 'boots', accessory: 'crystal', charm1: 'star', charm2: 'star', charm3: 'star' };
+/** Game windows: opening one closes the others, except Inventory and Equipment, which open side by side. */
+const WINDOWS = ['inv-win', 'equip-win', 'journal-win', 'menu-win', 'char-win'];
+const PAIRED = ['inv-win', 'equip-win'];
 
 /** Shared live-game and preview UI. All mutations go through server callbacks. */
 export class Hud {
@@ -44,6 +50,9 @@ export class Hud {
   private buffs: BuffView[] = [];
   private cooldownUntil: Record<string, number> = {};
   private selected: string | null = null;
+  /** Bag category tab and the slot selected in the Equipment window. */
+  private filter = 'all';
+  private equipSel = 'weapon';
   private toastTimer = 0;
   onUse: (item: string) => void = () => {};
   onEquip: (uid: number, slot?: string) => void = () => {};
@@ -118,23 +127,21 @@ export class Hud {
       b.onclick = () => {
         // An Echo Totem has nothing to press: open it to see or change its link.
         const t = this.totems.find((x) => x.slot === slot);
-        if (t?.trigger) { const g = this.worn(slot); if (g) { this.selected = gearKey(g.uid); this.toggle('inv-win', true); this.showBag(); this.renderInventory(); } }
+        if (t?.trigger) { this.equipSel = slot; this.toggle('equip-win', true); }
         else this.onTotem(slot);
       };
       bar.append(b);
     });
     $('toggle-inv').onclick = () => this.toggle('inv-win');
+    $('toggle-equip').onclick = $('open-equip').onclick = () => this.toggle('equip-win');
     $('toggle-char').onclick = () => this.toggle('char-win');
     $('reset-stats').onclick = () => this.onResetStats();
     $('clear-target').onclick = () => this.setTarget(null);
     $('toggle-journal').onclick = $('open-journal').onclick = () => this.toggle('journal-win');
     $('toggle-menu').onclick = () => this.toggle('menu-win');
     $('toggle-inspector').onclick = () => { this.closeWindows(); this.toggle('inspector'); };
-    $('item-search').oninput = $('item-filter').onchange = () => this.renderInventory();
-    document.querySelectorAll<HTMLButtonElement>('[data-bag-tab]').forEach(b => b.onclick = () => {
-      document.querySelectorAll('[data-bag-tab]').forEach(t => { t.classList.toggle('active', t === b); t.setAttribute('aria-pressed', String(t === b)); });
-      $('bag-items').hidden = b.dataset.bagTab !== 'items'; $('bag-equipment').hidden = b.dataset.bagTab !== 'equipment';
-    });
+    $('item-search').oninput = () => this.renderInventory();
+    document.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach(b => b.onclick = () => { this.filter = b.dataset.filter!; this.renderInventory(); });
     const compact = (value: boolean) => {
       document.querySelector('.log-win')!.classList.toggle('collapsed', value);
       ($('compact-log') as HTMLInputElement).checked = value;
@@ -211,11 +218,15 @@ export class Hud {
     $('target-health').textContent = target.hp.toLocaleString() + ' / ' + target.mhp.toLocaleString();
     $('target-fill').style.width = Math.max(0, Math.min(100, target.hp / target.mhp * 100)) + '%';
   }
-  closeWindows() { $('skill-tooltip').hidden = true; for (const id of ['inv-win', 'journal-win', 'menu-win', 'char-win', 'inspector']) $(id).hidden = true; }
+  closeWindows() { $('skill-tooltip').hidden = true; for (const id of [...WINDOWS, 'inspector']) $(id).hidden = true; }
   toggle(id: string, force?: boolean) {
     const w = $(id), open = force ?? w.hidden;
-    if (open && ['inv-win', 'journal-win', 'menu-win', 'char-win'].includes(id)) this.closeWindows();
+    if (open && WINDOWS.includes(id)) {
+      $('skill-tooltip').hidden = true; $('inspector').hidden = true;
+      for (const other of WINDOWS) if (other !== id && !(PAIRED.includes(id) && PAIRED.includes(other))) $(other).hidden = true;
+    }
     w.hidden = !open;
+    if (open && id === 'equip-win') this.renderEquipment();
   }
   setMap(name: string, sub: string) { $('map-name').textContent = name; $('map-region').textContent = sub; $('map-heading').textContent = sub.split('·')[0].trim().toUpperCase(); }
   setStats(s: MsgOf<'stats'>) {
@@ -246,9 +257,8 @@ export class Hud {
     $('exp-text').textContent = s.next ? (s.exp / s.next * 100).toFixed(1) + '%' : 'MAX';
     $('exp-fill').style.width = (s.next ? Math.min(100, s.exp / s.next * 100) : 100) + '%';
     $('atk').textContent = String(s.atk); $('def').textContent = String(s.def);
-    $('equipment-stats').replaceChildren(...[['Attack', s.atk], ['Armour', s.def], ['Max HP', s.mhp], ['Aether Shield', s.msh ?? 0]].map(([label, value]) => {
-      const d = el('div'); d.append(el('small', 'muted', String(label)), el('strong', '', String(value))); return d;
-    }));
+    if (prev?.lv !== s.lv || prev?.job !== s.job) this.renderEquipment();
+    else if (!this.sheet && !$('equip-win').hidden) this.renderEquipStats();
     this.refreshHotbar();
     if (prev?.lv !== s.lv || prev?.job !== s.job) this.renderDetail();
   }
@@ -333,28 +343,30 @@ export class Hud {
       setTimeout(() => b.classList.remove('fresh'), 5000);
     });
   }
+  /** Double-click in the bag: use a consumable, wear a copy (a Charm goes to the first free open Charm slot). */
+  private quickAction(id: string) {
+    if (!id.startsWith('g:')) { if (this.c.items.get(id)?.use) this.onUse(id); return; }
+    const g = this.gear.get(Number(id.slice(2))), it = g && gearItem(this.c, g);
+    if (!g || g.slot || !it?.equip || !requirements(it, this.stats?.lv ?? 1, this.stats?.job, this.sheet).every(([, ok]) => ok)) return;
+    if (it.equip.slot !== 'charm') { this.onEquip(g.uid); return; }
+    const lv = this.stats?.lv ?? 1;
+    const free = CHARM_SLOTS.find((s, i) => lv >= (this.c.systems.charm_slot_levels[i] ?? 99) && !this.worn(s));
+    if (free) this.onEquip(g.uid, free);
+  }
   renderInventory() {
     $('aurel').textContent = money(this.aurel);
-    const eq = $('equip'); eq.replaceChildren();
-    const lv = this.stats?.lv ?? 1, inactive = new Set(this.sheet?.inactive ?? []);
-    for (const slot of [...GEAR_SLOTS, ...CHARM_SLOTS]) {
-      const g = this.worn(slot), it = g && this.c.items.get(g.base), row = el('div', 'eq-row' + (g ? ' rarity-' + g.rarity : '')), label = el('div', 'eq-label');
-      const open = this.c.systems.charm_slot_levels[CHARM_SLOTS.indexOf(slot as typeof CHARM_SLOTS[number])] ?? 0;
-      row.append(it ? itemIcon(it, g!.rarity) : icon(slot === 'weapon' ? 'sword' : slot === 'armor' || slot === 'boots' ? slot : slot === 'head' ? 'shield' : 'crystal', 'empty-equip'));
-      label.append(el('small', 'eyebrow', SLOT_LABEL[slot]), el('strong', '', it ? gearTitle(it, g!) : lv < open ? 'Opens at Lv ' + open : 'Empty'));
-      if (g && inactive.has(g.uid)) label.append(el('small', 'bad', 'Requirements not met: no effect'));
-      row.append(label);
-      if (g) {
-        const look = el('button', 'subtle', 'Inspect'); look.onclick = () => { this.selected = gearKey(g.uid); this.showBag(); this.renderInventory(); };
-        const b = el('button', 'subtle', 'Remove'); b.onclick = () => this.onUnequip(slot); row.append(look, b);
-      }
-      eq.append(row);
-    }
-    const search = ($('item-search') as HTMLInputElement).value.trim().toLowerCase(), filter = ($('item-filter') as HTMLSelectElement).value;
+    this.renderEquipment();
+    const search = ($('item-search') as HTMLInputElement).value.trim().toLowerCase();
     const nameOf = (key: string) => key.startsWith('g:') ? this.c.items.get(this.gear.get(Number(key.slice(2)))?.base ?? '')?.name ?? key : this.c.items.get(key)?.name ?? key;
     const itemOf = (key: string) => this.c.items.get(key.startsWith('g:') ? this.gear.get(Number(key.slice(2)))?.base ?? '' : key);
+    const inCategory = (id: string, f: string) => { const cat = itemOf(id)?.category; return f === 'all' || cat === f || f === 'material' && cat === 'rare_material' || f === 'charm' && cat === 'totem'; };
     const all = [...[...this.gear.values()].filter(g => !g.slot).map(g => gearKey(g.uid)), ...Object.keys(this.inventory)].sort((a, b) => nameOf(a).localeCompare(nameOf(b)));
-    const ids = all.filter(id => { const it = itemOf(id); return (!search || nameOf(id).toLowerCase().includes(search)) && (filter === 'all' || it?.category === filter || filter === 'material' && it?.category === 'rare_material' || filter === 'charm' && it?.category === 'totem'); });
+    document.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach((b) => {
+      const on = b.dataset.filter === this.filter;
+      b.classList.toggle('active', on); b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', String(on));
+      b.querySelector('small')!.textContent = String(all.filter((id) => inCategory(id, b.dataset.filter!)).length);
+    });
+    const ids = all.filter(id => (!search || nameOf(id).toLowerCase().includes(search)) && inCategory(id, this.filter));
     if (!this.selected || !ids.includes(this.selected)) this.selected = ids[0] ?? null;
     const list = $('inventory'); list.replaceChildren();
     for (const id of ids) {
@@ -362,51 +374,145 @@ export class Hud {
       const it = itemOf(id), li = el('li'), b = el('button', 'item-cell rarity-' + (g ? g.rarity : it?.rarity ?? 'common') + (id === this.selected ? ' selected' : ''));
       b.title = nameOf(id) + (g ? ' · ' + RARITY_LABEL[g.rarity] : ''); b.setAttribute('aria-label', g ? nameOf(id) + ', ' + RARITY_LABEL[g.rarity] + ', item level ' + g.ilvl : (it?.name ?? id) + ', quantity ' + this.inventory[id]); b.setAttribute('aria-pressed', String(id === this.selected)); b.dataset.item = id;
       b.append(itemIcon(it, g?.rarity), el('span', 'item-quantity', g ? (g.refine ? '+' + g.refine + ' ' : '') + (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
-      b.onclick = () => { this.selected = id; this.renderInventory(); (list.querySelector('[data-item="' + CSS.escape(id) + '"]') as HTMLButtonElement | null)?.focus(); };
+      // Selecting only restyles the cells, so a double-click lands on the same button.
+      b.onclick = () => {
+        this.selected = id;
+        list.querySelectorAll<HTMLElement>('.item-cell').forEach((x) => { x.classList.toggle('selected', x === b); x.setAttribute('aria-pressed', String(x === b)); });
+        this.renderDetail();
+      };
+      b.ondblclick = () => this.quickAction(id);
       this.bindTooltip(b, () => (g ? gearTitle(it, g) : it?.name ?? id), () => (g ? this.gearSummary(g) : it?.description ?? ''));
       li.append(b); list.append(li);
     }
+    // Empty sockets complete the grid, so the satchel reads as a bag of slots.
+    if (ids.length) for (let i = ids.length; i < Math.max(25, Math.ceil(ids.length / 5) * 5); i++) list.append(el('li', 'empty-slot'));
     $('inv-empty').hidden = ids.length > 0;
     $('inv-empty').textContent = all.length ? 'No items match your search.' : 'Your inventory is empty.';
     const carriedGear = [...this.gear.values()].filter((g) => g.slot !== 'stash').length, bagMax = this.c.systems.crafting?.bag_max ?? 300;
-    $('bag-count').textContent = ids.length + ' shown · ' + all.length + ' in your satchel · gear ' + carriedGear + ' / ' + bagMax + (carriedGear >= bagMax - 20 ? ' · nearly full: store some at the Guild' : '');
-    $('bag-count').classList.toggle('bad', carriedGear >= bagMax - 20);
+    const full = carriedGear >= bagMax - 20;
+    $('bag-count').textContent = all.length + ' in your satchel · gear ' + carriedGear + ' / ' + bagMax + (full ? ' · nearly full: store some at the Guild' : '');
+    $('bag-count').classList.toggle('bad', full);
+    $('bag-fill').style.width = Math.min(100, carriedGear / bagMax * 100) + '%';
+    $('bag-fill').classList.toggle('full', full);
     this.renderDetail();
   }
-  private showBag() {
-    document.querySelectorAll<HTMLButtonElement>('[data-bag-tab]').forEach(t => { const on = t.dataset.bagTab === 'items'; t.classList.toggle('active', on); t.setAttribute('aria-pressed', String(on)); });
-    $('bag-items').hidden = false; $('bag-equipment').hidden = true;
+  /** The Equipment window: paper doll, the selected slot's detail and the totals. */
+  private renderEquipment() {
+    const lv = this.stats?.lv ?? 1, inactive = new Set(this.sheet?.inactive ?? []);
+    const slotButton = (slot: string) => {
+      const g = this.worn(slot), it = g && gearItem(this.c, g), ci = CHARM_SLOTS.indexOf(slot as typeof CHARM_SLOTS[number]);
+      const open = ci >= 0 ? this.c.systems.charm_slot_levels[ci] ?? 0 : 0, locked = lv < open, off = !!g && inactive.has(g.uid);
+      const b = el('button', 'doll-slot' + (g ? ' filled rarity-' + g.rarity : '') + (locked ? ' locked' : '') + (off ? ' inactive' : '') + (slot === this.equipSel ? ' selected' : ''));
+      b.dataset.slot = slot; b.setAttribute('aria-pressed', String(slot === this.equipSel));
+      const socket = el('span', 'doll-socket');
+      socket.append(it ? itemIcon(it, g!.rarity) : icon(SLOT_ICON[slot] ?? 'crystal', 'empty-equip'));
+      if (g?.refine) socket.append(el('span', 'item-quantity', '+' + g.refine));
+      if (ci >= 0 && it?.equip?.totem) socket.append(el('span', 'slot-key', TOTEM_KEYS[ci]));
+      const text = el('span', 'doll-text');
+      text.append(el('small', 'eyebrow', SLOT_LABEL[slot]), el('strong', '', it ? gearTitle(it, g!) : locked ? 'Opens at Lv ' + open : 'Empty'));
+      if (off) text.append(el('small', 'bad', '✗ No effect'));
+      b.append(socket, text);
+      b.onclick = () => {
+        this.equipSel = slot;
+        document.querySelectorAll<HTMLElement>('#equip-win .doll-slot').forEach((x) => { x.classList.toggle('selected', x === b); x.setAttribute('aria-pressed', String(x === b)); });
+        this.renderEquipDetail();
+      };
+      b.ondblclick = () => { if (g) this.onUnequip(slot); };
+      if (g && it) this.bindTooltip(b, () => gearTitle(it, g), () => this.gearSummary(g));
+      return b;
+    };
+    $('doll-left').replaceChildren(...['head', 'armor', 'boots'].map(slotButton));
+    $('doll-right').replaceChildren(...['weapon', 'accessory'].map(slotButton));
+    $('doll-charms').replaceChildren(...CHARM_SLOTS.map(slotButton));
+    $('equipment-job').textContent = this.stats ? this.stats.job[0].toUpperCase() + this.stats.job.slice(1) + ' · Lv ' + lv : '';
+    const outfit = [...this.gear.values()].filter(isWornCopy).map((g) => g.base).sort();
+    const canvas = $('doll-canvas') as HTMLCanvasElement;
+    if (canvas.dataset.outfit !== outfit.join('+')) {
+      const drawn = drawWayfarerPortrait(canvas, outfit);
+      if (drawn) canvas.dataset.outfit = outfit.join('+');
+      $('equip-win').classList.toggle('no-portrait', !drawn);
+    }
+    this.renderEquipDetail(); this.renderEquipStats();
   }
+  private renderEquipDetail() {
+    const d = $('equip-detail'); d.replaceChildren();
+    const slot = this.equipSel, g = this.worn(slot);
+    if (g) { this.renderGearDetail(d, g); return; }
+    const ci = CHARM_SLOTS.indexOf(slot as typeof CHARM_SLOTS[number]), open = ci >= 0 ? this.c.systems.charm_slot_levels[ci] ?? 0 : 0;
+    const art = el('span', 'detail-socket'); art.append(icon(SLOT_ICON[slot] ?? 'crystal'));
+    this.detailHead(d, art, 'Empty slot', SLOT_LABEL[slot], '', ci >= 0 ? 'Holds a Charm or a Totem · Totems fire from key ' + TOTEM_KEYS[ci] : undefined);
+    if ((this.stats?.lv ?? 1) < open) { d.append(el('p', 'item-description', 'This slot opens at Lv ' + open + '.')); return; }
+    const kind = ci >= 0 ? 'charm' : slot;
+    const fits = [...this.gear.values()].filter((x) => !x.slot && gearItem(this.c, x)?.equip?.slot === kind).sort((a, b) => b.ilvl - a.ilvl);
+    const s = this.section(d, fits.length ? 'In your satchel · ' + fits.length : 'In your satchel');
+    if (!fits.length) { s.append(el('p', 'muted small', 'Nothing you carry fits this slot yet.')); return; }
+    for (const x of fits.slice(0, 6)) {
+      const it = gearItem(this.c, x)!, met = requirements(it, this.stats?.lv ?? 1, this.stats?.job, this.sheet).every(([, ok]) => ok);
+      const b = el('button', 'candidate rarity-' + x.rarity), text = el('span');
+      text.append(el('strong', 'rarity-text-' + x.rarity, gearTitle(it, x)), el('small', met ? 'muted' : 'bad', met ? RARITY_LABEL[x.rarity] + ' · item level ' + x.ilvl : '✗ Requirements not met'));
+      b.append(itemIcon(it, x.rarity), text, el('span', 'candidate-action', 'Equip'));
+      b.disabled = !met; b.onclick = () => this.onEquip(x.uid, ci >= 0 ? slot : undefined);
+      s.append(b);
+    }
+    if (fits.length > 6) s.append(el('p', 'muted small', '+' + (fits.length - 6) + ' more in the Inventory'));
+  }
+  /** Totals under the paper doll: the character sheet's numbers, or the status values before it arrives. */
+  private renderEquipStats() {
+    const d = this.sheet?.d, s = this.stats, pct = (v: number) => Math.round(v * 1000) / 10 + '%';
+    const groups: [string, [string, string][]][] = d ? [
+      ['Offense', [['Attack', String(d.atk)], ['Weapon ATK', String(d.weapon)], ['Critical', pct(d.crit) + ' · ' + pct(d.crit_mult)], ['Attack every', (d.attack_ms / 1000).toFixed(2) + 's']]],
+      ['Defense', [['Max HP', String(d.max_hp)], ['Armour', String(d.armour)], ['Evasion', String(d.evasion)], ['Aether Shield', String(d.max_shield)]]],
+      ['Resistances', [['Fire', pct(d.res_fire)], ['Cold', pct(d.res_cold)], ['Nature', pct(d.res_nature)], ['Shadow', pct(d.res_shadow)]]],
+    ] : [['Totals', [['Attack', String(s?.atk ?? '–')], ['Armour', String(s?.def ?? '–')], ['Max HP', String(s?.mhp ?? '–')], ['Aether Shield', String(s?.msh ?? 0)]]]];
+    $('equipment-stats').replaceChildren(...groups.map(([title, rows]) => {
+      const g = el('section', 'equip-stat-group'); g.append(el('h4', 'eyebrow', title));
+      for (const [k, v] of rows) { const r = el('div', 'derived-row'); r.append(el('span', '', k), el('b', '', v)); g.append(r); }
+      return g;
+    }));
+  }
+  private detailHead(d: HTMLElement, art: HTMLElement, eyebrow: string, title: string, titleCls = '', sub?: string) {
+    const head = el('div', 'detail-head'), text = el('div', 'detail-title');
+    text.append(el('p', 'eyebrow', eyebrow), el('h3', titleCls, title));
+    if (sub) text.append(el('small', 'muted', sub));
+    head.append(art, text); d.append(head);
+  }
+  private section(d: HTMLElement, title: string) { const s = el('section', 'detail-sec'); s.append(el('h4', '', title)); d.append(s); return s; }
   /** Detail panel for one copy of gear, a Charm or a Totem. */
   private renderGearDetail(d: HTMLElement, g: GearView) {
     const it = gearItem(this.c, g);
     if (!it?.equip) { d.append(el('p', 'muted', g.base)); return; }
-    const e = it.equip, title = el('h3', 'rarity-text-' + g.rarity, gearTitle(it, g));
-    d.append(itemIcon(it, g.rarity), el('p', 'eyebrow', RARITY_LABEL[g.rarity] + ' · ' + kindLabel(it) + ' · item level ' + g.ilvl), title);
+    const e = it.equip;
+    this.detailHead(d, itemIcon(it, g.rarity), RARITY_LABEL[g.rarity] + ' · ' + kindLabel(it), gearTitle(it, g), 'rarity-text-' + g.rarity,
+      'Item level ' + g.ilvl + (g.slot === 'stash' ? ' · in stash' : isWornCopy(g) ? ' · worn' : ''));
     if (e.unique || it.category === 'totem' || it.description) d.append(el('p', 'item-description', it.description));
-    for (const line of baseLines(this.c, it, g)) d.append(el('p', 'item-stat', line));
+    const lines = baseLines(this.c, it, g);
+    if (lines.length) { const s = this.section(d, 'Properties'); for (const line of lines) s.append(el('p', 'item-stat', line)); }
     if (g.affixes.length) {
       const list = el('ul', 'affix-list');
       for (const [id, tier, v] of g.affixes) {
         const li = el('li', id.startsWith('cap_') ? 'affix relic' : 'affix', affixText(this.c, id, v));
         li.append(el('small', 'affix-tier', ' T' + tier)); list.append(li);
       }
-      d.append(list);
+      this.section(d, 'Modifiers').append(list);
     }
     const reqs = requirements(it, this.stats?.lv ?? 1, this.stats?.job, this.sheet);
-    const req = el('p', 'item-reqs');
-    req.append(el('span', 'muted', 'Requires '));
-    reqs.forEach(([text, ok], i) => req.append(el('span', ok ? 'good' : 'bad', (i ? ', ' : '') + text)));
-    d.append(req);
+    const chips = el('div', 'req-chips');
+    for (const [text, ok] of reqs) chips.append(el('span', 'req ' + (ok ? 'good' : 'bad'), (ok ? '✓ ' : '✗ ') + text));
+    this.section(d, 'Requires').append(chips);
     const slot = e.slot === 'charm' ? undefined : e.slot;
     const wearing = slot ? this.worn(slot) : undefined;
-    if (slot && wearing && wearing.uid !== g.uid) {
-      const mine = gearNumbers(it, g), theirs = gearNumbers(gearItem(this.c, wearing), wearing);
-      for (const key of new Set([...Object.keys(mine), ...Object.keys(theirs)])) {
-        const delta = (mine[key] ?? 0) - (theirs[key] ?? 0); if (!delta) continue;
-        const row = el('div', 'compare-row'); row.append(el('span', '', key), el('span', delta > 0 ? 'good' : 'bad', (delta > 0 ? '+' : '') + Math.round(delta))); d.append(row);
+    if (slot && !g.slot) {
+      const s = this.section(d, wearing ? 'Compared with ' + (gearItem(this.c, wearing)?.name ?? '') : 'Compared with');
+      if (!wearing) s.append(el('p', 'good small', 'Nothing worn in this slot'));
+      else {
+        const mine = gearNumbers(it, g), theirs = gearNumbers(gearItem(this.c, wearing), wearing);
+        let rows = 0;
+        for (const key of new Set([...Object.keys(mine), ...Object.keys(theirs)])) {
+          const delta = (mine[key] ?? 0) - (theirs[key] ?? 0); if (!delta) continue;
+          const row = el('div', 'compare-row'); row.append(el('span', '', key), el('b', delta > 0 ? 'good' : 'bad', (delta > 0 ? '▲ +' : '▼ ') + Math.round(delta))); s.append(row); rows++;
+        }
+        if (!rows) s.append(el('p', 'muted small', 'Same base numbers'));
       }
-      d.append(el('p', 'muted small', 'Compared with ' + (gearItem(this.c, wearing)?.name ?? '')));
     }
     if (this.sheet?.inactive?.includes(g.uid)) d.append(el('p', 'bad small', 'Worn, but its requirements are not met: it has no effect.'));
     const echo = e.totem && this.c.systems.totem_types.find((x) => x.id === e.totem!.type)?.trigger;
@@ -450,7 +556,9 @@ export class Hud {
       x.onclick = () => { if (x.dataset.confirm) this.onDiscard(g.uid); else { x.dataset.confirm = '1'; x.textContent = 'Discard: click again'; } };
       actions.append(x);
     }
-    d.append(el('p', 'sell-value', 'Sells for about ' + money(Math.round(it.sell_price * ({ normal: 1, magic: 1.5, rare: 2.5, relic: 5, unique: 4 }[g.rarity] ?? 1)))), actions);
+    const foot = el('div', 'detail-foot');
+    foot.append(el('p', 'sell-value', 'Sells for about ' + money(Math.round(it.sell_price * ({ normal: 1, magic: 1.5, rare: 2.5, relic: 5, unique: 4 }[g.rarity] ?? 1)))), actions);
+    d.append(foot);
   }
   private renderDetail() {
     const d = $('item-detail'); d.replaceChildren();
@@ -460,26 +568,30 @@ export class Hud {
     }
     const id = this.selected, it = id ? this.c.items.get(id) : undefined;
     if (!it || !id) { d.append(icon('bag', 'detail-emblem'), el('h3', '', 'Item details'), el('p', 'muted', 'Select an item to inspect its stats and available actions.')); return; }
-    d.append(itemIcon(it), el('p', 'eyebrow', it.rarity + ' · ' + it.category.replace('_', ' ')), el('h3', '', it.name), el('p', 'item-description', it.description));
+    this.detailHead(d, itemIcon(it), it.rarity + ' · ' + it.category.replace('_', ' '), it.name, '', 'Owned ×' + this.inventory[id]);
+    d.append(el('p', 'item-description', it.description));
     if (it.use) {
-      if (it.use.reset_stats) d.append(el('p', 'item-stat', 'Returns all stat points (free up to Lv ' + (this.c.systems.rules.free_reset_level ?? 20) + ')'));
-      if (it.use.heal_hp_pct) d.append(el('p', 'item-stat', 'Restores ' + it.use.heal_hp_pct + '% HP'));
-      if (it.use.heal_sp_pct) d.append(el('p', 'item-stat', 'Restores ' + it.use.heal_sp_pct + '% SP'));
-      d.append(el('p', 'muted small', 'Cooldown ' + (it.use.cooldown_ms ?? 0) / 1000 + 's'));
+      const s = this.section(d, 'Effect');
+      if (it.use.reset_stats) s.append(el('p', 'item-stat', 'Returns all stat points (free up to Lv ' + (this.c.systems.rules.free_reset_level ?? 20) + ')'));
+      if (it.use.heal_hp_pct) s.append(el('p', 'item-stat', 'Restores ' + it.use.heal_hp_pct + '% HP'));
+      if (it.use.heal_sp_pct) s.append(el('p', 'item-stat', 'Restores ' + it.use.heal_sp_pct + '% SP'));
+      s.append(el('p', 'muted small', 'Cooldown ' + (it.use.cooldown_ms ?? 0) / 1000 + 's'));
     }
     if (it.equip) {
       const wearing = this.c.items.get(this.equip[it.equip.slot]);
-      d.append(el('p', 'item-stat', 'Level ' + it.equip.min_level + ' · ' + (it.equip.job ?? 'All classes')));
+      const s = this.section(d, 'Properties');
+      s.append(el('p', 'item-stat', 'Level ' + it.equip.min_level + ' · ' + (it.equip.job ?? 'All classes')));
       for (const [key, label] of [['attack', 'Attack'], ['armour', 'Armour'], ['evasion', 'Evasion'], ['shield', 'Shield']] as const) {
         const value = it.equip[key] ?? 0, old = wearing?.equip?.[key] ?? 0;
         if (!value && !old) continue;
         const row = el('div', 'compare-row'); row.append(el('span', '', label), el('b', '', '+' + value));
         if (wearing?.id !== id) { const delta = value - old; row.append(el('span', delta > 0 ? 'good' : delta < 0 ? 'bad' : 'muted', (delta > 0 ? '+' : '') + delta)); }
-        d.append(row);
+        s.append(row);
       }
-      if (wearing && wearing.id !== id) d.append(el('p', 'muted small', 'Compared with ' + wearing.name));
+      if (wearing && wearing.id !== id) s.append(el('p', 'muted small', 'Compared with ' + wearing.name));
     }
-    d.append(el('p', 'sell-value', 'Sell value ' + money(it.sell_price) + ' · Owned ' + this.inventory[id]));
+    const foot = el('div', 'detail-foot');
+    foot.append(el('p', 'sell-value', 'Sell value ' + money(it.sell_price) + ' each'));
     const equipped = Object.values(this.equip).includes(id);
     if (it.use || it.equip) {
       const b = el('button', 'primary detail-action', it.use ? 'Use item' : equipped ? 'Unequip' : 'Equip item');
@@ -487,9 +599,10 @@ export class Hud {
       const wrongJob = !!it.equip?.job && !!this.stats && it.equip.job !== this.stats.job;
       b.disabled = !equipped && !!it.equip && (level < it.equip.min_level || wrongJob);
       if (b.disabled) b.title = wrongJob ? 'Requires ' + it.equip!.job : 'Requires level ' + it.equip!.min_level;
-      b.onclick = () => it.use ? this.onUse(id) : equipped && it.equip ? this.onUnequip(it.equip.slot) : undefined; d.append(b);
-      if (b.disabled) d.append(el('p', 'bad small', b.title));
+      b.onclick = () => it.use ? this.onUse(id) : equipped && it.equip ? this.onUnequip(it.equip.slot) : undefined; foot.append(b);
+      if (b.disabled) foot.append(el('p', 'bad small', b.title));
     }
+    d.append(foot);
   }
   /** The character window: stat points, derived numbers and skill ranks. */
   renderCharacter() {

@@ -452,6 +452,16 @@ export function setPaperDollKit(k: PaperDollKit) {
   baked.clear();
 }
 
+/** The Wayfarer facing the viewer in this outfit, for the Equipment window; false before the kit loads. */
+export function drawWayfarerPortrait(canvas: HTMLCanvasElement, gear: readonly string[] = []): boolean {
+  if (!kit) return false;
+  canvas.width = canvas.height = kit.rig.frame;
+  const g = canvas.getContext("2d")!;
+  g.clearRect(0, 0, canvas.width, canvas.height);
+  renderWayfarerPose(g, kit, kit.rig.facings.S ?? "front", gear);
+  return true;
+}
+
 /** The Wayfarer wearing these items (baked once per outfit), or null before the kit loads. */
 export function wayfarerSprite(gear: readonly string[] = []): SpriteDef | null {
   if (!kit) return null;
