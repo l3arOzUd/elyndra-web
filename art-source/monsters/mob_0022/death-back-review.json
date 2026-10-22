@@ -5,7 +5,7 @@
     1254,
     1254
   ],
-  "status": "endpoint-study-not-sequenced",
+  "status": "three-key-shutdown-draft",
   "artApproved": false,
   "publicBinding": false,
   "observed": [
@@ -17,8 +17,21 @@
   "remaining": [
     "Square framing restored, but body width still needs matching to neutral.",
     "Arms still appear weight-bearing.",
-    "Intermediate buckle missing.",
-    "Cross-view folded leg and clamp geometry not approved."
+    "Cross-view folded leg and clamp geometry not approved.",
+    "Intermediate heel locations drift; support continuity unapproved."
   ],
-  "previousSource": "death-back-slump.png"
+  "previousSource": "death-back-slump.png",
+  "sources": [
+    "back-neutral-v3.png",
+    "death-back-buckle.png",
+    "death-back-slump-v2.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    2
+  ]
 }
