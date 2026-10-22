@@ -5,7 +5,7 @@ import { decodeWalk } from "./data/schema";
 import type { Connection } from "./net/connection";
 import { EntState, type CombatEvent, type EntityAdd, type MsgOf, type ServerMsg } from "./net/protocol";
 import { IsoCamera } from "./render/camera";
-import { Fx, RARITY_COLORS, TOTEM_COLORS } from "./render/fx";
+import { COLORS as SKILL_COLORS, Fx, RARITY_COLORS, TOTEM_COLORS } from "./render/fx";
 import { wayfarerSprite } from "./render/paperDoll";
 import { skillAnimation } from "./render/combatAnimation";
 import { SpriteActor } from "./render/spriteActor";
@@ -158,7 +158,8 @@ export class Game {
     hud.onTotem = (slot) => conn.send({ t: "totem", slot });
     hud.onLink = (slot, skill) => conn.send({ t: "link", slot, skill });
     hud.onTotemFired = (type) => { const me = this.self; if (me) this.fx.aura(me.pos.x, me.pos.z, TOTEM_COLORS[type] ?? 0xffffff); };
-    hud.onLevelUp = () => { const me = this.self; if (me) this.fx.aura(me.pos.x, me.pos.z, 0xffe08a, 1400, 2); };
+    hud.onLevelUp = () => { const me = this.self; if (me) this.fx.celebrate(me.pos.x, me.pos.z, 0xffd36a, 1); };
+    hud.onSkillRankUp = (skill) => { const me = this.self; if (me) this.fx.celebrate(me.pos.x, me.pos.z, SKILL_COLORS[skill] ?? 0x8fe8ff, 0.6); };
     dialog.onOp = (npc, op, arg, qty) => conn.send({ t: "npc", npc, op, arg, qty });
     document.getElementById('clear-target')!.onclick = () => { this.targetId = null; this.hud.setTarget(null); };
     document.querySelector<HTMLButtonElement>('[data-close=debug-win]')!.onclick = () => { this.debugOn = false; this.conn.send({ t: 'debug', on: false }); document.getElementById('debug-win')!.hidden = true; };

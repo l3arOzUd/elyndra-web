@@ -57,6 +57,8 @@ export class Hud {
   /** A Totem's effect started (for the effects layer). */
   onTotemFired: (type: string) => void = () => {};
   onLevelUp: (level: number) => void = () => {};
+  /** A skill's mastery rank went up (sheet mastery). */
+  onSkillRankUp: (skill: string, rank: number) => void = () => {};
 
   /** The skills on keys 1-4 (JOB_SKILLS of the character's job, or the player's order). */
   hotbar: string[] = [...HOTBAR];
@@ -232,7 +234,13 @@ export class Hud {
     this.totems = s.tot ?? [];
     this.buffs = s.buffs ?? [];
     for (const t of this.totems) if (t.left && !before.get(t.slot)) { const g = this.worn(t.slot); const type = g && this.c.items.get(g.base)?.equip?.totem?.type; if (type) this.onTotemFired(type); }
-    if (prev && s.lv > prev.lv) this.onLevelUp(s.lv);
+    if (prev && s.lv > prev.lv) {
+      this.onLevelUp(s.lv);
+      // Skills this level opens for the job: named in the banner, their hotbar slots glow.
+      const fresh = [...this.c.skills.values()].filter((k) => (k.job === this.job || k.job === 'all') && k.unlock_level > prev.lv && k.unlock_level <= s.lv);
+      this.celebrate('level', 'LEVEL UP', 'Lv ' + s.lv + (fresh.length ? ' · New skill: ' + fresh.map((k) => k.name).join(', ') : '') + (this.sheet ? ' · +' + (s.lv - prev.lv) * 3 + ' stat points' : ''));
+      for (const k of fresh) this.glowSlot(k.id);
+    }
     this.renderBuffs();
     $('hp-fill').classList.toggle('low', s.hp / s.mhp < .3);
     $('exp-text').textContent = s.next ? (s.exp / s.next * 100).toFixed(1) + '%' : 'MAX';
@@ -294,7 +302,37 @@ export class Hud {
   }
   /** The worn copy in a slot. */
   worn(slot: string) { return [...this.gear.values()].find((g) => g.slot === slot); }
-  setSheet(m: SheetMsg) { this.sheet = m; this.renderCharacter(); this.renderInventory(); }
+  setSheet(m: SheetMsg) {
+    const old = this.sheet?.mastery;
+    this.sheet = m; this.renderCharacter(); this.renderInventory();
+    if (!old) return;
+    for (const [skill, [rank]] of Object.entries(m.mastery)) {
+      if (rank <= (old[skill]?.[0] ?? rank)) continue;
+      const name = this.c.skills.get(skill)?.name ?? 'Basic attack', max = this.c.systems.mastery.max_rank;
+      const perk = rank >= max ? this.c.systems.mastery.perks[skill] : '';
+      this.celebrate('skill', 'SKILL UP', name + ' · Rank ' + rank + (rank >= max ? ' (max)' : '') + (perk ? ' · ' + perk : ''));
+      this.glowSlot(skill);
+      this.onSkillRankUp(skill, rank);
+    }
+  }
+  /** A big banner in the upper middle of the screen (level up, skill rank up). */
+  celebrate(kind: 'level' | 'skill', title: string, sub: string) {
+    let box = document.getElementById('celebrations');
+    if (!box) { box = el('div'); box.id = 'celebrations'; box.setAttribute('aria-live', 'polite'); document.body.append(box); }
+    const b = el('div', 'celebration ' + kind);
+    b.append(el('div', 'celebration-rays'), el('strong', 'celebration-title', title), el('span', 'celebration-sub', sub));
+    box.append(b);
+    while (box.children.length > 3) box.firstElementChild!.remove();
+    setTimeout(() => b.remove(), kind === 'level' ? 4200 : 3400);
+  }
+  /** Makes a skill's hotbar slot shine for a few seconds. */
+  glowSlot(skill: string) {
+    document.querySelectorAll<HTMLElement>('#hotbar .slot').forEach((b) => {
+      if (b.dataset.skill !== skill) return;
+      b.classList.remove('fresh'); void b.offsetWidth; b.classList.add('fresh');
+      setTimeout(() => b.classList.remove('fresh'), 5000);
+    });
+  }
   renderInventory() {
     $('aurel').textContent = money(this.aurel);
     const eq = $('equip'); eq.replaceChildren();

@@ -315,3 +315,25 @@ button.on { background:#426c55; color:#f8efd6; }
   .quest-win,.log-win { display:none; }.map-win { width:138px; }.large-window { max-height:calc(100dvh - 40px); }.action-dock { bottom:12px; }.help { display:none; }
 }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; } }
+/* Level up / skill up banner (RO style): big gilded serif title with a glow,
+   light rays behind it, a line saying what changed. Never blocks input. */
+#celebrations { position:fixed; left:50%; top:18vh; transform:translateX(-50%); z-index:15; display:flex; flex-direction:column; align-items:center; gap:10px; pointer-events:none; width:min(760px,calc(100vw - 32px)); }
+.celebration { position:relative; display:grid; justify-items:center; gap:4px; padding:10px 40px 12px; text-align:center; animation:celebrate-in .55s cubic-bezier(.2,1.6,.4,1) both, celebrate-out .7s ease-in 3.5s forwards; }
+.celebration.skill { animation:celebrate-in .45s cubic-bezier(.2,1.6,.4,1) both, celebrate-out .6s ease-in 2.8s forwards; }
+.celebration-title { font:700 clamp(44px,7vw,76px)/1 var(--ui-font-title); letter-spacing:.12em; color:#fff3c4;
+  background:linear-gradient(180deg,#fffbe6 0%,#ffe08a 45%,#d9963a 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 10px #ffcf6a) drop-shadow(0 2px 0 #5a3410) drop-shadow(0 0 28px #ffb84a99); }
+.celebration.skill .celebration-title { font-size:clamp(32px,4.6vw,50px); background:linear-gradient(180deg,#f2feff 0%,#9ff0ff 50%,#3fa7c4 100%); -webkit-background-clip:text; background-clip:text;
+  filter:drop-shadow(0 0 9px #7fe6ff) drop-shadow(0 2px 0 #10324a) drop-shadow(0 0 24px #5ad2ff88); }
+.celebration-sub { font:600 clamp(15px,1.6vw,19px)/1.35 var(--ui-font-body); color:#fff4dc; text-shadow:0 0 4px #000,0 1px 2px #000,0 0 14px #000a; padding:3px 16px; border-radius:3px; background:linear-gradient(90deg,transparent,#1a120bcc 18%,#1a120bcc 82%,transparent); }
+.celebration-rays { position:absolute; inset:-60px -40px; z-index:-1; border-radius:50%;
+  background:radial-gradient(closest-side,#ffe7a066,#ffcf6a22 55%,transparent 72%), repeating-conic-gradient(from 0deg,#ffe8a833 0deg 6deg,transparent 6deg 18deg);
+  -webkit-mask:radial-gradient(closest-side,#000 35%,transparent 75%); mask:radial-gradient(closest-side,#000 35%,transparent 75%); animation:celebrate-spin 9s linear infinite; }
+.celebration.skill .celebration-rays { inset:-40px -20px; background:radial-gradient(closest-side,#8fe8ff55,#5ad2ff1c 55%,transparent 72%), repeating-conic-gradient(from 0deg,#bff4ff2a 0deg 6deg,transparent 6deg 18deg); }
+@keyframes celebrate-in { from { opacity:0; transform:scale(.4) translateY(14px); letter-spacing:.5em; } 60% { opacity:1; } to { opacity:1; transform:none; } }
+@keyframes celebrate-out { to { opacity:0; transform:translateY(-18px) scale(1.04); } }
+@keyframes celebrate-spin { to { transform:rotate(360deg); } }
+/* A skill slot that just unlocked or ranked up shines for a few seconds. */
+#hotbar .slot.fresh { animation:slot-shine 1s ease-in-out 5; box-shadow:0 0 0 2px #ffe08a,0 0 18px 4px #ffcf6aaa; }
+@keyframes slot-shine { 50% { box-shadow:0 0 0 2px #fffbe6,0 0 26px 8px #ffe08acc; filter:brightness(1.35); } }
+@media (prefers-reduced-motion: reduce) { .celebration,.celebration.skill { animation:celebrate-out .6s ease-in 3.2s forwards; } .celebration-rays,#hotbar .slot.fresh { animation:none; } }

@@ -5,7 +5,7 @@ import type { SkillDef } from "../data/schema";
 // when the server's hit lands. Pooled so a 50-target AoE costs a handful
 // of meshes, never one per target (HORDE_SPEC §3 "particle budget").
 
-const COLORS: Record<string, number> = {
+export const COLORS: Record<string, number> = {
   cleaving_arc: 0xffd27a, iron_cyclone: 0x9fd8ff, anchor_shout: 0xff9a6a, sundering_pulse: 0x7ff0ff,
   prism_field: 0x9fd0ff, aether_nova: 0xc98aff, gravity_coil: 0x8c5ad8, meridian_lance: 0xffe69a, splitshot_array: 0xe6be5a,
   dash_circuit: 0x5adcb4, coil_mine: 0xdc5a3c, gearstorm: 0xdcaa50, pulse_beacon: 0x6ee68c,
@@ -19,7 +19,14 @@ export const TOTEM_COLORS: Record<string, number> = {
 };
 export const RARITY_COLORS: Record<string, number> = { normal: 0xd9b46a, magic: 0x6d9ed0, rare: 0xe0c35a, relic: 0xe07a3c, unique: 0xc9853a };
 
-interface Live { obj: THREE.Mesh; age: number; life: number; grow: number; kind: "tele" | "burst" | "aura" | "shrink" | "field" | "flash" }
+interface Live {
+  obj: THREE.Mesh; age: number; life: number; grow: number;
+  kind: "tele" | "burst" | "aura" | "shrink" | "field" | "flash" | "beam" | "spark";
+  /** ms before it shows (staggered rings). */
+  delay?: number;
+  /** spark velocity, cells per second. */
+  v?: [number, number, number];
+}
 
 // Shared across maps. Each effect owns its material, not this reusable texture.
 let cleavingTexture: THREE.Texture | undefined;
@@ -205,8 +212,49 @@ export class Fx {
     this.live.push({ obj: ring, age: 0, life: lifeMs * 0.7, grow: radius * 1.6, kind: "burst" });
   }
 
+  /**
+   * Level up / skill up (RO style): a pillar of light, rings rolling out one
+   * after another, and sparks rising round the actor. `power` 1 is a level
+   * up; skill ranks use about 0.6. About 30 meshes, once, so cheap enough.
+   */
+  celebrate(x: number, z: number, color: number, power = 1) {
+    const add = (mesh: THREE.Mesh, kind: Live["kind"], life: number, grow = 0, delay = 0, v?: Live["v"]) => {
+      mesh.visible = delay <= 0;
+      this.scene.add(mesh);
+      this.live.push({ obj: mesh, age: 0, life, grow, kind, delay, v });
+    };
+    const glow = (c: number, o: number) => new THREE.MeshBasicMaterial({ color: c, transparent: true, opacity: o, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending });
+    // Pillar: a bright core inside a wide soft column.
+    const h = 9 * power;
+    for (const [r, o] of [[0.35, 0.9], [1.1, 0.35]] as const) {
+      const beam = new THREE.Mesh(new THREE.CylinderGeometry(r * power, r * power * 1.3, h, 24, 1, true).translate(0, h / 2, 0), glow(r < 1 ? 0xffffff : color, o));
+      beam.position.set(x, 0.02, z);
+      add(beam, "beam", 1600 * Math.max(0.7, power));
+    }
+    // Rings rolling out.
+    for (let i = 0; i < 3; i++) {
+      const ring = new THREE.Mesh(new THREE.RingGeometry(0.85, 1, 48).rotateX(-Math.PI / 2), glow(i === 1 ? 0xffffff : color, 0.95));
+      ring.position.set(x, 0.12, z);
+      ring.scale.setScalar(0.3);
+      add(ring, "burst", 700, (2.2 + i * 1.1) * power, i * 180);
+    }
+    // Rising sparks, little diamonds that spin up and fade.
+    const n = Math.round(22 * power);
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2 + Math.random() * 0.4, r = (0.4 + Math.random() * 0.9) * power;
+      const spark = new THREE.Mesh(new THREE.OctahedronGeometry(0.09 + Math.random() * 0.08), glow(Math.random() < 0.35 ? 0xffffff : color, 1));
+      spark.position.set(x + Math.cos(a) * r, 0.2 + Math.random() * 0.6, z + Math.sin(a) * r);
+      add(spark, "spark", 1100 + Math.random() * 700, 0, Math.random() * 400, [Math.cos(a) * 0.5, (2.6 + Math.random() * 2.2) * power, Math.sin(a) * 0.5]);
+    }
+  }
+
   update(dtMs: number) {
     this.live = this.live.filter((l) => {
+      if (l.delay && l.delay > 0) {
+        l.delay -= dtMs;
+        if (l.delay > 0) return true;
+        l.obj.visible = true;
+      }
       l.age += dtMs;
       const t = l.age / l.life;
       const mat = l.obj.material as THREE.MeshBasicMaterial;
@@ -218,6 +266,16 @@ export class Fx {
         mat.opacity = 0.18 + 0.1 * Math.sin(l.age / 120) - (t > 0.85 ? (t - 0.85) * 1.2 : 0);
       } else if (l.kind === "flash") {
         mat.opacity = 0.95 * (1 - t);
+      } else if (l.kind === "beam") {
+        // Shoots up fast, holds, then thins and fades from the bottom up.
+        l.obj.scale.set(1 - t * 0.6, Math.min(1, t * 6), 1 - t * 0.6);
+        mat.opacity = (mat.userData.o ??= mat.opacity) * (t < 0.55 ? 1 : 1 - (t - 0.55) / 0.45);
+      } else if (l.kind === "spark") {
+        const s = dtMs / 1000;
+        l.obj.position.x += l.v![0] * s; l.obj.position.y += l.v![1] * s; l.obj.position.z += l.v![2] * s;
+        l.v![1] *= 0.985;
+        l.obj.rotation.y += s * 6; l.obj.rotation.x += s * 3;
+        mat.opacity = t < 0.6 ? 1 : 1 - (t - 0.6) / 0.4;
       } else if (l.kind === "aura") {
         l.obj.scale.set(1 + t * 0.3, 0.4 + t * 0.9, 1 + t * 0.3);
         mat.opacity = 0.45 * (1 - t);
