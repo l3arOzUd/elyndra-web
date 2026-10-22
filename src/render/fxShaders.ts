@@ -23,11 +23,8 @@ const common = /* glsl */ `
   uniform float uCover;
   varying vec2 vP;
   float band(float x, float c, float w) { return 1.0 - smoothstep(0.0, w, abs(x - c)); }
-  void emit(vec3 col, float a) { a = clamp(a, 0.0, 1.0); gl_FragColor = vec4(col * a, a * uCover); }
-`;
-
-const out = /* glsl */ `
-  #include <colorspace_fragment>
+  // Into the output colour space first, then premultiplied, or faint light would brighten.
+  void emit(vec3 col, float a) { a = clamp(a, 0.0, 1.0); gl_FragColor = vec4(linearToOutputTexel(vec4(col, 1.0)).rgb * a, a * uCover); }
 `;
 
 /**
@@ -68,7 +65,6 @@ const telegraphFrag = /* glsl */ `
     float a = body + filled + front * 0.75 + rim * 0.8 + marks * 0.4 + uFlash * (0.06 + 0.4 * rim);
     vec3 col = mix(uColor, vec3(1.0), clamp(front * 0.75 + rim * (0.3 + 0.4 * uFlash), 0.0, 1.0));
     emit(col, a * uOpacity);
-    ${out}
   }
 `;
 
@@ -89,7 +85,6 @@ const sigilFrag = /* glsl */ `
     a += pow(1.0 - d, 2.5) * 0.45;
     vec3 col = mix(uColor, vec3(1.0), pow(1.0 - d, 3.0) * 0.6);
     emit(col, a * uOpacity);
-    ${out}
   }
 `;
 
@@ -105,7 +100,6 @@ const waveFrag = /* glsl */ `
     float wash = smoothstep(0.2, 0.92, d) * 0.12 * (1.0 - uT);
     vec3 col = mix(uColor, vec3(1.0), ring * 0.55 * (1.0 - uT));
     emit(col, (ring + wash) * uOpacity);
-    ${out}
   }
 `;
 
@@ -117,7 +111,6 @@ const glowFrag = /* glsl */ `
     if (d > 1.0) discard;
     float a = pow(1.0 - d, 1.8);
     emit(mix(uColor, vec3(1.0), pow(1.0 - d, 4.0)), a * uOpacity);
-    ${out}
   }
 `;
 
@@ -140,7 +133,6 @@ const sweepFrag = /* glsl */ `
     float a = trail * prof * edge;
     vec3 col = mix(uColor, vec3(1.0), clamp(trail * prof * 1.2 - 0.3, 0.0, 1.0));
     emit(col, a * uOpacity);
-    ${out}
   }
 `;
 
@@ -163,7 +155,6 @@ const beamFrag = /* glsl */ `
     float ends = smoothstep(0.0, 0.05, along) * mix(1.0, along, uTail);
     float a = (core + glow + streak + tip) * ends;
     emit(mix(uColor, vec3(1.0), clamp(core * 0.8 + tip, 0.0, 1.0)), a * uOpacity);
-    ${out}
   }
 `;
 
@@ -177,7 +168,6 @@ const swirlFrag = /* glsl */ `
     float arms = smoothstep(0.55, 1.0, sin(ang * 3.0 + d * 11.0 + uTime * 9.0));
     float a = arms * smoothstep(1.0, 0.75, d) * smoothstep(0.0, 0.25, d) + pow(1.0 - d, 4.0) * 0.8;
     emit(mix(uColor, vec3(1.0), pow(1.0 - d, 5.0)), a * uOpacity);
-    ${out}
   }
 `;
 
@@ -192,7 +182,6 @@ const gearFrag = /* glsl */ `
     float a = step(0.74, d) * step(d, 0.86) + step(0.86, d) * step(d, 0.97) * tooth;
     a += band(d, 0.32, 0.05) + step(d, 0.74) * step(0.32, d) * band(fract(ang / (2.0 * PI) * 6.0), 0.5, 0.05);
     emit(mix(uColor, vec3(1.0), 0.25), a * uOpacity);
-    ${out}
   }
 `;
 
