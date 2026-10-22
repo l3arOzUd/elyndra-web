@@ -16,7 +16,7 @@
   "attack": 11,
   "defense": 7,
   "exp_to_next": 536,
-  "ref_attack": 27,
+  "ref_attack": 28,
   "ref_armour": 23
  },
  {
@@ -26,7 +26,7 @@
   "attack": 13,
   "defense": 8,
   "exp_to_next": 1008,
-  "ref_attack": 29,
+  "ref_attack": 32,
   "ref_armour": 24
  },
  {
@@ -36,7 +36,7 @@
   "attack": 16,
   "defense": 10,
   "exp_to_next": 1661,
-  "ref_attack": 33,
+  "ref_attack": 35,
   "ref_armour": 26
  },
  {
@@ -46,7 +46,7 @@
   "attack": 18,
   "defense": 11,
   "exp_to_next": 2640,
-  "ref_attack": 35,
+  "ref_attack": 39,
   "ref_armour": 27
  },
  {
@@ -56,7 +56,7 @@
   "attack": 20,
   "defense": 13,
   "exp_to_next": 3901,
-  "ref_attack": 37,
+  "ref_attack": 42,
   "ref_armour": 29
  },
  {
@@ -66,7 +66,7 @@
   "attack": 22,
   "defense": 15,
   "exp_to_next": 5476,
-  "ref_attack": 39,
+  "ref_attack": 46,
   "ref_armour": 31
  },
  {
@@ -76,7 +76,7 @@
   "attack": 25,
   "defense": 16,
   "exp_to_next": 7397,
-  "ref_attack": 43,
+  "ref_attack": 50,
   "ref_armour": 32
  },
  {
@@ -86,7 +86,7 @@
   "attack": 27,
   "defense": 18,
   "exp_to_next": 9697,
-  "ref_attack": 45,
+  "ref_attack": 53,
   "ref_armour": 34
  },
  {
@@ -96,7 +96,7 @@
   "attack": 30,
   "defense": 19,
   "exp_to_next": 12672,
-  "ref_attack": 87,
+  "ref_attack": 95,
   "ref_armour": 89
  },
  {
@@ -106,7 +106,7 @@
   "attack": 32,
   "defense": 21,
   "exp_to_next": 16161,
-  "ref_attack": 90,
+  "ref_attack": 99,
   "ref_armour": 91
  },
  {
@@ -116,7 +116,7 @@
   "attack": 35,
   "defense": 23,
   "exp_to_next": 20203,
-  "ref_attack": 93,
+  "ref_attack": 103,
   "ref_armour": 93
  },
  {
@@ -126,7 +126,7 @@
   "attack": 37,
   "defense": 24,
   "exp_to_next": 24837,
-  "ref_attack": 96,
+  "ref_attack": 107,
   "ref_armour": 94
  },
  {
@@ -136,7 +136,7 @@
   "attack": 40,
   "defense": 26,
   "exp_to_next": 30102,
-  "ref_attack": 100,
+  "ref_attack": 111,
   "ref_armour": 96
  },
  {
@@ -146,7 +146,7 @@
   "attack": 43,
   "defense": 27,
   "exp_to_next": 36036,
-  "ref_attack": 104,
+  "ref_attack": 117,
   "ref_armour": 97
  },
  {
@@ -156,7 +156,7 @@
   "attack": 46,
   "defense": 29,
   "exp_to_next": 41412,
-  "ref_attack": 107,
+  "ref_attack": 121,
   "ref_armour": 99
  },
  {
@@ -166,7 +166,7 @@
   "attack": 48,
   "defense": 31,
   "exp_to_next": 46628,
-  "ref_attack": 110,
+  "ref_attack": 125,
   "ref_armour": 101
  },
  {
@@ -176,7 +176,7 @@
   "attack": 51,
   "defense": 32,
   "exp_to_next": 52685,
-  "ref_attack": 114,
+  "ref_attack": 129,
   "ref_armour": 102
  },
  {
@@ -186,7 +186,7 @@
   "attack": 54,
   "defense": 34,
   "exp_to_next": 59094,
-  "ref_attack": 118,
+  "ref_attack": 134,
   "ref_armour": 104
  },
  {
@@ -196,7 +196,7 @@
   "attack": 57,
   "defense": 35,
   "exp_to_next": 65856,
-  "ref_attack": 175,
+  "ref_attack": 189,
   "ref_armour": 165
  },
  {
@@ -206,7 +206,7 @@
   "attack": 60,
   "defense": 37,
   "exp_to_next": 72971,
-  "ref_attack": 180,
+  "ref_attack": 195,
   "ref_armour": 167
  },
  {
@@ -216,7 +216,7 @@
   "attack": 63,
   "defense": 39,
   "exp_to_next": 80438,
-  "ref_attack": 184,
+  "ref_attack": 200,
   "ref_armour": 169
  },
  {
@@ -226,7 +226,7 @@
   "attack": 66,
   "defense": 40,
   "exp_to_next": 88922,
-  "ref_attack": 188,
+  "ref_attack": 206,
   "ref_armour": 170
  },
  {
@@ -236,7 +236,7 @@
   "attack": 69,
   "defense": 42,
   "exp_to_next": 97121,
-  "ref_attack": 192,
+  "ref_attack": 210,
   "ref_armour": 172
  },
  {
@@ -246,7 +246,7 @@
   "attack": 72,
   "defense": 43,
   "exp_to_next": 105672,
-  "ref_attack": 197,
+  "ref_attack": 216,
   "ref_armour": 173
  },
  {
@@ -256,7 +256,7 @@
   "attack": 76,
   "defense": 45,
   "exp_to_next": 115315,
-  "ref_attack": 202,
+  "ref_attack": 221,
   "ref_armour": 175
  },
  {
@@ -266,7 +266,7 @@
   "attack": 79,
   "defense": 47,
   "exp_to_next": 125362,
-  "ref_attack": 207,
+  "ref_attack": 227,
   "ref_armour": 177
  },
  {
@@ -276,7 +276,7 @@
   "attack": 82,
   "defense": 48,
   "exp_to_next": 135022,
-  "ref_attack": 211,
+  "ref_attack": 232,
   "ref_armour": 178
  },
  {
@@ -286,7 +286,7 @@
   "attack": 85,
   "defense": 50,
   "exp_to_next": 145849,
-  "ref_attack": 216,
+  "ref_attack": 237,
   "ref_armour": 180
  },
  {
@@ -296,7 +296,7 @@
   "attack": 89,
   "defense": 51,
   "exp_to_next": 157080,
-  "ref_attack": 286,
+  "ref_attack": 304,
   "ref_armour": 241
  },
  {
@@ -306,7 +306,7 @@
   "attack": 92,
   "defense": 53,
   "exp_to_next": 168714,
-  "ref_attack": 292,
+  "ref_attack": 310,
   "ref_armour": 243
  },
  {
@@ -316,7 +316,7 @@
   "attack": 96,
   "defense": 55,
   "exp_to_next": 180751,
-  "ref_attack": 297,
+  "ref_attack": 316,
   "ref_armour": 245
  },
  {
@@ -326,7 +326,7 @@
   "attack": 99,
   "defense": 56,
   "exp_to_next": 193192,
-  "ref_attack": 303,
+  "ref_attack": 323,
   "ref_armour": 246
  },
  {
@@ -336,7 +336,7 @@
   "attack": 103,
   "defense": 58,
   "exp_to_next": 206035,
-  "ref_attack": 309,
+  "ref_attack": 328,
   "ref_armour": 248
  },
  {
@@ -346,7 +346,7 @@
   "attack": 106,
   "defense": 59,
   "exp_to_next": 220248,
-  "ref_attack": 314,
+  "ref_attack": 335,
   "ref_armour": 249
  },
  {
@@ -356,7 +356,7 @@
   "attack": 110,
   "defense": 61,
   "exp_to_next": 233923,
-  "ref_attack": 320,
+  "ref_attack": 341,
   "ref_armour": 251
  },
  {
@@ -366,7 +366,7 @@
   "attack": 114,
   "defense": 63,
   "exp_to_next": 248002,
-  "ref_attack": 327,
+  "ref_attack": 348,
   "ref_armour": 253
  },
  {
@@ -376,7 +376,7 @@
   "attack": 118,
   "defense": 64,
   "exp_to_next": 263525,
-  "ref_attack": 332,
+  "ref_attack": 354,
   "ref_armour": 254
  },
  {
@@ -386,7 +386,7 @@
   "attack": 121,
   "defense": 66,
   "exp_to_next": 279502,
-  "ref_attack": 338,
+  "ref_attack": 361,
   "ref_armour": 256
  },
  {
@@ -396,7 +396,7 @@
   "attack": 125,
   "defense": 67,
   "exp_to_next": 294840,
-  "ref_attack": 422,
+  "ref_attack": 438,
   "ref_armour": 317
  },
  {
@@ -406,7 +406,7 @@
   "attack": 129,
   "defense": 69,
   "exp_to_next": 311699,
-  "ref_attack": 430,
+  "ref_attack": 447,
   "ref_armour": 319
  },
  {
@@ -416,7 +416,7 @@
   "attack": 133,
   "defense": 71,
   "exp_to_next": 329011,
-  "ref_attack": 436,
+  "ref_attack": 453,
   "ref_armour": 321
  },
  {
@@ -426,7 +426,7 @@
   "attack": 137,
   "defense": 72,
   "exp_to_next": 345610,
-  "ref_attack": 443,
+  "ref_attack": 461,
   "ref_armour": 322
  },
  {
@@ -436,7 +436,7 @@
   "attack": 141,
   "defense": 74,
   "exp_to_next": 363804,
-  "ref_attack": 449,
+  "ref_attack": 467,
   "ref_armour": 324
  },
  {
@@ -446,7 +446,7 @@
   "attack": 145,
   "defense": 75,
   "exp_to_next": 382452,
-  "ref_attack": 457,
+  "ref_attack": 476,
   "ref_armour": 325
  },
  {
@@ -456,7 +456,7 @@
   "attack": 149,
   "defense": 77,
   "exp_to_next": 401554,
-  "ref_attack": 463,
+  "ref_attack": 482,
   "ref_armour": 327
  },
  {
@@ -466,7 +466,7 @@
   "attack": 153,
   "defense": 79,
   "exp_to_next": 421109,
-  "ref_attack": 471,
+  "ref_attack": 490,
   "ref_armour": 329
  },
  {
@@ -476,7 +476,7 @@
   "attack": 157,
   "defense": 80,
   "exp_to_next": 441118,
-  "ref_attack": 477,
+  "ref_attack": 496,
   "ref_armour": 330
  },
  {
@@ -486,7 +486,7 @@
   "attack": 162,
   "defense": 82,
   "exp_to_next": 461580,
-  "ref_attack": 485,
+  "ref_attack": 506,
   "ref_armour": 332
  },
  {
@@ -496,7 +496,7 @@
   "attack": 166,
   "defense": 83,
   "exp_to_next": 483840,
-  "ref_attack": 585,
+  "ref_attack": 595,
   "ref_armour": 393
  },
  {
@@ -506,7 +506,7 @@
   "attack": 170,
   "defense": 85,
   "exp_to_next": 505235,
-  "ref_attack": 594,
+  "ref_attack": 604,
   "ref_armour": 395
  },
  {
@@ -516,7 +516,7 @@
   "attack": 175,
   "defense": 87,
   "exp_to_next": 527083,
-  "ref_attack": 601,
+  "ref_attack": 612,
   "ref_armour": 397
  },
  {
@@ -526,7 +526,7 @@
   "attack": 179,
   "defense": 88,
   "exp_to_next": 550805,
-  "ref_attack": 610,
+  "ref_attack": 621,
   "ref_armour": 398
  },
  {
@@ -536,7 +536,7 @@
   "attack": 184,
   "defense": 90,
   "exp_to_next": 573586,
-  "ref_attack": 617,
+  "ref_attack": 629,
   "ref_armour": 400
  },
  {
@@ -546,7 +546,7 @@
   "attack": 188,
   "defense": 91,
   "exp_to_next": 598290,
-  "ref_attack": 626,
+  "ref_attack": 638,
   "ref_armour": 401
  },
  {
@@ -556,7 +556,7 @@
   "attack": 193,
   "defense": 93,
   "exp_to_next": 622003,
-  "ref_attack": 633,
+  "ref_attack": 645,
   "ref_armour": 403
  },
  {
@@ -566,7 +566,7 @@
   "attack": 197,
   "defense": 95,
   "exp_to_next": 647690,
-  "ref_attack": 642,
+  "ref_attack": 654,
   "ref_armour": 405
  },
  {
@@ -576,7 +576,7 @@
   "attack": 202,
   "defense": 96,
   "exp_to_next": 672336,
-  "ref_attack": 650,
+  "ref_attack": 662,
   "ref_armour": 406
  },
  {
@@ -586,7 +586,7 @@
   "attack": 206,
   "defense": 98,
   "exp_to_next": 699006,
-  "ref_attack": 659,
+  "ref_attack": 671,
   "ref_armour": 408
  },
  {
@@ -696,7 +696,7 @@
   "attack": 261,
   "defense": 115,
   "exp_to_next": 1025640,
-  "ref_attack": 996,
+  "ref_attack": 980,
   "ref_armour": 545
  },
  {
@@ -706,7 +706,7 @@
   "attack": 266,
   "defense": 117,
   "exp_to_next": 1058358,
-  "ref_attack": 1008,
+  "ref_attack": 992,
   "ref_armour": 547
  },
  {
@@ -716,7 +716,7 @@
   "attack": 272,
   "defense": 119,
   "exp_to_next": 1091580,
-  "ref_attack": 1018,
+  "ref_attack": 1001,
   "ref_armour": 549
  },
  {
@@ -726,7 +726,7 @@
   "attack": 277,
   "defense": 120,
   "exp_to_next": 1127230,
-  "ref_attack": 1030,
+  "ref_attack": 1013,
   "ref_armour": 550
  },
  {
@@ -736,7 +736,7 @@
   "attack": 282,
   "defense": 122,
   "exp_to_next": 1161485,
-  "ref_attack": 1039,
+  "ref_attack": 1022,
   "ref_armour": 552
  },
  {
@@ -746,7 +746,7 @@
   "attack": 288,
   "defense": 123,
   "exp_to_next": 1198218,
-  "ref_attack": 1052,
+  "ref_attack": 1035,
   "ref_armour": 553
  },
  {
@@ -756,7 +756,7 @@
   "attack": 293,
   "defense": 125,
   "exp_to_next": 1233506,
-  "ref_attack": 1060,
+  "ref_attack": 1043,
   "ref_armour": 555
  },
  {
@@ -766,7 +766,7 @@
   "attack": 299,
   "defense": 127,
   "exp_to_next": 1271323,
-  "ref_attack": 1074,
+  "ref_attack": 1056,
   "ref_armour": 557
  },
  {
@@ -776,7 +776,7 @@
   "attack": 304,
   "defense": 128,
   "exp_to_next": 1307645,
-  "ref_attack": 1082,
+  "ref_attack": 1064,
   "ref_armour": 558
  },
  {
@@ -786,7 +786,7 @@
   "attack": 310,
   "defense": 130,
   "exp_to_next": 1346545,
-  "ref_attack": 1096,
+  "ref_attack": 1077,
   "ref_armour": 560
  },
  {
@@ -796,7 +796,7 @@
   "attack": 315,
   "defense": 131,
   "exp_to_next": 1383900,
-  "ref_attack": 1248,
+  "ref_attack": 1210,
   "ref_armour": 621
  },
  {
@@ -806,7 +806,7 @@
   "attack": 321,
   "defense": 133,
   "exp_to_next": 1423884,
-  "ref_attack": 1263,
+  "ref_attack": 1224,
   "ref_armour": 623
  },
  {
@@ -816,7 +816,7 @@
   "attack": 327,
   "defense": 135,
   "exp_to_next": 1464422,
-  "ref_attack": 1273,
+  "ref_attack": 1234,
   "ref_armour": 625
  },
  {
@@ -826,7 +826,7 @@
   "attack": 332,
   "defense": 136,
   "exp_to_next": 1503340,
-  "ref_attack": 1286,
+  "ref_attack": 1247,
   "ref_armour": 626
  },
  {
@@ -836,7 +836,7 @@
   "attack": 338,
   "defense": 138,
   "exp_to_next": 1544962,
-  "ref_attack": 1297,
+  "ref_attack": 1257,
   "ref_armour": 628
  },
  {
@@ -846,7 +846,7 @@
   "attack": 344,
   "defense": 139,
   "exp_to_next": 1587138,
-  "ref_attack": 1311,
+  "ref_attack": 1271,
   "ref_armour": 629
  },
  {
@@ -856,7 +856,7 @@
   "attack": 350,
   "defense": 141,
   "exp_to_next": 1629869,
-  "ref_attack": 1322,
+  "ref_attack": 1281,
   "ref_armour": 631
  },
  {
@@ -866,7 +866,7 @@
   "attack": 356,
   "defense": 143,
   "exp_to_next": 1673154,
-  "ref_attack": 1336,
+  "ref_attack": 1295,
   "ref_armour": 633
  },
  {
@@ -876,7 +876,7 @@
   "attack": 362,
   "defense": 144,
   "exp_to_next": 1716994,
-  "ref_attack": 1346,
+  "ref_attack": 1305,
   "ref_armour": 634
  },
  {
@@ -886,7 +886,7 @@
   "attack": 368,
   "defense": 146,
   "exp_to_next": 1761388,
-  "ref_attack": 1361,
+  "ref_attack": 1319,
   "ref_armour": 636
  },
  {
@@ -896,7 +896,7 @@
   "attack": 374,
   "defense": 147,
   "exp_to_next": 1806336,
-  "ref_attack": 1534,
+  "ref_attack": 1469,
   "ref_armour": 697
  },
  {
@@ -906,7 +906,7 @@
   "attack": 380,
   "defense": 149,
   "exp_to_next": 1851839,
-  "ref_attack": 1550,
+  "ref_attack": 1483,
   "ref_armour": 699
  },
  {
@@ -916,7 +916,7 @@
   "attack": 386,
   "defense": 151,
   "exp_to_next": 1897896,
-  "ref_attack": 1561,
+  "ref_attack": 1494,
   "ref_armour": 701
  },
  {
@@ -926,7 +926,7 @@
   "attack": 393,
   "defense": 152,
   "exp_to_next": 1944508,
-  "ref_attack": 1578,
+  "ref_attack": 1510,
   "ref_armour": 702
  },
  {
@@ -936,7 +936,7 @@
   "attack": 399,
   "defense": 154,
   "exp_to_next": 1991674,
-  "ref_attack": 1589,
+  "ref_attack": 1520,
   "ref_armour": 704
  },
  {
@@ -946,7 +946,7 @@
   "attack": 405,
   "defense": 155,
   "exp_to_next": 2039394,
-  "ref_attack": 1605,
+  "ref_attack": 1535,
   "ref_armour": 705
  },
  {
@@ -956,7 +956,7 @@
   "attack": 412,
   "defense": 157,
   "exp_to_next": 2090172,
-  "ref_attack": 1617,
+  "ref_attack": 1547,
   "ref_armour": 707
  },
  {
@@ -966,7 +966,7 @@
   "attack": 418,
   "defense": 159,
   "exp_to_next": 2139026,
-  "ref_attack": 1633,
+  "ref_attack": 1562,
   "ref_armour": 709
  },
  {
@@ -976,7 +976,7 @@
   "attack": 424,
   "defense": 160,
   "exp_to_next": 2188435,
-  "ref_attack": 1644,
+  "ref_attack": 1572,
   "ref_armour": 710
  },
  {
@@ -986,7 +986,7 @@
   "attack": 431,
   "defense": 162,
   "exp_to_next": 0,
-  "ref_attack": 1661,
+  "ref_attack": 1588,
   "ref_armour": 712
  }
 ]

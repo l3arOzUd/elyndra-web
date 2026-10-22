@@ -6,7 +6,7 @@
 import type {
   DefenseKind, GearSlot, ItemDef, StatId, SystemsDef, AffixDef, CharmTypeDef, TotemTypeDef,
 } from "../src/data/schema";
-import { TIER_LEVELS, defenseSet, materialPrice, playerAt, weaponAttack } from "./model";
+import { POW_FLAT_ATK, POW_WEAPON_PCT, TIER_LEVELS, defenseSet, materialPrice, playerAt, weaponAttack } from "./model";
 
 export const STATS: StatId[] = ["pow", "luk", "agi", "dex", "int", "vit"];
 
@@ -156,7 +156,8 @@ export const SYSTEMS_RULES: SystemsDef["rules"] = {
   free_reset_level: 20,
   // A Reset Scroll costs this x character level (about 5-10 minutes of farming).
   reset_scroll_aurel_per_level: 200,
-  pow_weapon_pct: 1,
+  pow_flat_atk: POW_FLAT_ATK,
+  pow_weapon_pct: POW_WEAPON_PCT,
   luk_crit: 0.2,
   luk_crit_mult: 0.4,
   base_crit: 5,

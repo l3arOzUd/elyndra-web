@@ -13,7 +13,7 @@ export const GEAR_SLOTS = ['weapon', 'head', 'armor', 'boots', 'accessory'] as c
 export const CHARM_SLOTS = ['charm1', 'charm2', 'charm3'] as const;
 export const STAT_IDS = ['pow', 'luk', 'agi', 'dex', 'int', 'vit'] as const;
 export const STAT_INFO: Record<string, { name: string; text: string }> = {
-  pow: { name: 'POW', text: 'Weapon ATK +1% per point, for every weapon and skill.' },
+  pow: { name: 'POW', text: 'ATK +0.75 and weapon ATK +0.75% per point, for every weapon and skill.' },
   luk: { name: 'LUK', text: 'Critical chance +0.2% and critical damage +0.4% per point.' },
   agi: { name: 'AGI', text: 'Cooldown Recovery AGI/(AGI+150) and faster basic attacks.' },
   dex: { name: 'DEX', text: 'Cast Speed DEX/(DEX+150) and +2 Evasion per point. Worn by evasion armour.' },

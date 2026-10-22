@@ -22,6 +22,9 @@ export const tierLevelFor = (level: number) => [...TIER_LEVELS].reverse().find((
 export const weaponAttack = (itemLevel: number) => Math.round(12 + 3.6 * itemLevel + 0.02 * itemLevel * itemLevel);
 /** A whole pure Armour (or Evasion) set at item level L; head 30%, body 50%, boots 20%. */
 export const defenseSet = (itemLevel: number) => 20 + 12 * itemLevel;
+/** POW, per point: flat ATK, plus % of weapon ATK (CHARACTER_SYSTEMS.md §2.1). */
+export const POW_FLAT_ATK = 0.75;
+export const POW_WEAPON_PCT = 0.75;
 /** Stat points a character has at level L. */
 export const statPoints = (level: number) => 3 * (level - 1);
 
@@ -38,7 +41,7 @@ export function playerAt(level: number): PlayerCurveRow {
     attack,
     defense,
     exp_to_next: expToNext(level),
-    ref_attack: Math.round(attack + weaponAttack(tier) * (1 + refPow / 100)),
+    ref_attack: Math.round(attack + refPow * POW_FLAT_ATK + weaponAttack(tier) * (1 + refPow * POW_WEAPON_PCT / 100)),
     ref_armour: Math.round(defense + defenseSet(tier) / 2),
   };
 }
