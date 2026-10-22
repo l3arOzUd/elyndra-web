@@ -1,0 +1,8 @@
+{
+  "tool": "builtin-imagegen",
+  "references": [
+    "back-neutral-v3.png",
+    "death-front-slump.png"
+  ],
+  "prompt": "Draw exact rear view of Brine Automaton in final powerless kneeling slump. Reference1 supplies REAR design and fixed scale, reference2 supplies pose only seen from opposite side. Knees folded beneath barrel, both attached boots behind knees visible from rear. Rigid barrel leans FORWARD AWAY from viewer with slight shoulder asymmetry; arms bend and relaxed two-jaw clamps rest beside knees farther away. Preserve rear hatch, horizontal tank straps, two valves; NO gauge eyes or front wheel visible. Same physical barrel width, no squash or enlargement, lowered body leaves empty space above, feet/clamps bottom baseline near1130 of1254 canvas. Full body transparent alpha. No falling backward, no detached limbs, no extra legs, no floor/shadow/steam/text. Same copper brass verdigris painted style."
+}
