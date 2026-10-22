@@ -84,7 +84,7 @@ p(
   "- **Validator** (`npm run validate:data`): critical 0 · error 0 · warning 0 กับข้อมูลทั้ง 7 ภูมิภาค มี test 12 ชุดที่ใส่ข้อมูลผิดโดยเจตนา (warp ทับกัน, NPC เรียงแถว, ไอเทมไม่มีที่มา, มอนสเตอร์ไม่ spawn, สเตตัสก๊อปปี้, arbitrage ฯลฯ) เพื่อยืนยันว่าจับได้จริง และคืน exit code ที่ถูกต้อง",
   "- **Lumeris end-to-end** ใน Chrome จริงกับ server จริง: login ที่ Avelorn → รับเควสต์จาก Registrar → warp ไป Dawnmeadow → ฆ่า Mosskin 30 ตัว (~90 วินาที ที่ Lv1) → เก็บของอัตโนมัติ → warp กลับ → ส่งเควสต์ (Lv1 → Lv2) → reload แล้ว login ใหม่ → inventory, Aurel และ level ตรงกันทุกค่า ไม่มี console error",
   "- **Server tests** (Go): spawn director เติม Dawnmeadow ครบ 130 ตัวบนช่องที่ถูกต้อง",
-  "  - AoE ตีได้สูงสุด 50 เป้าหมายพอดี จาก 90 ตัวในระยะ เรียงตามระยะแล้วตาม id ไม่มีใครโดนซ้ำ",
+  "  - AoE ตีทุกตัวในระยะ (ไม่มีลิมิตเป้า) อย่างน้อย 90 ตัวที่วางไว้ เรียงตามระยะแล้วตาม id ไม่มีใครโดนซ้ำ",
   "  - kill เกิดครั้งเดียว, EXP จ่ายตาม HP ที่ตีลด (มอนหนึ่งชีวิตจ่ายรวมไม่เกิน base EXP), pickup ซ้ำด้วย request id เดิมไม่ได้ของเพิ่ม และคนที่ไม่ใช่เจ้าของเก็บไม่ได้",
   "  - warp Avelorn ⇄ Dawnmeadow ด้วย goroutine จริง, ส่งเควสต์ซ้ำไม่ได้รางวัลซ้ำ",
   "  - ร้านค้า/ขาย/คราฟต์/สวมใส่/transit ทำงาน และปฏิเสธเมื่อเงินไม่พอหรืออยู่ไกล NPC",
@@ -195,7 +195,7 @@ p(
   "- **Flow field** ต่อผู้เล่นที่ถูกไล่ (Dijkstra รัศมี 40 ช่อง) ทำให้มอน 60 ตัวไม่ต้องคำนวณ A* แยกกัน",
   "- **กองมอน (stacking)**: มอนระยะประชิด (ระยะโจมตี ≤ `StackRange` 1.5) เดินเข้าช่องของผู้เล่นและกองรวมกัน ไม่จำกัดจำนวนต่อช่อง ส่วนมอนระยะไกลยังจองช่อง (ไม่เกิน 2 ตัวต่อช่อง และช่องที่มีมอนแล้วมี penalty)",
   "- **AI**: IDLE → CHASE → ATTACK → RETURN ไล่ได้ทั้งแผนที่ (ไม่มี leash) กลับบ้านเมื่อเป้าหมายตาย ออกจากแผนที่ หรือเข้าแคมป์ ความถี่การตัดสินใจขึ้นกับระยะ: 10 Hz ภายใน 12 ช่อง, 5 Hz ถึง 30 ช่อง, 1–2 Hz ไกลกว่านั้น แคมป์เป็นกำแพงสำหรับมอน",
-  "- **AoE**: query → กรองตามรูปทรง → เรียงตามระยะแล้วตาม id → ตัดที่ `max_targets` (สูงสุด 50) ใช้ HP ครั้งเดียวต่อ hit การตายและรางวัลเป็น idempotent",
+  "- **AoE**: query → กรองตามรูปทรง → เรียงตามระยะแล้วตาม id ไม่มีลิมิตจำนวนเป้า ตีทุกตัวในพื้นที่ ใช้ HP ครั้งเดียวต่อ hit การตายและรางวัลเป็น idempotent",
   "- **Spawn director**: รักษา target ของแต่ละ pocket ด้วย respawn queue + jitter 2–8 วินาที, ห่างผู้เล่น ≥6 ช่อง, ห้ามเกิดในแคมป์ ถ้าต่ำกว่า min_alive จะดึง respawn ให้เร็วขึ้น",
   "- **Loot**: personal loot รวมกองในรัศมี 1.5 ช่อง, pickup ใช้ request id + transaction ใน SQLite จึงไม่ซ้ำ",
   "- **Debug overlay (F3)**: tick p50/p95/max, จำนวนมอน, กำลังไล่, ต่อ pocket แสดง alive/pending/target/fail",
@@ -206,7 +206,7 @@ p(
   "|---|---|---|",
   "| หนึ่งชนิด หนึ่งแผนที่ | มอนแต่ละชนิดเกิดได้แผนที่เดียว แผนที่หนึ่งมีมอนธรรมดา 1–3 ชนิด (และ elite หรือบอสได้) | Validator `spawn.one_map` (error) |",
   "| เลเวลตรงแผนที่ | เลเวลมอนอยู่ในช่วงเลเวลของแผนที่ ±2 (elite/boss ±4) | Validator `spawn.level` |",
-  "| ฝูงใหญ่พอให้ลาก | field มีมอนรวม 80–150 ตัว และ AoE ตีได้สูงสุด 50 ตัวต่อครั้ง | Validator `spawn.population`, `spawn.horde_band`, `skill.targets` |",
+  "| ฝูงใหญ่พอให้ลาก | field มีมอนรวม 80–150 ตัว และ AoE ตีทุกตัวในพื้นที่ ไม่มีลิมิตเป้า | Validator `spawn.population`, `spawn.horde_band` |",
   "| ความหนาแน่น | ทุก pocket มีพื้นที่เดิน ≥ 5 ช่องต่อมอน และไม่ห่างเกิน 60 ช่องต่อมอน (ยกเว้น pocket ของ elite/boss) | Validator `spawn.density` |",
   "| เกิดทั่วแผนที่ | ทุ่ง 192×192 แต่ละโซนครองลิ่มรอบลานกลาง มอนเกิดทั่วลิ่ม ราว 62% ของแผนที่ ~33 ช่องต่อมอน แต่ละชนิดมีจำนวนของตัวเอง | `content/world.ts`, Validator `spawn.density` |",
   "| ลากได้ทั้งแผนที่ | ไม่มี leash ไล่จนเป้าหมายตาย ออกจากแผนที่ หรือเข้าแคมป์ | `ai.go` (`validTarget`) |",
@@ -319,9 +319,9 @@ table(["ID", "จาก", "ไป", "Trigger", "จุดลง", "คู่", "
 
 // Skills.
 p("## 10. Skill", "");
-table(["ID", "ชื่อ", "Job", "รูปทรง", "ขนาด", "Max targets", "Cast ms", "CD ms", "SP", "×Dmg", "ปลดล็อก Lv", "ใช้งานได้"], skills.map((s) => [
+table(["ID", "ชื่อ", "Job", "รูปทรง", "ขนาด", "Cast ms", "CD ms", "SP", "×Dmg", "ปลดล็อก Lv", "ใช้งานได้"], skills.map((s) => [
   s.id, s.name, s.job, s.shape, s.shape === "cone" ? `${s.angle_deg}° r${s.radius}` : s.shape === "line" ? `${s.length}×${s.width}` : s.radius ? `r${s.radius}` : "—",
-  s.max_targets, s.cast_ms, s.cooldown_ms, s.resource_cost, s.damage_multiplier, s.unlock_level, s.implemented ? "✅" : "ข้อมูลเท่านั้น"]));
+  s.cast_ms, s.cooldown_ms, s.resource_cost, s.damage_multiplier, s.unlock_level, s.implemented ? "✅" : "ข้อมูลเท่านั้น"]));
 
 // Curve.
 p("## 11. Player Curve (ทุก 5 เลเวล)", "");

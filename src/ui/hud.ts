@@ -172,7 +172,7 @@ export class Hud {
     const cost = s.resource_cost * (1 - n.spCut / 100);
     const cdr = (d?.cdr ?? 0) * (s.cooldown_ms >= (this.c.systems.rules.ultimate_cooldown_ms ?? 30000) ? 0.5 : 1);
     const cd = s.cooldown_ms * (1 - cdr) * (1 - n.cdCut / 100) / 1000, cast = s.cast_ms * (1 - (d?.cast ?? 0)) * (1 - (up5?.cast_cut ?? 0) / 100) / 1000;
-    return (awake ? awake.name : 'Rank ' + rank) + (n.damage && s.damage_multiplier ? ' (+' + n.damage + '% damage)' : '') + ' · ' + Math.round(cost) + ' SP · cast ' + cast.toFixed(2) + 's · cooldown ' + cd.toFixed(1) + 's · ' + s.damage_multiplier + 'x ATK · up to ' + s.max_targets + ' targets' + (up5 ? ' · ' + up5.text : '') + (awake ? ' · ' + awake.text : '');
+    return (awake ? awake.name : 'Rank ' + rank) + (n.damage && s.damage_multiplier ? ' (+' + n.damage + '% damage)' : '') + ' · ' + Math.round(cost) + ' SP · cast ' + cast.toFixed(2) + 's · cooldown ' + cd.toFixed(1) + 's · ' + s.damage_multiplier + 'x ATK · every target in the area' + (up5 ? ' · ' + up5.text : '') + (awake ? ' · ' + awake.text : '');
   }
   /** One line per number of a copy, for hover tooltips. */
   gearSummary(g: GearView): string {

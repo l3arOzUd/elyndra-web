@@ -626,8 +626,6 @@ function checkSystems(b: ContentBundle) {
 
 function checkSkills(b: ContentBundle) {
   for (const s of b.skills) {
-    if (s.max_targets > 50) report("error", "skill.targets", s.id, `max_targets ${s.max_targets} above the 50 cap`);
-    if (["circle", "cone", "line", "ground", "pull"].includes(s.shape) && s.max_targets < 25) report("warning", "skill.targets", s.id, `AoE with only ${s.max_targets} targets`);
     if (s.cooldown_ms < s.cast_ms) report("error", "skill.cooldown", s.id, "cooldown shorter than cast");
   }
 }

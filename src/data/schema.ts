@@ -396,7 +396,6 @@ export interface SkillDef {
   length?: number;
   width?: number;
   range: number;
-  max_targets: number;
   cast_ms: number;
   cooldown_ms: number;
   resource_cost: number;
