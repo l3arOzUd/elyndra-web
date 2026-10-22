@@ -30,37 +30,15 @@ const tmpB = new THREE.Vector3();
 /** WASD as screen steps (x right, y down), by physical key so a Thai layout works. */
 const WASD: Record<string, [number, number]> = { KeyW: [0, -1], KeyS: [0, 1], KeyA: [-1, 0], KeyD: [1, 0] };
 
-/** How far from our character monster sprites are drawn at least (cells). */
-const CLEAR_RADIUS = 0.95;
-/** A monster on the ring leaves it only once this many radii away. */
-const RING_RELEASE = 1.6;
-/** How fast a monster sprite closes on where it should be drawn (1/s). */
-const SPRITE_FOLLOW = 14;
-
 // Where an entity's sprite stands. Melee monsters stack in one cell on the
 // server; each is nudged a little, always the same way for the same monster,
 // so a pile reads as a pile (and its damage numbers sit over each sprite).
-function drawnAt(e: { id: number; kind: string; pos: THREE.Vector3; ring: number | null }, out: THREE.Vector3, self?: THREE.Vector3 | null): THREE.Vector3 {
+function drawnAt(e: { id: number; kind: string; pos: THREE.Vector3 }, out: THREE.Vector3): THREE.Vector3 {
   out.copy(e.pos);
   if (e.kind === "m") {
     const a = e.id * 2.39996, r = 0.12 + (e.id % 7) * 0.035;
     out.x += Math.cos(a) * r;
     out.z += Math.sin(a) * r;
-    // Melee monsters pile into the player's own cell on the server (one spot
-    // a swing hits); draw them on a ring around our character, not on it. A
-    // monster keeps the side it came in from until it is clearly away again,
-    // so it never flips across our character as it reaches the centre or as
-    // we step.
-    if (self) {
-      const dx = out.x - self.x, dz = out.z - self.z;
-      const d = Math.hypot(dx, dz);
-      if (e.ring === null && d < CLEAR_RADIUS) e.ring = d < 1e-3 ? a : Math.atan2(dz, dx);
-      else if (e.ring !== null && d > CLEAR_RADIUS * RING_RELEASE) e.ring = null;
-      if (e.ring !== null && d < CLEAR_RADIUS * RING_RELEASE) {
-        out.x = self.x + Math.cos(e.ring) * CLEAR_RADIUS;
-        out.z = self.z + Math.sin(e.ring) * CLEAR_RADIUS;
-      }
-    } else e.ring = null;
   }
   return out;
 }
@@ -87,8 +65,6 @@ interface Ent {
   dead: boolean;
   hurtAt: number;
   leaving: boolean;
-  /** Our side of the melee ring this monster is drawn on (radians), if any. */
-  ring: number | null;
 }
 
 interface Pile { id: number; x: number; y: number; items: [string, number, string?][]; mesh: THREE.Object3D; requestedAt: number }
@@ -311,7 +287,7 @@ export class Game {
     const e: Ent = {
       id: a.id, kind: a.k, look: a.look, ref: a.ref, name: a.name, level: a.lv, hp: a.hp, serverHp: a.hp, parts: 0, mhp: a.mhp, msPerCell: a.ms || 150,
       actor, label: null, samples: [{ t, x: a.x, y: a.y, h: actor.heading, st: a.st }], pos: new THREE.Vector3(a.x, 0, a.y),
-      state: a.st, dead: a.st === EntState.Dead, hurtAt: 0, leaving: false, ring: null,
+      state: a.st, dead: a.st === EntState.Dead, hurtAt: 0, leaving: false,
     };
     if (a.k !== "m") {
       e.label = this.overlay.label(a.k === "n" ? a.name : `${a.name}`, isSelf ? "tag-self" : a.k === "n" ? "tag-npc" : "tag-player", a.k === "p");
@@ -471,7 +447,7 @@ export class Game {
     const me = this.self;
     if (!s || !me || me.dead) return;
     // Why a skill key did nothing, over the player's head where they are looking.
-    const head = () => tmpA.copy(me.pos).addScaledVector(UP, me.actor.height + 0.35);
+    const head = () => tmpA.copy(me.pos).addScaledVector(UP, me.actor.height + 0.9);
     if ((this.hud.stats?.lv ?? 1) < s.unlock_level) { this.overlay.warn(`${s.name}: unlocks at Lv ${s.unlock_level}`, head(), "warn"); this.hud.log(`${s.name} unlocks at Lv${s.unlock_level}`, "bad"); return; }
     if (!this.hud.canCast(skill)) { this.overlay.warn(`${s.name} not ready`, head(), "warn"); return; }
     const sp = this.hud.stats?.sp ?? 0;
@@ -785,15 +761,7 @@ export class Game {
         if (e.state === EntState.Dead && !e.dead) this.die(e);
         if (prevState === EntState.Dead && e.state !== EntState.Dead) { e.dead = false; e.actor.revive(); e.label?.el.classList.remove("tag-dead"); }
       }
-      if (e.kind !== "m") { e.actor.root.position.copy(e.pos); continue; }
-      // Monsters glide to where they are drawn, so joining or leaving the
-      // ring, or our own steps, never make them jump.
-      const rp = e.actor.root.position;
-      drawnAt(e, tmpB, this.self?.pos);
-      if (rp.distanceTo(tmpB) > 3) rp.copy(tmpB);
-      else rp.lerp(tmpB, Math.min(1, dt * SPRITE_FOLLOW));
-      // On the ring a monster faces our character, whichever side it is on.
-      if (e.ring !== null && this.self && !e.dead) e.actor.heading = headingOf(this.self.pos.x - rp.x, this.self.pos.z - rp.z);
+      drawnAt(e, e.actor.root.position);
     }
     // Monsters whose death has played out leave.
     for (const e of [...this.ents.values()]) {
@@ -815,7 +783,7 @@ export class Game {
         else if (!want && e.label) { e.label.remove(); e.label = null; }
         if (e.label) { e.label.targeted = e.id === this.targetId; e.label.hover = e.id === this.hoverId; }
       }
-      // Over the sprite as drawn, not the server spot (a monster in our cell is drawn beside us).
+      // Over the sprite as drawn (a pile's members are nudged apart).
       e.label?.place(tmpA.copy(e.actor.root.position).setY(0).addScaledVector(UP, e.actor.height + 0.35), cam, this.width, this.height);
     }
     for (const p of this.portalLabels) p.label.place(p.at, cam, this.width, this.height);
