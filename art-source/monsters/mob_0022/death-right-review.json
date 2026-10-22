@@ -2,17 +2,28 @@
   "id": "mob_0022",
   "sources": [
     "right-neutral-v2.png",
-    "death-right-slump.png",
-    "death-right-buckle.png"
+    "death-right-buckle.png",
+    "death-right-slump-v2.png"
   ],
-  "status": "shutdown-pose-study-not-registered",
+  "status": "three-drawing-shutdown-draft",
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
-    "Camera turns three-quarter instead of exact profile.",
-    "Barrel scale grows relative to neutral.",
-    "Arms still appear actively braced.",
-    "Knee buckle draft now exists but torso registration and rigid proportions need review; inert settled end pose still required."
+    "End pose still reads as kneeling/resting rather than fully inert.",
+    "Torso proportions and feet shift across poses.",
+    "Joint construction and surface continuity require correction."
   ],
-  "transitionStudy": "death-right-buckle.png"
+  "transitionStudy": "death-right-buckle.png",
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "fps": 6.25,
+  "superseded": [
+    "death-right-slump.png"
+  ]
 }

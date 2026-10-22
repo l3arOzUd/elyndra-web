@@ -1,0 +1,5 @@
+{
+  "tool": "builtin-imagegen",
+  "reference": "death-right-buckle.png",
+  "prompt": "Edit this exact right-facing side-profile robot into final powered-off collapsed pose. Maintain strictly SAME SIDE CAMERA: far arm hidden, only edge of front gauge visible, no three-quarter turn. Same barrel and tank dimensions, no enlargement. Fold knees fully so pelvis sinks close to heels and barrel tips forward 25 degrees toward image right. Near arm hangs slack with bent elbow and open pincer lying on its side near ground, NOT propping torso up. Legs support inert barrel. Keep same square canvas and boot baseline, ample margin above collapsed body; do NOT scale character up to fill empty space. No broken parts, shadow, text, smoke or effects. Transparent background. One full-body sprite."
+}
