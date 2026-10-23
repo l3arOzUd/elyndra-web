@@ -59,7 +59,8 @@ export function buildMannequin(): THREE.Group {
   part(neck, capsule(0.03, 0.02), skin, [0, 0.015, 0]);
   const head = bone("Head", neck, 0, 0.04);
   part(head, new THREE.SphereGeometry(0.19, 28, 20), skin, [0, 0.17, 0], [1, 0.95, 0.95]);
-  part(head, new THREE.SphereGeometry(0.2, 28, 16, 0, Math.PI * 2, 0, Math.PI * 0.55), hair, [0, 0.185, -0.012], [1.03, 1, 1.02]);
+  const cap = part(head, new THREE.SphereGeometry(0.2, 28, 16, 0, Math.PI * 2, 0, Math.PI * 0.5), hair, [0, 0.18, -0.02], [1.03, 1, 1.02]);
+  cap.rotation.x = -0.45; // swept back so the forehead and eyes show
   part(head, new THREE.SphereGeometry(0.075, 14, 10), hair, [0, 0.15, -0.16], [1.3, 1.1, 0.8]);
   for (const x of [-0.068, 0.068]) part(head, new THREE.SphereGeometry(0.024, 12, 8), eye, [x, 0.145, 0.168], [0.8, 1.25, 0.5], false);
 
