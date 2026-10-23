@@ -1,0 +1,24 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "left-neutral-v5.png",
+    "walk-left-near-lift.png",
+    "walk-left-far-lift.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "frameDurationMs": 220,
+  "status": "three-drawing-walk-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Support foot slides between drawings.",
+    "Lifted foot toe angle and step length are excessive.",
+    "Dedicated contact and passing drawings missing; neutral reused.",
+    "Hip construction, boot shape and surface detail drift."
+  ]
+}
