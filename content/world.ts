@@ -292,6 +292,13 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
       { points: [[49,87],[46,75],[48,65],[52,59],[59,47],[73,40],[89,37],[99,24]], width: 2.8, kind: 'dirt' },
       { points: [[116,92],[121,108],[115,125],[106,136],[101,148]], width: 2.8, kind: 'dirt' },
       { points: [[83,95],[84,87]], width: 2.4, kind: 'dirt' });
+  } else {
+    const bends:Record<string,[number,number,number]>={lum_fld_02:[108,82,116],ver_fld_01:[80,112,84],ver_fld_02:[111,77,109],sol_fld_01:[87,81,107],tha_fld_01:[112,118,78],cry_fld_01:[78,108,119],emb_fld_01:[110,78,83],noc_fld_01:[79,118,105],noc_fld_02:[111,82,112]};
+    const [a,b,c]=bends[f.id]??[90,108,84];
+    const gateRoad=f.dungeon?roads[roads.length-1]:null;
+    roads.splice(0,roads.length,{points:[[0,96],WEST_LANDING,[44,a],[72,b],CENTRE,[124,c],[155,96],EAST_LANDING,[nextField?191:186,96]],width:4,kind:roadKind});
+    centres.forEach(([x,y],i)=>{const junction:[number,number]=i%2?[124,c]:[72,b];roads.push({points:[junction,[junction[0]+(x-junction[0])*.55+(i%2?7:-7),junction[1]+(y-junction[1])*.45],[x,y]],width:2.8,kind:roadKind});});
+    if(gateRoad)roads.push(gateRoad);
   }
 
   // Decoration clusters scattered through the zones, small enough to leave the hordes room,
@@ -341,6 +348,13 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
     { kind: "tent", x: 185, y: 89, block: 2 }, { kind: "lamp_post", x: 173, y: 89, block: 1 },
   ];
   if (f.dungeon) props.push({ kind: "cave_mouth", x: gate.trigger[0] + 3, y: gate.trigger[1] - 3, block: 0, scale: 1.4 });
+  if(f.id!=='lum_fld_01'){
+    const kinds:Record<string,MapDesign['props'][number]['kind']>={lum:'waterwheel',ver:'gear_ruin',sol:'observatory',tha:'statue',cry:'lattice_obelisk',emb:'furnace',noc:'lattice_obelisk'};
+    const kind=kinds[f.region]??'rune_stone';
+    // A landmark beside the arrival camp, with a matching solid footprint.
+    props.push({kind,x:27,y:88,block:3});
+    landmarks.push({id:`lm_${stem(f)}_relic`,name:`${f.name} Relic`,kind:'ruin',x:27,y:88,note:'A regional relic beside the camp approach.'});
+  }
 
   if (f.id === "lum_fld_01") {
     for(let i=blockers.length-1;i>=0;i--){const b=blockers[i];if('ellipse' in b.shape && siteReserved(b.shape.ellipse[0],b.shape.ellipse[1]))blockers.splice(i,1);}

@@ -3,15 +3,16 @@ import type { Prop } from '../data/schema';
 import { envArt } from './envArt';
 import { farmWallCell } from '../shared/dawnFarm';
 import { siteWallCell } from '../shared/dawnSites';
+import {environmentStyle} from './environmentStyle';
 
 /** Shares scene lighting across undergrowth and stones, including blocker heaps. */
 export function buildDawnDetails(props: Prop[], group: THREE.Group,
-  track: <T extends { dispose(): void }>(resource: T) => T) {
+  track: <T extends { dispose(): void }>(resource: T) => T, mapId='lum_fld_01') {
   const image = envArt.textures.get('dawn_leaf_spray');
   const map = image ? track(new THREE.Texture(image)) : null;
   if (map) { map.colorSpace = THREE.SRGBColorSpace; map.needsUpdate = true; }
   for (const kind of ['bush', 'rock', 'boulder', 'ruin_block']) {
-    const list = props.filter(p => p.kind === kind && !(kind === 'ruin_block' && (farmWallCell(p.x, p.y)||siteWallCell(p.x,p.y))));
+    const list = props.filter(p => p.kind === kind && !(mapId==='lum_fld_01' && kind === 'ruin_block' && (farmWallCell(p.x, p.y)||siteWallCell(p.x,p.y))));
     if (!list.length) continue;
     const bush = kind === 'bush';
     const ruin = kind === 'ruin_block';
@@ -24,7 +25,7 @@ export function buildDawnDetails(props: Prop[], group: THREE.Group,
       positions.setXYZ(i, x * r, y * r, z * r);
     }
     geo.computeVertexNormals();
-    const mat = track(new THREE.MeshLambertMaterial({ color: bush ? 0x8ea77e : ruin ? 0xc3b797 : 0xa29b80, map: bush ? map : null,
+    const mat = track(new THREE.MeshLambertMaterial({ color: bush ? 0x8ea77e : environmentStyle(mapId).stone, map: bush ? map : null,
       alphaTest: bush ? 0.45 : 0, side: bush ? THREE.DoubleSide : THREE.FrontSide }));
     if (bush) {
       mat.onBeforeCompile = shader => {

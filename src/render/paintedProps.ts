@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import type { MapLayout, Prop, PropKind } from "../data/schema";
 import { envSprites } from "./envArt";
+import {environmentStyle} from './environmentStyle';
 
 type Blocker = MapLayout["blockers"][number];
 
@@ -470,7 +471,7 @@ export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T ex
     const v = Math.abs(Math.floor(p.x * 7 + p.y * 13)) % list.length;
     groups.set(list[v], [...(groups.get(list[v]) ?? []), p]);
   }
-  const material = track(new THREE.MeshBasicMaterial({ map: atlas.texture, alphaTest: 0.45, side: THREE.DoubleSide }));
+  const material = track(new THREE.MeshLambertMaterial({ map: atlas.texture, color:environmentStyle(l.id).foliage, alphaTest: 0.4, side: THREE.DoubleSide }));
   const tex = atlas.texture.image as HTMLCanvasElement;
   const dummy = new THREE.Object3D();
   for (const [card, list] of groups) {
@@ -484,6 +485,7 @@ export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T ex
     uv.needsUpdate = true;
     const inst = new THREE.InstancedMesh(geo, material, list.length);
     inst.name = `painted-${card.kind}`;
+    inst.castShadow = !['tuft','flowers','pebbles','dry_tuft','snow_tuft'].includes(card.kind);
     list.forEach((p, i) => {
       dummy.position.set(p.x + 0.5, 0, p.y + 0.5);
       const s = p.scale ?? 1;

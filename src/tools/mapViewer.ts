@@ -113,7 +113,7 @@ function frame(now: number) {
   if (keys.has("ArrowDown") || keys.has("s")) focus.z += pan;
   hero.root.position.copy(focus);
   cam.update(dt, focus);
-  moveSun(focus);
+  moveSun(focus,mapId);
   hero.update(dt * 1000, cam.camera, cam.yaw);
   if (built) animate(built, dt);
   renderer.render(scene, cam.camera);

@@ -175,7 +175,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   tex.anisotropy = 8;
   const ground = new THREE.Mesh(track(new THREE.PlaneGeometry(l.width, l.height).rotateX(-Math.PI / 2)), track(new THREE.MeshLambertMaterial({ map: tex })));
   ground.name = "terrain-ground";
-  ground.receiveShadow = l.id === 'lum_fld_01';
+  ground.receiveShadow = true;
   ground.position.set(l.width / 2, 0, l.height / 2);
   group.add(ground);
   if (l.id === 'lum_fld_01') buildDawnRelief(l, group, ground.material, track);
@@ -199,12 +199,14 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
       // Rocks, cliffs, ruin walls and machines are heaps of painted pieces (paintedProps.ts).
       const geo = track(new THREE.ExtrudeGeometry(toShape(b.shape), { depth: solid.height, bevelEnabled: false, curveSegments: 16 }).rotateX(-Math.PI / 2));
       const m = new THREE.Mesh(geo, track(new THREE.MeshLambertMaterial({ color: solid.color, flatShading: true, transparent: b.kind === "crystal", opacity: b.kind === "crystal" ? 0.8 : 1 })));
+      m.castShadow=m.receiveShadow=true;
       surfaces.push({ kind: b.kind, geometry: geo, material: m.material });
       group.add(m);
       if (b.kind === "building") {
         const roof = new THREE.Mesh(track(new THREE.ExtrudeGeometry(toShape(b.shape), { depth: 0.35, bevelEnabled: true, bevelSize: 0.35, bevelThickness: 0.2, bevelSegments: 1 }).rotateX(-Math.PI / 2)),
           track(new THREE.MeshLambertMaterial({ color: 0x9a4b34, flatShading: true })));
         roof.position.y = solid.height;
+        roof.castShadow=roof.receiveShadow=true;
         group.add(roof);
       }
     }
@@ -227,6 +229,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     const m = new THREE.Matrix4();
     cells.forEach(([x, y], i) => { m.makeScale(1, 0.8 + ((x * 7 + y * 13) % 5) / 10, 1).setPosition(x, 0, y); wall.setMatrixAt(i, m); });
     group.add(wall);
+    wall.castShadow=wall.receiveShadow=true;
     surfaces.push({ kind: "cliff", geometry: wall.geometry, material: wall.material });
   }
 
@@ -276,16 +279,16 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   let decor = decorProps(l, (x, y) => inMap(x, y) && walkCells[y * l.width + x] === 1, (x, y) => inMap(x, y) && roadCells[y * l.width + x] === 1);
   // The old bright, unlit tuft cards do not share the forest's lighting.
   // Authored undergrowth remains; ground paint carries the open meadow detail.
-  if (l.id === "lum_fld_01") decor = [];
+  decor = l.id === 'lum_fld_01' ? [] : decor.filter((p,i)=>i%4===0 && walkCells[Math.floor(p.y)*l.width+Math.floor(p.x)]===1);
   const modelProps: typeof l.props = [];
   const dawnSolid = new Set(['crystal', 'crate', 'brass_pipe', 'gear_ruin', 'rune_stone']);
   const modelKinds = new Set<import("../data/schema").PropKind>(l.id === "lum_fld_01"
-    ? ['tree', 'bush', 'rock', 'boulder', 'ruin_block', ...dawnSolid] as import("../data/schema").PropKind[] : []);
-  if (modelKinds.size) buildDawnTrees(l, group, track, tileTime);
+    ? ['tree', 'bush', 'rock', 'boulder', 'ruin_block', ...dawnSolid] as import("../data/schema").PropKind[] : ['rock','boulder','ruin_block']);
+  if (l.id==='lum_fld_01') buildDawnTrees(l, group, track, tileTime);
   const painted = buildPaintedProps(l, group, track, (b) => ({
     contains: (x, y) => !(l.id === 'lum_fld_01' && b.kind === 'cliff') && inShape(b.shape, x, y),
     bounds: shapeBounds(b.shape) }), decor, modelKinds, modelProps);
-  if (modelKinds.size) buildDawnDetails(modelProps, group, track);
+  if (modelKinds.size) buildDawnDetails(modelProps, group, track,l.id);
   // Soft contact shadows tie props to the painted floor in one draw.
   {
     const radius: Partial<Record<typeof l.props[number]["kind"], number>> = {
@@ -312,11 +315,11 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     group.add(shadows);
   }
   const byKind = new Map<string, typeof l.props>();
-  if (l.id === 'lum_fld_01') buildDawnLandmarks(l, group, track, animated);
+  buildDawnLandmarks(l.id==='lum_fld_01'?l:{...l,props:l.props.filter(p=>p.kind==='tent'||p.kind==='aether_pylon')}, group, track, animated);
   if (l.id === 'lum_fld_01') buildDawnFarmhouse(group, track);
   if (l.id === 'lum_fld_01') buildDawnSites(group, track);
   for (const p of l.props) if ((!PAINTED_KINDS.has(p.kind) || (l.id === 'lum_fld_01' && dawnSolid.has(p.kind))) &&
-    !(l.id === 'lum_fld_01' && (p.kind === 'aqueduct' || p.kind === 'aether_pylon' || p.kind === 'tent')))
+    !(p.kind === 'aether_pylon' || p.kind === 'tent' || (l.id === 'lum_fld_01' && p.kind === 'aqueduct')))
     byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);
   const mat = track(new THREE.MeshLambertMaterial({ vertexColors: true, flatShading: true }));
   const glow = track(new THREE.MeshBasicMaterial({ vertexColors: true }));
@@ -324,7 +327,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   for (const [kind, list] of byKind) {
     const geo = propGeometry(kind as never);
     const inst = new THREE.InstancedMesh(geo, kind === "crystal" ? glow : mat, list.length);
-    inst.castShadow = l.id === 'lum_fld_01';
+    inst.castShadow = inst.receiveShadow = true;
     list.forEach((p, i) => {
       dummy.position.set(p.x + 0.5, 0, p.y + 0.5);
       dummy.rotation.set(0, p.rot ?? 0, 0);

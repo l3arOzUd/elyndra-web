@@ -80,7 +80,7 @@ export class Game {
   readonly scene = new THREE.Scene();
   readonly cam: IsoCamera;
   readonly fx: Fx;
-  private readonly moveSun: (focus: THREE.Vector3) => void;
+  private readonly moveSun: (focus: THREE.Vector3, mapId?:string) => void;
   private overlay: Overlay;
   private minimap: Minimap;
   private ents = new Map<number, Ent>();
@@ -800,7 +800,7 @@ export class Game {
 
     const me = this.self;
     this.cam.update(dt, me ? me.pos : this.cam.target);
-    this.moveSun(this.cam.target);
+    this.moveSun(this.cam.target,this.mapId);
     const cam = this.cam.camera;
     for (const e of this.ents.values()) {
       e.actor.update(dtMs, cam, this.cam.yaw);

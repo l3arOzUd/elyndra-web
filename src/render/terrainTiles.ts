@@ -220,8 +220,10 @@ export async function applyPaintedTerrain(
   const plazaPaint = paint("plaza_tile", [1, 1, 1], 0, 0, 8, "paving");
   const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled, meadow, forest, plazaPaint].map((r) => (r.art && envArt.textures.has(r.art) ? paint(r.tex, [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, ART_SCALE, r.art) : r));
   // Dawnmeadow art pass: quiet turf under characters; other regions retain their palette.
-  if (layout.id === "lum_fld_01" && envArt.textures.has("dawn_turf_v2")) {
-    for (const i of [0, 6]) recipes[i] = paint("grass", [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, 9, "dawn_turf_v2");
+  if (envArt.textures.has("dawn_turf_v2")) {
+    const grounds=[layout.ground,zones[0]??layout.ground,zones[1]??layout.ground];
+    grounds.forEach((g,i)=>{if(g==='grass'||g==='moss')recipes[i]=paint('grass',g==='moss'?[1.45,1.85,1.55]:[ART_GAIN,ART_GAIN,ART_GAIN],0.12,0,11,'dawn_turf_v2');});
+    if(layout.ground==='grass'||layout.ground==='moss')for(const i of [6,7])recipes[i]=paint('grass',[1.6,1.8,1.5],0.15,0,12,'dawn_turf_v2');
   }
   const maps = recipes.map((r) => tile(r.art && envArt.textures.has(r.art) ? r.art : r.tex));
   if (maps.every(Boolean)) {
@@ -276,7 +278,7 @@ export async function applyPaintedTerrain(
         terrain = mix(terrain, terrainPaint(terrainMoss, world, terrainRecipes[7], terrainTints[7]), weights.g);
         terrain = mix(terrain, terrainPaint(terrainTrampled, world, terrainRecipes[5], terrainTints[5]), smoothstep(0.15, 0.85, zones.b + grain * 0.35) * 0.8);
         // Roads: a ragged edge and a darker painted rim on both sides of it.
-        float roadW = ${layout.id === 'lum_fld_01' ? 'smoothstep(0.12, 0.88, weights.r + grain * 0.13)' : 'smoothstep(0.38, 0.62, weights.r + grain * 0.28)'};
+        float roadW = smoothstep(0.12, 0.88, weights.r + grain * 0.13);
         float stoneW = smoothstep(0.38, 0.62, weights.b + grain * 0.2);
         float rim = max(smoothstep(0.08, 0.4, weights.r) * (1.0 - roadW), smoothstep(0.08, 0.4, weights.b) * (1.0 - stoneW));
         vec3 pathPaint = terrainPaint(terrainRoad, world, terrainRecipes[3], terrainTints[3]);
@@ -284,13 +286,14 @@ export async function applyPaintedTerrain(
         terrain = mix(terrain, pathPaint, roadW);
         terrain = mix(terrain, terrainPaint(terrainStone, world, terrainRecipes[4], terrainTints[4]), stoneW);
         terrain = mix(terrain, terrainPaint(terrainPlaza, world, terrainRecipes[8], terrainTints[8]), weights.a);
-        terrain *= 1.0 - rim * ${layout.id === 'lum_fld_01' ? '0.04' : '0.22'};
+        terrain *= 1.0 - rim * 0.045;
+        ${layout.id!=='lum_fld_01'?'float grey = dot(terrain, vec3(0.2126,0.7152,0.0722)); terrain = mix(terrain, vec3(grey), 0.14); terrain = terrain * 0.9 + vec3(0.035);':''}
         // Broad light and shade, as a painter would wash over a large field.
         terrain *= mix(0.88, 1.06, terrainNoise(world / 41.0)) * mix(0.95, 1.03, terrainNoise(world / 12.0));
         diffuseColor.rgb *= terrain;
       `);
     };
-    ground.customProgramCacheKey = () => layout.id === 'lum_fld_01' ? 'dawn-painted-ground-v5' : 'painted-ground-v3';
+    ground.customProgramCacheKey = () => layout.id === 'lum_fld_01' ? 'dawn-painted-ground-v6' : 'world-painted-ground-v4';
     ground.needsUpdate = true;
   }
   let waterMask: THREE.CanvasTexture | undefined;
