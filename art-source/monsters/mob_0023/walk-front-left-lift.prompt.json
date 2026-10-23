@@ -1,0 +1,8 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Create complementary front walking keyframe for exact Relay Guardian. Image1 neutral identity master; image2 opposite step timing reference only. Now anatomical LEFT leg (image RIGHT) lifts forward with gently bent knee, boot modestly above floor; anatomical RIGHT leg (image LEFT) firmly planted. Image LEFT arm swings slightly forward and image RIGHT arm slightly backward. Match lift height and step length of image2 but do not mirror artwork: preserve exact original three dish spokes, patina placement and hose construction of image1. Rigid armored limbs maintain lengths and boots maintain dimensions, no elongation. Head stays same center, height, size and frontal view as image1, torso minimal bob. Full body same scale and canvas framing. Painted bronze fantasy sprite with cyan thin sonar rings, transparent background, no shadow no ground no text. Single frame.",
+  "references": [
+    "front-neutral-v2.png",
+    "walk-front-right-lift.png"
+  ]
+}

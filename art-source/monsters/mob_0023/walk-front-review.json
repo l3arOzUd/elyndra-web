@@ -1,0 +1,25 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "front-neutral-v2.png",
+    "walk-front-right-lift.png",
+    "walk-front-left-lift.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "frameDurationMs": 220,
+  "status": "three-drawing-step-study",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Contact and inbetween drawings missing; neutral temporarily reused for passing.",
+    "Lifted boots expose too much sole.",
+    "Weight transfer and support foot registration require review.",
+    "Hose, hand and painted armor details drift between drawings.",
+    "Other three walking views missing."
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Create a front-view walking animation keyframe of this EXACT Relay Guardian. Reference is identity and framing master. Preserve head dish size, position, three spokes and cyan rings, bronze armor segment lengths, ribbed hoses, patina, boots, canvas size and camera. Anatomical RIGHT leg (image LEFT) swings forward with knee gently flexed, boot lifted only a small clearance above ground, sole mostly horizontal, no high marching kick. Anatomical LEFT leg image RIGHT remains planted supporting weight at original baseline. Opposite arm image RIGHT swings slightly forward, image LEFT arm slightly back. Pelvis shifts subtly over supporting leg; rigid metal joints rotate naturally, no stretching. Body height almost unchanged. Single full-body sprite on transparent background, no text, no shadow, no ground; same scale and margins as reference. Hand-painted fantasy rendering, no extra parts.",
+  "reference": "front-neutral-v2.png"
+}
