@@ -332,6 +332,18 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
   ];
   if (f.dungeon) props.push({ kind: "cave_mouth", x: gate.trigger[0] + 3, y: gate.trigger[1] - 3, block: 0, scale: 1.4 });
 
+  if (f.id === "lum_fld_01") {
+    // Authored landmarks on the current 192-cell world, kept off its spokes.
+    // Pier rectangles are shared with the server; the arch openings stay open.
+    props.find(p => p.kind === "rune_stone")!.kind = "aether_pylon";
+    props.push({ kind: "aqueduct", x: 84, y: 87, block: 0 });
+    for (const x of [81, 84, 87]) blockers.push({ kind: "ruin_wall", shape: { rect: [x, 87, 1, 1] } });
+    props.push({ kind: "tree", x: 89, y: 104, block: 1, scale: 1.25, rot: 0.7 },
+      { kind: "tree", x: 108, y: 89, block: 1, scale: 1.1, rot: 2.1 });
+    landmarks.push({ id: "lm_dawnmeadow_aqueduct", name: "Old Aqueduct", kind: "ruin", x: 84, y: 87,
+      note: "Cream-stone arches and a broken brass irrigation channel beside the crossroads." });
+  }
+
   const lo = f.levels[0];
   return {
     id: f.id, name: f.name, type: "field",

@@ -264,6 +264,11 @@ export async function applyPaintedTerrain(
         vec4 zones = texture2D(terrainZones, vec2(0.0, 1.0) + (world + wide) * toMask);
         float grain = terrainNoise(world * 1.9) - 0.5;
         vec3 terrain = terrainPaint(map, world, terrainRecipes[0], terrainTints[0]);
+        ${layout.id === 'lum_fld_01' ? `
+        // Keep the walking field quiet; painted detail belongs at its edges.
+        // This wash affects only turf, before paths, water and stone are mixed.
+        terrain = mix(terrain, vec3(0.25, 0.37, 0.12), 0.46);
+        ` : ''}
         float meadow = smoothstep(0.35, 0.85, terrainNoise(world / 18.0)) * terrainMeadow;
         terrain = mix(terrain, terrainPaint(terrainDry, world, terrainRecipes[6], terrainTints[6]), meadow);
         terrain = mix(terrain, terrainPaint(terrainZoneA, world, terrainRecipes[1], terrainTints[1]), smoothstep(0.3, 0.7, zones.r + grain * 0.2));

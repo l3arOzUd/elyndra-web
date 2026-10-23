@@ -21,6 +21,15 @@ export function buildDawnDetails(props: Prop[], group: THREE.Group,
     }
     geo.computeVertexNormals();
     const mat = track(new THREE.MeshLambertMaterial({ color: bush ? 0xc5cf9c : 0xa29b80, map: bush ? map : null }));
+    if (bush) {
+      mat.onBeforeCompile = shader => {
+        shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
+          #include <map_fragment>
+          diffuseColor.rgb = mix(diffuseColor.rgb * 1.65, vec3(0.19, 0.29, 0.085), 0.28);
+        `);
+      };
+      mat.customProgramCacheKey = () => 'dawn-undergrowth-v2';
+    }
     const mesh = new THREE.InstancedMesh(geo, mat, list.length);
     mesh.name = `dawn-${kind}`;
     const d = new THREE.Object3D();

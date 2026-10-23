@@ -4,6 +4,7 @@ import { decodeWalk } from "../data/schema";
 import { buildPaintedProps, decorProps, HEAPED, PAINTED_KINDS } from "./paintedProps";
 import { buildDawnDetails } from "./dawnDetails";
 import { buildDawnTrees } from "./dawnTrees";
+import { buildDawnLandmarks } from "./dawnLandmarks";
 import { animatedProp, propGeometry } from "./props";
 import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
 
@@ -299,7 +300,10 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     group.add(shadows);
   }
   const byKind = new Map<string, typeof l.props>();
-  for (const p of l.props) if (!PAINTED_KINDS.has(p.kind)) byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);
+  if (l.id === 'lum_fld_01') buildDawnLandmarks(l, group, track, animated);
+  for (const p of l.props) if (!PAINTED_KINDS.has(p.kind) &&
+    !(l.id === 'lum_fld_01' && (p.kind === 'aqueduct' || p.kind === 'aether_pylon')))
+    byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);
   const mat = track(new THREE.MeshLambertMaterial({ vertexColors: true, flatShading: true }));
   const glow = track(new THREE.MeshBasicMaterial({ vertexColors: true }));
   const dummy = new THREE.Object3D();

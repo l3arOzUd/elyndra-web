@@ -21,8 +21,14 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
       float phase = instanceMatrix[3].x * 0.43 + instanceMatrix[3].z * 0.27;
       transformed.x += sin(dawnTime * 1.1 + phase + position.y) * 0.025;
     `);
+    // The source is painted with deep crevices. Compress that baked shading so
+    // the actual crown volumes, rather than black texture lines, carry the form.
+    shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
+      #include <map_fragment>
+      diffuseColor.rgb = mix(diffuseColor.rgb * 1.65, vec3(0.19, 0.29, 0.085), 0.28);
+    `);
   };
-  leaves.customProgramCacheKey = () => 'dawn-canopy-sway-v3';
+  leaves.customProgramCacheKey = () => 'dawn-canopy-sway-v4';
   const pieces = [new THREE.CylinderGeometry(0.1, 0.25, 2.7, 9).translate(0, 1.35, 0)];
   for (let i = 0; i < 4; i++) {
     const angle = i * Math.PI / 2 + 0.3;
@@ -48,10 +54,21 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   }
   crownGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
   const trunks = new THREE.InstancedMesh(trunkGeo, bark, trees.length);
-  const crowns = new THREE.InstancedMesh(crownGeo, leaves, trees.length * 5);
+  // Overlapping flattened sprays break the silhouette into leafy scallops.
+  // The previous five huge balls read as a bunch of boulders on a pole.
+  const lobes: number[][] = [];
+  for (let tier = 0; tier < 3; tier++) {
+    const count = [11, 9, 6][tier], radius = [1.05, 0.8, 0.4][tier];
+    for (let j = 0; j < count; j++) {
+      const a = j / count * Math.PI * 2 + tier * 0.7;
+      lobes.push([Math.cos(a) * radius, 2.55 + tier * 0.45 + Math.sin(j * 2.1) * 0.12,
+        Math.sin(a) * radius, 0.64 + Math.sin(j * 4.3 + tier) * 0.12]);
+    }
+  }
+  lobes.push([0, 3.6, 0, 0.63]);
+  const crowns = new THREE.InstancedMesh(crownGeo, leaves, trees.length * lobes.length);
   trunks.name = 'dawn-tree-trunks'; crowns.name = 'dawn-tree-canopies';
   const d = new THREE.Object3D();
-  const lobes = [[0, 3.1, 0, 1.1], [-0.75, 2.6, 0.2, 0.85], [0.65, 2.75, 0.35, 0.95], [0.1, 2.55, -0.65, 0.85], [-0.2, 3.5, -0.15, 0.75]];
   trees.forEach((p, i) => {
     const s = p.scale ?? 1, angle = p.rot ?? 0;
     d.position.set(p.x + 0.5, 0, p.y + 0.5); d.rotation.set(0, angle, 0); d.scale.setScalar(s); d.updateMatrix();
@@ -59,7 +76,9 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
     lobes.forEach(([x, y, z, r], j) => {
       d.position.set(p.x + 0.5 + (x * Math.cos(angle) - z * Math.sin(angle)) * s, y * s,
         p.y + 0.5 + (x * Math.sin(angle) + z * Math.cos(angle)) * s);
-      d.scale.set(r * s, r * s * 0.8, r * s); d.updateMatrix(); crowns.setMatrixAt(i * 5 + j, d.matrix);
+      d.rotation.set(Math.sin(j * 1.7) * 0.16, angle + j * 2.4, Math.cos(j * 2.3) * 0.12);
+      d.scale.set(r * s, r * s * 0.6, r * s); d.updateMatrix(); crowns.setMatrixAt(i * lobes.length + j, d.matrix);
+      crowns.setColorAt(i * lobes.length + j, new THREE.Color().setRGB(0.9 + (j % 3) * 0.04, 0.94 + (j % 3) * 0.02, 0.86));
     });
   });
   group.add(trunks, crowns);
