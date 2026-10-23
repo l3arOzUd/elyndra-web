@@ -6,6 +6,7 @@ import { buildDawnDetails } from "./dawnDetails";
 import { buildDawnTrees } from "./dawnTrees";
 import { buildDawnLandmarks } from "./dawnLandmarks";
 import { buildDawnFarmhouse } from './dawnFarmhouse';
+import { buildDawnSites } from './dawnSites';
 import { buildDawnRelief } from "./dawnRelief";
 import { buildDawnShore } from "./dawnShore";
 import { animatedProp, propGeometry } from "./props";
@@ -313,6 +314,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   const byKind = new Map<string, typeof l.props>();
   if (l.id === 'lum_fld_01') buildDawnLandmarks(l, group, track, animated);
   if (l.id === 'lum_fld_01') buildDawnFarmhouse(group, track);
+  if (l.id === 'lum_fld_01') buildDawnSites(group, track);
   for (const p of l.props) if ((!PAINTED_KINDS.has(p.kind) || (l.id === 'lum_fld_01' && dawnSolid.has(p.kind))) &&
     !(l.id === 'lum_fld_01' && (p.kind === 'aqueduct' || p.kind === 'aether_pylon' || p.kind === 'tent')))
     byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);

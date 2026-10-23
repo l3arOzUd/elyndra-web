@@ -12,6 +12,7 @@
 import { decodeWalk, type DialogueDef, type ItemDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
 import { bakeLayout, shapeContains } from "./layout";
 import { farmApproach, farmSite, farmWalls } from '../src/shared/dawnFarm';
+import { dawnSites, siteReserved, siteWalls } from '../src/shared/dawnSites';
 import { BOUNTY } from "./model";
 import { AFTER_ENDING, DUNGEON_ZONE_NOTE, ECOLOGY, FIELD_CAST, FINAL_QUEST, QUEST_SUMMARY, STORY_STAGES, SURVEY_PAGES, TOWN_CAST } from "./lore";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
@@ -284,6 +285,14 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
     { points: [onRing(360), [EAST_LANDING[0], CENTRE[1]], [nextField ? SIZE - 1 : EAST_LANDING[0] + 6, CENTRE[1]]], width: 4, kind: roadKind },
   ];
   if (f.dungeon) roads.push({ points: [last, [gate.landing[0], last[1]], [gate.landing[0], gate.trigger[1] + 2]], width: 4, kind: roadKind });
+  if (f.id === 'lum_fld_01') {
+    // Destination-led cart routes, not the generic ring and radial spokes.
+    roads.splice(0, roads.length,
+      { points: [[0,96],[14,96],[32,92],[49,87],[67,90],[83,95],[96,96],[116,92],[135,95],[156,91],[180,96],[191,96]], width: 4, kind: 'dirt' },
+      { points: [[49,87],[46,75],[48,65],[52,59],[59,47],[73,40],[89,37],[99,24]], width: 2.8, kind: 'dirt' },
+      { points: [[116,92],[121,108],[115,125],[106,136],[101,148]], width: 2.8, kind: 'dirt' },
+      { points: [[83,95],[84,87]], width: 2.4, kind: 'dirt' });
+  }
 
   // Decoration clusters scattered through the zones, small enough to leave the hordes room,
   // never on a road, a camp, the crossroads, a zone's elite spot or a gate.
@@ -334,6 +343,13 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
   if (f.dungeon) props.push({ kind: "cave_mouth", x: gate.trigger[0] + 3, y: gate.trigger[1] - 3, block: 0, scale: 1.4 });
 
   if (f.id === "lum_fld_01") {
+    for(let i=blockers.length-1;i>=0;i--){const b=blockers[i];if('ellipse' in b.shape && siteReserved(b.shape.ellipse[0],b.shape.ellipse[1]))blockers.splice(i,1);}
+    for(const w of siteWalls)props.push({kind:'ruin_block',x:w.x,y:w.z,block:1});
+    for(const s of dawnSites)landmarks.push({id:`lm_dawn_${s.id}`,name:s.name,kind:'ruin',x:s.x,y:s.z,note:'Authored ruin beside the old settlement routes.'});
+    roads.push({points:[[73,40],[80,49],[90,51],[90,47]],width:2.4,kind:'dirt'},
+      {points:[[135,95],[132,103],[133,115],[139.5,118],[139.5,113]],width:2.4,kind:'dirt'},
+      {points:[[115,125],[111,128],[108.5,134]],width:2,kind:'dirt'});
+    blockers.push({kind:'water',shape:{poly:[[144,108],[148,106],[153,109],[155,115],[151,121],[146,122],[144,118]]}});
     // Replace the random ruin heap with one authored, traversable homestead.
     for (let i = blockers.length - 1; i >= 0; i--) {
       const b = blockers[i];

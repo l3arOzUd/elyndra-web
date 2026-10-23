@@ -5,6 +5,7 @@ import { encodeWalk, type MapLayout, type Prop, type Rect, type Shape } from "..
 import { hashString, rng } from "../src/shared/rng";
 import type { MapDesign } from "./types";
 import { farmSite } from '../src/shared/dawnFarm';
+import { siteReserved } from '../src/shared/dawnSites';
 
 export function shapeContains(s: Shape, x: number, y: number): boolean {
   const px = x + 0.5, py = y + 0.5;
@@ -86,7 +87,7 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
   const rand = rng(hashString(d.id + ":scatter"));
   const props: Prop[] = [...d.props];
   const avoid = (x: number, y: number) => {
-    if (d.id === 'lum_fld_01' && farmSite(x, y)) return true;
+    if (d.id === 'lum_fld_01' && (farmSite(x, y) || siteReserved(x,y))) return true;
     if (x < 1 || y < 1 || x >= w - 1 || y >= h - 1) return true;
     if (walk[y * w + x] !== 1) return true;
     for (let dy = -2; dy <= 2; dy++) for (let dx = -2; dx <= 2; dx++) {

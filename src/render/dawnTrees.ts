@@ -64,11 +64,12 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   trunks.name = 'dawn-tree-trunks'; crowns.name = 'dawn-tree-canopies';
   const d = new THREE.Object3D();
   trees.forEach((p, i) => {
-    const s = p.scale ?? 1, angle = p.rot ?? 0;
+    const variant = Math.abs(Math.floor(p.x * 7 + p.y * 11)) % 4;
+    const s = (p.scale ?? 1) * [0.58, 0.88, 1.05, 1.18][variant], angle = p.rot ?? 0;
     const seed = p.x * 13.7 + p.y * 5.3;
-    const breadth = 0.94 + Math.sin(seed) * 0.09;
-    const height = 1 + Math.cos(seed * 1.7) * 0.07;
-    d.position.set(p.x + 0.5, 0, p.y + 0.5); d.rotation.set(0, angle, 0); d.scale.setScalar(s); d.updateMatrix();
+    const breadth = [0.75, 0.72, 1.25, 1.05][variant] + Math.sin(seed) * 0.09;
+    const height = [0.82, 1.22, 0.78, 1.08][variant] + Math.cos(seed * 1.7) * 0.04;
+    d.position.set(p.x + 0.5, 0, p.y + 0.5); d.rotation.set(0, angle, 0); d.scale.set(s * breadth, s * height, s * breadth); d.updateMatrix();
     trunks.setMatrixAt(i, d.matrix);
     lobes.forEach(([x, y, z, r, a], j) => {
       d.position.set(p.x + 0.5 + (x * Math.cos(angle) - z * Math.sin(angle)) * s, (y * height + Math.sin(seed + j * 2.7) * 0.09) * s,

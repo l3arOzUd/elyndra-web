@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import type { Prop } from '../data/schema';
 import { envArt } from './envArt';
 import { farmWallCell } from '../shared/dawnFarm';
+import { siteWallCell } from '../shared/dawnSites';
 
 /** Shares scene lighting across undergrowth and stones, including blocker heaps. */
 export function buildDawnDetails(props: Prop[], group: THREE.Group,
@@ -10,7 +11,7 @@ export function buildDawnDetails(props: Prop[], group: THREE.Group,
   const map = image ? track(new THREE.Texture(image)) : null;
   if (map) { map.colorSpace = THREE.SRGBColorSpace; map.needsUpdate = true; }
   for (const kind of ['bush', 'rock', 'boulder', 'ruin_block']) {
-    const list = props.filter(p => p.kind === kind && !(kind === 'ruin_block' && farmWallCell(p.x, p.y)));
+    const list = props.filter(p => p.kind === kind && !(kind === 'ruin_block' && (farmWallCell(p.x, p.y)||siteWallCell(p.x,p.y))));
     if (!list.length) continue;
     const bush = kind === 'bush';
     const ruin = kind === 'ruin_block';
@@ -40,11 +41,12 @@ export function buildDawnDetails(props: Prop[], group: THREE.Group,
     mesh.castShadow = true;
     const d = new THREE.Object3D();
     list.forEach((p, i) => {
-      const scale = (p.scale ?? 1) * (kind === 'boulder' ? 0.95 : ruin ? 0.7 : bush ? 0.5 : 0.38);
+      const variety = Math.abs(Math.floor(p.x * 5 + p.y * 3)) % 3;
+      const scale = (p.scale ?? 1) * (kind === 'boulder' ? 0.95 : ruin ? 0.7 : bush ? [0.3, 0.52, 0.78][variety] : 0.38);
       for (let j = 0; j < copies; j++) {
         d.position.set(p.x + 0.5, scale * (bush ? 0.6 : 0.3), p.y + 0.5);
         d.rotation.set(0, (p.rot ?? p.x * 0.7) + j * 2.1, 0);
-        d.scale.set(scale, scale * (bush ? 1 : 0.55), scale * 0.85);
+        d.scale.set(scale * (bush && variety === 2 ? 1.35 : 1), scale * (bush ? [0.65, 1.1, 0.6][variety] : 0.55), scale * 0.85);
         d.updateMatrix(); mesh.setMatrixAt(i * copies + j, d.matrix);
         mesh.setColorAt(i * copies + j, new THREE.Color().setScalar(0.88 + (i % 5) * 0.03));
       }
