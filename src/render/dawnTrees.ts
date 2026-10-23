@@ -54,7 +54,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
     const count = [8, 8, 7, 6, 5, 4, 3][tier], radius = 0.06;
     for (let j = 0; j < count; j++) {
       const a = j / count * Math.PI * 2 + tier * 0.7;
-      lobes.push([Math.sin(a) * radius, 1.9 + tier * 0.53 - Math.max(0, tier - 3) * 0.16 + Math.sin(j * 2.1) * 0.07,
+      lobes.push([Math.sin(a) * radius, 1.9 + tier * 0.53 - Math.max(0, tier - 3) * 0.16 - Math.max(0, tier - 4) * 0.11 + Math.sin(j * 2.1) * 0.07,
         Math.cos(a) * radius, [1.05, 1.02, 0.88, 0.74, 0.58, 0.4, 0.23][tier], a]);
     }
   }
