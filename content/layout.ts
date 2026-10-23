@@ -94,6 +94,9 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
     // In a town the whole map is safe; only keep scatter off small safe areas (camps).
     if ([...d.safe_areas, ...(d.camps ?? [])].some((r) => (d.type !== "town" || r[2] * r[3] < w * h) && x >= r[0] - 1 && y >= r[1] - 1 && x < r[0] + r[2] + 1 && y < r[1] + r[3] + 1)) return true;
     if (keepClear.some(([cx, cy, cr]) => Math.max(Math.abs(cx - x), Math.abs(cy - y)) <= cr)) return true;
+    // Preserve the readable silhouettes of Dawnmeadow's authored focal props.
+    if (d.id === 'lum_fld_01' && d.props.some(p =>
+      (p.kind === 'aether_pylon' || p.kind === 'aqueduct') && Math.hypot(x - p.x, y - p.y) < 5)) return true;
     return false;
   };
   const inPocket = (x: number, y: number) => d.pockets.some((p) => p.rects.some((r) => x >= r[0] && y >= r[1] && x < r[0] + r[2] && y < r[1] + r[3]));

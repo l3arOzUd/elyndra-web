@@ -9,10 +9,10 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   const trees = layout.props.filter(p => p.kind === "tree");
   if (!trees.length) return;
   const bark = track(new THREE.MeshLambertMaterial({ color: 0x765538 }));
-  const image = envArt.textures.get("dawn_canopy");
+  const image = envArt.textures.get("dawn_leaf_spray");
   const texture = image ? track(new THREE.Texture(image)) : null;
-  if (texture) { texture.colorSpace = THREE.SRGBColorSpace; texture.wrapS = texture.wrapT = THREE.RepeatWrapping; texture.repeat.set(2, 1); texture.anisotropy = 8; texture.needsUpdate = true; }
-  const leaves = track(new THREE.MeshLambertMaterial({ color: 0xffffff, vertexColors: true, map: texture }));
+  if (texture) { texture.colorSpace = THREE.SRGBColorSpace; texture.anisotropy = 8; texture.needsUpdate = true; }
+  const leaves = track(new THREE.MeshLambertMaterial({ color: 0xffffff, map: texture, alphaTest: 0.45, side: THREE.DoubleSide }));
   leaves.onBeforeCompile = shader => {
     shader.uniforms.dawnTime = time;
     shader.vertexShader = 'uniform float dawnTime; varying vec3 vLeaf;\n' + shader.vertexShader.replace('#include <begin_vertex>', `
@@ -25,10 +25,10 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
     // the actual crown volumes, rather than black texture lines, carry the form.
     shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
       #include <map_fragment>
-      diffuseColor.rgb = mix(diffuseColor.rgb * 1.65, vec3(0.19, 0.29, 0.085), 0.28);
+      diffuseColor.rgb *= 1.35;
     `);
   };
-  leaves.customProgramCacheKey = () => 'dawn-canopy-sway-v4';
+  leaves.customProgramCacheKey = () => 'dawn-leaf-spray-v1';
   const pieces = [new THREE.CylinderGeometry(0.1, 0.25, 2.7, 9).translate(0, 1.35, 0)];
   for (let i = 0; i < 4; i++) {
     const angle = i * Math.PI / 2 + 0.3;
@@ -37,22 +37,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   }
   const trunkGeo = track(mergeGeometries(pieces));
   pieces.forEach(piece => piece.dispose());
-  const crownGeo = track(new THREE.IcosahedronGeometry(1, 2));
-  const vertices = crownGeo.attributes.position;
-  for (let i = 0; i < vertices.count; i++) {
-    const x = vertices.getX(i), y = vertices.getY(i), z = vertices.getZ(i);
-    const r = 1 + 0.08 * Math.sin(x * 12 + z * 7) * Math.cos(y * 9 - z * 4);
-    vertices.setXYZ(i, x * r, y * r, z * r);
-  }
-  crownGeo.computeVertexNormals();
-  const colors = new Float32Array(crownGeo.attributes.position.count * 3);
-  const color = new THREE.Color();
-  for (let i = 0; i < crownGeo.attributes.position.count; i++) {
-    const y = crownGeo.attributes.position.getY(i);
-    color.set(0x9daa83).lerp(new THREE.Color(0xffffff), (y + 1) * 0.5);
-    colors.set([color.r, color.g, color.b], i * 3);
-  }
-  crownGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  const crownGeo = track(new THREE.PlaneGeometry(2.6, 2.4).rotateX(-Math.PI / 3));
   const trunks = new THREE.InstancedMesh(trunkGeo, bark, trees.length);
   // Overlapping flattened sprays break the silhouette into leafy scallops.
   // The previous five huge balls read as a bunch of boulders on a pole.
@@ -77,7 +62,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
       d.position.set(p.x + 0.5 + (x * Math.cos(angle) - z * Math.sin(angle)) * s, y * s,
         p.y + 0.5 + (x * Math.sin(angle) + z * Math.cos(angle)) * s);
       d.rotation.set(Math.sin(j * 1.7) * 0.16, angle + j * 2.4, Math.cos(j * 2.3) * 0.12);
-      d.scale.set(r * s, r * s * 0.6, r * s); d.updateMatrix(); crowns.setMatrixAt(i * lobes.length + j, d.matrix);
+      d.scale.setScalar(r * s); d.updateMatrix(); crowns.setMatrixAt(i * lobes.length + j, d.matrix);
       crowns.setColorAt(i * lobes.length + j, new THREE.Color().setRGB(0.9 + (j % 3) * 0.04, 0.94 + (j % 3) * 0.02, 0.86));
     });
   });

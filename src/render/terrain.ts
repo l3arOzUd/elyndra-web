@@ -277,7 +277,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   // Soft contact shadows tie props to the painted floor in one draw.
   {
     const radius: Partial<Record<typeof l.props[number]["kind"], number>> = {
-      tree: 1.25, pine: 0.95, bush: 0.6, rock: 0.55, boulder: 1.05, dead_tree: 0.8, palm: 1.1, coral: 0.55, ice_spike: 0.55, crystal: 0.5, giant_tree: 3,
+      tree: l.id === 'lum_fld_01' ? 1.9 : 1.25, pine: 0.95, bush: 0.6, rock: 0.55, boulder: 1.05, dead_tree: 0.8, palm: 1.1, coral: 0.55, ice_spike: 0.55, crystal: 0.5, giant_tree: 3,
       aether_pylon: 0.65, rune_stone: 0.5, tent: 1.4, crate: 0.55,
       fountain: 1.7, windmill: 1.8, market_stall: 1.3, lamp_post: 0.35,
     };
