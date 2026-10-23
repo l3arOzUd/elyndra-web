@@ -62,7 +62,11 @@ function build(kind: PropKind): THREE.BufferGeometry {
     case "windmill": return mergeGeometries([part(cyl(0.9, 1.3, 5, 10), C.cream), part(new THREE.ConeGeometry(1.15, 1.2, 10), C.roof, [0, 5.6, 0]), part(box(0.6, 0.9, 0.1), C.wood, [0, 0, 1.25])]);
     case "observatory": return mergeGeometries([part(cyl(1.4, 1.5, 2.2, 12), C.stone), part(new THREE.SphereGeometry(1.4, 12, 6, 0, Math.PI * 2, 0, Math.PI / 2), C.brass, [0, 2.2, 0]), part(cyl(0.15, 0.2, 1.4), C.copper, [0.5, 3.1, 0], [0, 0, -0.7])]);
     case "statue": return mergeGeometries([part(box(1.2, 0.6, 1.2), C.stone), part(new THREE.CapsuleGeometry(0.3, 1, 3, 8), C.stone, [0, 1.4, 0]), part(new THREE.IcosahedronGeometry(0.22, 0), C.stone, [0, 2.3, 0])]);
-    case "crate": return part(box(0.7, 0.7, 0.7), C.wood);
+    case "crate": return mergeGeometries([
+      ...[0,1,2,3].map(i=>part(box(.165,.66,.66),i%2?0x95704a:0x80613f,[-.255+i*.17,0,0])),
+      ...[-.27,.27].flatMap(x=>[part(box(.07,.72,.72),C.iron,[x,0,0])]),
+      ...[-.35,.35].map(z=>part(box(.075,.78,.05),0xb29061,[0,.02,z],[0,0,-.64])),
+    ]);
     case "fence_post": return mergeGeometries([part(box(0.12, 0.8, 0.12), C.wood), part(box(1, 0.08, 0.06), C.wood, [0.5, 0.55, 0])]);
     case "cave_mouth": return mergeGeometries([part(new THREE.TorusGeometry(1.6, 0.6, 5, 10, Math.PI), C.rock, [0, 0, 0], [0, Math.PI / 2, 0]), part(new THREE.CircleGeometry(1.3, 12, 0, Math.PI), 0x0b0d0f, [0, 0, 0], [0, Math.PI / 2, 0])]);
     default: return part(box(0.5, 0.5, 0.5), 0xff00ff);

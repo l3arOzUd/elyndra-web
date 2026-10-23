@@ -276,7 +276,7 @@ export async function applyPaintedTerrain(
         terrain = mix(terrain, terrainPaint(terrainZoneA, world, terrainRecipes[1], terrainTints[1]), smoothstep(0.3, 0.7, zones.r + grain * 0.2));
         terrain = mix(terrain, terrainPaint(terrainZoneB, world, terrainRecipes[2], terrainTints[2]), smoothstep(0.3, 0.7, zones.g + grain * 0.2));
         terrain = mix(terrain, terrainPaint(terrainMoss, world, terrainRecipes[7], terrainTints[7]), weights.g);
-        terrain = mix(terrain, terrainPaint(terrainTrampled, world, terrainRecipes[5], terrainTints[5]), smoothstep(0.15, 0.85, zones.b + grain * 0.35) * 0.8);
+        terrain = mix(terrain, terrainPaint(terrainTrampled, world, terrainRecipes[5], terrainTints[5]), smoothstep(0.1, 0.8, zones.b) * 0.65);
         // Roads: a ragged edge and a darker painted rim on both sides of it.
         float roadW = smoothstep(0.12, 0.88, weights.r + grain * 0.13);
         float stoneW = smoothstep(0.38, 0.62, weights.b + grain * 0.2);
