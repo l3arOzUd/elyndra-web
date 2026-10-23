@@ -284,8 +284,8 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   const modelProps: typeof l.props = [];
   const dawnSolid = new Set(['crystal', 'crate', 'brass_pipe', 'gear_ruin', 'rune_stone']);
   const modelKinds = new Set<import("../data/schema").PropKind>(l.id === "lum_fld_01"
-    ? ['tree', 'bush', 'rock', 'boulder', 'ruin_block', ...dawnSolid] as import("../data/schema").PropKind[] : ['rock','boulder','ruin_block']);
-  if (l.id==='lum_fld_01') buildDawnTrees(l, group, track, tileTime);
+    ? ['tree', 'bush', 'rock', 'boulder', 'ruin_block', ...dawnSolid] as import("../data/schema").PropKind[] : ['pine','rock','boulder','ruin_block',...dawnSolid] as import("../data/schema").PropKind[]);
+  buildDawnTrees(l.id==='lum_fld_01'?l:{...l,props:l.props.filter(p=>p.kind==='pine')}, group, track, tileTime);
   const painted = buildPaintedProps(l, group, track, (b) => ({
     contains: (x, y) => !(l.id === 'lum_fld_01' && b.kind === 'cliff') && inShape(b.shape, x, y),
     bounds: shapeBounds(b.shape) }), decor, modelKinds, modelProps);
@@ -320,7 +320,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   if (l.id === 'lum_fld_01') buildDawnFarmhouse(group, track);
   if (l.id === 'lum_fld_01') buildDawnSites(group, track);
   buildWorldDressing(l,group,track);
-  for (const p of l.props) if ((!PAINTED_KINDS.has(p.kind) || (l.id === 'lum_fld_01' && dawnSolid.has(p.kind))) &&
+  for (const p of l.props) if ((!PAINTED_KINDS.has(p.kind) || dawnSolid.has(p.kind)) &&
     !(p.kind === 'aether_pylon' || p.kind === 'tent' || (l.id === 'lum_fld_01' && p.kind === 'aqueduct')))
     byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);
   const mat = track(new THREE.MeshLambertMaterial({ vertexColors: true, flatShading: true }));

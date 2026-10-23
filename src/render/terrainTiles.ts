@@ -37,7 +37,7 @@ const GROUND_PAINT: Record<Ground, Paint> = {
   snow: paint("dirt_path", [0.95, 1, 1.1], 0.95, 1.5, 12, "snow"),
   ash: paint("cave_floor", [1.35, 1.22, 1.15], 0.5, 0.16, 8, "ash"),
   stone: paint("cobblestone", [1, 1, 1], 0, 0, 5, "paving"),
-  shore: paint("grass_dry", [2, 1.8, 1.3], 0.6, 0.3, 9, "shore"),
+  shore: paint("dirt_path", [1.85, 1.75, 1.45], 0.65, 0.25, 13, "shore"),
   metal: paint("cave_floor", [1.4, 1.48, 1.7], 0.6, 0.18, 7, "metal"),
   cave: paint("cave_floor", [1, 1, 1], 0, 0, 8, "cave"),
 };

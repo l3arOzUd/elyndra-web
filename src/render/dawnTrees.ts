@@ -6,7 +6,7 @@ import type { MapLayout } from "../data/schema";
 /** Volumetric trees at authored collision anchors. Canopies do not change walk data. */
 export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   track: <T extends { dispose(): void }>(value: T) => T, time: { value: number }) {
-  const trees = layout.props.filter(p => p.kind === "tree");
+  const trees = layout.props.filter(p => p.kind === "tree" || p.kind === 'pine');
   if (!trees.length) return;
   const bark = track(new THREE.MeshLambertMaterial({ color: 0x765538 }));
   const image = envArt.textures.get("dawn_bough_v4");
@@ -25,9 +25,10 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
     shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
       #include <map_fragment>
       diffuseColor.rgb = mix(diffuseColor.rgb * 1.65, vec3(0.23, 0.31, 0.13), 0.18);
+      ${layout.ground==='snow'?'diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.72,0.82,0.88), 0.78);':''}
     `);
   };
-  leaves.customProgramCacheKey = () => 'dawn-curved-bough-v4';
+  leaves.customProgramCacheKey = () => 'world-curved-bough-v5-'+layout.ground;
   const pieces = [new THREE.CylinderGeometry(0.035, 0.23, 3.9, 9).translate(0, 1.95, 0)];
   for (let i = 0; i < 4; i++) {
     const angle = i * Math.PI / 2 + 0.3;
