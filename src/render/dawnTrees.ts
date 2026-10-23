@@ -38,7 +38,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   pieces.forEach(piece => piece.dispose());
   // Each painted bough follows a bowed surface, attached at the top of the
   // texture and drooping outwards. Flat rotated cards exposed their edges.
-  const crownGeo = track(new THREE.PlaneGeometry(1.9, 2.2, 10, 12));
+  const crownGeo = track(new THREE.PlaneGeometry(1.9, 2.2, 4, 4));
   const positions = crownGeo.attributes.position;
   for (let k = 0; k < positions.count; k++) {
     const x = positions.getX(k), t = (1.1 - positions.getY(k)) / 2.2;
