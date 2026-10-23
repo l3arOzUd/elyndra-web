@@ -9,10 +9,10 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   const trees = layout.props.filter(p => p.kind === "tree");
   if (!trees.length) return;
   const bark = track(new THREE.MeshLambertMaterial({ color: 0x765538 }));
-  const image = envArt.textures.get("dawn_fir_v3");
+  const image = envArt.textures.get("dawn_bough_v4");
   const texture = image ? track(new THREE.Texture(image)) : null;
   if (texture) { texture.colorSpace = THREE.SRGBColorSpace; texture.anisotropy = 8; texture.needsUpdate = true; }
-  const leaves = track(new THREE.MeshLambertMaterial({ color: 0xffffff, map: texture, alphaTest: 0.45, side: THREE.DoubleSide }));
+  const leaves = track(new THREE.MeshLambertMaterial({ color: 0xffffff, map: texture, alphaTest: 0.35, side: THREE.DoubleSide }));
   leaves.onBeforeCompile = shader => {
     shader.uniforms.dawnTime = time;
     shader.vertexShader = 'uniform float dawnTime; varying vec3 vLeaf;\n' + shader.vertexShader.replace('#include <begin_vertex>', `
@@ -24,10 +24,10 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
     // Lift the diffuse leaf painting under the shared scene lighting.
     shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
       #include <map_fragment>
-      diffuseColor.rgb = diffuseColor.rgb * 1.8 + vec3(0.025, 0.04, 0.015);
+      diffuseColor.rgb *= 1.15;
     `);
   };
-  leaves.customProgramCacheKey = () => 'dawn-fir-spray-v3';
+  leaves.customProgramCacheKey = () => 'dawn-curved-bough-v4';
   const pieces = [new THREE.CylinderGeometry(0.07, 0.23, 4.6, 9).translate(0, 2.3, 0)];
   for (let i = 0; i < 4; i++) {
     const angle = i * Math.PI / 2 + 0.3;
@@ -36,20 +36,28 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   }
   const trunkGeo = track(mergeGeometries(pieces));
   pieces.forEach(piece => piece.dispose());
-  const crownGeo = track(new THREE.PlaneGeometry(2.6, 1.8).rotateX(-Math.PI / 4));
+  // Each painted bough follows a bowed surface, attached at the top of the
+  // texture and drooping outwards. Flat rotated cards exposed their edges.
+  const crownGeo = track(new THREE.PlaneGeometry(1.9, 2.2, 10, 12));
+  const positions = crownGeo.attributes.position;
+  for (let k = 0; k < positions.count; k++) {
+    const x = positions.getX(k), t = (1.1 - positions.getY(k)) / 2.2;
+    positions.setXYZ(k, x, 0.24 * Math.sin(t * Math.PI) - 0.78 * t - 0.28 * (x / 0.95) ** 2, t * 2.2);
+  }
+  crownGeo.computeVertexNormals();
+  crownGeo.computeBoundingSphere();
   const trunks = new THREE.InstancedMesh(trunkGeo, bark, trees.length);
-  // Overlapping flattened sprays break the silhouette into leafy scallops.
-  // The previous five huge balls read as a bunch of boulders on a pole.
+  // Staggered overlapping boughs form a continuous crown. Tree-local variation
+  // breaks up repeated rings without changing trunk anchors or collision.
   const lobes: number[][] = [];
-  for (let tier = 0; tier < 5; tier++) {
-    const count = [9, 8, 7, 6, 4][tier], radius = [0.95, 0.8, 0.6, 0.4, 0.18][tier];
+  for (let tier = 0; tier < 7; tier++) {
+    const count = [8, 8, 7, 6, 5, 4, 3][tier], radius = 0.06;
     for (let j = 0; j < count; j++) {
       const a = j / count * Math.PI * 2 + tier * 0.7;
-      lobes.push([Math.cos(a) * radius, 1.8 + tier * 0.68 + Math.sin(j * 2.1) * 0.12,
-        Math.sin(a) * radius, [1.1, 0.95, 0.78, 0.6, 0.45][tier] + Math.sin(j * 4.3 + tier) * 0.06]);
+      lobes.push([Math.sin(a) * radius, 1.9 + tier * 0.53 + Math.sin(j * 2.1) * 0.13,
+        Math.cos(a) * radius, [1.05, 1.02, 0.88, 0.74, 0.58, 0.4, 0.23][tier], a]);
     }
   }
-  lobes.push([0, 4.95, 0, 0.36]);
   const crowns = new THREE.InstancedMesh(crownGeo, leaves, trees.length * lobes.length);
   trunks.castShadow = true;
   crowns.castShadow = true;
@@ -57,14 +65,18 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   const d = new THREE.Object3D();
   trees.forEach((p, i) => {
     const s = p.scale ?? 1, angle = p.rot ?? 0;
+    const seed = p.x * 13.7 + p.y * 5.3;
+    const breadth = 0.94 + Math.sin(seed) * 0.09;
+    const height = 1 + Math.cos(seed * 1.7) * 0.07;
     d.position.set(p.x + 0.5, 0, p.y + 0.5); d.rotation.set(0, angle, 0); d.scale.setScalar(s); d.updateMatrix();
     trunks.setMatrixAt(i, d.matrix);
-    lobes.forEach(([x, y, z, r], j) => {
-      d.position.set(p.x + 0.5 + (x * Math.cos(angle) - z * Math.sin(angle)) * s, y * s,
+    lobes.forEach(([x, y, z, r, a], j) => {
+      d.position.set(p.x + 0.5 + (x * Math.cos(angle) - z * Math.sin(angle)) * s, (y * height + Math.sin(seed + j * 2.7) * 0.09) * s,
         p.y + 0.5 + (x * Math.sin(angle) + z * Math.cos(angle)) * s);
-      d.rotation.set(Math.sin(j * 1.7) * 0.16, angle + j * 2.4, Math.cos(j * 2.3) * 0.12);
-      d.scale.setScalar(r * s); d.updateMatrix(); crowns.setMatrixAt(i * lobes.length + j, d.matrix);
-      crowns.setColorAt(i * lobes.length + j, new THREE.Color(0x70917b).lerp(new THREE.Color(0xffffff), Math.min(1, (y - 1.6) / 3.4)));
+      d.rotation.set(Math.sin(seed + j * 1.7) * 0.08, angle + a + Math.sin(seed + j) * 0.1, Math.cos(j * 2.3 + seed) * 0.07);
+      const size = r * s * (1 + Math.sin(seed + j * 3.1) * 0.07);
+      d.scale.set(size * breadth, size * height, size * breadth); d.updateMatrix(); crowns.setMatrixAt(i * lobes.length + j, d.matrix);
+      crowns.setColorAt(i * lobes.length + j, new THREE.Color(0x6e8c78).lerp(new THREE.Color(0xf1f2d5), Math.min(1, (y - 1.3) / 3.6)));
     });
   });
   group.add(trunks, crowns);
