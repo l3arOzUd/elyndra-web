@@ -4,7 +4,8 @@
     "left-neutral-v5.png",
     "walk-left-near-lift-v2.png",
     "walk-left-far-lift-v2.png",
-    "walk-left-near-contact-v2.png"
+    "walk-left-near-contact-v2.png",
+    "walk-left-far-contact.png"
   ],
   "sequence": [
     0,
@@ -12,23 +13,24 @@
     3,
     0,
     2,
-    0
+    4
   ],
   "frameDurationMs": 220,
-  "status": "four-drawing-walk-draft",
+  "status": "five-drawing-walk-draft",
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
     "Support foot slides between drawings.",
     "Step spacing and weight transfer still need balancing.",
-    "True near/far ground contact and passing drawings missing; new contact-named asset is only a provisional lowering pose.",
+    "Near/far sole contact still provisional; dedicated passing drawings missing and neutral reused.",
     "Hip construction, boot shape and surface detail drift."
   ],
   "observed": [
     "Near-step v2 flattens the sole and shortens forward reach; support leg remains in place relative to v1.",
     "Far-step v2 lowers the toe and shortens reach without a major change to supporting boot placement.",
     "Near lowering drawing drops toe and lifts rear heel, but near sole remains above shared baseline.",
-    "Contact v2 reduces opaque toe-bottom gap from 30 to 11 pixels; not exact ground alignment."
+    "Contact v2 reduces opaque toe-bottom gap from 30 to 11 pixels; not exact ground alignment.",
+    "Far lowering pose adds a downward transition after far lift; foot baseline and knee compression remain unresolved."
   ],
   "superseded": {
     "walk-left-near-lift.png": "Longer step and raised toe.",
