@@ -1,0 +1,40 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "left-neutral-v5.png",
+    "attack-left-windup.png",
+    "attack-left-impact.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    1,
+    0
+  ],
+  "fps": 6.25,
+  "offsets": [
+    [
+      0,
+      0
+    ],
+    [
+      -0.5,
+      -1
+    ],
+    [
+      -114,
+      -2
+    ]
+  ],
+  "status": "three-drawing-attack-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Dedicated recovery and inbetween drawings missing.",
+    "Impact introduces extra exposed forearm piston travel requiring cross-view mechanical review.",
+    "Body shape, hinge and salt details drift."
+  ],
+  "registration": "Translation only: bottom 16 percent alpha bounds center X and bottom Y; shared scale 460/1254."
+}
