@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Use case: precise-object-edit. Edit target supplied transparent robot sprite. Remove ONLY the small brown ground-shadow bridge between the two boots near bottom of image. That gap must be truly transparent, matching surrounding background alpha. Preserve every part of both boots including dark soles; preserve pose, anatomy, armor, all colors, lighting, head, hands, hoses, camera, canvas dimensions, scale and pixel positions. Do not redraw or redesign character. No ground or shadows anywhere outside silhouette. Output same full-body sprite with transparent background.",
+  "reference": "walk-front-left-contact.png"
+}

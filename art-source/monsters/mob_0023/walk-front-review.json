@@ -5,7 +5,7 @@
     "walk-front-right-lift.png",
     "walk-front-left-lift.png",
     "walk-front-right-contact.png",
-    "walk-front-left-contact.png"
+    "walk-front-left-contact-v2.png"
   ],
   "sequence": [
     0,
@@ -25,7 +25,20 @@
     "Weight transfer and support foot registration require review.",
     "Hose, hand and painted armor details drift between drawings.",
     "Other three walking views missing.",
-    "Left contact has unwanted brown shadow between boots.",
-    "Contact sole baselines differ and body registration is not approved."
-  ]
+    "Contact sole baselines differ and body registration is not approved.",
+    "Shadow cleanup changes armor highlights slightly; temporal surface consistency still pending."
+  ],
+  "cleanupReview": {
+    "source": "walk-front-left-contact.png",
+    "selected": "walk-front-left-contact-v2.png",
+    "sampleRect": [
+      600,
+      1138,
+      620,
+      1152
+    ],
+    "beforeMaxAlpha": 18,
+    "afterMaxAlpha": 0,
+    "scope": "Only verifies sampled gap transparency, not animation approval."
+  }
 }
