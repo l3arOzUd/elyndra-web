@@ -1,0 +1,37 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "left-neutral-v5.png",
+    "idle-left-clamp.png"
+  ],
+  "status": "two-drawing-idle-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Painted surface and outline drift need cleanup.",
+    "Lateral knee construction remains unresolved."
+  ],
+  "sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "fps": 8
+}
