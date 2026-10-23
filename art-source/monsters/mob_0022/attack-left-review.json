@@ -3,14 +3,15 @@
   "sources": [
     "left-neutral-v5.png",
     "attack-left-windup.png",
-    "attack-left-impact.png"
+    "attack-left-impact.png",
+    "attack-left-recovery.png"
   ],
   "sequence": [
     0,
     1,
     1,
     2,
-    1,
+    3,
     0
   ],
   "fps": 6.25,
@@ -26,15 +27,20 @@
     [
       -114,
       -2
+    ],
+    [
+      -0.5,
+      1
     ]
   ],
-  "status": "three-drawing-attack-draft",
+  "status": "four-drawing-attack-draft",
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
-    "Dedicated recovery and inbetween drawings missing.",
+    "Inbetween drawings and motion polish missing.",
     "Impact introduces extra exposed forearm piston travel requiring cross-view mechanical review.",
-    "Body shape, hinge and salt details drift."
+    "Body shape, hinge and salt details drift.",
+    "Recovery elbow reads nearly straight rather than bent; joint articulation needs cleanup."
   ],
   "registration": "Translation only: bottom 16 percent alpha bounds center X and bottom Y; shared scale 460/1254."
 }
