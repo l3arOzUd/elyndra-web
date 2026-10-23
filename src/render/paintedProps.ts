@@ -17,7 +17,7 @@ type Blocker = MapLayout["blockers"][number];
 export const PAINTED_KINDS = new Set<PropKind>(["tree", "pine", "bush", "rock", "boulder", "dead_tree", "palm", "coral", "ice_spike", "crystal", "giant_tree", "crate", "brass_pipe", "gear_ruin", "rune_stone"]);
 
 type Look = "green" | "snow" | "dry" | "dark";
-/** An atlas cell: w×h pixels at px,py; drawn cw×ch cells. */
+/** An atlas cell: wÃ—h pixels at px,py; drawn cwÃ—ch cells. */
 interface Card { kind: string; w: number; h: number; px: number; py: number; cw: number; ch: number }
 /** Card size in cells (w across, h up) and atlas pixels per cell. */
 const SIZE: Record<string, [number, number]> = {
@@ -334,7 +334,7 @@ function paintCard(g: CanvasRenderingContext2D, kind: string, W: number, H: numb
 interface Atlas { texture: THREE.CanvasTexture; cards: Map<string, Card[]> }
 const atlases = new Map<Look, Atlas>();
 
-/** The painted atlas for a look (each kind × VARIANTS), built once and kept. */
+/** The painted atlas for a look (each kind Ã— VARIANTS), built once and kept. */
 function atlasFor(look: Look): Atlas {
   const have = atlases.get(look);
   if (have) return have;
@@ -457,13 +457,14 @@ function heapOf(b: Blocker, contains: (x: number, y: number) => boolean, bounds:
  * caller can skip their models and give them contact shadows.
  */
 export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T extends { dispose(): void }>(x: T) => T,
-  blockerCells: (b: Blocker) => { contains: (x: number, y: number) => boolean; bounds: [number, number, number, number] }, decor: Prop[] = []): Prop[] {
+  blockerCells: (b: Blocker) => { contains: (x: number, y: number) => boolean; bounds: [number, number, number, number] }, decor: Prop[] = [], exclude: ReadonlySet<PropKind> = new Set()): Prop[] {
   const atlas = atlasFor(lookOf(l));
   const props = [...l.props.filter((p) => PAINTED_KINDS.has(p.kind)), ...decor];
   for (const b of l.blockers) if (HEAPED.has(b.kind)) { const c = blockerCells(b); props.push(...heapOf(b, c.contains, c.bounds)); }
   // One instanced card mesh per (kind, variant): a unit card, feet at the origin, leaning back to face the camera.
   const groups = new Map<Card, Prop[]>();
   for (const p of props) {
+    if (exclude.has(p.kind)) continue;
     const list = atlas.cards.get(p.kind);
     if (!list) continue;
     const v = Math.abs(Math.floor(p.x * 7 + p.y * 13)) % list.length;
@@ -495,5 +496,5 @@ export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T ex
     });
     group.add(inst);
   }
-  return props;
+  return props.filter(p => !exclude.has(p.kind));
 }

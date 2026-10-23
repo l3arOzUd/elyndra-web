@@ -2,6 +2,7 @@ import * as THREE from "three";
 import type { BlockerKind, MapLayout, RegionDef, Shape, WarpDef } from "../data/schema";
 import { decodeWalk } from "../data/schema";
 import { buildPaintedProps, decorProps, HEAPED, PAINTED_KINDS } from "./paintedProps";
+import { buildDawnTrees } from "./dawnTrees";
 import { animatedProp, propGeometry } from "./props";
 import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
 
@@ -264,7 +265,9 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   }
   const inMap = (x: number, y: number) => x >= 0 && y >= 0 && x < l.width && y < l.height;
   const decor = decorProps(l, (x, y) => inMap(x, y) && walkCells[y * l.width + x] === 1, (x, y) => inMap(x, y) && roadCells[y * l.width + x] === 1);
-  const painted = buildPaintedProps(l, group, track, (b) => ({ contains: (x, y) => inShape(b.shape, x, y), bounds: shapeBounds(b.shape) }), decor);
+  const modelKinds = new Set<import("../data/schema").PropKind>(l.id === "lum_fld_01" ? ["tree"] : []);
+  if (modelKinds.size) buildDawnTrees(l, group, track, tileTime);
+  const painted = buildPaintedProps(l, group, track, (b) => ({ contains: (x, y) => inShape(b.shape, x, y), bounds: shapeBounds(b.shape) }), decor, modelKinds);
   // Soft contact shadows tie props to the painted floor in one draw.
   {
     const radius: Partial<Record<typeof l.props[number]["kind"], number>> = {
@@ -272,7 +275,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
       aether_pylon: 0.65, rune_stone: 0.5, tent: 1.4, crate: 0.55,
       fountain: 1.7, windmill: 1.8, market_stall: 1.3, lamp_post: 0.35,
     };
-    const casters = [...l.props.filter(p => radius[p.kind] && !PAINTED_KINDS.has(p.kind)), ...painted.filter(p => radius[p.kind])];
+    const casters = [...l.props.filter(p => radius[p.kind] && (!PAINTED_KINDS.has(p.kind) || modelKinds.has(p.kind))), ...painted.filter(p => radius[p.kind])];
     const canvas = document.createElement("canvas"); canvas.width = canvas.height = 64;
     const ctx = canvas.getContext("2d")!;
     const fade = ctx.createRadialGradient(32, 32, 3, 32, 32, 31);
