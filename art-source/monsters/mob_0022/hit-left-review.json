@@ -1,0 +1,27 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "left-neutral-v5.png",
+    "hit-left-brace-v2.png"
+  ],
+  "status": "two-drawing-hit-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Far hip joint remains exposed despite occluded leg.",
+    "Near boot placement and shape drift from neutral.",
+    "Gauge and painted surface continuity require cleanup."
+  ],
+  "superseded": {
+    "hit-left-brace.png": "Far boot moves in front of near toe; profile camera continuity breaks."
+  },
+  "sequence": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "fps": 10
+}
