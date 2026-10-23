@@ -19,15 +19,28 @@ export function buildDawnShore(layout: MapLayout, group: THREE.Group,
   }
   stoneGeo.computeVertexNormals();
   for (const b of layout.blockers) {
-    if (!['water', 'cliff'].includes(b.kind) || !('ellipse' in b.shape)) continue;
-    const [cx, cz, rx, rz] = b.shape.ellipse, water = b.kind === 'water';
+    if (!['water', 'cliff'].includes(b.kind) || 'rect' in b.shape) continue;
+    const outline: number[][] = 'poly' in b.shape ? b.shape.poly : Array.from({ length: 80 }, (_, i) => {
+      const [x, z, rx, rz] = (b.shape as { ellipse: number[] }).ellipse, a = i / 80 * Math.PI * 2;
+      return [x + Math.cos(a) * rx, z + Math.sin(a) * rz];
+    });
+    const cx = outline.reduce((sum, p) => sum + p[0], 0) / outline.length;
+    const cz = outline.reduce((sum, p) => sum + p[1], 0) / outline.length;
+    const edge = (angle: number, inset: number) => {
+      const f = ((angle / (Math.PI * 2) % 1 + 1) % 1) * outline.length, i = Math.floor(f), t = f - i;
+      const a = outline[i], b = outline[(i + 1) % outline.length];
+      const x = a[0] + (b[0] - a[0]) * t, z = a[1] + (b[1] - a[1]) * t;
+      const length = Math.hypot(x - cx, z - cz);
+      return [x - (x - cx) / length * inset, z - (z - cz) / length * inset];
+    };
+    const water = b.kind === 'water';
     if (water) {
       const pos: number[] = [], colors: number[] = [], uv: number[] = [], index: number[] = [];
-      const n = 80;
+      const n = outline.length;
       for (let ring = 0; ring < 4; ring++) for (let i = 0; i <= n; i++) {
         const a = i / n * Math.PI * 2, inward = 0.62 + Math.sin(a * 5 + cx) * 0.13 + Math.cos(a * 9) * 0.07;
         const t = ring / 3, inset = inward * (1 - t);
-        const x = cx + Math.cos(a) * (rx - inset), z = cz + Math.sin(a) * (rz - inset);
+        const [x, z] = edge(a, inset);
         pos.push(x, 0.055 + Math.sin(t * Math.PI) * 0.05, z); uv.push(x * 0.3, z * 0.3);
         const color = new THREE.Color(0xc8c3a2).lerp(new THREE.Color(0xaabd79), t);
         colors.push(color.r, color.g, color.b, Math.sin(t * Math.PI) * 0.85);
@@ -47,7 +60,8 @@ export function buildDawnShore(layout: MapLayout, group: THREE.Group,
     for (let i = 0; i < count; i++) {
       const a = Math.floor(i / 4) * 2.3 + (i % 4) * 0.13 + cx, s = 0.2 + (i % 4) * 0.065;
       const inset = 0.45 + (i % 3) * 0.14;
-      d.position.set(cx + Math.cos(a) * (rx - inset), 0.09, cz + Math.sin(a) * (rz - inset));
+      const [x, z] = edge(a, inset);
+      d.position.set(x, 0.09, z);
       d.rotation.set(0.2, a, 0.15); d.scale.set(s * 1.5, s * 0.7, s); d.updateMatrix(); heap.setMatrixAt(i, d.matrix);
     }
     group.add(heap);

@@ -333,6 +333,15 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
   if (f.dungeon) props.push({ kind: "cave_mouth", x: gate.trigger[0] + 3, y: gate.trigger[1] - 3, block: 0, scale: 1.4 });
 
   if (f.id === "lum_fld_01") {
+    // One organic outline is baked for both the water mesh and server collision.
+    for (const b of blockers) if (b.kind === 'water' && 'ellipse' in b.shape) {
+      const [cx, cy, rx, ry] = b.shape.ellipse;
+      b.shape = { poly: Array.from({ length: 48 }, (_, i): [number, number] => {
+        const a = i / 48 * Math.PI * 2;
+        const r = 0.9 + Math.sin(a * 3 + cx) * 0.07 + Math.cos(a * 5 + cy) * 0.03;
+        return [Number((cx + Math.cos(a) * rx * r).toFixed(3)), Number((cy + Math.sin(a) * ry * r).toFixed(3))];
+      }) };
+    }
     // Authored landmarks on the current 192-cell world, kept off its spokes.
     // Pier rectangles are shared with the server; the arch openings stay open.
     props.find(p => p.kind === "rune_stone")!.kind = "aether_pylon";
