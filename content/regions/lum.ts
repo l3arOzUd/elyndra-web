@@ -50,7 +50,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A beetle-sized six-legged mite under a translucent amber shell with a glowing core; honey-orange.", sprite: "ambermite_2d",
   },
   {
-    id: "mob_0004", name: "Lunari", level: 3, archetype: "swarm", family: "beast", element: "wind", behavior: "flee",
+    id: "mob_0004", name: "Lunari", level: 3, archetype: "swarm", family: "beast", element: "wind", behavior: "passive",
     mods: { hp: 0.8, atk: 0.8, speed: 0.75 }, why: "A skittish glider: frail (-20% HP, -20% ATK) and fast (25% faster) so it bolts when hit. A chase target, not a threat.",
     drops: { common: "itm_0007", uncommon: "itm_0008" },
     ecology: "Leaf-eared gliders nesting in the hollows of Amber Trail; they scatter from anything that hurts them.",
@@ -71,7 +71,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A stocky boar with a back of woody thorns and bark-like hide; mossy tusks.", sprite: "thornback_2d",
   },
   {
-    id: "mob_0007", name: "Dustwing", level: 9, archetype: "swarm", family: "insect", element: "wind", behavior: "aggressive",
+    id: "mob_0007", name: "Dustwing", level: 9, archetype: "swarm", family: "insect", element: "wind", behavior: "passive",
     mods: { hp: 0.85, speed: 0.7, attack_speed: 0.85 }, why: "A flyer: light (-15% HP), fast (30% faster), quick stings. The aggressive swarm that makes the windmill fields a natural 30-60 mob train.",
     drops: { common: "itm_0013", uncommon: "itm_0014" },
     ecology: "Dust moths that ride the updraft of the old windmill's sails and dive on anything moving below.",

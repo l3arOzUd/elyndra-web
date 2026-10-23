@@ -89,7 +89,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A dog-shaped hole in the world: a black silhouette with violet edges and white pinpoint eyes, flickering at the outline.",
   },
   {
-    id: "mob_0094", name: "Sparkwing", level: 90, archetype: "swarm", family: "bird", element: "wind", behavior: "flee",
+    id: "mob_0094", name: "Sparkwing", level: 90, archetype: "swarm", family: "bird", element: "wind", behavior: "passive",
     mods: { hp: 0.9, speed: 0.7 }, why: "Hollow-boned (-10% HP) and the fastest thing in Nocthaven (30% faster); flees when hit, a chase target that scatters off the dishes and lands again. Rewards cone and line skills over circles.",
     drops: { common: "itm_0258", uncommon: "itm_0259" },
     ecology: "Birds that roost on the Black Array's receiver dishes and feed on the static arcing between the masts; a flock lifts when anything strikes it.",

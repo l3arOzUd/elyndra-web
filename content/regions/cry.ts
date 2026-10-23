@@ -41,14 +41,14 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A palm-sized mite whose shell is a cluster of clear ice crystals, six thin blue legs, a faint glow inside; frost-white and pale cyan.",
   },
   {
-    id: "mob_0070", name: "Rimehare", level: 48, archetype: "swarm", family: "beast", element: "wind", behavior: "flee",
+    id: "mob_0070", name: "Rimehare", level: 48, archetype: "swarm", family: "beast", element: "wind", behavior: "passive",
     mods: { hp: 0.85, atk: 0.8, speed: 0.7 }, why: "A snow hare: frail (-15% HP), barely bites (-20% ATK), very fast (30% faster). Flees when hit, so packs scatter across the snow unless driven against the pines.",
     drops: { common: "itm_0190", uncommon: "itm_0191" },
     ecology: "Hares of Frostline's open snowfields above the treeline; they burrow in drifts and bolt from anything that hurts them.",
     art_brief: "A big white hare with frost-tipped ears and long whiskers rimed with ice, hind legs built for bounding; snow-white, silver-blue shadows.",
   },
   {
-    id: "mob_0025", name: "Prism Wisp", level: 50, archetype: "ranged", family: "elemental", element: "ice", behavior: "aggressive",
+    id: "mob_0025", name: "Prism Wisp", level: 50, archetype: "ranged", family: "elemental", element: "ice", behavior: "passive",
     mods: { range: 6, def: 0.8 }, why: "A light caught in a crystal frame: it fires refracted beams from 6 cells, but the hollow frame is thin (-20% DEF). The region's first ranged threat.",
     drops: { common: "itm_0049", uncommon: "itm_0050", rare: "itm_0208" },
     ecology: "Floating lights that gather where ice refracts the most sun: over Frostline's frozen lake. Their frames sometimes set into a flawless prism.",
@@ -62,7 +62,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A shaggy grey ram with curled horns of translucent blue glass and a back of glassy plates; breath steaming.",
   },
   {
-    id: "mob_0026", name: "Icegear", level: 55, archetype: "construct", family: "construct", element: "ice", behavior: "aggressive",
+    id: "mob_0026", name: "Icegear", level: 55, archetype: "construct", family: "construct", element: "ice", behavior: "passive",
     mods: { speed: 1.2, attack_speed: 0.85 }, why: "Walks on many slow legs (20% slower) but its grinding teeth bite fast (15% quicker attacks). The region's workhorse construct and an Aetherite source.",
     drops: { common: "itm_0051", uncommon: "itm_0052", extra: [{ item_id: "itm_0073", rate_bp: 400 }] },
     ecology: "Many-legged gear walkers that maintained Snowcoil's pumps and coolant huts; frozen joints made them hostile, and they cluster round the pump yard and wander the valley's lower slopes.",

@@ -14,7 +14,7 @@ import {
   DATA_FILES, SCHEMA_VERSION, decodeWalk,
   type ContentBundle, type MapLayout, type Rect,
 } from "../src/data/schema";
-import { BOUNTY } from "../content/model";
+import { BOUNTY, FAR_DAMAGE, FAR_RANGE } from "../content/model";
 import { RETIRED_PLACES } from "../content/lore";
 
 type Severity = "critical" | "error" | "warning";
@@ -515,7 +515,9 @@ function checkBalance(b: ContentBundle) {
     if (!bnd) { report("error", "balance.archetype", m.id, `unknown archetype ${m.archetype}`); continue; }
     const hitBand = m.bounty ? bnd.hits.map((h) => h * BOUNTY.hp) : bnd.hits;
     if (hits < hitBand[0] || hits > hitBand[1]) report("error", "balance.ttk", m.id, `${m.name} (${m.archetype}) takes ${hits.toFixed(1)} basic hits at Lv${m.level}; band ${hitBand.join("-")}`);
-    if (dmg < bnd.dmg[0] || dmg > bnd.dmg[1]) report("error", "balance.damage", m.id, `${m.name} hits for ${(dmg * 100).toFixed(1)}% of a Lv${m.level} player's HP; band ${bnd.dmg.map((x) => x * 100).join("-")}%`);
+    // Monsters that hit from afar deal FAR_DAMAGE of their archetype's band (model.ts).
+    const dmgBand = m.archetype !== "boss" && m.attack_range > FAR_RANGE ? bnd.dmg.map((d) => d * FAR_DAMAGE) : bnd.dmg;
+    if (dmg < dmgBand[0] || dmg > dmgBand[1]) report("error", "balance.damage", m.id, `${m.name} hits for ${(dmg * 100).toFixed(1)}% of a Lv${m.level} player's HP; band ${dmgBand.map((x) => x * 100).join("-")}%`);
     if (armourCut(m.defense, p.ref_attack) >= 0.85) report("critical", "balance.immune", m.id, `${m.name} Armour ${m.defense} stops 85%+ of a reference hit (${p.ref_attack})`);
     if (m.attack_ms < 600 || m.attack_ms > 4000) report("error", "balance.attack_speed", m.id, `attack every ${m.attack_ms}ms`);
     if (m.move_speed_ms < 120 || m.move_speed_ms > 600) report("error", "balance.move_speed", m.id, `${m.move_speed_ms}ms per cell`);
@@ -670,6 +672,7 @@ function checkLore(b: ContentBundle) {
       report("error", "lore.behaviour", m.id, `${m.name} attacks on sight, but its ecology says otherwise: "${m.ecology}"`);
     if (m.behavior === "passive" && !/struck|dug up|disturbed/i.test(m.ecology))
       report("error", "lore.behaviour", m.id, `${m.name} is passive: its ecology must say it fights back only when struck`);
+    if (m.behavior === "flee") report("error", "lore.behaviour", m.id, `${m.name} flees: no monster runs from a hit (WORLD_GDD_v3 §3); use passive or assist`);
     if (m.behavior !== "aggressive" && /(charges?|rush(es)?|runs? down|bites?|attacks?) (anything|anyone|everything|people|travellers|on two legs)|on sight|the moment anyone comes close/i.test(m.ecology))
       report("error", "lore.behaviour", m.id, `${m.name} is ${m.behavior}: its ecology must not say it attacks on sight: "${m.ecology}"`);
   }

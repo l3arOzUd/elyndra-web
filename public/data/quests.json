@@ -151,7 +151,7 @@
     }
    ]
   },
-  "summary": "The Dustwing swarm at Bramble Mill is Dawnmeadow's first real horde. Two or three full trains should do it."
+  "summary": "The Dustwing swarm settles on Bramble Mill's stones and only rises when struck. Wake them a few at a time and drag them into one train: Dawnmeadow's first real horde."
  },
  {
   "id": "q_lum_moonbrook",
@@ -346,7 +346,7 @@
     }
    ]
   },
-  "summary": "Jadewing Moths shoot from above; wound one Barkhound and its pack rushes in. Pull the moths into the melee and cleave the lot."
+  "summary": "Wound one Barkhound and its pack rushes in; the Jadewing Moths overhead only spit back when struck. Pull the moths into the melee and cleave the lot."
  },
  {
   "id": "q_ver_graftwood",
@@ -811,7 +811,7 @@
     }
    ]
   },
-  "summary": "Gullwing Skimmers dive from the cliffs and Coral Claws hold the flats. Pull the flocks into the crabs and clear both."
+  "summary": "Gullwing Skimmers squabble on the cliffs and peck back only when struck; Coral Claws hold the flats. Pull the flocks into the crabs and clear both."
  },
  {
   "id": "q_tha_coral_reach",
@@ -1078,7 +1078,7 @@
     }
    ]
   },
-  "summary": "Rimehares bolt through the drifts in Colossus Sands and Prism Wisps beam from the mirrors of Prism Reach. Clear both."
+  "summary": "Rimehares nibble moss in the drifts of Colossus Sands and Prism Wisps hang over the mirrors of Prism Reach; neither strikes first. Wake them, gather them, clear both."
  },
  {
   "id": "q_cry_blueglass",

@@ -48,14 +48,14 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A plump newt with a carpet of green moss on its back, a pale belly and round jade eyes; small water droplets glinting on the moss.",
   },
   {
-    id: "mob_0013", name: "Sapdrone", level: 20, archetype: "swarm", family: "bio-machine", element: "nature", behavior: "aggressive",
+    id: "mob_0013", name: "Sapdrone", level: 20, archetype: "swarm", family: "bio-machine", element: "nature", behavior: "passive",
     mods: { hp: 0.85, speed: 0.75, atk: 1.15 }, why: "A flying sap-harvester: a hollow shell (-15% HP), fast wings (25% faster) and a tapping needle that stings (+15% ATK). The first aggressive horde in Verdantis, and it guards the trees it taps.",
     drops: { common: "itm_0025", uncommon: "itm_0026", rare: "itm_0118" },
     ecology: "Aethrion harvesting drones that still tap the giant trunks for sap; they hang in clouds round the tapped trunks of Mossbridge, north of the creek and on the north-west slope, and dive on anything that comes near the taps. A drone that drank too long sometimes carries a bead of Living Jade.",
     art_brief: "A fist-sized brass beetle-drone with four glassy wings and a long needle proboscis, its belly tank sloshing with glowing jade sap.", sprite: "sapdrone_2d",
   },
   {
-    id: "mob_0041", name: "Jadewing Moth", level: 22, archetype: "ranged", family: "insect", element: "wind", behavior: "aggressive",
+    id: "mob_0041", name: "Jadewing Moth", level: 22, archetype: "ranged", family: "insect", element: "wind", behavior: "passive",
     mods: { range: 6, hp: 0.9 }, why: "It hovers out of reach and flicks glowdust bolts from 6 cells (+1 range); papery wings (-10% HP). Ranged lesson for the region: pull the moths into the melee pack.",
     drops: { common: "itm_0102", uncommon: "itm_0103" },
     ecology: "Large moths that live in the canopy galleries where the jade light is strongest; they drift down to the middle and upper terraces of Canopy Steps to hunt.",
@@ -69,7 +69,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A lean wolf with overlapping bark plates on its back and shoulders, moss on its tail, jade-green eyes; heavy jaws with wooden fangs.",
   },
   {
-    id: "mob_0014", name: "Vinecrawler", level: 25, archetype: "construct", family: "construct", element: "nature", behavior: "aggressive",
+    id: "mob_0014", name: "Vinecrawler", level: 25, archetype: "construct", family: "construct", element: "nature", behavior: "passive",
     mods: { speed: 0.85, def: 0.8 }, why: "Vines dragging a gear-frame: quicker than a frame on its own legs (15% faster), but vine is softer than plate (-20% DEF). The first construct horde: quick enough to train, tough enough to need AoE.",
     drops: { common: "itm_0027", uncommon: "itm_0028" },
     ecology: "Vines that strangled a crawling Aethrion maintenance frame and now drive it; they tend the trellises, grafting yard and wild woods of Graftwood and attack anything that cuts a vine.",
@@ -83,7 +83,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A barrel-bodied brass gardener on three spindly legs with shear-arms and a sap nozzle, a glass tank of jade sap on its back, moss on the lid.",
   },
   {
-    id: "mob_0044", name: "Thistlehare", level: 29, archetype: "swarm", family: "beast", element: "wind", behavior: "flee",
+    id: "mob_0044", name: "Thistlehare", level: 29, archetype: "swarm", family: "beast", element: "wind", behavior: "passive",
     mods: { hp: 0.8, atk: 0.75, speed: 0.7 }, why: "A burr-coated hare: frail (-20% HP, -25% ATK) and very fast (30% faster) so it bolts when hit. A chase target that rewards cornering a herd against the vine terraces.",
     drops: { common: "itm_0108", uncommon: "itm_0109" },
     ecology: "Hares that graze the vine terraces of Vineworks and burrow round its old water pump; their thistle coats spread seed wherever they run.",
@@ -104,7 +104,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A huge stag of brass ribs and living wood, antlers made of coiled copper and branches hung with moss, a furnace-glow of jade in its chest.",
   },
   {
-    id: "mob_0046", name: "Sporebloat", level: 35, archetype: "swarm", family: "fungus", element: "shadow", behavior: "aggressive",
+    id: "mob_0046", name: "Sporebloat", level: 35, archetype: "swarm", family: "fungus", element: "shadow", behavior: "passive",
     mods: { hp: 1.25, speed: 1.25 }, why: "A drifting gas-bag of spores: bloated (+25% HP) and slow (25% slower). Aggressive but slow, so the Spore Basin is a place for 50+ trains and big pulls.",
     drops: { common: "itm_0112", uncommon: "itm_0113" },
     ecology: "Fungal sacs that grow in the Heartwood Engine's exhaust; they drift out of the vents and fill the Spore Basin from rim to pool.",

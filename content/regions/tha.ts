@@ -41,7 +41,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A frog-sized blue-grey hopper with oversized hind legs, a shell-plate back and bulbous wet eyes; barnacle specks; sea-glass blue.",
   },
   {
-    id: "mob_0060", name: "Gullwing Skimmer", level: 38, archetype: "swarm", family: "avian", element: "wind", behavior: "aggressive",
+    id: "mob_0060", name: "Gullwing Skimmer", level: 38, archetype: "swarm", family: "avian", element: "wind", behavior: "passive",
     mods: { hp: 0.9, speed: 0.75, atk: 1.1 }, why: "A diving sea-bird: hollow bones (-10% HP), fast on the wing (25% faster), hooked beak (+10% ATK). The first aggressive swarm in Thalassia, so a careless walk along the cliffs pulls a flock.",
     drops: { common: "itm_0160", uncommon: "itm_0161" },
     ecology: "Gulls that nest on the Saltwind cliffs and perch on the beached pump-buoy; they dive on anything that walks under the colony.",
@@ -69,7 +69,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A tall swaying figure of braided kelp with a bulb head glowing soft green, frond arms trailing; small oysters clinging to its stalk.",
   },
   {
-    id: "mob_0022", name: "Brine Automaton", level: 45, archetype: "construct", family: "construct", element: "water", behavior: "aggressive",
+    id: "mob_0022", name: "Brine Automaton", level: 45, archetype: "construct", family: "construct", element: "water", behavior: "passive",
     mods: { atk: 1.1, attack_speed: 1.15 }, why: "Pressure-piston fists hit hard (+10% ATK) but each punch has to recharge (15% slower attacks). The first construct of the region and the tidewheels' Aetherite source.",
     drops: { common: "itm_0043", uncommon: "itm_0044", extra: [{ item_id: "itm_0073", rate_bp: 400 }] },
     ecology: "Copper pressure-maintenance frames that still service the tidewheel pumps and patch the old quay pilings of Tidewheel Bay; they treat every visitor as a fault to clear.",
@@ -90,7 +90,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A tall diving-suit construct with a dish-shaped sonar head, ribbed hoses and lead boots; dark bronze with pulsing cyan rings.",
   },
   {
-    id: "mob_0064", name: "Pearl Skate", level: 53, archetype: "swarm", family: "fish", element: "water", behavior: "flee",
+    id: "mob_0064", name: "Pearl Skate", level: 53, archetype: "swarm", family: "fish", element: "water", behavior: "passive",
     mods: { hp: 0.95, atk: 0.85, speed: 0.75 }, why: "A flat, quick bottom-dweller: slightly frail (-5% HP), weak bite (-15% ATK), fast (25% faster). Flees when hit, so the pearl beds are a herding exercise, not a fight.",
     drops: { common: "itm_0168", uncommon: "itm_0169", rare: "itm_0178" },
     ecology: "Skates that bury in the warm mud of Pearl Flats' pearl beds and stilt ruins, cracking oysters; startled, they skim away across the shallows.",
@@ -104,7 +104,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A huge turtle whose shell is fused with riveted copper hull plates and a broken porthole; storm-grey skin, barnacles, glowing amber eyes.",
   },
   {
-    id: "mob_0066", name: "Squall Ray", level: 58, archetype: "ranged", family: "fish", element: "wind", behavior: "aggressive",
+    id: "mob_0066", name: "Squall Ray", level: 58, archetype: "ranged", family: "fish", element: "wind", behavior: "passive",
     mods: { hp: 0.9, atk: 1.15, speed: 0.8 }, why: "Glides on storm winds: light (-10% HP), fast (20% faster), discharges stored lightning (+15% ATK). The hardest-hitting ranged monster in Thalassia, at the top field.",
     drops: { common: "itm_0172", uncommon: "itm_0173" },
     ecology: "Manta rays that leave the sea in a gale and ride the updraft round Stormbreak's lightning masts, charging their wings on the Aethrion conductors.",

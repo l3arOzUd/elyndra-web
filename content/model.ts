@@ -132,6 +132,11 @@ export const ARCHETYPES: Record<Archetype, ArchetypeTargets> = {
 export const AGGRO_RADIUS: Record<Behavior, number> = { passive: 0, flee: 0, assist: 6, aggressive: 10 };
 export const LEASH_RADIUS = 35;
 
+/** Monsters that hit from beyond FAR_RANGE cells (ranged, support) hit for
+ * FAR_DAMAGE of their archetype's damage: reach is their threat. Bosses keep theirs. */
+export const FAR_RANGE = 2;
+export const FAR_DAMAGE = 0.5;
+
 export const PLAYER_MS_PER_CELL = 150;
 /** One species per field is a bounty: passive, a few on the map, slow to kill and
  * worth far more EXP. Every other monster attacks on sight. */
@@ -157,7 +162,8 @@ export function monsterStats(level: number, archetype: Archetype, mods: StatMods
   const hp = Math.round(a.hits * (mods.hp ?? 1) * (bounty ? BOUNTY.hp : 1) * p.ref_attack * (1 - armourReduction(defense, p.ref_attack)));
   // The raw hit that lands `dmg * max_hp` through the reference Armour:
   // a - a * Ar / (Ar + 5a) = t  =>  5a^2 - 5ta - t*Ar = 0.
-  const t = a.dmg * (mods.atk ?? 1) * p.max_hp;
+  const far = archetype !== "boss" && (mods.range ?? a.range) > FAR_RANGE ? FAR_DAMAGE : 1;
+  const t = a.dmg * (mods.atk ?? 1) * far * p.max_hp;
   const attack = Math.max(1, Math.round((5 * t + Math.sqrt(25 * t * t + 20 * t * p.ref_armour)) / 10));
   const toughness = Math.sqrt((mods.hp ?? 1) * (mods.atk ?? 1));
   const base_exp = Math.max(1, Math.round(swarmExp(level) * a.exp * toughness * (bounty ? BOUNTY.exp : 1)));

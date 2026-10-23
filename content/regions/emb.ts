@@ -64,14 +64,14 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A lean hound of riveted iron plates over a molten core, glowing slag dripping from the jaw, bellows-ribs that pump sparks when it runs.",
   },
   {
-    id: "mob_0081", name: "Crucible Tender", level: 71, archetype: "support", family: "construct", element: "fire", behavior: "flee",
+    id: "mob_0081", name: "Crucible Tender", level: 71, archetype: "support", family: "construct", element: "fire", behavior: "passive",
     mods: { hp: 0.9, speed: 0.9 }, why: "A spindly maintenance frame (-10% HP) that scuttles away when struck (flee, 10% faster) and keeps welding its neighbours from behind; kill it first or the pack lasts. Teaches target priority in a horde.",
     drops: { common: "itm_0222", uncommon: "itm_0223" },
     ecology: "Repair automata that once tended the forges; they still patch every hound they find, and pick over the slag heaps for scrap to do it with.",
     art_brief: "A four-legged brass spider-frame with a welding arc on one arm and a slag scoop on the other; blue-white arc light, soot-stained lens.",
   },
   {
-    id: "mob_0082", name: "Vent Skink", level: 74, archetype: "swarm", family: "reptile", element: "fire", behavior: "aggressive",
+    id: "mob_0082", name: "Vent Skink", level: 74, archetype: "swarm", family: "reptile", element: "fire", behavior: "passive",
     mods: { hp: 1.1, atk: 0.9 }, why: "Basalt scales (+10% HP), a shallow nip (-10% ATK): the dense, durable horde of the Magma Vents, built for long trains rather than burst damage.",
     drops: { common: "itm_0224", uncommon: "itm_0225" },
     ecology: "Lizards that bask on vent rims and dive into the lava to cool off; colonies ring the Vents' magma pool and spill into the ash wash and round the heat-tap drill.",
@@ -99,14 +99,14 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A fist-sized rattling bundle of rivets, bolts and a single glowing gear-eye on wire legs; moves in jittering hops.",
   },
   {
-    id: "mob_0085", name: "Slagforged Brute", level: 83, archetype: "bruiser", family: "elemental", element: "earth", behavior: "aggressive",
+    id: "mob_0085", name: "Slagforged Brute", level: 83, archetype: "bruiser", family: "elemental", element: "earth", behavior: "passive",
     mods: { hp: 1.15, speed: 1.15 }, why: "Poured from the Crucible's slag (+15% HP) and slow to move (15% slower). Aggressive: the brutes treat the mould yard, the scrap moraine and the Crucible rim as theirs.",
     drops: { common: "itm_0230", uncommon: "itm_0231" },
     ecology: "Slag that set in the Red Crucible's moulds and walked off; brutes stand in the mould yard where they were first cast and roam the scrap moraine and the Crucible rim.",
     art_brief: "A hulking ogre-shape of rough black slag with mould seams down its sides, a molten core showing through cracks, iron bands still on its fists.",
   },
   {
-    id: "mob_0086", name: "Pour Wraith", level: 85, archetype: "swarm", family: "elemental", element: "fire", behavior: "aggressive",
+    id: "mob_0086", name: "Pour Wraith", level: 85, archetype: "swarm", family: "elemental", element: "fire", behavior: "passive",
     mods: { def: 0.8, atk: 1.1 }, why: "Liquid metal: blows pass through it (-20% DEF) but its touch is molten (+10% ATK). The fast-dying, hard-hitting horde of the Crucible's pour channels and rim.",
     drops: { common: "itm_0232", uncommon: "itm_0233" },
     ecology: "Molten metal that kept its shape after the last pour; wraiths drift along the pour channels of the Red Crucible and spill over its rim.",

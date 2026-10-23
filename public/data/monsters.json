@@ -302,7 +302,7 @@
   "archetype": "swarm",
   "family": "insect",
   "element": "wind",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 130,
   "attack": 8,
   "defense": 29,
@@ -311,7 +311,7 @@
   "move_speed_ms": 182,
   "base_exp": 39,
   "job_exp": 24,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -327,7 +327,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Dust moths that ride the updraft of the old windmill's sails and dive on anything moving below.",
+  "ecology": "Dust moths that ride the updraft of the old windmill's sails and settle on the mill stones; they only swarm whoever has struck one of them.",
   "art_brief": "A large moth with sandy, powder-dusted wings and brass-coloured eyespots; trailing dust motes.",
   "sprite": "dustwing_2d",
   "habitat": [
@@ -392,7 +392,7 @@
   "element": "water",
   "behavior": "aggressive",
   "hp": 266,
-  "attack": 23,
+  "attack": 14,
   "defense": 48,
   "attack_range": 4,
   "attack_ms": 1800,
@@ -589,7 +589,7 @@
   "archetype": "swarm",
   "family": "bio-machine",
   "element": "nature",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 463,
   "attack": 28,
   "defense": 105,
@@ -598,7 +598,7 @@
   "move_speed_ms": 195,
   "base_exp": 111,
   "job_exp": 69,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -620,7 +620,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Aethrion harvesting drones that still tap the giant trunks of Moonbrook Vale's Sap Groves, and dive on anything that comes near the taps. A drone that drank too long sometimes carries a bead of Living Jade.",
+  "ecology": "Aethrion harvesting drones that still tap the giant trunks of Moonbrook Vale's Sap Groves. They ignore anyone who leaves the taps alone and fight back only when struck. A drone that drank too long sometimes carries a bead of Living Jade.",
   "art_brief": "A fist-sized brass beetle-drone with four glassy wings and a long needle proboscis, its belly tank sloshing with glowing jade sap.",
   "sprite": "sapdrone_2d",
   "habitat": [
@@ -639,7 +639,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "nature",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 1123,
   "attack": 57,
   "defense": 270,
@@ -648,7 +648,7 @@
   "move_speed_ms": 289,
   "base_exp": 326,
   "job_exp": 202,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -664,7 +664,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Vines that strangled a crawling Aethrion maintenance frame and now drive it; they tend the trellises of Graftwood Wilds' Trellis Dunes and attack anything that comes near a vine.",
+  "ecology": "Vines that strangled a crawling Aethrion maintenance frame and now drive it; they tend the trellises of Graftwood Wilds' Trellis Dunes and lash out only when struck.",
   "art_brief": "A spider-shaped brass gear-frame wrapped and pulled by thick green vines, leaves sprouting from the gear teeth, a cracked jade lens at the core.",
   "sprite": "mob_0014",
   "habitat": [
@@ -778,7 +778,7 @@
   "archetype": "swarm",
   "family": "insect",
   "element": "fire",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 837,
   "attack": 42,
   "defense": 247,
@@ -787,7 +787,7 @@
   "move_speed_ms": 260,
   "base_exp": 187,
   "job_exp": 116,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -809,7 +809,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Beetles that roll lightning-glass into their shells; they swarm the fused sand of Graftwood Wilds' Glass Burrows. Old shells sometimes set into Sunfire Glass.",
+  "ecology": "Beetles that roll lightning-glass into their shells across the fused sand of Graftwood Wilds' Glass Burrows, and nip back only when struck. Old shells sometimes set into Sunfire Glass.",
   "art_brief": "A dog-sized scarab whose shell is clear amber glass with a glowing ember core showing through, legs of dark chitin.",
   "sprite": "mob_0017",
   "habitat": [
@@ -1011,7 +1011,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "water",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 2321,
   "attack": 137,
   "defense": 793,
@@ -1020,7 +1020,7 @@
   "move_speed_ms": 340,
   "base_exp": 725,
   "job_exp": 450,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -1042,7 +1042,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Copper pressure-maintenance frames that still service the pumps at the Saffron Wastes' Frost Seep; they treat every visitor as a fault to clear.",
+  "ecology": "Copper pressure-maintenance frames that still service the pumps at the Saffron Wastes' Frost Seep; they keep to their rounds and treat you as a fault to clear only once struck.",
   "art_brief": "A barrel-chested copper automaton with piston arms, brine-crusted gauges for eyes and a tank on its back hissing steam; verdigris green and brass.",
   "sprite": "mob_0022",
   "habitat": [
@@ -1156,16 +1156,16 @@
   "archetype": "ranged",
   "family": "elemental",
   "element": "ice",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 1448,
-  "attack": 118,
+  "attack": 74,
   "defense": 203,
   "attack_range": 6,
   "attack_ms": 1800,
   "move_speed_ms": 280,
   "base_exp": 360,
   "job_exp": 223,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -1187,7 +1187,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Floating lights that gather where glass refracts the most sun: over the mirrors of the Saffron Wastes' Prism Reach. Their frames sometimes set into a flawless prism.",
+  "ecology": "Floating lights that gather where glass refracts the most sun: over the mirrors of the Saffron Wastes' Prism Reach. They beam back only when struck. Their frames sometimes set into a flawless prism.",
   "art_brief": "A glowing orb inside an open lattice of hexagonal crystal, casting rainbow beams; white core, prismatic edges.",
   "sprite": "mob_0025",
   "habitat": [
@@ -1206,7 +1206,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "ice",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 3110,
   "attack": 171,
   "defense": 1063,
@@ -1215,7 +1215,7 @@
   "move_speed_ms": 408,
   "base_exp": 895,
   "job_exp": 555,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -1237,7 +1237,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Many-legged gear walkers that maintained the coolant pumps; frozen joints made them hostile, and they stalk the frozen pumps of Pearl Coast's Pearl Beds.",
+  "ecology": "Many-legged gear walkers that maintained the coolant pumps; their frozen joints keep them circling the frozen pumps of Pearl Coast's Pearl Beds, and they turn on you only when struck.",
   "art_brief": "A spider-like walker with a body of stacked frozen gears and eight jointed brass legs, icicles hanging from the cogs; steel blue and brass.",
   "sprite": "mob_0026",
   "habitat": [
@@ -1591,7 +1591,7 @@
   "element": "shadow",
   "behavior": "aggressive",
   "hp": 2736,
-  "attack": 258,
+  "attack": 156,
   "defense": 553,
   "attack_range": 6,
   "attack_ms": 1800,
@@ -1803,16 +1803,16 @@
   "archetype": "ranged",
   "family": "insect",
   "element": "wind",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 431,
-  "attack": 39,
+  "attack": 25,
   "defense": 87,
   "attack_range": 6,
   "attack_ms": 1800,
   "move_speed_ms": 280,
   "base_exp": 120,
   "job_exp": 74,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -1828,7 +1828,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Large moths that live in the canopy where the jade light is strongest; they drift down into Graftwood Wilds' Jadewing Glade to hunt.",
+  "ecology": "Large moths that live in the canopy where the jade light is strongest; they drift down into Graftwood Wilds' Jadewing Glade to feed, and spit back only when struck.",
   "art_brief": "A moth the size of a hawk with translucent jade wings veined like circuitry, glowing eyespots and trailing luminous dust.",
   "sprite": "mob_0041",
   "habitat": [
@@ -1893,7 +1893,7 @@
   "element": "nature",
   "behavior": "assist",
   "hp": 719,
-  "attack": 28,
+  "attack": 18,
   "defense": 155,
   "attack_range": 5,
   "attack_ms": 2200,
@@ -2036,7 +2036,7 @@
   "archetype": "swarm",
   "family": "fungus",
   "element": "shadow",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 1206,
   "attack": 49,
   "defense": 186,
@@ -2045,7 +2045,7 @@
   "move_speed_ms": 325,
   "base_exp": 255,
   "job_exp": 158,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -2061,7 +2061,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Fungal sacs that grow in the Heartwood Engine's exhaust; they drift out of the vents and fill Elderroot Expanse's Spore Drift from rim to pool.",
+  "ecology": "Fungal sacs that grow in the Heartwood Engine's exhaust; they drift out of the vents and fill Elderroot Expanse's Spore Drift from rim to pool, bursting at you only when struck.",
   "art_brief": "A floating puffball the size of a barrel, dark violet with glowing jade spore-vents, short root tendrils hanging below.",
   "sprite": "mob_0046",
   "habitat": [
@@ -2082,7 +2082,7 @@
   "element": "nature",
   "behavior": "assist",
   "hp": 1326,
-  "attack": 42,
+  "attack": 27,
   "defense": 189,
   "attack_range": 5,
   "attack_ms": 2200,
@@ -2312,7 +2312,7 @@
   "element": "wind",
   "behavior": "aggressive",
   "hp": 643,
-  "attack": 63,
+  "attack": 40,
   "defense": 137,
   "attack_range": 6,
   "attack_ms": 1800,
@@ -2406,7 +2406,7 @@
   "element": "fire",
   "behavior": "assist",
   "hp": 1052,
-  "attack": 46,
+  "attack": 30,
   "defense": 201,
   "attack_range": 5,
   "attack_ms": 2200,
@@ -2589,7 +2589,7 @@
   "element": "fire",
   "behavior": "aggressive",
   "hp": 1210,
-  "attack": 127,
+  "attack": 78,
   "defense": 259,
   "attack_range": 7,
   "attack_ms": 1800,
@@ -2773,7 +2773,7 @@
   "archetype": "swarm",
   "family": "avian",
   "element": "wind",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 917,
   "attack": 58,
   "defense": 197,
@@ -2782,7 +2782,7 @@
   "move_speed_ms": 195,
   "base_exp": 252,
   "job_exp": 156,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -2798,7 +2798,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Gulls that nest on the Saltwind cliffs and perch on the beached pump-buoy; they dive on anything that walks under the colony.",
+  "ecology": "Gulls that nest on the Saltwind cliffs and perch on the beached pump-buoy; they squabble among themselves and peck back only when struck.",
   "art_brief": "A long-winged gull with brass-tinted primaries, a hooked orange beak and a crest of storm-grey feathers; mid-dive pose.",
   "sprite": "mob_0060",
   "habitat": [
@@ -2819,7 +2819,7 @@
   "element": "water",
   "behavior": "aggressive",
   "hp": 975,
-  "attack": 92,
+  "attack": 57,
   "defense": 197,
   "attack_range": 6,
   "attack_ms": 1800,
@@ -2863,7 +2863,7 @@
   "element": "nature",
   "behavior": "assist",
   "hp": 1665,
-  "attack": 56,
+  "attack": 36,
   "defense": 259,
   "attack_range": 4,
   "attack_ms": 2200,
@@ -3050,16 +3050,16 @@
   "archetype": "ranged",
   "family": "fish",
   "element": "wind",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 1425,
-  "attack": 158,
+  "attack": 96,
   "defense": 288,
   "attack_range": 5,
   "attack_ms": 1800,
   "move_speed_ms": 224,
   "base_exp": 443,
   "job_exp": 275,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -3075,7 +3075,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Manta rays that leave the sea in a gale and ride the updraft round the lightning masts of Pearl Coast's Squall Point, charging their wings on the Aethrion conductors.",
+  "ecology": "Manta rays that leave the sea in a gale and ride the updraft round the lightning masts of Pearl Coast's Squall Point, charging their wings on the Aethrion conductors. They loose their sparks at you only when struck.",
   "art_brief": "A manta ray with wing edges crackling blue, a long stinger tail with a copper tip; indigo back, white belly, floating above the ground.",
   "sprite": "mob_0066",
   "habitat": [
@@ -3146,7 +3146,7 @@
   "element": "shadow",
   "behavior": "assist",
   "hp": 2347,
-  "attack": 94,
+  "attack": 60,
   "defense": 447,
   "attack_range": 5,
   "attack_ms": 2200,
@@ -3281,7 +3281,7 @@
   "archetype": "swarm",
   "family": "beast",
   "element": "wind",
-  "behavior": "flee",
+  "behavior": "passive",
   "hp": 1214,
   "attack": 65,
   "defense": 276,
@@ -3306,14 +3306,14 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Hares of the open snowfields that burrow in drifts. They bolt from anyone who comes near, and a struck one flees across the snow before it turns to bite.",
+  "ecology": "Hares of the open snowfields that burrow in drifts and nibble the frozen moss; they kick back only when struck.",
   "art_brief": "A big white hare with frost-tipped ears and long whiskers rimed with ice, hind legs built for bounding; snow-white, silver-blue shadows.",
   "sprite": "mob_0070",
   "habitat": [
    {
     "map_id": "sol_fld_01",
     "zone": "Colossus Sands",
-    "note": "Rimehares burst from the drifts round three half-buried colossi."
+    "note": "Rimehares nibble moss between the drifts round three half-buried colossi; gather them against the stone."
    }
   ]
  },
@@ -3472,7 +3472,7 @@
   "element": "shadow",
   "behavior": "assist",
   "hp": 2239,
-  "attack": 96,
+  "attack": 61,
   "defense": 452,
   "attack_range": 5,
   "attack_ms": 2200,
@@ -3567,7 +3567,7 @@
   "element": "ice",
   "behavior": "aggressive",
   "hp": 4149,
-  "attack": 215,
+  "attack": 130,
   "defense": 1418,
   "attack_range": 3,
   "attack_ms": 1900,
@@ -3666,7 +3666,7 @@
   "element": "ice",
   "behavior": "aggressive",
   "hp": 2423,
-  "attack": 205,
+  "attack": 125,
   "defense": 440,
   "attack_range": 7,
   "attack_ms": 2160,
@@ -3839,9 +3839,9 @@
   "archetype": "support",
   "family": "construct",
   "element": "fire",
-  "behavior": "flee",
+  "behavior": "passive",
   "hp": 2893,
-  "attack": 113,
+  "attack": 72,
   "defense": 551,
   "attack_range": 4,
   "attack_ms": 2200,
@@ -3864,7 +3864,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Repair automata that once tended the forges; they still patch every hound they find, and pick over the slag heaps for scrap to do it with.",
+  "ecology": "Repair automata that once tended the forges; they still patch every hound they find and pick over the slag heaps for scrap, and lash out only when struck.",
   "art_brief": "A four-legged brass spider-frame with a welding arc on one arm and a slag scoop on the other; blue-white arc light, soot-stained lens.",
   "sprite": "mob_0081",
   "habitat": [
@@ -3883,7 +3883,7 @@
   "archetype": "swarm",
   "family": "reptile",
   "element": "fire",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 3238,
   "attack": 134,
   "defense": 568,
@@ -3892,7 +3892,7 @@
   "move_speed_ms": 260,
   "base_exp": 593,
   "job_exp": 368,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -3908,7 +3908,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Lizards that bask on vent rims and dive into the lava to cool off; colonies ring the Vents' magma pool and spill into the ash wash and round the heat-tap drill.",
+  "ecology": "Lizards that bask on vent rims and dive into the lava to cool off; colonies ring the Vents' magma pool and bite back only when struck.",
   "art_brief": "A slim lizard with glossy black basalt scales, a glowing orange throat and tail tip, heat shimmer over its back.",
   "sprite": "mob_0082",
   "habitat": [
@@ -3929,7 +3929,7 @@
   "element": "fire",
   "behavior": "aggressive",
   "hp": 2476,
-  "attack": 212,
+  "attack": 129,
   "defense": 450,
   "attack_range": 6,
   "attack_ms": 1800,
@@ -4015,7 +4015,7 @@
   "archetype": "bruiser",
   "family": "elemental",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 8533,
   "attack": 385,
   "defense": 1100,
@@ -4024,7 +4024,7 @@
   "move_speed_ms": 345,
   "base_exp": 1704,
   "job_exp": 1056,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -4040,7 +4040,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Slag that set in the crucible moulds and walked off; brutes stand in the Veil Rift's Brute Pens where they were first cast.",
+  "ecology": "Slag that set in the crucible moulds and walked off; brutes stand in the Veil Rift's Brute Pens where they were first cast, and swing only when struck.",
   "art_brief": "A hulking ogre-shape of rough black slag with mould seams down its sides, a molten core showing through cracks, iron bands still on its fists.",
   "sprite": "mob_0085",
   "habitat": [
@@ -4059,7 +4059,7 @@
   "archetype": "swarm",
   "family": "elemental",
   "element": "fire",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 3742,
   "attack": 190,
   "defense": 553,
@@ -4068,7 +4068,7 @@
   "move_speed_ms": 260,
   "base_exp": 748,
   "job_exp": 464,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -4084,7 +4084,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Molten metal that kept its shape after the last pour; wraiths drift along the Veil Rift's Wraith Pour, beside the tear.",
+  "ecology": "Molten metal that kept its shape after the last pour; wraiths drift along the Veil Rift's Wraith Pour beside the tear, and flare up only when struck.",
   "art_brief": "A dripping humanoid of white-hot liquid metal with no face, trailing a cooling grey skin that cracks and re-melts; a mould seam down its middle.",
   "sprite": "mob_0086",
   "habitat": [
@@ -4292,7 +4292,7 @@
   "element": "nature",
   "behavior": "assist",
   "hp": 4313,
-  "attack": 135,
+  "attack": 86,
   "defense": 672,
   "attack_range": 4,
   "attack_ms": 2200,
@@ -4580,7 +4580,7 @@
   "element": "shadow",
   "behavior": "aggressive",
   "hp": 4110,
-  "attack": 316,
+  "attack": 190,
   "defense": 679,
   "attack_range": 6,
   "attack_ms": 1980,

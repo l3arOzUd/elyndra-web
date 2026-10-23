@@ -50,7 +50,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A rangy jackal with ochre fur, huge ears, a dark stripe down the spine and a brass tag from a long-gone caravan on its collar.",
   },
   {
-    id: "mob_0017", name: "Glass Scarab", level: 30, archetype: "swarm", family: "insect", element: "fire", behavior: "aggressive",
+    id: "mob_0017", name: "Glass Scarab", level: 30, archetype: "swarm", family: "insect", element: "fire", behavior: "passive",
     mods: { def: 1.4, attack_speed: 0.9 }, why: "A shell of fused desert glass (+40% DEF) and quick mandibles (10% faster attacks). The first aggressive horde in Solenia; its shell is why AoE beats single hits here.",
     drops: { common: "itm_0033", uncommon: "itm_0034", rare: "itm_0148" },
     ecology: "Beetles that roll lightning-glass into their shells; they swarm the dry washes of Caravan Verge and the broken walls of its caravanserai. Old shells sometimes set into Sunfire Glass.",
@@ -92,7 +92,7 @@ const monsters: RegionDesign["monsters"] = [
     art_brief: "A tall bronze guardian with a halo-ring of sun mirrors on its back, a faceless polished face, a long spear-gnomon.",
   },
   {
-    id: "mob_0054", name: "Canal Strider", level: 44, archetype: "swarm", family: "insect", element: "water", behavior: "flee",
+    id: "mob_0054", name: "Canal Strider", level: 44, archetype: "swarm", family: "insect", element: "water", behavior: "passive",
     mods: { hp: 0.8, atk: 0.8, speed: 0.7 }, why: "A long-legged water-skater: frail (-20% HP, -20% ATK) and very fast (30% faster), so it skates away when hit. Herd them against the canal walls.",
     drops: { common: "itm_0138", uncommon: "itm_0139" },
     ecology: "Skaters that live on the last water in the Dust Aqueduct: its channel, its sluices and its cistern; they scatter at any threat.",

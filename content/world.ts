@@ -64,7 +64,7 @@ export const FIELDS: FieldSpec[] = [
     { name: "Warden Causeway", species: ["Sun Warden", "Polyp Spitter"], note: "Bronze wardens hold the causeway; polyps spit from the old canal." },
     { name: "Canal Shallows", species: ["Canal Strider", "Kelp Tender"], note: "Striders dart along the last water; kelp tenders knit the packs back together." },
     { name: "Frost Seep", species: ["Brine Automaton", "Frost Mite", "Dust Revenant"], note: "A cold seep in the desert: pump constructs, dust revenants, and Gorged Frost Mites feeding on the thaw." },
-    { name: "Colossus Sands", species: ["Rimehare", "Sand-buried Colossus"], note: "Rimehares bolt between the drifts round three half-buried colossi; corner them against the stone." },
+    { name: "Colossus Sands", species: ["Rimehare", "Sand-buried Colossus"], note: "Rimehares nibble moss between the drifts round three half-buried colossi; gather them against the stone." },
     { name: "Prism Reach", species: ["Hullborer", "Prism Wisp"], note: "Borers in the old hulls, prism wisps beaming from the mirrors near the Vault." },
   ] },
   { id: "tha_fld_01", bounty: "Pearl Skate", region: "tha", name: "Pearl Coast", levels: [51, 60], zones: [
