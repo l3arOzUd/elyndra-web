@@ -24,11 +24,11 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
     // Lift the diffuse leaf painting under the shared scene lighting.
     shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
       #include <map_fragment>
-      diffuseColor.rgb *= 1.15;
+      diffuseColor.rgb = mix(diffuseColor.rgb * 1.65, vec3(0.23, 0.31, 0.13), 0.18);
     `);
   };
   leaves.customProgramCacheKey = () => 'dawn-curved-bough-v4';
-  const pieces = [new THREE.CylinderGeometry(0.07, 0.23, 4.6, 9).translate(0, 2.3, 0)];
+  const pieces = [new THREE.CylinderGeometry(0.035, 0.23, 3.9, 9).translate(0, 1.95, 0)];
   for (let i = 0; i < 4; i++) {
     const angle = i * Math.PI / 2 + 0.3;
     pieces.push(new THREE.CylinderGeometry(0.04, 0.11, 1.5, 7).rotateZ(0.65).translate(-0.42, 2.1, 0).rotateY(angle));
@@ -54,7 +54,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
     const count = [8, 8, 7, 6, 5, 4, 3][tier], radius = 0.06;
     for (let j = 0; j < count; j++) {
       const a = j / count * Math.PI * 2 + tier * 0.7;
-      lobes.push([Math.sin(a) * radius, 1.9 + tier * 0.53 + Math.sin(j * 2.1) * 0.13,
+      lobes.push([Math.sin(a) * radius, 1.9 + tier * 0.53 - Math.max(0, tier - 3) * 0.16 + Math.sin(j * 2.1) * 0.07,
         Math.cos(a) * radius, [1.05, 1.02, 0.88, 0.74, 0.58, 0.4, 0.23][tier], a]);
     }
   }
@@ -76,7 +76,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
       d.rotation.set(Math.sin(seed + j * 1.7) * 0.08, angle + a + Math.sin(seed + j) * 0.1, Math.cos(j * 2.3 + seed) * 0.07);
       const size = r * s * (1 + Math.sin(seed + j * 3.1) * 0.07);
       d.scale.set(size * breadth, size * height, size * breadth); d.updateMatrix(); crowns.setMatrixAt(i * lobes.length + j, d.matrix);
-      crowns.setColorAt(i * lobes.length + j, new THREE.Color(0x6e8c78).lerp(new THREE.Color(0xf1f2d5), Math.min(1, (y - 1.3) / 3.6)));
+      crowns.setColorAt(i * lobes.length + j, new THREE.Color(0xa5b7a0).lerp(new THREE.Color(0xf1f2d5), Math.min(1, (y - 1.3) / 3.0)));
     });
   });
   group.add(trunks, crowns);
