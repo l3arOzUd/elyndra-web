@@ -1,0 +1,30 @@
+{
+  "id": "mob_0022",
+  "sources": [
+    "left-neutral-v5.png",
+    "death-left-buckle.png",
+    "death-left-inert.png",
+    "death-left-inert-v2.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    3
+  ],
+  "fps": 6.25,
+  "status": "four-drawing-shutdown-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Boot and ground baseline registration drifts across poses.",
+    "Final endpoint retains altered barrel and rear tank proportions.",
+    "Joint and painted detail continuity require cleanup."
+  ],
+  "observed": [
+    "First endpoint reads kneeling and is now used only as a transition.",
+    "Final v2 lowers gauge and rests forearm flat, avoiding backward topple."
+  ]
+}
