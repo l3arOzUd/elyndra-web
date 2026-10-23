@@ -42,13 +42,13 @@ export const FIELDS: FieldSpec[] = [
     { name: "Bramble Mill", species: ["Thornback", "Dustwing"], note: "Brambles round an old mill: boar herds and the dust-moth horde, the field's hardest pulls." },
   ] },
   { id: "lum_fld_02", bounty: "Graftling", region: "lum", name: "Moonbrook Vale", levels: [11, 20], zones: [
-    { name: "Brookbed", species: ["Brookfin"], note: "Amphibious fish crawl the shallow banks next to camp and rush anything on two legs: an easy first horde." },
+    { name: "Brookbed", species: ["Brookfin"], note: "Amphibious fish crawl the shallow banks next to camp and bite back only when struck: an easy first horde to gather." },
     { name: "Reed Marsh", species: ["Reedstalker", "Graftling"], note: "Reedstalkers spit from the reeds; Gorged Graftlings root among them, slow and rich." },
     { name: "Rotting Rows", species: ["Rotroot", "Mossback Newt"], note: "Rot creeps into the orchard rows from the pump-house below; newts croak their whole bank into a fight." },
     { name: "Sap Groves", species: ["Sapdrone"], note: "Tapped trunks above Hollowroot: drones dive at anyone near the taps." },
   ], dungeon: { id: "lum_dun_01", minions: ["Barkwarden"] } },
   { id: "ver_fld_01", bounty: "Sandcoil", region: "ver", name: "Graftwood Wilds", levels: [21, 30], zones: [
-    { name: "Jadewing Glade", species: ["Jadewing Moth", "Barkhound"], note: "Moths shoot from the canopy while bark-plated hound packs rush in." },
+    { name: "Jadewing Glade", species: ["Jadewing Moth", "Barkhound"], note: "Moths shoot from the canopy while bark-plated hound packs turn as one on whoever wounds a packmate." },
     { name: "Trellis Dunes", species: ["Vinecrawler", "Sandcoil"], note: "Where the grafted woods run into sand: vine constructs on the trellises, Gorged Sandcoils basking on the crests." },
     { name: "Press Terraces", species: ["Pruning Tender", "Ochre Jackal"], note: "Gardener machines mend each other at the old presses; jackal packs hunt the terraces." },
     { name: "Glass Burrows", species: ["Thistlehare", "Glass Scarab"], note: "Thistle hares and glass scarabs swarm the fused sand." },
@@ -68,7 +68,7 @@ export const FIELDS: FieldSpec[] = [
     { name: "Prism Reach", species: ["Hullborer", "Prism Wisp"], note: "Borers in the old hulls, prism wisps beaming from the mirrors near the Vault." },
   ] },
   { id: "tha_fld_01", bounty: "Pearl Skate", region: "tha", name: "Pearl Coast", levels: [51, 60], zones: [
-    { name: "Relay Strand", species: ["Relay Guardian"], note: "Relay Guardians ping the buoy cables by the camp and answer anything that comes close." },
+    { name: "Relay Strand", species: ["Relay Guardian"], note: "Relay Guardians ping the buoy cables by the camp; strike one and every guardian on the line answers." },
     { name: "Ram Terraces", species: ["Glassback Ram"], note: "Glass-backed ram flocks on the terraces." },
     { name: "Pearl Beds", species: ["Pearl Skate", "Icegear"], note: "Gorged Pearl Skates lie heavy in the pearl mud; gear walkers stalk the frozen pumps." },
     { name: "Turtle Coils", species: ["Thunderhull Turtle", "Frostcoil Serpent"], note: "Turtle herds and the serpent horde in the coil trenches." },
@@ -510,12 +510,16 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       }
       return stages.length ? { ...d, stages } : d;
     });
-    // Each field's bounty is passive; every other monster attacks on sight.
+    // Each field's bounty is passive; every other species keeps its own
+    // behaviour (regions/*.ts): aggressive, assist (the pack joins when one is
+    // hit), flee or passive, so taunts and pulls have monsters to gather.
+    // The species lore.ts says the Quickening turned hostile attack on sight.
     const bounties = new Set(FIELDS.map((f) => f.bounty));
+    const quickened = new Set(["Mosskin", "Sporeling", "Thistlehare", "Canal Strider", "Ashcrawler"]);
     // Their ecology follows (lore.ts ECOLOGY), and the bounties are Gorged.
     const monsters = r.monsters.map((m) => ({
       ...m, ecology: ECOLOGY[m.name] ?? m.ecology,
-      ...(bounties.has(m.name) ? { behavior: "passive" as const, bounty: true } : { behavior: "aggressive" as const }),
+      ...(bounties.has(m.name) ? { behavior: "passive" as const, bounty: true } : quickened.has(m.name) ? { behavior: "aggressive" as const } : {}),
     }));
     const items = r.region.id === "lum" ? [...r.items, ...SURVEY_PAGES.map((sp, i): ItemDef => ({
       id: surveyPageId(i), name: sp.title, category: "quest", rarity: "rare", sell_price: 0, stack_max: 1, description: sp.text,

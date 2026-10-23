@@ -4777,7 +4777,7 @@
      6,
      14
     ],
-    "design_note": "Amphibious fish crawl the shallow banks next to camp and rush anything on two legs: an easy first horde."
+    "design_note": "Amphibious fish crawl the shallow banks next to camp and bite back only when struck: an easy first horde to gather."
    },
    {
     "id": "reed_marsh_reedstalker",
@@ -8671,7 +8671,7 @@
      6,
      14
     ],
-    "design_note": "Moths shoot from the canopy while bark-plated hound packs rush in."
+    "design_note": "Moths shoot from the canopy while bark-plated hound packs turn as one on whoever wounds a packmate."
    },
    {
     "id": "jadewing_glade_barkhound",
@@ -9157,7 +9157,7 @@
      6,
      14
     ],
-    "design_note": "Moths shoot from the canopy while bark-plated hound packs rush in."
+    "design_note": "Moths shoot from the canopy while bark-plated hound packs turn as one on whoever wounds a packmate."
    },
    {
     "id": "trellis_dunes_vinecrawler",
@@ -22300,7 +22300,7 @@
      6,
      14
     ],
-    "design_note": "Relay Guardians ping the buoy cables by the camp and answer anything that comes close."
+    "design_note": "Relay Guardians ping the buoy cables by the camp; strike one and every guardian on the line answers."
    },
    {
     "id": "ram_terraces",

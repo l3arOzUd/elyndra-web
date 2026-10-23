@@ -202,7 +202,7 @@
   "archetype": "bruiser",
   "family": "reptile",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 216,
   "attack": 11,
   "defense": 52,
@@ -211,7 +211,7 @@
   "move_speed_ms": 360,
   "base_exp": 48,
   "job_exp": 30,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -258,7 +258,7 @@
   "archetype": "bruiser",
   "family": "beast",
   "element": "nature",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 298,
   "attack": 18,
   "defense": 44,
@@ -267,7 +267,7 @@
   "move_speed_ms": 300,
   "base_exp": 89,
   "job_exp": 55,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -283,7 +283,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Hedgehog-boars that root in the brambles round Dawnmeadow's old mill and charge anything that walks into the thicket.",
+  "ecology": "Hedgehog-boars that root in the brambles round Dawnmeadow's old mill. Wound one and the whole sounder charges out of the thicket after you.",
   "art_brief": "A stocky boar with a back of woody thorns and bark-like hide; mossy tusks.",
   "sprite": "thornback_2d",
   "habitat": [
@@ -346,7 +346,7 @@
   "archetype": "swarm",
   "family": "aquatic",
   "element": "water",
-  "behavior": "aggressive",
+  "behavior": "passive",
   "hp": 326,
   "attack": 14,
   "defense": 57,
@@ -355,7 +355,7 @@
   "move_speed_ms": 260,
   "base_exp": 63,
   "job_exp": 39,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -371,14 +371,14 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Amphibious fish that crawl up the banks of Moonbrook Vale's Brookbed to sun their clear fins, and rush anything on two legs.",
+  "ecology": "Amphibious fish that crawl up the banks of Moonbrook Vale's Brookbed to sun their clear fins. They flop out of the way of travellers and bite back only when struck.",
   "art_brief": "A fat fish on stubby fin-legs, glass-clear fins showing faint aether veins; blue-green.",
   "sprite": "brookfin_2d",
   "habitat": [
    {
     "map_id": "lum_fld_02",
     "zone": "Brookbed",
-    "note": "Amphibious fish crawl the shallow banks next to camp and rush anything on two legs: an easy first horde."
+    "note": "Amphibious fish crawl the shallow banks next to camp and bite back only when struck: an easy first horde to gather."
    }
   ]
  },
@@ -478,7 +478,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 921,
   "attack": 45,
   "defense": 315,
@@ -487,7 +487,7 @@
   "move_speed_ms": 340,
   "base_exp": 246,
   "job_exp": 153,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -1061,7 +1061,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "water",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 2884,
   "attack": 159,
   "defense": 1161,
@@ -1070,7 +1070,7 @@
   "move_speed_ms": 340,
   "base_exp": 832,
   "job_exp": 516,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -1092,14 +1092,14 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Sonar sentries bolted to the Drowned Relay's surface buoys; they walk the buoy cables of Pearl Coast's Relay Strand and answer anything that comes close.",
+  "ecology": "Sonar sentries bolted to the Drowned Relay's surface buoys; they walk the buoy cables of Pearl Coast's Relay Strand, and when one is struck every guardian on the line answers.",
   "art_brief": "A tall diving-suit construct with a dish-shaped sonar head, ribbed hoses and lead boots; dark bronze with pulsing cyan rings.",
   "sprite": "mob_0023",
   "habitat": [
    {
     "map_id": "tha_fld_01",
     "zone": "Relay Strand",
-    "note": "Relay Guardians ping the buoy cables by the camp and answer anything that comes close."
+    "note": "Relay Guardians ping the buoy cables by the camp; strike one and every guardian on the line answers."
    }
   ]
  },
@@ -1256,7 +1256,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "ice",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 3136,
   "attack": 206,
   "defense": 1911,
@@ -1265,7 +1265,7 @@
   "move_speed_ms": 340,
   "base_exp": 989,
   "job_exp": 613,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -1759,7 +1759,7 @@
   "archetype": "swarm",
   "family": "amphibian",
   "element": "water",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 361,
   "attack": 18,
   "defense": 92,
@@ -1768,7 +1768,7 @@
   "move_speed_ms": 260,
   "base_exp": 90,
   "job_exp": 56,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -1784,7 +1784,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Cat-sized newts that live under the moss of the creek banks. They bask in rows and croak the whole bank into a fight the moment anyone comes close.",
+  "ecology": "Cat-sized newts that live under the moss of the creek banks. They bask in rows, and when one is struck it croaks the whole bank into the fight.",
   "art_brief": "A plump newt with a carpet of green moss on its back, a pale belly and round jade eyes; small water droplets glinting on the moss.",
   "sprite": "mob_0040",
   "habitat": [
@@ -1835,7 +1835,7 @@
    {
     "map_id": "ver_fld_01",
     "zone": "Jadewing Glade",
-    "note": "Moths shoot from the canopy while bark-plated hound packs rush in."
+    "note": "Moths shoot from the canopy while bark-plated hound packs turn as one on whoever wounds a packmate."
    }
   ]
  },
@@ -1847,7 +1847,7 @@
   "archetype": "bruiser",
   "family": "beast",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 1183,
   "attack": 61,
   "defense": 226,
@@ -1856,7 +1856,7 @@
   "move_speed_ms": 255,
   "base_exp": 308,
   "job_exp": 191,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -1872,14 +1872,14 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Wolf-like beasts whose hides grow bark plates; their packs den in Graftwood Wilds' Jadewing Glade and run down anything on the road.",
+  "ecology": "Wolf-like beasts whose hides grow bark plates; their packs den in Graftwood Wilds' Jadewing Glade and let travellers pass, but wound one and the pack runs you down.",
   "art_brief": "A lean wolf with overlapping bark plates on its back and shoulders, moss on its tail, jade-green eyes; heavy jaws with wooden fangs.",
   "sprite": "mob_0042",
   "habitat": [
    {
     "map_id": "ver_fld_01",
     "zone": "Jadewing Glade",
-    "note": "Moths shoot from the canopy while bark-plated hound packs rush in."
+    "note": "Moths shoot from the canopy while bark-plated hound packs turn as one on whoever wounds a packmate."
    }
   ]
  },
@@ -1891,7 +1891,7 @@
   "archetype": "support",
   "family": "bio-machine",
   "element": "nature",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 719,
   "attack": 28,
   "defense": 155,
@@ -1900,7 +1900,7 @@
   "move_speed_ms": 280,
   "base_exp": 189,
   "job_exp": 117,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -2080,7 +2080,7 @@
   "archetype": "support",
   "family": "fungus",
   "element": "nature",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 1326,
   "attack": 42,
   "defense": 189,
@@ -2089,7 +2089,7 @@
   "move_speed_ms": 280,
   "base_exp": 297,
   "job_exp": 184,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -2129,7 +2129,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 1610,
   "attack": 109,
   "defense": 759,
@@ -2138,7 +2138,7 @@
   "move_speed_ms": 340,
   "base_exp": 597,
   "job_exp": 370,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -2266,7 +2266,7 @@
   "archetype": "swarm",
   "family": "beast",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 601,
   "attack": 36,
   "defense": 129,
@@ -2275,7 +2275,7 @@
   "move_speed_ms": 208,
   "base_exp": 162,
   "job_exp": 100,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -2354,7 +2354,7 @@
   "archetype": "bruiser",
   "family": "reptile",
   "element": "fire",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 2071,
   "attack": 125,
   "defense": 307,
@@ -2363,7 +2363,7 @@
   "move_speed_ms": 300,
   "base_exp": 602,
   "job_exp": 373,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -2404,7 +2404,7 @@
   "archetype": "support",
   "family": "construct",
   "element": "fire",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 1052,
   "attack": 46,
   "defense": 201,
@@ -2413,7 +2413,7 @@
   "move_speed_ms": 280,
   "base_exp": 286,
   "job_exp": 177,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -2637,7 +2637,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 2588,
   "attack": 163,
   "defense": 1495,
@@ -2646,7 +2646,7 @@
   "move_speed_ms": 340,
   "base_exp": 832,
   "job_exp": 516,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -2861,7 +2861,7 @@
   "archetype": "support",
   "family": "plant",
   "element": "nature",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 1665,
   "attack": 56,
   "defense": 259,
@@ -2870,7 +2870,7 @@
   "move_speed_ms": 336,
   "base_exp": 368,
   "job_exp": 228,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -2911,7 +2911,7 @@
   "archetype": "swarm",
   "family": "mollusc",
   "element": "water",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 1639,
   "attack": 77,
   "defense": 220,
@@ -2920,7 +2920,7 @@
   "move_speed_ms": 286,
   "base_exp": 367,
   "job_exp": 228,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -3006,7 +3006,7 @@
   "archetype": "bruiser",
   "family": "reptile",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 4180,
   "attack": 208,
   "defense": 781,
@@ -3015,7 +3015,7 @@
   "move_speed_ms": 390,
   "base_exp": 1026,
   "job_exp": 636,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -3144,7 +3144,7 @@
   "archetype": "support",
   "family": "cnidarian",
   "element": "shadow",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 2347,
   "attack": 94,
   "defense": 447,
@@ -3153,7 +3153,7 @@
   "move_speed_ms": 280,
   "base_exp": 528,
   "job_exp": 327,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -3281,7 +3281,7 @@
   "archetype": "swarm",
   "family": "beast",
   "element": "wind",
-  "behavior": "aggressive",
+  "behavior": "flee",
   "hp": 1214,
   "attack": 65,
   "defense": 276,
@@ -3290,7 +3290,7 @@
   "move_speed_ms": 182,
   "base_exp": 281,
   "job_exp": 174,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -3306,7 +3306,7 @@
     "max_qty": 1
    }
   ],
-  "ecology": "Hares of the open snowfields that burrow in drifts. Once they bolted from people; now they burst out of the snow and bite.",
+  "ecology": "Hares of the open snowfields that burrow in drifts. They bolt from anyone who comes near, and a struck one flees across the snow before it turns to bite.",
   "art_brief": "A big white hare with frost-tipped ears and long whiskers rimed with ice, hind legs built for bounding; snow-white, silver-blue shadows.",
   "sprite": "mob_0070",
   "habitat": [
@@ -3325,7 +3325,7 @@
   "archetype": "bruiser",
   "family": "beast",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 3641,
   "attack": 210,
   "defense": 540,
@@ -3334,7 +3334,7 @@
   "move_speed_ms": 270,
   "base_exp": 932,
   "job_exp": 578,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -3470,7 +3470,7 @@
   "archetype": "support",
   "family": "spirit",
   "element": "shadow",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 2239,
   "attack": 96,
   "defense": 452,
@@ -3479,7 +3479,7 @@
   "move_speed_ms": 280,
   "base_exp": 524,
   "job_exp": 325,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -3795,7 +3795,7 @@
   "archetype": "bruiser",
   "family": "amphibian",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 4536,
   "attack": 231,
   "defense": 975,
@@ -3804,7 +3804,7 @@
   "move_speed_ms": 345,
   "base_exp": 1056,
   "job_exp": 655,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -3839,7 +3839,7 @@
   "archetype": "support",
   "family": "construct",
   "element": "fire",
-  "behavior": "aggressive",
+  "behavior": "flee",
   "hp": 2893,
   "attack": 113,
   "defense": 551,
@@ -3848,7 +3848,7 @@
   "move_speed_ms": 252,
   "base_exp": 616,
   "job_exp": 382,
-  "aggro_radius": 10,
+  "aggro_radius": 0,
   "leash_radius": 35,
   "drops": [
    {
@@ -3971,7 +3971,7 @@
   "archetype": "swarm",
   "family": "construct",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 2947,
   "attack": 157,
   "defense": 598,
@@ -3980,7 +3980,7 @@
   "move_speed_ms": 234,
   "base_exp": 633,
   "job_exp": 392,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -4103,7 +4103,7 @@
   "archetype": "construct",
   "family": "construct",
   "element": "fire",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 6998,
   "attack": 351,
   "defense": 2175,
@@ -4112,7 +4112,7 @@
   "move_speed_ms": 340,
   "base_exp": 1721,
   "job_exp": 1067,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -4246,7 +4246,7 @@
   "archetype": "swarm",
   "family": "beast",
   "element": "shadow",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 3041,
   "attack": 162,
   "defense": 587,
@@ -4255,7 +4255,7 @@
   "move_speed_ms": 221,
   "base_exp": 659,
   "job_exp": 409,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -4290,7 +4290,7 @@
   "archetype": "support",
   "family": "plant",
   "element": "nature",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 4313,
   "attack": 135,
   "defense": 672,
@@ -4299,7 +4299,7 @@
   "move_speed_ms": 448,
   "base_exp": 795,
   "job_exp": 493,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {
@@ -4334,7 +4334,7 @@
   "archetype": "swarm",
   "family": "construct",
   "element": "earth",
-  "behavior": "aggressive",
+  "behavior": "assist",
   "hp": 3089,
   "attack": 172,
   "defense": 1015,
@@ -4343,7 +4343,7 @@
   "move_speed_ms": 260,
   "base_exp": 656,
   "job_exp": 407,
-  "aggro_radius": 10,
+  "aggro_radius": 6,
   "leash_radius": 35,
   "drops": [
    {

@@ -657,15 +657,21 @@ function checkLore(b: ContentBundle) {
     ...b.items.map((i): [string, string] => [`items/${i.id}`, i.description ?? ""]),
   ];
   for (const [where, text] of said) for (const place of RETIRED_PLACES) if (text.includes(place)) report("error", "lore.places", where, `names "${place}", a map that no longer exists`);
-  // Zone notes reach players through the Monster Book: no behaviour the game no longer has.
-  for (const z of b.spawn_zones) for (const p of z.pockets)
-    if (/(passive|assist(s|ing)?|flee(s|ing)?|fleeing)/i.test(p.design_note)) report("error", "lore.behaviour", `${z.map_id}/${p.id}`, `zone note describes old behaviour: "${p.design_note}"`);
+  // Zone notes reach players through the Monster Book: a behaviour they name must be one of the zone's species'.
+  const behaviourOf = new Map(b.monsters.map((m) => [m.id, m.behavior]));
+  for (const z of b.spawn_zones) for (const p of z.pockets) {
+    const here = new Set(p.species.map((s) => behaviourOf.get(s.monster_id)));
+    for (const [word, behaviour] of [[/passive/i, "passive"], [/assist(s|ing)?\b/i, "assist"], [/flee(s|ing)?\b|fleeing/i, "flee"]] as const)
+      if (word.test(p.design_note) && !here.has(behaviour)) report("error", "lore.behaviour", `${z.map_id}/${p.id}`, `zone note says ${behaviour}, but no species here is: "${p.design_note}"`);
+  }
   for (const m of b.monsters) {
     if ((m.archetype === "boss" || m.archetype === "elite") && !m.story) report("error", "lore.boss_story", m.id, `${m.name} has no story`);
     if (m.behavior === "aggressive" && /ignores? (travellers|anyone|everything|you)|leaves? them (alone|be)|until (struck|hit)|scatter|bolts? from|skims? away|only bites?/i.test(m.ecology))
       report("error", "lore.behaviour", m.id, `${m.name} attacks on sight, but its ecology says otherwise: "${m.ecology}"`);
     if (m.behavior === "passive" && !/struck|dug up|disturbed/i.test(m.ecology))
       report("error", "lore.behaviour", m.id, `${m.name} is passive: its ecology must say it fights back only when struck`);
+    if (m.behavior !== "aggressive" && /(charges?|rush(es)?|runs? down|bites?|attacks?) (anything|anyone|everything|people|travellers|on two legs)|on sight|the moment anyone comes close/i.test(m.ecology))
+      report("error", "lore.behaviour", m.id, `${m.name} is ${m.behavior}: its ecology must not say it attacks on sight: "${m.ecology}"`);
   }
 }
 
