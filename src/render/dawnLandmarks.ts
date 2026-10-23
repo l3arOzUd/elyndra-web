@@ -8,17 +8,45 @@ export function buildDawnLandmarks(layout: MapLayout, group: THREE.Group,
   const trim = track(new THREE.MeshLambertMaterial({ color: 0xe2d5b3 }));
   const brass = track(new THREE.MeshLambertMaterial({ color: 0x99733c }));
   const teal = track(new THREE.MeshPhongMaterial({ color: 0x61d7c4, emissive: 0x146d65, shininess: 70 }));
+  const canvas = track(new THREE.MeshLambertMaterial({ color: 0xd8c79f, side: THREE.DoubleSide }));
+  const clothTrim = track(new THREE.MeshLambertMaterial({ color: 0x8c4b3b, side: THREE.DoubleSide }));
+  const wood = track(new THREE.MeshLambertMaterial({ color: 0x755335 }));
   const add = (parent: THREE.Object3D, geo: THREE.BufferGeometry, mat: THREE.Material,
     x: number, y: number, z: number) => {
     const mesh = new THREE.Mesh(track(geo), mat); mesh.position.set(x, y, z);
     mesh.castShadow = mesh.receiveShadow = true; parent.add(mesh); return mesh;
   };
   for (const p of layout.props) {
-    if (p.kind !== 'aether_pylon' && p.kind !== 'aqueduct') continue;
+    if (p.kind !== 'aether_pylon' && p.kind !== 'aqueduct' && p.kind !== 'tent') continue;
     const root = new THREE.Group(); root.name = `dawn-${p.kind}`;
     root.position.set(p.x + 0.5, 0, p.y + 0.5); root.rotation.y = p.rot ?? 0; root.scale.setScalar(p.scale ?? 1);
     group.add(root);
-    if (p.kind === 'aether_pylon') {
+    if (p.kind === 'tent') {
+      // A two-cell tent uses the centre of its even-sized collision footprint.
+      root.position.set(p.x, 0, p.y);
+      for (const side of [-1, 1]) {
+        const roof = new THREE.PlaneGeometry(1, 1, 8, 6);
+        const pos = roof.attributes.position;
+        for (let i = 0; i < pos.count; i++) {
+          const t = pos.getX(i) + 0.5, z = pos.getY(i) * 1.95;
+          pos.setXYZ(i, side * t * 0.98, 2.1 * (1 - t) + 0.12 - Math.sin(t * Math.PI) * 0.13, z);
+        }
+        roof.computeVertexNormals(); add(root, roof, canvas, 0, 0, 0);
+        for (const z of [-0.98, 0.98]) {
+          const seam = add(root, new THREE.BoxGeometry(0.055, 2.34, 0.055), clothTrim, side * 0.49, 1.17, z);
+          seam.rotation.z = side * 0.437;
+        }
+      }
+      for (const z of [-0.93, 0.93]) add(root, new THREE.CylinderGeometry(0.035, 0.045, 2.4, 7), wood, 0, 1.2, z);
+      const ridge = add(root, new THREE.CylinderGeometry(0.035, 0.035, 2.15, 7), wood, 0, 2.23, 0);
+      ridge.rotation.x = Math.PI / 2;
+      // Rolled entrance flaps leave a dark, readable doorway under the canvas.
+      for (const x of [-0.63, 0.63]) {
+        const flap = add(root, new THREE.ConeGeometry(0.23, 1.35, 6), canvas, x, 0.75, 0.96);
+        flap.rotation.z = x < 0 ? -0.25 : 0.25;
+      }
+      add(root, new THREE.BoxGeometry(0.65, 0.13, 1.35), clothTrim, 0, 0.1, -0.12);
+    } else if (p.kind === 'aether_pylon') {
       add(root, new THREE.CylinderGeometry(0.64, 0.72, 0.16, 8), stone, 0, 0.08, 0);
       add(root, new THREE.CylinderGeometry(0.46, 0.55, 0.24, 8), trim, 0, 0.28, 0);
       add(root, new THREE.CylinderGeometry(0.2, 0.33, 1.35, 8), stone, 0, 1.06, 0);
