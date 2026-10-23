@@ -288,7 +288,7 @@ export async function applyPaintedTerrain(
         diffuseColor.rgb *= terrain;
       `);
     };
-    ground.customProgramCacheKey = () => "painted-ground-v3";
+    ground.customProgramCacheKey = () => layout.id === 'lum_fld_01' ? 'dawn-painted-ground-v4' : 'painted-ground-v3';
     ground.needsUpdate = true;
   }
   let waterMask: THREE.CanvasTexture | undefined;
@@ -321,11 +321,13 @@ export async function applyPaintedTerrain(
           vec3 b = texture2D(map,vMapUv*1.37-drift*.65).rgb;
           float depth = texture2D(waterMask,vec2(vMapUv.x*8.0/waterMapSize.x,1.0+vMapUv.y*8.0/waterMapSize.y)).r;
           float edge = smoothstep(.42,.98,depth);
-          diffuseColor.rgb *= mix(a,b,.28) * mix(vec3(1.2,1.13,.88),vec3(1.0),edge);
+          vec3 waterPaint = mix(a,b,.28);
+          ${layout.id === 'lum_fld_01' ? 'waterPaint = mix(waterPaint, vec3(0.13, 0.33, 0.28), 0.55);' : ''}
+          diffuseColor.rgb *= waterPaint * mix(vec3(1.2,1.13,.88),vec3(1.0),edge);
           diffuseColor.a *= mix(.15,1.0,edge);
         `);
       };
-      s.material.customProgramCacheKey = () => "lumeris-water-v2";
+      s.material.customProgramCacheKey = () => layout.id === 'lum_fld_01' ? 'dawn-water-v3' : 'lumeris-water-v2';
     }
     s.material.needsUpdate = true;
   }

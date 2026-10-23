@@ -13,7 +13,8 @@ export function buildDawnRelief(layout: MapLayout, group: THREE.Group,
     for (let ring = 0; ring <= rings; ring++) for (let j = 0; j <= segments; j++) {
       const r = ring / rings, a = j / segments * Math.PI * 2;
       const x = cx + Math.cos(a) * rx * r, z = cz + Math.sin(a) * rz * r;
-      let height = Math.pow(Math.max(0, 1 - r * r), 1.4) * Math.min(rx, rz) * 0.55;
+      const riseRadius = Math.hypot((x - cx) / Math.max(1, rx - 1.5), (z - cz) / Math.max(1, rz - 1.5));
+      let height = Math.pow(Math.max(0, 1 - riseRadius * riseRadius), 1.8) * Math.min(rx, rz) * 0.55;
       // Guard the full neighbour cell square, including diagonals and roads.
       for (let y = Math.floor(z) - 1; y <= Math.floor(z) + 1; y++) for (let xx = Math.floor(x) - 1; xx <= Math.floor(x) + 1; xx++) {
         if (xx >= 0 && y >= 0 && xx < layout.width && y < layout.height && walk[y * layout.width + xx]) height = 0;

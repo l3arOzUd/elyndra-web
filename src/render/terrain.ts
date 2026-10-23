@@ -6,6 +6,7 @@ import { buildDawnDetails } from "./dawnDetails";
 import { buildDawnTrees } from "./dawnTrees";
 import { buildDawnLandmarks } from "./dawnLandmarks";
 import { buildDawnRelief } from "./dawnRelief";
+import { buildDawnShore } from "./dawnShore";
 import { animatedProp, propGeometry } from "./props";
 import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
 
@@ -176,6 +177,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   ground.position.set(l.width / 2, 0, l.height / 2);
   group.add(ground);
   if (l.id === 'lum_fld_01') buildDawnRelief(l, group, ground.material, track);
+  if (l.id === 'lum_fld_01') buildDawnShore(l, group, track);
   const beyond = new THREE.Mesh(track(new THREE.PlaneGeometry(l.width * 4, l.height * 4).rotateX(-Math.PI / 2)),
     track(new THREE.MeshLambertMaterial({ color: l.ground === "cave" ? 0x0c0b0a : 0x2c4430 })));
   beyond.position.set(l.width / 2, -0.06, l.height / 2);
