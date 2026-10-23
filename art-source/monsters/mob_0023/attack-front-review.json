@@ -38,6 +38,20 @@
     "entry": "Game.onCombat -> Fx.monsterProjectile(mob_0023)",
     "sourceHeightFraction": 0.85,
     "timing": "existing ranged hit presentation duration",
-    "visualBattleApproved": false
+    "visualBattleApproved": false,
+    "viewer": "fx-viewer.html?monster=mob_0023",
+    "visualReview": {
+      "sampleTimesMs": [
+        60,
+        110,
+        250
+      ],
+      "pageErrors": [],
+      "observed": "At 110ms rings travel toward target but look narrow and small against grass at isometric camera angle.",
+      "limitations": [
+        "Sample actors only, not actual Relay sprite.",
+        "Dense battle readability and visual size still unapproved."
+      ]
+    }
   }
 }
