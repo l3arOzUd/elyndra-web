@@ -1,0 +1,38 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "front-neutral-v2.png",
+    "idle-front-scan.png"
+  ],
+  "sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frameDurationMs": 125,
+  "status": "two-drawing-idle-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Patina and rivets drift between drawings.",
+    "Joint lights also brighten unintentionally.",
+    "Pulse transition requires intermediate brightness or separate runtime material effect."
+  ]
+}
