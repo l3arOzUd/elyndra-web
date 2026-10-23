@@ -56,7 +56,9 @@ describe("animation editor clips", () => {
     for (const n of names) { const other = mirrorName(n); if (other) expect(names).toContain(other); }
     const rest: Pose = { rot: Object.fromEntries(names.map(n => [n, [0, 0, 0, 1]])), root: [0, 0.375, 0] };
     const clips = starterClips(rest);
-    expect(clips.map(c => c.name)).toEqual(["idle", "walk"]);
+    expect(clips.map(c => c.name)).toEqual(["idle", "walk", "run", "attack", "shoot", "cast", "hit", "death"]);
+    for (const c of clips) for (const f of Object.values(c.events ?? {})) expect(f).toBeLessThan(Math.round(c.duration * c.fps) + 1);
+    for (const c of clips) for (const k of c.keys) expect(Math.abs(k.t * c.fps - Math.round(k.t * c.fps))).toBeLessThan(1e-9);
     for (const c of clips) for (const k of c.keys) expect(Object.keys(k.pose.rot).sort()).toEqual([...names].sort());
   });
 });

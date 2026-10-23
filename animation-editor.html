@@ -35,6 +35,7 @@
           <div class="row">
             <button id="clip-new">+ ท่าใหม่</button><button id="clip-dup">สำเนา</button><button id="clip-del" class="danger">ลบ</button>
           </div>
+          <button id="clip-samples" class="wide" title="ฟันดาบ ยิงธนู ร่ายเวท วิ่ง โดนตี ตาย">+ เพิ่มท่าตัวอย่างที่ยังไม่มี</button>
         </section>
         <section id="import-section">
           <h3>ดึงท่าจากโมเดล</h3>
@@ -100,6 +101,8 @@
           <label class="field"><span>ความยาว (วิ)</span><input id="clip-duration" type="number" min="0.1" max="10" step="0.05" /></label>
           <label class="field"><span>เฟรม/วินาที</span><input id="clip-fps" type="number" min="1" max="30" step="1" /></label>
           <label class="field check"><span>วนซ้ำ (loop)</span><input id="clip-loop" type="checkbox" /></label>
+          <label class="field" id="prop-field"><span>อาวุธในมือ</span>
+            <select id="clip-prop"><option value="">ไม่มี</option><option value="sword">ดาบ</option><option value="bow">ธนู</option><option value="staff">คทา</option></select></label>
         </section>
         <section>
           <h3>การแสดงผล</h3>

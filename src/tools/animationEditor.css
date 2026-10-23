@@ -17,7 +17,8 @@ button.primary { background: var(--accent); color: var(--accent-ink); border-col
 button.primary:hover { background: #cfe2a6; }
 button.danger:hover:not(:disabled) { background: #4a2a24; border-color: #b0563f; }
 button.ready { border-color: var(--accent); }
-.button.wide { width: 100%; margin-top: 6px; }
+.button.wide, button.wide { width: 100%; margin-top: 6px; }
+[hidden] { display: none !important; }
 select, input[type=number], input:not([type]) , input[list] {
   background: #15201c; color: var(--ink); border: 1px solid #ffffff1c; border-radius: 6px; padding: 5px 7px; font-size: 12px; min-width: 0;
 }

@@ -28,6 +28,10 @@ export interface EditClip {
   fps: number;
   loop: boolean;
   keys: Key[];
+  /** The prop in hand while this clip plays ("sword", "bow", "staff"); none if unset. */
+  prop?: string;
+  /** Sprite events by frame: { "hit": 5 } fires as frame 5 shows. */
+  events?: Record<string, number>;
 }
 
 export interface Project {

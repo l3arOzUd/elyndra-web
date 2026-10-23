@@ -4,7 +4,7 @@ import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { TransformControls } from 'three/addons/controls/TransformControls.js';
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
-import { buildMannequin, starterClips } from './animEdit/mannequin';
+import { buildMannequin, showProp, starterClips } from './animEdit/mannequin';
 import {
   clonePose, frameCount, frameTime, keyAt, mirrorName, mirrorPose, newClip, samplePose, sortKeys,
   type EditClip, type Ease, type Pose, type Project, type Quat,
@@ -210,6 +210,10 @@ async function loadSource(src: Source) {
     selectBone(bones.find(b => /arm/i.test(b.name)) ?? rootBone);
     $('character-name').textContent = src.label;
     $('import-section').hidden = !sourceClips.length;
+    let hasProps = false;
+    root.traverse(o => { if (o.userData.prop) hasProps = true; });
+    $('prop-field').hidden = !hasProps;
+    $('clip-samples').hidden = src.id !== 'wayfarer';
     $<HTMLSelectElement>('import-clip').replaceChildren(...sourceClips.map((c, i) => new Option(`${c.name} (${c.duration.toFixed(2)} วิ)`, String(i))));
     renderBoneList(); refreshAll(); setView(currentView);
     const url = new URL(location.href); url.searchParams.set('model', src.id); history.replaceState(null, '', url);
@@ -461,12 +465,18 @@ function refreshClipSettings() {
   input('clip-duration').value = String(+c.duration.toFixed(3));
   input('clip-fps').value = String(c.fps);
   input('clip-loop').checked = c.loop;
+  $<HTMLSelectElement>('clip-prop').value = c.prop ?? '';
 }
 function refreshAll() {
   if (!clip()) return;
   time = Math.min(time, clip().duration);
+  showProps(clip().prop);
   renderClipList(); refreshClipSettings(); renderTimeline(); showPose(); updateGhosts(); refreshBonePanel();
   input('undo').disabled = !undoStack.length; input('redo').disabled = !redoStack.length;
+}
+function showProps(name: string | undefined) {
+  if (holder) showProp(holder, name);
+  for (const g of ghosts ?? []) showProp(g.root, name);
 }
 function uniqueName(base: string) {
   let name = base, n = 2;
@@ -474,6 +484,12 @@ function uniqueName(base: string) {
   return name;
 }
 
+input('clip-prop').onchange = () => change(() => { clip().prop = $<HTMLSelectElement>('clip-prop').value || undefined; });
+$('clip-samples').onclick = () => {
+  const missing = starterClips(restPose).filter(s => !project.clips.some(c => c.name === s.name));
+  if (!missing.length) { alert('มีท่าตัวอย่างครบทุกท่าแล้ว'); return; }
+  change(() => { project.clips.push(...missing); clipIndex = project.clips.length - missing.length; time = 0; });
+};
 $('clip-new').onclick = () => change(() => {
   project.clips.push(newClip(uniqueName('ท่าใหม่'), snapshotPose(), false));
   clipIndex = project.clips.length - 1; time = 0;
@@ -785,6 +801,7 @@ async function renderSprites() {
   const outputs: { name: string; canvas: HTMLCanvasElement; frames: number; fps: number }[] = [];
   try {
     for (const c of list) {
+      showProp(holder, c.prop);
       const frames = frameCount(c);
       const sheet = document.createElement('canvas');
       sheet.width = frames * size; sheet.height = rows.length * size;
@@ -799,13 +816,15 @@ async function renderSprites() {
         }
       });
       const name = c.name.replace(/[^a-z0-9_-]+/gi, '_') || 'clip';
-      animations[c.name] = { file: `${safeId()}_${name}.png`, frames, fps: c.fps, ...(c.loop ? { loop: true } : { hold: /death|die/i.test(c.name) || undefined }) };
+      animations[c.name] = { file: `${safeId()}_${name}.png`, frames, fps: c.fps, ...(c.loop ? { loop: true } : { hold: /death|die/i.test(c.name) || undefined }),
+        ...(c.events && Object.keys(c.events).length ? { events: c.events } : {}) };
       outputs.push({ name, canvas: sheet, frames, fps: c.fps });
     }
   } finally {
     holder.rotation.y = 0; holder.updateMatrixWorld(true);
     helpers.forEach((h, i) => { h.visible = wasVisible[i]; });
     scene.background = BACKGROUND;
+    showProps(clip()?.prop);
     showPose();
   }
 
