@@ -38,7 +38,7 @@ await loadEnvArt();
 const mapIds = [...content.maps.keys()];
 const picker = document.querySelector<HTMLSelectElement>('#maps')!;
 const places = document.querySelector<HTMLSelectElement>('#places')!;
-for(const def of content.maps.values()) picker.add(new Option(`${def.name} · Lv ${def.recommended_level_min}–${def.recommended_level_max} · ${def.id==='lum_fld_01'?'กำลังปรับฉาก':'ภาพเดิม'}`,def.id));
+for(const def of content.maps.values()) picker.add(new Option(`${def.name} · Lv ${def.recommended_level_min}–${def.recommended_level_max} · ${def.id==='lum_fld_01'?'ปรับฉาก':'แสง/พื้น รอบ 1'}`,def.id));
 let built: ReturnType<typeof buildMap> | null = null;
 let mapId = "";
 const focus = new THREE.Vector3();
