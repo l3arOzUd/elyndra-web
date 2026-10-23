@@ -637,6 +637,10 @@ function checkLore(b: ContentBundle) {
     if (n.name === n.title || roleWords.test(n.name) || b.maps.some((m) => n.name.startsWith(m.name + " "))) report("error", "lore.npc_name", n.id, `"${n.name}" is a role, not a person's name`);
   }
   for (const m of b.maps) if (!m.intro) report("error", "lore.map_intro", m.id, "no intro shown on entering the map");
+  // A Gorged bounty quest can't ask for more kills than there are bounties alive.
+  for (const q of b.quests) for (const o of q.objectives) if (o.type === "kill" && b.monsters.find((m) => m.id === o.monster_id)?.bounty && o.count > BOUNTY.alive)
+    report("error", "lore.bounty_quest", q.id, `asks for ${o.count} Gorged ${o.monster_id}; only ${BOUNTY.alive} live on the map`);
+  if (b.quests.filter((q) => q.ending).length !== 1) report("error", "lore.ending", "quests", "the main story needs exactly one ending quest");
   // Story stages: a real quest each, in the order the story reaches them.
   const questIds = new Set(b.quests.map((q) => q.id));
   const storyOrder = (id: string) => b.quests.find((q) => q.id === id)?.min_level ?? -1;

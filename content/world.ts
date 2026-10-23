@@ -9,10 +9,10 @@
 // To move a monster, edit the zone lists in FIELDS (by monster name). The
 // build and validator check the rest.
 
-import { decodeWalk, type DialogueDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
+import { decodeWalk, type DialogueDef, type ItemDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
 import { bakeLayout, shapeContains } from "./layout";
 import { BOUNTY } from "./model";
-import { DUNGEON_ZONE_NOTE, ECOLOGY, FIELD_CAST, QUEST_SUMMARY, STORY_STAGES, TOWN_CAST } from "./lore";
+import { AFTER_ENDING, DUNGEON_ZONE_NOTE, ECOLOGY, ENDING, FIELD_CAST, QUEST_SUMMARY, STORY_STAGES, SURVEY_PAGES, TOWN_CAST } from "./lore";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
 
 export const HUB = "lum_town_01";
@@ -371,6 +371,9 @@ function fieldDialogues(f: FieldSpec, look: Lookup, next?: FieldSpec): DialogueD
 
 // --- the world ----------------------------------------------------------------------------
 
+/** Aldric's survey pages are items itm_0950 and up (lore.ts SURVEY_PAGES). */
+export const surveyPageId = (i: number) => `itm_${String(950 + i).padStart(4, "0")}`;
+
 /** Rebuilds the seven region designs into the v3 world. */
 export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
   const look: Lookup = { byName: new Map() };
@@ -455,6 +458,8 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
   };
 
   const people = new Set([...newMaps.values()].flatMap(({ design }) => design.npcs.map((n) => n.id)));
+  const roleOf = new Map([...newMaps.values()].flatMap(({ design }) => design.npcs.map((n) => [n.id, n.role] as const)));
+  const bountyIds = new Set(FIELDS.map((f) => look.byName.get(f.bounty)!.id));
   for (const id of Object.keys(STORY_STAGES)) if (!people.has(id)) throw new Error(`lore.ts STORY_STAGES: no NPC ${id} in the world`);
   return regions.map((r) => {
     const quests = r.quests.map((q0) => {
@@ -471,6 +476,13 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       const giver = moveGiver ? npcOn(target) : q.giver_npc_id;
       const turnIn = q.turn_in_npc_id === q0.giver_npc_id ? giver : kept.has(q.turn_in_npc_id) ? q.turn_in_npc_id : "npc_lum_guild_registrar";
       q.summary = QUEST_SUMMARY[q.id] ?? (() => { throw new Error(`${q.id}: no summary in lore.ts`); })();
+      // A Gorged bounty takes BOUNTY.hp times the hits: ask for a quarter as many, never
+      // more than are alive on the map at once.
+      for (const o of q.objectives) if (o.type === "kill" && bountyIds.has(o.monster_id)) o.count = Math.min(BOUNTY.alive, Math.max(5, Math.round(o.count / BOUNTY.hp / 5) * 5));
+      // Each chapter's boss quest hands over one of Aldric's survey pages.
+      const page = SURVEY_PAGES.findIndex((sp) => sp.quest === q.id);
+      if (page >= 0) q.rewards.items.push({ item_id: surveyPageId(page), qty: 1 });
+      if (q.id === ENDING.quest) q.ending = { title: ENDING.title, lines: ENDING.lines };
       q.giver_npc_id = giver;
       q.turn_in_npc_id = turnIn;
       return q;
@@ -489,10 +501,15 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       ...fieldsHere.flatMap((f) => fieldDialogues(f, look, FIELDS[FIELDS.indexOf(f) + 1])),
     ].map((d) => {
       // Story stages (lore.ts); a scout keeps its zone guide after them.
-      const stages = STORY_STAGES[d.npc_id];
-      if (!stages) return d;
       const guide = d.npc_id.endsWith("_scout") ? d.lines.slice(-2) : [];
-      return { ...d, stages: stages.map((st) => ({ after: st.after, lines: [...st.lines, ...guide] })) };
+      const stages = (STORY_STAGES[d.npc_id] ?? []).map((st) => ({ after: st.after, lines: [...st.lines, ...guide] }));
+      // Everyone hears how it ended: a line for their role before what they usually say.
+      const role = roleOf.get(d.npc_id) as keyof typeof AFTER_ENDING | undefined;
+      if (!stages.some((st) => st.after === ENDING.quest) && role && AFTER_ENDING[role]) {
+        const last = stages.at(-1)?.lines ?? d.lines;
+        stages.push({ after: ENDING.quest, lines: [AFTER_ENDING[role], ...last.slice(d.npc_id.endsWith("_scout") ? 0 : 1)] });
+      }
+      return stages.length ? { ...d, stages } : d;
     });
     // Each field's bounty is passive; every other monster attacks on sight.
     const bounties = new Set(FIELDS.map((f) => f.bounty));
@@ -501,8 +518,12 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       ...m, ecology: ECOLOGY[m.name] ?? m.ecology,
       ...(bounties.has(m.name) ? { behavior: "passive" as const, bounty: true } : { behavior: "aggressive" as const }),
     }));
+    const items = r.region.id === "lum" ? [...r.items, ...SURVEY_PAGES.map((sp, i): ItemDef => ({
+      id: surveyPageId(i), name: sp.title, category: "quest", rarity: "rare", sell_price: 0, stack_max: 1, description: sp.text,
+    }))] : r.items;
     return {
       ...r,
+      items,
       region: { ...r.region, town_map_id: HUB, dungeon_map_id: dungeonOf },
       monsters,
       maps,

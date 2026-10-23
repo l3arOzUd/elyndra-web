@@ -65,6 +65,15 @@
   "lines": [
    "Rations, tonics, feathers, all fresh. Prices are Guild-fixed, more's the pity, so don't haggle.",
    "Sell me your field materials, one by one or the whole bag at once."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "They say the Gate is half shut. People are talking about going home. Not yet, but talking.",
+     "Sell me your field materials, one by one or the whole bag at once."
+    ]
+   }
   ]
  },
  {
@@ -90,6 +99,15 @@
   "lines": [
    "The transit crystals are the only piece of the Lattice we ever tamed. Treat them kindly. They run to the camp of every field.",
    "A little coin keeps them charged. The further the field, the more it costs."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "A little coin keeps them charged. The further the field, the more it costs."
+    ]
+   }
   ]
  },
  {
@@ -139,6 +157,15 @@
   "lines": [
    "The North Gate's been shut since the Long Retreat. Every road runs east through the fields now.",
    "One day I'll open it again. Take the East Gate, or the transit by the square."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Long Watch, they're calling it. I've stood watch my whole life. Welcome to it.",
+     "One day I'll open it again. Take the East Gate, or the transit by the square."
+    ]
+   }
   ]
  },
  {
@@ -155,6 +182,13 @@
      "The water's running clear down here for the first time in years. My orchard might live.",
      "Going up? Avelorn or the orchard. Mind your head on the roots."
     ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Going up? Avelorn or the orchard. Mind your head on the roots."
+    ]
    }
   ]
  },
@@ -167,6 +201,19 @@
    "See a fat, slow Lunari that doesn't come at you? A Gorged one. The Guild pays well for those, and you'll feel why when it drops.",
    "Dawnmeadow runs from Lv 1 by this camp to Lv 10 in the east.",
    "Mosskin Meadow (Lv 1-1): Mosskin. Sporeling Hollow (Lv 2-3): Sporeling, Ambermite. Glider Rise (Lv 3-5): Lunari, Craglet. Bramble Mill (Lv 8-9): Thornback, Dustwing."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "First camp I've ever run, so humour me: survey, clear, report. That's the whole Guild in three words.",
+     "The Mosskin used to graze round your boots. Since the Quickening they charge anything on two legs. Pull them into a heap and swing.",
+     "See a fat, slow Lunari that doesn't come at you? A Gorged one. The Guild pays well for those, and you'll feel why when it drops.",
+     "Dawnmeadow runs from Lv 1 by this camp to Lv 10 in the east.",
+     "Mosskin Meadow (Lv 1-1): Mosskin. Sporeling Hollow (Lv 2-3): Sporeling, Ambermite. Glider Rise (Lv 3-5): Lunari, Craglet. Bramble Mill (Lv 8-9): Thornback, Dustwing."
+    ]
+   }
   ]
  },
  {
@@ -175,6 +222,15 @@
   "lines": [
    "Lantern Hospice, Dawnmeadow post. Sit, sit. I patch quickly and I talk quicker.",
    "Nothing out here stops at the camp fence any more. Keep your blade where you can reach it."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Nothing out here stops at the camp fence any more. Keep your blade where you can reach it."
+    ]
+   }
   ]
  },
  {
@@ -182,6 +238,14 @@
   "npc_id": "npc_lum_dawnmeadow_transit",
   "lines": [
    "Oh! A traveller. The crystal's warm, it's always warm, it likes being used. Avelorn whenever you want it, the Guild pays."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -210,6 +274,19 @@
    "The Graftlings in the marsh that just stand there rooting are Gorged. Leave them for last, or first. They're worth it either way.",
    "Moonbrook Vale runs from Lv 11 by this camp to Lv 20 in the east.",
    "Brookbed (Lv 12-12): Brookfin. Reed Marsh (Lv 14-16): Reedstalker, Graftling. Rotting Rows (Lv 17-18): Rotroot, Mossback Newt. Sap Groves (Lv 20-20): Sapdrone."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "Listen to the frogs. When they go quiet, the Reedstalkers are close.",
+     "The southern orchard is rotting from the roots up, and the water from the pump-house smells of copper. Something down there is pulling the water the wrong way.",
+     "The Graftlings in the marsh that just stand there rooting are Gorged. Leave them for last, or first. They're worth it either way.",
+     "Moonbrook Vale runs from Lv 11 by this camp to Lv 20 in the east.",
+     "Brookbed (Lv 12-12): Brookfin. Reed Marsh (Lv 14-16): Reedstalker, Graftling. Rotting Rows (Lv 17-18): Rotroot, Mossback Newt. Sap Groves (Lv 20-20): Sapdrone."
+    ]
+   }
   ]
  },
  {
@@ -218,6 +295,15 @@
   "lines": [
    "Wash the marsh off before I look at you. Rot gets into cuts.",
    "Drag them as far as you like, but come back breathing."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Drag them as far as you like, but come back breathing."
+    ]
+   }
   ]
  },
  {
@@ -225,6 +311,14 @@
   "npc_id": "npc_lum_moonbrook_vale_transit",
   "lines": [
    "Avelorn on the Guild's coin. Mind the step, the crystal kicks."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -233,6 +327,15 @@
   "lines": [
    "My aunt runs the Hospice in Avelorn, so if you die out east, she'll hear about it from me.",
    "East is Graftwood Wilds, Lv 21 and up. Sylvara's woods, what's left of them."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "East is Graftwood Wilds, Lv 21 and up. Sylvara's woods, what's left of them."
+    ]
+   }
   ]
  },
  {
@@ -241,6 +344,15 @@
   "lines": [
    "I sold sap candles under the Eldest once. Now I sell rations in a stall. Marked up for the long road, sorry.",
    "Bring me sap and scales; the alchemists pay well for anything green."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "They say the Gate is half shut. People are talking about going home. Not yet, but talking.",
+     "Bring me sap and scales; the alchemists pay well for anything green."
+    ]
+   }
   ]
  },
  {
@@ -255,6 +367,13 @@
     "after": "q_ver_heartwood",
     "lines": [
      "The jade light came back over Elderroot last night. Faint, but back. I cried, a little.",
+     "Newt slick for vital tonic, moth scale for focus. Bring me what you find."
+    ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Lattice went quiet for a whole day. Every artificer in Avelorn stopped work just to listen.",
      "Newt slick for vital tonic, moth scale for focus. Bring me what you find."
     ]
    }
@@ -274,6 +393,13 @@
      "It's sleeping. Breathing sap again, not spores. Thank you for putting it down gently.",
      "Root lift's working. Avelorn, or back up to Elderroot Expanse?"
     ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Root lift's working. Avelorn, or back up to Elderroot Expanse?"
+    ]
    }
   ]
  },
@@ -286,6 +412,19 @@
    "Sandcoils that just bask and don't strike are Gorged. Thirty of them on the dunes at most. The Guild has a bounty on every one.",
    "Graftwood Wilds runs from Lv 21 by this camp to Lv 30 in the east.",
    "Jadewing Glade (Lv 22-23): Jadewing Moth, Barkhound. Trellis Dunes (Lv 25-26): Vinecrawler, Sandcoil. Press Terraces (Lv 27-28): Pruning Tender, Ochre Jackal. Glass Burrows (Lv 29-30): Thistlehare, Glass Scarab."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "I was born in Sylvara. We left these woods two years ago and the machines kept gardening without us. They still prune. They prune people now.",
+     "The gardeners mend each other: drop the Pruning Tenders first or the whole press keeps getting back up.",
+     "Sandcoils that just bask and don't strike are Gorged. Thirty of them on the dunes at most. The Guild has a bounty on every one.",
+     "Graftwood Wilds runs from Lv 21 by this camp to Lv 30 in the east.",
+     "Jadewing Glade (Lv 22-23): Jadewing Moth, Barkhound. Trellis Dunes (Lv 25-26): Vinecrawler, Sandcoil. Press Terraces (Lv 27-28): Pruning Tender, Ochre Jackal. Glass Burrows (Lv 29-30): Thistlehare, Glass Scarab."
+    ]
+   }
   ]
  },
  {
@@ -294,6 +433,15 @@
   "lines": [
    "Thorns, moth dust, jackal bites. Graftwood has a little of everything. Hold still.",
    "Come back breathing. That's the only rule I care about."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Come back breathing. That's the only rule I care about."
+    ]
+   }
   ]
  },
  {
@@ -301,6 +449,14 @@
   "npc_id": "npc_ver_graftwood_wilds_transit",
   "lines": [
    "Avelorn, on the Guild. The Sylvarans all went through this crystal once. It remembers them, I think."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -309,6 +465,15 @@
   "lines": [
    "Elderroot Expanse is east of here, Lv 31 and up. The spores get thick past the ridge. Breathe through cloth.",
    "Or I can send you back to Avelorn."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Or I can send you back to Avelorn."
+    ]
+   }
   ]
  },
  {
@@ -320,6 +485,19 @@
    "The Tidehoppers that never jump at you are Gorged on sap and aether. Slow, tough, and worth more than a dozen of anything else here.",
    "Elderroot Expanse runs from Lv 31 by this camp to Lv 40 in the east.",
    "Root Ridge (Lv 32-32): Root Sentinel, Brass Kite. Antler Glade (Lv 34-35): Dune Sentry, Antlered Engine. Spore Drift (Lv 35-36): Sporebloat, Tidehopper. Basilisk Flats (Lv 37-38): Glasstail Basilisk, Gullwing Skimmer. Coral Steps (Lv 39-40): Gnomon Acolyte, Coral Claw."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "Look at an Antlered Engine some time before it charges you. Aethrion built that to look like our stags. It is beautiful. It will also kill you.",
+     "The spores in the Drift come from the Heartwood Engine below us. Its Regent has started breathing them out instead of sap.",
+     "The Tidehoppers that never jump at you are Gorged on sap and aether. Slow, tough, and worth more than a dozen of anything else here.",
+     "Elderroot Expanse runs from Lv 31 by this camp to Lv 40 in the east.",
+     "Root Ridge (Lv 32-32): Root Sentinel, Brass Kite. Antler Glade (Lv 34-35): Dune Sentry, Antlered Engine. Spore Drift (Lv 35-36): Sporebloat, Tidehopper. Basilisk Flats (Lv 37-38): Glasstail Basilisk, Gullwing Skimmer. Coral Steps (Lv 39-40): Gnomon Acolyte, Coral Claw."
+    ]
+   }
   ]
  },
  {
@@ -328,6 +506,15 @@
   "lines": [
    "Spore cough? Drink this. Don't ask what's in it.",
    "Drag them as far as you like, but come back breathing."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Drag them as far as you like, but come back breathing."
+    ]
+   }
   ]
  },
  {
@@ -335,6 +522,14 @@
   "npc_id": "npc_ver_elderroot_expanse_transit",
   "lines": [
    "Back to Avelorn, free. The Rootwardens send their thanks for every Wayfarer who comes this far."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -343,6 +538,15 @@
   "lines": [
    "Saffron Wastes are east, Lv 41 and up. Fill every waterskin you own.",
    "Or home to Avelorn. No shame in it."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Or home to Avelorn. No shame in it."
+    ]
+   }
   ]
  },
  {
@@ -351,6 +555,15 @@
   "lines": [
    "Water's dear out in the Wastes, and everything else costs too. Duskhar taught me to bargain; the Guild won't let me.",
    "Rations and tonics at Guild prices. Sell me your glass; the old observatory buyers still want it."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "They say the Gate is half shut. People are talking about going home. Not yet, but talking.",
+     "Rations and tonics at Guild prices. Sell me your glass; the old observatory buyers still want it."
+    ]
+   }
   ]
  },
  {
@@ -367,6 +580,13 @@
      "The mirrors stopped turning east. For one noon the Wastes were only hot, not burning.",
      "Jackal pelts render down for vital tonic. Scarab glass makes a decent focus draught."
     ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Lattice went quiet for a whole day. Every artificer in Avelorn stopped work just to listen.",
+     "Jackal pelts render down for vital tonic. Scarab glass makes a decent focus draught."
+    ]
    }
   ]
  },
@@ -376,6 +596,15 @@
   "lines": [
    "I wear these dark lenses for a reason. Don't look straight into the mirrors.",
    "The lift runs to Avelorn or back up to Pearl Coast."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "The lift runs to Avelorn or back up to Pearl Coast."
+    ]
+   }
   ]
  },
  {
@@ -387,6 +616,19 @@
    "Frost Mites that sit on the seep and ignore you are Gorged. Crack them. Thirty on the whole map and the Guild pays for each.",
    "Saffron Wastes runs from Lv 41 by this camp to Lv 50 in the east.",
    "Warden Causeway (Lv 42-42): Sun Warden, Polyp Spitter. Canal Shallows (Lv 44-44): Canal Strider, Kelp Tender. Frost Seep (Lv 45-47): Brine Automaton, Frost Mite, Dust Revenant. Colossus Sands (Lv 48-49): Rimehare, Sand-buried Colossus. Prism Reach (Lv 49-50): Hullborer, Prism Wisp."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "I tell time by shadows. Out here the shadows are wrong: the mirrors throw sunlight at night too. The Heliostat never sleeps.",
+     "The wrapped ones on the causeway were surveyors once. They sealed the Vault and died in it. Now they guard the road they built.",
+     "Frost Mites that sit on the seep and ignore you are Gorged. Crack them. Thirty on the whole map and the Guild pays for each.",
+     "Saffron Wastes runs from Lv 41 by this camp to Lv 50 in the east.",
+     "Warden Causeway (Lv 42-42): Sun Warden, Polyp Spitter. Canal Shallows (Lv 44-44): Canal Strider, Kelp Tender. Frost Seep (Lv 45-47): Brine Automaton, Frost Mite, Dust Revenant. Colossus Sands (Lv 48-49): Rimehare, Sand-buried Colossus. Prism Reach (Lv 49-50): Hullborer, Prism Wisp."
+    ]
+   }
   ]
  },
  {
@@ -395,6 +637,15 @@
   "lines": [
    "Heatstroke first, wounds second. Drink.",
    "Come back breathing, Wayfarer. The desert keeps what it kills."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Come back breathing, Wayfarer. The desert keeps what it kills."
+    ]
+   }
   ]
  },
  {
@@ -402,6 +653,14 @@
   "npc_id": "npc_sol_saffron_wastes_transit",
   "lines": [
    "Avelorn? Gladly. Anywhere cooler than this."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -410,6 +669,15 @@
   "lines": [
    "Pearl Coast is east, Lv 51 and up. The Heliostat Vault opens under its cliffs, if you ever find the Key Prism.",
    "I can send you back to Avelorn."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "I can send you back to Avelorn."
+    ]
+   }
   ]
  },
  {
@@ -418,6 +686,15 @@
   "lines": [
    "My ship went down with the harbour. Now I sell tonics at Guild prices, plus the cost of shipping them.",
    "Bring me what the reef gives you. Inland buyers pay well for anything from the sea."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "They say the Gate is half shut. People are talking about going home. Not yet, but talking.",
+     "Bring me what the reef gives you. Inland buyers pay well for anything from the sea."
+    ]
+   }
   ]
  },
  {
@@ -432,6 +709,13 @@
     "after": "q_tha_drowned_relay",
     "lines": [
      "The sea's quiet at night now. No song. My mother would have liked to hear that.",
+     "Kelp, hopper tendon, medusa jelly: bring them and I'll boil you something useful."
+    ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Lattice went quiet for a whole day. Every artificer in Avelorn stopped work just to listen.",
      "Kelp, hopper tendon, medusa jelly: bring them and I'll boil you something useful."
     ]
    }
@@ -456,6 +740,16 @@
      "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
      "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
     ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "The song stopped. I put my ear to the water all night and heard only water. It'll start again, but for now: quiet.",
+     "The Pearl Skates are still Gorged and the bounty still stands.",
+     "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
+     "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
+    ]
    }
   ]
  },
@@ -465,6 +759,15 @@
   "lines": [
    "Salt water cleans a wound, but it stings like a Squall Ray. Here, let me.",
    "Drag them as far as you like, but come back breathing."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Drag them as far as you like, but come back breathing."
+    ]
+   }
   ]
  },
  {
@@ -472,6 +775,14 @@
   "npc_id": "npc_tha_pearl_coast_transit",
   "lines": [
    "The crystal's damp, but it works. Avelorn, on the Guild."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -480,6 +791,15 @@
   "lines": [
    "Frostfire Divide's east, Lv 61 and up. Ice on one side, fire on the other, and the Signalmind surfaces in the vents.",
    "Or I send you home. Your choice, lad, lass, whoever you are."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Or I send you home. Your choice, lad, lass, whoever you are."
+    ]
+   }
   ]
  },
  {
@@ -488,6 +808,15 @@
   "lines": [
    "Rations and tonics, Guild prices plus the cost of hauling them down a mountain.",
    "Anything crystal sells. Vaelspire found the first Aetherite, and we still can't leave it alone."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "They say the Gate is half shut. People are talking about going home. Not yet, but talking.",
+     "Anything crystal sells. Vaelspire found the first Aetherite, and we still can't leave it alone."
+    ]
+   }
   ]
  },
  {
@@ -504,6 +833,13 @@
      "You read Callow's warnings. Three hundred years late, but someone finally read them.",
      "Hare haunch, mite gel, wisp dust. I'll make rations and tonics from your materials."
     ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Lattice went quiet for a whole day. Every artificer in Avelorn stopped work just to listen.",
+     "Hare haunch, mite gel, wisp dust. I'll make rations and tonics from your materials."
+    ]
    }
   ]
  },
@@ -513,6 +849,15 @@
   "lines": [
    "I still catalogue the books no one can read. Somebody should.",
    "Going up? Back to Cinder Expanse or all the way to Avelorn. The lancers past the index gallery shoot far."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Going up? Back to Cinder Expanse or all the way to Avelorn. The lancers past the index gallery shoot far."
+    ]
+   }
   ]
  },
  {
@@ -534,6 +879,16 @@
      "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
      "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
     ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "A blue scarf. You found it in the Archive. He's not coming back, is he. Thank you for bringing it.",
+     "The Divide is no safer for it. Keep your blade close.",
+     "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
+     "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
+    ]
    }
   ]
  },
@@ -543,6 +898,15 @@
   "lines": [
    "Frostbite on one hand, burns on the other. Only on the Divide.",
    "Come back breathing."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Come back breathing."
+    ]
+   }
   ]
  },
  {
@@ -550,6 +914,14 @@
   "npc_id": "npc_cry_frostfire_divide_transit",
   "lines": [
    "Avelorn. The crystal hums louder out here; it doesn't like the cold either."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -558,6 +930,15 @@
   "lines": [
    "Cinder Expanse is east, Lv 71 and up. The Cryocore Archive lies under it, under the ash.",
    "Or back to Avelorn."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Or back to Avelorn."
+    ]
+   }
   ]
  },
  {
@@ -566,6 +947,15 @@
   "lines": [
    "Rations and tonics, hauled a long way. Heat spoils everything, so I charge what it costs to keep them cool.",
    "Bring me Emberfall scrap; somebody always wants it."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "They say the Gate is half shut. People are talking about going home. Not yet, but talking.",
+     "Bring me Emberfall scrap; somebody always wants it."
+    ]
+   }
   ]
  },
  {
@@ -582,6 +972,13 @@
      "The furnaces in the Expanse went cold for an hour after Kiln Prime fell. An hour. First time since the Sundering.",
      "Keep your Living Embers. You'll need them at the Gate."
     ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Lattice went quiet for a whole day. Every artificer in Avelorn stopped work just to listen.",
+     "Keep your Living Embers. You'll need them at the Gate."
+    ]
    }
   ]
  },
@@ -594,6 +991,19 @@
    "Null Wisps that just drift and drink the light are Gorged. Pop them. The Guild pays.",
    "Cinder Expanse runs from Lv 71 by this camp to Lv 80 in the east.",
    "Tender Yards (Lv 71-71): Crucible Tender. Skink Flow (Lv 74-74): Vent Skink. Spitter Vents (Lv 75-76): Magma Spitter, Null Wisp. Knight's Road (Lv 77-77): Furnace Knight, Gutter Lurk. Rivet Moraine (Lv 79-80): Rivet Scrapling, Shade Carrier, Nullbloom."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "I worked the foundries in Cindervale. Kiln Prime used to answer us. Now it answers someone else, and it's walking.",
+     "Crucible Tenders weld the hounds and knights back together. Kill the tenders first or you'll fight the same knight three times.",
+     "Null Wisps that just drift and drink the light are Gorged. Pop them. The Guild pays.",
+     "Cinder Expanse runs from Lv 71 by this camp to Lv 80 in the east.",
+     "Tender Yards (Lv 71-71): Crucible Tender. Skink Flow (Lv 74-74): Vent Skink. Spitter Vents (Lv 75-76): Magma Spitter, Null Wisp. Knight's Road (Lv 77-77): Furnace Knight, Gutter Lurk. Rivet Moraine (Lv 79-80): Rivet Scrapling, Shade Carrier, Nullbloom."
+    ]
+   }
   ]
  },
  {
@@ -602,6 +1012,15 @@
   "lines": [
    "Burn salve, burn salve, more burn salve. Hold out your arm.",
    "Drag them as far as you like, but come back breathing."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Drag them as far as you like, but come back breathing."
+    ]
+   }
   ]
  },
  {
@@ -609,6 +1028,14 @@
   "npc_id": "npc_emb_cinder_expanse_transit",
   "lines": [
    "Avelorn on the Guild. Shake the ash off first, the crystal sneezes."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -617,6 +1044,15 @@
   "lines": [
    "East is the Veil Rift, Lv 81 and up. Don't look into the tear for long. Idris did, and he still sees violet.",
    "Or home. I would."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Or home. I would."
+    ]
+   }
   ]
  },
  {
@@ -625,6 +1061,15 @@
   "lines": [
    "I was the last one out of Umbracrest. Locked the gate behind me. Funny thing to do in a dead city.",
    "Rations and tonics, brought in on the transit. Bring me lattice scrap."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "They say the Gate is half shut. People are talking about going home. Not yet, but talking.",
+     "Rations and tonics, brought in on the transit. Bring me lattice scrap."
+    ]
+   }
   ]
  },
  {
@@ -687,6 +1132,16 @@
      "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
      "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
     ]
+   },
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+     "The key's gone, then. Ilvane has it, or had it. The Executors guard the rest at the Gate.",
+     "The Sparkwings are still Gorged on the dishes. Bounty's posted.",
+     "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
+     "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
+    ]
    }
   ]
  },
@@ -696,6 +1151,15 @@
   "lines": [
    "Lie down. If you see violet at the edge of your eyes, tell me. Don't tell Idris; he gets excited.",
    "Come back breathing."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Come back breathing."
+    ]
+   }
   ]
  },
  {
@@ -703,6 +1167,14 @@
   "npc_id": "npc_noc_veil_rift_transit",
   "lines": [
    "Avelorn. The crystal won't hold a line any further east than this one. The Lattice drowns it out."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -711,6 +1183,15 @@
   "lines": [
    "Meridian Gate is east, Lv 91 and up. The end of the road.",
    "Or I send you home."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "Or I send you home."
+    ]
+   }
   ]
  },
  {
@@ -750,6 +1231,15 @@
   "lines": [
    "This is the last Hospice lantern on the road. I keep it lit so you can find your way back to it.",
    "Come back breathing. Please."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+     "Come back breathing. Please."
+    ]
+   }
   ]
  },
  {
@@ -757,6 +1247,14 @@
   "npc_id": "npc_noc_meridian_gate_transit",
   "lines": [
    "Avelorn. It's a long way. The crystal manages, just."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved."
+    ]
+   }
   ]
  },
  {
@@ -765,6 +1263,15 @@
   "lines": [
    "They call me the Last Lantern. Nothing is east of me but the Lattice.",
    "I can send you back to Avelorn."
+  ],
+  "stages": [
+   {
+    "after": "q_noc_lattice_heart",
+    "lines": [
+     "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+     "I can send you back to Avelorn."
+    ]
+   }
   ]
  }
 ]

@@ -1969,6 +1969,69 @@
   }
  },
  {
+  "id": "itm_0950",
+  "name": "Survey Page I: Hollowroot",
+  "category": "quest",
+  "rarity": "rare",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "Day 12. The Warden pulls the deep water east instead of up into the fields. There is a sigil on the main valve, fresh brass, Collegium work. Ilvane says it is old. It is not old. The pump pulls the wrong way. Someone turned the valve."
+ },
+ {
+  "id": "itm_0951",
+  "name": "Survey Page II: The Heartwood Engine",
+  "category": "quest",
+  "rarity": "rare",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "Day 40. The Regent breathes spores into its own forest. The Rootwardens say it weeps sap at night. Ilvane says trees can't feel. I'm not sure any more. Another sigil on the pump-heart. She was alone with it for an hour while I mapped the conduits."
+ },
+ {
+  "id": "itm_0952",
+  "name": "Survey Page III: The Heliostat Vault",
+  "category": "quest",
+  "rarity": "rare",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "Day 77. Every mirror in Solenia turns to one point, and that point sends its light east. All the light goes east. None of it was ever meant for us. I asked Ilvane where east ends. She said: \"Where it began.\""
+ },
+ {
+  "id": "itm_0953",
+  "name": "Survey Page IV: The Drowned Signal",
+  "category": "quest",
+  "rarity": "rare",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "Day 120. The Signalmind's song is the Quickening. Every construct on the coast moves to its rhythm. It isn't talking to us. It's talking to the Gate. Ilvane hums along. She thinks I don't hear."
+ },
+ {
+  "id": "itm_0954",
+  "name": "Survey Page V: Callow's Warning",
+  "category": "quest",
+  "rarity": "rare",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "Day 161. I read Archon Callow's warning in the Archive: the Gate needs the six Hearts, and whoever stands in it becomes its voice. Ilvane read it over my shoulder and smiled. I am writing this where she can't see. Sigrun Vale's brother came down with the Vaelspire researchers. He stayed to hold the vault door."
+ },
+ {
+  "id": "itm_0955",
+  "name": "Survey Page VI: The Keysigil",
+  "category": "quest",
+  "rarity": "rare",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "Day 203. Kiln Prime has forged the Keysigil, and it is walking. Ilvane is gone, and the key with her. She is two days ahead of me. If anyone finds this: tell Wenna I'm sorry about the knee, and that she was right about everything."
+ },
+ {
+  "id": "itm_0956",
+  "name": "Survey Page VII: The Gate",
+  "category": "quest",
+  "rarity": "rare",
+  "sell_price": 0,
+  "stack_max": 1,
+  "description": "Last page. She stands in the Gate and the Sovereign speaks with her voice. I have driven the Guild ward into the threshold. It will hold the door half shut for a while, maybe years, as long as I hold the ward. Survey, clear, report. Report: I held. Whoever reads this, finish it."
+ },
+ {
   "id": "itm_1000",
   "name": "Reset Scroll",
   "category": "consumable",

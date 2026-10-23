@@ -243,6 +243,10 @@
     {
      "item_id": "itm_0076",
      "qty": 10
+    },
+    {
+     "item_id": "itm_0950",
+     "qty": 1
     }
    ]
   },
@@ -260,7 +264,7 @@
    {
     "type": "kill",
     "monster_id": "mob_0012",
-    "count": 40
+    "count": 10
    }
   ],
   "rewards": {
@@ -273,7 +277,7 @@
     }
    ]
   },
-  "summary": "Bounty: the Gorged Graftlings rooting in Reed Marsh are slow, tough and full of aether. Bring down forty."
+  "summary": "Bounty: the Gorged Graftlings rooting in Reed Marsh are slow, tough and full of aether. Claim the bounty."
  },
  {
   "id": "q_ver_mossbridge",
@@ -502,6 +506,10 @@
     {
      "item_id": "itm_0118",
      "qty": 1
+    },
+    {
+     "item_id": "itm_0951",
+     "qty": 1
     }
    ]
   },
@@ -519,7 +527,7 @@
    {
     "type": "kill",
     "monster_id": "mob_0016",
-    "count": 40
+    "count": 10
    }
   ],
   "rewards": {
@@ -532,7 +540,7 @@
     }
    ]
   },
-  "summary": "Bounty: the Gorged Sandcoils basking on the Trellis Dunes barely notice you, until struck. Bring down forty."
+  "summary": "Bounty: the Gorged Sandcoils basking on the Trellis Dunes barely notice you, until struck. Claim the bounty."
  },
  {
   "id": "q_sol_caravan",
@@ -733,6 +741,10 @@
     {
      "item_id": "itm_0148",
      "qty": 1
+    },
+    {
+     "item_id": "itm_0952",
+     "qty": 1
     }
    ]
   },
@@ -750,7 +762,7 @@
    {
     "type": "kill",
     "monster_id": "mob_0020",
-    "count": 60
+    "count": 15
    }
   ],
   "rewards": {
@@ -767,7 +779,7 @@
     }
    ]
   },
-  "summary": "Bounty: the Gorged Tidehoppers of the Spore Drift sit fat on sap and aether. Bring down sixty."
+  "summary": "Bounty: the Gorged Tidehoppers of the Spore Drift sit fat on sap and aether. Claim the bounty."
  },
  {
   "id": "q_tha_saltwind",
@@ -919,7 +931,7 @@
    {
     "type": "kill",
     "monster_id": "mob_0064",
-    "count": 80
+    "count": 20
    }
   ],
   "rewards": {
@@ -996,6 +1008,10 @@
     {
      "item_id": "itm_0178",
      "qty": 1
+    },
+    {
+     "item_id": "itm_0953",
+     "qty": 1
     }
    ]
   },
@@ -1013,7 +1029,7 @@
    {
     "type": "kill",
     "monster_id": "mob_0024",
-    "count": 60
+    "count": 15
    }
   ],
   "rewards": {
@@ -1030,7 +1046,7 @@
     }
    ]
   },
-  "summary": "Bounty: the Gorged Frost Mites at Frost Seep feed and ignore you, until struck. Bring down sixty."
+  "summary": "Bounty: the Gorged Frost Mites at Frost Seep feed and ignore you, until struck. Claim the bounty."
  },
  {
   "id": "q_cry_frostline",
@@ -1186,7 +1202,7 @@
    {
     "type": "kill",
     "monster_id": "mob_0075",
-    "count": 40
+    "count": 10
    },
    {
     "type": "collect",
@@ -1267,6 +1283,10 @@
     },
     {
      "item_id": "itm_0208",
+     "qty": 1
+    },
+    {
+     "item_id": "itm_0954",
      "qty": 1
     }
    ]
@@ -1518,6 +1538,10 @@
     {
      "item_id": "itm_0076",
      "qty": 12
+    },
+    {
+     "item_id": "itm_0955",
+     "qty": 1
     }
    ]
   },
@@ -1535,7 +1559,7 @@
    {
     "type": "kill",
     "monster_id": "mob_0032",
-    "count": 60
+    "count": 15
    }
   ],
   "rewards": {
@@ -1548,7 +1572,7 @@
     }
    ]
   },
-  "summary": "Bounty: the Gorged Null Wisps of Cinder Expanse drift and drink the light. Put out sixty."
+  "summary": "Bounty: the Gorged Null Wisps of Cinder Expanse drift and drink the light. Claim the bounty."
  },
  {
   "id": "q_noc_dusk_verge",
@@ -1695,12 +1719,12 @@
    {
     "type": "kill",
     "monster_id": "mob_0095",
-    "count": 60
+    "count": 15
    },
    {
     "type": "kill",
     "monster_id": "mob_0094",
-    "count": 120
+    "count": 30
    }
   ],
   "rewards": {
@@ -1777,9 +1801,22 @@
     {
      "item_id": "itm_0076",
      "qty": 15
+    },
+    {
+     "item_id": "itm_0956",
+     "qty": 1
     }
    ]
   },
-  "summary": "Final chapter. Ilvane Thorne went down to finish the Ascension; Aldric Venn went after her. Silence the Lattice Sovereign and bring the last page home to Wenna Lark."
+  "summary": "Final chapter. Ilvane Thorne went down to finish the Ascension; Aldric Venn went after her. Silence the Lattice Sovereign and bring the last page home to Wenna Lark.",
+  "ending": {
+   "title": "The Long Watch",
+   "lines": [
+    "The Lattice Sovereign falls silent, and with it the voice that was once Ilvane Thorne. Aldric Venn's ward breaks as the Gate swings half shut; three years of holding the door are over.",
+    "Across Elyndra the Hearts sleep. For a day the machines stand still, the mirrors stop turning east, and the sea is quiet. The Veil Rift stops growing.",
+    "But a Heart cannot die, only sleep. Wenna Lark writes Aldric's name on the Guild wall and yours beneath it, first on the roster of the Long Watch: the Wayfarers who go down, again and again, to keep the Gate from opening.",
+    "Survey. Clear. Report."
+   ]
+  }
  }
 ]

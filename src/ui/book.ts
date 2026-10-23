@@ -55,6 +55,9 @@ async function drawPortrait(canvas: HTMLCanvasElement, c: ClientContent, m: Mons
 /** The Monster Book window (B): every monster, its habitat and, once recorded, its story. */
 export class MonsterBook {
   kills: Record<string, number> = {};
+  /** The bag (item id -> count): which of Aldric's survey pages the player holds. */
+  inventory: Record<string, number> = {};
+  private tab: 'monsters' | 'pages' = 'monsters';
   private where = 'all';
   private search = '';
   private selected: string | null = null;
@@ -65,6 +68,32 @@ export class MonsterBook {
     const fields = [...c.maps.values()].filter(m => m.type === 'field').sort((a, b) => a.recommended_level_min - b.recommended_level_min);
     const dungeons = [...c.maps.values()].filter(m => m.type === 'dungeon').sort((a, b) => a.recommended_level_min - b.recommended_level_min);
     this.order = [...fields, ...dungeons].sort((a, b) => a.recommended_level_min - b.recommended_level_min || (a.type === 'field' ? -1 : 1)).map(m => m.id);
+  }
+
+  setInventory(items: Record<string, number>) {
+    this.inventory = items;
+    if (!document.getElementById('book-win')!.hidden && this.tab === 'pages') this.render();
+  }
+
+  /** Aldric Venn's survey pages (content/world.ts surveyPageId: itm_0950 and up). */
+  private pages() {
+    const out = [];
+    for (let i = 0; ; i++) { const it = this.c.items.get(`itm_${String(950 + i).padStart(4, '0')}`); if (!it) break; out.push(it); }
+    return out;
+  }
+
+  private renderPages(win: HTMLElement) {
+    const box = win.querySelector('#book-pages')!; box.replaceChildren();
+    const pages = this.pages(), held = pages.filter(p => (this.inventory[p.id] ?? 0) > 0).length;
+    win.querySelector('#book-count')!.textContent = `${held} / ${pages.length} pages`;
+    box.append(el('p', 'muted book-pages-intro', "Chief Surveyor Aldric Venn left a page of his survey by each Heart. Silence a Heart to recover the page beside it."));
+    pages.forEach((p, i) => {
+      const have = (this.inventory[p.id] ?? 0) > 0;
+      const card = el('article', 'book-page' + (have ? '' : ' missing'));
+      card.append(el('p', 'eyebrow', i === pages.length - 1 ? 'THE LAST PAGE' : `CHAPTER ${i + 1}`), el('h3', '', have ? p.name : 'A page not yet found'));
+      card.append(el('p', have ? 'book-text book-story' : 'muted small', have ? p.description : 'Still lies beside a Heart further east.'));
+      box.append(card);
+    });
   }
 
   setKills(kills: Record<string, number>) {
@@ -79,6 +108,15 @@ export class MonsterBook {
 
   render() {
     const win = document.getElementById('book-win')!;
+    for (const [id, tab] of [['book-tab-monsters', 'monsters'], ['book-tab-pages', 'pages']] as const) {
+      const b = win.querySelector<HTMLButtonElement>('#' + id)!;
+      b.classList.toggle('active', this.tab === tab); b.setAttribute('aria-selected', String(this.tab === tab));
+      b.onclick = () => { this.tab = tab; this.render(); };
+    }
+    win.querySelector<HTMLElement>('.book-filters')!.hidden = this.tab !== 'monsters';
+    win.querySelector<HTMLElement>('.book-layout')!.hidden = this.tab !== 'monsters';
+    win.querySelector<HTMLElement>('#book-pages')!.hidden = this.tab !== 'pages';
+    if (this.tab === 'pages') { win.querySelector<HTMLElement>('#book-place')!.hidden = true; this.renderPages(win); return; }
     const all = this.monsters();
     const recorded = all.filter(m => (this.kills[m.id] ?? 0) > 0).length;
     win.querySelector('#book-count')!.textContent = `${recorded} / ${all.length} recorded`;

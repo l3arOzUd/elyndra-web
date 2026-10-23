@@ -198,6 +198,7 @@ export class Game {
       }
       case "quests": this.hud.setQuests(m.quests); break;
       case "book": this.hud.book.setKills(m.kills); break;
+      case "story": { const end = this.c.quests.get(m.quest)?.ending; if (m.event === "ending" && end) this.hud.showEnding(end.title, end.lines); break; }
       case "sheet": this.hud.setSheet(m); break;
       case "npc": this.dialog.show(m); break;
       case "notice": this.hud.log(m.text, m.kind); break;

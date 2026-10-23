@@ -72,6 +72,7 @@ async function main() {
   hud.setQuests(quests);
   // Sample Monster Book: a few Dawnmeadow kills, one Gorged Lunari and the first boss.
   hud.book.setKills({ mob_0001: 412, mob_0002: 88, mob_0003: 26, mob_0004: 3, mob_0005: 9, mob_0036: 1 });
+  hud.book.setInventory({ ...hud.inventory, itm_0950: 1, itm_0951: 1 });
   hud.log('A new chapter begins in Lumeris.');
   hud.log('Obtained Moss Fiber ×3', 'info');
   hud.log('Quest progress: the meadow is growing quieter.', 'info');
@@ -109,7 +110,7 @@ async function main() {
   const guild = baseNpc('guild_registrar'); guild.lines = ['Lumeris needs people with a little courage. I have a few tasks that might suit you.']; guild.offer = [quests[0]]; guild.ready = [quests[1].id];
   const services: Record<string, MsgOf<'npc'>> = { shop:merchant, craft, travel, healer, guild };
   const toolbar = document.createElement('nav'); toolbar.className = 'preview-toolbar'; toolbar.setAttribute('aria-label', 'Interface preview');
-  toolbar.innerHTML = '<div><strong>INTERFACE ATELIER</strong><small>Sample data · no server changes</small></div><select id="preview-mode" aria-label="Preview window"><option value="hud">HUD / In-game</option><option value="bag">Satchel</option><option value="equipment">Equipment</option><option value="character">Status</option><option value="skills">Skills</option><option value="gear">Gear detail</option><option value="journal">Quest journal</option><option value="book">Monster Book</option><option value="mapcard">Map entry card</option><option value="shop">Shop / Buy & sell</option><option value="craft">Crafting</option><option value="travel">Travel</option><option value="healer">Healer</option><option value="guild">NPC quests</option><option value="menu">Camp menu</option><option value="login">Login</option><option value="disconnected">Disconnected</option><option value="inspector">Animation studio</option><option value="debug">Diagnostics</option></select><a href="/">Play ↗</a>';
+  toolbar.innerHTML = '<div><strong>INTERFACE ATELIER</strong><small>Sample data · no server changes</small></div><select id="preview-mode" aria-label="Preview window"><option value="hud">HUD / In-game</option><option value="bag">Satchel</option><option value="equipment">Equipment</option><option value="character">Status</option><option value="skills">Skills</option><option value="gear">Gear detail</option><option value="journal">Quest journal</option><option value="book">Monster Book</option><option value="mapcard">Map entry card</option><option value="pages">Survey pages</option><option value="ending">Ending</option><option value="shop">Shop / Buy & sell</option><option value="craft">Crafting</option><option value="travel">Travel</option><option value="healer">Healer</option><option value="guild">NPC quests</option><option value="menu">Camp menu</option><option value="login">Login</option><option value="disconnected">Disconnected</option><option value="inspector">Animation studio</option><option value="debug">Diagnostics</option></select><a href="/">Play ↗</a>';
   $('view').append(toolbar);
   const open = (mode: string) => {
     ($('preview-mode') as HTMLSelectElement).value = mode;
@@ -125,6 +126,8 @@ async function main() {
       (document.querySelector('#inventory .item-cell.rarity-rare') as HTMLButtonElement | null)?.click();
     } else if (mode === 'journal') hud.toggle('journal-win', true);
     else if (mode === 'book') hud.toggle('book-win', true);
+    else if (mode === 'pages') { hud.toggle('book-win', true); document.getElementById('book-tab-pages')!.click(); }
+    else if (mode === 'ending') { const q = [...c.quests.values()].find(x => x.ending); if (q?.ending) hud.showEnding(q.ending.title, q.ending.lines); }
     else if (mode === 'mapcard') { const m = c.maps.get('lum_fld_01')!; hud.showMapCard(m.name, 'Lumeris · Lv 1–10', m.intro ?? ''); }
     else if (mode === 'menu') hud.toggle('menu-win', true);
     else if (mode === 'inspector') $('inspector').hidden = false;

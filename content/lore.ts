@@ -340,7 +340,7 @@ export const QUEST_SUMMARY: Record<string, string> = {
   q_lum_moonbrook: "Reedstalkers spit from range among the Brookfin on the banks. Pull the spitters into the pack, then clear both.",
   q_lum_orchard: "The southern orchard is rotting from the roots. Clear the Rotroot and bring back rotwood: the rot leads down to the pump-house cave.",
   q_lum_hollowroot: "Chapter 1. Something below Hollowroot pulls the water the wrong way. Silence the Hollowroot Warden and carry what you find to Wenna Lark.",
-  q_ver_intro: "Bounty: the Gorged Graftlings rooting in Reed Marsh are slow, tough and full of aether. Bring down forty.",
+  q_ver_intro: "Bounty: the Gorged Graftlings rooting in Reed Marsh are slow, tough and full of aether. Claim the bounty.",
   q_ver_mossbridge: "Visit Elderroot Expanse, then thin the Mossback Newts that croak whole banks into a fight. Newt Slick makes the Sylvaran tonic.",
   q_ver_canopy: "Jadewing Moths shoot from above while Barkhound packs rush in. Pull the moths into the melee and cleave the lot.",
   q_ver_graftwood: "Vine-driven Vinecrawlers still tend the Trellis Dunes. Your first construct horde: train them down the rows and bring back their fragments.",
@@ -348,14 +348,14 @@ export const QUEST_SUMMARY: Record<string, string> = {
   q_ver_elderroot: "Root Sentinel trains on the ridges, then two Antlered Engines in the glade: Verdantis's first elite fight.",
   q_ver_spore_basin: "The Drift's spores come from the Heartwood Engine's vents. Thin the Sporebloats and bring their membranes as proof.",
   q_ver_heartwood: "Chapter 2. The Heartwood Regent breathes spores where it once breathed light. Silence it beneath Elderroot and report to Wenna Lark.",
-  q_sol_intro: "Bounty: the Gorged Sandcoils basking on the Trellis Dunes barely notice you, until struck. Bring down forty.",
+  q_sol_intro: "Bounty: the Gorged Sandcoils basking on the Trellis Dunes barely notice you, until struck. Claim the bounty.",
   q_sol_caravan: "Visit Graftwood Wilds, then clear the Brass Kites shooting from Elderroot's Root Ridge and the Glass Scarabs of Graftwood's Glass Burrows.",
   q_sol_glass_flats: "A big, slow construct train of Dune Sentries, then the Glasstail Basilisk packs: Elderroot's hardest pulls.",
   q_sol_sun_dial: "Gnomon Acolytes on Elderroot's Coral Steps keep the old machines running; Sun Wardens hold the Saffron causeway. Kill the acolytes first.",
   q_sol_aqueduct: "Canal Striders skate the last water in the Wastes and dart at anything on the banks. Clear the shallows and bring back their legs.",
   q_sol_causeway: "Clear the Dust Revenants, the surveyors who died sealing the Vault, and bring down two Colossi. The Guild hands over the Key Prism.",
   q_sol_heliostat: "Chapter 3. Every mirror in Solenia points east. Silence the Heliostat Sovereign in the Vault beneath Pearl Coast and report to Wenna Lark.",
-  q_tha_intro: "Bounty: the Gorged Tidehoppers of the Spore Drift sit fat on sap and aether. Bring down sixty.",
+  q_tha_intro: "Bounty: the Gorged Tidehoppers of the Spore Drift sit fat on sap and aether. Claim the bounty.",
   q_tha_saltwind: "Gullwing Skimmers dive from the cliffs and Coral Claws hold the flats. Pull the flocks into the crabs and clear both.",
   q_tha_coral_reach: "Visit Elderroot Expanse, then silence the Polyp Spitters on the causeway and bring back their barbs.",
   q_tha_tidewheel: "Brine Automatons pump at Frost Seep and Kelp Tenders mend each other in the Canal Shallows. Kill the tenders first, and recover three automaton cores.",
@@ -363,7 +363,7 @@ export const QUEST_SUMMARY: Record<string, string> = {
   q_tha_pearl_flats: "Break the Relay Guardians' sonar line, then claim the bounty on the Gorged Pearl Skates of the pearl beds. Their pings point to the drowned relay.",
   q_tha_stormbreak: "Clear the Squall Rays from the point and the Thunderhull Turtles from the coils so a crew can reach the intake shaft.",
   q_tha_drowned_relay: "Chapter 4. The Signalmind's song is the Quickening itself. Silence it where it surfaces at Frostfire Divide's Sentry Vents and report to Wenna Lark.",
-  q_cry_intro: "Bounty: the Gorged Frost Mites at Frost Seep feed and ignore you, until struck. Bring down sixty.",
+  q_cry_intro: "Bounty: the Gorged Frost Mites at Frost Seep feed and ignore you, until struck. Claim the bounty.",
   q_cry_frostline: "Rimehares charge out of the drifts in Colossus Sands and Prism Wisps beam from the mirrors of Prism Reach. Clear both.",
   q_cry_blueglass: "Visit the Saffron Wastes, then take on the Glassback Ram flocks. Their fleece insulates the Vaelspire labs.",
   q_cry_snowcoil: "The Frostcoil Serpent horde is Pearl Coast's signature train. Three or four full pulls, and the Icegears with them.",
@@ -379,7 +379,7 @@ export const QUEST_SUMMARY: Record<string, string> = {
   q_emb_ironfall: "Break the Furnace Knight patrols and recover the rivets the Scraplings stole from the bridges.",
   q_emb_red_crucible: "Clear the pour channels and the brute pens. The stokers' tracks lead up to Kiln Prime's heights.",
   q_emb_furnace_zero: "Chapter 6. Kiln Prime forged the Keysigil, then walked out of the ground. Silence it on the Veil Rift's Stoker Heights and report to Wenna Lark.",
-  q_noc_intro: "Bounty: the Gorged Null Wisps of Cinder Expanse drift and drink the light. Put out sixty.",
+  q_noc_intro: "Bounty: the Gorged Null Wisps of Cinder Expanse drift and drink the light. Claim the bounty.",
   q_noc_dusk_verge: "Gutter Lurk packs rush out from under the old road. Clear them and bring back Null Wisp fragments for the Umbracrest tonic.",
   q_noc_nullgarden: "Visit Meridian Gate, then burn the Nullbloom beds and stop the Shade Carriers on the moraine.",
   q_noc_silent_tracks: "Coupler Mite crews in the yards, Lattice Drones on the gantries: pull the drones into the mite packs.",
@@ -635,4 +635,38 @@ export const STORY_STAGES: Record<string, { after: string; lines: string[] }[]> 
       "Back up? Avelorn or the Gate. The Sovereign will wake again; I'll keep the lift for whoever goes down next.",
     ] },
   ],
+};
+
+/** Aldric Venn's survey pages: a quest item from each chapter's boss quest, readable in the
+ * inventory and in the Monster Book's Survey tab. Ids itm_0950 and up, in story order. */
+export const SURVEY_PAGES: { quest: string; title: string; text: string }[] = [
+  { quest: "q_lum_hollowroot", title: "Survey Page I: Hollowroot", text: "Day 12. The Warden pulls the deep water east instead of up into the fields. There is a sigil on the main valve, fresh brass, Collegium work. Ilvane says it is old. It is not old. The pump pulls the wrong way. Someone turned the valve." },
+  { quest: "q_ver_heartwood", title: "Survey Page II: The Heartwood Engine", text: "Day 40. The Regent breathes spores into its own forest. The Rootwardens say it weeps sap at night. Ilvane says trees can't feel. I'm not sure any more. Another sigil on the pump-heart. She was alone with it for an hour while I mapped the conduits." },
+  { quest: "q_sol_heliostat", title: "Survey Page III: The Heliostat Vault", text: "Day 77. Every mirror in Solenia turns to one point, and that point sends its light east. All the light goes east. None of it was ever meant for us. I asked Ilvane where east ends. She said: \"Where it began.\"" },
+  { quest: "q_tha_drowned_relay", title: "Survey Page IV: The Drowned Signal", text: "Day 120. The Signalmind's song is the Quickening. Every construct on the coast moves to its rhythm. It isn't talking to us. It's talking to the Gate. Ilvane hums along. She thinks I don't hear." },
+  { quest: "q_cry_cryocore", title: "Survey Page V: Callow's Warning", text: "Day 161. I read Archon Callow's warning in the Archive: the Gate needs the six Hearts, and whoever stands in it becomes its voice. Ilvane read it over my shoulder and smiled. I am writing this where she can't see. Sigrun Vale's brother came down with the Vaelspire researchers. He stayed to hold the vault door." },
+  { quest: "q_emb_furnace_zero", title: "Survey Page VI: The Keysigil", text: "Day 203. Kiln Prime has forged the Keysigil, and it is walking. Ilvane is gone, and the key with her. She is two days ahead of me. If anyone finds this: tell Wenna I'm sorry about the knee, and that she was right about everything." },
+  { quest: "q_noc_lattice_heart", title: "Survey Page VII: The Gate", text: "Last page. She stands in the Gate and the Sovereign speaks with her voice. I have driven the Guild ward into the threshold. It will hold the door half shut for a while, maybe years, as long as I hold the ward. Survey, clear, report. Report: I held. Whoever reads this, finish it." },
+];
+
+/** The ending, shown once when the final quest is turned in. */
+export const ENDING = {
+  quest: "q_noc_lattice_heart",
+  title: "The Long Watch",
+  lines: [
+    "The Lattice Sovereign falls silent, and with it the voice that was once Ilvane Thorne. Aldric Venn's ward breaks as the Gate swings half shut; three years of holding the door are over.",
+    "Across Elyndra the Hearts sleep. For a day the machines stand still, the mirrors stop turning east, and the sea is quiet. The Veil Rift stops growing.",
+    "But a Heart cannot die, only sleep. Wenna Lark writes Aldric's name on the Guild wall and yours beneath it, first on the roster of the Long Watch: the Wayfarers who go down, again and again, to keep the Gate from opening.",
+    "Survey. Clear. Report.",
+  ],
+};
+
+/** What everyone else says once the story is over (the final quest is done). */
+export const AFTER_ENDING: Record<"scout" | "healer" | "teleporter" | "merchant" | "craftsman" | "guard", string> = {
+  scout: "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
+  healer: "The Hospice lit every lantern on the road the night the Sovereign fell. Sit; you've earned the quiet.",
+  teleporter: "The crystal hummed all night when the Sovereign went silent. Like it was relieved.",
+  merchant: "They say the Gate is half shut. People are talking about going home. Not yet, but talking.",
+  craftsman: "The Lattice went quiet for a whole day. Every artificer in Avelorn stopped work just to listen.",
+  guard: "The Long Watch, they're calling it. I've stood watch my whole life. Welcome to it.",
 };
