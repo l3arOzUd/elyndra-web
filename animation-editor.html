@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elyndra · Animation Editor</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div class="editor">
+      <header class="topbar">
+        <a class="brand" href="/">E<span>LYNDRA</span></a>
+        <div class="title"><strong>Animation Editor</strong><span>จัดท่า · ใส่คีย์ · เรนเดอร์เป็น sprite</span></div>
+        <div class="top-actions">
+          <button id="undo" title="ย้อน (Ctrl+Z)">↶ ย้อน</button>
+          <button id="redo" title="ทำซ้ำ (Ctrl+Y)">↷ ทำซ้ำ</button>
+          <span class="sep"></span>
+          <button id="save-json" title="บันทึกโปรเจกต์ท่าทางทั้งหมดเป็นไฟล์">บันทึก .json</button>
+          <label class="button">เปิด .json<input id="load-json" type="file" accept=".json,application/json" hidden /></label>
+          <button id="export-glb" title="โมเดลพร้อมทุกท่าที่ทำ">ส่งออก .glb</button>
+          <button id="open-sprites" class="primary">เรนเดอร์ Sprite</button>
+          <a class="link" href="/animation-viewer.html">Animation Studio ↗</a>
+        </div>
+      </header>
+
+      <aside class="left panel">
+        <section>
+          <h3>ตัวละคร</h3>
+          <select id="character"></select>
+          <label class="button wide">เปิดโมเดล .glb ของตัวเอง<input id="load-glb" type="file" accept=".glb,.gltf" hidden /></label>
+        </section>
+        <section>
+          <h3>ท่าทาง <small id="clip-count"></small></h3>
+          <div id="clips" class="clip-list"></div>
+          <div class="row">
+            <button id="clip-new">+ ท่าใหม่</button><button id="clip-dup">ทำสำเนา</button><button id="clip-del" class="danger">ลบ</button>
+          </div>
+        </section>
+        <section id="import-section">
+          <h3>ดึงท่าจากโมเดล</h3>
+          <div class="row"><select id="import-clip"></select></div>
+          <div class="row">
+            <select id="import-step" title="ระยะห่างคีย์">
+              <option value="1">คีย์ทุกเฟรม</option><option value="2" selected>ทุก 2 เฟรม</option>
+              <option value="3">ทุก 3 เฟรม</option><option value="4">ทุก 4 เฟรม</option>
+            </select>
+            <button id="import-go">ดึงมาแก้</button>
+          </div>
+        </section>
+        <section class="grow">
+          <h3>กระดูก <small>คลิกตัวละครได้</small></h3>
+          <div id="bones" class="bone-list"></div>
+        </section>
+      </aside>
+
+      <main class="stage">
+        <div id="viewport"></div>
+        <img id="reference" alt="" hidden />
+        <div class="views">
+          <button data-view="front">หน้า</button><button data-view="left">ซ้าย</button>
+          <button data-view="right">ขวา</button><button data-view="back">หลัง</button>
+          <button data-view="persp" class="selected">3/4</button><button data-view="game">มุมเกม</button>
+        </div>
+        <div class="stage-info"><strong id="character-name">—</strong><span id="stage-status"></span></div>
+        <div id="loading" role="status">กำลังโหลด…</div>
+        <div class="hint">ลากซ้าย = หมุนกล้อง · ลากวงแหวน = หมุนกระดูก · Space เล่น · K ใส่คีย์ · ←/→ ทีละเฟรม · M กลับซ้ายขวา</div>
+      </main>
+
+      <aside class="right panel">
+        <section>
+          <h3>กระดูกที่เลือก</h3>
+          <div id="bone-name" class="bone-name">ยังไม่ได้เลือก</div>
+          <div class="row seg">
+            <button id="mode-rotate" class="selected" title="R">หมุน</button>
+            <button id="mode-move" title="G (เฉพาะกระดูกราก)">ย้าย</button>
+          </div>
+          <div id="bone-sliders"></div>
+          <div class="row">
+            <button id="bone-reset">คืนค่ากระดูกนี้</button><button id="bone-other" title="ก๊อปมุมไปกระดูกอีกข้าง">ก๊อปไปอีกข้าง</button>
+          </div>
+        </section>
+        <section>
+          <h3>ทั้งท่า</h3>
+          <div class="row"><button id="pose-copy">คัดลอกท่า</button><button id="pose-paste">วางท่า</button></div>
+          <div class="row"><button id="pose-mirror" title="M">กลับซ้าย↔ขวา</button><button id="pose-rest">ท่ายืนตรง</button></div>
+        </section>
+        <section>
+          <h3>คีย์ที่เฟรมนี้</h3>
+          <div class="row">
+            <select id="key-ease" title="การเคลื่อนไปคีย์ถัดไป">
+              <option value="smooth">นุ่ม (ease)</option><option value="linear">เส้นตรง</option><option value="step">ค้างท่า (step)</option>
+            </select>
+          </div>
+          <div class="row"><button id="key-add" title="K">ใส่คีย์</button><button id="key-del" class="danger" title="Delete">ลบคีย์</button></div>
+        </section>
+        <section>
+          <h3>ตั้งค่าท่า</h3>
+          <label class="field"><span>ชื่อ</span><input id="clip-name" list="anim-names" /></label>
+          <datalist id="anim-names"><option value="idle"></option><option value="walk"></option><option value="attack"></option><option value="shoot"></option><option value="cast"></option><option value="hit"></option><option value="death"></option></datalist>
+          <label class="field"><span>ความยาว (วิ)</span><input id="clip-duration" type="number" min="0.1" max="10" step="0.05" /></label>
+          <label class="field"><span>เฟรม/วินาที</span><input id="clip-fps" type="number" min="1" max="30" step="1" /></label>
+          <label class="field check"><span>วนซ้ำ (loop)</span><input id="clip-loop" type="checkbox" /></label>
+        </section>
+        <section>
+          <h3>การแสดงผล</h3>
+          <label class="field check"><span>เงาท่าก่อน/หลัง (onion)</span><input id="show-onion" type="checkbox" checked /></label>
+          <label class="field check"><span>จุดข้อต่อ</span><input id="show-joints" type="checkbox" checked /></label>
+          <label class="field check"><span>เส้นกระดูก</span><input id="show-bones" type="checkbox" /></label>
+        </section>
+        <section>
+          <h3>ภาพร่างอ้างอิง</h3>
+          <p class="note">วางภาพ (Ctrl+V) หรือเลือกไฟล์ แล้วจัดท่าทับภาพร่าง</p>
+          <div class="row">
+            <label class="button">เลือกภาพ<input id="ref-file" type="file" accept="image/*" hidden /></label>
+            <button id="ref-flip">กลับด้าน</button><button id="ref-clear" class="danger">เอาออก</button>
+          </div>
+          <label class="field"><span>ความจาง</span><input id="ref-opacity" type="range" min="0.05" max="1" step="0.05" value="0.45" /></label>
+          <label class="field"><span>ขนาด</span><input id="ref-scale" type="range" min="0.2" max="3" step="0.02" value="1" /></label>
+          <label class="field"><span>ซ้าย/ขวา</span><input id="ref-x" type="range" min="-60" max="60" step="0.5" value="0" /></label>
+          <label class="field"><span>ขึ้น/ลง</span><input id="ref-y" type="range" min="-60" max="60" step="0.5" value="0" /></label>
+        </section>
+      </aside>
+
+      <footer class="timeline">
+        <div class="transport">
+          <button id="to-start" title="Home">⏮</button>
+          <button id="prev-key" title="คีย์ก่อนหน้า (,)">◆◀</button>
+          <button id="step-back" title="←">◀</button>
+          <button id="play" class="play" title="Space">▶</button>
+          <button id="step-fwd" title="→">▶</button>
+          <button id="next-key" title="คีย์ถัดไป (.)">▶◆</button>
+          <output id="time">0 / 0</output>
+          <label class="inline check"><input id="auto-key" type="checkbox" checked /><span>ใส่คีย์อัตโนมัติ</span></label>
+          <label class="inline">ความเร็ว
+            <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select>
+          </label>
+        </div>
+        <div id="track" class="track"><div id="ticks"></div><div id="keys"></div><div id="playhead"></div></div>
+      </footer>
+    </div>
+
+    <dialog id="sprite-dialog">
+      <form method="dialog" class="dialog-head">
+        <h3>เรนเดอร์เป็น Sprite sheet</h3>
+        <button value="close" aria-label="ปิด">✕</button>
+      </form>
+      <div class="sprite-settings">
+        <label class="field"><span>ขนาดเฟรม</span>
+          <select id="sprite-size"><option value="128">128 px</option><option value="192">192 px</option><option value="256" selected>256 px</option><option value="384">384 px</option></select></label>
+        <label class="field"><span>ทิศ</span>
+          <select id="sprite-dirs"><option value="8">8 ทิศ (วาด 5 แถว กลับด้าน 3)</option><option value="2">ซ้าย/ขวา (1 แถว)</option></select></label>
+        <label class="field"><span>ตัวสูงกี่ช่อง</span><input id="sprite-cells" type="number" min="0.5" max="6" step="0.1" value="1.5" /></label>
+        <label class="field"><span>ท่าที่จะเรนเดอร์</span>
+          <select id="sprite-which"><option value="all">ทุกท่า</option><option value="current">เฉพาะท่าที่เปิดอยู่</option></select></label>
+        <button id="sprite-go" class="primary">เรนเดอร์</button>
+      </div>
+      <p class="note">มุมกล้องเหมือนในเกม (ก้ม 50°) · พื้นโปร่งใส · แถวเรียง S, SW, W, NW, N ส่วน SE/E/NE ใช้กลับด้าน ตามรูปแบบ sprite ของ Elyndra</p>
+      <div id="sprite-results"></div>
+    </dialog>
+    <script type="module" src="/src/tools/animationEditor.ts"></script>
+  </body>
+</html>
