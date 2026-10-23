@@ -564,6 +564,25 @@ export class Fx {
    * A ranged monster's shot: a glowing dart from `from` to `to` over `ms`
    * (a shallow arc), then a small splash ring where it lands.
    */
+  monsterProjectile(id: string, from: THREE.Vector3, to: THREE.Vector3, color: number, ms: number) {
+    if (id !== "mob_0023") { this.projectile(from, to, color, ms); return; }
+    const origin = from.clone(), target = to.clone();
+    const direction = target.clone().sub(origin).normalize();
+    // Three pressure fronts share the existing server-hit presentation time.
+    for (let i = 0; i < 3; i++) {
+      const ring = new THREE.Mesh(new THREE.RingGeometry(0.88, 1, 40), glowMat(0x55e6ef, 0));
+      ring.position.copy(origin);
+      if (direction.lengthSq() > 0) ring.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), direction);
+      ring.scale.setScalar(0.12);
+      this.push(ring, "fn", Math.max(1, ms), { step: t => {
+        const progress = Math.max(0, (t - i * 0.12) / (1 - i * 0.12));
+        ring.position.lerpVectors(origin, target, progress);
+        ring.scale.setScalar(0.12 + progress * 0.48);
+        ring.material.opacity = progress > 0 ? Math.sin(Math.PI * progress) * 0.85 : 0;
+      } });
+    }
+  }
+
   projectile(from: THREE.Vector3, to: THREE.Vector3, color: number, ms: number) {
     const dart = new THREE.Mesh(
       new THREE.CapsuleGeometry(0.07, 0.36, 2, 6).rotateX(Math.PI / 2),

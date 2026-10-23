@@ -354,13 +354,13 @@ export class Game {
     const shooter = !s && src?.kind === "m" ? this.c.monsters.get(src.look) : undefined;
     let shotMs = 0;
     if (src && shooter && shooter.attack_range > 1.5) {
-      const from = src.actor.root.position.clone().addScaledVector(UP, src.actor.height * 0.55);
+      const from = src.actor.root.position.clone().addScaledVector(UP, src.actor.height * (shooter.id === "mob_0023" ? 0.85 : 0.55));
       for (const [id, dmg, flags] of ev.hits) {
         const t = this.ents.get(id);
         if (!t) continue;
         const to = t.pos.clone().addScaledVector(UP, t.actor.height * 0.5);
         const ms = THREE.MathUtils.clamp(from.distanceTo(to) * 55, 140, 380);
-        this.fx.projectile(from, to, ELEMENT_COLORS[shooter.element] ?? 0xffffff, ms);
+        this.fx.monsterProjectile(shooter.id, from, to, ELEMENT_COLORS[shooter.element] ?? 0xffffff, ms);
         t.parts++;
         setTimeout(() => { t.parts--; this.showHit(ev, id, dmg, flags); }, ms);
         shotMs = Math.max(shotMs, ms);

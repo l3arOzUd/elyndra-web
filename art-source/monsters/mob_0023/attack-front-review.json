@@ -21,7 +21,7 @@
   "bible": "content/regions/tha.ts: sonar lash range 2",
   "remaining": [
     "Inbetweens and timing polish missing.",
-    "Sonar VFX preview exists; combat event integration and in-world range/direction mapping missing.",
+    "Runtime sonar is connected to ranged combat events; visual battle review and sprite animation synchronization remain pending.",
     "Stance widens and boot placement changes from neutral.",
     "Hose, armor and painted detail continuity need cleanup.",
     "Recovery hands, shoulder articulation and emitter surround drift from neutral."
@@ -32,5 +32,12 @@
     "lifetimeMs": 600,
     "rings": 3,
     "runtimeBound": false
+  },
+  "runtimeVfx": {
+    "implemented": true,
+    "entry": "Game.onCombat -> Fx.monsterProjectile(mob_0023)",
+    "sourceHeightFraction": 0.85,
+    "timing": "existing ranged hit presentation duration",
+    "visualBattleApproved": false
   }
 }
