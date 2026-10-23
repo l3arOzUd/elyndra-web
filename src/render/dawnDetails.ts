@@ -22,7 +22,7 @@ export function buildDawnDetails(props: Prop[], group: THREE.Group,
       positions.setXYZ(i, x * r, y * r, z * r);
     }
     geo.computeVertexNormals();
-    const mat = track(new THREE.MeshLambertMaterial({ color: bush ? 0xffffff : ruin ? 0xc3b797 : 0xa29b80, map: bush ? map : null,
+    const mat = track(new THREE.MeshLambertMaterial({ color: bush ? 0x8ea77e : ruin ? 0xc3b797 : 0xa29b80, map: bush ? map : null,
       alphaTest: bush ? 0.45 : 0, side: bush ? THREE.DoubleSide : THREE.FrontSide }));
     if (bush) {
       mat.onBeforeCompile = shader => {

@@ -24,10 +24,10 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
     // Lift the diffuse leaf painting under the shared scene lighting.
     shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
       #include <map_fragment>
-      diffuseColor.rgb *= 1.1;
+      diffuseColor.rgb = diffuseColor.rgb * 1.8 + vec3(0.025, 0.04, 0.015);
     `);
   };
-  leaves.customProgramCacheKey = () => 'dawn-fir-spray-v2';
+  leaves.customProgramCacheKey = () => 'dawn-fir-spray-v3';
   const pieces = [new THREE.CylinderGeometry(0.07, 0.23, 4.6, 9).translate(0, 2.3, 0)];
   for (let i = 0; i < 4; i++) {
     const angle = i * Math.PI / 2 + 0.3;
@@ -52,7 +52,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   lobes.push([0, 4.95, 0, 0.36]);
   const crowns = new THREE.InstancedMesh(crownGeo, leaves, trees.length * lobes.length);
   trunks.castShadow = true;
-  crowns.castShadow = true; crowns.receiveShadow = true;
+  crowns.castShadow = true;
   trunks.name = 'dawn-tree-trunks'; crowns.name = 'dawn-tree-canopies';
   const d = new THREE.Object3D();
   trees.forEach((p, i) => {

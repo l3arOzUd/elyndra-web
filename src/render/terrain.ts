@@ -272,8 +272,9 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   }
   const inMap = (x: number, y: number) => x >= 0 && y >= 0 && x < l.width && y < l.height;
   let decor = decorProps(l, (x, y) => inMap(x, y) && walkCells[y * l.width + x] === 1, (x, y) => inMap(x, y) && roadCells[y * l.width + x] === 1);
-  if (l.id === "lum_fld_01") decor = decor.filter(p =>
-    Math.sin(p.x * 0.13) * Math.cos(p.y * 0.11) > 0.55 && p.kind !== ("pebbles" as string));
+  // The old bright, unlit tuft cards do not share the forest's lighting.
+  // Authored undergrowth remains; ground paint carries the open meadow detail.
+  if (l.id === "lum_fld_01") decor = [];
   const modelProps: typeof l.props = [];
   const dawnSolid = new Set(['crystal', 'crate', 'brass_pipe', 'gear_ruin', 'rune_stone']);
   const modelKinds = new Set<import("../data/schema").PropKind>(l.id === "lum_fld_01"

@@ -279,7 +279,9 @@ export async function applyPaintedTerrain(
         float roadW = ${layout.id === 'lum_fld_01' ? 'smoothstep(0.12, 0.88, weights.r + grain * 0.13)' : 'smoothstep(0.38, 0.62, weights.r + grain * 0.28)'};
         float stoneW = smoothstep(0.38, 0.62, weights.b + grain * 0.2);
         float rim = max(smoothstep(0.08, 0.4, weights.r) * (1.0 - roadW), smoothstep(0.08, 0.4, weights.b) * (1.0 - stoneW));
-        terrain = mix(terrain, terrainPaint(terrainRoad, world, terrainRecipes[3], terrainTints[3]), roadW);
+        vec3 pathPaint = terrainPaint(terrainRoad, world, terrainRecipes[3], terrainTints[3]);
+        ${layout.id === 'lum_fld_01' ? 'pathPaint = mix(pathPaint, vec3(0.56, 0.46, 0.26), 0.45);' : ''}
+        terrain = mix(terrain, pathPaint, roadW);
         terrain = mix(terrain, terrainPaint(terrainStone, world, terrainRecipes[4], terrainTints[4]), stoneW);
         terrain = mix(terrain, terrainPaint(terrainPlaza, world, terrainRecipes[8], terrainTints[8]), weights.a);
         terrain *= 1.0 - rim * ${layout.id === 'lum_fld_01' ? '0.04' : '0.22'};
