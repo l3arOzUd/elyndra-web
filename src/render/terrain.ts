@@ -7,6 +7,7 @@ import { buildDawnTrees } from "./dawnTrees";
 import { buildDawnLandmarks } from "./dawnLandmarks";
 import { buildDawnFarmhouse } from './dawnFarmhouse';
 import { buildDawnSites } from './dawnSites';
+import { buildWorldDressing } from './worldDressing';
 import { buildDawnRelief } from "./dawnRelief";
 import { buildDawnShore } from "./dawnShore";
 import { animatedProp, propGeometry } from "./props";
@@ -318,6 +319,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   buildDawnLandmarks(l.id==='lum_fld_01'?l:{...l,props:l.props.filter(p=>p.kind==='tent'||p.kind==='aether_pylon')}, group, track, animated);
   if (l.id === 'lum_fld_01') buildDawnFarmhouse(group, track);
   if (l.id === 'lum_fld_01') buildDawnSites(group, track);
+  buildWorldDressing(l,group,track);
   for (const p of l.props) if ((!PAINTED_KINDS.has(p.kind) || (l.id === 'lum_fld_01' && dawnSolid.has(p.kind))) &&
     !(p.kind === 'aether_pylon' || p.kind === 'tent' || (l.id === 'lum_fld_01' && p.kind === 'aqueduct')))
     byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);

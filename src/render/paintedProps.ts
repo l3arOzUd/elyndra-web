@@ -472,6 +472,10 @@ export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T ex
     groups.set(list[v], [...(groups.get(list[v]) ?? []), p]);
   }
   const material = track(new THREE.MeshLambertMaterial({ map: atlas.texture, color:environmentStyle(l.id).foliage, alphaTest: 0.4, side: THREE.DoubleSide }));
+  // Mirrored billboard instances must keep the same world-facing light normal;
+  // a negative X scale otherwise turns half the painted trees almost black.
+  material.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>', '#include <normal_fragment_begin>\nnormal = normalize(mat3(viewMatrix) * vec3(0.0, 0.85, 0.52));');};
+  material.customProgramCacheKey=()=> 'painted-world-light-normal-v1';
   const tex = atlas.texture.image as HTMLCanvasElement;
   const dummy = new THREE.Object3D();
   for (const [card, list] of groups) {
