@@ -1,5 +1,26 @@
 <!doctype html><meta charset="utf-8"><title>Relay Guardian reference review</title>
 <style>body{background:#263037;color:#eee;font:16px system-ui;margin:24px}figure{display:inline-block;margin:12px}img{width:380px;max-width:90vw;background:#697a80}a{color:#acf}</style>
 <h1>Relay Guardian #23: reference review</h1><p>Draft, not runtime-bound. V2 restores top bracket clearance; hoses, dish depth and surface continuity still require cross-view review.</p>
-<figure><img src="./front.png"><figcaption>Original: top bracket touches edge</figcaption></figure>
+<h2>Aligned four-view comparison</h2><p>Uniform scale per image to 420 px silhouette height; feet at y=470. This aligns framing only, not anatomy. Original files below are unchanged.</p>
+<label><input id="guides" type="checkbox" checked>Show baseline and height guides</label>
+<div id="aligned"></div><pre id="measurements"></pre>
+<script type="module">
+const urls=import.meta.glob('./{front-neutral-v2,back,left-dish-v2,right-dish-v2}.png',{eager:true,query:'?url',import:'default'});
+const names=['front-neutral-v2','back','left-dish-v2','right-dish-v2'];
+const views=await Promise.all(names.map(async name=>{
+ const im=new Image();im.src=urls['./'+name+'.png'];await im.decode();
+ const scan=document.createElement('canvas');scan.width=im.width;scan.height=im.height;
+ const ctx=scan.getContext('2d');ctx.drawImage(im,0,0);const data=ctx.getImageData(0,0,im.width,im.height).data;
+ let x0=im.width,y0=im.height,x1=-1,y1=-1;
+ for(let y=0;y<im.height;y++)for(let x=0;x<im.width;x++)if(data[(y*im.width+x)*4+3]>16){x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y)}
+ if(x1<0)throw new Error(name+' has no opaque pixels');
+ const scale=420/(y1-y0+1),dx=256-(x0+x1+1)/2*scale,dy=470-(y1+1)*scale;
+ const fig=document.createElement('figure'),canvas=document.createElement('canvas'),caption=document.createElement('figcaption');canvas.width=512;canvas.height=512;canvas.style.cssText='width:256px;background:#697a80';caption.textContent=name;fig.append(canvas,caption);aligned.append(fig);
+ return {name,im,canvas,bounds:[x0,y0,x1,y1],scale,dx,dy};
+}));
+function draw(){for(const v of views){const c=v.canvas.getContext('2d');c.clearRect(0,0,512,512);c.drawImage(v.im,v.dx,v.dy,v.im.width*v.scale,v.im.height*v.scale);if(guides.checked){c.strokeStyle='#f2d480';c.setLineDash([6,4]);for(const y of [50,470]){c.beginPath();c.moveTo(0,y);c.lineTo(512,y);c.stroke()}}}}
+guides.onchange=draw;draw();measurements.textContent=views.map(v=>v.name+': source bounds '+v.bounds.join(', ')+'; uniform scale '+v.scale.toFixed(4)).join('\n');
+window.__relayReferences={ready:true,views:views.map(({name,bounds,scale,dx,dy})=>({name,bounds,scale,dx,dy}))};
+</script>
+<h2>Originals and revisions</h2><figure><img src="./front.png"><figcaption>Original: top bracket touches edge</figcaption></figure>
 <figure><img src="./front-neutral-v2.png"><figcaption>V2: complete bracket, improved clearance</figcaption></figure><figure><img src="./left.png"><figcaption>Original left: broad cyan panel</figcaption></figure><figure><img src="./left-dish-v2.png"><figcaption>Left v2: distinct rings, side projection still under review</figcaption></figure><figure><img src="./right.png"><figcaption>Original right: broad cyan panel</figcaption></figure><figure><img src="./right-dish-v2.png"><figcaption>Right v2: separate rings; top margin still tight</figcaption></figure><p><a href="/">Game</a></p>
