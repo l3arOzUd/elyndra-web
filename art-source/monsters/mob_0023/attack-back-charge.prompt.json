@@ -1,0 +1,8 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Create rear-view sonar attack CHARGE keyframe. Image1 is exact rear Relay Guardian identity and framing. Image2 front charge is pose reference only: reproduce same slight squat, elbows out, fists near waist, from directly BEHIND. Keep opaque bronze rear dish six spokes, two rear vent panels and neck hoses from image1. No front chest core or cyan dish face on back. Both elbows visibly bent outward with continuous upper arms and forearms; hands near waist viewed from back. Heavy boots flat on ground at near original baseline, knees flex, torso lowers slightly. Preserve all rigid armor segment dimensions and patina. Entire creature same scale and square frame with margins. Transparent background, no shadow, no text, no external sonar waves (separate runtime VFX). Hand painted bronze fantasy sprite.",
+  "references": [
+    "back-neutral-v2.png",
+    "attack-front-charge.png"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "back-neutral-v2.png",
+    "attack-back-charge.png",
+    "attack-back-release.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    0
+  ],
+  "frameDurationMs": 160,
+  "status": "three-drawing-rear-attack-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Recovery and inbetweens missing; neutral temporarily reused.",
+    "Stance wider than front charge; boot registration drifts.",
+    "Dish size and armor details change between drawings.",
+    "Runtime VFX synchronization with rear sprites not connected."
+  ]
+}
