@@ -570,14 +570,15 @@ export class Fx {
     const direction = target.clone().sub(origin).normalize();
     // Three pressure fronts share the existing server-hit presentation time.
     for (let i = 0; i < 3; i++) {
-      const ring = new THREE.Mesh(new THREE.RingGeometry(0.88, 1, 40), glowMat(0x55e6ef, 0));
+      // A tube keeps a readable edge when the wave plane is almost edge-on.
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(0.94, 0.065, 6, 40), glowMat(0x55e6ef, 0));
       ring.position.copy(origin);
       if (direction.lengthSq() > 0) ring.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), direction);
       ring.scale.setScalar(0.12);
       this.push(ring, "fn", Math.max(1, ms), { step: t => {
         const progress = Math.max(0, (t - i * 0.12) / (1 - i * 0.12));
         ring.position.lerpVectors(origin, target, progress);
-        ring.scale.setScalar(0.12 + progress * 0.48);
+        ring.scale.setScalar(0.18 + progress * 0.62);
         ring.material.opacity = progress > 0 ? Math.sin(Math.PI * progress) * 0.85 : 0;
       } });
     }
