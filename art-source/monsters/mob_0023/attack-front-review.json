@@ -1,0 +1,27 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "front-neutral-v2.png",
+    "attack-front-charge.png",
+    "attack-front-release.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    0
+  ],
+  "frameDurationMs": 160,
+  "status": "three-drawing-sonar-attack-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "bible": "content/regions/tha.ts: sonar lash range 2",
+  "remaining": [
+    "Dedicated recovery and inbetweens missing.",
+    "External sonar effect and attack event integration missing.",
+    "Stance widens and boot placement changes from neutral.",
+    "Hose, armor and painted detail continuity need cleanup."
+  ]
+}
