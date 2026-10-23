@@ -2,6 +2,7 @@ import * as THREE from "three";
 import type { BlockerKind, MapLayout, RegionDef, Shape, WarpDef } from "../data/schema";
 import { decodeWalk } from "../data/schema";
 import { buildPaintedProps, decorProps, HEAPED, PAINTED_KINDS } from "./paintedProps";
+import { buildDawnDetails } from "./dawnDetails";
 import { buildDawnTrees } from "./dawnTrees";
 import { animatedProp, propGeometry } from "./props";
 import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
@@ -264,10 +265,14 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     }
   }
   const inMap = (x: number, y: number) => x >= 0 && y >= 0 && x < l.width && y < l.height;
-  const decor = decorProps(l, (x, y) => inMap(x, y) && walkCells[y * l.width + x] === 1, (x, y) => inMap(x, y) && roadCells[y * l.width + x] === 1);
-  const modelKinds = new Set<import("../data/schema").PropKind>(l.id === "lum_fld_01" ? ["tree"] : []);
+  let decor = decorProps(l, (x, y) => inMap(x, y) && walkCells[y * l.width + x] === 1, (x, y) => inMap(x, y) && roadCells[y * l.width + x] === 1);
+  if (l.id === "lum_fld_01") decor = decor.filter(p =>
+    Math.sin(p.x * 0.13) * Math.cos(p.y * 0.11) > 0.55 && p.kind !== ("pebbles" as string));
+  const modelProps: typeof l.props = [];
+  const modelKinds = new Set<import("../data/schema").PropKind>(l.id === "lum_fld_01" ? ["tree", "bush", "rock", "boulder"] : []);
   if (modelKinds.size) buildDawnTrees(l, group, track, tileTime);
-  const painted = buildPaintedProps(l, group, track, (b) => ({ contains: (x, y) => inShape(b.shape, x, y), bounds: shapeBounds(b.shape) }), decor, modelKinds);
+  const painted = buildPaintedProps(l, group, track, (b) => ({ contains: (x, y) => inShape(b.shape, x, y), bounds: shapeBounds(b.shape) }), decor, modelKinds, modelProps);
+  if (modelKinds.size) buildDawnDetails(modelProps, group, track);
   // Soft contact shadows tie props to the painted floor in one draw.
   {
     const radius: Partial<Record<typeof l.props[number]["kind"], number>> = {
