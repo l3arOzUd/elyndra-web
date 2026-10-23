@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Edit this exact rear-view Relay Guardian into a very subtle idle actuator-check keyframe. Keep camera, framing, scale, feet planted, knees, torso, head and ALL armor unchanged. Only anatomical RIGHT hand (image RIGHT because viewed from behind) curls fingers gently inward into loose fist and wrist pivots inward 5 degrees, with tiny elbow flex. Left hand unchanged. Preserve six-spoke bronze rear head disk; NO cyan rings on back of head, rear disk is opaque bronze. Preserve existing light intensity everywhere. No chest breathing deformation: rigid robot. Same patina and vent slots. Full-body transparent sprite, no ground shadow, no text.",
+  "reference": "back-neutral-v2.png"
+}

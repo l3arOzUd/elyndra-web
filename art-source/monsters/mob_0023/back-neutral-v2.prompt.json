@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Precise asset edit: repair framing of this rear orthographic Relay Guardian reference. Keep exact neutral pose, bronze armor, six-spoke rear dish, two ribbed neck hoses, rear spine vent plate, knees, heels, patina and cyan lights. Slightly reduce whole creature uniformly to leave 4 percent transparent margin above complete top bracket and below boots. Restore any clipped top bracket naturally. Keep centered, square canvas, full rear view facing away, same rendering. No redesign, no added components, no front face visible, no ground shadow or text. Transparent background. This is neutral base for rear animation.",
+  "reference": "back.png"
+}

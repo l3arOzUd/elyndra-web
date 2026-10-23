@@ -1,0 +1,39 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "back-neutral-v2.png",
+    "idle-back-clamp.png"
+  ],
+  "sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frameDurationMs": 125,
+  "status": "two-drawing-rear-idle-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Patina and joint details drift between drawings.",
+    "Finger and wrist articulation requires visual continuity cleanup.",
+    "Other rear actions remain missing.",
+    "Neutral v2 framing differs from original; cross-view proportions unapproved."
+  ]
+}
