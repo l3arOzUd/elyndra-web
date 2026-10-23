@@ -7,7 +7,7 @@ import { fxMaterial, type FxShader } from "./fxShaders";
 // caster out, flaring as it lands. When the server's hit lands, each skill
 // plays its own release (shockwaves, glows, blade sweeps, beams, sparks).
 // One release per cast, however many targets, and target impacts are
-// capped, so a 50-target AoE stays within the particle budget (HORDE_SPEC §3).
+// capped, so a 50-target AoE stays within the particle budget (HORDE_SPEC Â§3).
 
 export const COLORS: Record<string, number> = {
   cleaving_arc: 0xffd27a, iron_cyclone: 0x9fd8ff, anchor_shout: 0xff9a6a, sundering_pulse: 0x7ff0ff,
@@ -36,7 +36,7 @@ interface Live {
   delay?: number;
   /** spark velocity, cells per second. */
   v?: [number, number, number];
-  /** spark: how fast it falls, cells per second². */
+  /** spark: how fast it falls, cells per secondÂ². */
   g?: number;
   /** bolt: flies from `from` to `to`, rising `arc` cells at mid-flight. */
   from?: THREE.Vector3; to?: THREE.Vector3; arc?: number;
@@ -571,7 +571,7 @@ export class Fx {
     // Three pressure fronts share the existing server-hit presentation time.
     for (let i = 0; i < 3; i++) {
       // A tube keeps a readable edge when the wave plane is almost edge-on.
-      const ring = new THREE.Mesh(new THREE.TorusGeometry(0.94, 0.065, 6, 40), glowMat(0x55e6ef, 0));
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(0.94, 0.035, 6, 40), glowMat(0x55e6ef, 0));
       ring.position.copy(origin);
       if (direction.lengthSq() > 0) ring.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), direction);
       ring.scale.setScalar(0.12);
@@ -579,7 +579,7 @@ export class Fx {
         const progress = Math.max(0, (t - i * 0.12) / (1 - i * 0.12));
         ring.position.lerpVectors(origin, target, progress);
         ring.scale.setScalar(0.18 + progress * 0.62);
-        ring.material.opacity = progress > 0 ? Math.sin(Math.PI * progress) * 0.85 : 0;
+        ring.material.opacity = progress > 0 ? Math.sin(Math.PI * progress) * 0.5 : 0;
       } });
     }
   }
