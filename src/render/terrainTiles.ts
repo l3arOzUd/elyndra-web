@@ -19,7 +19,7 @@ type RoadKind = MapLayout["roads"][number]["kind"];
 export interface TerrainSurface { kind: BlockerKind; geometry: THREE.BufferGeometry; material: THREE.MeshLambertMaterial | THREE.MeshPhongMaterial }
 
 /**
- * How a painted texture becomes a ground: tint Ã— mix(texture, grey, desat) + lift, at scale
+ * How a painted texture becomes a ground: tint Ãƒâ€” mix(texture, grey, desat) + lift, at scale
  * cells a repeat. art names the made-for-purpose texture (textures/env/<art>.png) that,
  * when present, is used as it is instead.
  */
@@ -220,8 +220,8 @@ export async function applyPaintedTerrain(
   const plazaPaint = paint("plaza_tile", [1, 1, 1], 0, 0, 8, "paving");
   const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled, meadow, forest, plazaPaint].map((r) => (r.art && envArt.textures.has(r.art) ? paint(r.tex, [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, ART_SCALE, r.art) : r));
   // Dawnmeadow art pass: quiet turf under characters; other regions retain their palette.
-  if (layout.id === "lum_fld_01" && envArt.textures.has("dawn_grass")) {
-    for (const i of [0, 6]) recipes[i] = paint("grass", [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, 12, "dawn_grass");
+  if (layout.id === "lum_fld_01" && envArt.textures.has("dawn_turf_v2")) {
+    for (const i of [0, 6]) recipes[i] = paint("grass", [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, 9, "dawn_turf_v2");
   }
   const maps = recipes.map((r) => tile(r.art && envArt.textures.has(r.art) ? r.art : r.tex));
   if (maps.every(Boolean)) {
@@ -267,7 +267,7 @@ export async function applyPaintedTerrain(
         ${layout.id === 'lum_fld_01' ? `
         // Keep the walking field quiet; painted detail belongs at its edges.
         // This wash affects only turf, before paths, water and stone are mixed.
-        terrain = mix(terrain, vec3(0.25, 0.37, 0.12), 0.46);
+        terrain = mix(terrain, vec3(0.20, 0.34, 0.16), 0.3);
         ` : ''}
         float meadow = smoothstep(0.35, 0.85, terrainNoise(world / 18.0)) * terrainMeadow;
         terrain = mix(terrain, terrainPaint(terrainDry, world, terrainRecipes[6], terrainTints[6]), meadow);
@@ -276,19 +276,19 @@ export async function applyPaintedTerrain(
         terrain = mix(terrain, terrainPaint(terrainMoss, world, terrainRecipes[7], terrainTints[7]), weights.g);
         terrain = mix(terrain, terrainPaint(terrainTrampled, world, terrainRecipes[5], terrainTints[5]), smoothstep(0.15, 0.85, zones.b + grain * 0.35) * 0.8);
         // Roads: a ragged edge and a darker painted rim on both sides of it.
-        float roadW = smoothstep(0.38, 0.62, weights.r + grain * 0.28);
+        float roadW = ${layout.id === 'lum_fld_01' ? 'smoothstep(0.12, 0.88, weights.r + grain * 0.13)' : 'smoothstep(0.38, 0.62, weights.r + grain * 0.28)'};
         float stoneW = smoothstep(0.38, 0.62, weights.b + grain * 0.2);
         float rim = max(smoothstep(0.08, 0.4, weights.r) * (1.0 - roadW), smoothstep(0.08, 0.4, weights.b) * (1.0 - stoneW));
         terrain = mix(terrain, terrainPaint(terrainRoad, world, terrainRecipes[3], terrainTints[3]), roadW);
         terrain = mix(terrain, terrainPaint(terrainStone, world, terrainRecipes[4], terrainTints[4]), stoneW);
         terrain = mix(terrain, terrainPaint(terrainPlaza, world, terrainRecipes[8], terrainTints[8]), weights.a);
-        terrain *= 1.0 - rim * 0.22;
+        terrain *= 1.0 - rim * ${layout.id === 'lum_fld_01' ? '0.04' : '0.22'};
         // Broad light and shade, as a painter would wash over a large field.
         terrain *= mix(0.88, 1.06, terrainNoise(world / 41.0)) * mix(0.95, 1.03, terrainNoise(world / 12.0));
         diffuseColor.rgb *= terrain;
       `);
     };
-    ground.customProgramCacheKey = () => layout.id === 'lum_fld_01' ? 'dawn-painted-ground-v4' : 'painted-ground-v3';
+    ground.customProgramCacheKey = () => layout.id === 'lum_fld_01' ? 'dawn-painted-ground-v5' : 'painted-ground-v3';
     ground.needsUpdate = true;
   }
   let waterMask: THREE.CanvasTexture | undefined;

@@ -333,6 +333,11 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
   if (f.dungeon) props.push({ kind: "cave_mouth", x: gate.trigger[0] + 3, y: gate.trigger[1] - 3, block: 0, scale: 1.4 });
 
   if (f.id === "lum_fld_01") {
+    // Forest-road study: grouped silhouettes frame an open pulling lane.
+    for (const [x, y, scale] of [[42, 58, 1.2], [43, 63, 0.9], [42, 69, 1.35], [58, 56, 1.15], [62, 58, 1.4], [64, 63, 1.05]]) {
+      if (roads.every(r => distToLine(x, y, r.points) > r.width / 2 + 2.5) && blockers.every(b => !shapeContains(b.shape, x, y)))
+        props.push({ kind: 'tree', x, y, scale, rot: x * 0.7, block: 1 });
+    }
     // One organic outline is baked for both the water mesh and server collision.
     for (const b of blockers) if (b.kind === 'water' && 'ellipse' in b.shape) {
       const [cx, cy, rx, ry] = b.shape.ellipse;
