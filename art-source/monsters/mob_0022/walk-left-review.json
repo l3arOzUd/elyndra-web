@@ -4,7 +4,7 @@
     "left-neutral-v5.png",
     "walk-left-near-lift-v2.png",
     "walk-left-far-lift-v2.png",
-    "walk-left-near-contact.png"
+    "walk-left-near-contact-v2.png"
   ],
   "sequence": [
     0,
@@ -27,10 +27,32 @@
   "observed": [
     "Near-step v2 flattens the sole and shortens forward reach; support leg remains in place relative to v1.",
     "Far-step v2 lowers the toe and shortens reach without a major change to supporting boot placement.",
-    "Near lowering drawing drops toe and lifts rear heel, but near sole remains above shared baseline."
+    "Near lowering drawing drops toe and lifts rear heel, but near sole remains above shared baseline.",
+    "Contact v2 reduces opaque toe-bottom gap from 30 to 11 pixels; not exact ground alignment."
   ],
   "superseded": {
     "walk-left-near-lift.png": "Longer step and raised toe.",
-    "walk-left-far-lift.png": "Raised toe and excessive forward reach."
+    "walk-left-far-lift.png": "Raised toe and excessive forward reach.",
+    "walk-left-near-contact.png": "Near toe remains 30 pixels above far toe."
+  },
+  "contactMeasurement": {
+    "alphaThreshold": 128,
+    "nearToeX": [
+      280,
+      450
+    ],
+    "farToeX": [
+      600,
+      720
+    ],
+    "yStart": 1000,
+    "v1BottomY": [
+      1108,
+      1138
+    ],
+    "v2BottomY": [
+      1129,
+      1140
+    ]
   }
 }
