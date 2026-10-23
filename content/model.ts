@@ -105,6 +105,11 @@ export function basicRankPoints(attackMs: number): number {
 // dmg:   one hit as a share of that player's max HP, after its Armour. Swarm is
 //        low because 8 of them can stand around you at once: 8 x 1.2% per
 //        1.6s is ~6% HP/s, survivable for the 4-6s a pack lasts.
+// speed: share of a player's base walking speed. Swarms and elites keep pace
+//        with a player who has no movement speed, so a dragged pack stays on
+//        you and lands on you the moment you stop (TestBalanceDrag); movement
+//        speed and Dash are how you pull away. Heavy and far-hitting monsters
+//        lag. No monster is faster than a player's base speed.
 // exp:   EXP relative to a swarm monster of the same level.
 
 export interface ArchetypeTargets {
@@ -112,21 +117,21 @@ export interface ArchetypeTargets {
   def: number;
   dmg: number;
   attack_ms: number;
-  move_ms: number;
+  speed: number;
   range: number;
   exp: number;
 }
 
 export const ARCHETYPES: Record<Archetype, ArchetypeTargets> = {
-  swarm: { hits: 3.2, def: 0.1, dmg: 0.012, attack_ms: 1600, move_ms: 260, range: 1, exp: 1 },
-  ranged: { hits: 2.6, def: 0.08, dmg: 0.02, attack_ms: 1800, move_ms: 280, range: 5, exp: 1 },
-  support: { hits: 3.6, def: 0.1, dmg: 0.009, attack_ms: 2200, move_ms: 280, range: 4, exp: 1.15 },
-  bruiser: { hits: 7, def: 0.15, dmg: 0.035, attack_ms: 2000, move_ms: 300, range: 1, exp: 2.3 },
-  construct: { hits: 6.5, def: 0.25, dmg: 0.028, attack_ms: 1900, move_ms: 340, range: 1, exp: 2.2 },
-  elite: { hits: 18, def: 0.2, dmg: 0.06, attack_ms: 1500, move_ms: 240, range: 1, exp: 6.5 },
+  swarm: { hits: 3.2, def: 0.1, dmg: 0.012, attack_ms: 1600, speed: 1, range: 1, exp: 1 },
+  ranged: { hits: 2.6, def: 0.08, dmg: 0.02, attack_ms: 1800, speed: 0.7, range: 5, exp: 1 },
+  support: { hits: 3.6, def: 0.1, dmg: 0.009, attack_ms: 2200, speed: 0.7, range: 4, exp: 1.15 },
+  bruiser: { hits: 7, def: 0.15, dmg: 0.035, attack_ms: 2000, speed: 0.75, range: 1, exp: 2.3 },
+  construct: { hits: 6.5, def: 0.25, dmg: 0.028, attack_ms: 1900, speed: 0.75, range: 1, exp: 2.2 },
+  elite: { hits: 18, def: 0.2, dmg: 0.06, attack_ms: 1500, speed: 1, range: 1, exp: 6.5 },
   // Bosses are fought solo with potions: 70 hits (~40 s with skills) and
   // 6.5% of max HP a swing (balance_jobs_test.go).
-  boss: { hits: 70, def: 0.25, dmg: 0.065, attack_ms: 1400, move_ms: 260, range: 2, exp: 45 },
+  boss: { hits: 70, def: 0.25, dmg: 0.065, attack_ms: 1400, speed: 0.75, range: 2, exp: 45 },
 };
 
 export const AGGRO_RADIUS: Record<Behavior, number> = { passive: 0, flee: 0, assist: 6, aggressive: 10 };
@@ -138,6 +143,8 @@ export const FAR_RANGE = 2;
 export const FAR_DAMAGE = 0.5;
 
 export const PLAYER_MS_PER_CELL = 150;
+/** No monster outruns this share of a player's base speed. */
+export const MONSTER_TOP_SPEED = 1;
 /** One species per field is a bounty: passive, a few on the map, slow to kill and
  * worth far more EXP. Every other monster attacks on sight. */
 export const BOUNTY = { hp: 4, exp: 6, alive: 30 } as const;
@@ -173,7 +180,7 @@ export function monsterStats(level: number, archetype: Archetype, mods: StatMods
     defense,
     attack_range: mods.range ?? a.range,
     attack_ms: Math.round(a.attack_ms * (mods.attack_speed ?? 1)),
-    move_speed_ms: Math.round(a.move_ms * (mods.speed ?? 1)),
+    move_speed_ms: Math.max(Math.round(PLAYER_MS_PER_CELL / MONSTER_TOP_SPEED), Math.round((PLAYER_MS_PER_CELL / a.speed) * (mods.speed ?? 1))),
     base_exp,
     job_exp: Math.max(1, Math.round(base_exp * 0.62)),
   };
