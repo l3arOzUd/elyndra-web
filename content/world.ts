@@ -11,7 +11,7 @@
 
 import { decodeWalk, type DialogueDef, type ItemDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
 import { bakeLayout, shapeContains } from "./layout";
-import { farmSite, farmWalls } from '../src/shared/dawnFarm';
+import { farmApproach, farmSite, farmWalls } from '../src/shared/dawnFarm';
 import { BOUNTY } from "./model";
 import { AFTER_ENDING, DUNGEON_ZONE_NOTE, ECOLOGY, FIELD_CAST, FINAL_QUEST, QUEST_SUMMARY, STORY_STAGES, SURVEY_PAGES, TOWN_CAST } from "./lore";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
@@ -340,7 +340,7 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
       if ('ellipse' in b.shape && farmSite(b.shape.ellipse[0], b.shape.ellipse[1])) blockers.splice(i, 1);
     }
     for (const w of farmWalls) props.push({ kind: 'ruin_block', x: w.x, y: w.z, block: 1 });
-    roads.push({ points: [[52, 59], [59, 62], [65, 65], [72.5, 64], [72.5, 58]], width: 2.4, kind: 'dirt' });
+    roads.push({ points: farmApproach, width: 2.4, kind: 'dirt' });
     ground_patches.push({ ground: 'stone', shape: { rect: [69, 53, 8, 6] } });
     landmarks.push({ id: 'lm_dawnmeadow_farmhouse', name: 'Abandoned Farmstead', kind: 'ruin', x: 72, y: 56,
       note: 'A collapsed slate roof, broken hearth and open farmyard beside the old cart track.' });
