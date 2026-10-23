@@ -123,8 +123,8 @@ export function starterClips(rest: Pose): EditClip[] {
   return [
     { name: "idle", duration: 2, fps: 8, loop: true, keys: [
       { t: 0, pose: idleA, ease: "smooth" }, { t: 1, pose: idleB, ease: "smooth" }] },
-    { name: "walk", duration: 0.8, fps: 12, loop: true, keys: [
-      { t: 0, pose: contact, ease: "smooth" }, { t: 0.2, pose: passing, ease: "smooth" },
-      { t: 0.4, pose: mirrorPose(contact, bones), ease: "smooth" }, { t: 0.6, pose: mirrorPose(passing, bones), ease: "smooth" }] },
+    { name: "walk", duration: 10 / 12, fps: 12, loop: true, keys: [
+      { t: 0, pose: contact, ease: "smooth" }, { t: 3 / 12, pose: passing, ease: "smooth" },
+      { t: 5 / 12, pose: mirrorPose(contact, bones), ease: "smooth" }, { t: 8 / 12, pose: mirrorPose(passing, bones), ease: "smooth" }] },
   ];
 }

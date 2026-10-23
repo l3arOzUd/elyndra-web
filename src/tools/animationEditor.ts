@@ -448,7 +448,7 @@ function renderClipList() {
     const button = document.createElement('button');
     button.className = i === clipIndex ? 'selected' : '';
     const name = document.createElement('strong'); name.textContent = c.name;
-    const meta = document.createElement('small'); meta.textContent = `${c.keys.length} คีย์ · ${c.duration} วิ${c.loop ? ' · วน' : ''}`;
+    const meta = document.createElement('small'); meta.textContent = `${c.keys.length} คีย์ · ${+c.duration.toFixed(2)} วิ${c.loop ? ' · วน' : ''}`;
     button.append(name, meta);
     button.onclick = () => { clipIndex = i; dirty = false; playing = false; refreshAll(); };
     return button;
@@ -458,7 +458,7 @@ function refreshClipSettings() {
   const c = clip();
   if (!c) return;
   if (document.activeElement !== input('clip-name')) input('clip-name').value = c.name;
-  input('clip-duration').value = String(c.duration);
+  input('clip-duration').value = String(+c.duration.toFixed(3));
   input('clip-fps').value = String(c.fps);
   input('clip-loop').checked = c.loop;
 }
@@ -748,24 +748,27 @@ async function renderSprites() {
   results.replaceChildren(Object.assign(document.createElement('p'), { className: 'note', textContent: 'กำลังเรนเดอร์…' }));
   await new Promise(r => setTimeout(r, 30));
 
-  // One frame box for every sheet: the widest reach of any frame, any facing.
+  // One frame box for every sheet: the reach of any frame in any facing, seen
+  // from the game camera (screen up is y·cos(pitch) − z·sin(pitch)).
   const pitch = 50 * DEG;
-  let reach = 0, top = -Infinity, bottom = 0;
+  let halfWidth = 0, viewTop = -Infinity, viewBottom = Infinity;
   const box = new THREE.Box3(), corner = new THREE.Vector3();
-  holder.rotation.y = 0;
-  for (const c of list) for (let f = 0; f < frameCount(c); f++) {
-    applyPose(samplePose(c, Math.min(c.duration, f / c.fps)) ?? restPose);
-    holder.updateMatrixWorld(true);
-    box.setFromObject(model, true);
-    for (let i = 0; i < 8; i++) {
-      corner.set(i & 1 ? box.max.x : box.min.x, i & 2 ? box.max.y : box.min.y, i & 4 ? box.max.z : box.min.z);
-      reach = Math.max(reach, Math.hypot(corner.x, corner.z));
-      top = Math.max(top, corner.y); bottom = Math.min(bottom, corner.y);
+  for (const dir of rows) {
+    holder.rotation.y = Math.PI - heading[dir];
+    for (const c of list) for (let f = 0; f < frameCount(c); f++) {
+      applyPose(samplePose(c, Math.min(c.duration, f / c.fps)) ?? restPose);
+      holder.updateMatrixWorld(true);
+      box.setFromObject(model, true);
+      for (let i = 0; i < 8; i++) {
+        corner.set(i & 1 ? box.max.x : box.min.x, i & 2 ? box.max.y : box.min.y, i & 4 ? box.max.z : box.min.z);
+        const up = corner.y * Math.cos(pitch) - corner.z * Math.sin(pitch);
+        halfWidth = Math.max(halfWidth, Math.abs(corner.x));
+        viewTop = Math.max(viewTop, up); viewBottom = Math.min(viewBottom, up);
+      }
     }
   }
-  const viewTop = top * Math.cos(pitch) + reach * Math.sin(pitch);
-  const viewBottom = bottom * Math.cos(pitch) - reach * Math.sin(pitch);
-  const side = Math.max(2 * reach, viewTop - viewBottom) * 1.08;
+  viewBottom = Math.min(viewBottom, 0);
+  const side = Math.max(2 * halfWidth, viewTop - viewBottom) * 1.06;
   const centre = (viewTop + viewBottom) / 2;
   const cam = new THREE.OrthographicCamera(-side / 2, side / 2, centre + side / 2, centre - side / 2, 0.01, 50);
   cam.position.set(0, Math.sin(pitch) * 10, Math.cos(pitch) * 10); cam.lookAt(0, 0, 0);
