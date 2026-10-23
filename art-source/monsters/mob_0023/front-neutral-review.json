@@ -1,0 +1,25 @@
+{
+  "id": "mob_0023",
+  "selectedDraft": "front-neutral-v2.png",
+  "artApproved": false,
+  "publicBinding": false,
+  "size": [
+    1254,
+    1254
+  ],
+  "alphaBoundsAbove16": [
+    285,
+    49,
+    968,
+    1209
+  ],
+  "observed": [
+    "Top bracket now fully inside canvas.",
+    "Front dish, cyan rings, paired hoses and lead boots retained."
+  ],
+  "remaining": [
+    "Margins smaller than requested 8 percent; preview padding required.",
+    "Hose mounts and dish cross-section need cross-view consistency review.",
+    "No animation drawings yet."
+  ]
+}
