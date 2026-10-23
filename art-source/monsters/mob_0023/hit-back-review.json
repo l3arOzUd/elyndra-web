@@ -2,7 +2,7 @@
   "id": "mob_0023",
   "sources": [
     "back-neutral-v2.png",
-    "hit-back-brace.png"
+    "hit-back-brace-v2.png"
   ],
   "sequence": [
     0,
@@ -17,9 +17,12 @@
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
-    "Right arm overly occluded; elbow silhouette needs clarification.",
+    "Right elbow now visible but arm looks shortened; joint anatomy needs cleanup.",
     "Right boot shifts laterally from neutral support point.",
     "Dish, hoses and painted details drift.",
     "Recovery inbetween missing."
+  ],
+  "observed": [
+    "V2 restores right arm silhouette outside flank; foot placement correction remains incomplete."
   ]
 }

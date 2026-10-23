@@ -1,0 +1,8 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Precise pose correction. Image1 edit target rear robot hit reaction; image2 neutral reference for anatomy and planted boots. Preserve image1 head tilt, torso recoil, left arm and framing. Restore visible anatomical RIGHT upper arm and bent elbow outside right flank silhouette: elbow projects right approximately one forearm width, forearm turns forward toward chest and is partially occluded. Show connected shoulder->upper arm->elbow, never a detached limb. Use exact bronze armor and black joint construction from image2. Reposition image1 right boot to image2 planted heel location (slightly inward), keeping rigid lower leg lengths and slight knee flex. Keep rear camera, same full body scale, patina, opaque bronze six-spoke dish head, neck hoses and two back vents. Transparent background no shadow no text. Do not turn character around or add weapons.",
+  "references": [
+    "hit-back-brace.png",
+    "back-neutral-v2.png"
+  ]
+}
