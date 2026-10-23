@@ -3,24 +3,26 @@
   "sources": [
     "back-neutral-v2.png",
     "attack-back-charge.png",
-    "attack-back-release.png"
+    "attack-back-release.png",
+    "attack-back-recovery.png"
   ],
   "sequence": [
     0,
     1,
     1,
     2,
-    2,
+    3,
     0
   ],
   "frameDurationMs": 160,
-  "status": "three-drawing-rear-attack-draft",
+  "status": "four-drawing-rear-attack-draft",
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
-    "Recovery and inbetweens missing; neutral temporarily reused.",
+    "Inbetweens and stance-closing transition missing.",
     "Stance wider than front charge; boot registration drifts.",
     "Dish size and armor details change between drawings.",
-    "Runtime VFX synchronization with rear sprites not connected."
+    "Runtime VFX synchronization with rear sprites not connected.",
+    "Release loses cyan joint lights; recovery restores them, causing discontinuity."
   ]
 }

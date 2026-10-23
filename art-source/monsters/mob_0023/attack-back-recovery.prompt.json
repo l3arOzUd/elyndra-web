@@ -1,0 +1,8 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Create one RECOVERY animation keyframe for exact rear Relay Guardian. Image1 release pose, image2 neutral endpoint. Draw pose midway from image1 to image2: arms lowered closer to hips but still slightly outward, elbows relaxed, hands loosely curled; knees less bent, torso rises modestly. Keep boots planted at image1 width for now; no feet sliding, no scaling of armor. Head opaque bronze six-spoke disk, two rear spine vents, hoses and patina unchanged. Restore thin cyan joint lights to neutral image2 intensity; they are normal power lights. Same rear orthographic camera, square framing, same physical size. No external sonar effects, no shadows, no ground, no text; transparent background. Do not turn toward camera or add front face details.",
+  "references": [
+    "attack-back-release.png",
+    "back-neutral-v2.png"
+  ]
+}
