@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Seamless tileable texture for a three-dimensional fantasy tree canopy, hand painted gouache MMORPG art. Dense overlapping small oval leaves arranged in organic loose clusters, soft sage green, muted golden green highlights, forest green recesses. Readable individual painted leaf shapes, varied sizes, elegant stylized brushwork. Flat albedo, even lighting, no cast shadows, no branches, no trunk, no background gaps, no flowers, no text, no spherical objects. Entire square filled with foliage. Gentle medium-low contrast, no neon colors, no photorealism. All edges seamless, 1024 square.",
+  "output": "public/textures/env/dawn_canopy.png"
+}

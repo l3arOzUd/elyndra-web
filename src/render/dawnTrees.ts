@@ -1,4 +1,6 @@
 import * as THREE from "three";
+import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
+import { envArt } from "./envArt";
 import type { MapLayout } from "../data/schema";
 
 /** Volumetric trees at authored collision anchors. Canopies do not change walk data. */
@@ -7,7 +9,10 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   const trees = layout.props.filter(p => p.kind === "tree");
   if (!trees.length) return;
   const bark = track(new THREE.MeshLambertMaterial({ color: 0x765538 }));
-  const leaves = track(new THREE.MeshLambertMaterial({ color: 0xffffff, vertexColors: true }));
+  const image = envArt.textures.get("dawn_canopy");
+  const texture = image ? track(new THREE.Texture(image)) : null;
+  if (texture) { texture.colorSpace = THREE.SRGBColorSpace; texture.wrapS = texture.wrapT = THREE.RepeatWrapping; texture.repeat.set(2, 1); texture.anisotropy = 8; texture.needsUpdate = true; }
+  const leaves = track(new THREE.MeshLambertMaterial({ color: 0xffffff, vertexColors: true, map: texture }));
   leaves.onBeforeCompile = shader => {
     shader.uniforms.dawnTime = time;
     shader.vertexShader = 'uniform float dawnTime; varying vec3 vLeaf;\n' + shader.vertexShader.replace('#include <begin_vertex>', `
@@ -16,16 +21,16 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
       float phase = instanceMatrix[3].x * 0.43 + instanceMatrix[3].z * 0.27;
       transformed.x += sin(dawnTime * 1.1 + phase + position.y) * 0.025;
     `);
-    shader.fragmentShader = 'varying vec3 vLeaf;\n' + shader.fragmentShader.replace('#include <color_fragment>', `
-      #include <color_fragment>
-      vec3 p = vLeaf * 18.0;
-      float mottling = sin(p.x + sin(p.z * 1.3)) * sin(p.y * 1.4 + cos(p.x));
-      float leaf = smoothstep(0.05, 0.7, mottling);
-      diffuseColor.rgb *= 0.78 + leaf * 0.3;
-    `);
   };
-  leaves.customProgramCacheKey = () => 'dawn-canopy-sway-v2';
-  const trunkGeo = track(new THREE.CylinderGeometry(0.12, 0.28, 2.5, 9).translate(0, 1.25, 0));
+  leaves.customProgramCacheKey = () => 'dawn-canopy-sway-v3';
+  const pieces = [new THREE.CylinderGeometry(0.1, 0.25, 2.7, 9).translate(0, 1.35, 0)];
+  for (let i = 0; i < 4; i++) {
+    const angle = i * Math.PI / 2 + 0.3;
+    pieces.push(new THREE.CylinderGeometry(0.04, 0.11, 1.5, 7).rotateZ(0.65).translate(-0.42, 2.1, 0).rotateY(angle));
+    pieces.push(new THREE.CylinderGeometry(0.07, 0.16, 0.65, 7).rotateZ(0.9).translate(-0.2, 0.22, 0).rotateY(angle));
+  }
+  const trunkGeo = track(mergeGeometries(pieces));
+  pieces.forEach(piece => piece.dispose());
   const crownGeo = track(new THREE.IcosahedronGeometry(1, 2));
   const vertices = crownGeo.attributes.position;
   for (let i = 0; i < vertices.count; i++) {
@@ -38,7 +43,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   const color = new THREE.Color();
   for (let i = 0; i < crownGeo.attributes.position.count; i++) {
     const y = crownGeo.attributes.position.getY(i);
-    color.set(0x547344).lerp(new THREE.Color(0xb4c879), (y + 1) * 0.5);
+    color.set(0x9daa83).lerp(new THREE.Color(0xffffff), (y + 1) * 0.5);
     colors.set([color.r, color.g, color.b], i * 3);
   }
   crownGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
