@@ -180,7 +180,7 @@ export function starterClips(rest: Pose): EditClip[] {
     UpperArm_L: [5, 0, 10], LowerArm_L: [-85, 0, 0], UpperArm_R: [-10, 0, -10], LowerArm_R: [-85, 0, 0],
   }, [0, 0.03, 0]);
 
-  // attack: overhead sword chop. Guard → wind up behind the head → lunge and
+  // attack: overhead sword chop. Guard → raise the blade high, pointing back → lunge and
   // strike (the "hit" event) → settle back into guard.
   const guard = {
     UpperArm_R: [-30, 0, -10], LowerArm_R: [-40, 0, 0], Hand_R: [0, 0, 0],
@@ -191,7 +191,7 @@ export function starterClips(rest: Pose): EditClip[] {
   } satisfies Degrees;
   const swordGuard = p(guard, [0, -0.012, 0]);
   const windUp = p({ ...guard,
-    UpperArm_R: [-165, 0, -14], LowerArm_R: [-55, 0, 0], Hand_R: [-10, 0, 0],
+    UpperArm_R: [-168, 0, -18], LowerArm_R: [-22, 0, 0], Hand_R: [10, 0, 0],
     UpperArm_L: [-45, 0, 18], LowerArm_L: [-35, 0, 0],
     Spine: [-4, 10, 0], Chest: [-10, 22, 0], Head: [6, -18, 0],
   }, [0, -0.004, -0.01]);

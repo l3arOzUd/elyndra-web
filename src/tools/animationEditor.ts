@@ -601,7 +601,7 @@ $('mode-move').onclick = () => setMode('translate');
 let currentView = 'persp';
 function setView(view: string) {
   currentView = view;
-  const yaw: Record<string, number> = { front: 0, left: -Math.PI / 2, right: Math.PI / 2, back: Math.PI, persp: 0.6, game: 0 };
+  const yaw: Record<string, number> = { front: 0, left: Math.PI / 2, right: -Math.PI / 2, back: Math.PI, persp: 0.6, game: 0 };
   const pitch = view === 'game' ? 50 * DEG : view === 'persp' ? 14 * DEG : 4 * DEG;
   const h = modelHeight, distance = h * 3.1;
   const target = new THREE.Vector3(0, h * 0.48, 0);
