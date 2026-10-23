@@ -97,7 +97,29 @@ function castNow(id: string, freezeMs?: number) {
 }
 Object.assign(window, { castNow });
 
+// Uses the production effect and travel timing; actors here are sample markers.
+function relayNow(freezeMs?: number) {
+  fx.clear(); queue = []; castAt = clock;
+  freezeAt = freezeMs === undefined ? Infinity : clock + freezeMs;
+  Object.assign(window, { frozen: false });
+  const from = hero.root.position.clone().add(new THREE.Vector3(0, hero.height * 0.85, 0));
+  const target = aim.clone();
+  const distance = Math.hypot(target.x, target.z);
+  if (distance < 0.001) target.set(0, 0, 2);
+  else target.multiplyScalar(Math.min(1, 2 / distance));
+  target.y = 0.5;
+  const ms = THREE.MathUtils.clamp(from.distanceTo(target) * 55, 140, 380);
+  hero.heading = headingOf(target.x, target.z);
+  fx.monsterProjectile("mob_0023", from, target, 0x55e6ef, ms);
+  later(ms, () => fx.impact(target, 0x55e6ef));
+}
+Object.assign(window, { relayNow });
+
 const bar = document.getElementById("bar")!;
+const relayButton = document.createElement("button");
+relayButton.textContent = "Relay sonar (sample actors)";
+relayButton.onclick = () => relayNow();
+bar.append(relayButton);
 for (const s of skills) {
   const b = document.createElement("button");
   b.textContent = s.name;
@@ -138,3 +160,4 @@ renderer.setAnimationLoop((now) => {
 });
 const first = new URLSearchParams(location.search).get("skill");
 if (first) setTimeout(() => castNow(first), 800);
+if (new URLSearchParams(location.search).get("monster") === "mob_0023") setTimeout(() => relayNow(), 800);
