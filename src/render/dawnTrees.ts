@@ -9,7 +9,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   const trees = layout.props.filter(p => p.kind === "tree");
   if (!trees.length) return;
   const bark = track(new THREE.MeshLambertMaterial({ color: 0x765538 }));
-  const image = envArt.textures.get("dawn_fir_v2");
+  const image = envArt.textures.get("dawn_fir_v3");
   const texture = image ? track(new THREE.Texture(image)) : null;
   if (texture) { texture.colorSpace = THREE.SRGBColorSpace; texture.anisotropy = 8; texture.needsUpdate = true; }
   const leaves = track(new THREE.MeshLambertMaterial({ color: 0xffffff, map: texture, alphaTest: 0.45, side: THREE.DoubleSide }));
