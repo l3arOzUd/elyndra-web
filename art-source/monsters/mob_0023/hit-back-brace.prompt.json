@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Create ONE rear-view hit reaction keyframe of this exact Relay Guardian. Identity master supplied. Camera stays directly behind, same scale, full body centered, transparent canvas. Both heels stay planted in identical positions. Knees flex slightly to absorb impact, pelvis lowers a little; rigid torso recoils 5 degrees with right shoulder raised slightly. Anatomical right forearm lifts across FRONT of chest so it is mostly occluded behind torso from this rear camera, visible elbow beside right flank. Left arm stays low, fingers tense. Dish head tips subtly with shoulders, keep six-spoke opaque bronze back disk and two neck hoses connected; no front cyan emitter visible through back. Preserve rigid limb segment lengths, exact armor construction, two spine vents, blue patina and light intensity. No cartoon squash or stretching. No impact effects, no shadow, no ground, no text. Minimal restrained recoil that can return to neutral quickly.",
+  "reference": "back-neutral-v2.png"
+}

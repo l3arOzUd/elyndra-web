@@ -1,0 +1,25 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "back-neutral-v2.png",
+    "hit-back-brace.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "frameDurationMs": 100,
+  "status": "two-drawing-rear-hit-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Right arm overly occluded; elbow silhouette needs clarification.",
+    "Right boot shifts laterally from neutral support point.",
+    "Dish, hoses and painted details drift.",
+    "Recovery inbetween missing."
+  ]
+}
