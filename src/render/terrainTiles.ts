@@ -19,7 +19,7 @@ type RoadKind = MapLayout["roads"][number]["kind"];
 export interface TerrainSurface { kind: BlockerKind; geometry: THREE.BufferGeometry; material: THREE.MeshLambertMaterial | THREE.MeshPhongMaterial }
 
 /**
- * How a painted texture becomes a ground: tint × mix(texture, grey, desat) + lift, at scale
+ * How a painted texture becomes a ground: tint Ã— mix(texture, grey, desat) + lift, at scale
  * cells a repeat. art names the made-for-purpose texture (textures/env/<art>.png) that,
  * when present, is used as it is instead.
  */
@@ -219,6 +219,10 @@ export async function applyPaintedTerrain(
   const forest = paint("moss", [0.84, 0.84, 0.84], 0, 0, 7, "moss");
   const plazaPaint = paint("plaza_tile", [1, 1, 1], 0, 0, 8, "paving");
   const recipes = [base, zoneA, zoneB, road, stoneRoad, trampled, meadow, forest, plazaPaint].map((r) => (r.art && envArt.textures.has(r.art) ? paint(r.tex, [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, ART_SCALE, r.art) : r));
+  // Dawnmeadow art pass: quiet turf under characters; other regions retain their palette.
+  if (layout.id === "lum_fld_01" && envArt.textures.has("dawn_grass")) {
+    for (const i of [0, 6]) recipes[i] = paint("grass", [ART_GAIN, ART_GAIN, ART_GAIN], 0, 0, 12, "dawn_grass");
+  }
   const maps = recipes.map((r) => tile(r.art && envArt.textures.has(r.art) ? r.art : r.tex));
   if (maps.every(Boolean)) {
     // DataTextures avoid canvas alpha premultiplication: alpha is a weight too.

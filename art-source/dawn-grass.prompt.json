@@ -1,0 +1,6 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Seamless tileable hand-painted meadow grass ground texture for an elegant fantasy MMORPG, straight orthographic top-down, square. Soft muted sage green and warm meadow green, broad subtle brushwork, LOW CONTRAST quiet ground so small characters remain readable. Mostly smooth short turf with sparse small directional grass strokes, no distinct clumps, no flowers, no rocks, no objects, no shadows, no lighting gradients, no perspective. Avoid yellow neon green and busy fern-like leaves. All four edges tile seamlessly. Painterly gouache surface, refined stylized fantasy, game-ready albedo texture, 1024x1024.",
+  "output": "public/textures/env/dawn_grass.png",
+  "status": "initial texture; scene review pending"
+}
