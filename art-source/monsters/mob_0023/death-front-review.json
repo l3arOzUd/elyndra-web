@@ -1,0 +1,27 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "front-neutral-v2.png",
+    "death-front-buckle.png",
+    "death-front-kneel.png",
+    "death-front-inert.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    3
+  ],
+  "frameDurationMs": 180,
+  "status": "four-drawing-forward-collapse-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Final arms spread too widely and approach canvas edges.",
+    "Head shell depth and hose connections change between drawings.",
+    "Ground baseline, limb lengths and patina continuity require cleanup.",
+    "Missing inbetweens; other three views are not authored."
+  ]
+}

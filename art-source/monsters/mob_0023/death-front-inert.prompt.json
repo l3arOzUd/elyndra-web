@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Edit this exact robot into the NEXT FINAL collapse frame. It currently kneels with upright chest. Lower chest all the way onto thighs and ground: inert forearms FLAT on floor, elbows bent outward, hands limp. Tilt entire rigid sonar head forward another 65 degrees, so viewer sees mostly rounded back shell and narrow downward-facing dish edge, head resting LOW between forearms. Body must form a low heap with highest point BELOW 70% canvas height; retain same physical component scale and ground baseline at 95% canvas height. Knees stay near same ground contact, feet folded behind. Do not resize or recenter subject. Preserve bronze armor plates, hose connections, two arms two legs, rigid limb lengths. All cyan lights OFF. Front camera, hand painted fantasy game sprite, transparent background, no shadow no text. This is a lifeless forward-folded corpse, not kneeling upright, not a bowing standing pose, not backwards rotation.",
+  "reference": "death-front-kneel.png"
+}

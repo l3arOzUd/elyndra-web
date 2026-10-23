@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Use case: stylized-concept. Create one death-animation keyframe for Relay Guardian, matching the supplied front reference exactly in bronze armor construction, ribbed hoses, circular sonar dish head, lead boots and painted fantasy rendering. Full body front orthographic camera unchanged, transparent background, square canvas same scale as reference (do not enlarge to fill empty head space). Pose: mechanical power fails, BOTH knees buckle deeply, pelvis drops, torso leans forward slightly, heavy arms hang slack with fingers loose beside knees. Boots remain planted near original baseline, dish head bows forward slightly with its circular plane foreshortened naturally, all cyan lights dim substantially. Keep fixed rigid armor segment lengths and recognizable three-spoke dish, no rubber limbs, no backward lean or whole-image rotation. One character one frame, no text, no ground, no shadows. Leave ample transparent space above the lowered head. This is the first collapse pose, not final lying pose.",
+  "reference": "front-neutral-v2.png"
+}

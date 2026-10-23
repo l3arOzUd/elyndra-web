@@ -1,0 +1,9 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Create ONE final death pose of the exact bronze Relay Guardian in reference 1 (neutral identity) and reference 2 (knees buckling). Transparent square canvas. Keep same camera front orthographic and same physical size, no zoom to fill canvas. Mechanical shutdown collapse FORWARD: both knees rest on ground, torso folds forward low over thighs, forearms and palms rest on ground beside the body bearing its weight, dish head bows strongly downward with bottom rim almost resting on forearms. The dish is visibly foreshortened, showing top outer rim as it points toward floor, not still upright staring at viewer. Lifeless heavy heap, asymmetrical slack elbows but coherent rigid armor lengths. No backward fall, no floating, no prone standing-image rotation. All cyan lights off, dark teal glass remains. Preserve three brass spokes, circular dish, two ribbed chest hoses and bronze lead boots attached to legs folded behind. Ground contact baseline near bottom 95% of canvas; generous empty space above lowered body. Same hand painted patinated bronze details and shading, no text, no background, no ground shadow. Draw full intact creature not detached pieces.",
+  "references": [
+    "front-neutral-v2.png",
+    "death-front-buckle.png"
+  ],
+  "review": "Output remains kneeling; use as transition, not final corpse."
+}
