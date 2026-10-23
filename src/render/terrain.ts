@@ -171,6 +171,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   tex.anisotropy = 8;
   const ground = new THREE.Mesh(track(new THREE.PlaneGeometry(l.width, l.height).rotateX(-Math.PI / 2)), track(new THREE.MeshLambertMaterial({ map: tex })));
   ground.name = "terrain-ground";
+  ground.receiveShadow = l.id === 'lum_fld_01';
   ground.position.set(l.width / 2, 0, l.height / 2);
   group.add(ground);
   const beyond = new THREE.Mesh(track(new THREE.PlaneGeometry(l.width * 4, l.height * 4).rotateX(-Math.PI / 2)),
@@ -270,7 +271,9 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   if (l.id === "lum_fld_01") decor = decor.filter(p =>
     Math.sin(p.x * 0.13) * Math.cos(p.y * 0.11) > 0.55 && p.kind !== ("pebbles" as string));
   const modelProps: typeof l.props = [];
-  const modelKinds = new Set<import("../data/schema").PropKind>(l.id === "lum_fld_01" ? ["tree", "bush", "rock", "boulder"] : []);
+  const dawnSolid = new Set(['crystal', 'crate', 'brass_pipe', 'gear_ruin', 'rune_stone']);
+  const modelKinds = new Set<import("../data/schema").PropKind>(l.id === "lum_fld_01"
+    ? ['tree', 'bush', 'rock', 'boulder', 'ruin_block', ...dawnSolid] as import("../data/schema").PropKind[] : []);
   if (modelKinds.size) buildDawnTrees(l, group, track, tileTime);
   const painted = buildPaintedProps(l, group, track, (b) => ({ contains: (x, y) => inShape(b.shape, x, y), bounds: shapeBounds(b.shape) }), decor, modelKinds, modelProps);
   if (modelKinds.size) buildDawnDetails(modelProps, group, track);
@@ -301,7 +304,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   }
   const byKind = new Map<string, typeof l.props>();
   if (l.id === 'lum_fld_01') buildDawnLandmarks(l, group, track, animated);
-  for (const p of l.props) if (!PAINTED_KINDS.has(p.kind) &&
+  for (const p of l.props) if ((!PAINTED_KINDS.has(p.kind) || (l.id === 'lum_fld_01' && dawnSolid.has(p.kind))) &&
     !(l.id === 'lum_fld_01' && (p.kind === 'aqueduct' || p.kind === 'aether_pylon')))
     byKind.set(p.kind, [...(byKind.get(p.kind) ?? []), p]);
   const mat = track(new THREE.MeshLambertMaterial({ vertexColors: true, flatShading: true }));
@@ -310,6 +313,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   for (const [kind, list] of byKind) {
     const geo = propGeometry(kind as never);
     const inst = new THREE.InstancedMesh(geo, kind === "crystal" ? glow : mat, list.length);
+    inst.castShadow = l.id === 'lum_fld_01';
     list.forEach((p, i) => {
       dummy.position.set(p.x + 0.5, 0, p.y + 0.5);
       dummy.rotation.set(0, p.rot ?? 0, 0);

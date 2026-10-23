@@ -5,6 +5,7 @@ import { decodeWalk } from "./data/schema";
 import type { Connection } from "./net/connection";
 import { EntState, type CombatEvent, type EntityAdd, type MsgOf, type ServerMsg } from "./net/protocol";
 import { IsoCamera } from "./render/camera";
+import { sceneLighting } from "./render/sceneLighting";
 import { COLORS as SKILL_COLORS, ELEMENT_COLORS, Fx, RARITY_COLORS, TOTEM_COLORS } from "./render/fx";
 import { wayfarerSprite } from "./render/paperDoll";
 import { skillAnimation } from "./render/combatAnimation";
@@ -79,6 +80,7 @@ export class Game {
   readonly scene = new THREE.Scene();
   readonly cam: IsoCamera;
   readonly fx: Fx;
+  private readonly moveSun: (focus: THREE.Vector3) => void;
   private overlay: Overlay;
   private minimap: Minimap;
   private ents = new Map<number, Ent>();
@@ -144,10 +146,7 @@ export class Game {
     this.cam = new IsoCamera(1);
     this.fx = new Fx(this.scene);
     this.scene.background = new THREE.Color(0x1d2f27);
-    this.scene.add(new THREE.HemisphereLight(0xe6f2ff, 0x4b5b3a, 1.5));
-    const sun = new THREE.DirectionalLight(0xfff0d0, 1.8);
-    sun.position.set(-40, 80, 30);
-    this.scene.add(sun);
+    this.moveSun = sceneLighting(this.scene, this.renderer);
     this.scene.add(this.hoverMarker, this.targetMarker.mesh, this.clickMarker.group);
     conn.onMessage((m) => this.onMessage(m));
     hud.onSkill = (s) => this.cast(s);
@@ -801,6 +800,7 @@ export class Game {
 
     const me = this.self;
     this.cam.update(dt, me ? me.pos : this.cam.target);
+    this.moveSun(this.cam.target);
     const cam = this.cam.camera;
     for (const e of this.ents.values()) {
       e.actor.update(dtMs, cam, this.cam.yaw);

@@ -5,6 +5,7 @@ import { loadEnvArt } from "../render/envArt";
 import { animate, buildMap } from "../render/terrain";
 import { buildHeroSprite } from "../render/heroSprite";
 import { SpriteActor } from "../render/spriteActor";
+import { sceneLighting } from "../render/sceneLighting";
 
 // Map viewer: any map's terrain, props and lighting as the game draws them,
 // with no server, for checking how maps look. A stand-in hero shows scale.
@@ -24,10 +25,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 view.prepend(renderer.domElement);
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x1d2f27);
-scene.add(new THREE.HemisphereLight(0xe6f2ff, 0x4b5b3a, 1.5));
-const sun = new THREE.DirectionalLight(0xfff0d0, 1.8);
-sun.position.set(-40, 80, 30);
-scene.add(sun);
+const moveSun = sceneLighting(scene, renderer);
 const cam = new IsoCamera(1);
 const hero = new SpriteActor(buildHeroSprite(), {});
 scene.add(hero.root);
@@ -90,6 +88,7 @@ function frame(now: number) {
   if (keys.has("ArrowDown") || keys.has("s")) focus.z += pan;
   hero.root.position.copy(focus);
   cam.update(dt, focus);
+  moveSun(focus);
   hero.update(dt * 1000, cam.camera, cam.yaw);
   if (built) animate(built, dt);
   renderer.render(scene, cam.camera);

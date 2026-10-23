@@ -21,8 +21,7 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
       float phase = instanceMatrix[3].x * 0.43 + instanceMatrix[3].z * 0.27;
       transformed.x += sin(dawnTime * 1.1 + phase + position.y) * 0.025;
     `);
-    // The source is painted with deep crevices. Compress that baked shading so
-    // the actual crown volumes, rather than black texture lines, carry the form.
+    // Lift the diffuse leaf painting under the shared scene lighting.
     shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
       #include <map_fragment>
       diffuseColor.rgb *= 1.35;
@@ -52,6 +51,8 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   }
   lobes.push([0, 3.6, 0, 0.63]);
   const crowns = new THREE.InstancedMesh(crownGeo, leaves, trees.length * lobes.length);
+  trunks.castShadow = true;
+  crowns.castShadow = true;
   trunks.name = 'dawn-tree-trunks'; crowns.name = 'dawn-tree-canopies';
   const d = new THREE.Object3D();
   trees.forEach((p, i) => {

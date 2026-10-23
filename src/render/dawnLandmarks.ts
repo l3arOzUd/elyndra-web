@@ -10,7 +10,8 @@ export function buildDawnLandmarks(layout: MapLayout, group: THREE.Group,
   const teal = track(new THREE.MeshPhongMaterial({ color: 0x61d7c4, emissive: 0x146d65, shininess: 70 }));
   const add = (parent: THREE.Object3D, geo: THREE.BufferGeometry, mat: THREE.Material,
     x: number, y: number, z: number) => {
-    const mesh = new THREE.Mesh(track(geo), mat); mesh.position.set(x, y, z); parent.add(mesh); return mesh;
+    const mesh = new THREE.Mesh(track(geo), mat); mesh.position.set(x, y, z);
+    mesh.castShadow = mesh.receiveShadow = true; parent.add(mesh); return mesh;
   };
   for (const p of layout.props) {
     if (p.kind !== 'aether_pylon' && p.kind !== 'aqueduct') continue;
