@@ -2,7 +2,7 @@
   "id": "mob_0022",
   "sources": [
     "left-neutral-v5.png",
-    "walk-left-near-lift.png",
+    "walk-left-near-lift-v2.png",
     "walk-left-far-lift.png"
   ],
   "sequence": [
@@ -17,8 +17,14 @@
   "publicBinding": false,
   "remaining": [
     "Support foot slides between drawings.",
-    "Lifted foot toe angle and step length are excessive.",
+    "Far lifted foot toe angle remains excessive; step lengths still need balancing.",
     "Dedicated contact and passing drawings missing; neutral reused.",
     "Hip construction, boot shape and surface detail drift."
-  ]
+  ],
+  "observed": [
+    "Near-step v2 flattens the sole and shortens forward reach; support leg remains in place relative to v1."
+  ],
+  "superseded": {
+    "walk-left-near-lift.png": "Longer step and raised toe."
+  }
 }
