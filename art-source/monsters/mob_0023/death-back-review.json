@@ -1,0 +1,26 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "back-neutral-v2.png",
+    "death-back-buckle.png",
+    "death-back-inert.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "frameDurationMs": 180,
+  "status": "three-drawing-rear-shutdown-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Final torso remains too upright compared with front endpoint.",
+    "Arms spread too widely and boot construction changes.",
+    "Kneeling transition and inbetweens missing.",
+    "Head/back overlap and ground registration require cleanup."
+  ]
+}

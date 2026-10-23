@@ -1,0 +1,8 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Final death collapse of exact Relay Guardian. Image1 rear identity. Image2 front collapsed endpoint, use ONLY as pose reference, render same pose from directly BEHIND. Knees on ground, feet folded backward toward viewer, torso folds LOW forward away from viewer over thighs, head lowered away, forearms rest on ground ahead of knees and partly occluded from rear. Rear spine vents remain on back shell, opaque bronze six-spoke head rear, natural overlaps. Lifeless heavy heap, all cyan lights OFF. Keep component dimensions same physical scale as image1, lots of empty transparent space above lowered body, ground baseline near bottom of canvas. Do not zoom in. No backward topple, no upright kneeling, no detached limbs, no shadow no ground no text. Hand painted bronze patina sprite, full body visible within square transparent canvas.",
+  "references": [
+    "back-neutral-v2.png",
+    "death-front-inert.png"
+  ]
+}
