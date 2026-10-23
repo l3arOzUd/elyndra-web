@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Edit this Relay Guardian walking sprite into next foot CONTACT frame. Same exact creature, front camera, canvas, head position, dish spokes, torso, arms and hoses unchanged. Only adjust hips and legs naturally: image RIGHT raised boot now lowers flat onto ground at same y baseline as image LEFT boot, knee extends without changing thigh or shin length. Image RIGHT trailing boot remains grounded with heel just slightly raised, ready to push off. No exposed underside of forward boot; show upper toe armor. Keep boot sizes and spacing consistent with reference, neither foot clips bottom edge. Minimal torso motion. Single full body hand painted bronze fantasy sprite, transparent background, no ground shadow no text. Preserve patina and cyan light levels.",
+  "reference": "walk-front-left-lift.png"
+}

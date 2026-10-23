@@ -3,23 +3,29 @@
   "sources": [
     "front-neutral-v2.png",
     "walk-front-right-lift.png",
-    "walk-front-left-lift.png"
+    "walk-front-left-lift.png",
+    "walk-front-right-contact.png",
+    "walk-front-left-contact.png"
   ],
   "sequence": [
     0,
     1,
+    3,
     0,
-    2
+    2,
+    4
   ],
   "frameDurationMs": 220,
-  "status": "three-drawing-step-study",
+  "status": "five-drawing-step-study",
   "artApproved": false,
   "publicBinding": false,
   "remaining": [
-    "Contact and inbetween drawings missing; neutral temporarily reused for passing.",
+    "Contact poses provisional; inbetweens missing and neutral temporarily reused for passing.",
     "Lifted boots expose too much sole.",
     "Weight transfer and support foot registration require review.",
     "Hose, hand and painted armor details drift between drawings.",
-    "Other three walking views missing."
+    "Other three walking views missing.",
+    "Left contact has unwanted brown shadow between boots.",
+    "Contact sole baselines differ and body registration is not approved."
   ]
 }
