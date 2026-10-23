@@ -1,0 +1,24 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "front-neutral-v2.png",
+    "hit-front-brace.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "frameDurationMs": 100,
+  "status": "two-drawing-hit-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Shoulder armor and hose curves drift.",
+    "Knee spacing widens during recoil; foot registration needs checking.",
+    "Painted detail continuity and intermediate recovery missing."
+  ]
+}
