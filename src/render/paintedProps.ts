@@ -14,7 +14,7 @@ type Blocker = MapLayout["blockers"][number];
 // shaded footprint (the walk grid still decides where you can go).
 
 /** Kinds drawn as painted cards; the rest stay models (props.ts). */
-export const PAINTED_KINDS = new Set<PropKind>(["tree", "pine", "bush", "rock", "boulder", "dead_tree", "palm", "coral", "ice_spike", "crystal", "giant_tree", "crate", "brass_pipe", "gear_ruin", "rune_stone"]);
+export const PAINTED_KINDS = new Set<PropKind>(["tree", "pine", "bush", "rock", "boulder", "dead_tree", "palm", "coral", "ice_spike", "crystal", "giant_tree", "crate", "brass_pipe", "gear_ruin", "rune_stone", "ruin_block"]);
 
 type Look = "green" | "snow" | "dry" | "dark";
 /** An atlas cell: wÃƒâ€”h pixels at px,py; drawn cwÃƒâ€”ch cells. */

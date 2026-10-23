@@ -69,7 +69,7 @@ export type Shape =
 
 export type PropKind =
   | "tree" | "pine" | "giant_tree" | "palm" | "dead_tree" | "coral" | "bush" | "rock" | "boulder" | "crystal" | "ice_spike"
-  | "aether_pylon" | "brass_pipe" | "gear_ruin" | "rune_stone" | "lattice_obelisk" | "windmill" | "aqueduct"
+  | "aether_pylon" | "brass_pipe" | "gear_ruin" | "rune_stone" | "ruin_block" | "lattice_obelisk" | "windmill" | "aqueduct"
   | "lamp_post" | "market_stall" | "fountain" | "house" | "hall" | "workshop" | "transit_gate" | "tent"
   | "furnace" | "anvil" | "dock" | "waterwheel" | "observatory" | "statue" | "crate" | "fence_post" | "cave_mouth";
 

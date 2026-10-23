@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import type { Prop } from '../data/schema';
 import { envArt } from './envArt';
+import { farmWallCell } from '../shared/dawnFarm';
 
 /** Shares scene lighting across undergrowth and stones, including blocker heaps. */
 export function buildDawnDetails(props: Prop[], group: THREE.Group,
@@ -9,7 +10,7 @@ export function buildDawnDetails(props: Prop[], group: THREE.Group,
   const map = image ? track(new THREE.Texture(image)) : null;
   if (map) { map.colorSpace = THREE.SRGBColorSpace; map.needsUpdate = true; }
   for (const kind of ['bush', 'rock', 'boulder', 'ruin_block']) {
-    const list = props.filter(p => p.kind === kind);
+    const list = props.filter(p => p.kind === kind && !(kind === 'ruin_block' && farmWallCell(p.x, p.y)));
     if (!list.length) continue;
     const bush = kind === 'bush';
     const ruin = kind === 'ruin_block';

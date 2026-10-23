@@ -11,6 +11,7 @@
 
 import { decodeWalk, type DialogueDef, type ItemDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
 import { bakeLayout, shapeContains } from "./layout";
+import { farmSite, farmWalls } from '../src/shared/dawnFarm';
 import { BOUNTY } from "./model";
 import { AFTER_ENDING, DUNGEON_ZONE_NOTE, ECOLOGY, FIELD_CAST, FINAL_QUEST, QUEST_SUMMARY, STORY_STAGES, SURVEY_PAGES, TOWN_CAST } from "./lore";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
@@ -333,6 +334,16 @@ function fieldMap(regions: RegionDesign[], f: FieldSpec, look: Lookup, nextField
   if (f.dungeon) props.push({ kind: "cave_mouth", x: gate.trigger[0] + 3, y: gate.trigger[1] - 3, block: 0, scale: 1.4 });
 
   if (f.id === "lum_fld_01") {
+    // Replace the random ruin heap with one authored, traversable homestead.
+    for (let i = blockers.length - 1; i >= 0; i--) {
+      const b = blockers[i];
+      if ('ellipse' in b.shape && farmSite(b.shape.ellipse[0], b.shape.ellipse[1])) blockers.splice(i, 1);
+    }
+    for (const w of farmWalls) props.push({ kind: 'ruin_block', x: w.x, y: w.z, block: 1 });
+    roads.push({ points: [[52, 59], [59, 62], [65, 65], [72.5, 64], [72.5, 58]], width: 2.4, kind: 'dirt' });
+    ground_patches.push({ ground: 'stone', shape: { rect: [69, 53, 8, 6] } });
+    landmarks.push({ id: 'lm_dawnmeadow_farmhouse', name: 'Abandoned Farmstead', kind: 'ruin', x: 72, y: 56,
+      note: 'A collapsed slate roof, broken hearth and open farmyard beside the old cart track.' });
     // Forest-road study: grouped silhouettes frame an open pulling lane.
     for (const [x, y, scale] of [[42, 58, 1.2], [43, 63, 0.9], [42, 69, 1.35], [58, 56, 1.15], [62, 58, 1.4], [64, 63, 1.05]]) {
       if (roads.every(r => distToLine(x, y, r.points) > r.width / 2 + 2.5) && blockers.every(b => !shapeContains(b.shape, x, y)))
