@@ -10,15 +10,30 @@ export function buildDawnTrees(layout: MapLayout, group: THREE.Group,
   const leaves = track(new THREE.MeshLambertMaterial({ color: 0xffffff, vertexColors: true }));
   leaves.onBeforeCompile = shader => {
     shader.uniforms.dawnTime = time;
-    shader.vertexShader = 'uniform float dawnTime;\n' + shader.vertexShader.replace('#include <begin_vertex>', `
+    shader.vertexShader = 'uniform float dawnTime; varying vec3 vLeaf;\n' + shader.vertexShader.replace('#include <begin_vertex>', `
       #include <begin_vertex>
+      vLeaf = position;
       float phase = instanceMatrix[3].x * 0.43 + instanceMatrix[3].z * 0.27;
       transformed.x += sin(dawnTime * 1.1 + phase + position.y) * 0.025;
     `);
+    shader.fragmentShader = 'varying vec3 vLeaf;\n' + shader.fragmentShader.replace('#include <color_fragment>', `
+      #include <color_fragment>
+      vec3 p = vLeaf * 18.0;
+      float mottling = sin(p.x + sin(p.z * 1.3)) * sin(p.y * 1.4 + cos(p.x));
+      float leaf = smoothstep(0.05, 0.7, mottling);
+      diffuseColor.rgb *= 0.78 + leaf * 0.3;
+    `);
   };
-  leaves.customProgramCacheKey = () => 'dawn-canopy-sway-v1';
+  leaves.customProgramCacheKey = () => 'dawn-canopy-sway-v2';
   const trunkGeo = track(new THREE.CylinderGeometry(0.12, 0.28, 2.5, 9).translate(0, 1.25, 0));
   const crownGeo = track(new THREE.IcosahedronGeometry(1, 2));
+  const vertices = crownGeo.attributes.position;
+  for (let i = 0; i < vertices.count; i++) {
+    const x = vertices.getX(i), y = vertices.getY(i), z = vertices.getZ(i);
+    const r = 1 + 0.08 * Math.sin(x * 12 + z * 7) * Math.cos(y * 9 - z * 4);
+    vertices.setXYZ(i, x * r, y * r, z * r);
+  }
+  crownGeo.computeVertexNormals();
   const colors = new Float32Array(crownGeo.attributes.position.count * 3);
   const color = new THREE.Color();
   for (let i = 0; i < crownGeo.attributes.position.count; i++) {
