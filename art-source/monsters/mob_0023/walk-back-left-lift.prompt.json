@@ -1,0 +1,8 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "Create complementary rear WALK keyframe of exact Relay Guardian. Image1 identity neutral master, image2 opposite step reference. Anatomical LEFT leg/image LEFT now lifts with natural knee flex and heel raised; image RIGHT leg planted supporting weight. RIGHT arm swings gently forward away from camera, left arm gently back. Match stride amplitude of image2 but do NOT mirror textures or redesign. Keep head position and scale, opaque bronze six-spoke rear dish, two spine vents, hoses, cyan joint lights and rigid armor lengths from image1. Full rear camera walking away, full body same scale centered on square transparent canvas. No ground shadow no text. Both legs connected with credible knee and ankle articulation.",
+  "references": [
+    "back-neutral-v2.png",
+    "walk-back-right-lift.png"
+  ]
+}

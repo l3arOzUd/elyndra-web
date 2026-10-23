@@ -1,0 +1,23 @@
+{
+  "id": "mob_0023",
+  "sources": [
+    "back-neutral-v2.png",
+    "walk-back-right-lift.png",
+    "walk-back-left-lift.png"
+  ],
+  "sequence": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "frameDurationMs": 220,
+  "status": "three-drawing-rear-walk-draft",
+  "artApproved": false,
+  "publicBinding": false,
+  "remaining": [
+    "Contact and inbetween frames missing; neutral temporarily reused for passing.",
+    "Excessive sole exposure and support-foot position drift.",
+    "Knee articulation and armor detail continuity need cleanup."
+  ]
+}

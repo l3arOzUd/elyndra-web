@@ -1,0 +1,5 @@
+{
+  "tool": "builtin image_gen",
+  "prompt": "One rear-view WALK keyframe of this exact Relay Guardian, walking away from camera. Anatomical RIGHT leg is image RIGHT: knee flexes naturally, right heel lifts modestly with boot advancing away from viewer, slight sole edge visible; image LEFT boot planted at original baseline supports weight. Opposite LEFT arm swings slightly forward away from viewer, right arm slightly back. Keep opaque bronze six-spoke rear head dish and spine vents exactly; no front face. Fixed armor segment lengths, natural knee/ankle rotations, no rubber legs or giant stride. Same full body scale and square framing, minimal head bob, existing cyan joint lights unchanged. Hand painted patinated bronze. Transparent background no ground no shadow no text.",
+  "reference": "back-neutral-v2.png"
+}
