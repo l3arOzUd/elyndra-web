@@ -243,14 +243,6 @@ export class Hud {
     if (open && (id === 'char-win' || id === 'skill-win')) this.renderCharacter();
     if (open && id === 'book-win') this.book.render();
   }
-  /** The end of the main story (the final quest's ending text). */
-  showEnding(title: string, lines: string[]) {
-    this.closeWindows();
-    $('ending-title').textContent = title;
-    const text = $('ending-text'); text.replaceChildren(...lines.map((l, i) => el('p', i === lines.length - 1 ? 'ending-motto' : '', l)));
-    const box = $('ending'); box.hidden = false;
-    const close = $('ending-close') as HTMLButtonElement; close.onclick = () => { box.hidden = true; }; close.focus();
-  }
   /** The card shown on entering a map: its name, level band and what the place is now. */
   showMapCard(name: string, sub: string, intro: string) {
     const card = $('map-card');

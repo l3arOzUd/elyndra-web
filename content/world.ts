@@ -12,7 +12,7 @@
 import { decodeWalk, type DialogueDef, type ItemDef, type NpcDef, type Rect, type SpawnPocket } from "../src/data/schema";
 import { bakeLayout, shapeContains } from "./layout";
 import { BOUNTY } from "./model";
-import { AFTER_ENDING, DUNGEON_ZONE_NOTE, ECOLOGY, ENDING, FIELD_CAST, QUEST_SUMMARY, STORY_STAGES, SURVEY_PAGES, TOWN_CAST } from "./lore";
+import { AFTER_ENDING, DUNGEON_ZONE_NOTE, ECOLOGY, FIELD_CAST, FINAL_QUEST, QUEST_SUMMARY, STORY_STAGES, SURVEY_PAGES, TOWN_CAST } from "./lore";
 import type { LinkDesign, MapDesign, RegionDesign } from "./types";
 
 export const HUB = "lum_town_01";
@@ -482,7 +482,6 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       // Each chapter's boss quest hands over one of Aldric's survey pages.
       const page = SURVEY_PAGES.findIndex((sp) => sp.quest === q.id);
       if (page >= 0) q.rewards.items.push({ item_id: surveyPageId(page), qty: 1 });
-      if (q.id === ENDING.quest) q.ending = { title: ENDING.title, lines: ENDING.lines };
       q.giver_npc_id = giver;
       q.turn_in_npc_id = turnIn;
       return q;
@@ -505,9 +504,9 @@ export function buildWorld(regions: RegionDesign[]): RegionDesign[] {
       const stages = (STORY_STAGES[d.npc_id] ?? []).map((st) => ({ after: st.after, lines: [...st.lines, ...guide] }));
       // Everyone hears how it ended: a line for their role before what they usually say.
       const role = roleOf.get(d.npc_id) as keyof typeof AFTER_ENDING | undefined;
-      if (!stages.some((st) => st.after === ENDING.quest) && role && AFTER_ENDING[role]) {
+      if (!stages.some((st) => st.after === FINAL_QUEST) && role && AFTER_ENDING[role]) {
         const last = stages.at(-1)?.lines ?? d.lines;
-        stages.push({ after: ENDING.quest, lines: [AFTER_ENDING[role], ...last.slice(d.npc_id.endsWith("_scout") ? 0 : 1)] });
+        stages.push({ after: FINAL_QUEST, lines: [AFTER_ENDING[role], ...last.slice(d.npc_id.endsWith("_scout") ? 0 : 1)] });
       }
       return stages.length ? { ...d, stages } : d;
     });

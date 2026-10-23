@@ -130,7 +130,6 @@ export type ServerMsg =
   | SheetMsg
   | { t: "quests"; quests: QuestView[] }
   | { t: "book"; kills: Record<string, number> }
-  | { t: "story"; event: "ending"; quest: string }
   | { t: "npc"; npc: string; name: string; role: string; lines: string[]; shop?: [string, number][]; recipes?: RecipeView[]; dest?: [string, number][]; offer?: QuestView[]; ready?: string[] }
   | { t: "notice"; text: string; kind: "info" | "good" | "bad" }
   | { t: "correct"; seq: number; pos: [number, number] }

@@ -649,17 +649,8 @@ export const SURVEY_PAGES: { quest: string; title: string; text: string }[] = [
   { quest: "q_noc_lattice_heart", title: "Survey Page VII: The Gate", text: "Last page. She stands in the Gate and the Sovereign speaks with her voice. I have driven the Guild ward into the threshold. It will hold the door half shut for a while, maybe years, as long as I hold the ward. Survey, clear, report. Report: I held. Whoever reads this, finish it." },
 ];
 
-/** The ending, shown once when the final quest is turned in. */
-export const ENDING = {
-  quest: "q_noc_lattice_heart",
-  title: "The Long Watch",
-  lines: [
-    "The Lattice Sovereign falls silent, and with it the voice that was once Ilvane Thorne. Aldric Venn's ward breaks as the Gate swings half shut; three years of holding the door are over.",
-    "Across Elyndra the Hearts sleep. For a day the machines stand still, the mirrors stop turning east, and the sea is quiet. The Veil Rift stops growing.",
-    "But a Heart cannot die, only sleep. Wenna Lark writes Aldric's name on the Guild wall and yours beneath it, first on the roster of the Long Watch: the Wayfarers who go down, again and again, to keep the Gate from opening.",
-    "Survey. Clear. Report.",
-  ],
-};
+/** The main story's last quest; after it every NPC has something to say (AFTER_ENDING). */
+export const FINAL_QUEST = "q_noc_lattice_heart";
 
 /** What everyone else says once the story is over (the final quest is done). */
 export const AFTER_ENDING: Record<"scout" | "healer" | "teleporter" | "merchant" | "craftsman" | "guard", string> = {

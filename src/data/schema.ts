@@ -354,8 +354,6 @@ export interface QuestDef {
   objectives: Objective[];
   rewards: { base_exp: number; currency: number; items: { item_id: string; qty: number }[] };
   summary: string;
-  /** Turning it in ends the main story: the client shows this ending. */
-  ending?: { title: string; lines: string[] };
 }
 
 export interface SpawnPocket {
