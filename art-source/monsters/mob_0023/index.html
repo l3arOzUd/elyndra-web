@@ -16,8 +16,9 @@ const views=await Promise.all(names.map(async name=>{
  if(x1<0)throw new Error(name+' has no opaque pixels');
  const scale=420/(y1-y0+1),dx=256-(x0+x1+1)/2*scale,dy=470-(y1+1)*scale;
  const fig=document.createElement('figure'),canvas=document.createElement('canvas'),caption=document.createElement('figcaption');canvas.width=512;canvas.height=512;canvas.style.cssText='width:256px;background:#697a80';caption.textContent=name;fig.append(canvas,caption);aligned.append(fig);
- return {name,im,canvas,bounds:[x0,y0,x1,y1],scale,dx,dy};
+ return {name,im,canvas,fig,bounds:[x0,y0,x1,y1],scale,dx,dy};
 }));
+for(const v of views)aligned.append(v.fig);
 function draw(){for(const v of views){const c=v.canvas.getContext('2d');c.clearRect(0,0,512,512);c.drawImage(v.im,v.dx,v.dy,v.im.width*v.scale,v.im.height*v.scale);if(guides.checked){c.strokeStyle='#f2d480';c.setLineDash([6,4]);for(const y of [50,470]){c.beginPath();c.moveTo(0,y);c.lineTo(512,y);c.stroke()}}}}
 guides.onchange=draw;draw();measurements.textContent=views.map(v=>v.name+': source bounds '+v.bounds.join(', ')+'; uniform scale '+v.scale.toFixed(4)).join('\n');
 window.__relayReferences={ready:true,views:views.map(({name,bounds,scale,dx,dy})=>({name,bounds,scale,dx,dy}))};
