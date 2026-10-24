@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import {createRequire} from 'node:module';
 const {chromium}=createRequire(import.meta.url)('D:/Working/tosm-monthly-reward/node_modules/playwright-core');
 const root='art-source/doll-v3',kit='public/sprites/wayfarer';
+const rig=JSON.parse(await fs.readFile(kit+'/rig.json','utf8'));
 const manifest=JSON.parse(await fs.readFile(root+'/manifest.json','utf8'));
 const browser=await chromium.launch({headless:true,executablePath:'C:/Users/l3arOzUd/AppData/Local/ms-playwright/chromium-1208/chrome-win64/chrome.exe'});
 const page=await browser.newPage(),imported={};
@@ -11,7 +12,7 @@ try {for(const s of manifest.sets){
  for(let r=0;r<manifest.views.length;r++)for(let c=0;c<s.layers.length;c++){
   const view=manifest.views[r],layer=s.layers[c];
   let ref=s.slot==='armor'?`items/leafweave_coat/${view}/${layer}.png`:s.slot==='boots'?`items/traveler_boots/${view}/${layer}.png`:s.slot==='gloves'?`base/${view}/${layer}.png`:s.slot==='head'?`items/iron_helm/${view}/head.png`:`items/${({vanguard:'copper_saber',strider:'surveyor_bow',arcanist:'aether_rod'})[s.job]||'copper_saber'}/${view}/weapon.png`;
-  const png=await page.evaluate(async({sheet,ref,r,c,rows,cols,layer,slot})=>{
+  const png=await page.evaluate(async({sheet,ref,r,c,rows,cols,layer,slot,set,view,pivot})=>{
    const load=src=>new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=src});
    const [img,base]=await Promise.all([load(sheet),load(ref)]);
    const canvas=(w,h)=>{const e=document.createElement('canvas');e.width=w;e.height=h;return e};
@@ -19,9 +20,22 @@ try {for(const s of manifest.sets){
    const x=Math.floor(img.width*c/cols),y=Math.floor(img.height*r/rows),w=Math.floor(img.width*(c+1)/cols)-x,h=Math.floor(img.height*(r+1)/rows)-y;
    const cell=canvas(w,h);cell.getContext('2d').drawImage(img,x,y,w,h,0,0,w,h);const box=bounds(cell);if(!box)return null;
    const target=canvas(base.width,base.height);target.getContext('2d').drawImage(base,0,0);const b=bounds(target);if(!b)throw Error('Empty reference');
-   const grow=['boots','gloves'].includes(slot)?2:0;const bw=b[2]-b[0]+grow*2,bh=b[3]-b[1]+grow*2,sw=box[2]-box[0],sh=box[3]-box[1],k=Math.min(bw/sw,bh/sh),dw=Math.round(sw*k),dh=Math.round(sh*k);
+   if(slot==='head'){
+    const small=/circlet|warcrown|crown/.test(set),mask=/mask/.test(set);
+    const boxTarget=mask?[194,140,320,209]:small?[177,65,337,139]:[169,54,343,224];
+    const [tx,ty,ex,ey]=boxTarget;
+    const out=canvas(512,512);out.getContext('2d').drawImage(cell,box[0],box[1],box[2]-box[0],box[3]-box[1],tx,ty,ex-tx,ey-ty);return out.toDataURL('image/png').split(',')[1];
+   }
+   if(slot==='weapon' && /saber|executioner/.test(set)){
+    const out=canvas(512,512),g=out.getContext('2d'),sw=box[2]-box[0],sh=box[3]-box[1],height=145,width=height*sw/sh;
+    const a=cell.getContext('2d').getImageData(0,0,w,h).data;let total=0,n=0;
+    for(let yy=Math.floor(box[1]+sh*.8);yy<box[1]+sh*.92;yy++)for(let xx=box[0];xx<box[2];xx++)if(a[(yy*w+xx)*4+3]>64){total+=xx;n++;}
+    const grip=((total/n||box[0]+sw/2)-box[0])/sw;
+    g.translate(pivot[0],pivot[1]+9);g.rotate((view==='back'?145:-145)*Math.PI/180);g.drawImage(cell,box[0],box[1],sw,sh,-width*grip,-height*.86,width,height);return out.toDataURL('image/png').split(',')[1];
+   }
+   const grow=['boots','gloves'].includes(slot)?2:0;const bw=b[2]-b[0]+grow*2,bh=b[3]-b[1]+grow*2,sw=box[2]-box[0],sh=box[3]-box[1],k=/^(arm_|forearm_|hand_|shin_)/.test(layer)?bh/sh:Math.min(bw/sw,bh/sh),dw=Math.round(sw*k),dh=Math.round(sh*k);
    const out=canvas(512,512);out.getContext('2d').drawImage(cell,box[0],box[1],sw,sh,Math.round(b[0]-grow+(bw-dw)/2),Math.round(b[1]-grow+(/^(arm_|forearm_|hand_|shin_)/.test(layer)?0:(bh-dh)/2)),dw,dh);return out.toDataURL('image/png').split(',')[1];
-  },{sheet,ref:await data(kit+'/'+ref),r,c,rows:manifest.views.length,cols:s.layers.length,layer,slot:s.slot});
+  },{sheet,ref:await data(kit+'/'+ref),r,c,rows:manifest.views.length,cols:s.layers.length,layer,slot:s.slot,set:s.set,view,pivot:rig.views[view].parts.hand_near.pivot});
   if(!png)continue;
   const dir=`${kit}/items/${s.visual}/${view}`;await fs.mkdir(dir,{recursive:true});await fs.writeFile(dir+'/'+layer+'.png',Buffer.from(png,'base64'));present.add(layer);
  }
