@@ -60,6 +60,16 @@ function blockFootprint(p: Prop, each: (x: number, y: number) => void) {
   for (let dy = -h; dy < p.block - h; dy++) for (let dx = -h; dx < p.block - h; dx++) each(Math.round(p.x) + dx, Math.round(p.y) + dy);
 }
 
+/** Would a tree at (x, y) hide a kept-clear spot (warp, landing, NPC)? The
+ * camera looks north, so a tree in front (south) hides it from further away
+ * than one beside or behind it, whose canopy only reaches ~1 cell over. */
+function hidesClearing(keepClear: [number, number, number][], x: number, y: number): boolean {
+  return keepClear.some(([cx, cy, cr]) => {
+    const dx = Math.abs(x - cx), south = y - cy;
+    return Math.hypot(dx, south) <= cr + 1 || (south > 0 && south <= cr + 7 && dx <= cr + 2);
+  });
+}
+
 export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] = []): MapLayout {
   const [w, h] = d.size;
   const walk = new Uint8Array(w * h).fill(d.solid ? 0 : 1);
@@ -141,8 +151,7 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
     for (let y = by; y < by + bh; y += spacing) for (let x = bx; x < bx + bw; x += spacing) {
       if (!shapeContains(b.shape, x, y) || rand() < 0.35) continue;
       if (x >= 0 && y >= 0 && x < w && y < h && walk[Math.floor(y) * w + Math.floor(x)] === 1) continue;
-      // Canopies spread ~3 cells: keep warps, landings and NPCs open to view.
-      if (keepClear.some(([cx, cy, cr]) => Math.hypot(cx - x, cy - y) <= cr + 3)) continue;
+      if (hidesClearing(keepClear, x, y)) continue;
       props.push({ kind: d.ground === "snow" ? "pine" : "tree", x: x + rand(), y: y + rand(), block: 0, scale: Math.round((orchard ? 1.5 + rand()*.6 : 0.8 + rand() * 0.6) * 100) / 100, rot: Math.round(rand() * 628) / 100 });
     }
   }
@@ -185,7 +194,7 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
         for(let t=0;t<length;t+=1.15) {
           const x=ax+(bx-ax)*t/length,y=ay+(by-ay)*t/length;
           if(roadNear(x,y))continue;
-          if(keepClear.some(([cx,cy,cr])=>Math.hypot(cx-x,cy-y)<=cr+3))continue;
+          if(hidesClearing(keepClear,x,y))continue;
           if(walk[Math.floor(y)*w+Math.floor(x)]!==0)continue;
           props.push({kind:'bush',x:x-0.5,y:y-0.5,block:0,scale:1.25+0.25*Math.sin(t)});
           if(t%3.45<1.15 && !props.some(p=>p.kind==='tree'&&Math.hypot(p.x-(x-0.5),p.y-(y-0.5))<2.4))

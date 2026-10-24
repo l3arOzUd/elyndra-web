@@ -105,7 +105,7 @@ export function buildPortal(r: number, locked: boolean, track: Track): THREE.Gro
         float fade = pow(1.0 - vUv.y, 1.6);
         float bands = 0.65 + 0.35 * sin(vUv.y * 18.0 - time * 3.0 + sin(vUv.x * 25.13) * 1.5);
         float edge = 0.55 + 0.45 * sin(vUv.x * 50.27 + time * 1.3);
-        gl_FragColor = vec4(colour * fade * bands * edge * 0.42, 1.0);
+        gl_FragColor = vec4(colour * fade * bands * edge * 0.75, 1.0);
       }`,
   }));
   const beam = new THREE.Mesh(track(new THREE.CylinderGeometry(r * 0.72, r * 0.92, 3.2, 32, 1, true).translate(0, 1.6, 0)), beamMat);
@@ -120,7 +120,7 @@ export function buildPortal(r: number, locked: boolean, track: Track): THREE.Gro
   geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
   geo.setAttribute("color", new THREE.BufferAttribute(tint, 3));
   const moteColour = colour.clone().lerp(new THREE.Color(1, 1, 1), 0.35);
-  const moteMat = track(new THREE.PointsMaterial({ map: shared.get("mote")!, size: 0.32, sizeAttenuation: true, vertexColors: true, ...additive }));
+  const moteMat = track(new THREE.PointsMaterial({ map: shared.get("mote")!, size: 0.5, sizeAttenuation: true, vertexColors: true, ...additive }));
   const motes = new THREE.Points(geo, moteMat);
   motes.renderOrder = 4;
   motes.frustumCulled = false;
