@@ -156,7 +156,9 @@ export class Overlay {
     for (const [id, p] of this.pending) {
       if (now - p.at < MERGE_MS) continue;
       this.pending.delete(id);
-      this.spawn(String(p.amount), p.pos, p.crit ? "crit" : p.kind);
+      // A crit stays fully shown longer, straight up over the target.
+      if (p.crit) this.spawn(String(p.amount), p.pos, "crit", { dx: 0, rise: 46, life: 1400 });
+      else this.spawn(String(p.amount), p.pos, p.kind);
     }
     for (const f of this.pool) {
       if (!f.busy) continue;
@@ -171,7 +173,8 @@ export class Overlay {
       const pop = f.el.className.includes("part") ? 1 + 0.8 * Math.max(0, 1 - f.pop / 140)
         : f.el.classList.contains("float-crit") ? 1 + 1.1 * Math.max(0, 1 - f.pop / 200) : 1 + 0.35 * Math.max(0, 1 - f.pop / 160);
       f.el.style.transform = `translate(${x + f.dx * zoom}px, ${y - (f.dy + f.rise * easeOut(t)) * zoom}px) translate(-50%, -100%) scale(${pop * zoom})`;
-      f.el.style.opacity = String(t < 0.6 ? 1 : 1 - (t - 0.6) / 0.4);
+      const hold = f.el.classList.contains("float-crit") ? 0.75 : 0.6;
+      f.el.style.opacity = String(t < hold ? 1 : 1 - (t - hold) / (1 - hold));
     }
   }
 

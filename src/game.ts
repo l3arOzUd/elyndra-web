@@ -191,7 +191,7 @@ export class Game {
           // EXP gained (kills, quests) floats over our head; a level up says so.
           const at = tmpA.copy(me.pos).addScaledVector(UP, me.actor.height + 0.6);
           if (prev && m.lv > prev.lv) this.overlay.text("LEVEL UP!", at, "total");
-          else if (prev && m.lv === prev.lv && m.exp > prev.exp) this.overlay.text(`+${(m.exp - prev.exp).toLocaleString()} EXP`, at, "exp");
+          else if (prev && m.lv === prev.lv && m.exp > prev.exp) this.overlay.text(`+${(m.exp - prev.exp).toLocaleString()} EXP`, at.clone().addScaledVector(UP, 0.7), "exp");
         }
         break;
       }
