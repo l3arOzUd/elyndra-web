@@ -14,8 +14,13 @@ try {
    const [im,body]=await Promise.all([load(sheet),load(torso)]);
    const c=document.createElement('canvas');c.width=im.width;c.height=im.height;
    const g=c.getContext('2d');g.drawImage(im,0,0);const pixels=g.getImageData(0,0,c.width,c.height).data;
+   // Respect the painted gutters: generated pieces are not equal-width cells.
+   const occupied=Array.from({length:c.width},(_,x)=>{for(let y=0;y<c.height;y++)if(pixels[(y*c.width+x)*4+3]>24)return true;return false;});
+   const spans=[];let start=-1;
+   for(let x=0;x<=c.width;x++){if(occupied[x]&&start<0)start=x;if(!occupied[x]&&start>=0){if(x-start>20)spans.push([start,x]);start=-1;}}
+   if(spans.length!==3)throw Error('Expected three isolated skirt views, found '+spans.length);
    let x0=c.width,y0=c.height,x1=0,y1=0;
-   for(let y=0;y<c.height;y++)for(let x=Math.floor(i*c.width/3);x<Math.floor((i+1)*c.width/3);x++)if(pixels[(y*c.width+x)*4+3]>24){x0=Math.min(x0,x);x1=Math.max(x1,x+1);y0=Math.min(y0,y);y1=Math.max(y1,y+1);}
+   for(let y=0;y<c.height;y++)for(let x=spans[i][0];x<spans[i][1];x++)if(pixels[(y*c.width+x)*4+3]>24){x0=Math.min(x0,x);x1=Math.max(x1,x+1);y0=Math.min(y0,y);y1=Math.max(y1,y+1);}
    const out=document.createElement('canvas');out.width=out.height=512;
    const ctx=out.getContext('2d'),width=view==='side'?142:218;
    ctx.drawImage(im,x0,y0,x1-x0,y1-y0,256-width/2,285,width,170);
