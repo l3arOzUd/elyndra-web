@@ -141,6 +141,8 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
     for (let y = by; y < by + bh; y += spacing) for (let x = bx; x < bx + bw; x += spacing) {
       if (!shapeContains(b.shape, x, y) || rand() < 0.35) continue;
       if (x >= 0 && y >= 0 && x < w && y < h && walk[Math.floor(y) * w + Math.floor(x)] === 1) continue;
+      // Canopies spread ~3 cells: keep warps, landings and NPCs open to view.
+      if (keepClear.some(([cx, cy, cr]) => Math.hypot(cx - x, cy - y) <= cr + 3)) continue;
       props.push({ kind: d.ground === "snow" ? "pine" : "tree", x: x + rand(), y: y + rand(), block: 0, scale: Math.round((orchard ? 1.5 + rand()*.6 : 0.8 + rand() * 0.6) * 100) / 100, rot: Math.round(rand() * 628) / 100 });
     }
   }
@@ -183,6 +185,7 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
         for(let t=0;t<length;t+=1.15) {
           const x=ax+(bx-ax)*t/length,y=ay+(by-ay)*t/length;
           if(roadNear(x,y))continue;
+          if(keepClear.some(([cx,cy,cr])=>Math.hypot(cx-x,cy-y)<=cr+3))continue;
           if(walk[Math.floor(y)*w+Math.floor(x)]!==0)continue;
           props.push({kind:'bush',x:x-0.5,y:y-0.5,block:0,scale:1.25+0.25*Math.sin(t)});
           if(t%3.45<1.15 && !props.some(p=>p.kind==='tree'&&Math.hypot(p.x-(x-0.5),p.y-(y-0.5))<2.4))

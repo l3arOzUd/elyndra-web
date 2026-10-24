@@ -13,6 +13,7 @@ import { buildDawnRelief } from "./dawnRelief";
 import { buildDawnShore } from "./dawnShore";
 import { animatedProp, propGeometry } from "./props";
 import { applyPaintedTerrain, type TerrainSurface } from "./terrainTiles";
+import { buildPortal } from "./portal";
 
 // Builds a map from its layout JSON: painted ground and roads, flat
 // water/lava, extruded cliffs, walls and buildings, instanced props, cave
@@ -355,18 +356,13 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     group.add(inst);
   }
 
-  // Warp portals: a glowing ring and pillar of light over each trigger.
+  // Warp portals (portal.ts): rune circle, light column and rising motes over each trigger.
   const portals: BuiltMap["portals"] = [];
-  const ringMat = track(new THREE.MeshBasicMaterial({ color: 0x7ff0ff, transparent: true, opacity: 0.75, depthWrite: false }));
-  const beamMat = track(new THREE.MeshBasicMaterial({ color: 0x7ff0ff, transparent: true, opacity: 0.18, depthWrite: false, side: THREE.DoubleSide }));
   for (const w of warps) {
     const [x, y, ww, hh] = w.trigger_rect;
     const r = Math.max(ww, hh) / 2 + 0.3;
-    const portal = new THREE.Group();
+    const portal = buildPortal(r, w.requirements.length > 0, track);
     portal.position.set(x + ww / 2, 0.05, y + hh / 2);
-    portal.add(new THREE.Mesh(track(new THREE.RingGeometry(r - 0.25, r, 32).rotateX(-Math.PI / 2)), ringMat));
-    portal.add(new THREE.Mesh(track(new THREE.CylinderGeometry(r * 0.8, r, 3, 24, 1, true).translate(0, 1.5, 0)), beamMat));
-    portal.userData.spin = { axis: "y", speed: 0.4 };
     group.add(portal);
     animated.push(portal);
     portals.push({ warp: w, mesh: portal });
@@ -385,5 +381,6 @@ export function animate(built: BuiltMap, dt: number) {
   for (const o of built.animated) {
     const s = o.userData.spin as { axis: "x" | "y" | "z"; speed: number } | undefined;
     if (s) o.rotation[s.axis] += s.speed * dt;
+    (o.userData.tick as ((dt: number) => void) | undefined)?.(Math.min(dt, 0.1));
   }
 }
