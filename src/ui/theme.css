@@ -469,3 +469,5 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
  .menu-dock .ui-icon.hud-art { width:30px; height:30px; }
  .menu-dock small { font-size:10px; line-height:13px; }
 }
+/* Keep all ten quick slots reachable beside the seven illustrated menu buttons. */
+@media(min-width:601px) and (max-width:1550px) { .menu-dock { bottom:150px; } }
