@@ -23,7 +23,7 @@ app.innerHTML = `<div id="view" style="position:fixed;inset:0;background:#1d2f27
 <span id="bar"></span><small style="width:100%">WASD / ลูกศร: เลื่อน · ล้อเมาส์: ซูม · หุ่นเทียบขนาด · ไม่มีมอนสเตอร์หรือผู้เล่นจริงในหน้าตรวจฉาก</small></div>`;
 const seedPanel=document.createElement('div');
 seedPanel.style.cssText='position:fixed;bottom:12px;left:12px;background:#17251eee;color:#f2e6c8;padding:12px;font:14px sans-serif;max-width:90vw';
-seedPanel.innerHTML='<label>Seed <input id="seed" type="number" min="0" max="2147483647" value="0" style="width:100px"></label> <button id="shuffle">????</button> <button id="undoSeed">????????</button> <button id="saveSeed">??????</button> <button id="originalSeed">???????</button> <button id="exportSeed">Export JSON</button><div id="seedStatus">????????????????? ? ??? ????? ????????????????????????????</div>';
+seedPanel.innerHTML='<label>Seed <input id="seed" type="number" min="0" max="2147483647" value="0" style="width:100px"></label> <button id="shuffle">สุ่ม</button> <button id="undoSeed">ย้อนกลับ</button> <button id="saveSeed">บันทึก</button> <button id="originalSeed">ต้นฉบับ</button> <button id="exportSeed">Export JSON</button><div id="seedStatus">ตัวอย่างของตกแต่ง — ถนน อาคาร ต้นไม้กีดขวางและวาร์ปล็อกไว้</div>';
 app.append(seedPanel);
 const seedInput=document.querySelector<HTMLInputElement>('#seed')!;
 const seedStatus=document.querySelector<HTMLElement>('#seedStatus')!;
@@ -87,17 +87,17 @@ async function show(id: string, x?: number, y?: number, zoom = 0): Promise<void>
   history.replaceState(null,'',`?map=${id}&x=${focus.x}&y=${focus.z}`);
 }
 async function applySeed(value:number,remember=true){
-  if(!Number.isSafeInteger(value)||value<0||value>2147483647){seedStatus.textContent='?????? 0?2147483647';return;}
+  if(!Number.isSafeInteger(value)||value<0||value>2147483647){seedStatus.textContent='ใส่เลข 0–2147483647';return;}
   if(remember)seedHistory.set(mapId,[...(seedHistory.get(mapId)??[]),currentSeed(mapId)]);
   seedValues.set(mapId,value);
   await show(mapId,focus.x,focus.z);
-  seedStatus.textContent='???????? Seed '+value+' ? ???????????????????????';
+  seedStatus.textContent='ตัวอย่าง Seed '+value+' — ยังไม่เปลี่ยนฉากเกมจริง';
 }
 seedInput.onchange=()=>{void applySeed(Number(seedInput.value));};
 document.querySelector<HTMLButtonElement>('#shuffle')!.onclick=()=>{void applySeed(crypto.getRandomValues(new Uint32Array(1))[0]%2147483647+1);};
 document.querySelector<HTMLButtonElement>('#undoSeed')!.onclick=()=>{const previous=seedHistory.get(mapId)?.pop();if(previous!==undefined)void applySeed(previous,false);};
 document.querySelector<HTMLButtonElement>('#originalSeed')!.onclick=()=>{void applySeed(0);};
-document.querySelector<HTMLButtonElement>('#saveSeed')!.onclick=()=>{try{localStorage.setItem('elyndra.sceneSeed.'+mapId,String(currentSeed(mapId)));seedStatus.textContent='??????????????????????????????? ? ????????????????????';}catch{seedStatus.textContent='?????????????????????????????';}};
+document.querySelector<HTMLButtonElement>('#saveSeed')!.onclick=()=>{try{localStorage.setItem('elyndra.sceneSeed.'+mapId,String(currentSeed(mapId)));seedStatus.textContent='บันทึกตัวเลือกในเบราว์เซอร์แล้ว — ยังไม่เปลี่ยนเกมจริง';}catch{seedStatus.textContent='เบราว์เซอร์ไม่อนุญาตให้บันทึก';}};
 document.querySelector<HTMLButtonElement>('#exportSeed')!.onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify({version:1,map:mapId,seed:currentSeed(mapId),scope:'nonblocking-decoration-preview'},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=mapId+'-seed.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 picker.onchange=()=>{void show(picker.value);};
 const step=(delta:number)=>{void show(mapIds[(mapIds.indexOf(mapId)+delta+mapIds.length)%mapIds.length]);};
