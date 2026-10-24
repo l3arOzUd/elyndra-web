@@ -1,11 +1,17 @@
 import * as THREE from "three";
-import { clonePose, mirrorPose, type EditClip, type Ease, type Key, type Pose } from "./clipMath";
+import { clipFromPoses, clonePose, mirrorPose, moveKeys, type EditClip, type Ease, type Pose, type PoseKey } from "./clipMath";
+import type { Collider } from "./spring";
 
 // A chibi wooden-doll stand-in for the Wayfarer: real bones with rigid
 // cel-shaded parts on them, so poses can be blocked out before a painted
 // or modelled character exists. It faces +z, stands on y = 0 and is about
 // one unit tall; its rest pose is standing with the arms down, and every
 // bone rests unrotated, so left and right mirror exactly.
+//
+// Every hairstyle, outfit piece and prop is built once and shown or hidden
+// by the look, so the bone list never changes and a project's keys fit any
+// look. Hair and cape hang from spring bones (userData.spring) that the
+// editor's physics swings.
 
 // Inverted-hull ink line, pushed out a fixed distance along the normals so
 // thin limbs and the big head get the same line weight.
@@ -22,23 +28,54 @@ function toonRamp(): THREE.DataTexture {
   return ramp;
 }
 
+export interface Look {
+  hair: "short" | "ponytail" | "long" | "spiky";
+  hairColor: "brown" | "black" | "blonde" | "red" | "silver" | "blue";
+  outfit: "traveler" | "knight" | "mage" | "ranger";
+  cape: boolean;
+}
+export const DEFAULT_LOOK: Look = { hair: "short", hairColor: "brown", outfit: "traveler", cape: false };
+
+/** The look options, with their Thai labels, for the editor's pickers. */
+export const LOOK_OPTIONS = {
+  hair: { short: "สั้น", ponytail: "หางม้า", long: "ยาว", spiky: "ชี้ฟู" },
+  hairColor: { brown: "น้ำตาล", black: "ดำ", blonde: "ทอง", red: "แดง", silver: "เงิน", blue: "น้ำเงิน" },
+  outfit: { traveler: "นักเดินทาง", knight: "อัศวิน", mage: "นักเวท", ranger: "พราน" },
+} as const;
+
+const HAIR_COLORS: Record<Look["hairColor"], number> = {
+  brown: 0x6a3f2a, black: 0x2c2630, blonde: 0xe0b860, red: 0xa8432e, silver: 0xc9ccd6, blue: 0x3f5fa8,
+};
+const OUTFITS: Record<Look["outfit"], { shirt: number; vest: number; pants: number; boots: number; cape: number }> = {
+  traveler: { shirt: 0xe8dcc0, vest: 0x5f7a4e, pants: 0x4a5670, boots: 0x6b4a33, cape: 0x8a3b2e },
+  knight: { shirt: 0xa9b1bb, vest: 0x8e2f2f, pants: 0x4b4f58, boots: 0x7d858f, cape: 0x2f3f7a },
+  mage: { shirt: 0x6a58a0, vest: 0x3b2f66, pants: 0x3b2f66, boots: 0x4a3a2c, cape: 0x2a2450 },
+  ranger: { shirt: 0x7d8a52, vest: 0x6b4a2e, pants: 0x50493a, boots: 0x4f3826, cape: 0x3f5a35 },
+};
+
+/** Materials a look recolours, per built mannequin (kept off userData so clones stay light). */
+const lookMaterials = new WeakMap<THREE.Object3D, Record<"hair" | "shirt" | "vest" | "pants" | "boots" | "cape", THREE.MeshToonMaterial>>();
+
 export function buildMannequin(): THREE.Group {
   const ramp = toonRamp();
   const mat = (color: number) => new THREE.MeshToonMaterial({ color, gradientMap: ramp });
   const skin = mat(0xf2c9a5), shirt = mat(0xe8dcc0), vest = mat(0x5f7a4e), pants = mat(0x4a5670);
-  const boots = mat(0x6b4a33), hair = mat(0x6a3f2a), eye = new THREE.MeshBasicMaterial({ color: 0x2a1c18 });
+  const boots = mat(0x6b4a33), hair = mat(0x6a3f2a), cape = mat(0x8a3b2e), eye = new THREE.MeshBasicMaterial({ color: 0x2a1c18 });
+  const steel = mat(0xd3dade), gold = mat(0xc9a24a), wood = mat(0x8a5a32), grip = mat(0x4a3022), leather = mat(0x5a3b25);
 
   const root = new THREE.Group();
   root.name = "Wayfarer";
+  lookMaterials.set(root, { hair, shirt, vest, pants, boots, cape });
   const bone = (name: string, parent: THREE.Object3D, x: number, y: number, z = 0) => {
     const b = new THREE.Bone();
     b.name = name; b.position.set(x, y, z); parent.add(b);
     return b;
   };
   const part = (on: THREE.Object3D, geometry: THREE.BufferGeometry, material: THREE.Material,
-    pos: [number, number, number], scale: [number, number, number] = [1, 1, 1], outline = true) => {
+    pos: [number, number, number], scale: [number, number, number] = [1, 1, 1], outline = true, show?: string) => {
     const mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(...pos); mesh.scale.set(...scale); mesh.castShadow = true;
+    if (show) mesh.userData.show = show;
     if (outline) {
       const line = new THREE.Mesh(geometry, OUTLINE);
       line.userData.outline = true; mesh.add(line);
@@ -47,29 +84,64 @@ export function buildMannequin(): THREE.Group {
     return mesh;
   };
   const capsule = (r: number, len: number) => new THREE.CapsuleGeometry(r, len, 4, 12);
+  /** A chain of spring bones hanging from `parent`, each `step` below the last. */
+  const springChain = (name: string, parent: THREE.Object3D, at: [number, number, number], step: [number, number, number], count: number) => {
+    const chain: THREE.Bone[] = [];
+    let on = parent;
+    for (let i = 0; i < count; i++) {
+      const b = bone(`${name}_${i + 1}`, on, ...(i ? step : at));
+      b.userData.spring = true;
+      if (i === count - 1) b.userData.springTip = step;
+      chain.push(b); on = b;
+    }
+    return chain;
+  };
 
   const hips = bone("Hips", root, 0, 0.375);
   part(hips, capsule(0.085, 0.03), pants, [0, -0.005, 0], [1.05, 1, 0.8]);
+  part(hips, new THREE.ConeGeometry(0.15, 0.24, 18, 1, true), vest, [0, -0.1, 0], [1, 1, 0.85], true, "outfit=mage");
+  part(hips, new THREE.TorusGeometry(0.088, 0.014, 6, 20).rotateX(Math.PI / 2), leather, [0, 0.02, 0], [1.05, 1, 0.82], true, "outfit=knight|ranger");
   const spine = bone("Spine", hips, 0, 0.06);
   part(spine, capsule(0.08, 0.04), vest, [0, 0.04, 0], [1, 1, 0.78]);
   const chest = bone("Chest", spine, 0, 0.1);
   part(chest, capsule(0.092, 0.04), shirt, [0, 0.03, 0], [1.08, 1, 0.8]);
-  part(chest, new THREE.BoxGeometry(0.11, 0.1, 0.02), vest, [0, 0.0, 0.07], [1, 1, 1], false);
+  part(chest, new THREE.BoxGeometry(0.11, 0.1, 0.02), vest, [0, 0.0, 0.07], [1, 1, 1], false, "outfit=traveler|knight|ranger");
+  part(chest, new THREE.CylinderGeometry(0.03, 0.03, 0.22, 10), leather, [-0.04, 0.02, -0.09], [1, 1, 1], true, "outfit=ranger")
+    .rotation.z = 0.5;
   const neck = bone("Neck", chest, 0, 0.1);
   part(neck, capsule(0.03, 0.02), skin, [0, 0.015, 0]);
   const head = bone("Head", neck, 0, 0.04);
   part(head, new THREE.SphereGeometry(0.19, 28, 20), skin, [0, 0.17, 0], [1, 0.95, 0.95]);
   const cap = part(head, new THREE.SphereGeometry(0.2, 28, 16, 0, Math.PI * 2, 0, Math.PI * 0.5), hair, [0, 0.18, -0.02], [1.03, 1, 1.02]);
   cap.rotation.x = -0.45; // swept back so the forehead and eyes show
-  part(head, new THREE.SphereGeometry(0.075, 14, 10), hair, [0, 0.15, -0.16], [1.3, 1.1, 0.8]);
+  part(head, new THREE.SphereGeometry(0.075, 14, 10), hair, [0, 0.15, -0.16], [1.3, 1.1, 0.8], true, "hair=short");
   for (const x of [-0.068, 0.068]) part(head, new THREE.SphereGeometry(0.024, 12, 8), eye, [x, 0.145, 0.168], [0.8, 1.25, 0.5], false);
+  for (const [x, z, tilt, turn] of [[0, 0.02, -0.5, 0], [0.1, -0.02, -0.4, -0.7], [-0.1, -0.02, -0.4, 0.7], [0.05, -0.12, -1.1, -0.4], [-0.05, -0.12, -1.1, 0.4]]) {
+    const spike = part(head, new THREE.ConeGeometry(0.06, 0.16, 8), hair, [x, 0.33, z], [1, 1, 1], true, "hair=spiky");
+    spike.rotation.set(tilt, 0, turn);
+  }
+  for (const x of [-0.17, 0.17]) part(head, capsule(0.035, 0.12), hair, [x, 0.1, 0.02], [1, 1, 0.8], true, "hair=long");
+  const hat = part(head, new THREE.ConeGeometry(0.2, 0.32, 20), vest, [0, 0.42, -0.04], [1, 1, 1], true, "outfit=mage");
+  hat.rotation.x = -0.25;
+  part(head, new THREE.TorusGeometry(0.2, 0.025, 6, 24).rotateX(Math.PI / 2), vest, [0, 0.28, -0.02], [1.05, 1, 1.05], true, "outfit=mage");
+
+  // Ponytail and long hair hang from the back of the head; the cape from the shoulders.
+  const tail = springChain("Ponytail", head, [0, 0.25, -0.17], [0, -0.085, -0.02], 3);
+  part(tail[0], new THREE.SphereGeometry(0.03, 10, 8), leather, [0, 0, 0], [1, 1, 1], true, "hair=ponytail");
+  tail.forEach((b, i) => part(b, capsule(0.045 - i * 0.009, 0.05), hair, [0, -0.045, 0], [1, 1, 0.85], true, "hair=ponytail"));
+  const long = springChain("HairBack", head, [0, 0.22, -0.16], [0, -0.11, -0.01], 3);
+  long.forEach((b, i) => part(b, new THREE.BoxGeometry(0.3 - i * 0.03, 0.12, 0.05), hair, [0, -0.055, 0], [1, 1, 1], true, "hair=long"));
+  const capeBones = springChain("Cape", chest, [0, 0.085, -0.075], [0, -0.13, -0.008], 3);
+  capeBones.forEach((b, i) => part(b, new THREE.BoxGeometry(0.22 + i * 0.035, 0.135, 0.014), cape, [0, -0.065, 0], [1, 1, 1], true, "cape"));
 
   for (const [side, s] of [["L", 1], ["R", -1]] as const) {
     const shoulder = bone(`Shoulder_${side}`, chest, 0.07 * s, 0.07);
     const upperArm = bone(`UpperArm_${side}`, shoulder, 0.045 * s, 0);
     part(upperArm, capsule(0.034, 0.07), shirt, [0, -0.055, 0]);
+    part(upperArm, new THREE.SphereGeometry(0.05, 14, 10, 0, Math.PI * 2, 0, Math.PI * 0.55), steel, [0, -0.005, 0], [1.1, 1, 1], true, "outfit=knight");
     const lowerArm = bone(`LowerArm_${side}`, upperArm, 0, -0.12);
     part(lowerArm, capsule(0.03, 0.065), skin, [0, -0.05, 0]);
+    part(lowerArm, new THREE.CylinderGeometry(0.036, 0.033, 0.06, 10), leather, [0, -0.07, 0], [1, 1, 1], true, "outfit=ranger|knight");
     const hand = bone(`Hand_${side}`, lowerArm, 0, -0.105);
     part(hand, new THREE.SphereGeometry(0.036, 14, 10), skin, [0, -0.025, 0.004], [0.9, 1.1, 0.8]);
 
@@ -84,7 +156,6 @@ export function buildMannequin(): THREE.Group {
   // Props, hidden until a clip asks for one. With the arm hanging, the
   // sword points forward out of the fist, the bow stands upright across the
   // left fist (upright once the arm is raised forward), the staff stands up.
-  const steel = mat(0xd3dade), gold = mat(0xc9a24a), wood = mat(0x8a5a32), grip = mat(0x4a3022);
   const prop = (name: string, hand: string) => {
     const group = new THREE.Group();
     group.name = `prop_${name}`; group.userData.prop = name; group.visible = false;
@@ -107,12 +178,44 @@ export function buildMannequin(): THREE.Group {
   part(staff, new THREE.CylinderGeometry(0.014, 0.017, 0.66, 8), wood, [0, 0.13, 0]);
   part(staff, new THREE.TorusGeometry(0.04, 0.009, 6, 16), gold, [0, 0.47, 0]);
   part(staff, new THREE.SphereGeometry(0.032, 14, 10), new THREE.MeshBasicMaterial({ color: 0x9fe8ff }), [0, 0.47, 0]);
+
+  applyLook(root, DEFAULT_LOOK);
   return root;
+}
+
+/** Whether a part tagged `show` ("hair=short|long", "outfit=mage", "cape") belongs to a look. */
+function wanted(show: string, look: Look): boolean {
+  if (show === "cape") return look.cape;
+  const [key, values] = show.split("=");
+  return values.split("|").includes(String(look[key as keyof Look]));
+}
+
+/** Shows the parts of a look on a mannequin (or a copy of one) and recolours it. */
+export function applyLook(root: THREE.Object3D, look: Look) {
+  root.traverse(o => { if (typeof o.userData.show === "string") o.visible = wanted(o.userData.show, look); });
+  const mats = lookMaterials.get(root);
+  if (!mats) return;
+  const outfit = OUTFITS[look.outfit];
+  mats.hair.color.setHex(HAIR_COLORS[look.hairColor]);
+  mats.shirt.color.setHex(outfit.shirt); mats.vest.color.setHex(outfit.vest);
+  mats.pants.color.setHex(outfit.pants); mats.boots.color.setHex(outfit.boots); mats.cape.color.setHex(outfit.cape);
 }
 
 /** Shows the named prop (or none) on a character and its copies. */
 export function showProp(root: THREE.Object3D, name: string | undefined) {
   root.traverse(o => { if (o.userData.prop) o.visible = o.userData.prop === name; });
+}
+
+/** Body spheres the hair and cape are kept out of. */
+export function mannequinColliders(root: THREE.Object3D): Collider[] {
+  const at = (name: string, offset: [number, number, number], radius: number): Collider[] => {
+    const bone = root.getObjectByName(name);
+    return bone ? [{ bone, offset: new THREE.Vector3(...offset), radius }] : [];
+  };
+  return [
+    ...at("Head", [0, 0.17, 0], 0.205), ...at("Chest", [0, 0.02, 0], 0.105), ...at("Spine", [0, 0.03, 0], 0.095),
+    ...at("Hips", [0, -0.02, 0], 0.1), ...at("UpperLeg_L", [0, -0.08, 0], 0.06), ...at("UpperLeg_R", [0, -0.08, 0], 0.06),
+  ];
 }
 
 type Degrees = Record<string, [number, number, number]>;
@@ -131,17 +234,16 @@ function posed(rest: Pose, deg: Degrees, move: [number, number, number] = [0, 0,
 }
 
 const F = (frame: number, fps = 12) => frame / fps;
-const key = (t: number, pose: Pose, ease: Ease = "smooth"): Key => ({ t, pose, ease });
+const key = (t: number, pose: Pose, ease: Ease = "smooth"): PoseKey => ({ t, pose, ease });
+type Blocked = Omit<EditClip, "rot" | "pos"> & { keys: PoseKey[] };
 
 /**
- * Prototype clips for the mannequin: rough blocking to start from, not
- * finished animation. Axes, as the doll is built: a limb swings forward on
- * negative x; a knee or toe-down is positive x; the chest leans forward on
- * positive x and turns to its left on positive y; an arm lifts sideways on
- * +z (left) or -z (right). The game's sprite names are used, so a clip
- * renders straight into a sheet the engine knows.
+ * Rough blocking for the mannequin's prototype clips. Axes, as the doll is
+ * built: a limb swings forward on negative x; a knee or toe-down is
+ * positive x; the chest leans forward on positive x and turns to its left
+ * on positive y; an arm lifts sideways on +z (left) or -z (right).
  */
-export function starterClips(rest: Pose): EditClip[] {
+function blocking(rest: Pose) {
   const bones = Object.keys(rest.rot);
   const mirror = (p: Pose) => mirrorPose(p, bones);
   const p = (deg: Degrees, move?: [number, number, number]) => posed(rest, deg, move);
@@ -260,7 +362,7 @@ export function starterClips(rest: Pose): EditClip[] {
     UpperLeg_L: [-48, 0, 0], LowerLeg_L: [104, 0, 0], Foot_L: [62, 0, 0],
     UpperLeg_R: [-46, 0, 0], LowerLeg_R: [102, 0, 0], Foot_R: [60, 0, 0] }, [0, -0.23, 0.04]);
 
-  return [
+  const clips: Blocked[] = [
     { name: "idle", duration: 2, fps: 8, loop: true, keys: [key(0, idleA), key(1, idleB)] },
     { name: "walk", duration: F(10), fps: 12, loop: true, keys: [
       key(0, contact), key(F(3), passing), key(F(5), mirror(contact)), key(F(8), mirror(passing))] },
@@ -276,4 +378,32 @@ export function starterClips(rest: Pose): EditClip[] {
     { name: "death", duration: F(12), fps: 12, loop: false, keys: [
       key(0, idleA), key(F(3), stagger), key(F(6), kneel), key(F(9), slump, "linear"), key(F(12), slump)] },
   ];
+  const poses: [string, Pose][] = [
+    ["ยืนพัก", idleA], ["เดิน · ก้าว", contact], ["วิ่ง · ก้าว", runContact], ["ดาบ · ตั้งการ์ด", swordGuard],
+    ["ดาบ · ง้าง", windUp], ["ดาบ · ฟัน", strike], ["ธนู · ง้างสุด", fullDraw], ["ธนู · ปล่อย", release],
+    ["เวท · รวมพลัง", gather], ["เวท · ปล่อย", thrust], ["โดนตี", flinch], ["คุกเข่า", kneel],
+  ];
+  return { clips, poses };
 }
+
+/**
+ * Prototype clips for the mannequin: rough blocking to start from, not
+ * finished animation. The game's sprite names are used, so a clip renders
+ * straight into a sheet the engine knows. Spring bones (hair, cape) get no
+ * keys; physics moves them. In the attack the body leads the sword arm by a
+ * frame, the overlap per-bone keys allow.
+ */
+export function starterClips(rest: Pose): EditClip[] {
+  const skip = new Set(Object.keys(rest.rot).filter(n => /^(Ponytail|HairBack|Cape)_\d$/.test(n)));
+  return blocking(rest).clips.map(({ keys, ...base }) => {
+    const clip = clipFromPoses(base, keys, skip);
+    if (clip.name === "attack") moveKeys(clip, 5 / 12, 4 / 12, ["Spine", "Chest", "Hips", "#root"]);
+    return clip;
+  });
+}
+
+/** Key poses from the prototype clips, for the pose library. */
+export function starterPoses(rest: Pose): { name: string; pose: Pose }[] {
+  return blocking(rest).poses.map(([name, pose]) => ({ name, pose }));
+}
+

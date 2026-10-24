@@ -29,6 +29,13 @@
           <select id="character"></select>
           <label class="button wide">เปิดโมเดล .glb ของตัวเอง<input id="load-glb" type="file" accept=".glb,.gltf" hidden /></label>
         </section>
+        <section id="look-section">
+          <h3>รูปลักษณ์</h3>
+          <label class="field"><span>ทรงผม</span><select id="look-hair"></select></label>
+          <label class="field"><span>สีผม</span><select id="look-hairColor"></select></label>
+          <label class="field"><span>ชุด</span><select id="look-outfit"></select></label>
+          <label class="field check"><span>ผ้าคลุม</span><input id="look-cape" type="checkbox" /></label>
+        </section>
         <section>
           <h3>ท่าทาง <small id="clip-count"></small></h3>
           <div id="clips" class="clip-list"></div>
@@ -49,7 +56,7 @@
           </div>
         </section>
         <section class="grow">
-          <h3>กระดูก <small>คลิกตัวละครได้</small></h3>
+          <h3>กระดูก <small>คลิกตัวละครได้ · ● = มีคีย์ที่เฟรมนี้</small></h3>
           <div id="bones" class="bone-list"></div>
         </section>
       </aside>
@@ -63,39 +70,76 @@
           <button data-view="persp" class="selected">3/4</button><button data-view="game">มุมเกม</button>
         </div>
         <div class="stage-info"><strong id="character-name">—</strong><span id="stage-status"></span></div>
+        <div id="game-preview" class="game-preview" hidden>
+          <div class="gp-head">
+            <strong>ขนาดจริงในเกม</strong>
+            <select id="gp-region" title="แสงของภูมิภาค"></select>
+            <select id="gp-compare" title="มอนสเตอร์เทียบขนาด"></select>
+            <select id="gp-screen" title="ความสูงจอเกม"><option value="720">จอ 720p</option><option value="900" selected>จอ 900p</option><option value="1080">จอ 1080p</option></select>
+            <button id="gp-close" title="ปิด">✕</button>
+          </div>
+          <canvas id="gp-canvas"></canvas>
+          <div class="gp-foot" id="gp-info"></div>
+        </div>
         <div id="loading" role="status">กำลังโหลด…</div>
-        <div class="hint">ลากซ้าย = หมุนกล้อง · ลากวงแหวน = หมุนกระดูก · Space เล่น · K ใส่คีย์ · ←/→ ทีละเฟรม · M กลับซ้ายขวา</div>
+        <div class="hint">ลากซ้าย = หมุนกล้อง · ลากวงแหวน = หมุนกระดูก · Space เล่น · K ใส่คีย์ · I = IK · ←/→ ทีละเฟรม · M กลับซ้ายขวา</div>
       </main>
 
       <aside class="right panel">
-        <section>
-          <h3>กระดูกที่เลือก</h3>
+        <details open>
+          <summary>กระดูกที่เลือก</summary>
           <div id="bone-name" class="bone-name">ยังไม่ได้เลือก</div>
           <div class="row seg">
             <button id="mode-rotate" class="selected" title="R">หมุน</button>
-            <button id="mode-move" title="G (เฉพาะกระดูกราก)">ย้าย</button>
+            <button id="mode-ik" title="I · ลากมือ/เท้า แขนขาตามเอง">IK มือ/เท้า</button>
+            <button id="mode-move" title="G (เฉพาะกระดูกราก)">ย้ายตัว</button>
           </div>
           <div id="bone-sliders"></div>
           <div class="row">
             <button id="bone-reset">คืนค่ากระดูกนี้</button><button id="bone-other" title="ก๊อปมุมไปกระดูกอีกข้าง">ก๊อปไปอีกข้าง</button>
           </div>
-        </section>
-        <section>
-          <h3>ทั้งท่า</h3>
-          <div class="row"><button id="pose-copy">คัดลอกท่า</button><button id="pose-paste">วางท่า</button></div>
+        </details>
+        <details open>
+          <summary>ทั้งท่า</summary>
+          <div class="row"><button id="pose-copy" title="Ctrl+C">คัดลอกท่า</button><button id="pose-paste" title="Ctrl+V">วางท่า</button></div>
           <div class="row"><button id="pose-mirror" title="M">กลับซ้าย↔ขวา</button><button id="pose-rest">ท่ายืนตรง</button></div>
-        </section>
-        <section>
-          <h3>คีย์ที่เฟรมนี้</h3>
+        </details>
+        <details open>
+          <summary>เท้า (IK)</summary>
+          <label class="field check"><span>ตรึงเท้าไว้ที่เดิมขณะขยับลำตัว</span><input id="pin-feet" type="checkbox" checked /></label>
+          <div class="row"><button id="feet-ground" title="วางเท้าทั้งสองลงแตะพื้น">วางเท้าแตะพื้น</button></div>
+          <p class="note">โหมด IK: เลือกมือหรือเท้า (หรือแขนขาข้างนั้น) แล้วลากลูกศร แขนขาจะงอตามเอง</p>
+        </details>
+        <details open>
+          <summary>คีย์ที่เฟรมนี้</summary>
           <div class="row">
             <select id="key-ease" title="การเคลื่อนไปคีย์ถัดไป">
               <option value="smooth">นุ่ม (ease)</option><option value="linear">เส้นตรง</option><option value="step">ค้างท่า (step)</option>
             </select>
           </div>
-          <div class="row"><button id="key-add" title="K">ใส่คีย์</button><button id="key-del" class="danger" title="Delete">ลบคีย์</button></div>
-        </section>
-        <section>
-          <h3>ตั้งค่าท่า</h3>
+          <div class="row"><button id="key-add" title="K · คีย์ทุกกระดูก">ใส่คีย์ทั้งตัว</button><button id="key-add-bone" title="Shift+K">คีย์เฉพาะกระดูกนี้</button></div>
+          <div class="row"><button id="key-del" class="danger" title="Delete">ลบคีย์ทั้งตัว</button><button id="key-del-bone" class="danger" title="Shift+Delete">ลบคีย์กระดูกนี้</button></div>
+          <div class="row"><button id="keys-copy" title="คีย์ที่เลือกในแถว 'ทั้งตัว' (Shift+คลิกเลือกหลายอัน) หรือเฟรมนี้">คัดลอกคีย์</button><button id="keys-paste" title="วางที่หัวเล่น · ใช้ข้ามท่าได้">วางคีย์</button></div>
+          <p class="note" id="keys-clip-note"></p>
+        </details>
+        <details open>
+          <summary>Event (จังหวะโดน/ยิง/ร่าย)</summary>
+          <div class="row">
+            <input id="event-name" list="event-names" placeholder="ชื่อ event" />
+            <datalist id="event-names"><option value="hit"></option><option value="shoot"></option><option value="cast"></option><option value="step"></option><option value="sound"></option></datalist>
+            <button id="event-add">ใส่ที่เฟรมนี้</button>
+          </div>
+          <div id="event-list" class="event-list"></div>
+        </details>
+        <details>
+          <summary>คลังท่า</summary>
+          <select id="lib-list" size="6" class="lib-list"></select>
+          <div class="row"><button id="lib-apply" title="ใช้ท่านี้ทั้งตัว">ใช้ทั้งตัว</button><button id="lib-apply-part" title="เฉพาะกระดูกที่เลือกและส่วนที่ต่อจากมัน">ใช้เฉพาะส่วนที่เลือก</button></div>
+          <div class="row"><input id="lib-name" placeholder="ชื่อท่า" /><button id="lib-save">เก็บท่านี้</button></div>
+          <div class="row"><button id="lib-del" class="danger">ลบท่าที่เลือก</button></div>
+        </details>
+        <details open>
+          <summary>ตั้งค่าท่า</summary>
           <label class="field"><span>ชื่อ</span><input id="clip-name" list="anim-names" /></label>
           <datalist id="anim-names"><option value="idle"></option><option value="walk"></option><option value="attack"></option><option value="shoot"></option><option value="cast"></option><option value="hit"></option><option value="death"></option></datalist>
           <label class="field"><span>ความยาว (วิ)</span><input id="clip-duration" type="number" min="0.1" max="10" step="0.05" /></label>
@@ -103,15 +147,27 @@
           <label class="field check"><span>วนซ้ำ (loop)</span><input id="clip-loop" type="checkbox" /></label>
           <label class="field" id="prop-field"><span>อาวุธในมือ</span>
             <select id="clip-prop"><option value="">ไม่มี</option><option value="sword">ดาบ</option><option value="bow">ธนู</option><option value="staff">คทา</option></select></label>
-        </section>
-        <section>
-          <h3>การแสดงผล</h3>
+        </details>
+        <details id="physics-section">
+          <summary>ฟิสิกส์ผมและผ้า</summary>
+          <label class="field check"><span>เปิดฟิสิกส์</span><input id="phys-on" type="checkbox" checked /></label>
+          <label class="field"><span>ความแข็ง</span><input id="phys-stiffness" type="range" min="0.2" max="6" step="0.1" /></label>
+          <label class="field"><span>หน่วง</span><input id="phys-damping" type="range" min="0.05" max="0.95" step="0.05" /></label>
+          <label class="field"><span>แรงโน้มถ่วง</span><input id="phys-gravity" type="range" min="0" max="2" step="0.05" /></label>
+          <label class="field"><span>ลม</span><input id="phys-wind" type="range" min="0" max="3" step="0.1" /></label>
+          <div class="row"><button id="phys-shake" title="เขย่าตัวละครเพื่อดูผมและผ้าแกว่ง">เขย่า</button><button id="phys-reset">คืนค่า</button></div>
+          <div class="row"><button id="phys-mark" title="ใช้ฟิสิกส์กับกระดูกที่เลือกและกระดูกลูก (เช่นหาง หู)">ใส่ฟิสิกส์ที่กระดูกนี้</button></div>
+          <p class="note" id="phys-note"></p>
+        </details>
+        <details>
+          <summary>การแสดงผล</summary>
           <label class="field check"><span>เงาท่าก่อน/หลัง (onion)</span><input id="show-onion" type="checkbox" checked /></label>
           <label class="field check"><span>จุดข้อต่อ</span><input id="show-joints" type="checkbox" checked /></label>
           <label class="field check"><span>เส้นกระดูก</span><input id="show-bones" type="checkbox" /></label>
-        </section>
-        <section>
-          <h3>ภาพร่างอ้างอิง</h3>
+          <label class="field check"><span>พรีวิวขนาดจริงในเกม</span><input id="show-game" type="checkbox" /></label>
+        </details>
+        <details>
+          <summary>ภาพร่างอ้างอิง</summary>
           <p class="note">วางภาพ (Ctrl+V) หรือเลือกไฟล์ แล้วจัดท่าทับภาพร่าง</p>
           <div class="row">
             <label class="button">เลือกภาพ<input id="ref-file" type="file" accept="image/*" hidden /></label>
@@ -121,7 +177,7 @@
           <label class="field"><span>ขนาด</span><input id="ref-scale" type="range" min="0.2" max="3" step="0.02" value="1" /></label>
           <label class="field"><span>ซ้าย/ขวา</span><input id="ref-x" type="range" min="-60" max="60" step="0.5" value="0" /></label>
           <label class="field"><span>ขึ้น/ลง</span><input id="ref-y" type="range" min="-60" max="60" step="0.5" value="0" /></label>
-        </section>
+        </details>
       </aside>
 
       <footer class="timeline">
@@ -137,8 +193,22 @@
           <label class="inline">ความเร็ว
             <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select>
           </label>
+          <label class="inline zoom">ซูม <input id="tl-zoom" type="range" min="1" max="8" step="0.25" value="1" /></label>
         </div>
-        <div id="track" class="track"><div id="ticks"></div><div id="keys"></div><div id="playhead"></div></div>
+        <div class="tl">
+          <div class="tl-labels">
+            <span>เฟรม</span><span>ทั้งตัว</span><span id="tl-bone-label">กระดูก</span><span>Event</span>
+          </div>
+          <div id="tl-scroll" class="tl-scroll">
+            <div id="tl-inner" class="tl-inner">
+              <div id="ticks" class="tl-ruler"></div>
+              <div id="row-all" class="tl-row"></div>
+              <div id="row-bone" class="tl-row"></div>
+              <div id="row-events" class="tl-row"></div>
+              <div id="playhead"></div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 
@@ -148,6 +218,7 @@
         <button value="close" aria-label="ปิด">✕</button>
       </form>
       <div class="sprite-settings">
+        <label class="field"><span>ชื่อ sprite (โฟลเดอร์)</span><input id="sprite-id" /></label>
         <label class="field"><span>ขนาดเฟรม</span>
           <select id="sprite-size"><option value="128">128 px</option><option value="192">192 px</option><option value="256" selected>256 px</option><option value="384">384 px</option></select></label>
         <label class="field"><span>ทิศ</span>
