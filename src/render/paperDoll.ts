@@ -192,7 +192,7 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
       const kneeSupport=92-72*Math.cos(thigh);
       const contact=ease(Math.max(0,Math.min(1,(k-.25)/.3)));
       p.dy=lerp(soleSupport,kneeSupport,contact);
-      p.dx=side?35*slump:-35*out*slump;
+      p.dx=side?85*slump:-35*out*slump;
       // Once the knees support the body, fold the upper body all the way
       // down. A small frontal tilt leaves a visibly seated, upright corpse.
       // Rotate the spine only; the planted legs never tip with the torso.
