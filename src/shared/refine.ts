@@ -1,6 +1,6 @@
 // Refine glow (ITEM_ART.md §3), N-age style: a +N item lights up in the colour
-// of its level, on its icon (theme.css .refined, keep in step) and, for the
-// weapon, on the character (render/paperDoll.ts).
+// of its level, on its icon (theme.css .refined, keep in step) and, for every
+// worn piece, on the character (render/paperDoll.ts).
 
 /** +1..+10: glow colour, whether it sparkles, and prismatic (hue cycling). */
 export const REFINE_GLOW: { color: string; spark: boolean; prism?: boolean }[] = [

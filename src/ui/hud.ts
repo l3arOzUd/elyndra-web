@@ -454,7 +454,7 @@ export class Hud {
     $('doll-right').replaceChildren(...['accessory', 'armor', 'boots'].map(slotButton));
     $('doll-charms').replaceChildren(...CHARM_SLOTS.map(slotButton));
     $('equipment-job').textContent = this.stats ? this.stats.job[0].toUpperCase() + this.stats.job.slice(1) + ' · Lv ' + lv : '';
-    const outfit = [...this.gear.values()].filter(isWornCopy).map((g) => g.base + (g.slot === 'weapon' && g.refine ? '+' + g.refine : '')).sort();
+    const outfit = [...this.gear.values()].filter(isWornCopy).map((g) => g.base + (g.refine ? '+' + g.refine : '')).sort();
     const canvas = $('doll-canvas') as HTMLCanvasElement;
     if (canvas.dataset.outfit !== outfit.join('+')) {
       const drawn = drawWayfarerPortrait(canvas, outfit);

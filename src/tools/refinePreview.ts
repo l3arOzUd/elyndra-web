@@ -29,7 +29,7 @@ p.note{color:#bfa77c;margin:4px 0 10px;font-size:13px}
 .grid{display:grid;grid-template-columns:150px repeat(11,58px);gap:8px 6px;align-items:center;overflow-x:auto;padding-bottom:6px}
 .grid .head{color:#bfa77c;font-size:12px;text-align:center}.grid .label{font-size:12px;line-height:1.25}.grid .label small{display:block;color:#9c8662}
 .grid .item-cell{width:58px;height:58px}
-.dolls{display:grid;grid-template-columns:120px repeat(11,minmax(80px,1fr));gap:6px;align-items:end;overflow-x:auto}
+.dolls{display:grid;grid-template-columns:150px repeat(11,minmax(80px,1fr));gap:6px;align-items:end;overflow-x:auto}
 .dolls canvas{width:100%;max-width:110px;aspect-ratio:1;background:radial-gradient(circle at 50% 70%,#3a4a35,#1d2419 70%);border:1px solid #4b3d29;border-radius:3px}
 .dolls .head{color:#bfa77c;font-size:12px;text-align:center}
 `;
@@ -84,25 +84,33 @@ for (const r of ["normal", "magic", "rare", "unique"]) {
   bar.append(b);
 }
 
-// The Wayfarer with each job's weapon at every level.
-const weaponLooks = new Map<string, string>(); // visual -> item id
-for (const [id, look] of Object.entries(kit.items)) if (look.slot === "weapon" && look.visual && !weaponLooks.has(look.visual)) weaponLooks.set(look.visual, id);
+// The Wayfarer in each job's whole outfit refined to every level, then each
+// weapon alone (equipment.json item ids; ITEM_ART.md §4 paper-doll sets).
+const OUTFITS: [string, string[]][] = [
+  ["Vanguard · Armour (helm, plate, handguards, sabatons, saber)", ["itm_1001", "itm_1005", "itm_1011", "itm_1348", "itm_1017"]],
+  ["Strider · Evasion (hood, leathers, gloves, boots, bow)", ["itm_1002", "itm_1006", "itm_1012", "itm_1349", "itm_1018"]],
+  ["Arcanist · Aether Shield (circlet, robe, wraps, slippers, rod)", ["itm_1003", "itm_1007", "itm_1013", "itm_1350", "itm_1019"]],
+  ["Machinist · mixed (mask, duskcloak, mitts, treads, gauntlet)", ["itm_1004", "itm_1010", "itm_1016", "itm_1353", "itm_1022"]],
+];
+const rows: [string, string[]][] = OUTFITS.filter(([, ids]) => ids.every((id) => kit.items[id]));
+const weaponSeen = new Set<string>();
+for (const [id, look] of Object.entries(kit.items)) if (look.slot === "weapon" && look.visual && !weaponSeen.has(look.visual)) { weaponSeen.add(look.visual); rows.push([(look.name ?? look.visual) + " (weapon only)", [id]]); }
 const dolls = document.createElement("div");
 dolls.className = "dolls";
 const canvases: { canvas: HTMLCanvasElement; gear: string[] }[] = [];
 let anim: AnimName = "idle";
 dolls.append(Object.assign(document.createElement("div"), { className: "head" }), ...LEVELS.map((n) => Object.assign(document.createElement("div"), { className: "head", textContent: "+" + n })));
-for (const [visual, id] of weaponLooks) {
+for (const [name, ids] of rows) {
   const label = document.createElement("div");
   label.className = "head";
   label.style.textAlign = "left";
-  label.textContent = kit.items[id].name ?? visual;
+  label.textContent = name;
   dolls.append(label);
   for (const n of LEVELS) {
     const canvas = document.createElement("canvas");
     canvas.width = canvas.height = kit.rig.frame;
     dolls.append(canvas);
-    canvases.push({ canvas, gear: [n ? `${id}+${n}` : id] });
+    canvases.push({ canvas, gear: ids.map((id) => (n ? `${id}+${n}` : id)) });
   }
 }
 const animBar = document.createElement("div");
@@ -132,7 +140,7 @@ app.append(
   title("h1", "แสงตีบวก (แบบ N-age)"),
   note("ตัวอย่างจากข้อมูลจริงของเกม: ไอเทมทุกชนิดที่ตีบวกได้ (item level 30) ตั้งแต่ +0 ถึง +10 แสงวาบและประกายขยับจริงเหมือนในเกม · ขอบช่องคือ rarity เลือกได้ด้านล่าง"),
   title("h2", "ไอคอน (กระเป๋า · Equipment · ร้าน NPC)"), bar, iconGrid,
-  title("h2", "บนตัวละคร (อาวุธเรืองแสง ผู้เล่นคนอื่นเห็นด้วย · ชุดเกราะเรืองเฉพาะบนไอคอน)"), animBar, dolls,
+  title("h2", "บนตัวละครตอนสวมใส่ (อาวุธและชุดทุกชิ้นเรืองตาม +N · ผู้เล่นคนอื่นเห็นด้วย)"), animBar, dolls,
 );
 drawIcons();
 requestAnimationFrame(tick);
