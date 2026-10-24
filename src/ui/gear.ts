@@ -5,6 +5,8 @@ import type { GearView, SheetMsg } from '../net/protocol';
 /** Text for gear copies, Charms and Totems (CHARACTER_SYSTEMS.md §4-5). */
 
 export const RARITY_LABEL: Record<string, string> = { normal: 'Normal', magic: 'Magic', rare: 'Rare', relic: 'Relic', unique: 'Unique' };
+/** The badge on a bag cell: one letter each, so Rare and Relic never share one. */
+export const RARITY_LETTER: Record<string, string> = { magic: 'M', rare: 'R', relic: 'L', unique: 'U' };
 export const SLOT_LABEL: Record<string, string> = {
   weapon: 'Weapon', head: 'Head', armor: 'Body armour', gloves: 'Gloves', boots: 'Boots', accessory: 'Accessory', charm: 'Charm slot',
   charm1: 'Charm 1', charm2: 'Charm 2', charm3: 'Charm 3',

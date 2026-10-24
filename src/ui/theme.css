@@ -163,13 +163,22 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 
 /* Character systems (CHARACTER_SYSTEMS.md): rarities, Aether Shield, Totems, character window. */
 .bar.hp > #shield-fill { inset:auto auto 0 0; height:5px; background:linear-gradient(90deg,#8fd6ff,#d9f3ff); box-shadow:0 0 4px #9fe0ff; }
-.item-cell.rarity-magic { border:1px solid #6d9ed0; box-shadow:inset 0 -2px #6d9ed0; }
-.item-cell.rarity-rare { border:1px solid #e0c35a; box-shadow:inset 0 -2px #e0c35a; }
-.item-cell.rarity-relic { border:1px solid #e07a3c; box-shadow:inset 0 -2px #e07a3c,0 0 5px #e07a3c88; }
-.item-cell.rarity-unique { border:1px solid #c9853a; box-shadow:inset 0 -2px #c9853a; }
-.rarity-text-magic { color:#2f5f93; }.rarity-text-rare { color:#8a6a10; }.rarity-text-relic { color:#a8461b; }.rarity-text-unique { color:#93561b; }
+/* Rarity: the bag cell's border and glow, the letter badge and the name, one hue each
+   (magic blue, rare yellow, relic violet, unique orange). The icon's thin inner line is
+   its tier (ITEM_ART.md grade frames), kept quieter so the two never compete. */
+.item-cell.rarity-magic { --rc:#58a6ff; }.item-cell.rarity-rare { --rc:#ffd23f; }
+.item-cell.rarity-relic { --rc:#cf72ff; }.item-cell.rarity-unique { --rc:#ff8a24; }
+.item-cell:is(.rarity-magic,.rarity-rare,.rarity-relic,.rarity-unique) { border:2px solid var(--rc); box-shadow:inset 0 0 0 1px #000a,inset 0 0 12px color-mix(in srgb,var(--rc) 45%,transparent); }
+.item-cell:is(.rarity-relic,.rarity-unique) { box-shadow:inset 0 0 0 1px #000a,inset 0 0 14px color-mix(in srgb,var(--rc) 60%,transparent),0 0 7px color-mix(in srgb,var(--rc) 55%,transparent); }
+.item-cell .painted-icon.graded { box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--grade) 75%,transparent); }
+.rarity-letter { margin-left:3px; font-weight:800; }.rarity-letter.rarity-magic { color:#7dbaff; }.rarity-letter.rarity-rare { color:#ffd84f; }
+.rarity-letter.rarity-relic { color:#dd96ff; }.rarity-letter.rarity-unique { color:#ff9a3c; }
+.rarity-text-magic { color:#2a62a8; }.rarity-text-rare { color:#8f6a00; }.rarity-text-relic { color:#8a2fa6; }.rarity-text-unique { color:#b8520f; }
+.item-detail h3.rarity-text-magic { color:#2a62a8; }.item-detail h3.rarity-text-rare { color:#8f6a00; }.item-detail h3.rarity-text-relic { color:#8a2fa6; }.item-detail h3.rarity-text-unique { color:#b8520f; }
+.item-detail .eyebrow:is(.rarity-text-magic,.rarity-text-rare,.rarity-text-relic,.rarity-text-unique) { font-weight:800; font-size:11px; }
+.item-detail .eyebrow.rarity-text-magic { color:#2a62a8; }.item-detail .eyebrow.rarity-text-rare { color:#8f6a00; }.item-detail .eyebrow.rarity-text-relic { color:#8a2fa6; }.item-detail .eyebrow.rarity-text-unique { color:#b8520f; }
 .affix-list { list-style:none; margin:8px 0; padding:6px 0; border-top:1px solid #aa8c5b66; border-bottom:1px solid #aa8c5b66; }
-.affix { font-size:12px; color:#2f4f78; padding:2px 0; }.affix.relic { color:#a8461b; font-weight:600; }.affix-tier { font-size:10px; color:#8a7458; }
+.affix { font-size:12px; color:#2f4f78; padding:2px 0; }.affix.relic { color:#8a2fa6; font-weight:600; }.affix-tier { font-size:10px; color:#8a7458; }
 .item-reqs { font-size:12px; margin:6px 0; }.detail-actions { display:flex; flex-wrap:wrap; gap:6px; }
 .slot.totem:nth-child(8) { margin-left:9px; }.slot.totem.active { border-color:#ffe08a; box-shadow:0 0 9px #ffcf5a; }
 /* Charging Totems: the dark veil drains from the bottom as kills fill it. */
@@ -276,8 +285,8 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .doll-socket .empty-equip { width:28px; height:28px; color:#a98a51; opacity:.55; }
 .doll-socket .item-quantity { right:2px; bottom:0; }
 .slot-key { position:absolute; left:2px; top:1px; padding:0 3px; font:bold 11px/1.25 var(--ui-font-body); color:#fff; background:#18130b99; text-shadow:1px 1px #000; }
-.doll-slot.rarity-magic .doll-socket { border-color:#6d9ed0; }.doll-slot.rarity-rare .doll-socket { border-color:#e0c35a; }
-.doll-slot.rarity-relic .doll-socket { border-color:#e07a3c; box-shadow:0 0 6px #e07a3c88; }.doll-slot.rarity-unique .doll-socket { border-color:#c9853a; }
+.doll-slot.rarity-magic .doll-socket { border-color:#58a6ff; }.doll-slot.rarity-rare .doll-socket { border-color:#ffd23f; }
+.doll-slot.rarity-relic .doll-socket { border-color:#cf72ff; box-shadow:0 0 6px #cf72ff88; }.doll-slot.rarity-unique .doll-socket { border-color:#ff8a24; box-shadow:0 0 6px #ff8a2488; }
 .doll-slot.inactive .doll-socket { border-color:#c4533b; }.doll-slot.inactive .painted-icon { filter:grayscale(.8) brightness(.6) !important; }
 .doll-slot.locked .doll-socket { opacity:.45; }
 .doll-text { display:flex; flex-direction:column; min-width:0; }
@@ -285,8 +294,8 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .doll-text .eyebrow { font-size:10px; color:#c7ae7c; letter-spacing:.06em; }
 .doll-text strong { font-size:12px; line-height:1.3; font-weight:600; color:#bfae8c; overflow-wrap:anywhere; }
 .doll-slot.filled .doll-text strong { color:#fff0c2; }
-.doll-slot.rarity-magic .doll-text strong { color:#a8ccf2; }.doll-slot.rarity-rare .doll-text strong { color:#f2d77c; }
-.doll-slot.rarity-relic .doll-text strong { color:#f6a06a; }.doll-slot.rarity-unique .doll-text strong { color:#e6aa62; }
+.doll-slot.rarity-magic .doll-text strong { color:#8fc2ff; }.doll-slot.rarity-rare .doll-text strong { color:#ffd84f; }
+.doll-slot.rarity-relic .doll-text strong { color:#dd96ff; }.doll-slot.rarity-unique .doll-text strong { color:#ff9a3c; }
 .doll-text .bad { color:#ff9f88; font-size:11px; }
 .doll-figure { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; min-height:236px; overflow:hidden; border:1px solid #a68a50; border-radius:75px 75px 5px 5px; background:radial-gradient(ellipse at 50% 88%,#e9c47c38,transparent 55%),radial-gradient(ellipse at 50% 30%,#5f5d3a,#30291e); }
 #doll-canvas { width:200px; height:200px; margin-bottom:-14px; }

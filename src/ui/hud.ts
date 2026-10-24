@@ -2,12 +2,12 @@ import type { ClientContent } from '../data/content';
 import { money } from './currency';
 import type { BuffView, GearView, MsgOf, QuestView, SheetMsg, TotemView } from '../net/protocol';
 import { icon, itemIcon } from './icons';
-import { skillIcon, systemIcon } from './art';
+import { gradeOf, skillIcon, systemIcon } from './art';
 import { awakenStatus, rankLines, rankNumbers } from './ranks';
 import { drawWayfarerPortrait } from '../render/paperDoll';
 import { isWorn as isWornCopy } from './gear';
 import { MonsterBook } from './book';
-import { CHARM_SLOTS, ECHO_COUNT, gearTitle, RARITY_LABEL, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
+import { CHARM_SLOTS, ECHO_COUNT, gearTitle, RARITY_LABEL, RARITY_LETTER, SLOT_LABEL, STAT_IDS, STAT_INFO, affixText, baseLines, gearItem, gearNumbers, kindLabel, requirements } from './gear';
 
 const $ = (id: string) => document.getElementById(id)!;
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls = '', text?: string): HTMLElementTagNameMap[K] {
@@ -399,7 +399,9 @@ export class Hud {
       const g = id.startsWith('g:') ? this.gear.get(Number(id.slice(2))) : undefined;
       const it = itemOf(id), li = el('li'), b = el('button', 'item-cell rarity-' + (g ? g.rarity : it?.rarity ?? 'common') + (id === this.selected ? ' selected' : ''));
       b.title = nameOf(id) + (g ? ' · ' + RARITY_LABEL[g.rarity] : ''); b.setAttribute('aria-label', g ? nameOf(id) + ', ' + RARITY_LABEL[g.rarity] + ', item level ' + g.ilvl : (it?.name ?? id) + ', quantity ' + this.inventory[id]); b.setAttribute('aria-pressed', String(id === this.selected)); b.dataset.item = id;
-      b.append(itemIcon(it, g?.rarity, g?.refine), el('span', 'item-quantity', g ? (g.refine ? '+' + g.refine + ' ' : '') + (g.rarity === 'normal' ? '' : RARITY_LABEL[g.rarity][0]) : String(this.inventory[id])));
+      const badge = el('span', 'item-quantity', g ? (g.refine ? '+' + g.refine : '') : String(this.inventory[id]));
+      if (g && RARITY_LETTER[g.rarity]) badge.append(el('b', 'rarity-letter rarity-' + g.rarity, RARITY_LETTER[g.rarity]));
+      b.append(itemIcon(it, g?.rarity, g?.refine), badge);
       // Selecting only restyles the cells, so a double-click lands on the same button.
       b.onclick = () => {
         this.selected = id;
@@ -497,9 +499,9 @@ export class Hud {
       return g;
     }));
   }
-  private detailHead(d: HTMLElement, art: HTMLElement, eyebrow: string, title: string, titleCls = '', sub?: string) {
+  private detailHead(d: HTMLElement, art: HTMLElement, eyebrow: string, title: string, titleCls = '', sub?: string, eyebrowCls = '') {
     const head = el('div', 'detail-head'), text = el('div', 'detail-title');
-    text.append(el('p', 'eyebrow', eyebrow), el('h3', titleCls, title));
+    text.append(el('p', ('eyebrow ' + eyebrowCls).trim(), eyebrow), el('h3', titleCls, title));
     if (sub) text.append(el('small', 'muted', sub));
     head.append(art, text); d.append(head);
   }
@@ -509,9 +511,13 @@ export class Hud {
     const it = gearItem(this.c, g);
     if (!it?.equip) { d.append(el('p', 'muted', g.base)); return; }
     const e = it.equip;
-    this.detailHead(d, itemIcon(it, g.rarity, g.refine), RARITY_LABEL[g.rarity] + ' · item level ' + g.ilvl, gearTitle(it, g), 'rarity-text-' + g.rarity,
-      kindLabel(it) + (g.slot === 'stash' ? ' · in stash' : isWornCopy(g) ? ' · worn' : ''));
-    if (e.unique || it.category === 'totem' || it.description) d.append(el('p', 'item-description', it.description));
+    // Rarity once (eyebrow, in its colour; the name takes the colour too), then
+    // what it is, its tier and item level on one line. Generated gear bases'
+    // descriptions only restate that line, so they are not shown.
+    const tier = it.drop_pool && !e.charm && !e.totem ? gradeOf(it) : 0;
+    this.detailHead(d, itemIcon(it, g.rarity, g.refine), RARITY_LABEL[g.rarity], gearTitle(it, g), 'rarity-text-' + g.rarity,
+      kindLabel(it) + (tier ? ' · tier ' + tier : '') + ' · item level ' + g.ilvl + (g.slot === 'stash' ? ' · in stash' : isWornCopy(g) ? ' · worn' : ''), 'rarity-text-' + g.rarity);
+    if (!it.drop_pool && it.description) d.append(el('p', 'item-description', it.description));
     const lines = baseLines(this.c, it, g);
     if (lines.length) { const s = this.section(d, 'Properties'); for (const line of lines) s.append(el('p', 'item-stat', line)); }
     if (g.affixes.length) {
