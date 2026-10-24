@@ -2,7 +2,7 @@ import {describe,it,expect} from 'vitest';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {Animator} from '../src/render/animator';
-import {actionPose,DOLL_ANIMS,weaponMotion,type Rig} from '../src/render/paperDoll';
+import {actionPose,poseAt,DOLL_ANIMS,weaponMotion,type Rig} from '../src/render/paperDoll';
 import {skillAnimation} from '../src/render/combatAnimation';
 const rig=JSON.parse(readFileSync(join(__dirname,'../public/sprites/wayfarer/rig.json'),'utf8')) as Rig;
 
@@ -15,6 +15,16 @@ function wrist(p:ReturnType<typeof actionPose>,side:'near'|'far') {
 }
 
 describe('Wayfarer articulated actions',()=>{
+ it('alternates clearly separated recovering feet in both vertical walk views',()=>{
+  for(const view of ['front','back']) {
+   const a=poseAt(view,'walk',2,8),b=poseAt(view,'walk',6,8);
+   const lift=(p:ReturnType<typeof poseAt>,leg:string)=>(p.lift['thigh_'+leg]??0)+(p.lift['shin_'+leg]??0);
+   expect(lift(a,'near')-lift(a,'far')).toBeGreaterThan(30);
+   expect(lift(b,'far')-lift(b,'near')).toBeGreaterThan(30);
+   expect(lift(a,'near')).toBeCloseTo(lift(b,'far'));
+   expect(a.angle.arm_near*a.angle.arm_far).toBeLessThan(0);
+  }
+ });
  it('uses the shared weapon action for generated gear without explicit motion',()=>{
   for(const [visual,motion] of [['surveyor_bow','shoot'],['aether_rod','cast'],['copper_saber','melee'],['doll_weapon_gauntlet','punch'],['doll_unique_gearheart_gauntlet','punch']])
    expect(weaponMotion([{name:'Generated gear',slot:'weapon',visual,layers:['weapon']}])).toBe(motion);

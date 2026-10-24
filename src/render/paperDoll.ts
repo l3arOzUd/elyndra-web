@@ -143,10 +143,21 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
         p.angle.arm_far = s * 22;
         p.rot = -3;
       } else {
-        p.lift.thigh_near = Math.max(0, s) * 12;
-        p.lift.thigh_far = Math.max(0, -s) * 12;
+        // Frontal depth must read at the final game scale. A tiny whole-leg
+        // lift looked stationary; alternate the planted and recovering foot,
+        // folding the shin into the thigh instead of bouncing both feet.
+        p.dy = -Math.abs(s) * 3;
+        p.dx = s * 2;
+        p.lift.thigh_near = s * 10;
+        p.lift.thigh_far = -s * 10;
+        p.lift.shin_near = Math.max(0, s) * 18;
+        p.lift.shin_far = Math.max(0, -s) * 18;
+        p.angle.thigh_near = s * 4 * out;
+        p.angle.thigh_far = -s * 4 * out;
+        p.angle.shin_near = -s * 7 * out;
+        p.angle.shin_far = s * 7 * out;
         p.angle.arm_near = s * 9 * out;
-        p.angle.arm_far = s * 9 * out;
+        p.angle.arm_far = -s * 9 * out;
       }
       break;
     }
