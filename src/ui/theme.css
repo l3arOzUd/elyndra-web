@@ -471,3 +471,41 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 }
 /* Keep all ten quick slots reachable beside the seven illustrated menu buttons. */
 @media(min-width:601px) and (max-width:1550px) { .menu-dock { bottom:150px; } }
+/* HUD frame family: painted bronze foliage, walnut backing, soft silhouettes. */
+.status-win,.map-win,.target-win,.log-win,.action-dock {
+ border:1px solid #846039; border-radius:16px;
+ background:radial-gradient(ellipse at 25% 0%,#665036db,transparent 70%),linear-gradient(135deg,#30271fee,#191d19ed);
+ box-shadow:0 5px 14px #060b09a0,inset 0 0 0 2px #e4bd7429,inset 0 0 16px #070b0990;
+}
+.status-win::after,.map-win::after,.target-win::after,.log-win::after,.action-dock::after {
+ content:''; position:absolute; inset:-6px; border:30px solid transparent;
+ border-image:var(--ui-frame) 20% / 30px / 0 stretch;
+ pointer-events:none; z-index:2;
+}
+.status-win { border-radius:38px 16px 16px 38px; }
+.status-win::after { border-image-width:24px; }
+.class-crest { border:3px ridge #d5ae69; box-shadow:0 0 0 2px #2e2116,0 0 0 3px #a17c43,0 3px 9px #000a,inset 0 0 10px #deb77055; }
+.bar { border-radius:9px; border-color:#bc965b; box-shadow:0 0 0 1px #21160e,inset 0 2px 4px #0009,0 1px #ffe0a333; }
+.map-win { border-radius:24px 24px 18px 18px; }
+.map-frame { border-radius:22px; overflow:hidden; border:2px ridge #d1ae70; padding:2px; background:#241b12; box-shadow:0 0 0 2px #161b16,0 0 0 3px #b38e4a66; }
+#minimap { border-radius:17px; }
+#map-name { text-shadow:0 2px 3px #000; }
+.quest-win { border:1px solid transparent; border-image:var(--ui-frame) 20% / 22px / 0 stretch; border-radius:14px; padding:13px 14px; background:linear-gradient(110deg,#30271feb,#25271dcc); }
+.quest-win header { padding-bottom:5px; border-bottom:1px solid #be99533b; }
+.log-win { border-radius:12px; }
+.log-win::after { border-image-width:22px; inset:-4px; }
+.action-dock { border-radius:22px 22px 14px 14px; }
+.action-dock::before { content:none; }
+.action-dock::after { top:-6px; right:-6px; font-size:inherit; color:inherit; }
+.slot,.slot.item { border-radius:10px; border:2px ridge #c7a66a; box-shadow:0 0 0 1px #140e09,0 3px 4px #0009,inset 0 1px #fff0be; }
+.xp-row .bar { border-radius:5px; }
+.menu-dock button { border-radius:15px 15px 9px 9px; border:2px ridge #ba965b; background:radial-gradient(ellipse at top,#80613d,#30251a 75%); box-shadow:0 2px 5px #000b,inset 0 0 0 1px #e6c58d30; }
+.menu-dock .ui-icon.hud-art { border-radius:10px 10px 6px 6px; }
+.menu-dock button[aria-expanded="true"] { border-color:#ffe4a0; box-shadow:0 0 7px #dfb46688,inset 0 0 0 1px #ffe7ae70; }
+@media(max-width:600px) {
+ .status-win { border-radius:14px; }
+ .status-win::after,.map-win::after { inset:-4px; border-image-width:20px; }
+ .action-dock::after { inset:-4px; border-image-width:22px; }
+ .map-frame { border-radius:14px; } #minimap { border-radius:10px; }
+ .menu-dock button { border-radius:12px 12px 7px 7px; }
+}
