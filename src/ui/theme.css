@@ -84,7 +84,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 #inventory { grid-template-columns:repeat(5,minmax(0,1fr)); gap:6px; max-height:270px; padding-right:0; }
 .item-cell { padding:0; border-radius:2px; border:1px solid #9d7e4b; background:#241e19; box-shadow:inset 0 0 0 1px #120e0a,0 1px #ffffff10; overflow:hidden; }
 .item-cell .painted-icon { width:100%; height:100%; padding:0; margin:0; border-radius:0; filter:none; }
-.item-cell:hover:not(:disabled) { background:#2d261b; border-color:#ffdb8b; transform:none; }
+.item-cell:hover:not(:disabled) { background:#2d261b; border-color:var(--rc,#ffdb8b); filter:brightness(1.12); transform:none; }
 .item-cell.rarity-uncommon { border:1px solid #75a653; box-shadow:inset 0 -2px #75a653; }.item-cell.rarity-rare { border:1px solid #6d9ed0; }.item-cell.rarity-epic { border:1px solid #b77ad9; }
 /* Selected: a light ring just outside the cell, so the rarity border stays its own colour. */
 .item-cell.selected { outline:2px solid #fff1c2; outline-offset:2px; border-color:var(--rc,#ffdb90); background:#312617; }
