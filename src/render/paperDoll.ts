@@ -269,7 +269,7 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
       // Counter the folded torso so the hand hangs below the shoulder,
       // rather than keeping the weapon in a combat-ready chest carry.
       aim("near",lerp(start[0],near[0]+(side?-72:60*sign),settle),lerp(start[1],near[1]+(side?38:85),settle),-1,
-        lerp(side?(motion==="cast"?-18:motion==="shoot"?-14:-5):0,side?(motion==="melee"?-65:-18):-130*sign,settle));
+        lerp(side?(motion==="cast"?-18:motion==="shoot"?-14:-5):0,side?(motion==="melee"?-175:-18):(motion==="melee"?-240:-130)*sign,settle));
     }
     return p;
   }
