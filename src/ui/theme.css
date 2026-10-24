@@ -369,7 +369,7 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .painted-icon[data-refine="4"] { --glow:#b46cffa0; --spark:#f0dcff; }
 .painted-icon[data-refine="5"] { --glow:#ffc83daa; --spark:#fff4c2; }
 .painted-icon[data-refine="6"] { --glow:#ff3b3baa; --spark:#ffd0c0; --pulse:2.2s; }
-.painted-icon[data-refine="7"] { --glow:#ff3fc8b0; --spark:#ffe0f6; --pulse:1.3s; }
+.painted-icon[data-refine="7"] { --glow:#ff52dcd0; --spark:#ffe0f6; --pulse:1.3s; }
 .painted-icon[data-refine="8"] { --glow:#ffffffaa; --spark:#fff; --pulse:1.8s; }
 .painted-icon[data-refine="9"] { --glow:#ff8a1fc0; --spark:#ffe39a; --pulse:0.9s; }
 .painted-icon[data-refine="9"]::before { animation:refine-pulse .9s ease-in-out infinite,refine-flicker .23s steps(2) infinite,refine-drift 1.6s linear infinite; }
@@ -380,8 +380,8 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
  background:radial-gradient(1.6px 1.6px at 22% 30%,#fff 99%,transparent),radial-gradient(1.4px 1.4px at 72% 22%,#fff 99%,transparent),
   radial-gradient(2px 2px at 80% 68%,#fff 99%,transparent),radial-gradient(1.4px 1.4px at 34% 78%,#fff 99%,transparent),
   radial-gradient(circle at 50% 50%,transparent 28%,#0000 30%,#fff2 100%),
-  conic-gradient(from var(--rainbow),#ff4b4bb0,#ffa03ab0,#ffe45ab0,#5dff7ab0,#45d8ffb0,#5b7bffb0,#c46bffb0,#ff4b4bb0);
- -webkit-mask:radial-gradient(circle at 50% 50%,#0006 25%,#000 70%); mask:radial-gradient(circle at 50% 50%,#0006 25%,#000 70%);
+  conic-gradient(from var(--rainbow),#ff4b4b88,#ffa03a88,#ffe45a88,#5dff7a88,#45d8ff88,#5b7bff88,#c46bff88,#ff4b4b88);
+ -webkit-mask:radial-gradient(circle at 50% 50%,#0000 32%,#0009 62%,#000 92%); mask:radial-gradient(circle at 50% 50%,#0000 32%,#0009 62%,#000 92%);
 }
 .painted-icon[data-refine="10"]::before { animation:refine-pulse 1.1s ease-in-out infinite,refine-rainbow 2.4s linear infinite; }
 @keyframes refine-pulse { 0%,100% { opacity:.5; } 50% { opacity:1; } }
