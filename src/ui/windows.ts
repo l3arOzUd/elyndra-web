@@ -1,5 +1,17 @@
 /** One window/HUD layout controller shared by the game and the offline preview. */
 export function bindWindows() {
+  const menuPanels: Record<string, string> = {
+    'toggle-inv':'inv-win', 'toggle-equip':'equip-win', 'toggle-journal':'journal-win',
+    'toggle-char':'char-win', 'toggle-skills':'skill-win', 'toggle-book':'book-win', 'toggle-menu':'menu-win',
+  };
+  for (const [buttonId, panelId] of Object.entries(menuPanels)) {
+    const button = document.getElementById(buttonId)!;
+    const panel = document.getElementById(panelId)!;
+    button.setAttribute('aria-controls', panelId);
+    const sync = () => button.setAttribute('aria-expanded', String(!panel.hidden));
+    new MutationObserver(sync).observe(panel, { attributes:true, attributeFilter:['hidden'] });
+    sync();
+  }
   const root = document.getElementById('view')!;
   const preview = location.pathname.includes('ui-preview');
   const key = 'elyndra.ui.layout.v2' + (preview ? '.preview' : '');

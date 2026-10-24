@@ -1,6 +1,13 @@
 import type { ItemDef } from '../data/schema';
 import { paintedItem } from './art';
 
+/** Original menu atlas, row-major 4 x 4. Utility controls retain crisp SVGs. */
+const HUD_ART: Record<string, number> = {
+ bag:0, armor:1, scroll:2, star:3, burst:4, bestiary:5, settings:6, gear:6,
+ coin:7, book:8, shield:9, compass:10, portal:11, hammer:12, potion:13,
+ leaf:14, chat:15, crystal:4,
+};
+
 const paths: Record<string, string> = {
  crystal:'<path d="m16 3 9 11-9 15L7 14Z"/><path d="m16 3-3 11 3 15 4-15ZM7 14h18"/>',
  bow:'<path d="M8 3c24 9 24 17 0 26L8 3ZM3 16h26m-5-4 5 4-5 4"/>',
@@ -39,6 +46,14 @@ const paths: Record<string, string> = {
 };
 export function icon(name: string, cls=''): HTMLElement {
  const span=document.createElement('span'); span.className='ui-icon '+cls;
+ if (name in HUD_ART) {
+   const cell = HUD_ART[name];
+   span.classList.add('hud-art');
+   span.dataset.hudIcon = name;
+   span.setAttribute('aria-hidden', 'true');
+   span.style.backgroundPosition = `${cell % 4 / 3 * 100}% ${Math.floor(cell / 4) / 3 * 100}%`;
+   return span;
+ }
  span.innerHTML=`<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]??paths.crystal}</svg>`;
  return span;
 }
