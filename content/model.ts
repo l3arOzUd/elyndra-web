@@ -110,7 +110,11 @@ export function basicRankPoints(attackMs: number): number {
 //        you and lands on you the moment you stop (TestBalanceDrag); movement
 //        speed and Dash are how you pull away. Heavy and far-hitting monsters
 //        lag. No monster is faster than a player's base speed.
-// exp:   EXP relative to a swarm monster of the same level.
+// exp:   EXP per hit relative to a swarm monster of the same level. EXP is
+//        paid per HP taken off, so a monster pays for the hits it takes:
+//        tankier ones pay more in all, never more per hit. Far-hitting
+//        monsters hang back and cost walking, heavy ones hit hard, elites
+//        and bosses are the jackpot.
 
 export interface ArchetypeTargets {
   hits: number;
@@ -124,14 +128,14 @@ export interface ArchetypeTargets {
 
 export const ARCHETYPES: Record<Archetype, ArchetypeTargets> = {
   swarm: { hits: 3.2, def: 0.1, dmg: 0.012, attack_ms: 1600, speed: 1, range: 1, exp: 1 },
-  ranged: { hits: 2.6, def: 0.08, dmg: 0.02, attack_ms: 1800, speed: 0.7, range: 5, exp: 1 },
+  ranged: { hits: 2.6, def: 0.08, dmg: 0.02, attack_ms: 1800, speed: 0.7, range: 5, exp: 1.15 },
   support: { hits: 3.6, def: 0.1, dmg: 0.009, attack_ms: 2200, speed: 0.7, range: 4, exp: 1.15 },
-  bruiser: { hits: 7, def: 0.15, dmg: 0.035, attack_ms: 2000, speed: 0.75, range: 1, exp: 2.3 },
-  construct: { hits: 6.5, def: 0.25, dmg: 0.028, attack_ms: 1900, speed: 0.75, range: 1, exp: 2.2 },
-  elite: { hits: 18, def: 0.2, dmg: 0.06, attack_ms: 1500, speed: 1, range: 1, exp: 6.5 },
+  bruiser: { hits: 7, def: 0.15, dmg: 0.035, attack_ms: 2000, speed: 0.75, range: 1, exp: 1.1 },
+  construct: { hits: 6.5, def: 0.25, dmg: 0.028, attack_ms: 1900, speed: 0.75, range: 1, exp: 1.1 },
+  elite: { hits: 18, def: 0.2, dmg: 0.06, attack_ms: 1500, speed: 1, range: 1, exp: 1.25 },
   // Bosses are fought solo with potions: 70 hits (~40 s with skills) and
   // 6.5% of max HP a swing (balance_jobs_test.go).
-  boss: { hits: 70, def: 0.25, dmg: 0.065, attack_ms: 1400, speed: 0.75, range: 2, exp: 45 },
+  boss: { hits: 70, def: 0.25, dmg: 0.065, attack_ms: 1400, speed: 0.75, range: 2, exp: 2 },
 };
 
 export const AGGRO_RADIUS: Record<Behavior, number> = { passive: 0, flee: 0, assist: 6, aggressive: 10 };
@@ -172,8 +176,9 @@ export function monsterStats(level: number, archetype: Archetype, mods: StatMods
   const far = archetype !== "boss" && (mods.range ?? a.range) > FAR_RANGE ? FAR_DAMAGE : 1;
   const t = a.dmg * (mods.atk ?? 1) * far * p.max_hp;
   const attack = Math.max(1, Math.round((5 * t + Math.sqrt(25 * t * t + 20 * t * p.ref_armour)) / 10));
-  const toughness = Math.sqrt((mods.hp ?? 1) * (mods.atk ?? 1));
-  const base_exp = Math.max(1, Math.round(swarmExp(level) * a.exp * toughness * (bounty ? BOUNTY.exp : 1)));
+  // Hits taken (Armour is already priced into hp), then danger: harder hitters pay a little more.
+  const hits = (a.hits * (mods.hp ?? 1)) / ARCHETYPES.swarm.hits;
+  const base_exp = Math.max(1, Math.round(swarmExp(level) * hits * a.exp * Math.sqrt(mods.atk ?? 1) * (bounty ? BOUNTY.exp : 1)));
   return {
     hp,
     attack,
