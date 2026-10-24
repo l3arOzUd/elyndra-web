@@ -35,14 +35,18 @@ let shadowTexture: THREE.Texture | null = null;
 function softShadow(): THREE.Texture {
   if (shadowTexture) return shadowTexture;
   const c = document.createElement("canvas");
-  c.width = c.height = 64;
+  c.width = c.height = 128;
   const g = c.getContext("2d")!;
-  const grad = g.createRadialGradient(32, 32, 0, 32, 32, 32);
-  grad.addColorStop(0, "rgba(10,20,15,0.55)");
-  grad.addColorStop(0.6, "rgba(10,20,15,0.3)");
-  grad.addColorStop(1, "rgba(10,20,15,0)");
+  const grad = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+  // Black alpha attenuates the ground's own colour instead of laying a
+  // green haze over it. A stronger core remains legible on dark grass;
+  // the broad falloff preserves terrain detail and a soft flying shadow.
+  grad.addColorStop(0, "rgba(0,0,0,0.76)");
+  grad.addColorStop(0.35, "rgba(0,0,0,0.60)");
+  grad.addColorStop(0.7, "rgba(0,0,0,0.24)");
+  grad.addColorStop(1, "rgba(0,0,0,0)");
   g.fillStyle = grad;
-  g.fillRect(0, 0, 64, 64);
+  g.fillRect(0, 0, 128, 128);
   shadowTexture = new THREE.CanvasTexture(c);
   return shadowTexture;
 }
@@ -91,8 +95,8 @@ export class SpriteActor {
     this.root.add(this.card);
     if (!json.bakedShadow) {
       const shadow = new THREE.Mesh(
-        new THREE.PlaneGeometry(0.9 * k, 0.5 * k).rotateX(-Math.PI / 2),
-        new THREE.MeshBasicMaterial({ map: softShadow(), transparent: true, depthWrite: false }),
+        new THREE.PlaneGeometry(1.05 * k, 0.65 * k).rotateX(-Math.PI / 2),
+        new THREE.MeshBasicMaterial({ map: softShadow(), transparent: true, depthWrite: false, toneMapped: false }),
       );
       shadow.position.y = 0.02;
       shadow.renderOrder = -1;
