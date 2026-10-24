@@ -819,7 +819,8 @@ export class Game {
         if (e.label) { e.label.targeted = e.id === this.targetId; e.label.hover = e.id === this.hoverId; }
       }
       // Over the sprite as drawn (a pile's members are nudged apart).
-      e.label?.place(tmpA.copy(e.actor.root.position).setY(0).addScaledVector(UP, e.actor.height + 0.35), cam, this.width, this.height);
+      // Anchor identity to the ground contact, independent of sprite height/bobbing.
+      e.label?.place(tmpA.copy(e.actor.root.position).setY(0), cam, this.width, this.height, true);
     }
     for (const p of this.portalLabels) p.label.place(p.at, cam, this.width, this.height);
     for (const p of this.piles.values()) p.mesh.rotation.y += dt * 1.5;

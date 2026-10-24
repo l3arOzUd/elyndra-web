@@ -218,13 +218,16 @@ export class Label {
     this.el.classList.toggle("tag-hurt", hp < max);
   }
 
-  place(pos: THREE.Vector3, camera: THREE.Camera, w: number, h: number) {
+  place(pos: THREE.Vector3, camera: THREE.Camera, w: number, h: number, belowFeet = false) {
     // Names and HP bars scale with the camera like the sprites and the
     // floating numbers, pinned at their bottom centre just over the head.
     const zoom = THREE.MathUtils.clamp(DEFAULT_DISTANCE / camera.position.distanceTo(pos), MIN_ZOOM_SCALE, MAX_ZOOM_SCALE);
     const [x, y, behind] = project(tmp.copy(pos), camera, w, h);
     this.el.style.display = behind ? "none" : "";
-    this.el.style.transform = `translate(${x}px, ${y}px) scale(${zoom}) translate(-50%, -100%)`;
+    this.el.classList.toggle("tag-at-feet", belowFeet);
+    this.el.style.transform = belowFeet
+      ? `translate(${x}px, ${y + 9 * zoom}px) scale(${zoom}) translate(-50%, 0)`
+      : `translate(${x}px, ${y}px) scale(${zoom}) translate(-50%, -100%)`;
   }
 
   set targeted(on: boolean) { this.el.classList.toggle("tag-target", on); }
