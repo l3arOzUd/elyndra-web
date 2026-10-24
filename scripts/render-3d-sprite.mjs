@@ -3,7 +3,7 @@
 // through an orthographic camera pitched like the game's (50 degrees), so the
 // card the game draws facing the camera looks like the model would.
 //
-//   node scripts/render-3d-sprite.mjs <model.glb> <sprite id> [--frame 256] [--ppc 150] [--pivot-y 186]
+//   node scripts/render-3d-sprite.mjs <model.glb> <sprite id> [--frame 256] [--ppc 150] [--pivot-y 186] [--outline 2]
 //
 // Writes public/sprites/<id>/{idle,walk,attack,hit,death}.png and <id>.sprite.json.
 // Three.js runs in headless Chromium; files are served by request interception,
@@ -21,7 +21,7 @@ const args = process.argv.slice(2);
 const opt = (name, fallback) => { const i = args.indexOf("--" + name); return i >= 0 ? Number(args[i + 1]) : fallback; };
 const [modelPath, id] = args.filter((a, i) => !a.startsWith("--") && !args[i - 1]?.startsWith("--"));
 if (!modelPath || !id) throw new Error("usage: render-3d-sprite.mjs <model.glb> <sprite id>");
-const FRAME = opt("frame", 256), PPC = opt("ppc", 150), PIVOT_Y = opt("pivot-y", 186), PITCH = 50;
+const FRAME = opt("frame", 256), PPC = opt("ppc", 150), PIVOT_Y = opt("pivot-y", 186), OUTLINE = opt("outline", 2), PITCH = 50;
 const ROWS = ["W", "S", "SW", "NW", "N"];
 // Facing yaw for each row: the model faces +Z (toward the camera, "S").
 const YAW = { S: 0, SW: -Math.PI / 4, W: -Math.PI / 2, NW: (-3 * Math.PI) / 4, N: Math.PI };
@@ -47,13 +47,21 @@ window.render = async (cfg) => {
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.setClearColor(0x000000, 0);
   const scene = new THREE.Scene();
-  // Soft, mostly even light: the generated texture already carries painted shading.
-  scene.add(new THREE.HemisphereLight(0xfff6e8, 0x6b6b5a, 2.2));
-  const sun = new THREE.DirectionalLight(0xfff2dc, 1.1);
-  sun.position.set(-3, 6, 4); // upper left, like the painted sprites
+  // Bright, mostly even light on a matte (Lambert) surface: the generated
+  // texture already carries painted shading; the sun only adds form from the
+  // upper left, like the painted sprites.
+  scene.add(new THREE.HemisphereLight(0xfffaf0, 0x9a9a84, 2.6));
+  const sun = new THREE.DirectionalLight(0xfff2dc, 1.0);
+  sun.position.set(-3, 6, 4);
   scene.add(sun);
   const gltf = await new GLTFLoader().loadAsync("/model.glb");
   const model = gltf.scene;
+  model.traverse((o) => {
+    if (!o.isMesh) return;
+    const old = o.material;
+    o.material = new THREE.MeshLambertMaterial({ map: old.map, color: 0xffffff });
+    old.dispose();
+  });
   scene.add(model);
   const mixer = new THREE.AnimationMixer(model);
   const half = FRAME / 2 / PPC;
@@ -61,6 +69,20 @@ window.render = async (cfg) => {
   const p = PITCH * Math.PI / 180;
   cam.position.set(0, Math.sin(p) * 20, Math.cos(p) * 20);
   cam.lookAt(0, 0, 0);
+  // A dark outline round the silhouette, like the painted sprites' line work.
+  const OUTLINE = cfg.OUTLINE * S, LINE = "rgba(38,30,22,0.9)";
+  const tmp = document.createElement("canvas"); tmp.width = tmp.height = FRAME * S;
+  const tg = tmp.getContext("2d");
+  const lined = document.createElement("canvas"); lined.width = lined.height = FRAME * S;
+  const lg = lined.getContext("2d");
+  const frameImage = () => {
+    tg.globalCompositeOperation = "copy"; tg.drawImage(renderer.domElement, 0, 0);
+    tg.globalCompositeOperation = "source-in"; tg.fillStyle = LINE; tg.fillRect(0, 0, tmp.width, tmp.height);
+    lg.clearRect(0, 0, lined.width, lined.height);
+    for (let a = 0; a < 16; a++) lg.drawImage(tmp, Math.cos(a * Math.PI / 8) * OUTLINE, Math.sin(a * Math.PI / 8) * OUTLINE);
+    lg.drawImage(renderer.domElement, 0, 0);
+    return lined;
+  };
   const out = {};
   for (const c of CLIPS) {
     const clip = THREE.AnimationClip.findByName(gltf.animations, c.clip);
@@ -78,7 +100,7 @@ window.render = async (cfg) => {
         const t = clip.duration * (c.loop ? i / c.frames : i / (c.frames - 1));
         mixer.setTime(Math.min(t, clip.duration - 1e-4));
         renderer.render(scene, cam);
-        g.drawImage(renderer.domElement, i * FRAME, r * FRAME, FRAME, FRAME);
+        g.drawImage(frameImage(), i * FRAME, r * FRAME, FRAME, FRAME);
       }
     }
     out[c.name] = { png: sheet.toDataURL("image/png"), duration: clip.duration };
@@ -102,7 +124,7 @@ try {
   });
   await page.goto("http://render.local/");
   await page.waitForFunction(() => window.ready === true);
-  const sheets = await page.evaluate((cfg) => window.render(cfg), { FRAME, PPC, PIVOT_Y, PITCH, ROWS, YAW, CLIPS });
+  const sheets = await page.evaluate((cfg) => window.render(cfg), { FRAME, PPC, PIVOT_Y, OUTLINE, PITCH, ROWS, YAW, CLIPS });
   const dir = join(web, "public", "sprites", id);
   await mkdir(dir, { recursive: true });
   const animations = {};
