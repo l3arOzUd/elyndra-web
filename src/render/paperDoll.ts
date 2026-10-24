@@ -196,8 +196,10 @@ export function poseAt(view: string, anim: AnimName, f: number, n: number): Pose
       // Once the knees support the body, fold the upper body all the way
       // down. A small frontal tilt leaves a visibly seated, upright corpse.
       // Rotate the spine only; the planted legs never tip with the torso.
-      p.angle.torso=(side?-92:78*out)*slump;
-      p.angle.head=(side?-22:12*out)*slump;
+      // A profile fold beyond 90 degrees drives the head and held staff
+      // through the ground. Keep the chest over the planted knees.
+      p.angle.torso=(side?-65:78*out)*slump;
+      p.angle.head=(side?-10:12*out)*slump;
       p.angle.arm_near=(side?58:-12*out)*slump;
       p.angle.arm_far=(side?50:10*out)*slump;
       p.hurt=.35*(1-Math.min(1,k*3));
