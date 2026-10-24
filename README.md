@@ -1,17 +1,16 @@
 # elyndra-web
 
+แนวทางโปรเจกต์ปัจจุบัน: [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) — Browser first, Three.js + Go และขอบเขตงานฉาก/ตัวละคร
+
 Client 2.5D ของ ELYNDRA (TypeScript + Vite + Three.js) และระบบ content pipeline (design source → JSON → validator)
 ต้องเล่นผ่าน `elyndra-server` เท่านั้น เพราะ client ไม่มีการจำลองเกมฝั่ง browser
 
 ## วิธีรัน
 
-```bash
-# 1) server (โฟลเดอร์ข้าง ๆ)
-cd ../elyndra-server && go run ./cmd/elyndra-server -content ../elyndra-web/public/data
-
-# 2) client
-npm install
-npm run dev            # http://localhost:5173 แล้วใส่ชื่อตัวละคร
+```powershell
+# จาก workspace root: ใช้ committed staging ของทั้ง web และ server
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\play.ps1
+# เล่นที่ http://localhost:7101/ เท่านั้น
 ```
 
 การควบคุม:
