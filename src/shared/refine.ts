@@ -10,9 +10,9 @@ export const REFINE_GLOW: { color: string; spark: boolean; prism?: boolean }[] =
   { color: "#b46cff", spark: true }, //  +4 violet
   { color: "#ffc83d", spark: true }, //  +5 gold
   { color: "#ff3b3b", spark: true }, //  +6 red
-  { color: "#ff2a2a", spark: true }, //  +7 deep red, fast pulse
+  { color: "#ff3fc8", spark: true }, //  +7 hot magenta, fast pulse (red is +6)
   { color: "#ffffff", spark: true }, //  +8 white radiance
-  { color: "#ff5af0", spark: true, prism: true }, // +9 prismatic
+  { color: "#ff8a1f", spark: true }, //  +9 orange flame, flickering
   { color: "#ffe066", spark: true, prism: true }, // +10 prismatic, brightest
 ];
 
