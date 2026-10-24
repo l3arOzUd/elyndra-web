@@ -167,7 +167,9 @@ export class Overlay {
       const zoom = THREE.MathUtils.clamp(DEFAULT_DISTANCE / camera.position.distanceTo(f.pos), MIN_ZOOM_SCALE, MAX_ZOOM_SCALE);
       const [x, y] = project(tmp.copy(f.pos), camera, w, h);
       // A pop when it appears or counts up: RO parts land big and settle.
-      const pop = f.el.className.includes("part") ? 1 + 0.8 * Math.max(0, 1 - f.pop / 140) : 1 + 0.35 * Math.max(0, 1 - f.pop / 160);
+      // A crit slams in bigger and settles.
+      const pop = f.el.className.includes("part") ? 1 + 0.8 * Math.max(0, 1 - f.pop / 140)
+        : f.el.classList.contains("float-crit") ? 1 + 1.1 * Math.max(0, 1 - f.pop / 200) : 1 + 0.35 * Math.max(0, 1 - f.pop / 160);
       f.el.style.transform = `translate(${x + f.dx * zoom}px, ${y - (f.dy + f.rise * easeOut(t)) * zoom}px) translate(-50%, -100%) scale(${pop * zoom})`;
       f.el.style.opacity = String(t < 0.6 ? 1 : 1 - (t - 0.6) / 0.4);
     }

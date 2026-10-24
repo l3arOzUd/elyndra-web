@@ -402,7 +402,14 @@ export class Game {
     // Numbers sit over the sprite as drawn (a pile's members are nudged apart).
     const at = tmpA.copy(t.actor.root.position).setY(0).addScaledVector(UP, t.actor.height + 0.3);
     if (flags & 2) { this.overlay.text("Evade", at, "taken"); return; } // evaded: no damage
+    const crit = (flags & 1) === 1;
     if (ev.skill) this.fx.impact(tmpB.copy(t.actor.root.position).setY(t.actor.height * 0.5), SKILL_COLORS[ev.skill] ?? 0xffffff);
+    // Every hit flashes on the body: the skill's colour, warm white for a swing, red when it's us being hit.
+    if (dmg > 0 && !(flags & 4)) {
+      const color = id === this.selfId ? 0xff5a46 : ev.skill ? SKILL_COLORS[ev.skill] ?? 0xfff0c0 : crit ? 0xffd23c : 0xfff0c0;
+      this.fx.hit(tmpB.copy(t.actor.root.position).setY(t.actor.height * 0.55), color, crit);
+      if (crit && ev.src === this.selfId) this.cam.kick(0.08);
+    }
     // Ailments landing (8 burn, 16 shock, 32 chill): a word above the target.
     if (flags & 56 && dmg > 0 && (flags & 8 ? ev.src !== id : true)) this.overlay.text(flags & 16 ? "Shock" : flags & 32 ? "Chill" : "Burn", at.clone().addScaledVector(UP, 0.4), "info");
     if (flags & 4) { this.overlay.text("◈ " + dmg, at, "taken"); return; } // the Aether Shield took it all

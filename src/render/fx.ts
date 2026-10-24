@@ -419,6 +419,39 @@ export class Fx {
     this.glow(at.x, at.z, color, 0.7, { life: 200, y: 0.12 });
   }
 
+  /**
+   * Any hit landing, basic swings included: a star of light pops on the
+   * target and sparks fly. A critical hit is bigger, whiter, throws more
+   * sparks and rolls a ring along the ground. Shares the impact budget.
+   */
+  hit(at: THREE.Vector3, color: number, crit = false) {
+    if (this.impacts >= MAX_IMPACTS) return;
+    this.impacts++;
+    const map = starTexture();
+    const star = (size: number, delay: number, life: number, spin: number) => {
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({ map, color, transparent: true, depthWrite: false, depthTest: false, blending: THREE.AdditiveBlending, rotation: Math.random() * Math.PI }));
+      s.position.copy(at);
+      s.renderOrder = 5;
+      const mat = s.material;
+      this.push(s, "fn", life, {
+        delay,
+        step: (t) => {
+          // Snaps open in the first fifth of its life, then fades as it keeps growing a little.
+          s.scale.setScalar(size * (t < 0.2 ? 0.35 + 3.25 * t : 1 + 0.25 * (t - 0.2)));
+          mat.opacity = t < 0.2 ? 1 : (1 - (t - 0.2) / 0.8) ** 1.5;
+          mat.rotation += spin;
+        },
+      });
+    };
+    star(crit ? 1.9 : 1.0, 0, crit ? 300 : 190, 0.01);
+    if (crit) star(1.25, 40, 260, -0.02);
+    this.sparks(at.x, at.z, color, crit ? 10 : 4, { y: at.y - 0.15, r: 0.12, speed: crit ? 4.2 : 2.8, up: crit ? 2.6 : 1.8, g: 9, life: crit ? 520 : 360, size: crit ? 0.08 : 0.06 });
+    if (crit) {
+      this.wave(at.x, at.z, color, 1.4, { life: 380, width: 0.12 });
+      this.glow(at.x, at.z, color, 1.1, { life: 260 });
+    }
+  }
+
   /** A ground skill that keeps hitting: its circle lingers, turning, for its ticks. */
   field(s: SkillDef, x: number, z: number, ms: number) {
     const color = COLORS[s.id] ?? 0xffffff;
@@ -768,6 +801,29 @@ const arrowTexture = () => painted("arrow", 512, 64, (g) => {
   steel.addColorStop(0, "#ffffff"); steel.addColorStop(0.45, "#c9d3dc"); steel.addColorStop(1, "#6d7882");
   g.fillStyle = steel;
   g.beginPath(); g.moveTo(440, 18); g.lineTo(506, 32); g.lineTo(440, 46); g.lineTo(450, 32); g.closePath(); g.fill();
+});
+
+/** A white star of light, four long rays and four short ones round a hot core: the hit flash. */
+const starTexture = () => painted("hit-star", 128, 128, (g) => {
+  g.translate(64, 64);
+  const core = g.createRadialGradient(0, 0, 0, 0, 0, 30);
+  core.addColorStop(0, "rgba(255,255,255,1)");
+  core.addColorStop(0.35, "rgba(255,255,255,0.75)");
+  core.addColorStop(1, "rgba(255,255,255,0)");
+  g.fillStyle = core;
+  g.fillRect(-64, -64, 128, 128);
+  for (const [len, width, turn] of [[62, 7, 0], [40, 5, Math.PI / 4]] as const) {
+    for (let i = 0; i < 4; i++) {
+      g.save();
+      g.rotate(turn + (i * Math.PI) / 2);
+      const ray = g.createLinearGradient(0, 0, len, 0);
+      ray.addColorStop(0, "rgba(255,255,255,1)");
+      ray.addColorStop(1, "rgba(255,255,255,0)");
+      g.fillStyle = ray;
+      g.beginPath(); g.moveTo(0, -width); g.lineTo(len, 0); g.lineTo(0, width); g.closePath(); g.fill();
+      g.restore();
+    }
+  }
 });
 
 const SMOKE_LIGHT = new THREE.Color(0x77706a);
