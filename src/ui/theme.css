@@ -6,7 +6,7 @@
 :root {
  --ui-parchment:#e8d8b5; --ui-ink:#392a1f; --ui-wood:#30271f;
  --ui-bronze:#9d713d; --ui-gold:#e9c47c; --ui-aether:#75c6d0;
- --ui-font-body:"Philosopher","Itim","Segoe UI",Tahoma,sans-serif; --ui-font-title:"Philosopher","Itim",Georgia,serif; --ui-font-number:"Titan One","Itim","Arial Black",Impact,sans-serif;
+ --ui-font-body:"Philosopher","Itim","Segoe UI",Tahoma,sans-serif; --ui-font-title:"Philosopher","Itim",Georgia,serif; --ui-font-number:"Fredoka","Itim","Arial Black",Impact,sans-serif;
  --ui-text:14px; --ui-small:12px; --ui-key:12px; --ui-slot:54px;
  --ui-frame:url('/ui/painted/frame-v3.png');
  --ui-items:url('/ui/painted/items-v2.png'); --ui-skills:url('/ui/painted/skills-v2.png');
