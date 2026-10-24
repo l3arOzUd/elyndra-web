@@ -344,7 +344,9 @@ function atlasFor(look: Look): Atlas {
   // height); kinds without any are painted here.
   const cells: { kind: string; w: number; h: number; cw: number; ch: number; art?: HTMLImageElement }[] = [];
   for (const kind of kinds) {
-    const art = envSprites(look, kind);
+    // Ground pebbles share the painted stone family, not the old outlined
+    // procedural icons. Keep their smaller world size.
+    const art = envSprites(look, kind) ?? (kind === 'pebbles' ? envSprites(look, 'rock') : undefined);
     const ch = SIZE[kind][1];
     if (art) for (const img of art) {
       const h = Math.min(img.naturalHeight, Math.ceil(ch * PPC * 1.5)), w = Math.ceil((h * img.naturalWidth) / img.naturalHeight);

@@ -292,7 +292,8 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   if (modelKinds.size) buildDawnDetails(modelProps, group, track,l.id);
   // Soft contact shadows tie props to the painted floor in one draw.
   {
-    const radius: Partial<Record<typeof l.props[number]["kind"], number>> = {
+    const radius: Partial<Record<string, number>> = {
+      tuft: 0.28, flowers: 0.32, pebbles: 0.27, dry_tuft: 0.28, snow_tuft: 0.26,
       tree: l.id === 'lum_fld_01' ? 1.9 : 1.25, pine: 0.95, bush: 0.6, rock: 0.55, boulder: 1.05, dead_tree: 0.8, palm: 1.1, coral: 0.55, ice_spike: 0.55, crystal: 0.5, giant_tree: 3,
       aether_pylon: 0.65, rune_stone: 0.5, tent: 1.4, crate: 0.55,
       fountain: 1.7, windmill: 1.8, market_stall: 1.3, lamp_post: 0.35,
@@ -301,7 +302,7 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     const canvas = document.createElement("canvas"); canvas.width = canvas.height = 64;
     const ctx = canvas.getContext("2d")!;
     const fade = ctx.createRadialGradient(32, 32, 3, 32, 32, 31);
-    fade.addColorStop(0, "rgba(15,24,12,.38)"); fade.addColorStop(0.45, "rgba(15,24,12,.2)"); fade.addColorStop(1, "rgba(15,24,12,0)");
+    fade.addColorStop(0, "rgba(15,24,12,.48)"); fade.addColorStop(0.35, "rgba(15,24,12,.29)"); fade.addColorStop(1, "rgba(15,24,12,0)");
     ctx.fillStyle = fade; ctx.fillRect(0, 0, 64, 64);
     const map = track(new THREE.CanvasTexture(canvas)); map.colorSpace = THREE.SRGBColorSpace;
     const shadows = new THREE.InstancedMesh(track(new THREE.PlaneGeometry(2, 2).rotateX(-Math.PI / 2)),
