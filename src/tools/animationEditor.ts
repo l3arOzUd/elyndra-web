@@ -340,9 +340,9 @@ function currentLook(): Look {
   return { ...DEFAULT_LOOK, ...(project.look as Partial<Look> | undefined) };
 }
 function lookChanged() {
-  if (!isMannequin || !holder) return;
+  if (!isMannequin || !model) return;
   const look = currentLook();
-  applyLook(holder, look);
+  applyLook(model, look);   // the model itself: its materials are registered under it
   for (const g of ghosts ?? []) applyLook(g.root, look);
   showProps(clip()?.prop);
   for (const key of ['hair', 'hairColor', 'outfit'] as const) select(`look-${key}`).value = look[key];
@@ -521,8 +521,11 @@ function capturePins() {
     chain, pos: chain.end.getWorldPosition(new THREE.Vector3()), quat: chain.end.getWorldQuaternion(new THREE.Quaternion()),
   }));
 }
+const footNow = new THREE.Vector3();
 function applyPins() {
   for (const p of pins ?? []) {
+    // Only a foot the edit actually moved: re-solving a still, straight leg would bend it a hair.
+    if (p.chain.end.getWorldPosition(footNow).distanceTo(p.pos) < 1e-5 * modelHeight) continue;
     solveTwoBone(p.chain, p.pos, poleFor(p.chain));
     setWorldQuaternion(p.chain.end, p.quat);
   }
@@ -769,7 +772,7 @@ function refreshClipSettings() {
 }
 function refreshAll() {
   if (!clip()) return;
-  time = Math.min(time, clip().duration);
+  time = Math.min(frameTime(time, clip().fps), clip().duration);   // clips differ in fps
   showProps(clip().prop);
   renderClipList(); refreshClipSettings(); renderTimeline(); showPose(); updateGhosts(); refreshBonePanel(); renderBoneList();
   input('undo').disabled = !undoStack.length; input('redo').disabled = !redoStack.length;
@@ -1463,7 +1466,7 @@ function renderGamePreview() {
     gpMonster.quaternion.copy(gpCamera.quaternion);
     // Feet (the sprite pivot) on the ground, a cell and a half to the right.
     const up = new THREE.Vector3(0, 1, 0).applyQuaternion(gpCamera.quaternion);
-    gpMonster.position.set(1.4 * unit, 0, 0).addScaledVector(up, h * (0.5 - gpMonsterInfo.pivotY));
+    gpMonster.position.set(1.4 * unit, 0, 0).addScaledVector(up, h * (gpMonsterInfo.pivotY - 0.5));
   }
   characterOnly(() => {
     gpGround.visible = true; gpMonster.visible = !!gpMonsterInfo;
@@ -1544,6 +1547,17 @@ Object.defineProperty(window, '__animationEditor', { value: {
     gizmo.dispatchEvent({ type: 'objectChange' });
     gizmo.dispatchEvent({ type: 'dragging-changed', value: false });
     return ikChain.end.getWorldPosition(new THREE.Vector3()).distanceTo(ikProxy.position);
+  },
+  /** Moves the root bone like the move gizmo would (tests); returns how far each foot drifted. */
+  moveRoot: (dx: number, dy: number, dz: number) => {
+    if (!rootBone) return null;
+    selectBone(rootBone); setMode('translate');
+    const feet = chains.filter(c => c.kind === 'leg').map(c => c.end.getWorldPosition(new THREE.Vector3()));
+    gizmo.dispatchEvent({ type: 'dragging-changed', value: true });
+    rootBone.position.add(new THREE.Vector3(dx, dy, dz)); rootBone.updateMatrixWorld(true);
+    gizmo.dispatchEvent({ type: 'objectChange' });
+    gizmo.dispatchEvent({ type: 'dragging-changed', value: false });
+    return chains.filter(c => c.kind === 'leg').map((c, i) => c.end.getWorldPosition(new THREE.Vector3()).distanceTo(feet[i]));
   },
   /** Saves the last sprite render into a folder handle (tests use the origin-private file system). */
   saveSpritesTo: (root: FileSystemDirectoryHandle) => writeSprites(root),

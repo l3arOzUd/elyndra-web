@@ -126,7 +126,7 @@ export function buildMannequin(): THREE.Group {
   part(head, new THREE.TorusGeometry(0.2, 0.025, 6, 24).rotateX(Math.PI / 2), vest, [0, 0.28, -0.02], [1.05, 1, 1.05], true, "outfit=mage");
 
   // Ponytail and long hair hang from the back of the head; the cape from the shoulders.
-  const tail = springChain("Ponytail", head, [0, 0.25, -0.17], [0, -0.085, -0.02], 3);
+  const tail = springChain("Ponytail", head, [0, 0.3, -0.16], [0, -0.07, -0.055], 3);
   part(tail[0], new THREE.SphereGeometry(0.03, 10, 8), leather, [0, 0, 0], [1, 1, 1], true, "hair=ponytail");
   tail.forEach((b, i) => part(b, capsule(0.045 - i * 0.009, 0.05), hair, [0, -0.045, 0], [1, 1, 0.85], true, "hair=ponytail"));
   const long = springChain("HairBack", head, [0, 0.22, -0.16], [0, -0.11, -0.01], 3);
