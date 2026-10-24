@@ -8,7 +8,7 @@ const browser=await chromium.launch({headless:true,executablePath:'C:/Users/l3ar
 const page=await browser.newPage(),imported={};
 const data=async p=>'data:image/png;base64,'+(await fs.readFile(p)).toString('base64');
 try {for(const s of manifest.sets){
- const sheet=await data(root+'/'+s.set+'.png');let present=new Set();
+ const sheet=await data(root+'/'+s.set+(s.set==='head_hood'?'-v2':'')+'.png');let present=new Set();
  for(let r=0;r<manifest.views.length;r++)for(let c=0;c<s.layers.length;c++){
   const view=manifest.views[r],layer=s.layers[c];
   let ref=s.slot==='armor'?`items/leafweave_coat/${view}/${layer}.png`:s.slot==='boots'?`items/traveler_boots/${view}/${layer}.png`:s.slot==='gloves'?`base/${view}/${layer}.png`:s.slot==='head'?`items/iron_helm/${view}/head.png`:`items/${({vanguard:'copper_saber',strider:'surveyor_bow',arcanist:'aether_rod'})[s.job]||'copper_saber'}/${view}/weapon.png`;
@@ -39,6 +39,13 @@ try {for(const s of manifest.sets){
    const part=row[c],x=part.x0,y=part.y0,w=part.x1-x,h=part.y1-y;
    const cell=canvas(w,h);cell.getContext('2d').drawImage(img,x,y,w,h,0,0,w,h);const box=bounds(cell);if(!box)return null;
    const target=canvas(base.width,base.height);target.getContext('2d').drawImage(base,0,0);const b=bounds(target);if(!b)throw Error('Empty reference');
+   if(slot==='weapon' && /gauntlet/.test(set)) {
+    const out=canvas(512,512),g=out.getContext('2d'),sw=box[2]-box[0],sh=box[3]-box[1],height=58,width=height*sw/sh;
+    g.translate(pivot[0],pivot[1]-18);
+    if(/gearheart/.test(set)){g.translate(0,height);g.rotate(Math.PI);}
+    g.drawImage(cell,box[0],box[1],sw,sh,-width/2,0,width,height);
+    return out.toDataURL('image/png').split(',')[1];
+   }
    if(slot==='head'){
     const small=/circlet|warcrown|crown/.test(set),mask=/mask/.test(set);
     const boxTarget=mask?[194,140,320,209]:small?[177,65,337,139]:[169,54,343,224];

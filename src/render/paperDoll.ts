@@ -391,6 +391,8 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
     return m;
   };
   const hidden = new Set(gear.flatMap((it) => it.hides ?? []));
+  const gauntlet = gear.some(it => it.slot === 'weapon' && /gauntlet/.test(it.visual));
+  if (gauntlet) hidden.add('hand_near');
   const draw = (file: string, m: DOMMatrix) => {
     const im = kit.img.get(file);
     if (!im) return;
@@ -409,6 +411,7 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
     const variant=slot==="head"&&pose.unconscious?"_unconscious":pose.openHands?.includes(slot)?"_open":"";
     if (v.parts[slot] && !hidden.has(slot)) draw(`base/${view}/${slot}${variant}.png`, m);
     for (const it of gear) if (it.layers.includes(slot)) {
+      if (gauntlet && slot === 'hand_near' && it.slot === 'gloves') continue;
       const f = `items/${it.visual}/${view}/${slot}`, file = variant && kit.img.has(f + variant + ".png") ? f + variant + ".png" : f + ".png";
       const im = it.refine ? kit.img.get(file) : undefined;
       if (im) drawGlowing(g, im, m, it.refine!, seed); else draw(file, m);

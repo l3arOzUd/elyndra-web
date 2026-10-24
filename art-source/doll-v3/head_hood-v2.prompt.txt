@@ -1,0 +1,5 @@
+Built-in imagegen edit of head_hood.png. Preserve the three stacked hood views,
+olive leather design, stitching, buckles and positions. Remove the dark inner
+cloth from the face openings in front and left side views to genuine transparent
+alpha. Keep stitched rim and neck scarf. Back remains solid. No face, head, skin
+or hair. Transparent surrounding background. Output: head_hood-v2.png.
