@@ -54,3 +54,33 @@
   font-display: swap;
   src: url(/fonts/manrope-800.ttf) format('truetype');
 }
+/* Chosen 2026-10-24: Philosopher for English, Itim for Thai, Titan One for combat numbers (all OFL). */
+@font-face {
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/philosopher-400.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/philosopher-700.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/itim-400.ttf) format('truetype');
+  unicode-range: U+0E00-0E7F, U+200B-200D, U+25CC;
+}
+@font-face {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/titanone-400.ttf) format('truetype');
+}
