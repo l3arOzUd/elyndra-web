@@ -2,6 +2,7 @@ import * as THREE from "three";
 import type { MapLayout, Prop, PropKind } from "../data/schema";
 import { envSprites } from "./envArt";
 import {environmentStyle} from './environmentStyle';
+import { orchardRootUV, treeGroundAnchor } from './treeAnchor';
 
 type Blocker = MapLayout["blockers"][number];
 
@@ -19,7 +20,7 @@ export const PAINTED_KINDS = new Set<PropKind>(["tree", "pine", "bush", "rock", 
 
 type Look = "green" | "snow" | "dry" | "dark" | "orchard";
 /** An atlas cell: wÃƒâ€”h pixels at px,py; drawn cwÃƒâ€”ch cells. */
-interface Card { kind: string; w: number; h: number; px: number; py: number; cw: number; ch: number }
+interface Card { kind: string; w: number; h: number; px: number; py: number; cw: number; ch: number; root?: [number, number] }
 /** Card size in cells (w across, h up) and atlas pixels per cell. */
 const SIZE: Record<string, [number, number]> = {
   tree: [3, 3.6], pine: [2.2, 3.8], bush: [1.4, 1.1], rock: [1.1, 0.9], boulder: [2.2, 1.8], dead_tree: [2.6, 3.2],
@@ -376,7 +377,7 @@ function atlasFor(look: Look): Atlas {
     else paintCard(g, c.kind, c.w, c.h, rng(1000 + i * 7919), look);
     g.restore();
     const { art: _, ...card } = c;
-    cards.set(c.kind, [...(cards.get(c.kind) ?? []), card]);
+    cards.set(c.kind, [...(cards.get(c.kind) ?? []), { ...card, root: look === 'orchard' && c.kind === 'tree' && c.art ? orchardRootUV(c.art.src) : undefined }]);
   });
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -484,7 +485,10 @@ export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T ex
   for (const [card, list] of groups) {
     const { cw, ch } = card;
     // Lean back so the card faces the camera, as the creature cards do.
-    const geo = track(new THREE.PlaneGeometry(cw, ch).translate(0, ch / 2, 0).rotateX(-THREE.MathUtils.degToRad(CAMERA_PITCH)));
+    const [rootX, rootY] = card.root ?? [0.5, 1];
+    const pitch = THREE.MathUtils.degToRad(CAMERA_PITCH);
+    // Shift along the ground, not below it: roots must not clip through terrain.
+    const geo = track(new THREE.PlaneGeometry(cw, ch).translate((0.5-rootX)*cw, ch/2, 0).rotateX(-pitch).translate(0, 0, (1-rootY)*ch/Math.sin(pitch)));
     const uv = geo.getAttribute("uv") as THREE.BufferAttribute;
     for (let i = 0; i < uv.count; i++) {
       uv.setXY(i, (card.px + uv.getX(i) * card.w) / tex.width, 1 - (card.py + (1 - uv.getY(i)) * card.h) / tex.height);
@@ -494,7 +498,8 @@ export function buildPaintedProps(l: MapLayout, group: THREE.Group, track: <T ex
     inst.name = `painted-${card.kind}`;
     inst.castShadow = !['tuft','flowers','pebbles','dry_tuft','snow_tuft'].includes(card.kind);
     list.forEach((p, i) => {
-      dummy.position.set(p.x + 0.5, 0, p.y + 0.5);
+      const [groundX, groundZ] = card.root && p.block > 0 ? treeGroundAnchor(p) : [p.x + 0.5, p.y + 0.5];
+      dummy.position.set(groundX, 0, groundZ);
       const s = p.scale ?? 1;
       const flip = Math.floor(p.x * 3 + p.y * 5) % 2 === 0 ? 1 : -1;
       dummy.scale.set(s * flip, s, s);

@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { treeGroundAnchor } from './treeAnchor';
 import type { BlockerKind, MapLayout, RegionDef, Shape, WarpDef } from "../data/schema";
 import { decodeWalk } from "../data/schema";
 import { buildPaintedProps, decorProps, HEAPED, PAINTED_KINDS } from "./paintedProps";
@@ -310,7 +311,8 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
     const transform = new THREE.Object3D();
     casters.forEach((p, i) => {
       const size = radius[p.kind]! * (p.scale ?? 1);
-      transform.position.set(p.x + 0.5, 0.015, p.y + 0.5);
+      const [groundX, groundZ] = l.id === 'lum_fld_02' && p.kind === 'tree' && p.block > 0 ? treeGroundAnchor(p) : [p.x + 0.5, p.y + 0.5];
+      transform.position.set(groundX, 0.015, groundZ);
       transform.scale.set(size, 1, size * 0.85); transform.updateMatrix();
       shadows.setMatrixAt(i, transform.matrix);
     });

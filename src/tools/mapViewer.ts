@@ -68,6 +68,19 @@ async function show(id: string, x?: number, y?: number, zoom = 0): Promise<void>
   const region = content.regions.get(def.region_id);
   built = buildMap(layout, region, content.warps.filter((w) => w.from_map === id));
   scene.add(built.group);
+  if (params.has('collision')) {
+    const lines: number[] = [];
+    for (const p of layout.props.filter(p => p.kind === 'tree' && p.block > 0)) {
+      const h = Math.floor(p.block/2), x = Math.round(p.x)-h, z = Math.round(p.y)-h;
+      for(let dy=0;dy<p.block;dy++)for(let dx=0;dx<p.block;dx++) {
+        const a=x+dx,b=z+dy;
+        lines.push(a,.03,b,a+1,.03,b, a+1,.03,b,a+1,.03,b+1, a+1,.03,b+1,a,.03,b+1, a,.03,b+1,a,.03,b);
+      }
+    }
+    const geo = new THREE.BufferGeometry(); geo.setAttribute('position',new THREE.Float32BufferAttribute(lines,3));
+    const overlay = new THREE.LineSegments(geo,new THREE.LineBasicMaterial({color:0xff6655,depthTest:false}));
+    overlay.renderOrder=1000; built.group.add(overlay);
+  }
   scene.fog = new THREE.Fog(region?.palette.fog ?? "#1d2f27", 120, 260);
   (scene.background as THREE.Color).set(region?.palette.fog ?? "#1d2f27");
   mapId = id;
