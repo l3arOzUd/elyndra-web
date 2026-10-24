@@ -58,7 +58,7 @@
   "itm_1001": {
    "name": "Worn Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -68,7 +68,7 @@
   "itm_1002": {
    "name": "Worn Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -78,7 +78,7 @@
   "itm_1003": {
    "name": "Worn Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -88,7 +88,7 @@
   "itm_1004": {
    "name": "Worn Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -98,7 +98,7 @@
   "itm_1005": {
    "name": "Worn Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -107,7 +107,7 @@
   "itm_1006": {
    "name": "Worn Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -116,7 +116,7 @@
   "itm_1007": {
    "name": "Worn Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -125,7 +125,7 @@
   "itm_1008": {
    "name": "Worn Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -134,7 +134,7 @@
   "itm_1009": {
    "name": "Worn Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -143,7 +143,7 @@
   "itm_1010": {
    "name": "Worn Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -152,14 +152,14 @@
   "itm_1011": {
    "name": "Worn Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -171,14 +171,14 @@
   "itm_1012": {
    "name": "Worn Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -190,14 +190,14 @@
   "itm_1013": {
    "name": "Worn Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -209,14 +209,14 @@
   "itm_1014": {
    "name": "Worn Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -228,14 +228,14 @@
   "itm_1015": {
    "name": "Worn Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -247,14 +247,14 @@
   "itm_1016": {
    "name": "Worn Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -266,67 +266,67 @@
   "itm_1017": {
    "name": "Worn Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1018": {
    "name": "Worn Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1019": {
    "name": "Worn Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1020": {
    "name": "Worn Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1021": {
    "name": "Worn Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1022": {
    "name": "Worn Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1024": {
    "name": "Bronze Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -336,7 +336,7 @@
   "itm_1025": {
    "name": "Bronze Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -346,7 +346,7 @@
   "itm_1026": {
    "name": "Bronze Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -356,7 +356,7 @@
   "itm_1027": {
    "name": "Bronze Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -366,7 +366,7 @@
   "itm_1028": {
    "name": "Bronze Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -375,7 +375,7 @@
   "itm_1029": {
    "name": "Bronze Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -384,7 +384,7 @@
   "itm_1030": {
    "name": "Bronze Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -393,7 +393,7 @@
   "itm_1031": {
    "name": "Bronze Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -402,7 +402,7 @@
   "itm_1032": {
    "name": "Bronze Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -411,7 +411,7 @@
   "itm_1033": {
    "name": "Bronze Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -420,14 +420,14 @@
   "itm_1034": {
    "name": "Bronze Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -439,14 +439,14 @@
   "itm_1035": {
    "name": "Bronze Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -458,14 +458,14 @@
   "itm_1036": {
    "name": "Bronze Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -477,14 +477,14 @@
   "itm_1037": {
    "name": "Bronze Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -496,14 +496,14 @@
   "itm_1038": {
    "name": "Bronze Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -515,14 +515,14 @@
   "itm_1039": {
    "name": "Bronze Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -534,67 +534,67 @@
   "itm_1040": {
    "name": "Bronze Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1041": {
    "name": "Bronze Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1042": {
    "name": "Bronze Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1043": {
    "name": "Bronze Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1044": {
    "name": "Bronze Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1045": {
    "name": "Bronze Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1047": {
    "name": "Iron Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -604,7 +604,7 @@
   "itm_1048": {
    "name": "Iron Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -614,7 +614,7 @@
   "itm_1049": {
    "name": "Iron Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -624,7 +624,7 @@
   "itm_1050": {
    "name": "Iron Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -634,7 +634,7 @@
   "itm_1051": {
    "name": "Iron Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -643,7 +643,7 @@
   "itm_1052": {
    "name": "Iron Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -652,7 +652,7 @@
   "itm_1053": {
    "name": "Iron Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -661,7 +661,7 @@
   "itm_1054": {
    "name": "Iron Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -670,7 +670,7 @@
   "itm_1055": {
    "name": "Iron Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -679,7 +679,7 @@
   "itm_1056": {
    "name": "Iron Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -688,14 +688,14 @@
   "itm_1057": {
    "name": "Iron Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -707,14 +707,14 @@
   "itm_1058": {
    "name": "Iron Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -726,14 +726,14 @@
   "itm_1059": {
    "name": "Iron Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -745,14 +745,14 @@
   "itm_1060": {
    "name": "Iron Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -764,14 +764,14 @@
   "itm_1061": {
    "name": "Iron Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -783,14 +783,14 @@
   "itm_1062": {
    "name": "Iron Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -802,67 +802,67 @@
   "itm_1063": {
    "name": "Iron Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1064": {
    "name": "Iron Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1065": {
    "name": "Iron Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1066": {
    "name": "Iron Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1067": {
    "name": "Iron Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1068": {
    "name": "Iron Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1070": {
    "name": "Steel Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -872,7 +872,7 @@
   "itm_1071": {
    "name": "Steel Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -882,7 +882,7 @@
   "itm_1072": {
    "name": "Steel Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -892,7 +892,7 @@
   "itm_1073": {
    "name": "Steel Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -902,7 +902,7 @@
   "itm_1074": {
    "name": "Steel Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -911,7 +911,7 @@
   "itm_1075": {
    "name": "Steel Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -920,7 +920,7 @@
   "itm_1076": {
    "name": "Steel Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -929,7 +929,7 @@
   "itm_1077": {
    "name": "Steel Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -938,7 +938,7 @@
   "itm_1078": {
    "name": "Steel Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -947,7 +947,7 @@
   "itm_1079": {
    "name": "Steel Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -956,14 +956,14 @@
   "itm_1080": {
    "name": "Steel Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -975,14 +975,14 @@
   "itm_1081": {
    "name": "Steel Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -994,14 +994,14 @@
   "itm_1082": {
    "name": "Steel Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1013,14 +1013,14 @@
   "itm_1083": {
    "name": "Steel Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1032,14 +1032,14 @@
   "itm_1084": {
    "name": "Steel Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1051,14 +1051,14 @@
   "itm_1085": {
    "name": "Steel Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1070,67 +1070,67 @@
   "itm_1086": {
    "name": "Steel Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1087": {
    "name": "Steel Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1088": {
    "name": "Steel Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1089": {
    "name": "Steel Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1090": {
    "name": "Steel Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1091": {
    "name": "Steel Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1093": {
    "name": "Cobalt Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -1140,7 +1140,7 @@
   "itm_1094": {
    "name": "Cobalt Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -1150,7 +1150,7 @@
   "itm_1095": {
    "name": "Cobalt Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -1160,7 +1160,7 @@
   "itm_1096": {
    "name": "Cobalt Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -1170,7 +1170,7 @@
   "itm_1097": {
    "name": "Cobalt Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -1179,7 +1179,7 @@
   "itm_1098": {
    "name": "Cobalt Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -1188,7 +1188,7 @@
   "itm_1099": {
    "name": "Cobalt Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -1197,7 +1197,7 @@
   "itm_1100": {
    "name": "Cobalt Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -1206,7 +1206,7 @@
   "itm_1101": {
    "name": "Cobalt Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -1215,7 +1215,7 @@
   "itm_1102": {
    "name": "Cobalt Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -1224,14 +1224,14 @@
   "itm_1103": {
    "name": "Cobalt Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1243,14 +1243,14 @@
   "itm_1104": {
    "name": "Cobalt Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1262,14 +1262,14 @@
   "itm_1105": {
    "name": "Cobalt Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1281,14 +1281,14 @@
   "itm_1106": {
    "name": "Cobalt Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1300,14 +1300,14 @@
   "itm_1107": {
    "name": "Cobalt Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1319,14 +1319,14 @@
   "itm_1108": {
    "name": "Cobalt Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1338,67 +1338,67 @@
   "itm_1109": {
    "name": "Cobalt Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1110": {
    "name": "Cobalt Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1111": {
    "name": "Cobalt Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1112": {
    "name": "Cobalt Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1113": {
    "name": "Cobalt Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1114": {
    "name": "Cobalt Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1116": {
    "name": "Runic Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -1408,7 +1408,7 @@
   "itm_1117": {
    "name": "Runic Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -1418,7 +1418,7 @@
   "itm_1118": {
    "name": "Runic Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -1428,7 +1428,7 @@
   "itm_1119": {
    "name": "Runic Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -1438,7 +1438,7 @@
   "itm_1120": {
    "name": "Runic Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -1447,7 +1447,7 @@
   "itm_1121": {
    "name": "Runic Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -1456,7 +1456,7 @@
   "itm_1122": {
    "name": "Runic Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -1465,7 +1465,7 @@
   "itm_1123": {
    "name": "Runic Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -1474,7 +1474,7 @@
   "itm_1124": {
    "name": "Runic Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -1483,7 +1483,7 @@
   "itm_1125": {
    "name": "Runic Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -1492,14 +1492,14 @@
   "itm_1126": {
    "name": "Runic Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1511,14 +1511,14 @@
   "itm_1127": {
    "name": "Runic Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1530,14 +1530,14 @@
   "itm_1128": {
    "name": "Runic Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1549,14 +1549,14 @@
   "itm_1129": {
    "name": "Runic Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1568,14 +1568,14 @@
   "itm_1130": {
    "name": "Runic Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1587,14 +1587,14 @@
   "itm_1131": {
    "name": "Runic Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1606,67 +1606,67 @@
   "itm_1132": {
    "name": "Runic Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1133": {
    "name": "Runic Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1134": {
    "name": "Runic Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1135": {
    "name": "Runic Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1136": {
    "name": "Runic Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1137": {
    "name": "Runic Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1139": {
    "name": "Mythril Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -1676,7 +1676,7 @@
   "itm_1140": {
    "name": "Mythril Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -1686,7 +1686,7 @@
   "itm_1141": {
    "name": "Mythril Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -1696,7 +1696,7 @@
   "itm_1142": {
    "name": "Mythril Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -1706,7 +1706,7 @@
   "itm_1143": {
    "name": "Mythril Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -1715,7 +1715,7 @@
   "itm_1144": {
    "name": "Mythril Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -1724,7 +1724,7 @@
   "itm_1145": {
    "name": "Mythril Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -1733,7 +1733,7 @@
   "itm_1146": {
    "name": "Mythril Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -1742,7 +1742,7 @@
   "itm_1147": {
    "name": "Mythril Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -1751,7 +1751,7 @@
   "itm_1148": {
    "name": "Mythril Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -1760,14 +1760,14 @@
   "itm_1149": {
    "name": "Mythril Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1779,14 +1779,14 @@
   "itm_1150": {
    "name": "Mythril Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1798,14 +1798,14 @@
   "itm_1151": {
    "name": "Mythril Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1817,14 +1817,14 @@
   "itm_1152": {
    "name": "Mythril Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1836,14 +1836,14 @@
   "itm_1153": {
    "name": "Mythril Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1855,14 +1855,14 @@
   "itm_1154": {
    "name": "Mythril Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -1874,67 +1874,67 @@
   "itm_1155": {
    "name": "Mythril Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1156": {
    "name": "Mythril Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1157": {
    "name": "Mythril Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1158": {
    "name": "Mythril Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1159": {
    "name": "Mythril Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1160": {
    "name": "Mythril Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1162": {
    "name": "Ember Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -1944,7 +1944,7 @@
   "itm_1163": {
    "name": "Ember Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -1954,7 +1954,7 @@
   "itm_1164": {
    "name": "Ember Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -1964,7 +1964,7 @@
   "itm_1165": {
    "name": "Ember Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -1974,7 +1974,7 @@
   "itm_1166": {
    "name": "Ember Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -1983,7 +1983,7 @@
   "itm_1167": {
    "name": "Ember Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -1992,7 +1992,7 @@
   "itm_1168": {
    "name": "Ember Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -2001,7 +2001,7 @@
   "itm_1169": {
    "name": "Ember Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -2010,7 +2010,7 @@
   "itm_1170": {
    "name": "Ember Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -2019,7 +2019,7 @@
   "itm_1171": {
    "name": "Ember Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -2028,14 +2028,14 @@
   "itm_1172": {
    "name": "Ember Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2047,14 +2047,14 @@
   "itm_1173": {
    "name": "Ember Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2066,14 +2066,14 @@
   "itm_1174": {
    "name": "Ember Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2085,14 +2085,14 @@
   "itm_1175": {
    "name": "Ember Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2104,14 +2104,14 @@
   "itm_1176": {
    "name": "Ember Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2123,14 +2123,14 @@
   "itm_1177": {
    "name": "Ember Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2142,67 +2142,67 @@
   "itm_1178": {
    "name": "Ember Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1179": {
    "name": "Ember Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1180": {
    "name": "Ember Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1181": {
    "name": "Ember Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1182": {
    "name": "Ember Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1183": {
    "name": "Ember Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1185": {
    "name": "Star Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -2212,7 +2212,7 @@
   "itm_1186": {
    "name": "Star Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -2222,7 +2222,7 @@
   "itm_1187": {
    "name": "Star Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -2232,7 +2232,7 @@
   "itm_1188": {
    "name": "Star Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -2242,7 +2242,7 @@
   "itm_1189": {
    "name": "Star Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -2251,7 +2251,7 @@
   "itm_1190": {
    "name": "Star Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -2260,7 +2260,7 @@
   "itm_1191": {
    "name": "Star Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -2269,7 +2269,7 @@
   "itm_1192": {
    "name": "Star Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -2278,7 +2278,7 @@
   "itm_1193": {
    "name": "Star Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -2287,7 +2287,7 @@
   "itm_1194": {
    "name": "Star Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -2296,14 +2296,14 @@
   "itm_1195": {
    "name": "Star Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2315,14 +2315,14 @@
   "itm_1196": {
    "name": "Star Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2334,14 +2334,14 @@
   "itm_1197": {
    "name": "Star Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2353,14 +2353,14 @@
   "itm_1198": {
    "name": "Star Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2372,14 +2372,14 @@
   "itm_1199": {
    "name": "Star Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2391,14 +2391,14 @@
   "itm_1200": {
    "name": "Star Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2410,67 +2410,67 @@
   "itm_1201": {
    "name": "Star Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1202": {
    "name": "Star Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1203": {
    "name": "Star Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1204": {
    "name": "Star Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1205": {
    "name": "Star Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1206": {
    "name": "Star Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1208": {
    "name": "Sovereign Saber",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_saber",
    "layers": [
     "weapon"
    ],
@@ -2480,7 +2480,7 @@
   "itm_1209": {
    "name": "Sovereign Bow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_weapon_bow",
    "layers": [
     "weapon"
    ],
@@ -2490,7 +2490,7 @@
   "itm_1210": {
    "name": "Sovereign Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_weapon_rod",
    "layers": [
     "weapon"
    ],
@@ -2500,7 +2500,7 @@
   "itm_1211": {
    "name": "Sovereign Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_weapon_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -2510,7 +2510,7 @@
   "itm_1212": {
    "name": "Sovereign Helm",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_helm",
    "layers": [
     "head"
    ],
@@ -2519,7 +2519,7 @@
   "itm_1213": {
    "name": "Sovereign Hood",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_hood",
    "layers": [
     "head"
    ],
@@ -2528,7 +2528,7 @@
   "itm_1214": {
    "name": "Sovereign Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_head_circlet",
    "layers": [
     "head"
    ],
@@ -2537,7 +2537,7 @@
   "itm_1215": {
    "name": "Sovereign Sallet",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_sallet",
    "layers": [
     "head"
    ],
@@ -2546,7 +2546,7 @@
   "itm_1216": {
    "name": "Sovereign Warcrown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_head_warcrown",
    "layers": [
     "head"
    ],
@@ -2555,7 +2555,7 @@
   "itm_1217": {
    "name": "Sovereign Mask",
    "slot": "head",
-   "visual": "leather_hood",
+   "visual": "doll_head_mask",
    "layers": [
     "head"
    ],
@@ -2564,14 +2564,14 @@
   "itm_1218": {
    "name": "Sovereign Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2583,14 +2583,14 @@
   "itm_1219": {
    "name": "Sovereign Leathers",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_leathers",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2602,14 +2602,14 @@
   "itm_1220": {
    "name": "Sovereign Robe",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_robe",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2621,14 +2621,14 @@
   "itm_1221": {
    "name": "Sovereign Brigandine",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_brigandine",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2640,14 +2640,14 @@
   "itm_1222": {
    "name": "Sovereign Runeplate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_runeplate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2659,14 +2659,14 @@
   "itm_1223": {
    "name": "Sovereign Duskcloak",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_armor_duskcloak",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2678,67 +2678,67 @@
   "itm_1224": {
    "name": "Sovereign Sabatons",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_sabatons",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1225": {
    "name": "Sovereign Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1226": {
    "name": "Sovereign Slippers",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_slippers",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1227": {
    "name": "Sovereign Greaves",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_greaves",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1228": {
    "name": "Sovereign Warboots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_warboots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1229": {
    "name": "Sovereign Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_boots_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1321": {
    "name": "Hollowroot Crown",
    "slot": "head",
-   "visual": "iron_helm",
+   "visual": "doll_unique_hollowroot_crown",
    "layers": [
     "head"
    ],
@@ -2747,17 +2747,17 @@
   "itm_1322": {
    "name": "Emberwake Treads",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_unique_emberwake_treads",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1339": {
    "name": "Stormcaller Rod",
    "slot": "weapon",
-   "visual": "aether_rod",
+   "visual": "doll_unique_stormcaller_rod",
    "layers": [
     "weapon"
    ],
@@ -2767,7 +2767,7 @@
   "itm_1340": {
    "name": "Wildwood Longbow",
    "slot": "weapon",
-   "visual": "surveyor_bow",
+   "visual": "doll_unique_wildwood_longbow",
    "layers": [
     "weapon"
    ],
@@ -2777,7 +2777,7 @@
   "itm_1341": {
    "name": "Gearheart Gauntlet",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_unique_gearheart_gauntlet",
    "layers": [
     "weapon"
    ],
@@ -2787,7 +2787,7 @@
   "itm_1342": {
    "name": "Executioner's Edge",
    "slot": "weapon",
-   "visual": "copper_saber",
+   "visual": "doll_unique_executioner_s_edge",
    "layers": [
     "weapon"
    ],
@@ -2797,14 +2797,14 @@
   "itm_1343": {
    "name": "Bastion Plate",
    "slot": "armor",
-   "visual": "leafweave_coat",
+   "visual": "doll_unique_bastion_plate",
    "layers": [
-    "torso",
-    "arm_near",
     "arm_far",
+    "arm_near",
     "cape",
+    "forearm_far",
     "forearm_near",
-    "forearm_far"
+    "torso"
    ],
    "generated": true,
    "hides": [
@@ -2816,21 +2816,951 @@
   "itm_1344": {
    "name": "Windrunner Boots",
    "slot": "boots",
-   "visual": "traveler_boots",
+   "visual": "doll_unique_windrunner_boots",
    "layers": [
-    "shin_near",
-    "shin_far"
+    "shin_far",
+    "shin_near"
    ],
    "generated": true
   },
   "itm_1345": {
    "name": "Frostwake Circlet",
    "slot": "head",
-   "visual": "aether_circlet",
+   "visual": "doll_unique_frostwake_circlet",
    "layers": [
     "head"
    ],
    "generated": true
+  },
+  "itm_1348": {
+   "name": "Worn Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1349": {
+   "name": "Worn Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1350": {
+   "name": "Worn Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1351": {
+   "name": "Worn Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1352": {
+   "name": "Worn Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1353": {
+   "name": "Worn Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1354": {
+   "name": "Bronze Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1355": {
+   "name": "Bronze Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1356": {
+   "name": "Bronze Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1357": {
+   "name": "Bronze Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1358": {
+   "name": "Bronze Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1359": {
+   "name": "Bronze Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1360": {
+   "name": "Iron Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1361": {
+   "name": "Iron Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1362": {
+   "name": "Iron Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1363": {
+   "name": "Iron Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1364": {
+   "name": "Iron Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1365": {
+   "name": "Iron Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1366": {
+   "name": "Steel Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1367": {
+   "name": "Steel Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1368": {
+   "name": "Steel Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1369": {
+   "name": "Steel Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1370": {
+   "name": "Steel Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1371": {
+   "name": "Steel Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1372": {
+   "name": "Cobalt Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1373": {
+   "name": "Cobalt Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1374": {
+   "name": "Cobalt Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1375": {
+   "name": "Cobalt Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1376": {
+   "name": "Cobalt Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1377": {
+   "name": "Cobalt Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1378": {
+   "name": "Runic Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1379": {
+   "name": "Runic Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1380": {
+   "name": "Runic Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1381": {
+   "name": "Runic Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1382": {
+   "name": "Runic Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1383": {
+   "name": "Runic Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1384": {
+   "name": "Mythril Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1385": {
+   "name": "Mythril Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1386": {
+   "name": "Mythril Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1387": {
+   "name": "Mythril Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1388": {
+   "name": "Mythril Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1389": {
+   "name": "Mythril Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1390": {
+   "name": "Ember Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1391": {
+   "name": "Ember Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1392": {
+   "name": "Ember Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1393": {
+   "name": "Ember Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1394": {
+   "name": "Ember Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1395": {
+   "name": "Ember Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1396": {
+   "name": "Star Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1397": {
+   "name": "Star Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1398": {
+   "name": "Star Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1399": {
+   "name": "Star Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1400": {
+   "name": "Star Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1401": {
+   "name": "Star Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1402": {
+   "name": "Sovereign Handguards",
+   "slot": "gloves",
+   "visual": "doll_gloves_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1403": {
+   "name": "Sovereign Gloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_gloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1404": {
+   "name": "Sovereign Wraps",
+   "slot": "gloves",
+   "visual": "doll_gloves_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1405": {
+   "name": "Sovereign Grips",
+   "slot": "gloves",
+   "visual": "doll_gloves_grips",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1406": {
+   "name": "Sovereign Wargloves",
+   "slot": "gloves",
+   "visual": "doll_gloves_wargloves",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1407": {
+   "name": "Sovereign Mitts",
+   "slot": "gloves",
+   "visual": "doll_gloves_mitts",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1408": {
+   "name": "Bloodgrip Wraps",
+   "slot": "gloves",
+   "visual": "doll_unique_bloodgrip_wraps",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
+  },
+  "itm_1409": {
+   "name": "Ironclasp Handguards",
+   "slot": "gloves",
+   "visual": "doll_unique_ironclasp_handguards",
+   "layers": [
+    "hand_far",
+    "hand_near"
+   ],
+   "generated": true,
+   "hides": [
+    "hand_near",
+    "hand_far"
+   ],
+   "variants": true
   }
  }
 }

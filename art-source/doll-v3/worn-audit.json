@@ -1,0 +1,650 @@
+{
+  "scope": "All planned wearable base families and unique equipment, all rig views and layers. File presence is not visual approval.",
+  "sets": 39,
+  "sourceSheets": 39,
+  "missingLayers": 0,
+  "details": [
+    {
+      "set": "armor_brigandine",
+      "visual": "doll_armor_brigandine",
+      "slot": "armor",
+      "items": [
+        "itm_1014",
+        "itm_1037",
+        "itm_1060",
+        "itm_1083",
+        "itm_1106",
+        "itm_1129",
+        "itm_1152",
+        "itm_1175",
+        "itm_1198",
+        "itm_1221"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "armor_duskcloak",
+      "visual": "doll_armor_duskcloak",
+      "slot": "armor",
+      "items": [
+        "itm_1016",
+        "itm_1039",
+        "itm_1062",
+        "itm_1085",
+        "itm_1108",
+        "itm_1131",
+        "itm_1154",
+        "itm_1177",
+        "itm_1200",
+        "itm_1223"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "armor_leathers",
+      "visual": "doll_armor_leathers",
+      "slot": "armor",
+      "items": [
+        "itm_1012",
+        "itm_1035",
+        "itm_1058",
+        "itm_1081",
+        "itm_1104",
+        "itm_1127",
+        "itm_1150",
+        "itm_1173",
+        "itm_1196",
+        "itm_1219"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "armor_plate",
+      "visual": "doll_armor_plate",
+      "slot": "armor",
+      "items": [
+        "itm_1011",
+        "itm_1034",
+        "itm_1057",
+        "itm_1080",
+        "itm_1103",
+        "itm_1126",
+        "itm_1149",
+        "itm_1172",
+        "itm_1195",
+        "itm_1218"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "armor_robe",
+      "visual": "doll_armor_robe",
+      "slot": "armor",
+      "items": [
+        "itm_1013",
+        "itm_1036",
+        "itm_1059",
+        "itm_1082",
+        "itm_1105",
+        "itm_1128",
+        "itm_1151",
+        "itm_1174",
+        "itm_1197",
+        "itm_1220"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "armor_runeplate",
+      "visual": "doll_armor_runeplate",
+      "slot": "armor",
+      "items": [
+        "itm_1015",
+        "itm_1038",
+        "itm_1061",
+        "itm_1084",
+        "itm_1107",
+        "itm_1130",
+        "itm_1153",
+        "itm_1176",
+        "itm_1199",
+        "itm_1222"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "boots_boots",
+      "visual": "doll_boots_boots",
+      "slot": "boots",
+      "items": [
+        "itm_1018",
+        "itm_1041",
+        "itm_1064",
+        "itm_1087",
+        "itm_1110",
+        "itm_1133",
+        "itm_1156",
+        "itm_1179",
+        "itm_1202",
+        "itm_1225"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "boots_greaves",
+      "visual": "doll_boots_greaves",
+      "slot": "boots",
+      "items": [
+        "itm_1020",
+        "itm_1043",
+        "itm_1066",
+        "itm_1089",
+        "itm_1112",
+        "itm_1135",
+        "itm_1158",
+        "itm_1181",
+        "itm_1204",
+        "itm_1227"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "boots_sabatons",
+      "visual": "doll_boots_sabatons",
+      "slot": "boots",
+      "items": [
+        "itm_1017",
+        "itm_1040",
+        "itm_1063",
+        "itm_1086",
+        "itm_1109",
+        "itm_1132",
+        "itm_1155",
+        "itm_1178",
+        "itm_1201",
+        "itm_1224"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "boots_slippers",
+      "visual": "doll_boots_slippers",
+      "slot": "boots",
+      "items": [
+        "itm_1019",
+        "itm_1042",
+        "itm_1065",
+        "itm_1088",
+        "itm_1111",
+        "itm_1134",
+        "itm_1157",
+        "itm_1180",
+        "itm_1203",
+        "itm_1226"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "boots_treads",
+      "visual": "doll_boots_treads",
+      "slot": "boots",
+      "items": [
+        "itm_1022",
+        "itm_1045",
+        "itm_1068",
+        "itm_1091",
+        "itm_1114",
+        "itm_1137",
+        "itm_1160",
+        "itm_1183",
+        "itm_1206",
+        "itm_1229"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "boots_warboots",
+      "visual": "doll_boots_warboots",
+      "slot": "boots",
+      "items": [
+        "itm_1021",
+        "itm_1044",
+        "itm_1067",
+        "itm_1090",
+        "itm_1113",
+        "itm_1136",
+        "itm_1159",
+        "itm_1182",
+        "itm_1205",
+        "itm_1228"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "gloves_gloves",
+      "visual": "doll_gloves_gloves",
+      "slot": "gloves",
+      "items": [
+        "itm_1349",
+        "itm_1355",
+        "itm_1361",
+        "itm_1367",
+        "itm_1373",
+        "itm_1379",
+        "itm_1385",
+        "itm_1391",
+        "itm_1397",
+        "itm_1403"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "gloves_grips",
+      "visual": "doll_gloves_grips",
+      "slot": "gloves",
+      "items": [
+        "itm_1351",
+        "itm_1357",
+        "itm_1363",
+        "itm_1369",
+        "itm_1375",
+        "itm_1381",
+        "itm_1387",
+        "itm_1393",
+        "itm_1399",
+        "itm_1405"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "gloves_handguards",
+      "visual": "doll_gloves_handguards",
+      "slot": "gloves",
+      "items": [
+        "itm_1348",
+        "itm_1354",
+        "itm_1360",
+        "itm_1366",
+        "itm_1372",
+        "itm_1378",
+        "itm_1384",
+        "itm_1390",
+        "itm_1396",
+        "itm_1402"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "gloves_mitts",
+      "visual": "doll_gloves_mitts",
+      "slot": "gloves",
+      "items": [
+        "itm_1353",
+        "itm_1359",
+        "itm_1365",
+        "itm_1371",
+        "itm_1377",
+        "itm_1383",
+        "itm_1389",
+        "itm_1395",
+        "itm_1401",
+        "itm_1407"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "gloves_wargloves",
+      "visual": "doll_gloves_wargloves",
+      "slot": "gloves",
+      "items": [
+        "itm_1352",
+        "itm_1358",
+        "itm_1364",
+        "itm_1370",
+        "itm_1376",
+        "itm_1382",
+        "itm_1388",
+        "itm_1394",
+        "itm_1400",
+        "itm_1406"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "gloves_wraps",
+      "visual": "doll_gloves_wraps",
+      "slot": "gloves",
+      "items": [
+        "itm_1350",
+        "itm_1356",
+        "itm_1362",
+        "itm_1368",
+        "itm_1374",
+        "itm_1380",
+        "itm_1386",
+        "itm_1392",
+        "itm_1398",
+        "itm_1404"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "head_circlet",
+      "visual": "doll_head_circlet",
+      "slot": "head",
+      "items": [
+        "itm_1007",
+        "itm_1030",
+        "itm_1053",
+        "itm_1076",
+        "itm_1099",
+        "itm_1122",
+        "itm_1145",
+        "itm_1168",
+        "itm_1191",
+        "itm_1214"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "head_helm",
+      "visual": "doll_head_helm",
+      "slot": "head",
+      "items": [
+        "itm_1005",
+        "itm_1028",
+        "itm_1051",
+        "itm_1074",
+        "itm_1097",
+        "itm_1120",
+        "itm_1143",
+        "itm_1166",
+        "itm_1189",
+        "itm_1212"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "head_hood",
+      "visual": "doll_head_hood",
+      "slot": "head",
+      "items": [
+        "itm_1006",
+        "itm_1029",
+        "itm_1052",
+        "itm_1075",
+        "itm_1098",
+        "itm_1121",
+        "itm_1144",
+        "itm_1167",
+        "itm_1190",
+        "itm_1213"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "head_mask",
+      "visual": "doll_head_mask",
+      "slot": "head",
+      "items": [
+        "itm_1010",
+        "itm_1033",
+        "itm_1056",
+        "itm_1079",
+        "itm_1102",
+        "itm_1125",
+        "itm_1148",
+        "itm_1171",
+        "itm_1194",
+        "itm_1217"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "head_sallet",
+      "visual": "doll_head_sallet",
+      "slot": "head",
+      "items": [
+        "itm_1008",
+        "itm_1031",
+        "itm_1054",
+        "itm_1077",
+        "itm_1100",
+        "itm_1123",
+        "itm_1146",
+        "itm_1169",
+        "itm_1192",
+        "itm_1215"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "head_warcrown",
+      "visual": "doll_head_warcrown",
+      "slot": "head",
+      "items": [
+        "itm_1009",
+        "itm_1032",
+        "itm_1055",
+        "itm_1078",
+        "itm_1101",
+        "itm_1124",
+        "itm_1147",
+        "itm_1170",
+        "itm_1193",
+        "itm_1216"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_bastion_plate",
+      "visual": "doll_unique_bastion_plate",
+      "slot": "armor",
+      "items": [
+        "itm_1343"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_bloodgrip_wraps",
+      "visual": "doll_unique_bloodgrip_wraps",
+      "slot": "gloves",
+      "items": [
+        "itm_1408"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_emberwake_treads",
+      "visual": "doll_unique_emberwake_treads",
+      "slot": "boots",
+      "items": [
+        "itm_1322"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_executioner_s_edge",
+      "visual": "doll_unique_executioner_s_edge",
+      "slot": "weapon",
+      "items": [
+        "itm_1342"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_frostwake_circlet",
+      "visual": "doll_unique_frostwake_circlet",
+      "slot": "head",
+      "items": [
+        "itm_1345"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_gearheart_gauntlet",
+      "visual": "doll_unique_gearheart_gauntlet",
+      "slot": "weapon",
+      "items": [
+        "itm_1341"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_hollowroot_crown",
+      "visual": "doll_unique_hollowroot_crown",
+      "slot": "head",
+      "items": [
+        "itm_1321"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_ironclasp_handguards",
+      "visual": "doll_unique_ironclasp_handguards",
+      "slot": "gloves",
+      "items": [
+        "itm_1409"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_stormcaller_rod",
+      "visual": "doll_unique_stormcaller_rod",
+      "slot": "weapon",
+      "items": [
+        "itm_1339"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_wildwood_longbow",
+      "visual": "doll_unique_wildwood_longbow",
+      "slot": "weapon",
+      "items": [
+        "itm_1340"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "unique_windrunner_boots",
+      "visual": "doll_unique_windrunner_boots",
+      "slot": "boots",
+      "items": [
+        "itm_1344"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "weapon_bow",
+      "visual": "doll_weapon_bow",
+      "slot": "weapon",
+      "items": [
+        "itm_1002",
+        "itm_1025",
+        "itm_1048",
+        "itm_1071",
+        "itm_1094",
+        "itm_1117",
+        "itm_1140",
+        "itm_1163",
+        "itm_1186",
+        "itm_1209"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "weapon_gauntlet",
+      "visual": "doll_weapon_gauntlet",
+      "slot": "weapon",
+      "items": [
+        "itm_1004",
+        "itm_1027",
+        "itm_1050",
+        "itm_1073",
+        "itm_1096",
+        "itm_1119",
+        "itm_1142",
+        "itm_1165",
+        "itm_1188",
+        "itm_1211"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "weapon_rod",
+      "visual": "doll_weapon_rod",
+      "slot": "weapon",
+      "items": [
+        "itm_1003",
+        "itm_1026",
+        "itm_1049",
+        "itm_1072",
+        "itm_1095",
+        "itm_1118",
+        "itm_1141",
+        "itm_1164",
+        "itm_1187",
+        "itm_1210"
+      ],
+      "sourceExists": true,
+      "missing": []
+    },
+    {
+      "set": "weapon_saber",
+      "visual": "doll_weapon_saber",
+      "slot": "weapon",
+      "items": [
+        "itm_1001",
+        "itm_1024",
+        "itm_1047",
+        "itm_1070",
+        "itm_1093",
+        "itm_1116",
+        "itm_1139",
+        "itm_1162",
+        "itm_1185",
+        "itm_1208"
+      ],
+      "sourceExists": true,
+      "missing": []
+    }
+  ]
+}

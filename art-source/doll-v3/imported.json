@@ -1,0 +1,186 @@
+{
+ "doll_armor_brigandine": [
+  "arm_far",
+  "arm_near",
+  "cape",
+  "forearm_far",
+  "forearm_near",
+  "torso"
+ ],
+ "doll_armor_duskcloak": [
+  "arm_far",
+  "arm_near",
+  "cape",
+  "forearm_far",
+  "forearm_near",
+  "torso"
+ ],
+ "doll_armor_leathers": [
+  "arm_far",
+  "arm_near",
+  "cape",
+  "forearm_far",
+  "forearm_near",
+  "torso"
+ ],
+ "doll_armor_plate": [
+  "arm_far",
+  "arm_near",
+  "cape",
+  "forearm_far",
+  "forearm_near",
+  "torso"
+ ],
+ "doll_armor_robe": [
+  "arm_far",
+  "arm_near",
+  "cape",
+  "forearm_far",
+  "forearm_near",
+  "torso"
+ ],
+ "doll_armor_runeplate": [
+  "arm_far",
+  "arm_near",
+  "cape",
+  "forearm_far",
+  "forearm_near",
+  "torso"
+ ],
+ "doll_boots_boots": [
+  "shin_far",
+  "shin_near"
+ ],
+ "doll_boots_greaves": [
+  "shin_far",
+  "shin_near"
+ ],
+ "doll_boots_sabatons": [
+  "shin_far",
+  "shin_near"
+ ],
+ "doll_boots_slippers": [
+  "shin_far",
+  "shin_near"
+ ],
+ "doll_boots_treads": [
+  "shin_far",
+  "shin_near"
+ ],
+ "doll_boots_warboots": [
+  "shin_far",
+  "shin_near"
+ ],
+ "doll_gloves_gloves": [
+  "hand_far",
+  "hand_far_open",
+  "hand_near",
+  "hand_near_open"
+ ],
+ "doll_gloves_grips": [
+  "hand_far",
+  "hand_far_open",
+  "hand_near",
+  "hand_near_open"
+ ],
+ "doll_gloves_handguards": [
+  "hand_far",
+  "hand_far_open",
+  "hand_near",
+  "hand_near_open"
+ ],
+ "doll_gloves_mitts": [
+  "hand_far",
+  "hand_far_open",
+  "hand_near",
+  "hand_near_open"
+ ],
+ "doll_gloves_wargloves": [
+  "hand_far",
+  "hand_far_open",
+  "hand_near",
+  "hand_near_open"
+ ],
+ "doll_gloves_wraps": [
+  "hand_far",
+  "hand_far_open",
+  "hand_near",
+  "hand_near_open"
+ ],
+ "doll_head_circlet": [
+  "head"
+ ],
+ "doll_head_helm": [
+  "head"
+ ],
+ "doll_head_hood": [
+  "head"
+ ],
+ "doll_head_mask": [
+  "head"
+ ],
+ "doll_head_sallet": [
+  "head"
+ ],
+ "doll_head_warcrown": [
+  "head"
+ ],
+ "doll_unique_bastion_plate": [
+  "arm_far",
+  "arm_near",
+  "cape",
+  "forearm_far",
+  "forearm_near",
+  "torso"
+ ],
+ "doll_unique_bloodgrip_wraps": [
+  "hand_far",
+  "hand_far_open",
+  "hand_near",
+  "hand_near_open"
+ ],
+ "doll_unique_emberwake_treads": [
+  "shin_far",
+  "shin_near"
+ ],
+ "doll_unique_executioner_s_edge": [
+  "weapon"
+ ],
+ "doll_unique_frostwake_circlet": [
+  "head"
+ ],
+ "doll_unique_gearheart_gauntlet": [
+  "weapon"
+ ],
+ "doll_unique_hollowroot_crown": [
+  "head"
+ ],
+ "doll_unique_ironclasp_handguards": [
+  "hand_far",
+  "hand_far_open",
+  "hand_near",
+  "hand_near_open"
+ ],
+ "doll_unique_stormcaller_rod": [
+  "weapon"
+ ],
+ "doll_unique_wildwood_longbow": [
+  "weapon"
+ ],
+ "doll_unique_windrunner_boots": [
+  "shin_far",
+  "shin_near"
+ ],
+ "doll_weapon_bow": [
+  "weapon"
+ ],
+ "doll_weapon_gauntlet": [
+  "weapon"
+ ],
+ "doll_weapon_rod": [
+  "weapon"
+ ],
+ "doll_weapon_saber": [
+  "weapon"
+ ]
+}
