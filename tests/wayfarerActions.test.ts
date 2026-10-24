@@ -16,9 +16,19 @@ function wrist(p:ReturnType<typeof actionPose>,side:'near'|'far') {
 
 describe('Wayfarer articulated actions',()=>{
  it('uses the shared weapon action for generated gear without explicit motion',()=>{
-  for(const [visual,motion] of [['surveyor_bow','shoot'],['aether_rod','cast'],['copper_saber','melee']])
+  for(const [visual,motion] of [['surveyor_bow','shoot'],['aether_rod','cast'],['copper_saber','melee'],['doll_weapon_gauntlet','punch'],['doll_unique_gearheart_gauntlet','punch']])
    expect(weaponMotion([{name:'Generated gear',slot:'weapon',visual,layers:['weapon']}])).toBe(motion);
   expect(weaponMotion([])).toBe('unarmed');
+ });
+ it('punches forward on the server hit frame and returns to the carry position',()=>{
+  for(const motion of ['punch','unarmed']) {
+   const start=wrist(actionPose(rig,'side','attack',0,8,motion),'near');
+   const hit=wrist(actionPose(rig,'side','attack',4,8,motion),'near');
+   const end=wrist(actionPose(rig,'side','attack',7,8,motion),'near');
+   expect(hit[0]).toBeLessThan(start[0]-35);
+   expect(hit[1]).toBeGreaterThan(rig.views.side.parts.arm_near.pivot[1]);
+   expect(end[0]).toBeCloseTo(start[0]);expect(end[1]).toBeCloseTo(start[1]);
+  }
  });
  it('keeps side-view weapon hands in front of the torso, including every walk frame',()=>{
   for(const motion of ['melee','shoot','cast'])for(const anim of ['idle','walk'] as const)for(let f=0;f<8;f++){

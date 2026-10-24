@@ -93,7 +93,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1005": {
    "name": "Worn Helm",
@@ -361,7 +361,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1028": {
    "name": "Bronze Helm",
@@ -629,7 +629,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1051": {
    "name": "Iron Helm",
@@ -897,7 +897,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1074": {
    "name": "Steel Helm",
@@ -1165,7 +1165,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1097": {
    "name": "Cobalt Helm",
@@ -1433,7 +1433,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1120": {
    "name": "Runic Helm",
@@ -1701,7 +1701,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1143": {
    "name": "Mythril Helm",
@@ -1969,7 +1969,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1166": {
    "name": "Ember Helm",
@@ -2237,7 +2237,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1189": {
    "name": "Star Helm",
@@ -2505,7 +2505,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1212": {
    "name": "Sovereign Helm",
@@ -2782,7 +2782,7 @@
     "weapon"
    ],
    "generated": true,
-   "motion": "melee"
+   "motion": "punch"
   },
   "itm_1342": {
    "name": "Executioner's Edge",

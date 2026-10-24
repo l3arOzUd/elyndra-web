@@ -18,8 +18,13 @@ eyes and remove the smile. Clothing belongs to torso/sleeve layers.
 
 There are three original views: front, left side and back. SW/W/NW reuse
 the side artwork; E/NE/SE mirror it. These are not eight unique drawings.
-New generated equipment currently reuses these five painted looks; it does
-not have unique art per item. Charms, Totems and accessories are not drawn.
+Equipment v3 adds 39 painted wearable families (318 layers): six armour,
+six head, six glove, six boot, four weapon, and eleven unique sets.
+`art-source/doll-v3/manifest.json` maps item IDs to families; tiers of one
+family share artwork. Charms, Totems and accessories are not drawn on the body.
+Use `scripts/import-doll-sheets.mjs` to pack the original component sheets,
+then `npm run build:content` to publish their equipment mappings. The hood
+uses `head_hood-v2.png`, whose front and side face openings are transparent.
 
 ## Drawing and rig rules
 
@@ -51,7 +56,9 @@ The coat replaces the base torso and upper sleeves and overlays elbow cuffs.
 - Death: knees buckle, torso folds forward, head settles, eyes close and
   weapon lowers. The final pose is a slumped kneel, not a rigid backward fall.
 
-`equipment.json` can specify `motion: melee | shoot | cast`. Generated items
+`equipment.json` can specify `motion: melee | punch | shoot | cast`. Gauntlets
+use a forward punch timed to attack frame 4 and cover the gripping hand.
+Generated items
 sharing the bow/staff/sword artwork inherit the corresponding action even
 without that field. `combatAnimation.ts` selects skill actions. Release
 timing uses the server impact timestamp; visual effects do not apply damage.
@@ -59,7 +66,9 @@ This artwork does not enable otherwise unavailable server skills.
 
 ## Preview and validation
 
-Run `npm run dev`, then open `/character-viewer.html`. Try the three action
+Commit to staging, run the workspace `play.ps1`, then open
+`http://localhost:7101/character-viewer.html`. Never start a separate dev server.
+Try the three action
 buttons, outfits, slow motion, pause/frame slider and pivot overlay. Reload
 images after editing artwork. Preview changes never alter account equipment.
 The viewer and in-game sprite sheets use the same renderer.

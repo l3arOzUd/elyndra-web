@@ -26,14 +26,14 @@ export interface Rig {
   effects?: string[];
 }
 /** variants: the item also has a drawing of each layer's rig variants (gloves: hand_near_open.png), used in those poses. */
-export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[]; motion?: "melee" | "shoot" | "cast"; variants?: boolean; refine?: number }
+export interface ItemLook { name: string; slot: string; visual: string; layers: string[]; hides?: string[]; motion?: "melee" | "punch" | "shoot" | "cast"; variants?: boolean; refine?: number }
 export interface PaperDollKit { rig: Rig; items: Record<string, ItemLook>; img: Map<string, HTMLImageElement> }
 
 /** Generated equipment may share an existing painted weapon without a motion field. */
 export function weaponMotion(looks: ItemLook[]): string {
   const weapon=looks.find(it=>it.slot==="weapon");
   if(!weapon)return "unarmed";
-  return weapon.motion ?? ({surveyor_bow:"shoot",aether_rod:"cast",copper_saber:"melee"}[weapon.visual]) ?? "melee";
+  return weapon.motion ?? (/gauntlet/.test(weapon.visual) ? "punch" : ({surveyor_bow:"shoot",aether_rod:"cast",copper_saber:"melee"}[weapon.visual])) ?? "melee";
 }
 
 const DIR = "sprites/wayfarer/";
@@ -271,6 +271,21 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
     return p;
   }
   if(anim==="attack") {
+    if(motion==="punch" || motion==="unarmed") {
+      // A worn fist drives forward from the elbow, rather than swinging
+      // overhead like a blade. The impact lands on attack's hit frame (4/7).
+      const start=rest("near"),impact=4/7;
+      const guard:Vec=side?[near[0]-22,near[1]+25]:[near[0]-12*sign,near[1]+35];
+      const strike:Vec=side?[near[0]-94,near[1]+12]:[near[0]-36*sign,near[1]+12];
+      const a=k<2/7?start:k<=impact?guard:strike;
+      const b=k<2/7?guard:k<=impact?strike:start;
+      const t=ease(k<2/7?k/(2/7):k<=impact?(k-2/7)/(2/7):(k-impact)/(1-impact));
+      const extension=k<=impact?Math.max(0,(k-2/7)/(2/7)):(1-k)/(1-impact);
+      aim("near",lerp(a[0],b[0],t),lerp(a[1],b[1],t),-sign,side?lerp(-5,85,extension):0);
+      blendAim("far",[far[0]-(side?22:-12*sign),far[1]+35],Math.sin(k*Math.PI),side?-1:sign);
+      p.angle.torso=(side?-7:7*sign)*Math.sin(k*Math.PI);
+      return p;
+    }
     // Reach keyframes keep the wrist attached and return to the actual carry pose.
     const start=rest("near"),up:Vec=side?[near[0]+34,near[1]-29]:[near[0]-20*sign,near[1]-15];
     const strike:Vec=side?[near[0]-76,near[1]+5]:[near[0]+62*sign,near[1]+20];

@@ -72,7 +72,7 @@ const ELEMENT_TINT: Record<string, [number, number, number]> = {
  */
 function writePaperDollLooks(gear: ItemDef[], path: string) {
   if (!existsSync(path)) return;
-  type Look = { name?: string; slot?: string; visual?: string; layers?: string[]; hides?: string[]; variants?: boolean; motion?: "melee" | "shoot" | "cast"; generated?: boolean };
+  type Look = { name?: string; slot?: string; visual?: string; layers?: string[]; hides?: string[]; variants?: boolean; motion?: "melee" | "punch" | "shoot" | "cast"; generated?: boolean };
   const file = JSON.parse(readFileSync(path, "utf8")) as { items: Record<string, Look> };
   for (const [id, look] of Object.entries(file.items)) if (look.generated) delete file.items[id];
   // Paper-doll art v3 (ITEM_ART.md §4, scripts/import-doll-art.py): one painted
@@ -95,7 +95,7 @@ function writePaperDollLooks(gear: ItemDef[], path: string) {
       const hides = HIDES[e.slot]?.filter((h) => layers.includes(h));
       if (hides?.length) look.hides = hides;
       if (e.slot === "gloves") look.variants = true; // open-hand drawings too
-      if (e.slot === "weapon") look.motion = MOTION[e.job ?? "vanguard"];
+      if (e.slot === "weapon") look.motion = /gauntlet/.test(st.visual) ? "punch" : MOTION[e.job ?? "vanguard"];
       file.items[g.id] = look;
       continue;
     }
