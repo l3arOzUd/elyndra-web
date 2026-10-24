@@ -144,6 +144,26 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
       props.push({ kind: d.ground === "snow" ? "pine" : "tree", x: x + rand(), y: y + rand(), block: 0, scale: Math.round((orchard ? 1.5 + rand()*.6 : 0.8 + rand() * 0.6) * 100) / 100, rot: Math.round(rand() * 628) / 100 });
     }
   }
+  if (d.id === 'lum_fld_02') {
+    // Keep the authored tree positions, but stop treating an entire grove as
+    // solid terrain. Border forests remain world boundaries; interior trees
+    // each own just their root cell, irrespective of canopy size.
+    for (let i = blockers.length - 1; i >= 0; i--)
+      if (blockers[i].kind === 'forest' && d.blockers.includes(blockers[i])) blockers.splice(i, 1);
+    for (let i = 0; i < props.length; i++)
+      if (props[i].kind === 'tree') props[i] = { ...props[i], block: 1 };
+    walk.fill(d.solid ? 0 : 1);
+    for (const s of d.carve ?? []) {
+      const [bx, by, bw, bh] = shapeBounds(s);
+      for (let y = by; y < by + bh; y++) for (let x = bx; x < bx + bw; x++) if (shapeContains(s, x, y)) set(x, y, 1);
+    }
+    for (const b of blockers) {
+      const [bx, by, bw, bh] = shapeBounds(b.shape);
+      for (let y = by; y < by + bh; y++) for (let x = bx; x < bx + bw; x++) if (shapeContains(b.shape, x, y)) set(x, y, 0);
+    }
+    for (const r of d.roads) roadCells(r.points, r.width, (x, y) => set(x, y, 1));
+    for (const p of props) blockFootprint(p, (x, y) => set(x, y, 0));
+  }
   return {
     id: d.id,
     width: w,
