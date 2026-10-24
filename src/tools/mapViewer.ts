@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { sceneSeed } from "../shared/sceneSeed";
 import { loadContent, loadLayout } from "../data/content";
 import { IsoCamera } from "../render/camera";
 import { loadEnvArt } from "../render/envArt";
@@ -20,6 +21,15 @@ app.innerHTML = `<div id="view" style="position:fixed;inset:0;background:#1d2f27
 <button id="previous" aria-label="แผนที่ก่อนหน้า">◀</button><select id="maps" aria-label="เลือกแผนที่" style="max-width:70vw;padding:6px"></select><button id="next" aria-label="แผนที่ถัดไป">▶</button>
 <select id="places" aria-label="เลือกจุดชม" style="padding:6px"></select><a href="/maps.html" style="color:#d8dba4">รายชื่อทั้งหมด</a>
 <span id="bar"></span><small style="width:100%">WASD / ลูกศร: เลื่อน · ล้อเมาส์: ซูม · หุ่นเทียบขนาด · ไม่มีมอนสเตอร์หรือผู้เล่นจริงในหน้าตรวจฉาก</small></div>`;
+const seedPanel=document.createElement('div');
+seedPanel.style.cssText='position:fixed;bottom:12px;left:12px;background:#17251eee;color:#f2e6c8;padding:12px;font:14px sans-serif;max-width:90vw';
+seedPanel.innerHTML='<label>Seed <input id="seed" type="number" min="0" max="2147483647" value="0" style="width:100px"></label> <button id="shuffle">????</button> <button id="undoSeed">????????</button> <button id="saveSeed">??????</button> <button id="originalSeed">???????</button> <button id="exportSeed">Export JSON</button><div id="seedStatus">????????????????? ? ??? ????? ????????????????????????????</div>';
+app.append(seedPanel);
+const seedInput=document.querySelector<HTMLInputElement>('#seed')!;
+const seedStatus=document.querySelector<HTMLElement>('#seedStatus')!;
+const seedHistory=new Map<string,number[]>();
+const seedValues=new Map<string,number>();
+const currentSeed=(id:string)=>seedValues.get(id)??0;
 const view = document.getElementById("view")!;
 const bar = document.getElementById("bar")!;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -49,7 +59,10 @@ async function show(id: string, x?: number, y?: number, zoom = 0): Promise<void>
   const def = content.maps.get(id);
   if (!def) throw new Error(`no map ${id}`);
   const token = ++request;
-  const layout = await loadLayout(content, id);
+  const base = await loadLayout(content, id);
+  if(!seedValues.has(id)){try{const saved=Number(localStorage.getItem(`elyndra.sceneSeed.${id}`));seedValues.set(id,Number.isSafeInteger(saved)?saved:0);}catch{seedValues.set(id,0);}}
+  const layout = sceneSeed(base,currentSeed(id));
+  seedInput.value=String(currentSeed(id));
   if(token!==request)return;
   if (built) { built.group.removeFromParent(); built.dispose(); }
   const region = content.regions.get(def.region_id);
@@ -73,6 +86,19 @@ async function show(id: string, x?: number, y?: number, zoom = 0): Promise<void>
   for(const [name,x,z]of spots)places.add(new Option(name,`${x},${z}`));
   history.replaceState(null,'',`?map=${id}&x=${focus.x}&y=${focus.z}`);
 }
+async function applySeed(value:number,remember=true){
+  if(!Number.isSafeInteger(value)||value<0||value>2147483647){seedStatus.textContent='?????? 0?2147483647';return;}
+  if(remember)seedHistory.set(mapId,[...(seedHistory.get(mapId)??[]),currentSeed(mapId)]);
+  seedValues.set(mapId,value);
+  await show(mapId,focus.x,focus.z);
+  seedStatus.textContent='???????? Seed '+value+' ? ???????????????????????';
+}
+seedInput.onchange=()=>{void applySeed(Number(seedInput.value));};
+document.querySelector<HTMLButtonElement>('#shuffle')!.onclick=()=>{void applySeed(crypto.getRandomValues(new Uint32Array(1))[0]%2147483647+1);};
+document.querySelector<HTMLButtonElement>('#undoSeed')!.onclick=()=>{const previous=seedHistory.get(mapId)?.pop();if(previous!==undefined)void applySeed(previous,false);};
+document.querySelector<HTMLButtonElement>('#originalSeed')!.onclick=()=>{void applySeed(0);};
+document.querySelector<HTMLButtonElement>('#saveSeed')!.onclick=()=>{try{localStorage.setItem('elyndra.sceneSeed.'+mapId,String(currentSeed(mapId)));seedStatus.textContent='??????????????????????????????? ? ????????????????????';}catch{seedStatus.textContent='?????????????????????????????';}};
+document.querySelector<HTMLButtonElement>('#exportSeed')!.onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify({version:1,map:mapId,seed:currentSeed(mapId),scope:'nonblocking-decoration-preview'},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=mapId+'-seed.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 picker.onchange=()=>{void show(picker.value);};
 const step=(delta:number)=>{void show(mapIds[(mapIds.indexOf(mapId)+delta+mapIds.length)%mapIds.length]);};
 document.querySelector<HTMLButtonElement>('#previous')!.onclick=()=>step(-1);

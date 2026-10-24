@@ -11,7 +11,8 @@ const DEFAULT_PITCH = 50;
 /** Camera distance at the default zoom (floating numbers are sized for it). */
 export const DEFAULT_DISTANCE = 72;
 const MIN_DISTANCE = 36;
-const MAX_DISTANCE = 160;
+// Stay in front of the world's fog (starts at 120) and inside detailed scenery.
+const MAX_DISTANCE = 90;
 
 export class IsoCamera {
   readonly camera: THREE.PerspectiveCamera;
@@ -32,6 +33,7 @@ export class IsoCamera {
   }
 
   zoom(steps: number) {
+    if (!Number.isFinite(steps)) return;
     this.distanceGoal = THREE.MathUtils.clamp(this.distanceGoal * Math.pow(1.12, steps), MIN_DISTANCE, MAX_DISTANCE);
   }
 
