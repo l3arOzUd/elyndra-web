@@ -12,8 +12,8 @@ const DEFAULT_PITCH = 50;
 export const DEFAULT_DISTANCE = 72;
 const MIN_DISTANCE = 36;
 // At 50° pitch / 15° FOV, the ground at the top of the screen reaches fog
-// before the centre does. 106 keeps that far edge just below fog depth 120.
-const MAX_DISTANCE = 106;
+// before the centre does. 105.9 keeps that far edge just below fog depth 120.
+const MAX_DISTANCE = 105.9;
 
 export class IsoCamera {
   readonly camera: THREE.PerspectiveCamera;

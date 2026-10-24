@@ -10,7 +10,7 @@ it('clamps extreme zoom below fog range and ignores invalid values',()=>{
   vi.stubGlobal('location',{search:''});
   const cam=new IsoCamera(1),target=new Vector3();
   cam.zoom(1000);cam.zoom(NaN);cam.update(10,target);
-  expect(cam.camera.position.distanceTo(new Vector3(0,.6,0))).toBeCloseTo(106);
+  expect(cam.camera.position.distanceTo(new Vector3(0,.6,0))).toBeCloseTo(105.9);
   const ray=new Raycaster();ray.setFromCamera(new Vector2(0,1),cam.camera);
   const edge=ray.ray.intersectPlane(new Plane(new Vector3(0,1,0),0),new Vector3())!;
   const depth=-edge.applyMatrix4(cam.camera.matrixWorldInverse).z;
