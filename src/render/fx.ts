@@ -420,16 +420,16 @@ export class Fx {
   }
 
   /**
-   * Any hit landing, basic swings included: a star of light pops on the
-   * target and sparks fly. A critical hit is bigger, whiter, throws more
-   * sparks and rolls a ring along the ground. Shares the impact budget.
+   * Any hit landing, basic swings included, the Ragnarok way: a white
+   * crescent slash flicks across the target at a random angle, with a few
+   * sparks. A critical hit adds a burst of light, more sparks and a ring
+   * along the ground. Shares the impact budget.
    */
   hit(at: THREE.Vector3, color: number, crit = false) {
     if (this.impacts >= MAX_IMPACTS) return;
     this.impacts++;
-    const map = starTexture();
-    const star = (size: number, delay: number, life: number, spin: number) => {
-      const s = new THREE.Sprite(new THREE.SpriteMaterial({ map, color, transparent: true, depthWrite: false, depthTest: false, blending: THREE.AdditiveBlending, rotation: Math.random() * Math.PI }));
+    const flash = (map: THREE.Texture | undefined, tint: number, size: number, delay: number, life: number, spin: number) => {
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({ map, color: tint, transparent: true, depthWrite: false, depthTest: false, blending: THREE.AdditiveBlending, rotation: Math.random() * Math.PI * 2 }));
       s.position.copy(at);
       s.renderOrder = 5;
       const mat = s.material;
@@ -443,8 +443,13 @@ export class Fx {
         },
       });
     };
-    star(crit ? 1.9 : 1.0, 0, crit ? 300 : 190, 0.01);
-    if (crit) star(1.25, 40, 260, -0.02);
+    // The slash stays white (tinted only faintly) so it reads on any monster.
+    const slashTint = new THREE.Color(color).lerp(new THREE.Color(0xffffff), 0.75).getHex();
+    flash(slashTexture(), slashTint, crit ? 1.7 : 1.2, 0, crit ? 260 : 200, 0.03);
+    if (crit) {
+      flash(starTexture(), color, 1.9, 30, 320, 0.01);
+      flash(slashTexture(), slashTint, 1.4, 70, 220, -0.03);
+    }
     this.sparks(at.x, at.z, color, crit ? 10 : 4, { y: at.y - 0.15, r: 0.12, speed: crit ? 4.2 : 2.8, up: crit ? 2.6 : 1.8, g: 9, life: crit ? 520 : 360, size: crit ? 0.08 : 0.06 });
     if (crit) {
       this.wave(at.x, at.z, color, 1.4, { life: 380, width: 0.12 });
@@ -803,7 +808,24 @@ const arrowTexture = () => painted("arrow", 512, 64, (g) => {
   g.beginPath(); g.moveTo(440, 18); g.lineTo(506, 32); g.lineTo(440, 46); g.lineTo(450, 32); g.closePath(); g.fill();
 });
 
-/** A white star of light, four long rays and four short ones round a hot core: the hit flash. */
+/** A white crescent slash with a soft glow, thick in the middle and tapering to points: the hit flick. */
+const slashTexture = () => painted("hit-slash", 128, 128, (g) => {
+  const crescent = (r: number, off: number) => {
+    g.beginPath(); g.arc(64, 64, r, 0, Math.PI * 2); g.fill();
+    g.globalCompositeOperation = "destination-out";
+    g.beginPath(); g.arc(64 - off * 0.6, 64 - off, r * 0.98, 0, Math.PI * 2); g.fill();
+    g.globalCompositeOperation = "source-over";
+  };
+  // A wide faint crescent behind for the glow, a narrow bright one on top.
+  g.fillStyle = "rgba(255,255,255,0.35)";
+  g.filter = "blur(4px)";
+  crescent(52, 16);
+  g.filter = "none";
+  g.fillStyle = "rgba(255,255,255,1)";
+  crescent(50, 9);
+});
+
+/** A white star of light, four long rays and four short ones round a hot core: the critical flash. */
 const starTexture = () => painted("hit-star", 128, 128, (g) => {
   g.translate(64, 64);
   const core = g.createRadialGradient(0, 0, 0, 0, 0, 30);
