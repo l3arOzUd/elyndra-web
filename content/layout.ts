@@ -163,6 +163,33 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
     }
     for (const r of d.roads) roadCells(r.points, r.width, (x, y) => set(x, y, 1));
     for (const p of props) blockFootprint(p, (x, y) => set(x, y, 0));
+    // A solid world boundary must read as a continuous thicket. This is
+    // visual dressing inside already blocked cells, never extra collision.
+    if (d.border?.kind === 'forest') {
+      const k = d.border.width;
+      const roadNear = (x: number, y: number) => {
+        for(let dy=-2;dy<=2;dy++)for(let dx=-2;dx<=2;dx++) {
+          const cx=Math.floor(x)+dx,cy=Math.floor(y)+dy;
+          if(cx>=0&&cy>=0&&cx<w&&cy<h&&isRoad[cy*w+cx])return true;
+        }
+        return false;
+      };
+      const edges = [
+        [k-0.6,k,w-k,k], [k-0.6,h-k+0.1,w-k,h-k+0.1],
+        [k-0.6,k,k-0.6,h-k], [w-k+0.1,k,w-k+0.1,h-k],
+      ];
+      for(const [ax,ay,bx,by] of edges) {
+        const length=Math.hypot(bx-ax,by-ay);
+        for(let t=0;t<length;t+=1.15) {
+          const x=ax+(bx-ax)*t/length,y=ay+(by-ay)*t/length;
+          if(roadNear(x,y))continue;
+          if(walk[Math.floor(y)*w+Math.floor(x)]!==0)continue;
+          props.push({kind:'bush',x:x-0.5,y:y-0.5,block:0,scale:1.25+0.25*Math.sin(t)});
+          if(t%3.45<1.15 && !props.some(p=>p.kind==='tree'&&Math.hypot(p.x-(x-0.5),p.y-(y-0.5))<2.4))
+            props.push({kind:'tree',x:x-0.5,y:y-0.5,block:0,scale:1.65});
+        }
+      }
+    }
   }
   return {
     id: d.id,
