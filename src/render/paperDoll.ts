@@ -417,6 +417,9 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
     g.drawImage(im, 0, 0);
   };
   const order=[...v.order];
+  // Lower robe panels follow the hips, not the chest. Place them over the
+  // legs and under the bodice belt, with room for the knees when collapsing.
+  if(gear.some(it=>it.layers.includes('skirt')))order.splice(order.indexOf('torso'),0,'skirt');
   if(view==="side"&&pose.farArmInFront) {
     const far=["arm_far","forearm_far","hand_far"];
     for(const part of far){const at=order.indexOf(part);if(at>=0)order.splice(at,1);}
@@ -424,7 +427,12 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
   }
   for (const slot of order) {
     const bone = v.parts[slot] ? slot : rig.attach[slot];
-    const m = matrixOf(bone);
+    let m = matrixOf(bone);
+    if(slot==='skirt') {
+      const fold=Math.max(0,Math.min(1,(Math.abs(pose.angle.thigh_near??0)-35)/25));
+      const sway=((pose.angle.thigh_near??0)+(pose.angle.thigh_far??0))*.04;
+      m=root.translate(256,294).rotate(view==='side'?fold*45+sway:sway).scale(1,1-fold*.5).translate(-256,-294);
+    }
     const variant=slot==="head"&&pose.unconscious?"_unconscious":pose.openHands?.includes(slot)?"_open":"";
     if (v.parts[slot] && !hidden.has(slot)) draw(`base/${view}/${slot}${variant}.png`, m);
     for (const it of gear) if (it.layers.includes(slot)) {

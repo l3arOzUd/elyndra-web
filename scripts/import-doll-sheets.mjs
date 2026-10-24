@@ -67,3 +67,4 @@ try {for(const s of manifest.sets){
  }
  imported[s.visual]=[...present].sort();console.log(s.set,present.size);
 }await fs.writeFile(root+'/imported.json',JSON.stringify(imported,null,1)+'\n');}finally{await browser.close()}
+await import('./import-robe-skirt.mjs');
