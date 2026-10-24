@@ -1264,7 +1264,7 @@ function showSpriteResults(outputs: SheetOut[], def: SpriteDefOut) {
   const json = JSON.stringify(def, null, 2);
   const head = document.createElement('div'); head.className = 'row';
   const intoProject = document.createElement('button'); intoProject.className = 'primary';
-  intoProject.textContent = `บันทึกลงโปรเจกต์ (public/sprites/${def.id}/)`;
+  intoProject.textContent = 'บันทึกลงโปรเจกต์ (public/sprites/<ชื่อ sprite>/)';
   intoProject.onclick = () => void saveIntoProject();
   const all = document.createElement('button'); all.textContent = 'ดาวน์โหลดทั้งหมด';
   const jsonButton = document.createElement('button'); jsonButton.textContent = `${def.id}.sprite.json`;
@@ -1343,7 +1343,8 @@ async function spritesFolder(): Promise<FileSystemDirectoryHandle | null> {
 /** Writes the last render into `<sprites>/<id>/`; never over a folder another tool made. */
 async function writeSprites(root: FileSystemDirectoryHandle): Promise<string> {
   if (!lastSprites) throw new Error('ยังไม่ได้เรนเดอร์');
-  const { outputs, def } = lastSprites;
+  const { outputs } = lastSprites;
+  const def = { ...lastSprites.def, id: spriteId() };   // the name in the box now, even if changed after rendering
   const dir = await root.getDirectoryHandle(def.id, { create: true });
   const names: string[] = [];
   for await (const name of (dir as unknown as { keys(): AsyncIterable<string> }).keys()) names.push(name);
