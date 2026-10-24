@@ -165,7 +165,12 @@ async function main() {
   $("pivots").onchange = () => rebake();
   $("reload").onclick = async () => { await load(String(Date.now())); buildControls(); setup(); listMissing(); rebake(); (window as unknown as {__wayfarer:{kit:PaperDollKit}}).__wayfarer.kit=kit; };
   requestAnimationFrame(tick);
-  (window as unknown as { __wayfarer: object }).__wayfarer = { ready: true, kit, rebake, chosen };
+  (window as unknown as { __wayfarer: object }).__wayfarer = {
+    ready: true, kit, rebake, chosen,
+    // Read-only render access for repeatable art review, not player state.
+    getSprite: () => sprite,
+    renderPose: (g: CanvasRenderingContext2D, view: string, gear: string[], anim: AnimName, frame: number) => renderWayfarerPose(g, kit, view, gear, anim, frame),
+  };
 }
 
 main().catch((e) => { document.body.prepend(String(e)); console.error(e); });
