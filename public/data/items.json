@@ -204,7 +204,8 @@
   "rarity": "common",
   "sell_price": 16,
   "stack_max": 999,
-  "description": "A hinged twig from a Graftling. Kindling, or a cheap splint."
+  "description": "A hinged twig from a Graftling. Kindling, or a cheap splint.",
+  "icon": "03:20:6:6"
  },
  {
   "id": "itm_0024",
@@ -213,7 +214,8 @@
   "rarity": "uncommon",
   "sell_price": 72,
   "stack_max": 999,
-  "description": "The brass hinge at a Graftling's heart, still oiled with sap."
+  "description": "The brass hinge at a Graftling's heart, still oiled with sap.",
+  "icon": "03:21:6:6"
  },
  {
   "id": "itm_0025",
@@ -222,7 +224,8 @@
   "rarity": "common",
   "sell_price": 20,
   "stack_max": 999,
-  "description": "A glassy wing panel from a Sapdrone."
+  "description": "A glassy wing panel from a Sapdrone.",
+  "icon": "03:22:6:6"
  },
  {
   "id": "itm_0026",
@@ -231,7 +234,8 @@
   "rarity": "uncommon",
   "sell_price": 90,
   "stack_max": 999,
-  "description": "A Sapdrone's sap tank, half full and still warm."
+  "description": "A Sapdrone's sap tank, half full and still warm.",
+  "icon": "03:23:6:6"
  },
  {
   "id": "itm_0027",
@@ -240,7 +244,8 @@
   "rarity": "common",
   "sell_price": 25,
   "stack_max": 999,
-  "description": "A length of vine wound round a brass gear."
+  "description": "A length of vine wound round a brass gear.",
+  "icon": "03:24:6:6"
  },
  {
   "id": "itm_0028",
@@ -249,7 +254,8 @@
   "rarity": "uncommon",
   "sell_price": 113,
   "stack_max": 999,
-  "description": "The cracked jade lens that steered a Vinecrawler."
+  "description": "The cracked jade lens that steered a Vinecrawler.",
+  "icon": "03:25:6:6"
  },
  {
   "id": "itm_0029",
@@ -258,7 +264,8 @@
   "rarity": "common",
   "sell_price": 31,
   "stack_max": 999,
-  "description": "A root-laced stone plate from a Root Sentinel."
+  "description": "A root-laced stone plate from a Root Sentinel.",
+  "icon": "03:26:6:6"
  },
  {
   "id": "itm_0030",
@@ -267,7 +274,8 @@
   "rarity": "uncommon",
   "sell_price": 140,
   "stack_max": 999,
-  "description": "A Root Sentinel's lantern eye, jade light still flickering."
+  "description": "A Root Sentinel's lantern eye, jade light still flickering.",
+  "icon": "03:27:6:6"
  },
  {
   "id": "itm_0031",
@@ -276,7 +284,8 @@
   "rarity": "common",
   "sell_price": 25,
   "stack_max": 999,
-  "description": "A gritty scale from a Sandcoil, warm to the touch."
+  "description": "A gritty scale from a Sandcoil, warm to the touch.",
+  "icon": "03:28:6:6"
  },
  {
   "id": "itm_0032",
@@ -285,7 +294,8 @@
   "rarity": "uncommon",
   "sell_price": 113,
   "stack_max": 999,
-  "description": "The ember-bright gland that keeps a Sandcoil warm at night."
+  "description": "The ember-bright gland that keeps a Sandcoil warm at night.",
+  "icon": "03:29:6:6"
  },
  {
   "id": "itm_0033",
@@ -294,7 +304,8 @@
   "rarity": "common",
   "sell_price": 29,
   "stack_max": 999,
-  "description": "A chip of amber-glass shell."
+  "description": "A chip of amber-glass shell.",
+  "icon": "03:30:6:6"
  },
  {
   "id": "itm_0034",
@@ -303,7 +314,8 @@
   "rarity": "uncommon",
   "sell_price": 131,
   "stack_max": 999,
-  "description": "The glowing ember a Glass Scarab rolls its glass around."
+  "description": "The glowing ember a Glass Scarab rolls its glass around.",
+  "icon": "03:31:6:6"
  },
  {
   "id": "itm_0035",
@@ -312,7 +324,8 @@
   "rarity": "common",
   "sell_price": 34,
   "stack_max": 999,
-  "description": "A carved sandstone block, brass band still attached."
+  "description": "A carved sandstone block, brass band still attached.",
+  "icon": "03:32:6:6"
  },
  {
   "id": "itm_0036",
@@ -321,7 +334,8 @@
   "rarity": "uncommon",
   "sell_price": 153,
   "stack_max": 999,
-  "description": "A Sentry's visor-lamp, still glowing orange."
+  "description": "A Sentry's visor-lamp, still glowing orange.",
+  "icon": "03:33:6:6"
  },
  {
   "id": "itm_0037",
@@ -330,7 +344,8 @@
   "rarity": "common",
   "sell_price": 40,
   "stack_max": 999,
-  "description": "A bronze plate from a Sun Warden, sun-hot."
+  "description": "A bronze plate from a Sun Warden, sun-hot.",
+  "icon": "03:34:6:6"
  },
  {
   "id": "itm_0038",
@@ -339,7 +354,8 @@
   "rarity": "uncommon",
   "sell_price": 180,
   "stack_max": 999,
-  "description": "One mirror from a Warden's solar ring."
+  "description": "One mirror from a Warden's solar ring.",
+  "icon": "03:35:6:6"
  },
  {
   "id": "itm_0039",
@@ -348,7 +364,8 @@
   "rarity": "common",
   "sell_price": 34,
   "stack_max": 999,
-  "description": "A chip of a Tidehopper's back-plate, sea-smoothed."
+  "description": "A chip of a Tidehopper's back-plate, sea-smoothed.",
+  "icon": "04:0:6:6"
  },
  {
   "id": "itm_0040",
@@ -357,7 +374,8 @@
   "rarity": "uncommon",
   "sell_price": 153,
   "stack_max": 999,
-  "description": "The springy tendon-knot from a Tidehopper's hind leg; it still twitches."
+  "description": "The springy tendon-knot from a Tidehopper's hind leg; it still twitches.",
+  "icon": "04:1:6:6"
  },
  {
   "id": "itm_0041",
@@ -366,7 +384,8 @@
   "rarity": "common",
   "sell_price": 38,
   "stack_max": 999,
-  "description": "A broken branch of the coral a Coral Claw wears."
+  "description": "A broken branch of the coral a Coral Claw wears.",
+  "icon": "04:2:6:6"
  },
  {
   "id": "itm_0042",
@@ -375,7 +394,8 @@
   "rarity": "uncommon",
   "sell_price": 171,
   "stack_max": 999,
-  "description": "An intact crusher claw, coral and shell grown together."
+  "description": "An intact crusher claw, coral and shell grown together.",
+  "icon": "04:3:6:6"
  },
  {
   "id": "itm_0043",
@@ -384,7 +404,8 @@
   "rarity": "common",
   "sell_price": 43,
   "stack_max": 999,
-  "description": "A verdigrised copper panel from a Brine Automaton."
+  "description": "A verdigrised copper panel from a Brine Automaton.",
+  "icon": "04:4:6:6"
  },
  {
   "id": "itm_0044",
@@ -393,7 +414,8 @@
   "rarity": "uncommon",
   "sell_price": 194,
   "stack_max": 999,
-  "description": "A working pressure valve, still holding brine."
+  "description": "A working pressure valve, still holding brine.",
+  "icon": "04:5:6:6"
  },
  {
   "id": "itm_0045",
@@ -402,7 +424,8 @@
   "rarity": "common",
   "sell_price": 49,
   "stack_max": 999,
-  "description": "A ribbed hose section from a Relay Guardian."
+  "description": "A ribbed hose section from a Relay Guardian.",
+  "icon": "04:6:6:6"
  },
  {
   "id": "itm_0046",
@@ -411,7 +434,8 @@
   "rarity": "uncommon",
   "sell_price": 221,
   "stack_max": 999,
-  "description": "A sonar crystal that hums when held near water."
+  "description": "A sonar crystal that hums when held near water.",
+  "icon": "04:7:6:6"
  },
  {
   "id": "itm_0047",
@@ -420,7 +444,8 @@
   "rarity": "common",
   "sell_price": 43,
   "stack_max": 999,
-  "description": "A crystal splinter from a Frost Mite's shell."
+  "description": "A crystal splinter from a Frost Mite's shell.",
+  "icon": "04:8:6:6"
  },
  {
   "id": "itm_0048",
@@ -429,7 +454,8 @@
   "rarity": "uncommon",
   "sell_price": 194,
   "stack_max": 999,
-  "description": "A mite's glowing core, full of a slow-thawing gel."
+  "description": "A mite's glowing core, full of a slow-thawing gel.",
+  "icon": "04:9:6:6"
  },
  {
   "id": "itm_0049",
@@ -438,7 +464,8 @@
   "rarity": "common",
   "sell_price": 47,
   "stack_max": 999,
-  "description": "A shard of a wisp's crystal frame; it splits light."
+  "description": "A shard of a wisp's crystal frame; it splits light.",
+  "icon": "04:10:6:6"
  },
  {
   "id": "itm_0050",
@@ -447,7 +474,8 @@
   "rarity": "uncommon",
   "sell_price": 212,
   "stack_max": 999,
-  "description": "A wisp's caught light, still warm in its frame."
+  "description": "A wisp's caught light, still warm in its frame.",
+  "icon": "04:11:6:6"
  },
  {
   "id": "itm_0051",
@@ -456,7 +484,8 @@
   "rarity": "common",
   "sell_price": 52,
   "stack_max": 999,
-  "description": "A frozen cog from an Icegear's body."
+  "description": "A frozen cog from an Icegear's body.",
+  "icon": "04:12:6:6"
  },
  {
   "id": "itm_0052",
@@ -465,7 +494,8 @@
   "rarity": "uncommon",
   "sell_price": 234,
   "stack_max": 999,
-  "description": "An Icegear's drive gear-train, still meshing."
+  "description": "An Icegear's drive gear-train, still meshing.",
+  "icon": "04:13:6:6"
  },
  {
   "id": "itm_0053",
@@ -474,7 +504,8 @@
   "rarity": "common",
   "sell_price": 58,
   "stack_max": 999,
-  "description": "A facet of a keeper's crystal armour."
+  "description": "A facet of a keeper's crystal armour.",
+  "icon": "04:14:6:6"
  },
  {
   "id": "itm_0054",
@@ -483,7 +514,8 @@
   "rarity": "uncommon",
   "sell_price": 261,
   "stack_max": 999,
-  "description": "A keeper's data-slate; glyphs still scroll across it."
+  "description": "A keeper's data-slate; glyphs still scroll across it.",
+  "icon": "04:15:6:6"
  },
  {
   "id": "itm_0055",
@@ -492,7 +524,8 @@
   "rarity": "common",
   "sell_price": 57,
   "stack_max": 999,
-  "description": "A plate of ash-crusted Ashcrawler shell, still warm."
+  "description": "A plate of ash-crusted Ashcrawler shell, still warm.",
+  "icon": "04:16:6:6"
  },
  {
   "id": "itm_0056",
@@ -501,7 +534,8 @@
   "rarity": "uncommon",
   "sell_price": 257,
   "stack_max": 999,
-  "description": "The ember that glows between an Ashcrawler's plates; it never quite goes out."
+  "description": "The ember that glows between an Ashcrawler's plates; it never quite goes out.",
+  "icon": "04:17:6:6"
  },
  {
   "id": "itm_0057",
@@ -510,7 +544,8 @@
   "rarity": "common",
   "sell_price": 61,
   "stack_max": 999,
-  "description": "A chunk of charcoal body from a Cinder Imp."
+  "description": "A chunk of charcoal body from a Cinder Imp.",
+  "icon": "04:18:6:6"
  },
  {
   "id": "itm_0058",
@@ -519,7 +554,8 @@
   "rarity": "uncommon",
   "sell_price": 275,
   "stack_max": 999,
-  "description": "The hot coal at a Cinder Imp's heart. Wrap it before pocketing it."
+  "description": "The hot coal at a Cinder Imp's heart. Wrap it before pocketing it.",
+  "icon": "04:19:6:6"
  },
  {
   "id": "itm_0059",
@@ -528,7 +564,8 @@
   "rarity": "common",
   "sell_price": 65,
   "stack_max": 999,
-  "description": "A riveted iron plate from a Smelt Hound's flank."
+  "description": "A riveted iron plate from a Smelt Hound's flank.",
+  "icon": "04:20:6:6"
  },
  {
   "id": "itm_0060",
@@ -537,7 +574,8 @@
   "rarity": "uncommon",
   "sell_price": 293,
   "stack_max": 999,
-  "description": "A Smelt Hound's molten core in its ceramic housing."
+  "description": "A Smelt Hound's molten core in its ceramic housing.",
+  "icon": "04:21:6:6"
  },
  {
   "id": "itm_0061",
@@ -546,7 +584,8 @@
   "rarity": "common",
   "sell_price": 71,
   "stack_max": 999,
-  "description": "A scorched plate of Furnace Knight armour."
+  "description": "A scorched plate of Furnace Knight armour.",
+  "icon": "04:22:6:6"
  },
  {
   "id": "itm_0062",
@@ -555,7 +594,8 @@
   "rarity": "uncommon",
   "sell_price": 320,
   "stack_max": 999,
-  "description": "The firebox regulator from a Furnace Knight's breastplate."
+  "description": "The firebox regulator from a Furnace Knight's breastplate.",
+  "icon": "04:23:6:6"
  },
  {
   "id": "itm_0063",
@@ -564,7 +604,8 @@
   "rarity": "common",
   "sell_price": 70,
   "stack_max": 999,
-  "description": "A dim shard of condensed null light. Cold to the touch."
+  "description": "A dim shard of condensed null light. Cold to the touch.",
+  "icon": "04:24:6:6"
  },
  {
   "id": "itm_0064",
@@ -573,7 +614,8 @@
   "rarity": "uncommon",
   "sell_price": 315,
   "stack_max": 999,
-  "description": "The hollow white heart of a Null Wisp, still drinking the light around it."
+  "description": "The hollow white heart of a Null Wisp, still drinking the light around it.",
+  "icon": "04:25:6:6"
  },
  {
   "id": "itm_0065",
@@ -582,7 +624,8 @@
   "rarity": "common",
   "sell_price": 74,
   "stack_max": 999,
-  "description": "A dented panel from a Shade Carrier's cargo hull."
+  "description": "A dented panel from a Shade Carrier's cargo hull.",
+  "icon": "04:26:6:6"
  },
  {
   "id": "itm_0066",
@@ -591,7 +634,8 @@
   "rarity": "uncommon",
   "sell_price": 333,
   "stack_max": 999,
-  "description": "A hauler's route computer, still murmuring stop names."
+  "description": "A hauler's route computer, still murmuring stop names.",
+  "icon": "04:27:6:6"
  },
  {
   "id": "itm_0067",
@@ -600,7 +644,8 @@
   "rarity": "common",
   "sell_price": 79,
   "stack_max": 999,
-  "description": "A hexagonal frame segment from a Lattice Drone."
+  "description": "A hexagonal frame segment from a Lattice Drone.",
+  "icon": "04:28:6:6"
  },
  {
   "id": "itm_0068",
@@ -609,7 +654,8 @@
   "rarity": "uncommon",
   "sell_price": 356,
   "stack_max": 999,
-  "description": "A drone's lattice core, faintly humming."
+  "description": "A drone's lattice core, faintly humming.",
+  "icon": "04:29:6:6"
  },
  {
   "id": "itm_0069",
@@ -618,7 +664,8 @@
   "rarity": "common",
   "sell_price": 85,
   "stack_max": 999,
-  "description": "A shard of an Executor's black ceramic shell."
+  "description": "A shard of an Executor's black ceramic shell.",
+  "icon": "04:30:6:6"
  },
  {
   "id": "itm_0070",
@@ -627,7 +674,8 @@
   "rarity": "uncommon",
   "sell_price": 383,
   "stack_max": 999,
-  "description": "The slit-mask lens of an Executor, its light gone out."
+  "description": "The slit-mask lens of an Executor, its light gone out.",
+  "icon": "04:31:6:6"
  },
  {
   "id": "itm_0071",
@@ -636,7 +684,8 @@
   "rarity": "rare",
   "sell_price": 120,
   "stack_max": 999,
-  "description": "A pearl of condensed aether dew, found in one Mosskin in hundreds."
+  "description": "A pearl of condensed aether dew, found in one Mosskin in hundreds.",
+  "icon": "04:32:6:6"
  },
  {
   "id": "itm_0072",
@@ -645,7 +694,8 @@
   "rarity": "rare",
   "sell_price": 160,
   "stack_max": 999,
-  "description": "The dense heart of an old Sporeling colony."
+  "description": "The dense heart of an old Sporeling colony.",
+  "icon": "04:33:6:6"
  },
  {
   "id": "itm_0073",
@@ -654,7 +704,8 @@
   "rarity": "uncommon",
   "sell_price": 50,
   "stack_max": 999,
-  "description": "A splinter of Aetherite, the crystal that ran Aethrion. Every artificer wants them."
+  "description": "A splinter of Aetherite, the crystal that ran Aethrion. Every artificer wants them.",
+  "icon": "04:34:6:6"
  },
  {
   "id": "itm_0074",
@@ -663,7 +714,8 @@
   "rarity": "uncommon",
   "sell_price": 32,
   "stack_max": 999,
-  "description": "A small Aethrion gear, still true. Craglets swallow them; Barkwardens are made of them."
+  "description": "A small Aethrion gear, still true. Craglets swallow them; Barkwardens are made of them.",
+  "icon": "04:35:6:6"
  },
  {
   "id": "itm_0075",
@@ -796,7 +848,8 @@
   "rarity": "uncommon",
   "sell_price": 0,
   "stack_max": 1,
-  "description": "Wayfarer Guild warrant. Opens Hollowroot Cavern's lift."
+  "description": "Wayfarer Guild warrant. Opens Hollowroot Cavern's lift.",
+  "icon": "02:20:6:6"
  },
  {
   "id": "itm_0084",
@@ -805,7 +858,8 @@
   "rarity": "rare",
   "sell_price": 200,
   "stack_max": 999,
-  "description": "A perfect amber bead from the core of an Ambermite colony."
+  "description": "A perfect amber bead from the core of an Ambermite colony.",
+  "icon": "05:0:6:6"
  },
  {
   "id": "itm_0085",
@@ -814,7 +868,8 @@
   "rarity": "rare",
   "sell_price": 800,
   "stack_max": 999,
-  "description": "Wood from the Warden's core, still pulsing with aether."
+  "description": "Wood from the Warden's core, still pulsing with aether.",
+  "icon": "05:1:6:6"
  },
  {
   "id": "itm_0100",
@@ -823,7 +878,8 @@
   "rarity": "common",
   "sell_price": 18,
   "stack_max": 999,
-  "description": "Slippery skin-oil from a Mossback Newt. Tonic makers' base."
+  "description": "Slippery skin-oil from a Mossback Newt. Tonic makers' base.",
+  "icon": "05:2:6:6"
  },
  {
   "id": "itm_0101",
@@ -832,7 +888,8 @@
   "rarity": "uncommon",
   "sell_price": 81,
   "stack_max": 999,
-  "description": "An intact moss pelt from a Newt's back; it never dries out."
+  "description": "An intact moss pelt from a Newt's back; it never dries out.",
+  "icon": "05:3:6:6"
  },
  {
   "id": "itm_0102",
@@ -841,7 +898,8 @@
   "rarity": "common",
   "sell_price": 22,
   "stack_max": 999,
-  "description": "A scale of jade wing-dust that glows for days."
+  "description": "A scale of jade wing-dust that glows for days.",
+  "icon": "05:4:6:6"
  },
  {
   "id": "itm_0103",
@@ -850,7 +908,8 @@
   "rarity": "uncommon",
   "sell_price": 99,
   "stack_max": 999,
-  "description": "The gland a Jadewing Moth fires its bolts from."
+  "description": "The gland a Jadewing Moth fires its bolts from.",
+  "icon": "05:5:6:6"
  },
  {
   "id": "itm_0104",
@@ -859,7 +918,8 @@
   "rarity": "common",
   "sell_price": 23,
   "stack_max": 999,
-  "description": "A bark plate shed from a Barkhound's shoulder."
+  "description": "A bark plate shed from a Barkhound's shoulder.",
+  "icon": "05:6:6:6"
  },
  {
   "id": "itm_0105",
@@ -868,7 +928,8 @@
   "rarity": "uncommon",
   "sell_price": 104,
   "stack_max": 999,
-  "description": "A wooden fang as hard as iron."
+  "description": "A wooden fang as hard as iron.",
+  "icon": "05:7:6:6"
  },
  {
   "id": "itm_0106",
@@ -877,7 +938,8 @@
   "rarity": "common",
   "sell_price": 26,
   "stack_max": 999,
-  "description": "A worn shear-blade from a Pruning Tender."
+  "description": "A worn shear-blade from a Pruning Tender.",
+  "icon": "05:8:6:6"
  },
  {
   "id": "itm_0107",
@@ -886,7 +948,8 @@
   "rarity": "uncommon",
   "sell_price": 117,
   "stack_max": 999,
-  "description": "The spindle that winds a Tender's grafting tape; precise Aethrion work."
+  "description": "The spindle that winds a Tender's grafting tape; precise Aethrion work.",
+  "icon": "05:9:6:6"
  },
  {
   "id": "itm_0108",
@@ -895,7 +958,8 @@
   "rarity": "common",
   "sell_price": 28,
   "stack_max": 999,
-  "description": "A tuft of burr-studded Thistlehare fur."
+  "description": "A tuft of burr-studded Thistlehare fur.",
+  "icon": "05:10:6:6"
  },
  {
   "id": "itm_0109",
@@ -904,7 +968,8 @@
   "rarity": "uncommon",
   "sell_price": 126,
   "stack_max": 999,
-  "description": "A Thistlehare's tail burr, packed with seeds."
+  "description": "A Thistlehare's tail burr, packed with seeds.",
+  "icon": "05:11:6:6"
  },
  {
   "id": "itm_0110",
@@ -913,7 +978,8 @@
   "rarity": "common",
   "sell_price": 33,
   "stack_max": 999,
-  "description": "A copper coil grown through a branch of antler."
+  "description": "A copper coil grown through a branch of antler.",
+  "icon": "05:12:6:6"
  },
  {
   "id": "itm_0111",
@@ -922,7 +988,8 @@
   "rarity": "uncommon",
   "sell_price": 149,
   "stack_max": 999,
-  "description": "A whole antler tine, coils intact; it hums when held."
+  "description": "A whole antler tine, coils intact; it hums when held.",
+  "icon": "05:13:6:6"
  },
  {
   "id": "itm_0112",
@@ -931,7 +998,8 @@
   "rarity": "common",
   "sell_price": 34,
   "stack_max": 999,
-  "description": "Violet skin from a burst Sporebloat."
+  "description": "Violet skin from a burst Sporebloat.",
+  "icon": "05:14:6:6"
  },
  {
   "id": "itm_0113",
@@ -940,7 +1008,8 @@
   "rarity": "uncommon",
   "sell_price": 153,
   "stack_max": 999,
-  "description": "A sealed Sporebloat bladder. Handle gently."
+  "description": "A sealed Sporebloat bladder. Handle gently.",
+  "icon": "05:15:6:6"
  },
  {
   "id": "itm_0114",
@@ -949,7 +1018,8 @@
   "rarity": "common",
   "sell_price": 34,
   "stack_max": 999,
-  "description": "A felt of threads from a Spore Matron's stalk."
+  "description": "A felt of threads from a Spore Matron's stalk.",
+  "icon": "05:16:6:6"
  },
  {
   "id": "itm_0115",
@@ -958,7 +1028,8 @@
   "rarity": "uncommon",
   "sell_price": 153,
   "stack_max": 999,
-  "description": "One of the jade lanterns that hang under a Matron's cap."
+  "description": "One of the jade lanterns that hang under a Matron's cap.",
+  "icon": "05:17:6:6"
  },
  {
   "id": "itm_0116",
@@ -967,7 +1038,8 @@
   "rarity": "common",
   "sell_price": 36,
   "stack_max": 999,
-  "description": "Polished heartwood plate from a Pistonguard."
+  "description": "Polished heartwood plate from a Pistonguard.",
+  "icon": "05:18:6:6"
  },
  {
   "id": "itm_0117",
@@ -976,7 +1048,8 @@
   "rarity": "uncommon",
   "sell_price": 162,
   "stack_max": 999,
-  "description": "A working piston, sleeved in heartwood."
+  "description": "A working piston, sleeved in heartwood.",
+  "icon": "05:19:6:6"
  },
  {
   "id": "itm_0118",
@@ -985,7 +1058,8 @@
   "rarity": "rare",
   "sell_price": 1040,
   "stack_max": 999,
-  "description": "Sap that has set into glowing jade around a thread of aether. Verdantis's prize; Sapdrones, Tenders and Sentinels carry it."
+  "description": "Sap that has set into glowing jade around a thread of aether. Verdantis's prize; Sapdrones, Tenders and Sentinels carry it.",
+  "icon": "05:20:6:6"
  },
  {
   "id": "itm_0119",
@@ -994,7 +1068,8 @@
   "rarity": "rare",
   "sell_price": 1520,
   "stack_max": 999,
-  "description": "The mainspring of the Heartwood Engine's pump, grown through with living wood."
+  "description": "The mainspring of the Heartwood Engine's pump, grown through with living wood.",
+  "icon": "05:21:6:6"
  },
  {
   "id": "itm_0130",
@@ -1003,7 +1078,8 @@
   "rarity": "common",
   "sell_price": 27,
   "stack_max": 999,
-  "description": "A dusty jackal pelt. Tonic makers render it for oil."
+  "description": "A dusty jackal pelt. Tonic makers render it for oil.",
+  "icon": "05:22:6:6"
  },
  {
   "id": "itm_0131",
@@ -1012,7 +1088,8 @@
   "rarity": "uncommon",
   "sell_price": 122,
   "stack_max": 999,
-  "description": "A brass tag from a long-lost caravan, worn by a jackal. Collectors pay for them."
+  "description": "A brass tag from a long-lost caravan, worn by a jackal. Collectors pay for them.",
+  "icon": "05:23:6:6"
  },
  {
   "id": "itm_0132",
@@ -1021,7 +1098,8 @@
   "rarity": "common",
   "sell_price": 31,
   "stack_max": 999,
-  "description": "A sheet of brass foil from a Brass Kite's wing."
+  "description": "A sheet of brass foil from a Brass Kite's wing.",
+  "icon": "05:24:6:6"
  },
  {
   "id": "itm_0133",
@@ -1030,7 +1108,8 @@
   "rarity": "uncommon",
   "sell_price": 140,
   "stack_max": 999,
-  "description": "A Brass Kite's nose lens, still focused."
+  "description": "A Brass Kite's nose lens, still focused.",
+  "icon": "05:25:6:6"
  },
  {
   "id": "itm_0134",
@@ -1039,7 +1118,8 @@
   "rarity": "common",
   "sell_price": 35,
   "stack_max": 999,
-  "description": "A ridged, sun-baked basilisk scale."
+  "description": "A ridged, sun-baked basilisk scale.",
+  "icon": "05:26:6:6"
  },
  {
   "id": "itm_0135",
@@ -1048,7 +1128,8 @@
   "rarity": "uncommon",
   "sell_price": 158,
   "stack_max": 999,
-  "description": "The glowing glass club from a basilisk's tail."
+  "description": "The glowing glass club from a basilisk's tail.",
+  "icon": "05:27:6:6"
  },
  {
   "id": "itm_0136",
@@ -1057,7 +1138,8 @@
   "rarity": "common",
   "sell_price": 37,
   "stack_max": 999,
-  "description": "Fine brass wire from an Acolyte's calibrating arms."
+  "description": "Fine brass wire from an Acolyte's calibrating arms.",
+  "icon": "05:28:6:6"
  },
  {
   "id": "itm_0137",
@@ -1066,7 +1148,8 @@
   "rarity": "uncommon",
   "sell_price": 167,
   "stack_max": 999,
-  "description": "An Acolyte's mirror-plate hand."
+  "description": "An Acolyte's mirror-plate hand.",
+  "icon": "05:29:6:6"
  },
  {
   "id": "itm_0138",
@@ -1075,7 +1158,8 @@
   "rarity": "common",
   "sell_price": 42,
   "stack_max": 999,
-  "description": "A long, hollow Canal Strider leg."
+  "description": "A long, hollow Canal Strider leg.",
+  "icon": "05:30:6:6"
  },
  {
   "id": "itm_0139",
@@ -1084,7 +1168,8 @@
   "rarity": "uncommon",
   "sell_price": 189,
   "stack_max": 999,
-  "description": "A pearl a Strider grows from canal silt."
+  "description": "A pearl a Strider grows from canal silt.",
+  "icon": "05:31:6:6"
  },
  {
   "id": "itm_0140",
@@ -1093,7 +1178,8 @@
   "rarity": "common",
   "sell_price": 44,
   "stack_max": 999,
-  "description": "A strip of a Revenant's burial wrapping."
+  "description": "A strip of a Revenant's burial wrapping.",
+  "icon": "05:32:6:6"
  },
  {
   "id": "itm_0141",
@@ -1102,7 +1188,8 @@
   "rarity": "uncommon",
   "sell_price": 198,
   "stack_max": 999,
-  "description": "The dim lamp a Dust Revenant carries. It never goes out."
+  "description": "The dim lamp a Dust Revenant carries. It never goes out.",
+  "icon": "05:33:6:6"
  },
  {
   "id": "itm_0142",
@@ -1111,7 +1198,8 @@
   "rarity": "common",
   "sell_price": 46,
   "stack_max": 999,
-  "description": "A slab of the Colossus's body, carved with causeway marks."
+  "description": "A slab of the Colossus's body, carved with causeway marks.",
+  "icon": "05:34:6:6"
  },
  {
   "id": "itm_0143",
@@ -1120,7 +1208,8 @@
   "rarity": "uncommon",
   "sell_price": 207,
   "stack_max": 999,
-  "description": "The gear that drives a Colossus, big as a shield."
+  "description": "The gear that drives a Colossus, big as a shield.",
+  "icon": "05:35:6:6"
  },
  {
   "id": "itm_0144",
@@ -1129,7 +1218,8 @@
   "rarity": "common",
   "sell_price": 47,
   "stack_max": 999,
-  "description": "A splinter of a Lens-drone's prism."
+  "description": "A splinter of a Lens-drone's prism.",
+  "icon": "06:0:6:6"
  },
  {
   "id": "itm_0145",
@@ -1138,7 +1228,8 @@
   "rarity": "uncommon",
   "sell_price": 212,
   "stack_max": 999,
-  "description": "A whole Lens-drone prism, focused to a pinpoint."
+  "description": "A whole Lens-drone prism, focused to a pinpoint.",
+  "icon": "06:1:6:6"
  },
  {
   "id": "itm_0146",
@@ -1147,7 +1238,8 @@
   "rarity": "common",
   "sell_price": 50,
   "stack_max": 999,
-  "description": "A polished mirror-bronze plate from a Mirrorguard."
+  "description": "A polished mirror-bronze plate from a Mirrorguard.",
+  "icon": "06:2:6:6"
  },
  {
   "id": "itm_0147",
@@ -1156,7 +1248,8 @@
   "rarity": "uncommon",
   "sell_price": 225,
   "stack_max": 999,
-  "description": "The gimbal that aims a Mirrorguard's shield-mirror."
+  "description": "The gimbal that aims a Mirrorguard's shield-mirror.",
+  "icon": "06:3:6:6"
  },
  {
   "id": "itm_0148",
@@ -1165,7 +1258,8 @@
   "rarity": "rare",
   "sell_price": 1480,
   "stack_max": 999,
-  "description": "Desert glass that trapped a bolt of focused sunlight; it glows by itself. Solenia's prize: Glass Scarabs, Basilisks and Lens-drones carry it."
+  "description": "Desert glass that trapped a bolt of focused sunlight; it glows by itself. Solenia's prize: Glass Scarabs, Basilisks and Lens-drones carry it.",
+  "icon": "06:4:6:6"
  },
  {
   "id": "itm_0149",
@@ -1174,7 +1268,8 @@
   "rarity": "rare",
   "sell_price": 2080,
   "stack_max": 999,
-  "description": "The master lens from the Heliostat Sovereign's crown."
+  "description": "The master lens from the Heliostat Sovereign's crown.",
+  "icon": "06:5:6:6"
  },
  {
   "id": "itm_0150",
@@ -1183,7 +1278,8 @@
   "rarity": "uncommon",
   "sell_price": 0,
   "stack_max": 1,
-  "description": "A prism cut to the Heliostat Vault's lock. The Guild gives it to Wayfarers who clear the Causeway."
+  "description": "A prism cut to the Heliostat Vault's lock. The Guild gives it to Wayfarers who clear the Causeway.",
+  "icon": "02:21:6:6"
  },
  {
   "id": "itm_0160",
@@ -1192,7 +1288,8 @@
   "rarity": "common",
   "sell_price": 36,
   "stack_max": 999,
-  "description": "A brass-tinted flight feather from a Gullwing Skimmer."
+  "description": "A brass-tinted flight feather from a Gullwing Skimmer.",
+  "icon": "06:6:6:6"
  },
  {
   "id": "itm_0161",
@@ -1201,7 +1298,8 @@
   "rarity": "uncommon",
   "sell_price": 162,
   "stack_max": 999,
-  "description": "A crest feather that stiffens before a storm."
+  "description": "A crest feather that stiffens before a storm.",
+  "icon": "06:7:6:6"
  },
  {
   "id": "itm_0162",
@@ -1210,7 +1308,8 @@
   "rarity": "common",
   "sell_price": 40,
   "stack_max": 999,
-  "description": "A spent stinging barb; handle by the base."
+  "description": "A spent stinging barb; handle by the base.",
+  "icon": "06:8:6:6"
  },
  {
   "id": "itm_0163",
@@ -1219,7 +1318,8 @@
   "rarity": "uncommon",
   "sell_price": 180,
   "stack_max": 999,
-  "description": "A full venom sac from a Polyp Spitter's crown."
+  "description": "A full venom sac from a Polyp Spitter's crown.",
+  "icon": "06:9:6:6"
  },
  {
   "id": "itm_0164",
@@ -1228,7 +1328,8 @@
   "rarity": "common",
   "sell_price": 42,
   "stack_max": 999,
-  "description": "A broad frond from a Kelp Tender. Edible, if you're hungry."
+  "description": "A broad frond from a Kelp Tender. Edible, if you're hungry.",
+  "icon": "06:10:6:6"
  },
  {
   "id": "itm_0165",
@@ -1237,7 +1338,8 @@
   "rarity": "uncommon",
   "sell_price": 189,
   "stack_max": 999,
-  "description": "The glowing float bulb of a Kelp Tender's head."
+  "description": "The glowing float bulb of a Kelp Tender's head.",
+  "icon": "06:11:6:6"
  },
  {
   "id": "itm_0166",
@@ -1246,7 +1348,8 @@
   "rarity": "common",
   "sell_price": 46,
   "stack_max": 999,
-  "description": "The drill-shell from a Hullborer's head."
+  "description": "The drill-shell from a Hullborer's head.",
+  "icon": "06:12:6:6"
  },
  {
   "id": "itm_0167",
@@ -1255,7 +1358,8 @@
   "rarity": "uncommon",
   "sell_price": 207,
   "stack_max": 999,
-  "description": "A Hullborer's rasping tooth-ribbon; it files copper."
+  "description": "A Hullborer's rasping tooth-ribbon; it files copper.",
+  "icon": "06:13:6:6"
  },
  {
   "id": "itm_0168",
@@ -1264,7 +1368,8 @@
   "rarity": "common",
   "sell_price": 50,
   "stack_max": 999,
-  "description": "Pearlescent skin from a Pearl Skate's back."
+  "description": "Pearlescent skin from a Pearl Skate's back.",
+  "icon": "06:14:6:6"
  },
  {
   "id": "itm_0169",
@@ -1273,7 +1378,8 @@
   "rarity": "uncommon",
   "sell_price": 225,
   "stack_max": 999,
-  "description": "The serrated tail barb of a Pearl Skate."
+  "description": "The serrated tail barb of a Pearl Skate.",
+  "icon": "06:15:6:6"
  },
  {
   "id": "itm_0170",
@@ -1282,7 +1388,8 @@
   "rarity": "common",
   "sell_price": 52,
   "stack_max": 999,
-  "description": "A shell scute with a rivet grown into it."
+  "description": "A shell scute with a rivet grown into it.",
+  "icon": "06:16:6:6"
  },
  {
   "id": "itm_0171",
@@ -1291,7 +1398,8 @@
   "rarity": "uncommon",
   "sell_price": 234,
   "stack_max": 999,
-  "description": "A whole shell plate fused with Aethrion hull copper."
+  "description": "A whole shell plate fused with Aethrion hull copper.",
+  "icon": "06:17:6:6"
  },
  {
   "id": "itm_0172",
@@ -1300,7 +1408,8 @@
   "rarity": "common",
   "sell_price": 54,
   "stack_max": 999,
-  "description": "A strip of Squall Ray wing that holds a static charge."
+  "description": "A strip of Squall Ray wing that holds a static charge.",
+  "icon": "06:18:6:6"
  },
  {
   "id": "itm_0173",
@@ -1309,7 +1418,8 @@
   "rarity": "uncommon",
   "sell_price": 243,
   "stack_max": 999,
-  "description": "A copper-tipped stinger that sparks when tapped."
+  "description": "A copper-tipped stinger that sparks when tapped.",
+  "icon": "06:19:6:6"
  },
  {
   "id": "itm_0174",
@@ -1318,7 +1428,8 @@
   "rarity": "common",
   "sell_price": 57,
   "stack_max": 999,
-  "description": "A brass vent valve from a Pressure Drone."
+  "description": "A brass vent valve from a Pressure Drone.",
+  "icon": "06:20:6:6"
  },
  {
   "id": "itm_0175",
@@ -1327,7 +1438,8 @@
   "rarity": "uncommon",
   "sell_price": 257,
   "stack_max": 999,
-  "description": "A drone's sealed gauge, its needle still twitching with the relay's pressure."
+  "description": "A drone's sealed gauge, its needle still twitching with the relay's pressure.",
+  "icon": "06:21:6:6"
  },
  {
   "id": "itm_0176",
@@ -1336,7 +1448,8 @@
   "rarity": "common",
   "sell_price": 59,
   "stack_max": 999,
-  "description": "A lump of Gloom Medusa bell that glows faintly in the dark."
+  "description": "A lump of Gloom Medusa bell that glows faintly in the dark.",
+  "icon": "06:22:6:6"
  },
  {
   "id": "itm_0177",
@@ -1345,7 +1458,8 @@
   "rarity": "uncommon",
   "sell_price": 266,
   "stack_max": 999,
-  "description": "An unbroken medusa bell, aether still pulsing in its nucleus."
+  "description": "An unbroken medusa bell, aether still pulsing in its nucleus.",
+  "icon": "06:23:6:6"
  },
  {
   "id": "itm_0178",
@@ -1354,7 +1468,8 @@
   "rarity": "rare",
   "sell_price": 1880,
   "stack_max": 999,
-  "description": "A black pearl with a blue fire inside. Thalassia's prize: crabs, kelp, skates and medusae all carry them, one in hundreds."
+  "description": "A black pearl with a blue fire inside. Thalassia's prize: crabs, kelp, skates and medusae all carry them, one in hundreds.",
+  "icon": "06:24:6:6"
  },
  {
   "id": "itm_0179",
@@ -1363,7 +1478,8 @@
   "rarity": "rare",
   "sell_price": 2440,
   "stack_max": 999,
-  "description": "The Drowned Signalmind's eye-lens, still focusing a signal no one sends any more."
+  "description": "The Drowned Signalmind's eye-lens, still focusing a signal no one sends any more.",
+  "icon": "06:25:6:6"
  },
  {
   "id": "itm_0190",
@@ -1372,7 +1488,8 @@
   "rarity": "common",
   "sell_price": 45,
   "stack_max": 999,
-  "description": "Lean frozen meat. The hunters' staple on the treeline."
+  "description": "Lean frozen meat. The hunters' staple on the treeline.",
+  "icon": "06:26:6:6"
  },
  {
   "id": "itm_0191",
@@ -1381,7 +1498,8 @@
   "rarity": "uncommon",
   "sell_price": 203,
   "stack_max": 999,
-  "description": "A Rimehare whisker rimed with ice that never melts."
+  "description": "A Rimehare whisker rimed with ice that never melts.",
+  "icon": "06:27:6:6"
  },
  {
   "id": "itm_0192",
@@ -1390,7 +1508,8 @@
   "rarity": "common",
   "sell_price": 49,
   "stack_max": 999,
-  "description": "Coarse ram wool, glass chips caught in it."
+  "description": "Coarse ram wool, glass chips caught in it.",
+  "icon": "06:28:6:6"
  },
  {
   "id": "itm_0193",
@@ -1399,7 +1518,8 @@
   "rarity": "uncommon",
   "sell_price": 221,
   "stack_max": 999,
-  "description": "A ram's horn grown of clear blue volcanic glass."
+  "description": "A ram's horn grown of clear blue volcanic glass.",
+  "icon": "06:29:6:6"
  },
  {
   "id": "itm_0194",
@@ -1408,7 +1528,8 @@
   "rarity": "common",
   "sell_price": 53,
   "stack_max": 999,
-  "description": "A frost-ridged serpent scale, cold to the touch."
+  "description": "A frost-ridged serpent scale, cold to the touch.",
+  "icon": "06:30:6:6"
  },
  {
   "id": "itm_0195",
@@ -1417,7 +1538,8 @@
   "rarity": "uncommon",
   "sell_price": 239,
   "stack_max": 999,
-  "description": "A serpent gland full of Aethrion coolant."
+  "description": "A serpent gland full of Aethrion coolant.",
+  "icon": "06:31:6:6"
  },
  {
   "id": "itm_0196",
@@ -1426,7 +1548,8 @@
   "rarity": "common",
   "sell_price": 56,
   "stack_max": 999,
-  "description": "A dented armour plate from a Glacier Juggernaut."
+  "description": "A dented armour plate from a Glacier Juggernaut.",
+  "icon": "06:32:6:6"
  },
  {
   "id": "itm_0197",
@@ -1435,7 +1558,8 @@
   "rarity": "uncommon",
   "sell_price": 252,
   "stack_max": 999,
-  "description": "The furnace coil that drives a plough mech's tracks."
+  "description": "The furnace coil that drives a plough mech's tracks.",
+  "icon": "06:33:6:6"
  },
  {
   "id": "itm_0198",
@@ -1444,7 +1568,8 @@
   "rarity": "common",
   "sell_price": 60,
   "stack_max": 999,
-  "description": "A splinter of a Mirrorshade; it reflects things that are not there."
+  "description": "A splinter of a Mirrorshade; it reflects things that are not there.",
+  "icon": "06:34:6:6"
  },
  {
   "id": "itm_0199",
@@ -1453,7 +1578,8 @@
   "rarity": "uncommon",
   "sell_price": 270,
   "stack_max": 999,
-  "description": "An unbroken palm of mirror-glass from a Mirrorshade's heart."
+  "description": "An unbroken palm of mirror-glass from a Mirrorshade's heart.",
+  "icon": "06:35:6:6"
  },
  {
   "id": "itm_0200",
@@ -1462,7 +1588,8 @@
   "rarity": "common",
   "sell_price": 61,
   "stack_max": 999,
-  "description": "Frost-matted wool from a Behemoth's hump."
+  "description": "Frost-matted wool from a Behemoth's hump.",
+  "icon": "07:0:6:6"
  },
  {
   "id": "itm_0201",
@@ -1471,7 +1598,8 @@
   "rarity": "uncommon",
   "sell_price": 275,
   "stack_max": 999,
-  "description": "A curling tusk, ivory veined with ice."
+  "description": "A curling tusk, ivory veined with ice.",
+  "icon": "07:1:6:6"
  },
  {
   "id": "itm_0202",
@@ -1480,7 +1608,8 @@
   "rarity": "common",
   "sell_price": 63,
   "stack_max": 999,
-  "description": "White enamel casing from a Cryo Sentry."
+  "description": "White enamel casing from a Cryo Sentry.",
+  "icon": "07:2:6:6"
  },
  {
   "id": "itm_0203",
@@ -1489,7 +1618,8 @@
   "rarity": "uncommon",
   "sell_price": 284,
   "stack_max": 999,
-  "description": "A sentry's power cell, frost forming on it in warm air."
+  "description": "A sentry's power cell, frost forming on it in warm air.",
+  "icon": "07:3:6:6"
  },
  {
   "id": "itm_0204",
@@ -1498,7 +1628,8 @@
   "rarity": "common",
   "sell_price": 66,
   "stack_max": 999,
-  "description": "A thread of glyph-light that an Archive Specter left behind."
+  "description": "A thread of glyph-light that an Archive Specter left behind.",
+  "icon": "07:4:6:6"
  },
  {
   "id": "itm_0205",
@@ -1507,7 +1638,8 @@
   "rarity": "uncommon",
   "sell_price": 297,
   "stack_max": 999,
-  "description": "A tiny crystal holding someone's recorded memory."
+  "description": "A tiny crystal holding someone's recorded memory.",
+  "icon": "07:5:6:6"
  },
  {
   "id": "itm_0206",
@@ -1516,7 +1648,8 @@
   "rarity": "common",
   "sell_price": 68,
   "stack_max": 999,
-  "description": "A spent ice lance, sharp as glass."
+  "description": "A spent ice lance, sharp as glass.",
+  "icon": "07:6:6:6"
  },
  {
   "id": "itm_0207",
@@ -1525,7 +1658,8 @@
   "rarity": "uncommon",
   "sell_price": 306,
   "stack_max": 999,
-  "description": "A Cryo Lancer's aiming prism."
+  "description": "A Cryo Lancer's aiming prism.",
+  "icon": "07:7:6:6"
  },
  {
   "id": "itm_0208",
@@ -1534,7 +1668,8 @@
   "rarity": "rare",
   "sell_price": 2080,
   "stack_max": 999,
-  "description": "A prism of ice that never melts. Crystallis's prize: wisps, rams and mirrorshades carry them, one in hundreds."
+  "description": "A prism of ice that never melts. Crystallis's prize: wisps, rams and mirrorshades carry them, one in hundreds.",
+  "icon": "07:8:6:6"
  },
  {
   "id": "itm_0209",
@@ -1543,7 +1678,8 @@
   "rarity": "rare",
   "sell_price": 2800,
   "stack_max": 999,
-  "description": "A shard of the Archive's cryocore, holding a cold no furnace can touch."
+  "description": "A shard of the Archive's cryocore, holding a cold no furnace can touch.",
+  "icon": "07:9:6:6"
  },
  {
   "id": "itm_0220",
@@ -1552,7 +1688,8 @@
   "rarity": "common",
   "sell_price": 59,
   "stack_max": 999,
-  "description": "A knob of slag broken off a Slagback Toad's back."
+  "description": "A knob of slag broken off a Slagback Toad's back.",
+  "icon": "07:10:6:6"
  },
  {
   "id": "itm_0221",
@@ -1561,7 +1698,8 @@
   "rarity": "uncommon",
   "sell_price": 266,
   "stack_max": 999,
-  "description": "The heat gland in a Slagback's throat; herbalists brew it into tonics."
+  "description": "The heat gland in a Slagback's throat; herbalists brew it into tonics.",
+  "icon": "07:11:6:6"
  },
  {
   "id": "itm_0222",
@@ -1570,7 +1708,8 @@
   "rarity": "common",
   "sell_price": 66,
   "stack_max": 999,
-  "description": "A bead of weld metal from a Crucible Tender's arc arm."
+  "description": "A bead of weld metal from a Crucible Tender's arc arm.",
+  "icon": "07:12:6:6"
  },
  {
   "id": "itm_0223",
@@ -1579,7 +1718,8 @@
   "rarity": "uncommon",
   "sell_price": 297,
   "stack_max": 999,
-  "description": "A working Aethrion welding nozzle."
+  "description": "A working Aethrion welding nozzle.",
+  "icon": "07:13:6:6"
  },
  {
   "id": "itm_0224",
@@ -1588,7 +1728,8 @@
   "rarity": "common",
   "sell_price": 69,
   "stack_max": 999,
-  "description": "A glossy black scale from a Vent Skink."
+  "description": "A glossy black scale from a Vent Skink.",
+  "icon": "07:14:6:6"
  },
  {
   "id": "itm_0225",
@@ -1597,7 +1738,8 @@
   "rarity": "uncommon",
   "sell_price": 311,
   "stack_max": 999,
-  "description": "The gas bladder a Vent Skink uses to dive into lava. Cool and blue inside."
+  "description": "The gas bladder a Vent Skink uses to dive into lava. Cool and blue inside.",
+  "icon": "07:15:6:6"
  },
  {
   "id": "itm_0226",
@@ -1606,7 +1748,8 @@
   "rarity": "common",
   "sell_price": 70,
   "stack_max": 999,
-  "description": "Light frothy stone a Magma Spitter coughs up."
+  "description": "Light frothy stone a Magma Spitter coughs up.",
+  "icon": "07:16:6:6"
  },
  {
   "id": "itm_0227",
@@ -1615,7 +1758,8 @@
   "rarity": "uncommon",
   "sell_price": 315,
   "stack_max": 999,
-  "description": "The heat-proof crop where a Spitter stores its magma."
+  "description": "The heat-proof crop where a Spitter stores its magma.",
+  "icon": "07:17:6:6"
  },
  {
   "id": "itm_0228",
@@ -1624,7 +1768,8 @@
   "rarity": "common",
   "sell_price": 73,
   "stack_max": 999,
-  "description": "An Aethrion bridge rivet, carried off by a Rivet Scrapling."
+  "description": "An Aethrion bridge rivet, carried off by a Rivet Scrapling.",
+  "icon": "07:18:6:6"
  },
  {
   "id": "itm_0229",
@@ -1633,7 +1778,8 @@
   "rarity": "uncommon",
   "sell_price": 329,
   "stack_max": 999,
-  "description": "The single glowing gear that serves a Scrapling as an eye."
+  "description": "The single glowing gear that serves a Scrapling as an eye.",
+  "icon": "07:19:6:6"
  },
  {
   "id": "itm_0230",
@@ -1642,7 +1788,8 @@
   "rarity": "common",
   "sell_price": 77,
   "stack_max": 999,
-  "description": "A slab of set slag from a Slagforged Brute."
+  "description": "A slab of set slag from a Slagforged Brute.",
+  "icon": "07:20:6:6"
  },
  {
   "id": "itm_0231",
@@ -1651,7 +1798,8 @@
   "rarity": "uncommon",
   "sell_price": 347,
   "stack_max": 999,
-  "description": "The seam line where a Brute left its mould, dense as iron."
+  "description": "The seam line where a Brute left its mould, dense as iron.",
+  "icon": "07:21:6:6"
  },
  {
   "id": "itm_0232",
@@ -1660,7 +1808,8 @@
   "rarity": "common",
   "sell_price": 79,
   "stack_max": 999,
-  "description": "Metal that cooled the moment a Pour Wraith died."
+  "description": "Metal that cooled the moment a Pour Wraith died.",
+  "icon": "07:22:6:6"
  },
  {
   "id": "itm_0233",
@@ -1669,7 +1818,8 @@
   "rarity": "uncommon",
   "sell_price": 356,
   "stack_max": 999,
-  "description": "The still-liquid centre of a Pour Wraith, sealed in its own skin."
+  "description": "The still-liquid centre of a Pour Wraith, sealed in its own skin.",
+  "icon": "07:23:6:6"
  },
  {
   "id": "itm_0234",
@@ -1678,7 +1828,8 @@
   "rarity": "common",
   "sell_price": 81,
   "stack_max": 999,
-  "description": "Dense Aethrion coke from a Zero Stoker's hopper."
+  "description": "Dense Aethrion coke from a Zero Stoker's hopper.",
+  "icon": "07:24:6:6"
  },
  {
   "id": "itm_0235",
@@ -1687,7 +1838,8 @@
   "rarity": "uncommon",
   "sell_price": 365,
   "stack_max": 999,
-  "description": "A Zero Stoker's grille-faced firebox."
+  "description": "A Zero Stoker's grille-faced firebox.",
+  "icon": "07:25:6:6"
  },
  {
   "id": "itm_0236",
@@ -1696,7 +1848,8 @@
   "rarity": "rare",
   "sell_price": 2840,
   "stack_max": 999,
-  "description": "An ember that keeps itself alight, born where Furnace Zero's fire runs through Emberfall. Imps carry them; knights and stokers burn on them."
+  "description": "An ember that keeps itself alight, born where Furnace Zero's fire runs through Emberfall. Imps carry them; knights and stokers burn on them.",
+  "icon": "07:26:6:6"
  },
  {
   "id": "itm_0237",
@@ -1705,7 +1858,8 @@
   "rarity": "rare",
   "sell_price": 3320,
   "stack_max": 999,
-  "description": "A shard of Kiln Prime's Aetherite heart, still white-hot."
+  "description": "A shard of Kiln Prime's Aetherite heart, still white-hot.",
+  "icon": "07:27:6:6"
  },
  {
   "id": "itm_0250",
@@ -1714,7 +1868,8 @@
   "rarity": "common",
   "sell_price": 71,
   "stack_max": 999,
-  "description": "A violet-lit spine bristle from a Gutter Lurk."
+  "description": "A violet-lit spine bristle from a Gutter Lurk.",
+  "icon": "07:28:6:6"
  },
  {
   "id": "itm_0251",
@@ -1723,7 +1878,8 @@
   "rarity": "uncommon",
   "sell_price": 320,
   "stack_max": 999,
-  "description": "The reflective lens from a Gutter Lurk's eye; it sees in the dark."
+  "description": "The reflective lens from a Gutter Lurk's eye; it sees in the dark.",
+  "icon": "07:29:6:6"
  },
  {
   "id": "itm_0252",
@@ -1732,7 +1888,8 @@
   "rarity": "common",
   "sell_price": 74,
   "stack_max": 999,
-  "description": "A black glass petal that dims anything held behind it."
+  "description": "A black glass petal that dims anything held behind it.",
+  "icon": "07:30:6:6"
  },
  {
   "id": "itm_0253",
@@ -1741,7 +1898,8 @@
   "rarity": "uncommon",
   "sell_price": 333,
   "stack_max": 999,
-  "description": "The light-drinking bulb of a Nullbloom. Alchemists use it to draw out fatigue."
+  "description": "The light-drinking bulb of a Nullbloom. Alchemists use it to draw out fatigue.",
+  "icon": "07:31:6:6"
  },
  {
   "id": "itm_0254",
@@ -1750,7 +1908,8 @@
   "rarity": "common",
   "sell_price": 77,
   "stack_max": 999,
-  "description": "A rail-steel pin from a Coupler Mite's jaw."
+  "description": "A rail-steel pin from a Coupler Mite's jaw.",
+  "icon": "07:32:6:6"
  },
  {
   "id": "itm_0255",
@@ -1759,7 +1918,8 @@
   "rarity": "uncommon",
   "sell_price": 347,
   "stack_max": 999,
-  "description": "The status-light chip from a Coupler Mite's back."
+  "description": "The status-light chip from a Coupler Mite's back.",
+  "icon": "07:33:6:6"
  },
  {
   "id": "itm_0256",
@@ -1768,7 +1928,8 @@
   "rarity": "common",
   "sell_price": 80,
   "stack_max": 999,
-  "description": "A scrap of Riftling outline. It folds smaller than it should."
+  "description": "A scrap of Riftling outline. It folds smaller than it should.",
+  "icon": "07:34:6:6"
  },
  {
   "id": "itm_0257",
@@ -1777,7 +1938,8 @@
   "rarity": "uncommon",
   "sell_price": 360,
   "stack_max": 999,
-  "description": "A Riftling's pinpoint eye; looking through it shows the Veil."
+  "description": "A Riftling's pinpoint eye; looking through it shows the Veil.",
+  "icon": "07:35:6:6"
  },
  {
   "id": "itm_0258",
@@ -1786,7 +1948,8 @@
   "rarity": "common",
   "sell_price": 83,
   "stack_max": 999,
-  "description": "A copper-foil feather that crackles with static."
+  "description": "A copper-foil feather that crackles with static.",
+  "icon": "08:0:6:2"
  },
  {
   "id": "itm_0259",
@@ -1795,7 +1958,8 @@
   "rarity": "uncommon",
   "sell_price": 374,
   "stack_max": 999,
-  "description": "The organ that stores a Sparkwing's charge. Handle by the edges."
+  "description": "The organ that stores a Sparkwing's charge. Handle by the edges.",
+  "icon": "08:1:6:2"
  },
  {
   "id": "itm_0260",
@@ -1804,7 +1968,8 @@
   "rarity": "common",
   "sell_price": 84,
   "stack_max": 999,
-  "description": "A layered plate of sentinel armour."
+  "description": "A layered plate of sentinel armour.",
+  "icon": "08:2:6:2"
  },
  {
   "id": "itm_0261",
@@ -1813,7 +1978,8 @@
   "rarity": "uncommon",
   "sell_price": 378,
   "stack_max": 999,
-  "description": "The rotating ring from behind a sentinel's head."
+  "description": "The rotating ring from behind a sentinel's head.",
+  "icon": "08:3:6:2"
  },
  {
   "id": "itm_0262",
@@ -1822,7 +1988,8 @@
   "rarity": "common",
   "sell_price": 88,
   "stack_max": 999,
-  "description": "One glyph of the Lattice's language, fixed in crystal when its swarm broke."
+  "description": "One glyph of the Lattice's language, fixed in crystal when its swarm broke.",
+  "icon": "08:4:6:2"
  },
  {
   "id": "itm_0263",
@@ -1831,7 +1998,8 @@
   "rarity": "uncommon",
   "sell_price": 396,
   "stack_max": 999,
-  "description": "A whole sigil, intact. Scholars in Umbracrest pay well to read them."
+  "description": "A whole sigil, intact. Scholars in Umbracrest pay well to read them.",
+  "icon": "08:5:6:2"
  },
  {
   "id": "itm_0264",
@@ -1840,7 +2008,8 @@
   "rarity": "common",
   "sell_price": 89,
   "stack_max": 999,
-  "description": "A thread of solid lattice light from a Weaver's spinneret."
+  "description": "A thread of solid lattice light from a Weaver's spinneret.",
+  "icon": "08:6:6:2"
  },
  {
   "id": "itm_0265",
@@ -1849,7 +2018,8 @@
   "rarity": "uncommon",
   "sell_price": 401,
   "stack_max": 999,
-  "description": "A Lattice Weaver's spinneret, still warm with violet light."
+  "description": "A Lattice Weaver's spinneret, still warm with violet light.",
+  "icon": "08:7:6:2"
  },
  {
   "id": "itm_0266",
@@ -1858,7 +2028,8 @@
   "rarity": "rare",
   "sell_price": 3320,
   "stack_max": 999,
-  "description": "A junction of the Meridian Lattice, cut free and still carrying current. Drones, sentinels, executors and weavers are built round them."
+  "description": "A junction of the Meridian Lattice, cut free and still carrying current. Drones, sentinels, executors and weavers are built round them.",
+  "icon": "08:8:6:2"
  },
  {
   "id": "itm_0267",
@@ -1867,7 +2038,8 @@
   "rarity": "rare",
   "sell_price": 3640,
   "stack_max": 999,
-  "description": "A shard of the Lattice Sovereign's crystalline core, the rarest thing a Wayfarer can carry out of Nocthaven."
+  "description": "A shard of the Lattice Sovereign's crystalline core, the rarest thing a Wayfarer can carry out of Nocthaven.",
+  "icon": "08:9:6:2"
  },
  {
   "id": "itm_0268",
@@ -1876,7 +2048,8 @@
   "rarity": "rare",
   "sell_price": 0,
   "stack_max": 1,
-  "description": "A glyph-key cut from an Executor's mask. The Heart Warden lets its bearer descend into the Lattice Heart."
+  "description": "A glyph-key cut from an Executor's mask. The Heart Warden lets its bearer descend into the Lattice Heart.",
+  "icon": "02:22:6:6"
  },
  {
   "id": "itm_0900",
@@ -1889,7 +2062,8 @@
   "use": {
    "lure_radius": 14,
    "cooldown_ms": 8000
-  }
+  },
+  "icon": "01:29:6:6"
  },
  {
   "id": "itm_0901",
@@ -1902,7 +2076,8 @@
   "use": {
    "teleport": "town",
    "cooldown_ms": 3000
-  }
+  },
+  "icon": "01:30:6:6"
  },
  {
   "id": "itm_0902",
@@ -1915,7 +2090,8 @@
   "use": {
    "teleport": "camp",
    "cooldown_ms": 3000
-  }
+  },
+  "icon": "01:31:6:6"
  },
  {
   "id": "itm_0903",
@@ -1932,7 +2108,8 @@
     "duration_ms": 60000
    },
    "cooldown_ms": 1000
-  }
+  },
+  "icon": "01:32:6:6"
  },
  {
   "id": "itm_0904",
@@ -1949,7 +2126,8 @@
     "duration_ms": 600000
    },
    "cooldown_ms": 1000
-  }
+  },
+  "icon": "01:33:6:6"
  },
  {
   "id": "itm_0905",
@@ -1966,7 +2144,8 @@
     "duration_ms": 600000
    },
    "cooldown_ms": 1000
-  }
+  },
+  "icon": "01:34:6:6"
  },
  {
   "id": "itm_0950",
@@ -2042,7 +2221,8 @@
   "use": {
    "reset_stats": true,
    "cooldown_ms": 1000
-  }
+  },
+  "icon": "01:35:6:6"
  },
  {
   "id": "itm_1001",
@@ -2059,7 +2239,8 @@
    "item_level": 1,
    "min_level": 1,
    "attack": 16
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1002",
@@ -2076,7 +2257,8 @@
    "item_level": 1,
    "min_level": 1,
    "attack": 16
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1003",
@@ -2093,7 +2275,8 @@
    "item_level": 1,
    "min_level": 1,
    "attack": 16
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1004",
@@ -2110,7 +2293,8 @@
    "item_level": 1,
    "min_level": 1,
    "attack": 16
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1005",
@@ -2128,7 +2312,8 @@
    "min_level": 1,
    "armour": 8,
    "req": {}
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1006",
@@ -2146,7 +2331,8 @@
    "min_level": 1,
    "evasion": 8,
    "req": {}
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1007",
@@ -2164,7 +2350,8 @@
    "min_level": 1,
    "shield": 8,
    "req": {}
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1008",
@@ -2183,7 +2370,8 @@
    "armour": 5,
    "evasion": 5,
    "req": {}
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1009",
@@ -2202,7 +2390,8 @@
    "armour": 5,
    "shield": 5,
    "req": {}
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1010",
@@ -2221,7 +2410,8 @@
    "evasion": 5,
    "shield": 5,
    "req": {}
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1011",
@@ -2239,7 +2429,8 @@
    "min_level": 1,
    "armour": 14,
    "req": {}
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1012",
@@ -2257,7 +2448,8 @@
    "min_level": 1,
    "evasion": 14,
    "req": {}
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1013",
@@ -2275,7 +2467,8 @@
    "min_level": 1,
    "shield": 14,
    "req": {}
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1014",
@@ -2294,7 +2487,8 @@
    "armour": 9,
    "evasion": 9,
    "req": {}
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1015",
@@ -2313,7 +2507,8 @@
    "armour": 9,
    "shield": 8,
    "req": {}
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1016",
@@ -2332,7 +2527,8 @@
    "evasion": 9,
    "shield": 8,
    "req": {}
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1017",
@@ -2350,7 +2546,8 @@
    "min_level": 1,
    "armour": 5,
    "req": {}
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1018",
@@ -2368,7 +2565,8 @@
    "min_level": 1,
    "evasion": 5,
    "req": {}
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1019",
@@ -2386,7 +2584,8 @@
    "min_level": 1,
    "shield": 5,
    "req": {}
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1020",
@@ -2405,7 +2604,8 @@
    "armour": 3,
    "evasion": 3,
    "req": {}
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1021",
@@ -2424,7 +2624,8 @@
    "armour": 3,
    "shield": 3,
    "req": {}
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1022",
@@ -2443,7 +2644,8 @@
    "evasion": 3,
    "shield": 3,
    "req": {}
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1023",
@@ -2464,7 +2666,8 @@
      2
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1024",
@@ -2481,7 +2684,8 @@
    "item_level": 10,
    "min_level": 10,
    "attack": 50
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1025",
@@ -2498,7 +2702,8 @@
    "item_level": 10,
    "min_level": 10,
    "attack": 50
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1026",
@@ -2515,7 +2720,8 @@
    "item_level": 10,
    "min_level": 10,
    "attack": 50
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1027",
@@ -2532,7 +2738,8 @@
    "item_level": 10,
    "min_level": 10,
    "attack": 50
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1028",
@@ -2552,7 +2759,8 @@
    "req": {
     "vit": 9
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1029",
@@ -2572,7 +2780,8 @@
    "req": {
     "dex": 9
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1030",
@@ -2592,7 +2801,8 @@
    "req": {
     "int": 9
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1031",
@@ -2614,7 +2824,8 @@
     "vit": 4,
     "dex": 4
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1032",
@@ -2636,7 +2847,8 @@
     "vit": 4,
     "int": 4
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1033",
@@ -2658,7 +2870,8 @@
     "dex": 4,
     "int": 4
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1034",
@@ -2678,7 +2891,8 @@
    "req": {
     "vit": 9
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1035",
@@ -2698,7 +2912,8 @@
    "req": {
     "dex": 9
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1036",
@@ -2718,7 +2933,8 @@
    "req": {
     "int": 9
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1037",
@@ -2740,7 +2956,8 @@
     "vit": 4,
     "dex": 4
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1038",
@@ -2762,7 +2979,8 @@
     "vit": 4,
     "int": 4
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1039",
@@ -2784,7 +3002,8 @@
     "dex": 4,
     "int": 4
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1040",
@@ -2804,7 +3023,8 @@
    "req": {
     "vit": 9
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1041",
@@ -2824,7 +3044,8 @@
    "req": {
     "dex": 9
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1042",
@@ -2844,7 +3065,8 @@
    "req": {
     "int": 9
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1043",
@@ -2866,7 +3088,8 @@
     "vit": 4,
     "dex": 4
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1044",
@@ -2888,7 +3111,8 @@
     "vit": 4,
     "int": 4
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1045",
@@ -2910,7 +3134,8 @@
     "dex": 4,
     "int": 4
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1046",
@@ -2931,7 +3156,8 @@
      3
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1047",
@@ -2948,7 +3174,8 @@
    "item_level": 20,
    "min_level": 20,
    "attack": 92
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1048",
@@ -2965,7 +3192,8 @@
    "item_level": 20,
    "min_level": 20,
    "attack": 92
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1049",
@@ -2982,7 +3210,8 @@
    "item_level": 20,
    "min_level": 20,
    "attack": 92
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1050",
@@ -2999,7 +3228,8 @@
    "item_level": 20,
    "min_level": 20,
    "attack": 92
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1051",
@@ -3019,7 +3249,8 @@
    "req": {
     "vit": 19
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1052",
@@ -3039,7 +3270,8 @@
    "req": {
     "dex": 19
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1053",
@@ -3059,7 +3291,8 @@
    "req": {
     "int": 19
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1054",
@@ -3081,7 +3314,8 @@
     "vit": 9,
     "dex": 9
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1055",
@@ -3103,7 +3337,8 @@
     "vit": 9,
     "int": 9
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1056",
@@ -3125,7 +3360,8 @@
     "dex": 9,
     "int": 9
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1057",
@@ -3145,7 +3381,8 @@
    "req": {
     "vit": 19
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1058",
@@ -3165,7 +3402,8 @@
    "req": {
     "dex": 19
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1059",
@@ -3185,7 +3423,8 @@
    "req": {
     "int": 19
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1060",
@@ -3207,7 +3446,8 @@
     "vit": 9,
     "dex": 9
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1061",
@@ -3229,7 +3469,8 @@
     "vit": 9,
     "int": 9
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1062",
@@ -3251,7 +3492,8 @@
     "dex": 9,
     "int": 9
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1063",
@@ -3271,7 +3513,8 @@
    "req": {
     "vit": 19
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1064",
@@ -3291,7 +3534,8 @@
    "req": {
     "dex": 19
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1065",
@@ -3311,7 +3555,8 @@
    "req": {
     "int": 19
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1066",
@@ -3333,7 +3578,8 @@
     "vit": 9,
     "dex": 9
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1067",
@@ -3355,7 +3601,8 @@
     "vit": 9,
     "int": 9
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1068",
@@ -3377,7 +3624,8 @@
     "dex": 9,
     "int": 9
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1069",
@@ -3398,7 +3646,8 @@
      4
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1070",
@@ -3415,7 +3664,8 @@
    "item_level": 30,
    "min_level": 30,
    "attack": 138
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1071",
@@ -3432,7 +3682,8 @@
    "item_level": 30,
    "min_level": 30,
    "attack": 138
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1072",
@@ -3449,7 +3700,8 @@
    "item_level": 30,
    "min_level": 30,
    "attack": 138
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1073",
@@ -3466,7 +3718,8 @@
    "item_level": 30,
    "min_level": 30,
    "attack": 138
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1074",
@@ -3486,7 +3739,8 @@
    "req": {
     "vit": 29
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1075",
@@ -3506,7 +3760,8 @@
    "req": {
     "dex": 29
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1076",
@@ -3526,7 +3781,8 @@
    "req": {
     "int": 29
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1077",
@@ -3548,7 +3804,8 @@
     "vit": 14,
     "dex": 14
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1078",
@@ -3570,7 +3827,8 @@
     "vit": 14,
     "int": 14
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1079",
@@ -3592,7 +3850,8 @@
     "dex": 14,
     "int": 14
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1080",
@@ -3612,7 +3871,8 @@
    "req": {
     "vit": 29
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1081",
@@ -3632,7 +3892,8 @@
    "req": {
     "dex": 29
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1082",
@@ -3652,7 +3913,8 @@
    "req": {
     "int": 29
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1083",
@@ -3674,7 +3936,8 @@
     "vit": 14,
     "dex": 14
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1084",
@@ -3696,7 +3959,8 @@
     "vit": 14,
     "int": 14
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1085",
@@ -3718,7 +3982,8 @@
     "dex": 14,
     "int": 14
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1086",
@@ -3738,7 +4003,8 @@
    "req": {
     "vit": 29
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1087",
@@ -3758,7 +4024,8 @@
    "req": {
     "dex": 29
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1088",
@@ -3778,7 +4045,8 @@
    "req": {
     "int": 29
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1089",
@@ -3800,7 +4068,8 @@
     "vit": 14,
     "dex": 14
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1090",
@@ -3822,7 +4091,8 @@
     "vit": 14,
     "int": 14
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1091",
@@ -3844,7 +4114,8 @@
     "dex": 14,
     "int": 14
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1092",
@@ -3865,7 +4136,8 @@
      5
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1093",
@@ -3882,7 +4154,8 @@
    "item_level": 40,
    "min_level": 40,
    "attack": 188
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1094",
@@ -3899,7 +4172,8 @@
    "item_level": 40,
    "min_level": 40,
    "attack": 188
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1095",
@@ -3916,7 +4190,8 @@
    "item_level": 40,
    "min_level": 40,
    "attack": 188
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1096",
@@ -3933,7 +4208,8 @@
    "item_level": 40,
    "min_level": 40,
    "attack": 188
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1097",
@@ -3953,7 +4229,8 @@
    "req": {
     "vit": 39
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1098",
@@ -3973,7 +4250,8 @@
    "req": {
     "dex": 39
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1099",
@@ -3993,7 +4271,8 @@
    "req": {
     "int": 39
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1100",
@@ -4015,7 +4294,8 @@
     "vit": 19,
     "dex": 19
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1101",
@@ -4037,7 +4317,8 @@
     "vit": 19,
     "int": 19
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1102",
@@ -4059,7 +4340,8 @@
     "dex": 19,
     "int": 19
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1103",
@@ -4079,7 +4361,8 @@
    "req": {
     "vit": 39
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1104",
@@ -4099,7 +4382,8 @@
    "req": {
     "dex": 39
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1105",
@@ -4119,7 +4403,8 @@
    "req": {
     "int": 39
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1106",
@@ -4141,7 +4426,8 @@
     "vit": 19,
     "dex": 19
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1107",
@@ -4163,7 +4449,8 @@
     "vit": 19,
     "int": 19
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1108",
@@ -4185,7 +4472,8 @@
     "dex": 19,
     "int": 19
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1109",
@@ -4205,7 +4493,8 @@
    "req": {
     "vit": 39
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1110",
@@ -4225,7 +4514,8 @@
    "req": {
     "dex": 39
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1111",
@@ -4245,7 +4535,8 @@
    "req": {
     "int": 39
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1112",
@@ -4267,7 +4558,8 @@
     "vit": 19,
     "dex": 19
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1113",
@@ -4289,7 +4581,8 @@
     "vit": 19,
     "int": 19
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1114",
@@ -4311,7 +4604,8 @@
     "dex": 19,
     "int": 19
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1115",
@@ -4332,7 +4626,8 @@
      6
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1116",
@@ -4349,7 +4644,8 @@
    "item_level": 50,
    "min_level": 50,
    "attack": 242
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1117",
@@ -4366,7 +4662,8 @@
    "item_level": 50,
    "min_level": 50,
    "attack": 242
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1118",
@@ -4383,7 +4680,8 @@
    "item_level": 50,
    "min_level": 50,
    "attack": 242
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1119",
@@ -4400,7 +4698,8 @@
    "item_level": 50,
    "min_level": 50,
    "attack": 242
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1120",
@@ -4420,7 +4719,8 @@
    "req": {
     "vit": 49
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1121",
@@ -4440,7 +4740,8 @@
    "req": {
     "dex": 49
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1122",
@@ -4460,7 +4761,8 @@
    "req": {
     "int": 49
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1123",
@@ -4482,7 +4784,8 @@
     "vit": 24,
     "dex": 24
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1124",
@@ -4504,7 +4807,8 @@
     "vit": 24,
     "int": 24
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1125",
@@ -4526,7 +4830,8 @@
     "dex": 24,
     "int": 24
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1126",
@@ -4546,7 +4851,8 @@
    "req": {
     "vit": 49
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1127",
@@ -4566,7 +4872,8 @@
    "req": {
     "dex": 49
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1128",
@@ -4586,7 +4893,8 @@
    "req": {
     "int": 49
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1129",
@@ -4608,7 +4916,8 @@
     "vit": 24,
     "dex": 24
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1130",
@@ -4630,7 +4939,8 @@
     "vit": 24,
     "int": 24
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1131",
@@ -4652,7 +4962,8 @@
     "dex": 24,
     "int": 24
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1132",
@@ -4672,7 +4983,8 @@
    "req": {
     "vit": 49
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1133",
@@ -4692,7 +5004,8 @@
    "req": {
     "dex": 49
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1134",
@@ -4712,7 +5025,8 @@
    "req": {
     "int": 49
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1135",
@@ -4734,7 +5048,8 @@
     "vit": 24,
     "dex": 24
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1136",
@@ -4756,7 +5071,8 @@
     "vit": 24,
     "int": 24
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1137",
@@ -4778,7 +5094,8 @@
     "dex": 24,
     "int": 24
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1138",
@@ -4799,7 +5116,8 @@
      7
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1139",
@@ -4816,7 +5134,8 @@
    "item_level": 60,
    "min_level": 60,
    "attack": 300
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1140",
@@ -4833,7 +5152,8 @@
    "item_level": 60,
    "min_level": 60,
    "attack": 300
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1141",
@@ -4850,7 +5170,8 @@
    "item_level": 60,
    "min_level": 60,
    "attack": 300
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1142",
@@ -4867,7 +5188,8 @@
    "item_level": 60,
    "min_level": 60,
    "attack": 300
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1143",
@@ -4887,7 +5209,8 @@
    "req": {
     "vit": 59
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1144",
@@ -4907,7 +5230,8 @@
    "req": {
     "dex": 59
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1145",
@@ -4927,7 +5251,8 @@
    "req": {
     "int": 59
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1146",
@@ -4949,7 +5274,8 @@
     "vit": 29,
     "dex": 29
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1147",
@@ -4971,7 +5297,8 @@
     "vit": 29,
     "int": 29
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1148",
@@ -4993,7 +5320,8 @@
     "dex": 29,
     "int": 29
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1149",
@@ -5013,7 +5341,8 @@
    "req": {
     "vit": 59
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1150",
@@ -5033,7 +5362,8 @@
    "req": {
     "dex": 59
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1151",
@@ -5053,7 +5383,8 @@
    "req": {
     "int": 59
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1152",
@@ -5075,7 +5406,8 @@
     "vit": 29,
     "dex": 29
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1153",
@@ -5097,7 +5429,8 @@
     "vit": 29,
     "int": 29
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1154",
@@ -5119,7 +5452,8 @@
     "dex": 29,
     "int": 29
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1155",
@@ -5139,7 +5473,8 @@
    "req": {
     "vit": 59
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1156",
@@ -5159,7 +5494,8 @@
    "req": {
     "dex": 59
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1157",
@@ -5179,7 +5515,8 @@
    "req": {
     "int": 59
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1158",
@@ -5201,7 +5538,8 @@
     "vit": 29,
     "dex": 29
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1159",
@@ -5223,7 +5561,8 @@
     "vit": 29,
     "int": 29
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1160",
@@ -5245,7 +5584,8 @@
     "dex": 29,
     "int": 29
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1161",
@@ -5266,7 +5606,8 @@
      8
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1162",
@@ -5283,7 +5624,8 @@
    "item_level": 70,
    "min_level": 70,
    "attack": 362
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1163",
@@ -5300,7 +5642,8 @@
    "item_level": 70,
    "min_level": 70,
    "attack": 362
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1164",
@@ -5317,7 +5660,8 @@
    "item_level": 70,
    "min_level": 70,
    "attack": 362
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1165",
@@ -5334,7 +5678,8 @@
    "item_level": 70,
    "min_level": 70,
    "attack": 362
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1166",
@@ -5354,7 +5699,8 @@
    "req": {
     "vit": 69
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1167",
@@ -5374,7 +5720,8 @@
    "req": {
     "dex": 69
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1168",
@@ -5394,7 +5741,8 @@
    "req": {
     "int": 69
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1169",
@@ -5416,7 +5764,8 @@
     "vit": 34,
     "dex": 34
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1170",
@@ -5438,7 +5787,8 @@
     "vit": 34,
     "int": 34
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1171",
@@ -5460,7 +5810,8 @@
     "dex": 34,
     "int": 34
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1172",
@@ -5480,7 +5831,8 @@
    "req": {
     "vit": 69
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1173",
@@ -5500,7 +5852,8 @@
    "req": {
     "dex": 69
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1174",
@@ -5520,7 +5873,8 @@
    "req": {
     "int": 69
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1175",
@@ -5542,7 +5896,8 @@
     "vit": 34,
     "dex": 34
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1176",
@@ -5564,7 +5919,8 @@
     "vit": 34,
     "int": 34
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1177",
@@ -5586,7 +5942,8 @@
     "dex": 34,
     "int": 34
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1178",
@@ -5606,7 +5963,8 @@
    "req": {
     "vit": 69
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1179",
@@ -5626,7 +5984,8 @@
    "req": {
     "dex": 69
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1180",
@@ -5646,7 +6005,8 @@
    "req": {
     "int": 69
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1181",
@@ -5668,7 +6028,8 @@
     "vit": 34,
     "dex": 34
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1182",
@@ -5690,7 +6051,8 @@
     "vit": 34,
     "int": 34
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1183",
@@ -5712,7 +6074,8 @@
     "dex": 34,
     "int": 34
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1184",
@@ -5733,7 +6096,8 @@
      9
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1185",
@@ -5750,7 +6114,8 @@
    "item_level": 80,
    "min_level": 80,
    "attack": 428
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1186",
@@ -5767,7 +6132,8 @@
    "item_level": 80,
    "min_level": 80,
    "attack": 428
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1187",
@@ -5784,7 +6150,8 @@
    "item_level": 80,
    "min_level": 80,
    "attack": 428
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1188",
@@ -5801,7 +6168,8 @@
    "item_level": 80,
    "min_level": 80,
    "attack": 428
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1189",
@@ -5821,7 +6189,8 @@
    "req": {
     "vit": 79
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1190",
@@ -5841,7 +6210,8 @@
    "req": {
     "dex": 79
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1191",
@@ -5861,7 +6231,8 @@
    "req": {
     "int": 79
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1192",
@@ -5883,7 +6254,8 @@
     "vit": 39,
     "dex": 39
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1193",
@@ -5905,7 +6277,8 @@
     "vit": 39,
     "int": 39
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1194",
@@ -5927,7 +6300,8 @@
     "dex": 39,
     "int": 39
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1195",
@@ -5947,7 +6321,8 @@
    "req": {
     "vit": 79
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1196",
@@ -5967,7 +6342,8 @@
    "req": {
     "dex": 79
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1197",
@@ -5987,7 +6363,8 @@
    "req": {
     "int": 79
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1198",
@@ -6009,7 +6386,8 @@
     "vit": 39,
     "dex": 39
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1199",
@@ -6031,7 +6409,8 @@
     "vit": 39,
     "int": 39
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1200",
@@ -6053,7 +6432,8 @@
     "dex": 39,
     "int": 39
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1201",
@@ -6073,7 +6453,8 @@
    "req": {
     "vit": 79
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1202",
@@ -6093,7 +6474,8 @@
    "req": {
     "dex": 79
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1203",
@@ -6113,7 +6495,8 @@
    "req": {
     "int": 79
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1204",
@@ -6135,7 +6518,8 @@
     "vit": 39,
     "dex": 39
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1205",
@@ -6157,7 +6541,8 @@
     "vit": 39,
     "int": 39
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1206",
@@ -6179,7 +6564,8 @@
     "dex": 39,
     "int": 39
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1207",
@@ -6200,7 +6586,8 @@
      10
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1208",
@@ -6217,7 +6604,8 @@
    "item_level": 90,
    "min_level": 90,
    "attack": 498
-  }
+  },
+  "icon": "01:0:6:6"
  },
  {
   "id": "itm_1209",
@@ -6234,7 +6622,8 @@
    "item_level": 90,
    "min_level": 90,
    "attack": 498
-  }
+  },
+  "icon": "01:1:6:6"
  },
  {
   "id": "itm_1210",
@@ -6251,7 +6640,8 @@
    "item_level": 90,
    "min_level": 90,
    "attack": 498
-  }
+  },
+  "icon": "01:2:6:6"
  },
  {
   "id": "itm_1211",
@@ -6268,7 +6658,8 @@
    "item_level": 90,
    "min_level": 90,
    "attack": 498
-  }
+  },
+  "icon": "01:3:6:6"
  },
  {
   "id": "itm_1212",
@@ -6288,7 +6679,8 @@
    "req": {
     "vit": 89
    }
-  }
+  },
+  "icon": "01:4:6:6"
  },
  {
   "id": "itm_1213",
@@ -6308,7 +6700,8 @@
    "req": {
     "dex": 89
    }
-  }
+  },
+  "icon": "01:5:6:6"
  },
  {
   "id": "itm_1214",
@@ -6328,7 +6721,8 @@
    "req": {
     "int": 89
    }
-  }
+  },
+  "icon": "01:6:6:6"
  },
  {
   "id": "itm_1215",
@@ -6350,7 +6744,8 @@
     "vit": 44,
     "dex": 44
    }
-  }
+  },
+  "icon": "01:7:6:6"
  },
  {
   "id": "itm_1216",
@@ -6372,7 +6767,8 @@
     "vit": 44,
     "int": 44
    }
-  }
+  },
+  "icon": "01:8:6:6"
  },
  {
   "id": "itm_1217",
@@ -6394,7 +6790,8 @@
     "dex": 44,
     "int": 44
    }
-  }
+  },
+  "icon": "01:9:6:6"
  },
  {
   "id": "itm_1218",
@@ -6414,7 +6811,8 @@
    "req": {
     "vit": 89
    }
-  }
+  },
+  "icon": "01:10:6:6"
  },
  {
   "id": "itm_1219",
@@ -6434,7 +6832,8 @@
    "req": {
     "dex": 89
    }
-  }
+  },
+  "icon": "01:11:6:6"
  },
  {
   "id": "itm_1220",
@@ -6454,7 +6853,8 @@
    "req": {
     "int": 89
    }
-  }
+  },
+  "icon": "01:12:6:6"
  },
  {
   "id": "itm_1221",
@@ -6476,7 +6876,8 @@
     "vit": 44,
     "dex": 44
    }
-  }
+  },
+  "icon": "01:13:6:6"
  },
  {
   "id": "itm_1222",
@@ -6498,7 +6899,8 @@
     "vit": 44,
     "int": 44
    }
-  }
+  },
+  "icon": "01:14:6:6"
  },
  {
   "id": "itm_1223",
@@ -6520,7 +6922,8 @@
     "dex": 44,
     "int": 44
    }
-  }
+  },
+  "icon": "01:15:6:6"
  },
  {
   "id": "itm_1224",
@@ -6540,7 +6943,8 @@
    "req": {
     "vit": 89
    }
-  }
+  },
+  "icon": "01:16:6:6"
  },
  {
   "id": "itm_1225",
@@ -6560,7 +6964,8 @@
    "req": {
     "dex": 89
    }
-  }
+  },
+  "icon": "01:17:6:6"
  },
  {
   "id": "itm_1226",
@@ -6580,7 +6985,8 @@
    "req": {
     "int": 89
    }
-  }
+  },
+  "icon": "01:18:6:6"
  },
  {
   "id": "itm_1227",
@@ -6602,7 +7008,8 @@
     "vit": 44,
     "dex": 44
    }
-  }
+  },
+  "icon": "01:19:6:6"
  },
  {
   "id": "itm_1228",
@@ -6624,7 +7031,8 @@
     "vit": 44,
     "int": 44
    }
-  }
+  },
+  "icon": "01:20:6:6"
  },
  {
   "id": "itm_1229",
@@ -6646,7 +7054,8 @@
     "dex": 44,
     "int": 44
    }
-  }
+  },
+  "icon": "01:21:6:6"
  },
  {
   "id": "itm_1230",
@@ -6667,7 +7076,8 @@
      11
     ]
    ]
-  }
+  },
+  "icon": "01:22:6:6"
  },
  {
   "id": "itm_1231",
@@ -6686,7 +7096,8 @@
     "type": "fang",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:23:6:6"
  },
  {
   "id": "itm_1232",
@@ -6705,7 +7116,8 @@
     "type": "fang",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:23:6:6"
  },
  {
   "id": "itm_1233",
@@ -6724,7 +7136,8 @@
     "type": "fang",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:23:6:6"
  },
  {
   "id": "itm_1234",
@@ -6743,7 +7156,8 @@
     "type": "clover",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:24:6:6"
  },
  {
   "id": "itm_1235",
@@ -6762,7 +7176,8 @@
     "type": "clover",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:24:6:6"
  },
  {
   "id": "itm_1236",
@@ -6781,7 +7196,8 @@
     "type": "clover",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:24:6:6"
  },
  {
   "id": "itm_1237",
@@ -6800,7 +7216,8 @@
     "type": "razor",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:25:6:6"
  },
  {
   "id": "itm_1238",
@@ -6819,7 +7236,8 @@
     "type": "razor",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:25:6:6"
  },
  {
   "id": "itm_1239",
@@ -6838,7 +7256,8 @@
     "type": "razor",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:25:6:6"
  },
  {
   "id": "itm_1240",
@@ -6857,7 +7276,8 @@
     "type": "hourglass",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:26:6:6"
  },
  {
   "id": "itm_1241",
@@ -6876,7 +7296,8 @@
     "type": "hourglass",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:26:6:6"
  },
  {
   "id": "itm_1242",
@@ -6895,7 +7316,8 @@
     "type": "hourglass",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:26:6:6"
  },
  {
   "id": "itm_1243",
@@ -6914,7 +7336,8 @@
     "type": "quill",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:27:6:6"
  },
  {
   "id": "itm_1244",
@@ -6933,7 +7356,8 @@
     "type": "quill",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:27:6:6"
  },
  {
   "id": "itm_1245",
@@ -6952,7 +7376,8 @@
     "type": "quill",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:27:6:6"
  },
  {
   "id": "itm_1246",
@@ -6971,7 +7396,8 @@
     "type": "tempo",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:28:6:6"
  },
  {
   "id": "itm_1247",
@@ -6990,7 +7416,8 @@
     "type": "tempo",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:28:6:6"
  },
  {
   "id": "itm_1248",
@@ -7009,7 +7436,8 @@
     "type": "tempo",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:28:6:6"
  },
  {
   "id": "itm_1249",
@@ -7028,7 +7456,8 @@
     "type": "expanse",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:29:6:6"
  },
  {
   "id": "itm_1250",
@@ -7047,7 +7476,8 @@
     "type": "expanse",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:29:6:6"
  },
  {
   "id": "itm_1251",
@@ -7066,7 +7496,8 @@
     "type": "expanse",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:29:6:6"
  },
  {
   "id": "itm_1252",
@@ -7085,7 +7516,8 @@
     "type": "viper",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:30:6:6"
  },
  {
   "id": "itm_1253",
@@ -7104,7 +7536,8 @@
     "type": "viper",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:30:6:6"
  },
  {
   "id": "itm_1254",
@@ -7123,7 +7556,8 @@
     "type": "viper",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:30:6:6"
  },
  {
   "id": "itm_1255",
@@ -7142,7 +7576,8 @@
     "type": "wellspring",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:31:6:6"
  },
  {
   "id": "itm_1256",
@@ -7161,7 +7596,8 @@
     "type": "wellspring",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:31:6:6"
  },
  {
   "id": "itm_1257",
@@ -7180,7 +7616,8 @@
     "type": "wellspring",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:31:6:6"
  },
  {
   "id": "itm_1258",
@@ -7199,7 +7636,8 @@
     "type": "heart",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:32:6:6"
  },
  {
   "id": "itm_1259",
@@ -7218,7 +7656,8 @@
     "type": "heart",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:32:6:6"
  },
  {
   "id": "itm_1260",
@@ -7237,7 +7676,8 @@
     "type": "heart",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:32:6:6"
  },
  {
   "id": "itm_1261",
@@ -7256,7 +7696,8 @@
     "type": "bastion",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:33:6:6"
  },
  {
   "id": "itm_1262",
@@ -7275,7 +7716,8 @@
     "type": "bastion",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:33:6:6"
  },
  {
   "id": "itm_1263",
@@ -7294,7 +7736,8 @@
     "type": "bastion",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:33:6:6"
  },
  {
   "id": "itm_1264",
@@ -7313,7 +7756,8 @@
     "type": "prism",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:34:6:6"
  },
  {
   "id": "itm_1265",
@@ -7332,7 +7776,8 @@
     "type": "prism",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:34:6:6"
  },
  {
   "id": "itm_1266",
@@ -7351,7 +7796,8 @@
     "type": "prism",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:34:6:6"
  },
  {
   "id": "itm_1267",
@@ -7370,7 +7816,8 @@
     "type": "sigil_pow",
     "grade": 1
    }
-  }
+  },
+  "icon": "02:35:6:6"
  },
  {
   "id": "itm_1268",
@@ -7389,7 +7836,8 @@
     "type": "sigil_pow",
     "grade": 2
    }
-  }
+  },
+  "icon": "02:35:6:6"
  },
  {
   "id": "itm_1269",
@@ -7408,7 +7856,8 @@
     "type": "sigil_pow",
     "grade": 3
    }
-  }
+  },
+  "icon": "02:35:6:6"
  },
  {
   "id": "itm_1270",
@@ -7427,7 +7876,8 @@
     "type": "sigil_luk",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:0:6:6"
  },
  {
   "id": "itm_1271",
@@ -7446,7 +7896,8 @@
     "type": "sigil_luk",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:0:6:6"
  },
  {
   "id": "itm_1272",
@@ -7465,7 +7916,8 @@
     "type": "sigil_luk",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:0:6:6"
  },
  {
   "id": "itm_1273",
@@ -7484,7 +7936,8 @@
     "type": "sigil_agi",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:1:6:6"
  },
  {
   "id": "itm_1274",
@@ -7503,7 +7956,8 @@
     "type": "sigil_agi",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:1:6:6"
  },
  {
   "id": "itm_1275",
@@ -7522,7 +7976,8 @@
     "type": "sigil_agi",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:1:6:6"
  },
  {
   "id": "itm_1276",
@@ -7541,7 +7996,8 @@
     "type": "sigil_dex",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:2:6:6"
  },
  {
   "id": "itm_1277",
@@ -7560,7 +8016,8 @@
     "type": "sigil_dex",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:2:6:6"
  },
  {
   "id": "itm_1278",
@@ -7579,7 +8036,8 @@
     "type": "sigil_dex",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:2:6:6"
  },
  {
   "id": "itm_1279",
@@ -7598,7 +8056,8 @@
     "type": "sigil_int",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:3:6:6"
  },
  {
   "id": "itm_1280",
@@ -7617,7 +8076,8 @@
     "type": "sigil_int",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:3:6:6"
  },
  {
   "id": "itm_1281",
@@ -7636,7 +8096,8 @@
     "type": "sigil_int",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:3:6:6"
  },
  {
   "id": "itm_1282",
@@ -7655,7 +8116,8 @@
     "type": "sigil_vit",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:4:6:6"
  },
  {
   "id": "itm_1283",
@@ -7674,7 +8136,8 @@
     "type": "sigil_vit",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:4:6:6"
  },
  {
   "id": "itm_1284",
@@ -7693,7 +8156,8 @@
     "type": "sigil_vit",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:4:6:6"
  },
  {
   "id": "itm_1285",
@@ -7712,7 +8176,8 @@
     "type": "fury",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:5:6:6"
  },
  {
   "id": "itm_1286",
@@ -7731,7 +8196,8 @@
     "type": "fury",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:5:6:6"
  },
  {
   "id": "itm_1287",
@@ -7750,7 +8216,8 @@
     "type": "fury",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:5:6:6"
  },
  {
   "id": "itm_1288",
@@ -7769,7 +8236,8 @@
     "type": "haste",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:6:6:6"
  },
  {
   "id": "itm_1289",
@@ -7788,7 +8256,8 @@
     "type": "haste",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:6:6:6"
  },
  {
   "id": "itm_1290",
@@ -7807,7 +8276,8 @@
     "type": "haste",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:6:6:6"
  },
  {
   "id": "itm_1291",
@@ -7826,7 +8296,8 @@
     "type": "focus",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:7:6:6"
  },
  {
   "id": "itm_1292",
@@ -7845,7 +8316,8 @@
     "type": "focus",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:7:6:6"
  },
  {
   "id": "itm_1293",
@@ -7864,7 +8336,8 @@
     "type": "focus",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:7:6:6"
  },
  {
   "id": "itm_1294",
@@ -7883,7 +8356,8 @@
     "type": "precision",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:8:6:6"
  },
  {
   "id": "itm_1295",
@@ -7902,7 +8376,8 @@
     "type": "precision",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:8:6:6"
  },
  {
   "id": "itm_1296",
@@ -7921,7 +8396,8 @@
     "type": "precision",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:8:6:6"
  },
  {
   "id": "itm_1297",
@@ -7940,7 +8416,8 @@
     "type": "wildfire",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:9:6:6"
  },
  {
   "id": "itm_1298",
@@ -7959,7 +8436,8 @@
     "type": "wildfire",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:9:6:6"
  },
  {
   "id": "itm_1299",
@@ -7978,7 +8456,8 @@
     "type": "wildfire",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:9:6:6"
  },
  {
   "id": "itm_1300",
@@ -7997,7 +8476,8 @@
     "type": "bloodrush",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:10:6:6"
  },
  {
   "id": "itm_1301",
@@ -8016,7 +8496,8 @@
     "type": "bloodrush",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:10:6:6"
  },
  {
   "id": "itm_1302",
@@ -8035,7 +8516,8 @@
     "type": "bloodrush",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:10:6:6"
  },
  {
   "id": "itm_1303",
@@ -8054,7 +8536,8 @@
     "type": "surge",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:11:6:6"
  },
  {
   "id": "itm_1304",
@@ -8073,7 +8556,8 @@
     "type": "surge",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:11:6:6"
  },
  {
   "id": "itm_1305",
@@ -8092,7 +8576,8 @@
     "type": "surge",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:11:6:6"
  },
  {
   "id": "itm_1306",
@@ -8111,7 +8596,8 @@
     "type": "bulwark",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:12:6:6"
  },
  {
   "id": "itm_1307",
@@ -8130,7 +8616,8 @@
     "type": "bulwark",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:12:6:6"
  },
  {
   "id": "itm_1308",
@@ -8149,7 +8636,8 @@
     "type": "bulwark",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:12:6:6"
  },
  {
   "id": "itm_1309",
@@ -8168,7 +8656,8 @@
     "type": "aegis",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:13:6:6"
  },
  {
   "id": "itm_1310",
@@ -8187,7 +8676,8 @@
     "type": "aegis",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:13:6:6"
  },
  {
   "id": "itm_1311",
@@ -8206,7 +8696,8 @@
     "type": "aegis",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:13:6:6"
  },
  {
   "id": "itm_1312",
@@ -8225,7 +8716,8 @@
     "type": "mending",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:14:6:6"
  },
  {
   "id": "itm_1313",
@@ -8244,7 +8736,8 @@
     "type": "mending",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:14:6:6"
  },
  {
   "id": "itm_1314",
@@ -8263,7 +8756,8 @@
     "type": "mending",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:14:6:6"
  },
  {
   "id": "itm_1315",
@@ -8282,7 +8776,8 @@
     "type": "gale",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:15:6:6"
  },
  {
   "id": "itm_1316",
@@ -8301,7 +8796,8 @@
     "type": "gale",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:15:6:6"
  },
  {
   "id": "itm_1317",
@@ -8320,7 +8816,8 @@
     "type": "gale",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:15:6:6"
  },
  {
   "id": "itm_1318",
@@ -8339,7 +8836,8 @@
     "type": "hunt",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:16:6:6"
  },
  {
   "id": "itm_1319",
@@ -8358,7 +8856,8 @@
     "type": "hunt",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:16:6:6"
  },
  {
   "id": "itm_1320",
@@ -8377,7 +8876,8 @@
     "type": "hunt",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:16:6:6"
  },
  {
   "id": "itm_1321",
@@ -8404,7 +8904,8 @@
     ]
    ],
    "unique": "hollowroot_crown"
-  }
+  },
+  "icon": "02:0:6:6"
  },
  {
   "id": "itm_1322",
@@ -8427,7 +8928,8 @@
     ]
    ],
    "unique": "emberwake_treads"
-  }
+  },
+  "icon": "02:1:6:6"
  },
  {
   "id": "itm_1323",
@@ -8452,7 +8954,8 @@
     ]
    ],
    "unique": "lattice_heart"
-  }
+  },
+  "icon": "02:2:6:6"
  },
  {
   "id": "itm_1324",
@@ -8477,7 +8980,8 @@
     ]
    ],
    "unique": "harvesters_knot"
-  }
+  },
+  "icon": "02:3:6:6"
  },
  {
   "id": "itm_1325",
@@ -8492,7 +8996,8 @@
    "item_level": 30,
    "min_level": 30,
    "unique": "brawlers_oath"
-  }
+  },
+  "icon": "02:4:6:6"
  },
  {
   "id": "itm_1326",
@@ -8513,7 +9018,8 @@
     ]
    ],
    "unique": "aether_conduit"
-  }
+  },
+  "icon": "02:5:6:6"
  },
  {
   "id": "itm_1327",
@@ -8528,7 +9034,8 @@
    "item_level": 30,
    "min_level": 30,
    "unique": "blood_pact"
-  }
+  },
+  "icon": "02:6:6:6"
  },
  {
   "id": "itm_1328",
@@ -8553,7 +9060,8 @@
     ]
    ],
    "unique": "lodestone"
-  }
+  },
+  "icon": "02:7:6:6"
  },
  {
   "id": "itm_1329",
@@ -8578,7 +9086,8 @@
     ]
    ],
    "unique": "glass_ember"
-  }
+  },
+  "icon": "02:8:6:6"
  },
  {
   "id": "itm_1330",
@@ -8597,7 +9106,8 @@
     "type": "echo_slaughter",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:17:6:6"
  },
  {
   "id": "itm_1331",
@@ -8616,7 +9126,8 @@
     "type": "echo_slaughter",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:17:6:6"
  },
  {
   "id": "itm_1332",
@@ -8635,7 +9146,8 @@
     "type": "echo_slaughter",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:17:6:6"
  },
  {
   "id": "itm_1333",
@@ -8654,7 +9166,8 @@
     "type": "echo_fury",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:18:6:6"
  },
  {
   "id": "itm_1334",
@@ -8673,7 +9186,8 @@
     "type": "echo_fury",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:18:6:6"
  },
  {
   "id": "itm_1335",
@@ -8692,7 +9206,8 @@
     "type": "echo_fury",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:18:6:6"
  },
  {
   "id": "itm_1336",
@@ -8711,7 +9226,8 @@
     "type": "echo_spite",
     "grade": 1
    }
-  }
+  },
+  "icon": "03:19:6:6"
  },
  {
   "id": "itm_1337",
@@ -8730,7 +9246,8 @@
     "type": "echo_spite",
     "grade": 2
    }
-  }
+  },
+  "icon": "03:19:6:6"
  },
  {
   "id": "itm_1338",
@@ -8749,7 +9266,8 @@
     "type": "echo_spite",
     "grade": 3
    }
-  }
+  },
+  "icon": "03:19:6:6"
  },
  {
   "id": "itm_1339",
@@ -8776,7 +9294,8 @@
     ]
    ],
    "unique": "stormcaller"
-  }
+  },
+  "icon": "02:9:6:6"
  },
  {
   "id": "itm_1340",
@@ -8803,7 +9322,8 @@
     ]
    ],
    "unique": "wildwood"
-  }
+  },
+  "icon": "02:10:6:6"
  },
  {
   "id": "itm_1341",
@@ -8830,7 +9350,8 @@
     ]
    ],
    "unique": "gearheart"
-  }
+  },
+  "icon": "02:11:6:6"
  },
  {
   "id": "itm_1342",
@@ -8861,7 +9382,8 @@
     ]
    ],
    "unique": "executioner"
-  }
+  },
+  "icon": "02:12:6:6"
  },
  {
   "id": "itm_1343",
@@ -8891,7 +9413,8 @@
     ]
    ],
    "unique": "bastion_plate"
-  }
+  },
+  "icon": "02:13:6:6"
  },
  {
   "id": "itm_1344",
@@ -8921,7 +9444,8 @@
     ]
    ],
    "unique": "windrunner"
-  }
+  },
+  "icon": "02:14:6:6"
  },
  {
   "id": "itm_1345",
@@ -8951,7 +9475,8 @@
     ]
    ],
    "unique": "frostwake"
-  }
+  },
+  "icon": "02:15:6:6"
  },
  {
   "id": "itm_1346",
@@ -8980,7 +9505,8 @@
     ]
    ],
    "unique": "heart_of_embers"
-  }
+  },
+  "icon": "02:16:6:6"
  },
  {
   "id": "itm_1347",
@@ -8995,7 +9521,8 @@
    "item_level": 40,
    "min_level": 40,
    "unique": "echo_stone"
-  }
+  },
+  "icon": "02:17:6:6"
  },
  {
   "id": "itm_1348",
@@ -9013,7 +9540,8 @@
    "min_level": 1,
    "armour": 5,
    "req": {}
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1349",
@@ -9031,7 +9559,8 @@
    "min_level": 1,
    "evasion": 5,
    "req": {}
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1350",
@@ -9049,7 +9578,8 @@
    "min_level": 1,
    "shield": 5,
    "req": {}
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1351",
@@ -9068,7 +9598,8 @@
    "armour": 3,
    "evasion": 3,
    "req": {}
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1352",
@@ -9087,7 +9618,8 @@
    "armour": 3,
    "shield": 3,
    "req": {}
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1353",
@@ -9106,7 +9638,8 @@
    "evasion": 3,
    "shield": 3,
    "req": {}
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1354",
@@ -9126,7 +9659,8 @@
    "req": {
     "vit": 9
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1355",
@@ -9146,7 +9680,8 @@
    "req": {
     "dex": 9
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1356",
@@ -9166,7 +9701,8 @@
    "req": {
     "int": 9
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1357",
@@ -9188,7 +9724,8 @@
     "vit": 4,
     "dex": 4
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1358",
@@ -9210,7 +9747,8 @@
     "vit": 4,
     "int": 4
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1359",
@@ -9232,7 +9770,8 @@
     "dex": 4,
     "int": 4
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1360",
@@ -9252,7 +9791,8 @@
    "req": {
     "vit": 19
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1361",
@@ -9272,7 +9812,8 @@
    "req": {
     "dex": 19
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1362",
@@ -9292,7 +9833,8 @@
    "req": {
     "int": 19
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1363",
@@ -9314,7 +9856,8 @@
     "vit": 9,
     "dex": 9
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1364",
@@ -9336,7 +9879,8 @@
     "vit": 9,
     "int": 9
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1365",
@@ -9358,7 +9902,8 @@
     "dex": 9,
     "int": 9
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1366",
@@ -9378,7 +9923,8 @@
    "req": {
     "vit": 29
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1367",
@@ -9398,7 +9944,8 @@
    "req": {
     "dex": 29
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1368",
@@ -9418,7 +9965,8 @@
    "req": {
     "int": 29
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1369",
@@ -9440,7 +9988,8 @@
     "vit": 14,
     "dex": 14
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1370",
@@ -9462,7 +10011,8 @@
     "vit": 14,
     "int": 14
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1371",
@@ -9484,7 +10034,8 @@
     "dex": 14,
     "int": 14
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1372",
@@ -9504,7 +10055,8 @@
    "req": {
     "vit": 39
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1373",
@@ -9524,7 +10076,8 @@
    "req": {
     "dex": 39
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1374",
@@ -9544,7 +10097,8 @@
    "req": {
     "int": 39
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1375",
@@ -9566,7 +10120,8 @@
     "vit": 19,
     "dex": 19
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1376",
@@ -9588,7 +10143,8 @@
     "vit": 19,
     "int": 19
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1377",
@@ -9610,7 +10166,8 @@
     "dex": 19,
     "int": 19
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1378",
@@ -9630,7 +10187,8 @@
    "req": {
     "vit": 49
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1379",
@@ -9650,7 +10208,8 @@
    "req": {
     "dex": 49
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1380",
@@ -9670,7 +10229,8 @@
    "req": {
     "int": 49
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1381",
@@ -9692,7 +10252,8 @@
     "vit": 24,
     "dex": 24
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1382",
@@ -9714,7 +10275,8 @@
     "vit": 24,
     "int": 24
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1383",
@@ -9736,7 +10298,8 @@
     "dex": 24,
     "int": 24
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1384",
@@ -9756,7 +10319,8 @@
    "req": {
     "vit": 59
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1385",
@@ -9776,7 +10340,8 @@
    "req": {
     "dex": 59
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1386",
@@ -9796,7 +10361,8 @@
    "req": {
     "int": 59
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1387",
@@ -9818,7 +10384,8 @@
     "vit": 29,
     "dex": 29
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1388",
@@ -9840,7 +10407,8 @@
     "vit": 29,
     "int": 29
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1389",
@@ -9862,7 +10430,8 @@
     "dex": 29,
     "int": 29
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1390",
@@ -9882,7 +10451,8 @@
    "req": {
     "vit": 69
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1391",
@@ -9902,7 +10472,8 @@
    "req": {
     "dex": 69
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1392",
@@ -9922,7 +10493,8 @@
    "req": {
     "int": 69
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1393",
@@ -9944,7 +10516,8 @@
     "vit": 34,
     "dex": 34
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1394",
@@ -9966,7 +10539,8 @@
     "vit": 34,
     "int": 34
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1395",
@@ -9988,7 +10562,8 @@
     "dex": 34,
     "int": 34
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1396",
@@ -10008,7 +10583,8 @@
    "req": {
     "vit": 79
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1397",
@@ -10028,7 +10604,8 @@
    "req": {
     "dex": 79
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1398",
@@ -10048,7 +10625,8 @@
    "req": {
     "int": 79
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1399",
@@ -10070,7 +10648,8 @@
     "vit": 39,
     "dex": 39
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1400",
@@ -10092,7 +10671,8 @@
     "vit": 39,
     "int": 39
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1401",
@@ -10114,7 +10694,8 @@
     "dex": 39,
     "int": 39
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1402",
@@ -10134,7 +10715,8 @@
    "req": {
     "vit": 89
    }
-  }
+  },
+  "icon": "01:23:6:6"
  },
  {
   "id": "itm_1403",
@@ -10154,7 +10736,8 @@
    "req": {
     "dex": 89
    }
-  }
+  },
+  "icon": "01:24:6:6"
  },
  {
   "id": "itm_1404",
@@ -10174,7 +10757,8 @@
    "req": {
     "int": 89
    }
-  }
+  },
+  "icon": "01:25:6:6"
  },
  {
   "id": "itm_1405",
@@ -10196,7 +10780,8 @@
     "vit": 44,
     "dex": 44
    }
-  }
+  },
+  "icon": "01:26:6:6"
  },
  {
   "id": "itm_1406",
@@ -10218,7 +10803,8 @@
     "vit": 44,
     "int": 44
    }
-  }
+  },
+  "icon": "01:27:6:6"
  },
  {
   "id": "itm_1407",
@@ -10240,7 +10826,8 @@
     "dex": 44,
     "int": 44
    }
-  }
+  },
+  "icon": "01:28:6:6"
  },
  {
   "id": "itm_1408",
@@ -10270,7 +10857,8 @@
     ]
    ],
    "unique": "bloodgrip"
-  }
+  },
+  "icon": "02:18:6:6"
  },
  {
   "id": "itm_1409",
@@ -10300,7 +10888,8 @@
     ]
    ],
    "unique": "ironclasp"
-  }
+  },
+  "icon": "02:19:6:6"
  },
  {
   "id": "itm_1410",
@@ -10309,6 +10898,7 @@
   "rarity": "epic",
   "sell_price": 1680,
   "stack_max": 99,
-  "description": "A seal that wakes a skill's true form. Spent at a Guild Registrar once the skill's trial is complete."
+  "description": "A seal that wakes a skill's true form. Spent at a Guild Registrar once the skill's trial is complete.",
+  "icon": "08:10:6:2"
  }
 ]

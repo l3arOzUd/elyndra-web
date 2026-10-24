@@ -1,0 +1,191 @@
+{
+  "total": 627,
+  "published": 590,
+  "retained": [
+    {
+      "id": "itm_0001",
+      "name": "Moss Fiber",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0002",
+      "name": "Seed Husk",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0003",
+      "name": "Spore Dust",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0004",
+      "name": "Soft Mycelium",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0005",
+      "name": "Amber Fragment",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0006",
+      "name": "Resin Shell",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0007",
+      "name": "Glider Fur",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0008",
+      "name": "Moonleaf",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0009",
+      "name": "Crag Scale",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0010",
+      "name": "Dry Claw",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0011",
+      "name": "Briar Spine",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0012",
+      "name": "Thick Hide",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0013",
+      "name": "Wing Membrane",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0014",
+      "name": "Dust Powder",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0015",
+      "name": "Brook Scale",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0016",
+      "name": "Clear Gill",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0017",
+      "name": "Reed Fiber",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0018",
+      "name": "Marsh Sap",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0019",
+      "name": "Rotwood",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0020",
+      "name": "Sap Core",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0021",
+      "name": "Bark Plate",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0022",
+      "name": "Copper Joint",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0075",
+      "name": "Field Ration",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0076",
+      "name": "Minor Vital Tonic",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0077",
+      "name": "Minor Focus Tonic",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0078",
+      "name": "Traveler Boots",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0079",
+      "name": "Leafweave Coat",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0080",
+      "name": "Copper Saber",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0081",
+      "name": "Surveyor Bow",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0082",
+      "name": "Aether Rod",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0950",
+      "name": "Survey Page I: Hollowroot",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0951",
+      "name": "Survey Page II: The Heartwood Engine",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0952",
+      "name": "Survey Page III: The Heliostat Vault",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0953",
+      "name": "Survey Page IV: The Drowned Signal",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0954",
+      "name": "Survey Page V: Callow's Warning",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0955",
+      "name": "Survey Page VI: The Keysigil",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    },
+    {
+      "id": "itm_0956",
+      "name": "Survey Page VII: The Gate",
+      "reason": "Existing v2 painted art; survey pages share the document illustration"
+    }
+  ]
+}
