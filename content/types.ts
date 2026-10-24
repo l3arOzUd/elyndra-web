@@ -2,7 +2,7 @@
 // JSON files in public/data; nothing at runtime reads this folder.
 
 import type {
-  Archetype, Behavior, BlockerKind, DialogueDef, ItemDef, Landmark, MapLayout, MapType, NpcDef,
+  Archetype, Behavior, BlockerKind, DialogueDef, DropDef, ItemDef, Landmark, MapLayout, MapType, NpcDef,
   Point, Prop, PropKind, QuestDef, RecipeDef, Rect, RegionDef, Road, Shape, SpawnPocket,
 } from "../src/data/schema";
 import type { StatMods } from "./model";
@@ -22,6 +22,8 @@ export interface MonsterDesign {
   bounty?: boolean;
   /** Item ids: [common, uncommon, rare?]; rates come from the model. */
   drops: { common: string; uncommon: string; rare?: string; extra?: { item_id: string; rate_bp: number; qty?: [number, number] }[] };
+  /** Explicit consolidated loot rates when multiple retired species share one resident. */
+  drop_table?: DropDef[];
   ecology: string;
   art_brief: string;
   sprite?: string;

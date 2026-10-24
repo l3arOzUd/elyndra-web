@@ -1,6 +1,7 @@
 import type { RegionDesign } from "../types";
 import { addConsumables } from "../consumables";
 import { buildWorld } from "../world";
+import { compactRoster } from '../compactRoster';
 import { crystallis } from "./cry";
 import { emberfall } from "./emb";
 import { lumeris } from "./lum";
@@ -13,4 +14,4 @@ import { verdantis } from "./ver";
 export const REGIONS_V2: RegionDesign[] = [lumeris, verdantis, solenia, thalassia, crystallis, emberfall, nocthaven];
 
 /** The world the game runs (WORLD_V3_PLAN.md): one town, ten large fields, five dungeons, and the horde-run consumables. */
-export const REGIONS: RegionDesign[] = addConsumables(buildWorld(REGIONS_V2));
+export const REGIONS: RegionDesign[] = compactRoster(addConsumables(buildWorld(REGIONS_V2)));

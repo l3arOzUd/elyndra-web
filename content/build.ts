@@ -36,6 +36,7 @@ function warpsFor(regions: RegionDesign[]): WarpDef[] {
 }
 
 function dropsFor(m: RegionDesign["monsters"][number]): DropDef[] {
+  if (m.drop_table) return structuredClone(m.drop_table);
   const boss = m.archetype === "boss";
   const elite = m.archetype === "elite";
   const rate = (base: number, bossRate: number) => (boss ? bossRate : elite ? Math.min(10000, base * ELITE_DROP_MULT) : base);

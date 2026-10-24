@@ -1,0 +1,360 @@
+{
+  "total": 40,
+  "withArt": 21,
+  "remainingArt": 19,
+  "maps": [
+    {
+      "id": "lum_town_01",
+      "name": "Avelorn",
+      "species": []
+    },
+    {
+      "id": "lum_fld_01",
+      "name": "Dawnmeadow",
+      "species": [
+        "Mosskin",
+        "Sporeling",
+        "Ambermite"
+      ]
+    },
+    {
+      "id": "lum_fld_02",
+      "name": "Moonbrook Vale",
+      "species": [
+        "Brookfin",
+        "Reedstalker",
+        "Rotroot"
+      ]
+    },
+    {
+      "id": "lum_dun_01",
+      "name": "Hollowroot Cavern",
+      "species": [
+        "Barkwarden",
+        "Hollowroot Warden"
+      ]
+    },
+    {
+      "id": "ver_fld_01",
+      "name": "Graftwood Wilds",
+      "species": [
+        "Dustwing",
+        "Craglet",
+        "Thornback"
+      ]
+    },
+    {
+      "id": "ver_fld_02",
+      "name": "Elderroot Expanse",
+      "species": [
+        "Lunari",
+        "Graftling",
+        "Sapdrone"
+      ]
+    },
+    {
+      "id": "ver_dun_01",
+      "name": "Heartwood Engine",
+      "species": [
+        "Spore Matron",
+        "Heartwood Regent"
+      ]
+    },
+    {
+      "id": "sol_fld_01",
+      "name": "Saffron Wastes",
+      "species": [
+        "Sun Warden",
+        "Dust Revenant",
+        "Prism Wisp"
+      ]
+    },
+    {
+      "id": "sol_dun_01",
+      "name": "Heliostat Vault",
+      "species": [
+        "Vault Mirrorguard",
+        "Heliostat Sovereign"
+      ]
+    },
+    {
+      "id": "tha_fld_01",
+      "name": "Pearl Coast",
+      "species": [
+        "Pearl Skate",
+        "Thunderhull Turtle",
+        "Squall Ray"
+      ]
+    },
+    {
+      "id": "cry_fld_01",
+      "name": "Frostfire Divide",
+      "species": [
+        "Frost Mite",
+        "Cryo Sentry",
+        "Drowned Signalmind"
+      ]
+    },
+    {
+      "id": "cry_dun_01",
+      "name": "Cryocore Archive",
+      "species": [
+        "Archive Specter",
+        "Cryocore Curator"
+      ]
+    },
+    {
+      "id": "emb_fld_01",
+      "name": "Cinder Expanse",
+      "species": [
+        "Vent Skink",
+        "Furnace Knight",
+        "Rivet Scrapling"
+      ]
+    },
+    {
+      "id": "noc_fld_01",
+      "name": "Veil Rift",
+      "species": [
+        "Riftling",
+        "Lattice Drone",
+        "Kiln Prime"
+      ]
+    },
+    {
+      "id": "noc_fld_02",
+      "name": "Meridian Gate",
+      "species": [
+        "Array Sentinel",
+        "Meridian Executor",
+        "Glyph Swarm"
+      ]
+    },
+    {
+      "id": "noc_dun_01",
+      "name": "Lattice Heart",
+      "species": [
+        "Lattice Weaver",
+        "Lattice Sovereign"
+      ]
+    }
+  ],
+  "retired": [
+    {
+      "id": "mob_0040",
+      "name": "Mossback Newt"
+    },
+    {
+      "id": "mob_0041",
+      "name": "Jadewing Moth"
+    },
+    {
+      "id": "mob_0042",
+      "name": "Barkhound"
+    },
+    {
+      "id": "mob_0014",
+      "name": "Vinecrawler"
+    },
+    {
+      "id": "mob_0043",
+      "name": "Pruning Tender"
+    },
+    {
+      "id": "mob_0044",
+      "name": "Thistlehare"
+    },
+    {
+      "id": "mob_0015",
+      "name": "Root Sentinel"
+    },
+    {
+      "id": "mob_0045",
+      "name": "Antlered Engine"
+    },
+    {
+      "id": "mob_0046",
+      "name": "Sporebloat"
+    },
+    {
+      "id": "mob_0048",
+      "name": "Heartwood Pistonguard"
+    },
+    {
+      "id": "mob_0016",
+      "name": "Sandcoil"
+    },
+    {
+      "id": "mob_0050",
+      "name": "Ochre Jackal"
+    },
+    {
+      "id": "mob_0017",
+      "name": "Glass Scarab"
+    },
+    {
+      "id": "mob_0051",
+      "name": "Brass Kite"
+    },
+    {
+      "id": "mob_0018",
+      "name": "Dune Sentry"
+    },
+    {
+      "id": "mob_0052",
+      "name": "Glasstail Basilisk"
+    },
+    {
+      "id": "mob_0053",
+      "name": "Gnomon Acolyte"
+    },
+    {
+      "id": "mob_0054",
+      "name": "Canal Strider"
+    },
+    {
+      "id": "mob_0056",
+      "name": "Sand-buried Colossus"
+    },
+    {
+      "id": "mob_0057",
+      "name": "Prism Lens-drone"
+    },
+    {
+      "id": "mob_0020",
+      "name": "Tidehopper"
+    },
+    {
+      "id": "mob_0060",
+      "name": "Gullwing Skimmer"
+    },
+    {
+      "id": "mob_0021",
+      "name": "Coral Claw"
+    },
+    {
+      "id": "mob_0061",
+      "name": "Polyp Spitter"
+    },
+    {
+      "id": "mob_0062",
+      "name": "Kelp Tender"
+    },
+    {
+      "id": "mob_0022",
+      "name": "Brine Automaton"
+    },
+    {
+      "id": "mob_0063",
+      "name": "Hullborer"
+    },
+    {
+      "id": "mob_0023",
+      "name": "Relay Guardian"
+    },
+    {
+      "id": "mob_0067",
+      "name": "Pressure Drone"
+    },
+    {
+      "id": "mob_0068",
+      "name": "Gloom Medusa"
+    },
+    {
+      "id": "mob_0070",
+      "name": "Rimehare"
+    },
+    {
+      "id": "mob_0071",
+      "name": "Glassback Ram"
+    },
+    {
+      "id": "mob_0026",
+      "name": "Icegear"
+    },
+    {
+      "id": "mob_0072",
+      "name": "Frostcoil Serpent"
+    },
+    {
+      "id": "mob_0073",
+      "name": "Glacier Juggernaut"
+    },
+    {
+      "id": "mob_0027",
+      "name": "Archive Keeper"
+    },
+    {
+      "id": "mob_0074",
+      "name": "Mirrorshade"
+    },
+    {
+      "id": "mob_0075",
+      "name": "Hoarfrost Behemoth"
+    },
+    {
+      "id": "mob_0078",
+      "name": "Cryo Lancer"
+    },
+    {
+      "id": "mob_0028",
+      "name": "Ashcrawler"
+    },
+    {
+      "id": "mob_0080",
+      "name": "Slagback Toad"
+    },
+    {
+      "id": "mob_0029",
+      "name": "Cinder Imp"
+    },
+    {
+      "id": "mob_0030",
+      "name": "Smelt Hound"
+    },
+    {
+      "id": "mob_0081",
+      "name": "Crucible Tender"
+    },
+    {
+      "id": "mob_0083",
+      "name": "Magma Spitter"
+    },
+    {
+      "id": "mob_0085",
+      "name": "Slagforged Brute"
+    },
+    {
+      "id": "mob_0086",
+      "name": "Pour Wraith"
+    },
+    {
+      "id": "mob_0087",
+      "name": "Zero Stoker"
+    },
+    {
+      "id": "mob_0032",
+      "name": "Null Wisp"
+    },
+    {
+      "id": "mob_0090",
+      "name": "Gutter Lurk"
+    },
+    {
+      "id": "mob_0033",
+      "name": "Shade Carrier"
+    },
+    {
+      "id": "mob_0091",
+      "name": "Nullbloom"
+    },
+    {
+      "id": "mob_0092",
+      "name": "Coupler Mite"
+    },
+    {
+      "id": "mob_0094",
+      "name": "Sparkwing"
+    }
+  ]
+}

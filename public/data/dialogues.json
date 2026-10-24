@@ -198,9 +198,9 @@
   "lines": [
    "First camp I've ever run, so humour me: survey, clear, report. That's the whole Guild in three words.",
    "The Mosskin used to graze round your boots. Since the Quickening they charge anything on two legs. Pull them into a heap and swing.",
-   "See a fat, slow Lunari that doesn't come at you? A Gorged one. The Guild pays well for those, and you'll feel why when it drops.",
+   "See a fat, slow Sporeling that doesn't come at you? A Gorged one. The Guild pays well for those, and you'll feel why when it drops.",
    "Dawnmeadow runs from Lv 1 by this camp to Lv 10 in the east.",
-   "Mosskin Meadow (Lv 1-1): Mosskin. Sporeling Hollow (Lv 2-3): Sporeling, Ambermite. Glider Rise (Lv 3-5): Lunari, Craglet. Bramble Mill (Lv 8-9): Thornback, Dustwing."
+   "Local monsters: Mosskin (Lv 1), Sporeling (Lv 3), Ambermite (Lv 8)."
   ],
   "stages": [
    {
@@ -209,9 +209,9 @@
      "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
      "First camp I've ever run, so humour me: survey, clear, report. That's the whole Guild in three words.",
      "The Mosskin used to graze round your boots. Since the Quickening they charge anything on two legs. Pull them into a heap and swing.",
-     "See a fat, slow Lunari that doesn't come at you? A Gorged one. The Guild pays well for those, and you'll feel why when it drops.",
+     "See a fat, slow Sporeling that doesn't come at you? A Gorged one. The Guild pays well for those, and you'll feel why when it drops.",
      "Dawnmeadow runs from Lv 1 by this camp to Lv 10 in the east.",
-     "Mosskin Meadow (Lv 1-1): Mosskin. Sporeling Hollow (Lv 2-3): Sporeling, Ambermite. Glider Rise (Lv 3-5): Lunari, Craglet. Bramble Mill (Lv 8-9): Thornback, Dustwing."
+     "Local monsters: Mosskin (Lv 1), Sporeling (Lv 3), Ambermite (Lv 8)."
     ]
    }
   ]
@@ -273,7 +273,7 @@
    "The southern orchard is rotting from the roots up, and the water from the pump-house smells of copper. Something down there is pulling the water the wrong way.",
    "The Graftlings in the marsh that just stand there rooting are Gorged. Leave them for last, or first. They're worth it either way.",
    "Moonbrook Vale runs from Lv 11 by this camp to Lv 20 in the east.",
-   "Brookbed (Lv 12-12): Brookfin. Reed Marsh (Lv 14-16): Reedstalker, Graftling. Rotting Rows (Lv 17-18): Rotroot, Mossback Newt. Sap Groves (Lv 20-20): Sapdrone."
+   "Local monsters: Brookfin (Lv 11), Reedstalker (Lv 15), Rotroot (Lv 20)."
   ],
   "stages": [
    {
@@ -284,7 +284,7 @@
      "The southern orchard is rotting from the roots up, and the water from the pump-house smells of copper. Something down there is pulling the water the wrong way.",
      "The Graftlings in the marsh that just stand there rooting are Gorged. Leave them for last, or first. They're worth it either way.",
      "Moonbrook Vale runs from Lv 11 by this camp to Lv 20 in the east.",
-     "Brookbed (Lv 12-12): Brookfin. Reed Marsh (Lv 14-16): Reedstalker, Graftling. Rotting Rows (Lv 17-18): Rotroot, Mossback Newt. Sap Groves (Lv 20-20): Sapdrone."
+     "Local monsters: Brookfin (Lv 11), Reedstalker (Lv 15), Rotroot (Lv 20)."
     ]
    }
   ]
@@ -411,7 +411,7 @@
    "The gardeners mend each other: drop the Pruning Tenders first or the whole press keeps getting back up.",
    "Sandcoils that just bask and don't strike are Gorged. Thirty of them on the dunes at most. The Guild has a bounty on every one.",
    "Graftwood Wilds runs from Lv 21 by this camp to Lv 30 in the east.",
-   "Jadewing Glade (Lv 22-23): Jadewing Moth, Barkhound. Trellis Dunes (Lv 25-26): Vinecrawler, Sandcoil. Press Terraces (Lv 27-28): Pruning Tender, Ochre Jackal. Glass Burrows (Lv 29-30): Thistlehare, Glass Scarab."
+   "Local monsters: Dustwing (Lv 21), Craglet (Lv 25), Thornback (Lv 30)."
   ],
   "stages": [
    {
@@ -422,7 +422,7 @@
      "The gardeners mend each other: drop the Pruning Tenders first or the whole press keeps getting back up.",
      "Sandcoils that just bask and don't strike are Gorged. Thirty of them on the dunes at most. The Guild has a bounty on every one.",
      "Graftwood Wilds runs from Lv 21 by this camp to Lv 30 in the east.",
-     "Jadewing Glade (Lv 22-23): Jadewing Moth, Barkhound. Trellis Dunes (Lv 25-26): Vinecrawler, Sandcoil. Press Terraces (Lv 27-28): Pruning Tender, Ochre Jackal. Glass Burrows (Lv 29-30): Thistlehare, Glass Scarab."
+     "Local monsters: Dustwing (Lv 21), Craglet (Lv 25), Thornback (Lv 30)."
     ]
    }
   ]
@@ -480,22 +480,22 @@
   "id": "dlg_ver_elderroot_expanse_scout",
   "npc_id": "npc_ver_elderroot_expanse_scout",
   "lines": [
-   "Look at an Antlered Engine some time before it charges you. Aethrion built that to look like our stags. It is beautiful. It will also kill you.",
+   "Look at an Lunari some time before it charges you. Aethrion built that to look like our stags. It is beautiful. It will also kill you.",
    "The spores in the Drift come from the Heartwood Engine below us. Its Regent has started breathing them out instead of sap.",
    "The Tidehoppers that never jump at you are Gorged on sap and aether. Slow, tough, and worth more than a dozen of anything else here.",
    "Elderroot Expanse runs from Lv 31 by this camp to Lv 40 in the east.",
-   "Root Ridge (Lv 32-32): Root Sentinel, Brass Kite. Antler Glade (Lv 34-35): Dune Sentry, Antlered Engine. Spore Drift (Lv 35-36): Sporebloat, Tidehopper. Basilisk Flats (Lv 37-38): Glasstail Basilisk, Gullwing Skimmer. Coral Steps (Lv 39-40): Gnomon Acolyte, Coral Claw."
+   "Local monsters: Lunari (Lv 31), Graftling (Lv 35), Sapdrone (Lv 40)."
   ],
   "stages": [
    {
     "after": "q_noc_lattice_heart",
     "lines": [
      "Word came down the road: the Gate is half shut and the Long Watch has begun. The herds out here haven't heard yet.",
-     "Look at an Antlered Engine some time before it charges you. Aethrion built that to look like our stags. It is beautiful. It will also kill you.",
+     "Look at an Lunari some time before it charges you. Aethrion built that to look like our stags. It is beautiful. It will also kill you.",
      "The spores in the Drift come from the Heartwood Engine below us. Its Regent has started breathing them out instead of sap.",
      "The Tidehoppers that never jump at you are Gorged on sap and aether. Slow, tough, and worth more than a dozen of anything else here.",
      "Elderroot Expanse runs from Lv 31 by this camp to Lv 40 in the east.",
-     "Root Ridge (Lv 32-32): Root Sentinel, Brass Kite. Antler Glade (Lv 34-35): Dune Sentry, Antlered Engine. Spore Drift (Lv 35-36): Sporebloat, Tidehopper. Basilisk Flats (Lv 37-38): Glasstail Basilisk, Gullwing Skimmer. Coral Steps (Lv 39-40): Gnomon Acolyte, Coral Claw."
+     "Local monsters: Lunari (Lv 31), Graftling (Lv 35), Sapdrone (Lv 40)."
     ]
    }
   ]
@@ -615,7 +615,7 @@
    "The wrapped ones on the causeway were surveyors once. They sealed the Vault and died in it. Now they guard the road they built.",
    "Frost Mites that sit on the seep and ignore you are Gorged. Crack them. Thirty on the whole map and the Guild pays for each.",
    "Saffron Wastes runs from Lv 41 by this camp to Lv 50 in the east.",
-   "Warden Causeway (Lv 42-42): Sun Warden, Polyp Spitter. Canal Shallows (Lv 44-44): Canal Strider, Kelp Tender. Frost Seep (Lv 45-47): Brine Automaton, Frost Mite, Dust Revenant. Colossus Sands (Lv 48-49): Rimehare, Sand-buried Colossus. Prism Reach (Lv 49-50): Hullborer, Prism Wisp."
+   "Local monsters: Sun Warden (Lv 41), Dust Revenant (Lv 45), Prism Wisp (Lv 50)."
   ],
   "stages": [
    {
@@ -626,7 +626,7 @@
      "The wrapped ones on the causeway were surveyors once. They sealed the Vault and died in it. Now they guard the road they built.",
      "Frost Mites that sit on the seep and ignore you are Gorged. Crack them. Thirty on the whole map and the Guild pays for each.",
      "Saffron Wastes runs from Lv 41 by this camp to Lv 50 in the east.",
-     "Warden Causeway (Lv 42-42): Sun Warden, Polyp Spitter. Canal Shallows (Lv 44-44): Canal Strider, Kelp Tender. Frost Seep (Lv 45-47): Brine Automaton, Frost Mite, Dust Revenant. Colossus Sands (Lv 48-49): Rimehare, Sand-buried Colossus. Prism Reach (Lv 49-50): Hullborer, Prism Wisp."
+     "Local monsters: Sun Warden (Lv 41), Dust Revenant (Lv 45), Prism Wisp (Lv 50)."
     ]
    }
   ]
@@ -729,7 +729,7 @@
    "Relay Guardians ping the mast; the rams answer anyone who touches the terraces. Pull both into the surf and hit hard.",
    "The Pearl Skates lying still in the mud are Gorged. Big as doors. The Guild pays a bounty on every one.",
    "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
-   "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
+   "Local monsters: Pearl Skate (Lv 51), Thunderhull Turtle (Lv 55), Squall Ray (Lv 60)."
   ],
   "stages": [
    {
@@ -738,7 +738,7 @@
      "The song stopped. I put my ear to the water all night and heard only water. It'll start again, but for now: quiet.",
      "The Pearl Skates are still Gorged and the bounty still stands.",
      "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
-     "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
+     "Local monsters: Pearl Skate (Lv 51), Thunderhull Turtle (Lv 55), Squall Ray (Lv 60)."
     ]
    },
    {
@@ -748,7 +748,7 @@
      "The song stopped. I put my ear to the water all night and heard only water. It'll start again, but for now: quiet.",
      "The Pearl Skates are still Gorged and the bounty still stands.",
      "Pearl Coast runs from Lv 51 by this camp to Lv 60 in the east.",
-     "Relay Strand (Lv 52-52): Relay Guardian. Ram Terraces (Lv 52-52): Glassback Ram. Pearl Beds (Lv 53-55): Pearl Skate, Icegear. Turtle Coils (Lv 56-57): Thunderhull Turtle, Frostcoil Serpent. Squall Point (Lv 58-60): Squall Ray, Glacier Juggernaut."
+     "Local monsters: Pearl Skate (Lv 51), Thunderhull Turtle (Lv 55), Squall Ray (Lv 60)."
     ]
    }
   ]
@@ -868,7 +868,7 @@
    "The Drowned Signalmind surfaces at the Sentry Vents. Its song is what turned everything hostile. Silence it and the whole coast goes quiet for a while.",
    "Hoarfrost Behemoths that keep grazing while you walk past are Gorged. They hit back like avalanches. The Guild pays for them anyway.",
    "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
-   "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
+   "Local monsters: Frost Mite (Lv 61), Cryo Sentry (Lv 70), Drowned Signalmind (Lv 65)."
   ],
   "stages": [
    {
@@ -877,7 +877,7 @@
      "A blue scarf. You found it in the Archive. He's not coming back, is he. Thank you for bringing it.",
      "The Divide is no safer for it. Keep your blade close.",
      "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
-     "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
+     "Local monsters: Frost Mite (Lv 61), Cryo Sentry (Lv 70), Drowned Signalmind (Lv 65)."
     ]
    },
    {
@@ -887,7 +887,7 @@
      "A blue scarf. You found it in the Archive. He's not coming back, is he. Thank you for bringing it.",
      "The Divide is no safer for it. Keep your blade close.",
      "Frostfire Divide runs from Lv 61 by this camp to Lv 70 in the east.",
-     "Ash Flats (Lv 61-61): Ashcrawler, Pressure Drone. Drowned Archive (Lv 62-63): Archive Keeper, Gloom Medusa. Slag Mirrors (Lv 63-64): Slagback Toad, Mirrorshade. Behemoth Ice (Lv 65-66): Cinder Imp, Hoarfrost Behemoth. Sentry Vents (Lv 68-70): Cryo Sentry, Smelt Hound."
+     "Local monsters: Frost Mite (Lv 61), Cryo Sentry (Lv 70), Drowned Signalmind (Lv 65)."
     ]
    }
   ]
@@ -990,7 +990,7 @@
    "Crucible Tenders weld the hounds and knights back together. Kill the tenders first or you'll fight the same knight three times.",
    "Null Wisps that just drift and drink the light are Gorged. Pop them. The Guild pays.",
    "Cinder Expanse runs from Lv 71 by this camp to Lv 80 in the east.",
-   "Tender Yards (Lv 71-71): Crucible Tender. Skink Flow (Lv 74-74): Vent Skink. Spitter Vents (Lv 75-76): Magma Spitter, Null Wisp. Knight's Road (Lv 77-77): Furnace Knight, Gutter Lurk. Rivet Moraine (Lv 79-80): Rivet Scrapling, Shade Carrier, Nullbloom."
+   "Local monsters: Vent Skink (Lv 71), Furnace Knight (Lv 75), Rivet Scrapling (Lv 80)."
   ],
   "stages": [
    {
@@ -1001,7 +1001,7 @@
      "Crucible Tenders weld the hounds and knights back together. Kill the tenders first or you'll fight the same knight three times.",
      "Null Wisps that just drift and drink the light are Gorged. Pop them. The Guild pays.",
      "Cinder Expanse runs from Lv 71 by this camp to Lv 80 in the east.",
-     "Tender Yards (Lv 71-71): Crucible Tender. Skink Flow (Lv 74-74): Vent Skink. Spitter Vents (Lv 75-76): Magma Spitter, Null Wisp. Knight's Road (Lv 77-77): Furnace Knight, Gutter Lurk. Rivet Moraine (Lv 79-80): Rivet Scrapling, Shade Carrier, Nullbloom."
+     "Local monsters: Vent Skink (Lv 71), Furnace Knight (Lv 75), Rivet Scrapling (Lv 80)."
     ]
    }
   ]
@@ -1121,7 +1121,7 @@
    "Kiln Prime walks the Stoker Heights. The stokers still shovel for it. Someone made it forge a key, and I think I know who.",
    "The Sparkwings that won't lift off the dishes are Gorged with static. Bring one down and you'll feel it in your teeth. Bounty's posted.",
    "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
-   "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
+   "Local monsters: Riftling (Lv 81), Lattice Drone (Lv 90), Kiln Prime (Lv 90)."
   ],
   "stages": [
    {
@@ -1130,7 +1130,7 @@
      "The key's gone, then. Ilvane has it, or had it. The Executors guard the rest at the Gate.",
      "The Sparkwings are still Gorged on the dishes. Bounty's posted.",
      "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
-     "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
+     "Local monsters: Riftling (Lv 81), Lattice Drone (Lv 90), Kiln Prime (Lv 90)."
     ]
    },
    {
@@ -1140,7 +1140,7 @@
      "The key's gone, then. Ilvane has it, or had it. The Executors guard the rest at the Gate.",
      "The Sparkwings are still Gorged on the dishes. Bounty's posted.",
      "Veil Rift runs from Lv 81 by this camp to Lv 90 in the east.",
-     "Brute Pens (Lv 83-83): Slagforged Brute. Coupler Yards (Lv 83-85): Coupler Mite, Lattice Drone. Wraith Pour (Lv 85-87): Pour Wraith, Riftling. Stoker Heights (Lv 88-90): Zero Stoker, Sparkwing."
+     "Local monsters: Riftling (Lv 81), Lattice Drone (Lv 90), Kiln Prime (Lv 90)."
     ]
    }
   ]
@@ -1202,7 +1202,7 @@
    "The Executors guard the plaza. Their masks are pieces of the Keysigil. Take enough of them and the Lattice Heart opens.",
    "The Array Sentinels standing idle in the colonnade are Gorged and half asleep. They wake when struck. The bounty is the richest on the road.",
    "Meridian Gate runs from Lv 91 by this camp to Lv 99 in the east.",
-   "Sentinel Colonnade (Lv 91-95): Array Sentinel, Glyph Swarm. Glyph Plaza (Lv 92-95): Glyph Swarm, Meridian Executor. Lattice Verge (Lv 95-95): Glyph Swarm."
+   "Local monsters: Array Sentinel (Lv 91), Meridian Executor (Lv 95), Glyph Swarm (Lv 99)."
   ],
   "stages": [
    {
@@ -1211,7 +1211,7 @@
      "You have the Keysigil. Then go down. Ferrin keeps the lift; he saw Aldric go. Bring him home, one way or another.",
      "Gorged sentinels still stand in the colonnade. Bounty stands too.",
      "Meridian Gate runs from Lv 91 by this camp to Lv 99 in the east.",
-     "Sentinel Colonnade (Lv 91-95): Array Sentinel, Glyph Swarm. Glyph Plaza (Lv 92-95): Glyph Swarm, Meridian Executor. Lattice Verge (Lv 95-95): Glyph Swarm."
+     "Local monsters: Array Sentinel (Lv 91), Meridian Executor (Lv 95), Glyph Swarm (Lv 99)."
     ]
    },
    {
@@ -1220,7 +1220,7 @@
      "My father says the Long Watch starts here, at this camp. I asked to keep it. Someone should be here when you come back.",
      "The Executors will gather again. So will the glyphs. We'll be ready.",
      "Meridian Gate runs from Lv 91 by this camp to Lv 99 in the east.",
-     "Sentinel Colonnade (Lv 91-95): Array Sentinel, Glyph Swarm. Glyph Plaza (Lv 92-95): Glyph Swarm, Meridian Executor. Lattice Verge (Lv 95-95): Glyph Swarm."
+     "Local monsters: Array Sentinel (Lv 91), Meridian Executor (Lv 95), Glyph Swarm (Lv 99)."
     ]
    }
   ]

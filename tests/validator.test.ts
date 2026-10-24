@@ -87,7 +87,7 @@ describe("validate:data", { timeout: 60000 }, () => {
   it("rejects a species on a second home map even when its level fits", () => {
     const r = mutate((read, write) => {
       const zones = read("spawn_zones");
-      zones.find((z: any) => z.map_id === "lum_fld_02").pockets[0].species.push({ monster_id: "mob_0007", weight: 1 }); // Dustwing Lv9 fits Lv11-20 within the tolerance
+      zones.find((z: any) => z.map_id === "lum_fld_01").pockets[0].species.push({ monster_id: "mob_0008", weight: 1 }); // Brookfin Lv11 fits Lv1-10 within the tolerance
       write("spawn_zones", zones);
     });
     expect(has(r, "spawn.one_map", "error")).toBe(true);

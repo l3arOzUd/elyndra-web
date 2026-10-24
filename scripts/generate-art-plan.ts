@@ -55,7 +55,7 @@ const mapById = new Map(maps.map((m) => [m.id, m]));
 const homeOf = new Map<string, string>();
 for (const z of zones) for (const p of z.pockets) for (const s of p.species) homeOf.set(s.monster_id, z.map_id);
 const hasArt = (id: string) => !!spriteIndex.monsters[id] && !spriteIndex.monsters[id].placeholder;
-const proposedFor = new Map(Object.entries(PROPOSED).filter(([, v]) => !hasArt(v.monster)).map(([k, v]) => [v.monster, { sprite: k, ...v }]));
+const proposedFor = new Map(Object.entries(PROPOSED).filter(([, v]) => mob.has(v.monster) && !hasArt(v.monster)).map(([k, v]) => [v.monster, { sprite: k, ...v }]));
 const catName = new Map(catalog.map((c) => [c.id, c.name]));
 
 const L: string[] = [];
@@ -71,7 +71,8 @@ const spawned = monsters.filter((m) => homeOf.has(m.id));
 const done = spawned.filter((m) => hasArt(m.id));
 const proposed = spawned.filter((m) => !hasArt(m.id) && proposedFor.has(m.id));
 const todo = spawned.filter((m) => !hasArt(m.id) && !proposedFor.has(m.id));
-const spare = catalog.filter((c) => !c.gameMonster && !(c.id in PROPOSED));
+const usedSprites = new Set(Object.values(spriteIndex.monsters).filter(s => !s.placeholder).map(s => s.sprite));
+const spare = catalog.filter(c => !usedSprites.has(`${c.id}_2d`) && ![...proposedFor.values()].some(p => p.sprite === c.id));
 
 p(
   "# ELYNDRA — แผนออกแบบมอนสเตอร์ 2D",

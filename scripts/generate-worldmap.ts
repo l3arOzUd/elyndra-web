@@ -107,4 +107,5 @@ for (const n of npcs.filter((x) => x.role === "teleporter" && mapById.get(x.map_
 
 const html = readFileSync(join(ROOT, "scripts", "worldmap.template.html"), "utf8").replace("/*__WORLD__*/null", JSON.stringify(world));
 writeFileSync(OUT, html);
+writeFileSync(join(ROOT, 'public', 'world-map.html'), html);
 console.log(`world map: ${OUT} · ${world.maps.length} maps, ${world.walks.length} walking links, ${world.transit.length} transit links`);

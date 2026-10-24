@@ -78,7 +78,7 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0003",
+    "monster_id": "mob_0001",
     "count": 60
    }
   ],
@@ -92,7 +92,7 @@
     }
    ]
   },
-  "summary": "Walk to Moonbrook Vale's edge, then clear the Ambermite swarms in Sporeling Hollow. Your first train of twenty or more."
+  "summary": "Walk to Moonbrook Vale's edge, then clear the Mosskin swarms in Mosskin Hollow. Your first train of twenty or more."
  },
  {
   "id": "q_lum_scree",
@@ -105,7 +105,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0005",
+    "monster_id": "mob_0002",
     "count": 40
    },
    {
@@ -137,7 +137,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0007",
+    "monster_id": "mob_0003",
     "count": 120
    }
   ],
@@ -151,7 +151,7 @@
     }
    ]
   },
-  "summary": "The Dustwing swarm settles on Bramble Mill's stones and only rises when struck. Wake them a few at a time and drag them into one train: Dawnmeadow's first real horde."
+  "summary": "The Ambermite swarm settles on Bramble Mill's stones and only rises when struck. Wake them a few at a time and drag them into one train: Dawnmeadow's first real horde."
  },
  {
   "id": "q_lum_moonbrook",
@@ -164,7 +164,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0009",
+    "monster_id": "mob_0008",
     "count": 60
    },
    {
@@ -196,7 +196,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0010",
+    "monster_id": "mob_0009",
     "count": 150
    },
    {
@@ -215,7 +215,7 @@
     }
    ]
   },
-  "summary": "The southern orchard is rotting from the roots. Clear the Rotroot and bring back rotwood: the rot leads down to the pump-house cave."
+  "summary": "The southern orchard is rotting from the roots. Clear the Reedstalker and bring back rotwood: the rot leads down to the pump-house cave."
  },
  {
   "id": "q_lum_hollowroot",
@@ -263,7 +263,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0012",
+    "monster_id": "mob_0009",
     "count": 10
    }
   ],
@@ -295,7 +295,7 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0040",
+    "monster_id": "mob_0010",
     "count": 60
    },
    {
@@ -327,12 +327,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0041",
+    "monster_id": "mob_0007",
     "count": 80
    },
    {
     "type": "kill",
-    "monster_id": "mob_0042",
+    "monster_id": "mob_0007",
     "count": 30
    }
   ],
@@ -346,7 +346,7 @@
     }
    ]
   },
-  "summary": "Wound one Barkhound and its pack rushes in; the Jadewing Moths overhead only spit back when struck. Pull the moths into the melee and cleave the lot."
+  "summary": "Wound one Dustwing and its pack rushes in; the Jadewing Moths overhead only spit back when struck. Pull the moths into the melee and cleave the lot."
  },
  {
   "id": "q_ver_graftwood",
@@ -359,7 +359,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0014",
+    "monster_id": "mob_0007",
     "count": 100
    },
    {
@@ -391,12 +391,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0043",
+    "monster_id": "mob_0005",
     "count": 60
    },
    {
     "type": "kill",
-    "monster_id": "mob_0044",
+    "monster_id": "mob_0006",
     "count": 80
    }
   ],
@@ -423,12 +423,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0015",
+    "monster_id": "mob_0004",
     "count": 100
    },
    {
     "type": "kill",
-    "monster_id": "mob_0045",
+    "monster_id": "mob_0004",
     "count": 2
    }
   ],
@@ -442,7 +442,7 @@
     }
    ]
   },
-  "summary": "Root Sentinel trains on the ridges, then two Antlered Engines in the glade: Verdantis's first elite fight."
+  "summary": "Lunari trains on the ridges, then two Antlered Engines in the glade: Verdantis's first elite fight."
  },
  {
   "id": "q_ver_spore_basin",
@@ -455,7 +455,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0046",
+    "monster_id": "mob_0012",
     "count": 150
    },
    {
@@ -526,7 +526,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0016",
+    "monster_id": "mob_0005",
     "count": 10
    }
   ],
@@ -558,12 +558,12 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0051",
+    "monster_id": "mob_0004",
     "count": 60
    },
    {
     "type": "kill",
-    "monster_id": "mob_0017",
+    "monster_id": "mob_0006",
     "count": 40
    }
   ],
@@ -590,12 +590,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0018",
+    "monster_id": "mob_0004",
     "count": 100
    },
    {
     "type": "kill",
-    "monster_id": "mob_0052",
+    "monster_id": "mob_0012",
     "count": 30
    }
   ],
@@ -609,7 +609,7 @@
     }
    ]
   },
-  "summary": "A big, slow construct train of Dune Sentries, then the Glasstail Basilisk packs: Elderroot's hardest pulls."
+  "summary": "A big, slow construct train of Dune Sentries, then the Graftling packs: Elderroot's hardest pulls."
  },
  {
   "id": "q_sol_sun_dial",
@@ -622,7 +622,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0053",
+    "monster_id": "mob_0013",
     "count": 60
    },
    {
@@ -654,7 +654,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0054",
+    "monster_id": "mob_0019",
     "count": 120
    },
    {
@@ -695,7 +695,7 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0056",
+    "monster_id": "mob_0025",
     "count": 2
    }
   ],
@@ -761,7 +761,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0020",
+    "monster_id": "mob_0012",
     "count": 15
    }
   ],
@@ -792,12 +792,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0060",
+    "monster_id": "mob_0013",
     "count": 100
    },
    {
     "type": "kill",
-    "monster_id": "mob_0021",
+    "monster_id": "mob_0013",
     "count": 40
    }
   ],
@@ -829,7 +829,7 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0061",
+    "monster_id": "mob_0019",
     "count": 80
    },
    {
@@ -861,12 +861,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0022",
+    "monster_id": "mob_0055",
     "count": 60
    },
    {
     "type": "kill",
-    "monster_id": "mob_0062",
+    "monster_id": "mob_0019",
     "count": 60
    },
    {
@@ -898,7 +898,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0063",
+    "monster_id": "mob_0025",
     "count": 150
    }
   ],
@@ -912,7 +912,7 @@
     }
    ]
   },
-  "summary": "The Hullborer horde fills Prism Reach. Three or four full trains of borers."
+  "summary": "The Prism Wisp horde fills Prism Reach. Three or four full trains of borers."
  },
  {
   "id": "q_tha_pearl_flats",
@@ -925,7 +925,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0023",
+    "monster_id": "mob_0064",
     "count": 50
    },
    {
@@ -1028,7 +1028,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0024",
+    "monster_id": "mob_0055",
     "count": 15
    }
   ],
@@ -1059,7 +1059,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0070",
+    "monster_id": "mob_0055",
     "count": 80
    },
    {
@@ -1096,7 +1096,7 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0071",
+    "monster_id": "mob_0064",
     "count": 60
    },
    {
@@ -1115,7 +1115,7 @@
     }
    ]
   },
-  "summary": "Visit the Saffron Wastes, then take on the Glassback Ram flocks. Their fleece insulates the Vaelspire labs."
+  "summary": "Visit the Saffron Wastes, then take on the Pearl Skate flocks. Their fleece insulates the Vaelspire labs."
  },
  {
   "id": "q_cry_snowcoil",
@@ -1128,12 +1128,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0072",
+    "monster_id": "mob_0065",
     "count": 150
    },
    {
     "type": "kill",
-    "monster_id": "mob_0026",
+    "monster_id": "mob_0065",
     "count": 40
    }
   ],
@@ -1151,7 +1151,7 @@
     }
    ]
   },
-  "summary": "The Frostcoil Serpent horde is Pearl Coast's signature train. Three or four full pulls, and the Icegears with them."
+  "summary": "The Thunderhull Turtle horde is Pearl Coast's signature train. Three or four full pulls, and the Icegears with them."
  },
  {
   "id": "q_cry_prism_pass",
@@ -1164,12 +1164,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0027",
+    "monster_id": "mob_0024",
     "count": 50
    },
    {
     "type": "kill",
-    "monster_id": "mob_0073",
+    "monster_id": "mob_0066",
     "count": 2
    }
   ],
@@ -1196,12 +1196,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0074",
+    "monster_id": "mob_0076",
     "count": 80
    },
    {
     "type": "kill",
-    "monster_id": "mob_0075",
+    "monster_id": "mob_0076",
     "count": 10
    },
    {
@@ -1304,7 +1304,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0028",
+    "monster_id": "mob_0024",
     "count": 60
    }
   ],
@@ -1318,7 +1318,7 @@
     }
    ]
   },
-  "summary": "The Ashcrawler herds of Frostfire Divide's Ash Flats charge anyone on the ash since the Quickening. Thin them."
+  "summary": "The Frost Mite herds of Frostfire Divide's Ash Flats charge anyone on the ash since the Quickening. Thin them."
  },
  {
   "id": "q_emb_slag_pools",
@@ -1331,7 +1331,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0080",
+    "monster_id": "mob_0024",
     "count": 50
    },
    {
@@ -1350,7 +1350,7 @@
     }
    ]
   },
-  "summary": "Break the Slagback Toad pools; their warts are the base of the Cindervale tonic."
+  "summary": "Break the Frost Mite pools; their warts are the base of the Cindervale tonic."
  },
  {
   "id": "q_emb_cinder_track",
@@ -1368,7 +1368,7 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0029",
+    "monster_id": "mob_0076",
     "count": 150
    }
   ],
@@ -1382,7 +1382,7 @@
     }
    ]
   },
-  "summary": "Visit Frostfire Divide, then clear the Cinder Imp horde: three full trains through the hollows."
+  "summary": "Visit Frostfire Divide, then clear the Cryo Sentry horde: three full trains through the hollows."
  },
  {
   "id": "q_emb_forge_approach",
@@ -1395,12 +1395,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0030",
+    "monster_id": "mob_0076",
     "count": 150
    },
    {
     "type": "kill",
-    "monster_id": "mob_0081",
+    "monster_id": "mob_0082",
     "count": 40
    }
   ],
@@ -1432,7 +1432,7 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0083",
+    "monster_id": "mob_0082",
     "count": 60
    }
   ],
@@ -1491,12 +1491,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0086",
+    "monster_id": "mob_0093",
     "count": 150
    },
    {
     "type": "kill",
-    "monster_id": "mob_0085",
+    "monster_id": "mob_0093",
     "count": 40
    }
   ],
@@ -1558,7 +1558,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0032",
+    "monster_id": "mob_0031",
     "count": 15
    }
   ],
@@ -1585,7 +1585,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0090",
+    "monster_id": "mob_0031",
     "count": 120
    },
    {
@@ -1604,7 +1604,7 @@
     }
    ]
   },
-  "summary": "Gutter Lurks hide under the old road and pour out together when one is struck. Clear them and bring back Null Wisp fragments for the Umbracrest tonic."
+  "summary": "Gutter Lurks hide under the old road and pour out together when one is struck. Clear them and bring back Furnace Knight fragments for the Umbracrest tonic."
  },
  {
   "id": "q_noc_nullgarden",
@@ -1622,12 +1622,12 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0091",
+    "monster_id": "mob_0084",
     "count": 80
    },
    {
     "type": "kill",
-    "monster_id": "mob_0033",
+    "monster_id": "mob_0084",
     "count": 40
    }
   ],
@@ -1641,7 +1641,7 @@
     }
    ]
   },
-  "summary": "Visit Meridian Gate, then burn the Nullbloom beds and stop the Shade Carriers on the moraine."
+  "summary": "Visit Meridian Gate, then burn the Rivet Scrapling beds and stop the Shade Carriers on the moraine."
  },
  {
   "id": "q_noc_silent_tracks",
@@ -1654,12 +1654,12 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0092",
+    "monster_id": "mob_0093",
     "count": 150
    },
    {
     "type": "kill",
-    "monster_id": "mob_0034",
+    "monster_id": "mob_0093",
     "count": 60
    }
   ],
@@ -1673,7 +1673,7 @@
     }
    ]
   },
-  "summary": "Coupler Mite crews in the yards, Lattice Drones on the gantries: pull the drones into the mite packs."
+  "summary": "Riftling crews in the yards, Lattice Drones on the gantries: pull the drones into the mite packs."
  },
  {
   "id": "q_noc_veil_rift",
@@ -1686,7 +1686,7 @@
   "objectives": [
    {
     "type": "kill",
-    "monster_id": "mob_0093",
+    "monster_id": "mob_0034",
     "count": 150
    },
    {
@@ -1705,7 +1705,7 @@
     }
    ]
   },
-  "summary": "Riftling trains along the tear. The Veil-Eyes go to the Guild's scholars, who want to know how wide the Rift has grown."
+  "summary": "Lattice Drone trains along the tear. The Veil-Eyes go to the Guild's scholars, who want to know how wide the Rift has grown."
  },
  {
   "id": "q_noc_black_array",
@@ -1723,7 +1723,7 @@
    },
    {
     "type": "kill",
-    "monster_id": "mob_0094",
+    "monster_id": "mob_0034",
     "count": 30
    }
   ],

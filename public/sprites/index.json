@@ -15,22 +15,6 @@
    "sprite": "ambermite_2d",
    "scale": 1.35
   },
-  "mob_0004": {
-   "sprite": "lunari_2d",
-   "scale": 1.3
-  },
-  "mob_0005": {
-   "sprite": "craglet_2d",
-   "scale": 1.56
-  },
-  "mob_0006": {
-   "sprite": "thornback_2d",
-   "scale": 1.69
-  },
-  "mob_0007": {
-   "sprite": "dustwing_2d",
-   "scale": 1.7
-  },
   "mob_0008": {
    "sprite": "brookfin_2d",
    "scale": 1.3
@@ -48,132 +32,35 @@
    "scale": 2
   },
   "mob_0036": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 3.12,
-   "placeholder": true
+   "sprite": "aether_treant_2d",
+   "scale": 2.4
+  },
+  "mob_0004": {
+   "sprite": "lunari_2d",
+   "scale": 1.3
+  },
+  "mob_0005": {
+   "sprite": "craglet_2d",
+   "scale": 1.56
+  },
+  "mob_0006": {
+   "sprite": "thornback_2d",
+   "scale": 1.69
+  },
+  "mob_0007": {
+   "sprite": "dustwing_2d",
+   "scale": 1.7
   },
   "mob_0012": {
    "sprite": "graftling_2d",
    "scale": 1.35
   },
-  "mob_0040": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
   "mob_0013": {
    "sprite": "sapdrone_2d",
    "scale": 1.8
   },
-  "mob_0041": {
-   "sprite": "mosskin",
-   "tint": [
-    0.9,
-    1.05,
-    1.15
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0042": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0014": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0043": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0044": {
-   "sprite": "mosskin",
-   "tint": [
-    0.9,
-    1.05,
-    1.15
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0015": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0045": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 2.08,
-   "placeholder": true
-  },
-  "mob_0046": {
-   "sprite": "mosskin",
-   "tint": [
-    0.75,
-    0.6,
-    1.05
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
   "mob_0047": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0048": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.63,
-   "placeholder": true
+   "sprite": "terrabloom_2d"
   },
   "mob_0049": {
    "sprite": "mosskin",
@@ -185,125 +72,12 @@
    "scale": 3.12,
    "placeholder": true
   },
-  "mob_0016": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0050": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0017": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0051": {
-   "sprite": "mosskin",
-   "tint": [
-    0.9,
-    1.05,
-    1.15
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0018": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0052": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0053": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
   "mob_0019": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0054": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.3,
-   "placeholder": true
+   "sprite": "ruin_golem_2d",
+   "scale": 1.25
   },
   "mob_0055": {
-   "sprite": "mosskin",
-   "tint": [
-    0.75,
-    0.6,
-    1.05
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0056": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 2.08,
-   "placeholder": true
-  },
-  "mob_0057": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
+   "sprite": "aether_wraith_2d"
   },
   "mob_0058": {
    "sprite": "mosskin",
@@ -325,85 +99,8 @@
    "scale": 3.12,
    "placeholder": true
   },
-  "mob_0020": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0060": {
-   "sprite": "mosskin",
-   "tint": [
-    0.9,
-    1.05,
-    1.15
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0021": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0061": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0062": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0022": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0063": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0023": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.63,
-   "placeholder": true
+  "mob_0025": {
+   "sprite": "gust_wisp_2d"
   },
   "mob_0064": {
    "sprite": "mosskin",
@@ -426,34 +123,7 @@
    "placeholder": true
   },
   "mob_0066": {
-   "sprite": "mosskin",
-   "tint": [
-    0.9,
-    1.05,
-    1.15
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0067": {
-   "sprite": "mosskin",
-   "tint": [
-    0.7,
-    0.95,
-    1.25
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0068": {
-   "sprite": "mosskin",
-   "tint": [
-    0.75,
-    0.6,
-    1.05
-   ],
-   "scale": 1.3,
-   "placeholder": true
+   "sprite": "sky_manta_2d"
   },
   "mob_0069": {
    "sprite": "mosskin",
@@ -466,104 +136,7 @@
    "placeholder": true
   },
   "mob_0024": {
-   "sprite": "mosskin",
-   "tint": [
-    0.85,
-    1.05,
-    1.35
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0070": {
-   "sprite": "mosskin",
-   "tint": [
-    0.9,
-    1.05,
-    1.15
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0025": {
-   "sprite": "mosskin",
-   "tint": [
-    0.85,
-    1.05,
-    1.35
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0071": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0026": {
-   "sprite": "mosskin",
-   "tint": [
-    0.85,
-    1.05,
-    1.35
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0072": {
-   "sprite": "mosskin",
-   "tint": [
-    0.85,
-    1.05,
-    1.35
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0073": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 2.08,
-   "placeholder": true
-  },
-  "mob_0027": {
-   "sprite": "mosskin",
-   "tint": [
-    0.85,
-    1.05,
-    1.35
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0074": {
-   "sprite": "mosskin",
-   "tint": [
-    0.75,
-    0.6,
-    1.05
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0075": {
-   "sprite": "mosskin",
-   "tint": [
-    0.85,
-    1.05,
-    1.35
-   ],
-   "scale": 1.63,
-   "placeholder": true
+   "sprite": "crystal_mite_2d"
   },
   "mob_0076": {
    "sprite": "mosskin",
@@ -585,16 +158,6 @@
    "scale": 1.3,
    "placeholder": true
   },
-  "mob_0078": {
-   "sprite": "mosskin",
-   "tint": [
-    0.85,
-    1.05,
-    1.35
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
   "mob_0079": {
    "sprite": "mosskin",
    "tint": [
@@ -605,67 +168,7 @@
    "scale": 3.12,
    "placeholder": true
   },
-  "mob_0028": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0080": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0029": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0030": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0081": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
   "mob_0082": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0083": {
    "sprite": "mosskin",
    "tint": [
     1.3,
@@ -686,44 +189,7 @@
    "placeholder": true
   },
   "mob_0084": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0085": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0086": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0087": {
-   "sprite": "mosskin",
-   "tint": [
-    1.3,
-    0.75,
-    0.55
-   ],
-   "scale": 1.63,
-   "placeholder": true
+   "sprite": "gearling_2d"
   },
   "mob_0088": {
    "sprite": "mosskin",
@@ -733,56 +199,6 @@
     0.55
    ],
    "scale": 3.12,
-   "placeholder": true
-  },
-  "mob_0032": {
-   "sprite": "mosskin",
-   "tint": [
-    0.75,
-    0.6,
-    1.05
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0090": {
-   "sprite": "mosskin",
-   "tint": [
-    0.75,
-    0.6,
-    1.05
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0033": {
-   "sprite": "mosskin",
-   "tint": [
-    0.75,
-    0.6,
-    1.05
-   ],
-   "scale": 1.63,
-   "placeholder": true
-  },
-  "mob_0091": {
-   "sprite": "mosskin",
-   "tint": [
-    0.8,
-    1.1,
-    0.75
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0092": {
-   "sprite": "mosskin",
-   "tint": [
-    1.1,
-    0.95,
-    0.7
-   ],
-   "scale": 1.3,
    "placeholder": true
   },
   "mob_0034": {
@@ -801,16 +217,6 @@
     0.75,
     0.6,
     1.05
-   ],
-   "scale": 1.3,
-   "placeholder": true
-  },
-  "mob_0094": {
-   "sprite": "mosskin",
-   "tint": [
-    0.9,
-    1.05,
-    1.15
    ],
    "scale": 1.3,
    "placeholder": true
