@@ -147,11 +147,11 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
   if (d.id === 'lum_fld_02') {
     // Keep the authored tree positions, but stop treating an entire grove as
     // solid terrain. Border forests remain world boundaries; interior trees
-    // each own just their root cell, irrespective of canopy size.
+    // use a trunk footprint: saplings occupy one cell, mature trees 2x2.
     for (let i = blockers.length - 1; i >= 0; i--)
       if (blockers[i].kind === 'forest' && d.blockers.includes(blockers[i])) blockers.splice(i, 1);
     for (let i = 0; i < props.length; i++)
-      if (props[i].kind === 'tree') props[i] = { ...props[i], block: 1 };
+      if (props[i].kind === 'tree') props[i] = { ...props[i], block: (props[i].scale ?? 1) >= 1.5 ? 2 : 1 };
     walk.fill(d.solid ? 0 : 1);
     for (const s of d.carve ?? []) {
       const [bx, by, bw, bh] = shapeBounds(s);
