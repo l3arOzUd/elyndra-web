@@ -1,6 +1,6 @@
 import { afterEach, expect, it, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { Vector3 } from 'three';
+import { Plane, Raycaster, Vector2, Vector3 } from 'three';
 import { IsoCamera } from '../src/render/camera';
 import { sceneSeed } from '../src/shared/sceneSeed';
 import type { MapLayout } from '../src/data/schema';
@@ -10,7 +10,12 @@ it('clamps extreme zoom below fog range and ignores invalid values',()=>{
   vi.stubGlobal('location',{search:''});
   const cam=new IsoCamera(1),target=new Vector3();
   cam.zoom(1000);cam.zoom(NaN);cam.update(10,target);
-  expect(cam.camera.position.distanceTo(new Vector3(0,.6,0))).toBeCloseTo(90);
+  expect(cam.camera.position.distanceTo(new Vector3(0,.6,0))).toBeCloseTo(106);
+  const ray=new Raycaster();ray.setFromCamera(new Vector2(0,1),cam.camera);
+  const edge=ray.ray.intersectPlane(new Plane(new Vector3(0,1,0),0),new Vector3())!;
+  const depth=-edge.applyMatrix4(cam.camera.matrixWorldInverse).z;
+  expect(depth).toBeLessThan(120);
+  expect(depth).toBeGreaterThan(119);
   cam.zoom(-1000);cam.update(10,target);
   expect(cam.camera.position.distanceTo(new Vector3(0,.6,0))).toBeCloseTo(36);
 });
