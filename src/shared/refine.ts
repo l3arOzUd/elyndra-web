@@ -13,7 +13,7 @@ export const REFINE_GLOW: { color: string; spark: boolean; prism?: boolean }[] =
   { color: "#ff3fc8", spark: true }, //  +7 hot magenta, fast pulse (red is +6)
   { color: "#ffffff", spark: true }, //  +8 white radiance
   { color: "#ff8a1f", spark: true }, //  +9 orange flame, flickering
-  { color: "#ffe066", spark: true, prism: true }, // +10 prismatic, brightest
+  { color: "#ffe066", spark: true, prism: true }, // +10 rainbow: every hue at once, turning
 ];
 
 export const refineGlow = (n: number) => (n > 0 ? REFINE_GLOW[Math.min(10, n) - 1] : undefined);

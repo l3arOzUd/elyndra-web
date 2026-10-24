@@ -373,11 +373,20 @@ h2 { font:700 25px/1.2 var(--ui-font-title); letter-spacing:0; }h3 { font-size:2
 .painted-icon[data-refine="8"] { --glow:#ffffffaa; --spark:#fff; --pulse:1.8s; }
 .painted-icon[data-refine="9"] { --glow:#ff8a1fc0; --spark:#ffe39a; --pulse:0.9s; }
 .painted-icon[data-refine="9"]::before { animation:refine-pulse .9s ease-in-out infinite,refine-flicker .23s steps(2) infinite,refine-drift 1.6s linear infinite; }
-.painted-icon[data-refine="10"] { --glow:#ff5af0aa; --spark:#fff; --pulse:1.6s; }
-.painted-icon[data-refine="10"]::before { animation:refine-pulse 1.1s ease-in-out infinite,refine-drift 2s linear infinite,refine-hue 2.5s linear infinite; }
+.painted-icon[data-refine="10"] { --spark:#fff; --pulse:1.1s; }
+/* +10: a turning band of every hue at once, strongest at the edges, over the twinkles. */
+@property --rainbow { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+.painted-icon[data-refine="10"]::before {
+ background:radial-gradient(1.6px 1.6px at 22% 30%,#fff 99%,transparent),radial-gradient(1.4px 1.4px at 72% 22%,#fff 99%,transparent),
+  radial-gradient(2px 2px at 80% 68%,#fff 99%,transparent),radial-gradient(1.4px 1.4px at 34% 78%,#fff 99%,transparent),
+  radial-gradient(circle at 50% 50%,transparent 28%,#0000 30%,#fff2 100%),
+  conic-gradient(from var(--rainbow),#ff4b4bb0,#ffa03ab0,#ffe45ab0,#5dff7ab0,#45d8ffb0,#5b7bffb0,#c46bffb0,#ff4b4bb0);
+ -webkit-mask:radial-gradient(circle at 50% 50%,#0006 25%,#000 70%); mask:radial-gradient(circle at 50% 50%,#0006 25%,#000 70%);
+}
+.painted-icon[data-refine="10"]::before { animation:refine-pulse 1.1s ease-in-out infinite,refine-rainbow 2.4s linear infinite; }
 @keyframes refine-pulse { 0%,100% { opacity:.5; } 50% { opacity:1; } }
 @keyframes refine-drift { from { background-position:0 0,0 0,0 0,0 0,center; } to { background-position:0 -10px,0 -14px,0 -8px,0 -12px,center; } }
-@keyframes refine-hue { to { filter:hue-rotate(360deg); } }
+@keyframes refine-rainbow { to { --rainbow:360deg; } }
 /* +9 flame: a fast uneven flicker on top of the pulse. */
 @keyframes refine-flicker { 50% { filter:brightness(1.35) saturate(1.2); } }
 @media (prefers-reduced-motion:reduce) { .painted-icon.refined::before,.painted-icon.graded::after { animation:none; } }

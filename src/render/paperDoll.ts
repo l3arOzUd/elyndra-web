@@ -379,16 +379,36 @@ function paintedBox(im: HTMLImageElement): [number, number, number, number] {
   return box;
 }
 
+/** The rainbow +10: every hue at once, turning a little each frame. */
+const RAINBOW = ["#ff4b4b", "#ffa03a", "#ffe45a", "#5dff7a", "#45d8ff", "#5b7bff", "#c46bff", "#ff4b4b"];
+let prismCanvas: HTMLCanvasElement | undefined;
+
 /** A refined item's layer: the glow of its +N round it, and sparkles that move from frame to frame. */
 function drawGlowing(g: CanvasRenderingContext2D, im: HTMLImageElement, m: DOMMatrix, refine: number, seed: number) {
   const glow = refineGlow(refine)!;
-  const color = glow.prism ? `hsl(${(seed * 47) % 360} 100% 72%)` : glow.color;
+  const color = glow.color;
   const r = 3 + refine * 0.9, pulse = 0.65 + 0.35 * Math.abs(Math.sin(seed * 0.9));
   g.setTransform(m);
   g.save();
   g.globalAlpha = pulse;
-  g.filter = `drop-shadow(0 0 ${r}px ${color}) drop-shadow(0 0 ${r / 2}px ${color})`;
-  g.drawImage(im, 0, 0);
+  if (glow.prism) {
+    // The silhouette's glow in white, then recoloured by a turning conic rainbow.
+    const pad = Math.ceil(r * 3), c = (prismCanvas ??= document.createElement("canvas"));
+    c.width = im.width + pad * 2; c.height = im.height + pad * 2;
+    const pg = c.getContext("2d")!;
+    pg.filter = `drop-shadow(0 0 ${r}px #fff) drop-shadow(0 0 ${r / 2}px #fff)`;
+    pg.drawImage(im, pad, pad);
+    pg.filter = "none";
+    pg.globalCompositeOperation = "source-in";
+    const rainbow = pg.createConicGradient(seed * 0.55, c.width / 2, c.height / 2);
+    RAINBOW.forEach((hue, i) => rainbow.addColorStop(i / (RAINBOW.length - 1), hue));
+    pg.fillStyle = rainbow;
+    pg.fillRect(0, 0, c.width, c.height);
+    g.drawImage(c, -pad, -pad);
+  } else {
+    g.filter = `drop-shadow(0 0 ${r}px ${color}) drop-shadow(0 0 ${r / 2}px ${color})`;
+    g.drawImage(im, 0, 0);
+  }
   g.restore();
   g.drawImage(im, 0, 0);
   if (!glow.spark) return;
@@ -398,7 +418,7 @@ function drawGlowing(g: CanvasRenderingContext2D, im: HTMLImageElement, m: DOMMa
   g.fillStyle = "#ffffff";
   for (let i = 0; i < 2 + Math.floor(refine / 2); i++) {
     const x = bx + rand() * bw, y = by + rand() * bh, size = 3 + rand() * (2 + refine * 0.4);
-    g.save(); g.shadowColor = color; g.shadowBlur = 6; g.globalAlpha = 0.6 + rand() * 0.4;
+    g.save(); g.shadowColor = glow.prism ? RAINBOW[i % (RAINBOW.length - 1)] : color; g.shadowBlur = 6; g.globalAlpha = 0.6 + rand() * 0.4;
     g.beginPath(); g.moveTo(x, y - size); g.lineTo(x + size * 0.28, y); g.lineTo(x, y + size); g.lineTo(x - size * 0.28, y); g.closePath(); g.fill();
     g.beginPath(); g.moveTo(x - size, y); g.lineTo(x, y + size * 0.28); g.lineTo(x + size, y); g.lineTo(x, y - size * 0.28); g.closePath(); g.fill();
     g.restore();
