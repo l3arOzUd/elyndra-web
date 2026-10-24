@@ -9,6 +9,9 @@ type Track = <T extends { dispose(): void }>(x: T) => T;
 
 const TEAL = new THREE.Color(0x7fe9f2), GOLD = new THREE.Color(0xf2c66b);
 const MOTES = 36;
+// The texture's outer ring sits at 236 of its 256-pixel radius; this plane
+// size puts that ring exactly at radius r.
+const RING_SPAN = 2 * 256 / 236;
 
 /** The rune circle, drawn once per colour on a canvas. */
 function circleTexture(colour: THREE.Color): THREE.CanvasTexture {
@@ -73,7 +76,7 @@ function moteTexture(): THREE.CanvasTexture {
 
 const shared = new Map<string, THREE.Texture>();
 
-/** One portal of radius `r` (cells), centred on the group's origin. Its
+/** One portal whose outer ring has radius `r` (cells), centred on the group's origin. Its
  * userData.tick(dt) animates it; animate() in terrain.ts calls it. */
 export function buildPortal(r: number, locked: boolean, track: Track): THREE.Group {
   const colour = locked ? GOLD : TEAL;
@@ -84,13 +87,13 @@ export function buildPortal(r: number, locked: boolean, track: Track): THREE.Gro
   const portal = new THREE.Group();
 
   const circleMat = track(new THREE.MeshBasicMaterial({ map: shared.get(key)!, color: colour, opacity: 0.9, ...additive }));
-  const circle = new THREE.Mesh(track(new THREE.PlaneGeometry(r * 2.3, r * 2.3).rotateX(-Math.PI / 2)), circleMat);
+  const circle = new THREE.Mesh(track(new THREE.PlaneGeometry(r * RING_SPAN, r * RING_SPAN).rotateX(-Math.PI / 2)), circleMat);
   circle.position.y = 0.03;
   circle.renderOrder = 2;
   portal.add(circle);
   // A second, smaller circle turning the other way gives the ring depth.
   const innerMat = track(new THREE.MeshBasicMaterial({ map: shared.get(key)!, color: colour, opacity: 0.45, ...additive }));
-  const inner = new THREE.Mesh(track(new THREE.PlaneGeometry(r * 1.3, r * 1.3).rotateX(-Math.PI / 2)), innerMat);
+  const inner = new THREE.Mesh(track(new THREE.PlaneGeometry(r * 1.2, r * 1.2).rotateX(-Math.PI / 2)), innerMat);
   inner.position.y = 0.05;
   inner.renderOrder = 2;
   portal.add(inner);

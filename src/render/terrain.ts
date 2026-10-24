@@ -360,7 +360,8 @@ export function buildMap(l: MapLayout, region: RegionDef | undefined, warps: War
   const portals: BuiltMap["portals"] = [];
   for (const w of warps) {
     const [x, y, ww, hh] = w.trigger_rect;
-    const r = Math.max(ww, hh) / 2 + 0.3;
+    // The ring fits inside the trigger's short side, so stepping anywhere on it warps.
+    const r = Math.min(ww, hh) / 2;
     const portal = buildPortal(r, w.requirements.length > 0, track);
     portal.position.set(x + ww / 2, 0.05, y + hh / 2);
     group.add(portal);
