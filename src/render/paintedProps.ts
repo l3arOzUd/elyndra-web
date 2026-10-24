@@ -17,7 +17,7 @@ type Blocker = MapLayout["blockers"][number];
 /** Kinds drawn as painted cards; the rest stay models (props.ts). */
 export const PAINTED_KINDS = new Set<PropKind>(["tree", "pine", "bush", "rock", "boulder", "dead_tree", "palm", "coral", "ice_spike", "crystal", "giant_tree", "crate", "brass_pipe", "gear_ruin", "rune_stone", "ruin_block"]);
 
-type Look = "green" | "snow" | "dry" | "dark";
+type Look = "green" | "snow" | "dry" | "dark" | "orchard";
 /** An atlas cell: wÃƒâ€”h pixels at px,py; drawn cwÃƒâ€”ch cells. */
 interface Card { kind: string; w: number; h: number; px: number; py: number; cw: number; ch: number }
 /** Card size in cells (w across, h up) and atlas pixels per cell. */
@@ -385,6 +385,7 @@ function atlasFor(look: Look): Atlas {
 }
 
 function lookOf(l: MapLayout): Look {
+  if (l.id === 'lum_fld_02') return 'orchard';
   if (l.ground === "snow") return "snow";
   if (l.ground === "sand" || l.ground === "shore") return "dry";
   if (l.ground === "ash" || l.ground === "metal" || l.ground === "cave") return "dark";

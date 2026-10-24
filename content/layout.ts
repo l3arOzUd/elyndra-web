@@ -104,15 +104,18 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
   };
   const inPocket = (x: number, y: number) => d.pockets.some((p) => p.rects.some((r) => x >= r[0] && y >= r[1] && x < r[0] + r[2] && y < r[1] + r[3]));
   for (const s of d.scatter) {
+    const orchardTree = d.id === 'lum_fld_02' && s.kind === 'tree';
+    const count = orchardTree ? Math.ceil(s.count * 0.45) : s.count;
     const area = s.area ?? [0, 0, w, h];
     let placed = 0;
-    for (let tries = 0; placed < s.count && tries < s.count * 30; tries++) {
+    for (let tries = 0; placed < count && tries < count * 30; tries++) {
       const x = area[0] + Math.floor(rand() * area[2]);
       const y = area[1] + Math.floor(rand() * area[3]);
       if (avoid(x, y)) continue;
+      if (orchardTree && props.some(p => p.kind === 'tree' && Math.hypot(p.x-x,p.y-y)<7)) continue;
       // Hordes need open ground: blocking scatter is thinned inside pockets.
       if (s.block > 0 && inPocket(x, y) && rand() > 0.12) continue;
-      const scale = s.scale ? s.scale[0] + rand() * (s.scale[1] - s.scale[0]) : 1;
+      const scale = orchardTree ? (placed % 5 === 0 ? 1.9 + rand()*.25 : 1.15 + rand()*.35) : s.scale ? s.scale[0] + rand() * (s.scale[1] - s.scale[0]) : 1;
       const p: Prop = { kind: s.kind, x, y, block: s.block, scale: Math.round(scale * 100) / 100, rot: Math.round(rand() * 628) / 100 };
       props.push(p);
       blockFootprint(p, (bx, by) => set(bx, by, 0));
@@ -133,10 +136,12 @@ export function bakeLayout(d: MapDesign, keepClear: [number, number, number][] =
   for (const b of blockers) {
     if (b.kind !== "forest") continue;
     const [bx, by, bw, bh] = shapeBounds(b.shape);
-    for (let y = by; y < by + bh; y += 2) for (let x = bx; x < bx + bw; x += 2) {
+    const orchard = d.id === 'lum_fld_02';
+    const spacing = orchard ? 4.8 : 2;
+    for (let y = by; y < by + bh; y += spacing) for (let x = bx; x < bx + bw; x += spacing) {
       if (!shapeContains(b.shape, x, y) || rand() < 0.35) continue;
-      if (x >= 0 && y >= 0 && x < w && y < h && walk[y * w + x] === 1) continue;
-      props.push({ kind: d.ground === "snow" ? "pine" : "tree", x: x + rand(), y: y + rand(), block: 0, scale: Math.round((0.8 + rand() * 0.6) * 100) / 100, rot: Math.round(rand() * 628) / 100 });
+      if (x >= 0 && y >= 0 && x < w && y < h && walk[Math.floor(y) * w + Math.floor(x)] === 1) continue;
+      props.push({ kind: d.ground === "snow" ? "pine" : "tree", x: x + rand(), y: y + rand(), block: 0, scale: Math.round((orchard ? 1.5 + rand()*.6 : 0.8 + rand() * 0.6) * 100) / 100, rot: Math.round(rand() * 628) / 100 });
     }
   }
   return {

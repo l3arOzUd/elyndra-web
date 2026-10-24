@@ -257,7 +257,7 @@ function envArtManifest(publicDir: string): { sprites: Record<string, Record<str
   const pngs = (dir: string) => (existsSync(dir) ? readdirSync(dir).filter((f) => /\.png$/i.test(f)).sort() : []);
   const sprites: Record<string, Record<string, string[]>> = {};
   const spriteDir = join(publicDir, "sprites", "env");
-  for (const look of ["", "green", "dry", "snow", "dark"]) {
+  for (const look of ["", "green", "dry", "snow", "dark", "orchard"]) {
     for (const f of pngs(join(spriteDir, look))) {
       const m = /^([a-z_]+?)_\d+\.png$/i.exec(f);
       if (!m) continue;

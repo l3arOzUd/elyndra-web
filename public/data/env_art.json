@@ -24,6 +24,13 @@
     "tuft_2.png",
     "tuft_3.png"
    ]
+  },
+  "orchard": {
+   "tree": [
+    "orchard/tree_1.png",
+    "orchard/tree_2.png",
+    "orchard/tree_3.png"
+   ]
   }
  },
  "textures": [
