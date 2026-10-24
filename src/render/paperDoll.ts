@@ -248,7 +248,7 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
   const parts=rig.views[view].parts, near=parts.arm_near.pivot, far=parts.arm_far.pivot;
   const k=f/Math.max(1,n-1), release=8/11;
   const aim=(which:"near"|"far",x:number,y:number,bend:number,angle=0)=>aimArm(rig,view,p,which,[x,y],bend,angle);
-  const rest=(which:"near"|"far"):Vec=>which==="near"&&side&&motion!=="unarmed"?[near[0]-46,near[1]+65]:parts[`hand_${which}`]?.pivot ?? parts[`arm_${which}`].pivot;
+  const rest=(which:"near"|"far"):Vec=>which==="near"&&motion==="melee"?[near[0]-(side?46:24*sign),near[1]+(side?65:70)]:which==="near"&&side&&motion!=="unarmed"?[near[0]-46,near[1]+65]:parts[`hand_${which}`]?.pivot ?? parts[`arm_${which}`].pivot;
   const blendAim=(which:"near"|"far",target:Vec,t:number,bend:number,angle=0)=>{
     const r=rest(which),start=which==="near"&&side&&motion!=="unarmed"?(motion==="cast"?-18:motion==="shoot"?-14:-5):0;
     aim(which,lerp(r[0],target[0],t),lerp(r[1],target[1],t),bend,lerp(start,angle,t));
@@ -274,6 +274,11 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
     return p;
   }
   if(anim==="idle"||anim==="walk"||anim==="hit") {
+    if(motion==="melee") {
+      const carry=rest('near'),sway=anim==='walk'?Math.sin(f/n*Math.PI*2):0;
+      aim('near',carry[0]+sway*3,carry[1]+sway*2,side?-1:-sign,side?-5:0);
+      return p;
+    }
     // Carry in FRONT of the chest/hips. The staff leans away from the face;
     // moving the gripping hand behind the body is not a valid carry pose.
     if(side && motion!=="unarmed") {
@@ -304,7 +309,7 @@ export function actionPose(rig: Rig, view: string, anim: AnimName, f: number, n:
     const strike:Vec=side?[near[0]-76,near[1]+5]:[near[0]+62*sign,near[1]+20];
     const mix=(a:Vec,b:Vec,t:number):Vec=>[lerp(a[0],b[0],t),lerp(a[1],b[1],t)];
     const hand=k<.4?mix(start,up,ease(k/.4)):k<.62?mix(up,strike,ease((k-.4)/.22)):mix(strike,start,ease((k-.62)/.38));
-    const resting=side?-5:0,windup=95*sign,hit=side?25:-25*sign;
+    const resting=side?-5:0,windup=-10*sign,hit=-100*sign;
     const wrist=k<.4?lerp(resting,windup,ease(k/.4)):k<.62?lerp(windup,hit,ease((k-.4)/.22)):lerp(hit,resting,ease((k-.62)/.38));
     aim("near",hand[0],hand[1],side?-1:-sign,wrist);
     p.angle.torso=(side?-5:4*sign)*Math.sin(k*Math.PI);
@@ -428,6 +433,12 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
     g.drawImage(im, 0, 0);
   };
   const order=[...v.order];
+  // Fingers occlude the handle. Drawing the weapon over the fist makes
+  // the character appear to hold the guard or glue the blade onto a palm.
+  if(weaponMotion(gear)==='melee'&&view!=='back') {
+    order.splice(order.indexOf('weapon'),1);
+    order.splice(order.indexOf('hand_near'),0,'weapon');
+  }
   // Lower robe panels follow the hips, not the chest. Place them over the
   // legs and under the bodice belt, with room for the knees when collapsing.
   if(gear.some(it=>it.layers.includes('skirt')))order.splice(order.indexOf('torso'),0,'skirt');
@@ -450,7 +461,12 @@ function drawCell(g: CanvasRenderingContext2D, kit: PaperDollKit, view: string, 
       if (gauntlet && slot === 'hand_near' && it.slot === 'gloves') continue;
       const f = `items/${it.visual}/${view}/${slot}`, file = variant && kit.img.has(f + variant + ".png") ? f + variant + ".png" : f + ".png";
       const im = it.refine ? kit.img.get(file) : undefined;
-      if (im) drawGlowing(g, im, m, it.refine!, seed); else draw(file, m);
+      // The original starter saber was painted point-down; normalize it
+      // to the same forward grip as the imported blade-up sword families.
+      const wrist=v.parts.hand_near.pivot;
+      const itemMatrix=slot==='weapon'&&it.visual==='copper_saber'
+        ?m.translate(wrist[0],wrist[1]+12).rotate(view==='back'?-110:110).translate(-wrist[0],-wrist[1]-12):m;
+      if (im) drawGlowing(g, im, itemMatrix, it.refine!, seed); else draw(file, itemMatrix);
     }
   }
   // Native line geometry follows the actual wrist transforms: a bowstring

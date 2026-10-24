@@ -5,9 +5,10 @@ const root='art-source/doll-v3',kit='public/sprites/wayfarer';
 const rig=JSON.parse(await fs.readFile(kit+'/rig.json','utf8'));
 const manifest=JSON.parse(await fs.readFile(root+'/manifest.json','utf8'));
 const browser=await chromium.launch({headless:true,executablePath:'C:/Users/l3arOzUd/AppData/Local/ms-playwright/chromium-1208/chrome-win64/chrome.exe'});
-const page=await browser.newPage(),imported={};
+const only=new Set(process.argv.slice(2));
+const page=await browser.newPage(),imported=only.size?JSON.parse(await fs.readFile(root+'/imported.json','utf8')):{};
 const data=async p=>'data:image/png;base64,'+(await fs.readFile(p)).toString('base64');
-try {for(const s of manifest.sets){
+try {for(const s of manifest.sets.filter(s=>!only.size||only.has(s.set))){
  const sheet=await data(root+'/'+s.set+(s.set==='head_hood'?'-v2':'')+'.png');let present=new Set();
  for(let r=0;r<manifest.views.length;r++)for(let c=0;c<s.layers.length;c++){
   const view=manifest.views[r],layer=s.layers[c];
@@ -53,11 +54,11 @@ try {for(const s of manifest.sets){
     const out=canvas(512,512);out.getContext('2d').drawImage(cell,box[0],box[1],box[2]-box[0],box[3]-box[1],tx,ty,ex-tx,ey-ty);return out.toDataURL('image/png').split(',')[1];
    }
    if(slot==='weapon' && /saber|executioner/.test(set)){
-    const out=canvas(512,512),g=out.getContext('2d'),sw=box[2]-box[0],sh=box[3]-box[1],height=145,width=height*sw/sh;
+    const out=canvas(512,512),g=out.getContext('2d'),sw=box[2]-box[0],sh=box[3]-box[1],height=180,width=height*sw/sh;
     const a=cell.getContext('2d').getImageData(0,0,w,h).data;let total=0,n=0;
     for(let yy=Math.floor(box[1]+sh*.8);yy<box[1]+sh*.92;yy++)for(let xx=box[0];xx<box[2];xx++)if(a[(yy*w+xx)*4+3]>64){total+=xx;n++;}
     const grip=((total/n||box[0]+sw/2)-box[0])/sw;
-    g.translate(pivot[0],pivot[1]+9);g.rotate((view==='back'?145:-145)*Math.PI/180);g.drawImage(cell,box[0],box[1],sw,sh,-width*grip,-height*.86,width,height);return out.toDataURL('image/png').split(',')[1];
+    g.translate(pivot[0],pivot[1]+12);g.rotate((view==='back'?35:-35)*Math.PI/180);g.drawImage(cell,box[0],box[1],sw,sh,-width*grip,-height*.86,width,height);return out.toDataURL('image/png').split(',')[1];
    }
    const grow=['boots','gloves'].includes(slot)?2:0;const bw=b[2]-b[0]+grow*2,bh=b[3]-b[1]+grow*2,sw=box[2]-box[0],sh=box[3]-box[1],k=/^(arm_|forearm_|hand_|shin_)/.test(layer)?bh/sh:Math.min(bw/sw,bh/sh),dw=Math.round(sw*k),dh=Math.round(sh*k);
    const out=canvas(512,512);out.getContext('2d').drawImage(cell,box[0],box[1],sw,sh,Math.round(b[0]-grow+(bw-dw)/2),Math.round(b[1]-grow+(/^(arm_|forearm_|hand_|shin_)/.test(layer)?0:(bh-dh)/2)),dw,dh);return out.toDataURL('image/png').split(',')[1];
@@ -67,4 +68,4 @@ try {for(const s of manifest.sets){
  }
  imported[s.visual]=[...present].sort();console.log(s.set,present.size);
 }await fs.writeFile(root+'/imported.json',JSON.stringify(imported,null,1)+'\n');}finally{await browser.close()}
-await import('./import-robe-skirt.mjs');
+if(!only.size||only.has('armor_robe'))await import('./import-robe-skirt.mjs');
