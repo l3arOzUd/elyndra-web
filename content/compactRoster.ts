@@ -30,6 +30,9 @@ export const EXISTING_ART: Record<string, string> = {
   'Frost Mite': 'crystal_mite_2d',
   'Sun Warden': 'ruin_golem_2d',
   'Rivet Scrapling': 'gearling_2d',
+  // Trial of the 2D -> 3D -> sprite route (scripts/render-3d-sprite.mjs): the
+  // Croakling model rendered in five facings, on a species that had no art.
+  'Pearl Skate': 'croakling_3d',
 };
 
 /** Compact after the authored world/recipes are built: layout and spawn density stay intact.

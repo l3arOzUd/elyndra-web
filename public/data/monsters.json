@@ -1894,7 +1894,7 @@
   ],
   "ecology": "Resident of Pearl Coast. Gathers in packs; responds to nearby fighting.",
   "art_brief": "A wide diamond-shaped skate with a pearlescent back and a whip tail, skimming on its wing tips; sand-cream with nacre sheen.",
-  "sprite": "mob_0064",
+  "sprite": "croakling_3d",
   "habitat": [
    {
     "map_id": "tha_fld_01",

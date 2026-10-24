@@ -1,0 +1,65 @@
+{
+  "id": "croakling_3d",
+  "kind": "sheet",
+  "facingMode": "directional",
+  "frame": {
+    "w": 256,
+    "h": 256
+  },
+  "pivot": {
+    "x": 128,
+    "y": 186
+  },
+  "pixelsPerCell": 150,
+  "rows": [
+    "W",
+    "S",
+    "SW",
+    "NW",
+    "N"
+  ],
+  "mirror": {
+    "E": "W",
+    "SE": "SW",
+    "NE": "NW"
+  },
+  "animations": {
+    "idle": {
+      "file": "idle.png",
+      "frames": 16,
+      "fps": 6.7,
+      "loop": true
+    },
+    "walk": {
+      "file": "walk.png",
+      "frames": 8,
+      "fps": 10,
+      "loop": true,
+      "refMsPerCell": 200
+    },
+    "attack": {
+      "file": "attack.png",
+      "frames": 12,
+      "fps": 12.2,
+      "events": {
+        "hit": 4
+      }
+    },
+    "hit": {
+      "file": "hit.png",
+      "frames": 8,
+      "fps": 12.7
+    },
+    "death": {
+      "file": "death.png",
+      "frames": 16,
+      "fps": 7.9,
+      "hold": true
+    }
+  },
+  "source": {
+    "model": "../sprite/models/animated/croakling.glb",
+    "renderer": "scripts/render-3d-sprite.mjs",
+    "pitch": 50
+  }
+}

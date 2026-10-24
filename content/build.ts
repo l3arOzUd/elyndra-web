@@ -57,7 +57,7 @@ function dropsFor(m: RegionDesign["monsters"][number]): DropDef[] {
 const ART_SIZE: Record<string, number> = {
   dustwing_2d: 1.7, sapdrone_2d: 1.8, ambermite_2d: 1.35, graftling_2d: 1.35, brookfin_2d: 1.3, lunari_2d: 1.3,
   rotroot_2d: 1.35, mosskin_2d: 1.3, sporeling_2d: 1.3, craglet_2d: 1.25, thornback_2d: 1.35,
-  reedstalker_2d: 1.6, barkwarden_2d: 1.6, mosskin: 1.3,
+  reedstalker_2d: 1.6, barkwarden_2d: 1.6, mosskin: 1.3, croakling_3d: 1.25,
 };
 
 const ELEMENT_TINT: Record<string, [number, number, number]> = {
