@@ -132,7 +132,7 @@ export function buildMannequin(): THREE.Group {
   const long = springChain("HairBack", head, [0, 0.22, -0.16], [0, -0.11, -0.01], 3);
   long.forEach((b, i) => part(b, new THREE.BoxGeometry(0.3 - i * 0.03, 0.12, 0.05), hair, [0, -0.055, 0], [1, 1, 1], true, "hair=long"));
   const capeBones = springChain("Cape", chest, [0, 0.085, -0.075], [0, -0.13, -0.008], 3);
-  capeBones.forEach((b, i) => part(b, new THREE.BoxGeometry(0.22 + i * 0.035, 0.135, 0.014), cape, [0, -0.065, 0], [1, 1, 1], true, "cape"));
+  capeBones.forEach((b, i) => part(b, new THREE.BoxGeometry(0.17 + i * 0.025, 0.135, 0.014), cape, [0, -0.065, 0], [1, 1, 1], true, "cape"));
 
   for (const [side, s] of [["L", 1], ["R", -1]] as const) {
     const shoulder = bone(`Shoulder_${side}`, chest, 0.07 * s, 0.07);
