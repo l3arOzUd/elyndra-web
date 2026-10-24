@@ -58,7 +58,9 @@ try {for(const s of manifest.sets.filter(s=>!only.size||only.has(s.set))){
     const a=cell.getContext('2d').getImageData(0,0,w,h).data;let total=0,n=0;
     for(let yy=Math.floor(box[1]+sh*.8);yy<box[1]+sh*.92;yy++)for(let xx=box[0];xx<box[2];xx++)if(a[(yy*w+xx)*4+3]>64){total+=xx;n++;}
     const grip=((total/n||box[0]+sw/2)-box[0])/sw;
-    g.translate(pivot[0],pivot[1]+12);g.rotate((view==='back'?35:-35)*Math.PI/180);g.drawImage(cell,box[0],box[1],sw,sh,-width*grip,-height*.86,width,height);return out.toDataURL('image/png').split(',')[1];
+    // Mirror about the actual grip: the painted convex cutting edge must
+    // face away from the body, not merely have its tip pointing upward.
+    g.translate(pivot[0],pivot[1]+12);g.rotate((view==='back'?35:-35)*Math.PI/180);g.scale(-1,1);g.drawImage(cell,box[0],box[1],sw,sh,-width*grip,-height*.86,width,height);return out.toDataURL('image/png').split(',')[1];
    }
    const grow=['boots','gloves'].includes(slot)?2:0;const bw=b[2]-b[0]+grow*2,bh=b[3]-b[1]+grow*2,sw=box[2]-box[0],sh=box[3]-box[1],k=/^(arm_|forearm_|hand_|shin_)/.test(layer)?bh/sh:Math.min(bw/sw,bh/sh),dw=Math.round(sw*k),dh=Math.round(sh*k);
    const out=canvas(512,512);out.getContext('2d').drawImage(cell,box[0],box[1],sw,sh,Math.round(b[0]-grow+(bw-dw)/2),Math.round(b[1]-grow+(/^(arm_|forearm_|hand_|shin_)/.test(layer)?0:(bh-dh)/2)),dw,dh);return out.toDataURL('image/png').split(',')[1];
