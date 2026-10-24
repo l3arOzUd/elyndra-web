@@ -169,6 +169,7 @@ async function main() {
     ready: true, kit, rebake, chosen,
     // Read-only render access for repeatable art review, not player state.
     getSprite: () => sprite,
+    bake: bakeWayfarer,
     renderPose: (g: CanvasRenderingContext2D, view: string, gear: string[], anim: AnimName, frame: number) => renderWayfarerPose(g, kit, view, gear, anim, frame),
   };
 }

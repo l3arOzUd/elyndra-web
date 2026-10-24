@@ -1,14 +1,15 @@
 import { createRequire } from 'node:module';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 const {chromium}=createRequire(import.meta.url)(process.env.PLAYWRIGHT_MODULE || 'playwright-core');
 const out=resolve(import.meta.dirname,'../../output/wayfarer-review');await mkdir(out,{recursive:true});
+const sets=JSON.parse(await readFile(resolve(import.meta.dirname,'../art-source/doll-v3/manifest.json'),'utf8')).sets;
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,headless:true});
 try{
  const page=await browser.newPage({viewport:{width:1720,height:1000}}),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
- await page.goto('http://localhost:5173/character-viewer.html');await page.waitForFunction(()=>window.__wayfarer?.ready);
+ await page.goto('http://localhost:7101/character-viewer.html');await page.waitForFunction(()=>window.__wayfarer?.ready);
  await page.locator('#pivots').uncheck();
  await page.screenshot({path:resolve(out,'base.png'),fullPage:true});
  await page.locator('[data-outfit="itm_0080"]').click();
@@ -29,11 +30,16 @@ try{
  }
  await page.locator('#reload').click();
  await page.waitForFunction(()=>document.querySelector('#missing').className==='ok');
- const result=await page.evaluate(async()=>{
-  const {bakeWayfarer}=await import('/src/render/paperDoll.ts');
+ const result=await page.evaluate(async(sets)=>{
+  const bakeWayfarer=window.__wayfarer.bake;
   const {kit}=window.__wayfarer,records=[],pictures=[];
   const hash=(pixels)=>{let h=2166136261;for(const n of pixels)h=Math.imul(h^n,16777619);return (h>>>0).toString(16);};
   const looks=[[],['itm_0078'],['itm_0079'],['itm_0080'],['itm_0081'],['itm_0082'],['itm_0078','itm_0079','itm_0080'],['itm_0078','itm_0079','itm_0081'],['itm_0078','itm_0079','itm_0082']];
+  for(const set of sets) {
+   const id=set.items.find(id=>kit.items[id]?.visual===set.visual);
+   if(!id)throw Error('Unmapped wearable family: '+set.visual);
+   looks.push([id]);
+  }
   for(const gear of looks){
    const sprite=bakeWayfarer(kit,gear),F=sprite.json.frame.w;
    for(const [anim,sheet]of Object.entries(sprite.sheets)){
@@ -77,11 +83,11 @@ try{
    for(const item of Object.values(kit.items))for(const layer of item.layers)expected.add(`items/${item.visual}/${view}/${layer}.png`);
   }
   return {parts:kit.img.size,missing:[...expected].filter(file=>!kit.img.has(file)),records,pictures};
- });
+ },sets);
  for(const p of result.pictures)await writeFile(resolve(out,`motion-${p.name}.png`),Buffer.from(p.data,'base64'));
  const report={parts:result.parts,missing:result.missing,records:result.records,errors};await writeFile(resolve(out,'validation.json'),JSON.stringify(report,null,2)+'\n');
  assert.deepEqual(result.missing,[],'Every declared rig and equipment image must load');assert.equal(errors.length,0);assert.ok(result.records.every(r=>!r.emptyFrames));
  assert.ok(result.records.every(r=>!r.edgeFrames),'No outfit may be cropped at a frame edge');
- assert.equal(new Set(result.records.filter(r=>r.anim==='idle').map(r=>r.hash)).size,9,'Each outfit must visibly differ');
- console.log(JSON.stringify({parts:result.parts,outfits:9,animations:7,errors,clipped:result.records.filter(r=>r.edgeFrames)},null,2));
+ assert.equal(new Set(result.records.filter(r=>r.anim==='idle').map(r=>r.hash)).size,9+sets.length,'Each outfit must visibly differ');
+ console.log(JSON.stringify({parts:result.parts,outfits:9+sets.length,animations:7,errors,clipped:result.records.filter(r=>r.edgeFrames)},null,2));
 }finally{await browser.close();}
