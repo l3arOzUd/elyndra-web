@@ -17,7 +17,26 @@ try {for(const s of manifest.sets){
    const [img,base]=await Promise.all([load(sheet),load(ref)]);
    const canvas=(w,h)=>{const e=document.createElement('canvas');e.width=w;e.height=h;return e};
    const bounds=e=>{const a=e.getContext('2d').getImageData(0,0,e.width,e.height).data;let x0=e.width,y0=e.height,x1=0,y1=0,n=0;for(let y=0;y<e.height;y++)for(let x=0;x<e.width;x++)if(a[(y*e.width+x)*4+3]>24){x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x+1);y1=Math.max(y1,y+1);n++;}return n>40?[x0,y0,x1,y1]:null};
-   const x=Math.floor(img.width*c/cols),y=Math.floor(img.height*r/rows),w=Math.floor(img.width*(c+1)/cols)-x,h=Math.floor(img.height*(r+1)/rows)-y;
+   // Generated sheets do not have equal-width columns. Locate complete
+   // opaque islands before assigning them by row and left-to-right order.
+   window.componentCache ??= new Map();
+   let components=window.componentCache.get(sheet);
+   if(!components){
+    const all=canvas(img.width,img.height);all.getContext('2d').drawImage(img,0,0);
+    const pixels=all.getContext('2d').getImageData(0,0,img.width,img.height).data;
+    const seen=new Uint8Array(img.width*img.height);components=[];
+    for(let i=0;i<seen.length;i++)if(!seen[i]&&pixels[i*4+3]>24){
+     const stack=[i];seen[i]=1;let x0=img.width,y0=img.height,x1=0,y1=0,n=0;
+     while(stack.length){const j=stack.pop(),xx=j%img.width,yy=Math.floor(j/img.width);n++;x0=Math.min(x0,xx);x1=Math.max(x1,xx+1);y0=Math.min(y0,yy);y1=Math.max(y1,yy+1);
+      for(const k of [xx>0?j-1:-1,xx<img.width-1?j+1:-1,j-img.width,j+img.width])if(k>=0&&k<seen.length&&!seen[k]&&pixels[k*4+3]>24){seen[k]=1;stack.push(k);}
+     }
+     if(n>100)components.push({x0,y0,x1,y1,n});
+    }
+    window.componentCache.set(sheet,components);
+   }
+   const row=components.filter(b=>Math.min(rows-1,Math.floor((b.y0+b.y1)/2/img.height*rows))===r).sort((a,b)=>b.n-a.n).slice(0,cols).sort((a,b)=>a.x0-b.x0);
+   if(row.length!==cols)throw Error(set+' row '+r+' expected '+cols+' pieces, got '+row.length);
+   const part=row[c],x=part.x0,y=part.y0,w=part.x1-x,h=part.y1-y;
    const cell=canvas(w,h);cell.getContext('2d').drawImage(img,x,y,w,h,0,0,w,h);const box=bounds(cell);if(!box)return null;
    const target=canvas(base.width,base.height);target.getContext('2d').drawImage(base,0,0);const b=bounds(target);if(!b)throw Error('Empty reference');
    if(slot==='head'){
