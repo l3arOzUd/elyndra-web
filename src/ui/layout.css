@@ -234,7 +234,10 @@ button.on { background:#426c55; color:#f8efd6; }
 .tag { position:absolute; left:0; top:0; transform-origin:0 0; display:flex; flex-direction:column; align-items:center; gap:2px; white-space:nowrap; will-change:transform; }
 .tag-name { font-size:11.5px; font-weight:600; color:#fff4dc; text-shadow:0 0 3px #000,0 1px 2px #000; }
 .tag-self .tag-name,.tag-player .tag-name { color:#bfe9ff; }
-.tag-portal .tag-name { color:#9ff4fa; }.tag-npc .tag-name { color:#ffe08a; }
+.tag-portal .tag-name { display:flex; align-items:center; gap:6px; padding:4px 11px 5px 8px; border-radius:13px; font:700 15px/1 var(--ui-font-title); letter-spacing:.03em; color:#dafcff; background:linear-gradient(#123a3fe6,#071c20e6); border:1px solid #6fe3ec; box-shadow:0 0 0 1px #021012,0 0 12px #4fe3ee80,0 2px 5px #000b; text-shadow:0 0 6px #3fd8e4,0 1px 2px #000; }
+.tag-portal-arrow { display:inline-block; font-size:15px; color:#7ff4ff; text-shadow:0 0 6px #3fd8e4; }
+.tag-portal-locked .tag-name { color:#fff0c4; background:linear-gradient(#3d2c10e6,#1d1406e6); border-color:#e8c06a; box-shadow:0 0 0 1px #120b02,0 0 12px #f2c66b70,0 2px 5px #000b; text-shadow:0 0 6px #d9a640,0 1px 2px #000; }
+.tag-portal-locked .tag-portal-arrow { color:#ffd98a; text-shadow:0 0 6px #d9a640; }.tag-npc .tag-name { color:#ffe08a; }
 .tag-bar { width:44px; height:5px; background:#111c22; border:1px solid #000; border-radius:2px; overflow:hidden; }
 .tag-bar > div { height:100%; width:100%; background:#e86a5f; transition:width .15s; }
 .tag-self .tag-bar > div { background:#5fd36e; }

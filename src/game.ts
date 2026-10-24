@@ -28,6 +28,8 @@ const INTERP_MS = 120;
 const UP = new THREE.Vector3(0, 1, 0);
 const tmpA = new THREE.Vector3();
 const tmpB = new THREE.Vector3();
+/** A warp within this many cells of a map edge leads off that edge. */
+const PORTAL_EDGE_CELLS = 12;
 /** WASD as screen steps (x right, y down), by physical key so a Thai layout works. */
 const WASD: Record<string, [number, number]> = { KeyW: [0, -1], KeyS: [0, 1], KeyA: [-1, 0], KeyD: [1, 0] };
 
@@ -92,7 +94,8 @@ export class Game {
   private grid: WalkGrid | null = null;
   private built: BuiltMap | null = null;
   private warps: WarpDef[] = [];
-  private portalLabels: { label: Label; at: THREE.Vector3 }[] = [];
+  /** A warp's name plate; `out` is the way off the map it leads (null mid-map), which its arrow points along on screen. */
+  private portalLabels: { label: Label; at: THREE.Vector3; out: THREE.Vector3 | null; arrow: HTMLElement | null }[] = [];
   private targetId: number | null = null;
   private hoverId: number | null = null;
   private pendingTalk: string | null = null;
@@ -237,8 +240,20 @@ export class Game {
     this.scene.fog = new THREE.Fog(region?.palette.fog ?? "#1d2f27", 120, 260);
     (this.scene.background as THREE.Color).set(region?.palette.fog ?? "#1d2f27");
     for (const w of this.warps) {
-      const lbl = this.overlay.label(`⇨ ${this.c.maps.get(w.to_map)?.name ?? w.to_map}${w.requirements.length ? " 🔒" : ""}`, "tag-portal", false);
-      this.portalLabels.push({ label: lbl, at: new THREE.Vector3(w.trigger_rect[0] + w.trigger_rect[2] / 2, 3.4, w.trigger_rect[1] + w.trigger_rect[3] / 2) });
+      const locked = w.requirements.length > 0;
+      const lbl = this.overlay.label(`${this.c.maps.get(w.to_map)?.name ?? w.to_map}${locked ? " 🔒" : ""}`, `tag-portal${locked ? " tag-portal-locked" : ""}`, false);
+      const cx = w.trigger_rect[0] + w.trigger_rect[2] / 2, cz = w.trigger_rect[1] + w.trigger_rect[3] / 2;
+      // The nearest map edge is where the warp leads; a warp well inside the map gets no arrow.
+      const edges: [number, number, number][] = [[cx, -1, 0], [layout.width - cx, 1, 0], [cz, 0, -1], [layout.height - cz, 0, 1]];
+      const [gap, ox, oz] = edges.reduce((a, b) => (b[0] < a[0] ? b : a));
+      let arrow: HTMLElement | null = null;
+      if (gap <= PORTAL_EDGE_CELLS) {
+        arrow = document.createElement("span");
+        arrow.className = "tag-portal-arrow";
+        arrow.textContent = "➜";
+        lbl.el.querySelector(".tag-name")!.prepend(arrow);
+      }
+      this.portalLabels.push({ label: lbl, at: new THREE.Vector3(cx, 3.4, cz), out: arrow ? new THREE.Vector3(ox, 0, oz) : null, arrow });
     }
     this.minimap.setMap(layout);
     this.cam.target.set(m.pos[0], 0, m.pos[1]);
@@ -822,7 +837,14 @@ export class Game {
       // Anchor identity to the ground contact, independent of sprite height/bobbing.
       e.label?.place(tmpA.copy(e.actor.root.position).setY(0), cam, this.width, this.height, true);
     }
-    for (const p of this.portalLabels) p.label.place(p.at, cam, this.width, this.height);
+    for (const p of this.portalLabels) {
+      p.label.place(p.at, cam, this.width, this.height);
+      if (!p.arrow || !p.out) continue;
+      // Turn the arrow with the camera: the screen direction of the way out.
+      tmpA.copy(p.at).setY(0).project(cam);
+      tmpB.copy(p.at).setY(0).add(p.out).project(cam);
+      p.arrow.style.transform = `rotate(${Math.atan2((tmpA.y - tmpB.y) * this.height, (tmpB.x - tmpA.x) * this.width)}rad)`;
+    }
     for (const p of this.piles.values()) p.mesh.rotation.y += dt * 1.5;
     if (this.built) animate(this.built, dt);
     this.fx.update(dtMs);
