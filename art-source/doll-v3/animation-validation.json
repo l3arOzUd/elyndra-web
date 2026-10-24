@@ -1,0 +1,3395 @@
+{
+  "parts": 397,
+  "missing": [],
+  "records": [
+    {
+      "gear": [],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "fdf13f5d"
+    },
+    {
+      "gear": [],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a7e066d2"
+    },
+    {
+      "gear": [],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "25a44196"
+    },
+    {
+      "gear": [],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "25a44196"
+    },
+    {
+      "gear": [],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8be03c5d"
+    },
+    {
+      "gear": [],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "50c7948b"
+    },
+    {
+      "gear": [],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b75ea80b"
+    },
+    {
+      "gear": [
+        "itm_0078"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5cceefdd"
+    },
+    {
+      "gear": [
+        "itm_0078"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a077e251"
+    },
+    {
+      "gear": [
+        "itm_0078"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "92ed90e8"
+    },
+    {
+      "gear": [
+        "itm_0078"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "92ed90e8"
+    },
+    {
+      "gear": [
+        "itm_0078"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "2724ccb"
+    },
+    {
+      "gear": [
+        "itm_0078"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "702d4085"
+    },
+    {
+      "gear": [
+        "itm_0078"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4aeff8ee"
+    },
+    {
+      "gear": [
+        "itm_0079"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "eb3e9255"
+    },
+    {
+      "gear": [
+        "itm_0079"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b1a8ee53"
+    },
+    {
+      "gear": [
+        "itm_0079"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bd1d3c0b"
+    },
+    {
+      "gear": [
+        "itm_0079"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bd1d3c0b"
+    },
+    {
+      "gear": [
+        "itm_0079"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "819db11e"
+    },
+    {
+      "gear": [
+        "itm_0079"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "cebcb9e3"
+    },
+    {
+      "gear": [
+        "itm_0079"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "25310f5d"
+    },
+    {
+      "gear": [
+        "itm_0080"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3fb32864"
+    },
+    {
+      "gear": [
+        "itm_0080"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "9454814e"
+    },
+    {
+      "gear": [
+        "itm_0080"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "21c2c377"
+    },
+    {
+      "gear": [
+        "itm_0080"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e0bd795e"
+    },
+    {
+      "gear": [
+        "itm_0080"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "22b1cc54"
+    },
+    {
+      "gear": [
+        "itm_0080"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b5283a75"
+    },
+    {
+      "gear": [
+        "itm_0080"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "45001144"
+    },
+    {
+      "gear": [
+        "itm_0081"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a91b1a8f"
+    },
+    {
+      "gear": [
+        "itm_0081"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d4ef464e"
+    },
+    {
+      "gear": [
+        "itm_0081"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f52eb7ec"
+    },
+    {
+      "gear": [
+        "itm_0081"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f52eb7ec"
+    },
+    {
+      "gear": [
+        "itm_0081"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "9e04233c"
+    },
+    {
+      "gear": [
+        "itm_0081"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e0b3c0cd"
+    },
+    {
+      "gear": [
+        "itm_0081"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "724e4a54"
+    },
+    {
+      "gear": [
+        "itm_0082"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ed49fa85"
+    },
+    {
+      "gear": [
+        "itm_0082"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d4a0aba4"
+    },
+    {
+      "gear": [
+        "itm_0082"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5fcd1be7"
+    },
+    {
+      "gear": [
+        "itm_0082"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "844d7ccb"
+    },
+    {
+      "gear": [
+        "itm_0082"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5fcd1be7"
+    },
+    {
+      "gear": [
+        "itm_0082"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6657d371"
+    },
+    {
+      "gear": [
+        "itm_0082"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bc1f7111"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0080"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ffe0a817"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0080"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "26841a17"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0080"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8b883e35"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0080"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "26000d45"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0080"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "de4333bf"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0080"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "961e0751"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0080"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b80dc092"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0081"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d707f284"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0081"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "43623516"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0081"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ac72fab1"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0081"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ac72fab1"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0081"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ccb9ba1d"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0081"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5b2e8b50"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0081"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "9e8a9e15"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0082"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "dc6eb68b"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0082"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4e3f258b"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0082"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d066add5"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0082"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a545f58a"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0082"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d066add5"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0082"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b2195a8c"
+    },
+    {
+      "gear": [
+        "itm_0078",
+        "itm_0079",
+        "itm_0082"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bcd2f5ff"
+    },
+    {
+      "gear": [
+        "itm_1014"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "68cf1288"
+    },
+    {
+      "gear": [
+        "itm_1014"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "12fda80"
+    },
+    {
+      "gear": [
+        "itm_1014"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3778deba"
+    },
+    {
+      "gear": [
+        "itm_1014"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3778deba"
+    },
+    {
+      "gear": [
+        "itm_1014"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d4d7f2f4"
+    },
+    {
+      "gear": [
+        "itm_1014"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "12e6803b"
+    },
+    {
+      "gear": [
+        "itm_1014"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "10a55e83"
+    },
+    {
+      "gear": [
+        "itm_1016"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c1b801a5"
+    },
+    {
+      "gear": [
+        "itm_1016"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1899314e"
+    },
+    {
+      "gear": [
+        "itm_1016"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3dafdc1d"
+    },
+    {
+      "gear": [
+        "itm_1016"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3dafdc1d"
+    },
+    {
+      "gear": [
+        "itm_1016"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "48d91449"
+    },
+    {
+      "gear": [
+        "itm_1016"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5199ac51"
+    },
+    {
+      "gear": [
+        "itm_1016"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "2006776c"
+    },
+    {
+      "gear": [
+        "itm_1012"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "9af5ecb0"
+    },
+    {
+      "gear": [
+        "itm_1012"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "89a4af3d"
+    },
+    {
+      "gear": [
+        "itm_1012"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3785657f"
+    },
+    {
+      "gear": [
+        "itm_1012"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3785657f"
+    },
+    {
+      "gear": [
+        "itm_1012"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "616050a"
+    },
+    {
+      "gear": [
+        "itm_1012"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "203adac7"
+    },
+    {
+      "gear": [
+        "itm_1012"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "825144a5"
+    },
+    {
+      "gear": [
+        "itm_1011"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f86dae5e"
+    },
+    {
+      "gear": [
+        "itm_1011"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a8c820c5"
+    },
+    {
+      "gear": [
+        "itm_1011"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6ed24998"
+    },
+    {
+      "gear": [
+        "itm_1011"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6ed24998"
+    },
+    {
+      "gear": [
+        "itm_1011"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "fc48729e"
+    },
+    {
+      "gear": [
+        "itm_1011"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "44bafe0e"
+    },
+    {
+      "gear": [
+        "itm_1011"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c759a2e0"
+    },
+    {
+      "gear": [
+        "itm_1013"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "639becf1"
+    },
+    {
+      "gear": [
+        "itm_1013"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ae567a31"
+    },
+    {
+      "gear": [
+        "itm_1013"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "33e7c061"
+    },
+    {
+      "gear": [
+        "itm_1013"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "33e7c061"
+    },
+    {
+      "gear": [
+        "itm_1013"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "928b035d"
+    },
+    {
+      "gear": [
+        "itm_1013"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "19d74238"
+    },
+    {
+      "gear": [
+        "itm_1013"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "fe37bc08"
+    },
+    {
+      "gear": [
+        "itm_1015"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "212cd844"
+    },
+    {
+      "gear": [
+        "itm_1015"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ec8c7dde"
+    },
+    {
+      "gear": [
+        "itm_1015"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1e7ce838"
+    },
+    {
+      "gear": [
+        "itm_1015"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1e7ce838"
+    },
+    {
+      "gear": [
+        "itm_1015"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "50a10400"
+    },
+    {
+      "gear": [
+        "itm_1015"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bbca7090"
+    },
+    {
+      "gear": [
+        "itm_1015"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "714c2d27"
+    },
+    {
+      "gear": [
+        "itm_1018"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "dc4bca02"
+    },
+    {
+      "gear": [
+        "itm_1018"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6d39f41a"
+    },
+    {
+      "gear": [
+        "itm_1018"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e3b76ca6"
+    },
+    {
+      "gear": [
+        "itm_1018"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e3b76ca6"
+    },
+    {
+      "gear": [
+        "itm_1018"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e4c046d"
+    },
+    {
+      "gear": [
+        "itm_1018"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "580b3311"
+    },
+    {
+      "gear": [
+        "itm_1018"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "da0d76b5"
+    },
+    {
+      "gear": [
+        "itm_1020"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e8253493"
+    },
+    {
+      "gear": [
+        "itm_1020"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f07c85d9"
+    },
+    {
+      "gear": [
+        "itm_1020"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7fa3bbba"
+    },
+    {
+      "gear": [
+        "itm_1020"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7fa3bbba"
+    },
+    {
+      "gear": [
+        "itm_1020"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "97838221"
+    },
+    {
+      "gear": [
+        "itm_1020"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "413010b9"
+    },
+    {
+      "gear": [
+        "itm_1020"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a447ace4"
+    },
+    {
+      "gear": [
+        "itm_1017"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "288cda1b"
+    },
+    {
+      "gear": [
+        "itm_1017"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3490a6e9"
+    },
+    {
+      "gear": [
+        "itm_1017"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b06e7144"
+    },
+    {
+      "gear": [
+        "itm_1017"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b06e7144"
+    },
+    {
+      "gear": [
+        "itm_1017"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d17fa9eb"
+    },
+    {
+      "gear": [
+        "itm_1017"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c1d158e7"
+    },
+    {
+      "gear": [
+        "itm_1017"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "112e2b69"
+    },
+    {
+      "gear": [
+        "itm_1019"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3675adfe"
+    },
+    {
+      "gear": [
+        "itm_1019"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "68fcafae"
+    },
+    {
+      "gear": [
+        "itm_1019"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e204d021"
+    },
+    {
+      "gear": [
+        "itm_1019"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e204d021"
+    },
+    {
+      "gear": [
+        "itm_1019"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b9cf9f76"
+    },
+    {
+      "gear": [
+        "itm_1019"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "9f426757"
+    },
+    {
+      "gear": [
+        "itm_1019"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e14754df"
+    },
+    {
+      "gear": [
+        "itm_1022"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f6eb631e"
+    },
+    {
+      "gear": [
+        "itm_1022"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3617a819"
+    },
+    {
+      "gear": [
+        "itm_1022"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "9f2518d9"
+    },
+    {
+      "gear": [
+        "itm_1022"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "9f2518d9"
+    },
+    {
+      "gear": [
+        "itm_1022"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4f4a4f1e"
+    },
+    {
+      "gear": [
+        "itm_1022"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "af8cbb88"
+    },
+    {
+      "gear": [
+        "itm_1022"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "840f244e"
+    },
+    {
+      "gear": [
+        "itm_1021"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6995c6a0"
+    },
+    {
+      "gear": [
+        "itm_1021"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "70dee6d7"
+    },
+    {
+      "gear": [
+        "itm_1021"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "367dc3fa"
+    },
+    {
+      "gear": [
+        "itm_1021"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "367dc3fa"
+    },
+    {
+      "gear": [
+        "itm_1021"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a40848f9"
+    },
+    {
+      "gear": [
+        "itm_1021"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7b9cabe9"
+    },
+    {
+      "gear": [
+        "itm_1021"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b68ab921"
+    },
+    {
+      "gear": [
+        "itm_1349"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4cbd1417"
+    },
+    {
+      "gear": [
+        "itm_1349"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "dc6edc2"
+    },
+    {
+      "gear": [
+        "itm_1349"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1e10291b"
+    },
+    {
+      "gear": [
+        "itm_1349"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1e10291b"
+    },
+    {
+      "gear": [
+        "itm_1349"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4481e4b3"
+    },
+    {
+      "gear": [
+        "itm_1349"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "feb8d359"
+    },
+    {
+      "gear": [
+        "itm_1349"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "33437e70"
+    },
+    {
+      "gear": [
+        "itm_1351"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c43ee5e9"
+    },
+    {
+      "gear": [
+        "itm_1351"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1ff41641"
+    },
+    {
+      "gear": [
+        "itm_1351"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a20e8ad7"
+    },
+    {
+      "gear": [
+        "itm_1351"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a20e8ad7"
+    },
+    {
+      "gear": [
+        "itm_1351"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1df830b1"
+    },
+    {
+      "gear": [
+        "itm_1351"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "26b25320"
+    },
+    {
+      "gear": [
+        "itm_1351"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "31a10391"
+    },
+    {
+      "gear": [
+        "itm_1348"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "acce0802"
+    },
+    {
+      "gear": [
+        "itm_1348"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8d2469d1"
+    },
+    {
+      "gear": [
+        "itm_1348"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b547f267"
+    },
+    {
+      "gear": [
+        "itm_1348"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b547f267"
+    },
+    {
+      "gear": [
+        "itm_1348"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b800a0c3"
+    },
+    {
+      "gear": [
+        "itm_1348"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "43fc037f"
+    },
+    {
+      "gear": [
+        "itm_1348"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6ecead9a"
+    },
+    {
+      "gear": [
+        "itm_1353"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6dbe0cf2"
+    },
+    {
+      "gear": [
+        "itm_1353"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5dee9a85"
+    },
+    {
+      "gear": [
+        "itm_1353"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "197523fc"
+    },
+    {
+      "gear": [
+        "itm_1353"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "197523fc"
+    },
+    {
+      "gear": [
+        "itm_1353"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "29751ff1"
+    },
+    {
+      "gear": [
+        "itm_1353"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "659da6eb"
+    },
+    {
+      "gear": [
+        "itm_1353"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "866a419b"
+    },
+    {
+      "gear": [
+        "itm_1352"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c8f04083"
+    },
+    {
+      "gear": [
+        "itm_1352"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4ee3177d"
+    },
+    {
+      "gear": [
+        "itm_1352"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b14c90ff"
+    },
+    {
+      "gear": [
+        "itm_1352"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b14c90ff"
+    },
+    {
+      "gear": [
+        "itm_1352"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e38d3ee9"
+    },
+    {
+      "gear": [
+        "itm_1352"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d8a170d"
+    },
+    {
+      "gear": [
+        "itm_1352"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "462d3882"
+    },
+    {
+      "gear": [
+        "itm_1350"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d29cc526"
+    },
+    {
+      "gear": [
+        "itm_1350"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "abbd7033"
+    },
+    {
+      "gear": [
+        "itm_1350"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "36a99456"
+    },
+    {
+      "gear": [
+        "itm_1350"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "36a99456"
+    },
+    {
+      "gear": [
+        "itm_1350"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "2a19d419"
+    },
+    {
+      "gear": [
+        "itm_1350"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "582732cf"
+    },
+    {
+      "gear": [
+        "itm_1350"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "fb91d8a2"
+    },
+    {
+      "gear": [
+        "itm_1007"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b7e73941"
+    },
+    {
+      "gear": [
+        "itm_1007"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f72c9e13"
+    },
+    {
+      "gear": [
+        "itm_1007"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "57fcb9c7"
+    },
+    {
+      "gear": [
+        "itm_1007"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "57fcb9c7"
+    },
+    {
+      "gear": [
+        "itm_1007"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e1b3f0b8"
+    },
+    {
+      "gear": [
+        "itm_1007"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d33b1f8"
+    },
+    {
+      "gear": [
+        "itm_1007"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a1d58ae"
+    },
+    {
+      "gear": [
+        "itm_1005"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bba5ae02"
+    },
+    {
+      "gear": [
+        "itm_1005"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c6bf1c63"
+    },
+    {
+      "gear": [
+        "itm_1005"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1d7eeb34"
+    },
+    {
+      "gear": [
+        "itm_1005"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1d7eeb34"
+    },
+    {
+      "gear": [
+        "itm_1005"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1f778e1b"
+    },
+    {
+      "gear": [
+        "itm_1005"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bb59e3ae"
+    },
+    {
+      "gear": [
+        "itm_1005"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e85dc03a"
+    },
+    {
+      "gear": [
+        "itm_1006"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b4a00cb2"
+    },
+    {
+      "gear": [
+        "itm_1006"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4eec0abe"
+    },
+    {
+      "gear": [
+        "itm_1006"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b36b3743"
+    },
+    {
+      "gear": [
+        "itm_1006"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b36b3743"
+    },
+    {
+      "gear": [
+        "itm_1006"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d3b7fd8c"
+    },
+    {
+      "gear": [
+        "itm_1006"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1cf60802"
+    },
+    {
+      "gear": [
+        "itm_1006"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8ab396e9"
+    },
+    {
+      "gear": [
+        "itm_1010"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "21f59581"
+    },
+    {
+      "gear": [
+        "itm_1010"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b044999"
+    },
+    {
+      "gear": [
+        "itm_1010"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8fe95853"
+    },
+    {
+      "gear": [
+        "itm_1010"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8fe95853"
+    },
+    {
+      "gear": [
+        "itm_1010"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b7331c3c"
+    },
+    {
+      "gear": [
+        "itm_1010"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "973765c2"
+    },
+    {
+      "gear": [
+        "itm_1010"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1f7bdaaf"
+    },
+    {
+      "gear": [
+        "itm_1008"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "34a5bb6d"
+    },
+    {
+      "gear": [
+        "itm_1008"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7ae0889"
+    },
+    {
+      "gear": [
+        "itm_1008"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "324475bb"
+    },
+    {
+      "gear": [
+        "itm_1008"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "324475bb"
+    },
+    {
+      "gear": [
+        "itm_1008"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b90f5c4"
+    },
+    {
+      "gear": [
+        "itm_1008"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "2faf432d"
+    },
+    {
+      "gear": [
+        "itm_1008"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "892c99a1"
+    },
+    {
+      "gear": [
+        "itm_1009"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "74b26f35"
+    },
+    {
+      "gear": [
+        "itm_1009"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "87646cc8"
+    },
+    {
+      "gear": [
+        "itm_1009"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "44287cec"
+    },
+    {
+      "gear": [
+        "itm_1009"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "44287cec"
+    },
+    {
+      "gear": [
+        "itm_1009"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1e7f313"
+    },
+    {
+      "gear": [
+        "itm_1009"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "72985243"
+    },
+    {
+      "gear": [
+        "itm_1009"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6ec04ddd"
+    },
+    {
+      "gear": [
+        "itm_1343"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "95fe42ab"
+    },
+    {
+      "gear": [
+        "itm_1343"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "fc7eaffe"
+    },
+    {
+      "gear": [
+        "itm_1343"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "578f81eb"
+    },
+    {
+      "gear": [
+        "itm_1343"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "578f81eb"
+    },
+    {
+      "gear": [
+        "itm_1343"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5f3b7e23"
+    },
+    {
+      "gear": [
+        "itm_1343"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "57e292cd"
+    },
+    {
+      "gear": [
+        "itm_1343"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bc3671f2"
+    },
+    {
+      "gear": [
+        "itm_1408"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "aefdf218"
+    },
+    {
+      "gear": [
+        "itm_1408"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b8f678ea"
+    },
+    {
+      "gear": [
+        "itm_1408"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "68ba41ef"
+    },
+    {
+      "gear": [
+        "itm_1408"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "68ba41ef"
+    },
+    {
+      "gear": [
+        "itm_1408"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bfee01cc"
+    },
+    {
+      "gear": [
+        "itm_1408"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c8f4192f"
+    },
+    {
+      "gear": [
+        "itm_1408"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f6a7629"
+    },
+    {
+      "gear": [
+        "itm_1322"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a2afa344"
+    },
+    {
+      "gear": [
+        "itm_1322"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bc5cd694"
+    },
+    {
+      "gear": [
+        "itm_1322"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c6d35dc3"
+    },
+    {
+      "gear": [
+        "itm_1322"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c6d35dc3"
+    },
+    {
+      "gear": [
+        "itm_1322"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ecb3cdb0"
+    },
+    {
+      "gear": [
+        "itm_1322"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7e5681f5"
+    },
+    {
+      "gear": [
+        "itm_1322"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ec962045"
+    },
+    {
+      "gear": [
+        "itm_1342"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "58309f5"
+    },
+    {
+      "gear": [
+        "itm_1342"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8dc85b85"
+    },
+    {
+      "gear": [
+        "itm_1342"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7938a2cb"
+    },
+    {
+      "gear": [
+        "itm_1342"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a956ff9e"
+    },
+    {
+      "gear": [
+        "itm_1342"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "fbb05176"
+    },
+    {
+      "gear": [
+        "itm_1342"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7d6a8813"
+    },
+    {
+      "gear": [
+        "itm_1342"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d6f5faea"
+    },
+    {
+      "gear": [
+        "itm_1345"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f062b6ab"
+    },
+    {
+      "gear": [
+        "itm_1345"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c3b42848"
+    },
+    {
+      "gear": [
+        "itm_1345"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "736f1c32"
+    },
+    {
+      "gear": [
+        "itm_1345"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "736f1c32"
+    },
+    {
+      "gear": [
+        "itm_1345"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c64023d1"
+    },
+    {
+      "gear": [
+        "itm_1345"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "23088c88"
+    },
+    {
+      "gear": [
+        "itm_1345"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b7699b25"
+    },
+    {
+      "gear": [
+        "itm_1341"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "d743887"
+    },
+    {
+      "gear": [
+        "itm_1341"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "904586db"
+    },
+    {
+      "gear": [
+        "itm_1341"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ef00cdce"
+    },
+    {
+      "gear": [
+        "itm_1341"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ef00cdce"
+    },
+    {
+      "gear": [
+        "itm_1341"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4f36af7d"
+    },
+    {
+      "gear": [
+        "itm_1341"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c8d3018f"
+    },
+    {
+      "gear": [
+        "itm_1341"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1abc93c9"
+    },
+    {
+      "gear": [
+        "itm_1321"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7826a2f1"
+    },
+    {
+      "gear": [
+        "itm_1321"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "52c82103"
+    },
+    {
+      "gear": [
+        "itm_1321"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "da3b6eea"
+    },
+    {
+      "gear": [
+        "itm_1321"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "da3b6eea"
+    },
+    {
+      "gear": [
+        "itm_1321"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "70ae0869"
+    },
+    {
+      "gear": [
+        "itm_1321"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "34a07adc"
+    },
+    {
+      "gear": [
+        "itm_1321"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8246f173"
+    },
+    {
+      "gear": [
+        "itm_1409"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b530e994"
+    },
+    {
+      "gear": [
+        "itm_1409"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "cc1f61fa"
+    },
+    {
+      "gear": [
+        "itm_1409"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "35808e40"
+    },
+    {
+      "gear": [
+        "itm_1409"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "35808e40"
+    },
+    {
+      "gear": [
+        "itm_1409"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5af8f9f4"
+    },
+    {
+      "gear": [
+        "itm_1409"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "881ad3dd"
+    },
+    {
+      "gear": [
+        "itm_1409"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "554bef12"
+    },
+    {
+      "gear": [
+        "itm_1339"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "3022dac8"
+    },
+    {
+      "gear": [
+        "itm_1339"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "2429879d"
+    },
+    {
+      "gear": [
+        "itm_1339"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "dbba8409"
+    },
+    {
+      "gear": [
+        "itm_1339"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5d6a6fd8"
+    },
+    {
+      "gear": [
+        "itm_1339"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "dbba8409"
+    },
+    {
+      "gear": [
+        "itm_1339"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "32b1c859"
+    },
+    {
+      "gear": [
+        "itm_1339"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b5dcdb93"
+    },
+    {
+      "gear": [
+        "itm_1340"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "e0b935e"
+    },
+    {
+      "gear": [
+        "itm_1340"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "49b6bc99"
+    },
+    {
+      "gear": [
+        "itm_1340"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "68463ce1"
+    },
+    {
+      "gear": [
+        "itm_1340"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "68463ce1"
+    },
+    {
+      "gear": [
+        "itm_1340"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a090da73"
+    },
+    {
+      "gear": [
+        "itm_1340"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4479fb79"
+    },
+    {
+      "gear": [
+        "itm_1340"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f445b789"
+    },
+    {
+      "gear": [
+        "itm_1344"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "494f0361"
+    },
+    {
+      "gear": [
+        "itm_1344"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "abe388a9"
+    },
+    {
+      "gear": [
+        "itm_1344"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c6eb65a7"
+    },
+    {
+      "gear": [
+        "itm_1344"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "c6eb65a7"
+    },
+    {
+      "gear": [
+        "itm_1344"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ca08ac18"
+    },
+    {
+      "gear": [
+        "itm_1344"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4377e8e6"
+    },
+    {
+      "gear": [
+        "itm_1344"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "7bedce8e"
+    },
+    {
+      "gear": [
+        "itm_1002"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "6c0f711"
+    },
+    {
+      "gear": [
+        "itm_1002"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b094df25"
+    },
+    {
+      "gear": [
+        "itm_1002"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "64c43030"
+    },
+    {
+      "gear": [
+        "itm_1002"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "64c43030"
+    },
+    {
+      "gear": [
+        "itm_1002"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "f7df021e"
+    },
+    {
+      "gear": [
+        "itm_1002"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "ec1da2e9"
+    },
+    {
+      "gear": [
+        "itm_1002"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "68e5e38a"
+    },
+    {
+      "gear": [
+        "itm_1004"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "bc541840"
+    },
+    {
+      "gear": [
+        "itm_1004"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "546c3593"
+    },
+    {
+      "gear": [
+        "itm_1004"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "649d3bd9"
+    },
+    {
+      "gear": [
+        "itm_1004"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "649d3bd9"
+    },
+    {
+      "gear": [
+        "itm_1004"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "28def881"
+    },
+    {
+      "gear": [
+        "itm_1004"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "becab90b"
+    },
+    {
+      "gear": [
+        "itm_1004"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "9ca179ac"
+    },
+    {
+      "gear": [
+        "itm_1003"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "1bdcb52e"
+    },
+    {
+      "gear": [
+        "itm_1003"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "a3d37c4e"
+    },
+    {
+      "gear": [
+        "itm_1003"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "80478bf2"
+    },
+    {
+      "gear": [
+        "itm_1003"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8eaf271b"
+    },
+    {
+      "gear": [
+        "itm_1003"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "80478bf2"
+    },
+    {
+      "gear": [
+        "itm_1003"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "59b3576b"
+    },
+    {
+      "gear": [
+        "itm_1003"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "acacab4e"
+    },
+    {
+      "gear": [
+        "itm_1001"
+      ],
+      "anim": "idle",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "894a5c63"
+    },
+    {
+      "gear": [
+        "itm_1001"
+      ],
+      "anim": "walk",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "8911bcda"
+    },
+    {
+      "gear": [
+        "itm_1001"
+      ],
+      "anim": "attack",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "5bcbc5c0"
+    },
+    {
+      "gear": [
+        "itm_1001"
+      ],
+      "anim": "shoot",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4d921515"
+    },
+    {
+      "gear": [
+        "itm_1001"
+      ],
+      "anim": "cast",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "b052fd53"
+    },
+    {
+      "gear": [
+        "itm_1001"
+      ],
+      "anim": "hit",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "56af302"
+    },
+    {
+      "gear": [
+        "itm_1001"
+      ],
+      "anim": "death",
+      "edgeFrames": 0,
+      "emptyFrames": 0,
+      "edges": [],
+      "hash": "4108504a"
+    }
+  ],
+  "errors": []
+}

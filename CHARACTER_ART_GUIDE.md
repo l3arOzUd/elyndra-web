@@ -75,8 +75,9 @@ The viewer and in-game sprite sheets use the same renderer.
 
 Run `npm run build`, `npm test`, then `node scripts/check-wayfarer-art.mjs`
 with Playwright available (`PLAYWRIGHT_MODULE` and `CHROMIUM_PATH` may point
-to your installation). The visual check covers 9 outfits × 7 actions × all
-frames in 5 rows, tests action controls, and writes contact sheets plus
+to your installation). The render check covers 9 original outfits plus all
+39 v3 wearable families, 7 actions and all frames in 5 rows (15,360 frames).
+It tests action controls and writes contact sheets plus
 `validation.json` to `../output/wayfarer-review/`.
 
 Inspect the contact sheets as well: automated nonempty/edge checks do not
