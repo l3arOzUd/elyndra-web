@@ -9,7 +9,7 @@ import { Hud } from '../ui/hud';
 import { NpcDialog } from '../ui/npcDialog';
 import { Minimap } from '../ui/minimap';
 import { Inspector } from '../ui/inspector';
-import { buildHeroSprite } from '../render/heroSprite';
+import { loadPaperDoll, setPaperDollKit, wayfarerSprite } from '../render/paperDoll';
 import { buildMap, animate } from '../render/terrain';
 import { IsoCamera } from '../render/camera';
 
@@ -18,12 +18,13 @@ document.body.classList.add('ui-preview');
 const $ = (id: string) => document.getElementById(id)!;
 async function main() {
   const c = await loadContent();
+  setPaperDollKit(await loadPaperDoll());
   const [shops, recipes] = await Promise.all([
     fetch('/data/shops.json').then(r => r.json() as Promise<ShopDef[]>),
     fetch('/data/recipes.json').then(r => r.json() as Promise<RecipeDef[]>),
   ]);
   const hud = new Hud(c), dialog = new NpcDialog(c, hud);
-  const inspector = new Inspector($('inspector'), { wayfarer: buildHeroSprite() });
+  const inspector = new Inspector($('inspector'), { wayfarer: wayfarerSprite()! });
   $('login').hidden = true; $('hud').hidden = false;
   $('player-name').textContent = $('equipment-name').textContent = 'Aeloria';
   // Sample character systems data (CHARACTER_SYSTEMS.md): copies of gear with

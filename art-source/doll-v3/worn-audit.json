@@ -20,6 +20,7 @@
         "itm_1198",
         "itm_1221"
       ],
+      "layers": 18,
       "sourceExists": true,
       "missing": []
     },
@@ -39,6 +40,7 @@
         "itm_1200",
         "itm_1223"
       ],
+      "layers": 18,
       "sourceExists": true,
       "missing": []
     },
@@ -58,6 +60,7 @@
         "itm_1196",
         "itm_1219"
       ],
+      "layers": 18,
       "sourceExists": true,
       "missing": []
     },
@@ -77,6 +80,7 @@
         "itm_1195",
         "itm_1218"
       ],
+      "layers": 18,
       "sourceExists": true,
       "missing": []
     },
@@ -96,6 +100,7 @@
         "itm_1197",
         "itm_1220"
       ],
+      "layers": 21,
       "sourceExists": true,
       "missing": []
     },
@@ -115,6 +120,7 @@
         "itm_1199",
         "itm_1222"
       ],
+      "layers": 18,
       "sourceExists": true,
       "missing": []
     },
@@ -134,6 +140,7 @@
         "itm_1202",
         "itm_1225"
       ],
+      "layers": 6,
       "sourceExists": true,
       "missing": []
     },
@@ -153,6 +160,7 @@
         "itm_1204",
         "itm_1227"
       ],
+      "layers": 6,
       "sourceExists": true,
       "missing": []
     },
@@ -172,6 +180,7 @@
         "itm_1201",
         "itm_1224"
       ],
+      "layers": 6,
       "sourceExists": true,
       "missing": []
     },
@@ -191,6 +200,7 @@
         "itm_1203",
         "itm_1226"
       ],
+      "layers": 6,
       "sourceExists": true,
       "missing": []
     },
@@ -210,6 +220,7 @@
         "itm_1206",
         "itm_1229"
       ],
+      "layers": 6,
       "sourceExists": true,
       "missing": []
     },
@@ -229,6 +240,7 @@
         "itm_1205",
         "itm_1228"
       ],
+      "layers": 6,
       "sourceExists": true,
       "missing": []
     },
@@ -248,6 +260,7 @@
         "itm_1397",
         "itm_1403"
       ],
+      "layers": 12,
       "sourceExists": true,
       "missing": []
     },
@@ -267,6 +280,7 @@
         "itm_1399",
         "itm_1405"
       ],
+      "layers": 12,
       "sourceExists": true,
       "missing": []
     },
@@ -286,6 +300,7 @@
         "itm_1396",
         "itm_1402"
       ],
+      "layers": 12,
       "sourceExists": true,
       "missing": []
     },
@@ -305,6 +320,7 @@
         "itm_1401",
         "itm_1407"
       ],
+      "layers": 12,
       "sourceExists": true,
       "missing": []
     },
@@ -324,6 +340,7 @@
         "itm_1400",
         "itm_1406"
       ],
+      "layers": 12,
       "sourceExists": true,
       "missing": []
     },
@@ -343,6 +360,7 @@
         "itm_1398",
         "itm_1404"
       ],
+      "layers": 12,
       "sourceExists": true,
       "missing": []
     },
@@ -362,6 +380,7 @@
         "itm_1191",
         "itm_1214"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -381,6 +400,7 @@
         "itm_1189",
         "itm_1212"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -400,6 +420,7 @@
         "itm_1190",
         "itm_1213"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -419,6 +440,7 @@
         "itm_1194",
         "itm_1217"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -438,6 +460,7 @@
         "itm_1192",
         "itm_1215"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -457,6 +480,7 @@
         "itm_1193",
         "itm_1216"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -467,6 +491,7 @@
       "items": [
         "itm_1343"
       ],
+      "layers": 18,
       "sourceExists": true,
       "missing": []
     },
@@ -477,6 +502,7 @@
       "items": [
         "itm_1408"
       ],
+      "layers": 12,
       "sourceExists": true,
       "missing": []
     },
@@ -487,6 +513,7 @@
       "items": [
         "itm_1322"
       ],
+      "layers": 6,
       "sourceExists": true,
       "missing": []
     },
@@ -497,6 +524,7 @@
       "items": [
         "itm_1342"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -507,6 +535,7 @@
       "items": [
         "itm_1345"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -517,6 +546,7 @@
       "items": [
         "itm_1341"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -527,6 +557,7 @@
       "items": [
         "itm_1321"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -537,6 +568,7 @@
       "items": [
         "itm_1409"
       ],
+      "layers": 12,
       "sourceExists": true,
       "missing": []
     },
@@ -547,6 +579,7 @@
       "items": [
         "itm_1339"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -557,6 +590,7 @@
       "items": [
         "itm_1340"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -567,6 +601,7 @@
       "items": [
         "itm_1344"
       ],
+      "layers": 6,
       "sourceExists": true,
       "missing": []
     },
@@ -586,6 +621,7 @@
         "itm_1186",
         "itm_1209"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -605,6 +641,7 @@
         "itm_1188",
         "itm_1211"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -624,6 +661,7 @@
         "itm_1187",
         "itm_1210"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     },
@@ -643,6 +681,7 @@
         "itm_1185",
         "itm_1208"
       ],
+      "layers": 3,
       "sourceExists": true,
       "missing": []
     }

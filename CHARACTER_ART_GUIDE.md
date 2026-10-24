@@ -18,13 +18,17 @@ eyes and remove the smile. Clothing belongs to torso/sleeve layers.
 
 There are three original views: front, left side and back. SW/W/NW reuse
 the side artwork; E/NE/SE mirror it. These are not eight unique drawings.
-Equipment v3 adds 39 painted wearable families (318 layers): six armour,
+Equipment v3 adds 39 painted wearable families (321 layers): six armour,
 six head, six glove, six boot, four weapon, and eleven unique sets.
 `art-source/doll-v3/manifest.json` maps item IDs to families; tiers of one
 family share artwork. Charms, Totems and accessories are not drawn on the body.
 Use `scripts/import-doll-sheets.mjs` to pack the original component sheets,
 then `npm run build:content` to publish their equipment mappings. The hood
 uses `head_hood-v2.png`, whose front and side face openings are transparent.
+The long mage robe also uses `armor_robe-skirt.png`: three lower panels
+packed by `scripts/import-robe-skirt.mjs` (called by the main importer).
+These panels follow the hips under the bodice belt, rather than the torso,
+so the hem stays below the waist during walking and folds during kneeling.
 
 ## Drawing and rig rules
 
